@@ -1074,7 +1074,7 @@ class ForestRegressor(RegressorMixin, BaseForest, metaclass=ABCMeta):
             for e in self.estimators_
         )
 
-        y_hat /= len(self.estimators_)
+        y_hat /= len(self.estimators_) #promedia las estimaciones de los arboles
 
         return y_hat
 
