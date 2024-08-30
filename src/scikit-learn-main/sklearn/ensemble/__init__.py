@@ -10,6 +10,7 @@ from ._forest import (
     ExtraTreesRegressor,
     RandomForestClassifier,
     RandomForestRegressor,
+    CustomRandomForestRegressor,
     RandomTreesEmbedding,
 )
 from ._gb import GradientBoostingClassifier, GradientBoostingRegressor
@@ -26,6 +27,7 @@ __all__ = [
     "BaseEnsemble",
     "RandomForestClassifier",
     "RandomForestRegressor",
+    "CustomRandomForestRegressor",
     "RandomTreesEmbedding",
     "ExtraTreesClassifier",
     "ExtraTreesRegressor",

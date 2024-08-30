@@ -44,6 +44,7 @@ from warnings import catch_warnings, simplefilter, warn
 import numpy as np
 from scipy.sparse import hstack as sparse_hstack
 from scipy.sparse import issparse
+from scipy.stats import zscore #agregado para descartar extremos
 
 from ..base import (
     ClassifierMixin,
@@ -717,20 +718,32 @@ class BaseForest(MultiOutputMixin, BaseEnsemble, metaclass=ABCMeta):
         return {"allow_nan": _safe_tags(estimator, key="allow_nan")}
 
 
-def _accumulate_prediction(predict, X, out, lock):
+import threading
+
+def _accumulate_prediction(predict, X, out, lock=None):
     """
     This is a utility function for joblib's Parallel.
-
-    It can't go locally in ForestClassifier or ForestRegressor, because joblib
+    
+    It can’t go locally in ForestClassifier or ForestRegressor, because joblib
     complains that it cannot pickle it when placed there.
     """
     prediction = predict(X, check_input=False)
-    with lock:
+    
+    if lock is None:
+        # If no lock is provided, directly accumulate the predictions
         if len(out) == 1:
             out[0] += prediction
         else:
             for i in range(len(out)):
                 out[i] += prediction[i]
+    else:
+        # Use the lock for thread safety
+        with lock:
+            if len(out) == 1:
+                out[0] += prediction
+            else:
+                for i in range(len(out)):
+                    out[i] += prediction[i]
 
 
 class ForestClassifier(ClassifierMixin, BaseForest, metaclass=ABCMeta):
@@ -1905,6 +1918,107 @@ class RandomForestRegressor(ForestRegressor):
         self.min_impurity_decrease = min_impurity_decrease
         self.ccp_alpha = ccp_alpha
         self.monotonic_cst = monotonic_cst
+
+class CustomRandomForestRegressor(RandomForestRegressor):
+    def __init__(
+        self,
+        n_estimators=100,
+        *,
+        criterion="squared_error",
+        max_depth=None,
+        min_samples_split=2,
+        min_samples_leaf=1,
+        min_weight_fraction_leaf=0.0,
+        max_features=1.0,
+        max_leaf_nodes=None,
+        min_impurity_decrease=0.0,
+        bootstrap=True,
+        oob_score=False,
+        n_jobs=None,
+        random_state=None,
+        verbose=0,
+        warm_start=False,
+        ccp_alpha=0.0,
+        max_samples=None,
+        monotonic_cst=None,
+    ):
+        super().__init__(
+            n_estimators=n_estimators,
+            criterion=criterion,
+            max_depth=max_depth,
+            min_samples_split=min_samples_split,
+            min_samples_leaf=min_samples_leaf,
+            min_weight_fraction_leaf=min_weight_fraction_leaf,
+            max_features=max_features,
+            max_leaf_nodes=max_leaf_nodes,
+            min_impurity_decrease=min_impurity_decrease,
+            bootstrap=bootstrap,
+            oob_score=oob_score,
+            n_jobs=n_jobs,
+            random_state=random_state,
+            verbose=verbose,
+            warm_start=warm_start,
+            ccp_alpha=ccp_alpha,
+            max_samples=max_samples,
+            monotonic_cst=monotonic_cst,
+        )
+
+    def predict(self, X):
+        """
+        Predict regression target for X.
+
+        The predicted regression target of an input sample is computed as the
+        mean predicted regression targets of the trees in the forest, after
+        discarding extreme values based on Z-score.
+
+        Parameters
+        ----------
+        X : {array-like, sparse matrix} of shape (n_samples, n_features)
+            The input samples. Internally, its dtype will be converted to
+            ``dtype=np.float32``. If a sparse matrix is provided, it will be
+            converted into a sparse ``csr_matrix``.
+
+        Returns
+        -------
+        y : ndarray of shape (n_samples,) or (n_samples, n_outputs)
+            The predicted values.
+        """
+        check_is_fitted(self)
+        # Check data
+        X = self._validate_X_predict(X)
+
+        # Assign chunk of trees to jobs
+        n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
+
+
+        lock = threading.Lock() if n_jobs != 1 else None
+
+        # Prepare storage for predictions
+        if self.n_outputs_ > 1:
+            all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
+        else:
+            all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
+
+        # Parallel loop to collect predictions from each tree
+        Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
+            delayed(_accumulate_prediction)(e.predict, X, [all_predictions[i]], None)
+            for i, e in enumerate(self.estimators_)
+        )
+
+        # Calculate Z-scores for each prediction
+        z_scores = zscore(all_predictions, axis=0)
+
+        # Define the Z-score threshold
+        threshold = 2.0  # For example, ±2
+
+        # Exclude predictions with Z-scores beyond the threshold
+        filtered_predictions = np.where(np.abs(z_scores) <= threshold, all_predictions, np.nan)
+
+        # Calculate the mean of the filtered predictions, ignoring NaN values
+        y_hat = np.nanmean(filtered_predictions, axis=0)
+
+        return y_hat
+
 
 
 class ExtraTreesClassifier(ForestClassifier):
