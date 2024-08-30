@@ -9,6 +9,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 SEED = 21415
 DATASETS_COLUMNS = {'titanic_fare_test': 'Fare'}
 DATASETS_FOLDER = 'src/datasets/'
+SAVE_CSV = False
 
 def process_dataset(filepath, extension, dataset_name):
     # Carga de datos
@@ -63,4 +64,6 @@ for filename in os.listdir(DATASETS_FOLDER):
     df_for_csf = {filename: {'Default MSE': default_mse, "Default R2": default_r2, "Default Time": default_time,
                              'Z-Score MSE': z_score_mse, "Z-Score R2": z_score_r2, "Z-Score Time": z_score_time}}
     df_for_csf = pd.DataFrame(df_for_csf)
-    df_for_csf.to_csv("benchmarking.csv")
+
+    if SAVE_CSV:
+        df_for_csf.to_csv("benchmarking.csv")
