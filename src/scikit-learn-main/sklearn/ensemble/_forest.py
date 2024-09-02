@@ -45,6 +45,7 @@ import numpy as np
 from scipy.sparse import hstack as sparse_hstack
 from scipy.sparse import issparse
 from scipy.stats import zscore #agregado para descartar extremos
+from scipy.stats import mstats
 
 from ..base import (
     ClassifierMixin,
@@ -1919,7 +1920,7 @@ class RandomForestRegressor(ForestRegressor):
         self.ccp_alpha = ccp_alpha
         self.monotonic_cst = monotonic_cst
 
-class CustomRandomForestRegressor(RandomForestRegressor):
+class ZscoreRandomForestRegressor(RandomForestRegressor):
     def __init__(
         self,
         n_estimators=100,
@@ -2019,6 +2020,78 @@ class CustomRandomForestRegressor(RandomForestRegressor):
 
         return y_hat
 
+class IQRRandomForestRegressor(RandomForestRegressor):
+    def predict(self, X):
+        check_is_fitted(self)
+        X = self._validate_X_predict(X)
+
+        n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
+        lock = threading.Lock() if n_jobs != 1 else None
+
+        if self.n_outputs_ > 1:
+            all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
+        else:
+            all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
+
+        Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
+            delayed(_accumulate_prediction)(e.predict, X, [all_predictions[i]], None)
+            for i, e in enumerate(self.estimators_)
+        )
+
+        # Calcula los cuartiles Q1 y Q3
+        Q1 = np.percentile(all_predictions, 25, axis=0)
+        Q3 = np.percentile(all_predictions, 75, axis=0)
+        IQR = Q3 - Q1
+
+        # Define el rango de exclusión
+        lower_bound = Q1 - 1.5 * IQR
+        upper_bound = Q3 + 1.5 * IQR
+
+        # Excluye los valores fuera del rango IQR
+        filtered_predictions = np.where((all_predictions >= lower_bound) & 
+                                        (all_predictions <= upper_bound), 
+                                        all_predictions, np.nan)
+
+        # Calcula la media de las predicciones filtradas, ignorando NaNs
+        y_hat = np.nanmean(filtered_predictions, axis=0)
+
+        return y_hat
+
+class PercentileTrimmingRandomForestRegressor(RandomForestRegressor):
+    def predict(self, X):
+        check_is_fitted(self)
+        X = self._validate_X_predict(X)
+
+        n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
+        lock = threading.Lock() if n_jobs != 1 else None
+
+        if self.n_outputs_ > 1:
+            all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
+        else:
+            all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
+
+        Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
+            delayed(_accumulate_prediction)(e.predict, X, [all_predictions[i]], None)
+            for i, e in enumerate(self.estimators_)
+        )
+
+        # Define los percentiles de exclusión
+        lower_percentile = 5
+        upper_percentile = 95
+
+        # Calcula los valores de corte
+        lower_bound = np.percentile(all_predictions, lower_percentile, axis=0)
+        upper_bound = np.percentile(all_predictions, upper_percentile, axis=0)
+
+        # Excluye los valores fuera de los percentiles
+        filtered_predictions = np.where((all_predictions >= lower_bound) & 
+                                        (all_predictions <= upper_bound), 
+                                        all_predictions, np.nan)
+
+        # Calcula la media de las predicciones filtradas, ignorando NaNs
+        y_hat = np.nanmean(filtered_predictions, axis=0)
+
+        return y_hat
 
 
 class ExtraTreesClassifier(ForestClassifier):

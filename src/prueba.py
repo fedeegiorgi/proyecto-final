@@ -1,4 +1,4 @@
-from sklearn.ensemble import CustomRandomForestRegressor
+from sklearn.ensemble import ZscoreRandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -24,13 +24,33 @@ train_df, validation_df = train_test_split(df, test_size=0.2, random_state=SEED)
 y_train, y_valid = train_df[pred_col_name], validation_df[pred_col_name]
 X_train, X_valid = train_df.drop(pred_col_name, axis=1), validation_df.drop(pred_col_name, axis=1)
 
-# Fit the model
-model = CustomRandomForestRegressor(n_estimators=100, random_state=42)
-model.fit(X_train, y_train)
+# ZSCORE
+model_zscore = ZscoreRandomForestRegressor(n_estimators=100, random_state=42)
+model_zscore.fit(X_train, y_train)
 
 # Make predictions
-predictions = model.predict(X_valid)
+predictions_zscore = model_zscore.predict(X_valid)
 
-mse = mean_squared_error(y_valid, predictions)
-print(f"Mean Squared Error of the model: {mse:.4f}")
+mse_zscore = mean_squared_error(y_valid, predictions_zscore)
+print(f"Mean Squared Error of the model Zscore: {mse_zscore:.4f}")
+
+# IQR
+model_iqr = IQRRandomForestRegressor(n_estimators=100, random_state=42)
+model_iqr.fit(X_train, y_train)
+
+# Make predictions
+predictions_iqr = model_iqr.predict(X_valid)
+
+mse_iqr = mean_squared_error(y_valid, predictions_iqr)
+print(f"Mean Squared Error of the model IQR: {mse_iqr:.4f}")
+
+# PERCENTILE TRIMMING
+model_trim = PercentileTrimmingRandomForestRegressor(n_estimators=100, random_state=42)
+model_trim.fit(X_train, y_train)
+
+# Make predictions
+predictions_trim = model_trim.predict(X_valid)
+
+mse_trim = mean_squared_error(y_valid, predictions_trim)
+print(f"Mean Squared Error of the model Percentile Trimming: {mse_trim:.4f}")
 
