@@ -56,10 +56,10 @@ def process_dataset(filepath, extension, dataset_name):
 for filename in os.listdir(DATASETS_FOLDER):
     filepath = os.path.join(DATASETS_FOLDER, filename)
     dataset_name, file_extension = os.path.splitext(filename)
-    if file_extension not in [".arrf", ".csv"]:
+    if file_extension not in [".arff", ".csv"]:
         next
     else:
-        default_mse, default_r2, default_time, z_score_mse, z_score_r2, z_score_time = process_dataset(filepath, file_extension, filename)
+        default_mse, default_r2, default_time, z_score_mse, z_score_r2, z_score_time = process_dataset(filepath=filepath, extension=file_extension, dataset_name=dataset_name)
 
     df_for_csf = {filename: {'Default MSE': default_mse, "Default R2": default_r2, "Default Time": default_time,
                              'Z-Score MSE': z_score_mse, "Z-Score R2": z_score_r2, "Z-Score Time": z_score_time}}
