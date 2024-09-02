@@ -2,14 +2,14 @@ import os
 import time
 import pandas as pd
 from scipy.io import arff
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestRegressor, ZscoreRandomForestRegressor, IQRRandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 
-SEED = 21415
+SEED = 14208
 DATASETS_COLUMNS = {'titanic_fare_test': 'Fare'}
 DATASETS_FOLDER = 'src/datasets/'
-SAVE_CSV = False
+SAVE_CSV = True
 
 def process_dataset(filepath, extension, dataset_name):
     # Carga de datos
@@ -39,9 +39,8 @@ def process_dataset(filepath, extension, dataset_name):
     default_r2 = r2_score(y_valid, default_predictions)
     default_time = default_end_time - default_start_time
 
-    # Evaluacion modelo alternativa A
-    # z_score_model = ZScoreExcluderRFRegressor(random_state=SEED)
-    z_score_model = RandomForestRegressor(random_state=SEED)
+    # Evaluacion modelo alternativa A [Z-score]
+    z_score_model = ZscoreRandomForestRegressor(random_state=SEED)
     z_score_start_time = time.time()
     z_score_model.fit(X_train, y_train)
     z_score_end_time = time.time()
@@ -50,7 +49,17 @@ def process_dataset(filepath, extension, dataset_name):
     z_score_r2 = r2_score(y_valid, z_score_predictions)
     z_score_time = z_score_end_time - z_score_start_time
 
-    return default_mse, default_r2, default_time, z_score_mse, z_score_r2, z_score_time
+    # Evaluacion modelo alternativa A [IQR]
+    iqr_model = IQRRandomForestRegressor(random_state=SEED)
+    iqr_start_time = time.time()
+    iqr_model.fit(X_train, y_train)
+    iqr_end_time = time.time()
+    iqr_predictions = iqr_model.predict(X_valid)
+    iqr_mse = mean_squared_error(y_valid, iqr_predictions)
+    iqr_r2 = r2_score(y_valid, iqr_predictions)
+    iqr_time = iqr_end_time - iqr_start_time
+
+    return default_mse, default_r2, default_time, z_score_mse, z_score_r2, z_score_time, iqr_mse, iqr_r2, iqr_time
 
 
 for filename in os.listdir(DATASETS_FOLDER):
@@ -59,10 +68,11 @@ for filename in os.listdir(DATASETS_FOLDER):
     if file_extension not in [".arff", ".csv"]:
         next
     else:
-        default_mse, default_r2, default_time, z_score_mse, z_score_r2, z_score_time = process_dataset(filepath=filepath, extension=file_extension, dataset_name=dataset_name)
+        default_mse, default_r2, default_time, z_score_mse, z_score_r2, z_score_time, iqr_mse, iqr_r2, iqr_time = process_dataset(filepath=filepath, extension=file_extension, dataset_name=dataset_name)
 
     df_for_csf = {filename: {'Default MSE': default_mse, "Default R2": default_r2, "Default Time": default_time,
-                             'Z-Score MSE': z_score_mse, "Z-Score R2": z_score_r2, "Z-Score Time": z_score_time}}
+                             'Z-Score MSE': z_score_mse, "Z-Score R2": z_score_r2, "Z-Score Time": z_score_time,
+                             'IQR MSE': iqr_mse, "IQR R2": iqr_r2, "IQR Time": iqr_time}}
     df_for_csf = pd.DataFrame(df_for_csf)
 
     if SAVE_CSV:
