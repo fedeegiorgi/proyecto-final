@@ -1,0 +1,6 @@
+dataset_name,prop_lognormal,prop_normal,alpha
+titanic_fare_test.arff,0.0038167938931297,0.2061068702290076,0.05
+medical_costs.csv,0.0,0.0074626865671641,0.05
+salary_football.csv,0.0,0.2237851662404092,0.05
+flight_price.csv,0.0004679457182966,0.0383715489003275,0.05
+Height.csv,0.0,0.08021390374331551,0.05
