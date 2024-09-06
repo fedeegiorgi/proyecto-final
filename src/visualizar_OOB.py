@@ -50,4 +50,3 @@ for i, tree in enumerate(rf.estimators_):
     mse_oob = mean_squared_error(oob_samples_y, oob_pred)
 
     print(f"Árbol {i} - MSE sobre OOB samples: {mse_oob}")
-()
