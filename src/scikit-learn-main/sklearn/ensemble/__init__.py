@@ -13,6 +13,7 @@ from ._forest import (
     ZscoreRandomForestRegressor,
     IQRRandomForestRegressor,
     PercentileTrimmingRandomForestRegressor,
+    # WeightedOOBRandomForestRegressor,
     RandomTreesEmbedding,
 )
 from ._gb import GradientBoostingClassifier, GradientBoostingRegressor
@@ -32,6 +33,7 @@ __all__ = [
     "ZscoreRandomForestRegressor",
     "IQRRandomForestRegressor",
     "PercentileTrimmingRandomForestRegressor",
+    # "WeightedOOBRandomForestRegressor",
     "RandomTreesEmbedding",
     "ExtraTreesClassifier",
     "ExtraTreesRegressor",

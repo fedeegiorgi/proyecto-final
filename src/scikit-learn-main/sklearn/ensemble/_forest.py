@@ -1921,6 +1921,7 @@ class RandomForestRegressor(ForestRegressor):
         self.monotonic_cst = monotonic_cst
 
 class ZscoreRandomForestRegressor(RandomForestRegressor):
+
     def predict(self, X):
         """
         Predict regression target for X.
@@ -1942,42 +1943,37 @@ class ZscoreRandomForestRegressor(RandomForestRegressor):
             The predicted values.
         """
         check_is_fitted(self)
-        # Check data
         X = self._validate_X_predict(X)
 
-        # Assign chunk of trees to jobs
         n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
-
-
         lock = threading.Lock() if n_jobs != 1 else None
 
-        # Prepare storage for predictions
         if self.n_outputs_ > 1:
             all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
         else:
             all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
 
-        # Parallel loop to collect predictions from each tree
         Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
             delayed(_accumulate_prediction)(e.predict, X, [all_predictions[i]], None)
             for i, e in enumerate(self.estimators_)
         )
 
-        # Calculate Z-scores for each prediction
+        # calculamos el z-score para cada prediccion
         z_scores = zscore(all_predictions, axis=0)
 
-        # Define the Z-score threshold
-        threshold = 2.0  # For example, ±2
+        # definimos el threshole
+        threshold = 2.0  
 
-        # Exclude predictions with Z-scores beyond the threshold
+        # filtramos las predicciones que superan el threshole
         filtered_predictions = np.where(np.abs(z_scores) <= threshold, all_predictions, np.nan)
 
-        # Calculate the mean of the filtered predictions, ignoring NaN values
+        # calculamos la media con las predicciones que pasaron el filtro
         y_hat = np.nanmean(filtered_predictions, axis=0)
 
         return y_hat
 
 class IQRRandomForestRegressor(RandomForestRegressor):
+
     def predict(self, X):
         check_is_fitted(self)
         X = self._validate_X_predict(X)
@@ -1995,24 +1991,24 @@ class IQRRandomForestRegressor(RandomForestRegressor):
             for i, e in enumerate(self.estimators_)
         )
 
-        # Calcula los cuartiles Q1 y Q3
+        # calculamos los cuartiles Q1 y Q3
         Q1 = np.percentile(all_predictions, 25, axis=0)
         Q3 = np.percentile(all_predictions, 75, axis=0)
         IQR = Q3 - Q1
 
-        # Define el rango de exclusión
+        # definimos el rango de exclusión
         lower_bound = Q1 - 1.5 * IQR
         upper_bound = Q3 + 1.5 * IQR
 
-        # Excluye los valores fuera del rango IQR
+        # filtramos los valores fuera del rango IQR
         filtered_predictions = np.where((all_predictions >= lower_bound) & 
                                         (all_predictions <= upper_bound), 
                                         all_predictions, np.nan)
 
-        # Calcula la media de las predicciones filtradas, ignorando NaNs
+        # calculamos la media de las predicciones filtradas (ignorando NaNs)
         y_hat = np.nanmean(filtered_predictions, axis=0)
 
-        # Manejo de casos donde todas las predicciones son NaN
+        # manejo los casos donde todas las predicciones son NaN
         if np.isnan(y_hat).any():
             y_hat = np.nan_to_num(y_hat, nan=np.nanmedian(all_predictions, axis=0))
 
@@ -2036,20 +2032,20 @@ class PercentileTrimmingRandomForestRegressor(RandomForestRegressor):
             for i, e in enumerate(self.estimators_)
         )
 
-        # Define los percentiles de exclusión
+        # definimos los percentiles de exclusión
         lower_percentile = 5
         upper_percentile = 95
 
-        # Calcula los valores de corte
+        # calculamos los valores de corte
         lower_bound = np.percentile(all_predictions, lower_percentile, axis=0)
         upper_bound = np.percentile(all_predictions, upper_percentile, axis=0)
 
-        # Excluye los valores fuera de los percentiles
+        # filtramos los valores fuera de los percentiles
         filtered_predictions = np.where((all_predictions >= lower_bound) & 
                                         (all_predictions <= upper_bound), 
                                         all_predictions, np.nan)
 
-        # Calcula la media de las predicciones filtradas, ignorando NaNs
+        # calculamos la media de las predicciones filtradas (ignorando NaNs)
         y_hat = np.nanmean(filtered_predictions, axis=0)
 
         return y_hat
