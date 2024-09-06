@@ -28,6 +28,8 @@ rf.fit(X_train, y_train)
 
 n_samples = X_train.shape[0]
 
+peso_arboles = []
+
 # Recorrer cada árbol en el RandomForest
 for i, tree in enumerate(rf.estimators_):
     
@@ -48,5 +50,19 @@ for i, tree in enumerate(rf.estimators_):
     
     # calcular el error MSE para estas predicciones
     mse_oob = mean_squared_error(oob_samples_y, oob_pred)
+    peso = 1 / (mse_oob) #sumamos un epsilon por las moscas?
+    
+    # Añadir el peso a la lista de pesos
+    peso_arboles.append(peso)
 
-    print(f"Árbol {i} - MSE sobre OOB samples: {mse_oob}")
+    print(f"Árbol {i} - MSE sobre OOB samples: {mse_oob}, Peso sin normalizar: {peso}")
+
+
+# normalizar los pesos para que sumen 1
+peso_arboles = np.array(peso_arboles) #lo paso a un numpy array
+peso_arboles /= peso_arboles.sum() # a cada peso lo divido por la suma de los pesos
+
+print(f"Suma de los pesos normalizados: {sum(peso_arboles)}")
+
+for i, peso in enumerate(peso_arboles):
+    print(f"Árbol {i} - Peso normalizado: {peso}")
