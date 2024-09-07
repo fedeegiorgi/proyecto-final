@@ -42,10 +42,12 @@ from numbers import Integral, Real
 from warnings import catch_warnings, simplefilter, warn
 
 import numpy as np
+import pandas as pd
 from scipy.sparse import hstack as sparse_hstack
 from scipy.sparse import issparse
 from scipy.stats import zscore #agregado para descartar extremos
 from scipy.stats import mstats
+from sklearn.metrics import mean_squared_error #agregado para calcular el mse de cada arbol en sus oob y sacar su peso en la prediccion 
 
 from ..base import (
     ClassifierMixin,
@@ -2049,7 +2051,65 @@ class PercentileTrimmingRandomForestRegressor(RandomForestRegressor):
         y_hat = np.nanmean(filtered_predictions, axis=0)
 
         return y_hat
+    
+# ------------------------------------------------------- Alternativa B -----------------------------------------------------------------------------
 
+class OOBRandomForestRegressor(RandomForestRegressor):
+    
+    def fit(self, X, y):
+
+        # convertimos X a un array numpy si es un DataFrame, para no tener los feature names
+        if isinstance(X, pd.DataFrame):
+            X = X.values
+        
+        super().fit(X, y)
+        
+        n_samples = X.shape[0]
+        self.tree_weights = []
+
+        # Calcular pesos OOB para cada árbol
+        for i, tree in enumerate(self.estimators_):
+            oob_sample_mask = np.ones(n_samples, dtype=bool)
+            oob_sample_mask[self.estimators_samples_[i]] = False
+            
+            oob_samples_X = X[oob_sample_mask]
+            oob_samples_y = y[oob_sample_mask]
+            
+            if len(oob_samples_X) == 0:  # Saltar si no hay muestras OOB
+                self.tree_weights.append(0)
+                continue
+            
+            oob_pred = tree.predict(oob_samples_X)
+            mse_oob = mean_squared_error(oob_samples_y, oob_pred)
+            
+            # Manejar la división por cero para MSE muy bajos
+            peso = 1 / (mse_oob + 1e-5)  
+            self.tree_weights.append(peso)
+        
+        # Normalizar pesos para que sumen 1
+        self.tree_weights = np.array(self.tree_weights)
+        self.tree_weights /= self.tree_weights.sum()
+
+    def predict(self, X):
+        check_is_fitted(self)
+        
+        # Convertimos X a un array numpy si es un DataFrame
+        if isinstance(X, pd.DataFrame):
+            X = X.values
+        
+        X = self._validate_X_predict(X)
+        
+        n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
+
+        # Recoger predicciones para cada árbol
+        all_predictions = np.zeros((X.shape[0],), dtype=np.float64)
+
+        # Sumar las predicciones con los pesos OOB
+        for i, tree in enumerate(self.estimators_):
+            tree_prediction = tree.predict(X)
+            all_predictions += tree_prediction * self.tree_weights[i]
+        
+        return all_predictions
 
 class ExtraTreesClassifier(ForestClassifier):
     """
