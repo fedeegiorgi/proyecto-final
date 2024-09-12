@@ -61,15 +61,17 @@ for i, tree in enumerate(rf.estimators_):
 
     #print(f"Árbol {i} - MSE sobre OOB samples: {mse_oob}, Peso sin normalizar: {peso}")
 
-
 # normalizar los pesos para que sumen 1
 peso_arboles = np.array(peso_arboles) #lo paso a un numpy array
+suma = peso_arboles.sum()
+print(suma)
 peso_arboles /= peso_arboles.sum() # a cada peso lo divido por la suma de los pesos
+print(peso_arboles.sum())
 
 print(f"Suma de los pesos normalizados: {sum(peso_arboles)}")
 
-# for i, peso in enumerate(peso_arboles):
-#     print(f"Árbol {i} - Peso normalizado: {peso}")
+for i, peso in enumerate(peso_arboles):
+     print(f"Árbol {i} - Peso normalizado: {peso}")
 
 #obtenemos todas las predicciones
 all_predictions = np.zeros((X_valid.shape[0],), dtype=np.float64)
