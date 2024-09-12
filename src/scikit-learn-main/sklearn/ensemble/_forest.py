@@ -2070,6 +2070,7 @@ class OOBRandomForestRegressor(RandomForestRegressor):
         
         n_samples = X.shape[0]
         self.tree_weights = []
+        mse_oob_values = []  # Aquí vamos a guardar los MSE de cada árbol
 
         # calculamos pesos OOB para cada árbol
         for i, tree in enumerate(self.estimators_):
@@ -2091,16 +2092,31 @@ class OOBRandomForestRegressor(RandomForestRegressor):
                 continue
 
             oob_pred = tree.predict(oob_samples_X)
-            if np.isnan(oob_pred).any():
-                peso = 1 / self.n_estimators  
-            else:
-                mse = mean_squared_error(oob_samples_y, oob_pred)
-                peso = 1/mse #a mayor MSE queremos un peso mas bajo
-                self.tree_weights.append(peso)
+            mse_oob = mean_squared_error(oob_samples_y, oob_pred)
+            mse_oob_values.append(mse_oob)
 
-        # normalizar pesos para que sumen 1
-        self.tree_weights = np.array(self.tree_weights)
-        self.tree_weights /= self.tree_weights.sum()
+        if mse_oob_values:
+            mse_oob_array = np.array(mse_oob_values)
+
+            # Parámetros de suavización
+            mu = np.mean(mse_oob_array)  # media de los MSE
+            sigma = np.std(mse_oob_array)  # desviación estándar de los MSE
+            sigmoid_weights = 1 / (1 + np.exp((mse_oob_array - mu) / sigma)) # --> ponderación suavizada con función sigmoide
+            
+            #log_mse = -np.log(mse_oob_array + 1e-8)  # Logaritmo negativo con pequeño epsilon para evitar -inf
+
+            # normalizamos los pesos
+            tree_weights = sigmoid_weights / np.sum(sigmoid_weights)
+            self.tree_weights = list(tree_weights)
+
+
+            # normalizar pesos para que sumen 1
+            # self.tree_weights = np.array(self.tree_weights)
+            # self.tree_weights /= self.tree_weights.sum()
+
+        # Si no hay pesos definidos, usar pesos uniformes
+        if not self.tree_weights:
+            self.tree_weights = [1 / self.n_estimators] * self.n_estimators
 
 
     def predict(self, X):
