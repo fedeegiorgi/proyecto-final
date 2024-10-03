@@ -1,8 +1,19 @@
-dataset_name,prop_lognormal,prop_normal,alpha
-titanic_fare_test.arff,0.0038167938931297,0.2061068702290076,0.05
-medical_costs.csv,0.0,0.0074626865671641,0.05
-salary_football.csv,0.0,0.2237851662404092,0.05
-flight_price.csv,0.0004679457182966,0.0383715489003275,0.05
-Height.csv,0.0,0.0802139037433155,0.05
-wine_quality.arff,0.0,0.0053846153846153,0.05
-house_8L.arff,0.02326091727013386,0.48211542681588765,0.05
+dataset_name,prop_lognormal,prop_normal,alpha,pred_col_name
+titanic_fare_test.arff,0.0038167938931297,0.2061068702290076,0.05,Fare
+medical_costs.csv,0.0,0.0074626865671641,0.05,medical charges
+salary_football.csv,0.0,0.2237851662404092,0.05,Wage
+flight_price.csv,0.0004679457182966,0.0383715489003275,0.05,Price
+Height.csv,0.0,0.0802139037433155,0.05,childHeight
+wine_quality.arff,0.0,0.0053846153846153,0.05,quality
+house_8L.arff,0.0232609172701338,0.4821154268158876,0.05,price
+titanic_fare_test.arff,0.0190839694656488,0.3816793893129771,0.1,Fare
+medical_costs.csv,0.0,0.0783582089552238,0.1,medical charges
+salary_football.csv,0.0025575447570332,0.4859335038363171,0.1,Wage
+Height.csv,0.0,0.4171122994652406,0.1,childHeight
+wine_quality.arff,0.0,0.0338461538461538,0.1,quality
+house_8L.arff,0.0438885231511959,0.6954136493307,0.1,price
+kidney.arff,0.0,0.0,0.05,frailty
+kidney.arff,0.0,0.25,0.1,frailty
+flight_price.csv,0.0004679457182966,0.1066916237716424,0.1,Price
+boston_housing.arff,0.0098039215686274,0.3137254901960784,0.05,MEDV
+boston_housing.arff,0.00980392156862745,0.5980392156862745,0.1,MEDV
