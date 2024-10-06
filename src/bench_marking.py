@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 
 SEED = 14208
-DATASETS_COLUMNS = {'titanic_fare_test': 'Fare', 'wine_quality': 'quality', 'house_8L': 'price'}
+DATASETS_COLUMNS = {'boston_housing': 'MEDV', 'salary_football': 'Wage', 'house_8L': 'price', 'Height': 'childHeight'}
 DATASETS_FOLDER = '/home/marustina/Documents/2024_2S/TD8/proyecto-final/src/datasets'
 SAVE_CSV = True
 
@@ -39,16 +39,6 @@ def process_dataset(filepath, extension, dataset_name):
     default_mse = mean_squared_error(y_valid, default_predictions)
     default_r2 = r2_score(y_valid, default_predictions)
     default_time = default_end_time - default_start_time
-
-    # Evaluacion modelo alternativa A [Z-score]
-    # z_score_model = ZscoreRandomForestRegressor(random_state=SEED)
-    # z_score_start_time = time.time()
-    # z_score_model.fit(X_train, y_train)
-    # z_score_end_time = time.time()
-    # z_score_predictions = z_score_model.predict(X_valid)
-    # z_score_mse = mean_squared_error(y_valid, z_score_predictions)
-    # z_score_r2 = r2_score(y_valid, z_score_predictions)
-    # z_score_time = z_score_end_time - z_score_start_time
 
     # Evaluacion modelo alternativa A [IQR]
     iqr_model = IQRRandomForestRegressor(random_state=SEED)
@@ -100,35 +90,30 @@ def process_dataset(filepath, extension, dataset_name):
     oob_sp_r2 = r2_score(y_valid, oob_sp_predictions)
     oob_sp_time = oob_sp_end_time - oob_sp_start_time
 
-    # Evaluacion modelo alternativa B [New Validation]
-    # new_val_model = NewValRandomForsestRegressor(random_state=SEED)
-    # new_val_start_time = time.time()
-    # new_val_model.fit(X_train, y_train)
-    # new_val_end_time = time.time()
-    # new_val_predictions = new_val_model.predict(X_valid)
-    # new_val_mse = mean_squared_error(y_valid, new_val_predictions)
-    # new_val_r2 = r2_score(y_valid, new_val_predictions)
-    # new_val_time = new_val_end_time - new_val_start_time
-
     return default_mse, default_r2, default_time, iqr_mse, iqr_r2, iqr_time, oob_mse, oob_r2, oob_time, oob_s_mse, oob_s_r2, oob_s_time, oob_t_mse, oob_t_r2, oob_t_time, oob_sp_mse, oob_sp_r2, oob_sp_time
-#, new_val_mse, new_val_r2, new_val_time
+
+# Inicializa un DataFrame vacío
+results_df = pd.DataFrame()
 
 for filename in os.listdir(DATASETS_FOLDER):
     filepath = os.path.join(DATASETS_FOLDER, filename)
     dataset_name, file_extension = os.path.splitext(filename)
     if file_extension not in [".arff", ".csv"]:
-        next
+        continue
     else:
         default_mse, default_r2, default_time, iqr_mse, iqr_r2, iqr_time, oob_mse, oob_r2, oob_time, oob_s_mse, oob_s_r2, oob_s_time, oob_t_mse, oob_t_r2, oob_t_time, oob_sp_mse, oob_sp_r2, oob_sp_time = process_dataset(filepath=filepath, extension=file_extension, dataset_name=dataset_name)
 
-    df_for_csf = {filename: {'Default MSE': default_mse, "Default R2": default_r2, "Default Time": default_time,
-                             'IQR MSE': iqr_mse, "IQR R2": iqr_r2, "IQR Time": iqr_time,
-                             'OOB MSE': oob_mse, "OOB R2": oob_r2, "OOB Time": oob_time,
-                             'OOB Sigmoid MSE': oob_s_mse, 'OOB Sigmoid R2': oob_s_r2, 'OOB Sigmoid Time': oob_s_time,
-                             'OOB Tanh MSE': oob_t_mse, 'OOB Tanh R2': oob_t_r2, 'OOB Tanh Time': oob_t_time,
-                             'OOB SoftPlus MSE': oob_sp_mse, 'OOB SoftPlus R2': oob_sp_r2, 'OOB SoftPlus Time': oob_sp_time,
-                             }}
-    df_for_csf = pd.DataFrame(df_for_csf)
+        # Crea un DataFrame temporal con los resultados del dataset actual
+        df_temp = pd.DataFrame({
+            'Metric': ['Default MSE', 'Default R2', 'Default Time', 'IQR MSE', 'IQR R2', 'IQR Time', 'OOB MSE', 'OOB R2', 'OOB Time',
+                       'OOB Sigmoid MSE', 'OOB Sigmoid R2', 'OOB Sigmoid Time', 'OOB Tanh MSE', 'OOB Tanh R2', 'OOB Tanh Time',
+                       'OOB SoftPlus MSE', 'OOB SoftPlus R2', 'OOB SoftPlus Time'],
+            dataset_name: [default_mse, default_r2, default_time, iqr_mse, iqr_r2, iqr_time, oob_mse, oob_r2, oob_time,
+                           oob_s_mse, oob_s_r2, oob_s_time, oob_t_mse, oob_t_r2, oob_t_time, oob_sp_mse, oob_sp_r2, oob_sp_time]
+        })
+        
+        # Une los resultados del dataset actual al DataFrame principal
+        results_df = pd.merge(results_df, df_temp, on='Metric', how='outer') if not results_df.empty else df_temp
 
-    if SAVE_CSV:
-        df_for_csf.to_csv("benchmarking.csv")
+if SAVE_CSV:
+    results_df.to_csv("benchmarking.csv", index=False)

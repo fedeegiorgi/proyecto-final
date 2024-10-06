@@ -2058,7 +2058,66 @@ class PercentileTrimmingRandomForestRegressor(RandomForestRegressor):
     
 # ------------------------------------------------------- Alternativa B -----------------------------------------------------------------------------
 
+# ------- version 1 (1/MSE) --------
 class OOBRandomForestRegressor(RandomForestRegressor):
+    
+    def fit(self, X, y):
+
+        # convertimos X a un array numpy si es un DataFrame, para no tener los feature names
+        if isinstance(X, pd.DataFrame):
+            X = X.values
+        
+        super().fit(X, y)
+        
+        n_samples = X.shape[0]
+        self.tree_weights = []
+
+        # calculamos pesos OOB para cada árbol
+        for i, tree in enumerate(self.estimators_):
+            oob_sample_mask = np.ones(n_samples, dtype=bool) #inicializo una mascara con 1's
+
+            # asignamos false a las muestras que el arbol utilizo para entrenar, ya que no son OOB
+            oob_sample_mask[self.estimators_samples_[i]] = False
+            
+            oob_samples_X = X[oob_sample_mask] # solo se seleccionan las observaciones que tienen valor True, las OOB observations
+            oob_samples_y = y[oob_sample_mask]
+            
+            if len(oob_samples_X) == 0: #si no hay muestras oob, asignamos a todos los arboles el mismo peso
+                self.tree_weights.append(1 / self.n_estimators) 
+                continue
+            
+            oob_pred = tree.predict(oob_samples_X)
+            peso = 1 / mean_squared_error(oob_samples_y, oob_pred) #utilizamos la inverse del MSE para que arboles con mayor MSE, tengan menor peso
+            self.tree_weights.append(peso)
+
+        # normalizar pesos para que sumen 1
+        self.tree_weights = np.array(self.tree_weights)
+        self.tree_weights /= self.tree_weights.sum()
+
+    def predict(self, X):
+        check_is_fitted(self)
+        
+        # convertimos X a un array numpy si es un DataFrame para que no se releven las features
+        if isinstance(X, pd.DataFrame):
+            X = X.values
+        
+        X = self._validate_X_predict(X)
+        
+        n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
+
+        # predicciones para cada árbol
+        all_predictions = np.zeros((X.shape[0],), dtype=np.float64)
+
+        # sumar las predicciones con los pesos OOB
+        for i, tree in enumerate(self.estimators_):
+            tree_prediction = tree.predict(X)
+            all_predictions += tree_prediction * self.tree_weights[i] #ponderamos la prediccion de cada arbol con su peso correspondiente
+        
+        return all_predictions
+
+# ------------- version 2 (funcion sigmoidea) -------------------------------
+
+class OOBRandomForestRegressorSigmoid(RandomForestRegressor):
 
     def fit(self, X, y):
 
@@ -2081,11 +2140,7 @@ class OOBRandomForestRegressor(RandomForestRegressor):
             
             oob_samples_X = X[oob_sample_mask] # solo se seleccionan las observaciones que tienen valor True, las OOB observations
             oob_samples_y = y[oob_sample_mask]
-            
 
-            # if len(oob_samples_X) == 0:  # los arboles que no tienen muestras OOB no son considerados para la prediccion
-            #     self.tree_weights.append(0)
-            #     continue
 
             if len(oob_samples_X) == 0:
                 self.tree_weights.append(1 / self.n_estimators)  # le damos el mismo peso a los arboles que no tienen muestras OOB
@@ -2101,18 +2156,13 @@ class OOBRandomForestRegressor(RandomForestRegressor):
             # Parámetros de suavización
             mu = np.mean(mse_oob_array)  # media de los MSE
             sigma = np.std(mse_oob_array)  # desviación estándar de los MSE
-            sigmoid_weights = 1 / (1 + np.exp((mse_oob_array - mu) / sigma)) # --> ponderación suavizada con función sigmoide
+            sigmoid_weights = 1 / (1 + np.exp((mse_oob_array - mu) / sigma)) # --> ponderación suavizada con función sigmoidea
             
             #log_mse = -np.log(mse_oob_array + 1e-8)  # Logaritmo negativo con pequeño epsilon para evitar -inf
 
             # normalizamos los pesos
             tree_weights = sigmoid_weights / np.sum(sigmoid_weights)
             self.tree_weights = list(tree_weights)
-
-
-            # normalizar pesos para que sumen 1
-            # self.tree_weights = np.array(self.tree_weights)
-            # self.tree_weights /= self.tree_weights.sum()
 
         # Si no hay pesos definidos, usar pesos uniformes
         if not self.tree_weights:
@@ -2140,6 +2190,154 @@ class OOBRandomForestRegressor(RandomForestRegressor):
         
         return all_predictions
 
+#----- version 3 (Tangente hiperbólica) --------
+
+class OOBRandomForestRegressorTanh(RandomForestRegressor):
+
+    def fit(self, X, y):
+
+        # convertimos X a un array numpy si es un DataFrame, para no tener los feature names
+        if isinstance(X, pd.DataFrame):
+            X = X.values
+        
+        super().fit(X, y)
+        
+        n_samples = X.shape[0]
+        self.tree_weights = []
+        mse_oob_values = []  # Aquí vamos a guardar los MSE de cada árbol
+
+        # calculamos pesos OOB para cada árbol
+        for i, tree in enumerate(self.estimators_):
+            oob_sample_mask = np.ones(n_samples, dtype=bool) #inicializo una mascara con 1's
+
+            # asignamos false a las muestras que el arbol utilizo para entrenar, ya que no son OOB
+            oob_sample_mask[self.estimators_samples_[i]] = False
+            
+            oob_samples_X = X[oob_sample_mask] # solo se seleccionan las observaciones que tienen valor True, las OOB observations
+            oob_samples_y = y[oob_sample_mask]
+
+
+            if len(oob_samples_X) == 0:
+                self.tree_weights.append(1 / self.n_estimators)  # le damos el mismo peso a los arboles que no tienen muestras OOB
+                continue
+
+            oob_pred = tree.predict(oob_samples_X)
+            mse_oob = mean_squared_error(oob_samples_y, oob_pred)
+            mse_oob_values.append(mse_oob)
+
+        if mse_oob_values:
+            mse_oob_array = np.array(mse_oob_values)
+
+            # Parámetros de suavización Tanh
+            mu = np.mean(mse_oob_array)  # media de los MSE
+            sigma = np.std(mse_oob_array)  # desviación estándar de los MSE
+            tanh_weights = 0.5 * (1 + np.tanh((mse_oob_array - mu) / sigma))
+
+            # normalizamos los pesos
+            tanh_weights_normalized = tanh_weights / np.sum(tanh_weights)
+            self.tree_weights = list(tanh_weights_normalized)
+
+        # Si no hay pesos definidos, usar pesos uniformes
+        if not self.tree_weights:
+            self.tree_weights = [1 / self.n_estimators] * self.n_estimators
+
+
+    def predict(self, X):
+        check_is_fitted(self)
+        
+        # convertimos X a un array numpy si es un DataFrame para que no se releven las features
+        if isinstance(X, pd.DataFrame):
+            X = X.values
+        
+        X = self._validate_X_predict(X)
+        
+        n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
+
+        # inicializamos las predicciones para cada árbol
+        all_predictions = np.zeros((X.shape[0],), dtype=np.float64)
+
+        # sumar las predicciones con los pesos OOB
+        for i, tree in enumerate(self.estimators_):
+            tree_prediction = tree.predict(X)
+            all_predictions += tree_prediction * self.tree_weights[i] #ponderamos la prediccion de cada arbol con su peso correspondiente
+        
+        return all_predictions
+
+#-------- version 4 (softplus) -----------
+class OOBRandomForestRegressorSoftPlus(RandomForestRegressor):
+
+    def fit(self, X, y):
+
+        # convertimos X a un array numpy si es un DataFrame, para no tener los feature names
+        if isinstance(X, pd.DataFrame):
+            X = X.values
+        
+        super().fit(X, y)
+        
+        n_samples = X.shape[0]
+        self.tree_weights = []
+        mse_oob_values = []  # Aquí vamos a guardar los MSE de cada árbol
+
+        # calculamos pesos OOB para cada árbol
+        for i, tree in enumerate(self.estimators_):
+            oob_sample_mask = np.ones(n_samples, dtype=bool) #inicializo una mascara con 1's
+
+            # asignamos false a las muestras que el arbol utilizo para entrenar, ya que no son OOB
+            oob_sample_mask[self.estimators_samples_[i]] = False
+            
+            oob_samples_X = X[oob_sample_mask] # solo se seleccionan las observaciones que tienen valor True, las OOB observations
+            oob_samples_y = y[oob_sample_mask]
+
+
+            if len(oob_samples_X) == 0:
+                self.tree_weights.append(1 / self.n_estimators)  # le damos el mismo peso a los arboles que no tienen muestras OOB
+                continue
+
+            oob_pred = tree.predict(oob_samples_X)
+            mse_oob = mean_squared_error(oob_samples_y, oob_pred)
+            mse_oob_values.append(mse_oob)
+
+        if mse_oob_values:
+            mse_oob_array = np.array(mse_oob_values)
+
+            # Parámetros de suavización Tanh
+            mu = np.mean(mse_oob_array)  # media de los MSE
+            sigma = np.std(mse_oob_array)  # desviación estándar de los MSE
+            softplus_weights = np.log(1 + np.exp(-(mse_oob_array - mu) / sigma))
+
+
+            # normalizamos los pesos
+            softplus_weights_normalized = softplus_weights / np.sum(softplus_weights)
+            self.tree_weights = list(softplus_weights_normalized)
+
+        # Si no hay pesos definidos, usar pesos uniformes
+        if not self.tree_weights:
+            self.tree_weights = [1 / self.n_estimators] * self.n_estimators
+
+
+    def predict(self, X):
+        check_is_fitted(self)
+        
+        # convertimos X a un array numpy si es un DataFrame para que no se releven las features
+        if isinstance(X, pd.DataFrame):
+            X = X.values
+        
+        X = self._validate_X_predict(X)
+        
+        n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
+
+        # inicializamos las predicciones para cada árbol
+        all_predictions = np.zeros((X.shape[0],), dtype=np.float64)
+
+        # sumar las predicciones con los pesos OOB
+        for i, tree in enumerate(self.estimators_):
+            tree_prediction = tree.predict(X)
+            all_predictions += tree_prediction * self.tree_weights[i] #ponderamos la prediccion de cada arbol con su peso correspondiente
+        
+        return all_predictions
+    
+
+#------- new validation set ----------------
 
 class NewValRandomForestRegressor(RandomForestRegressor):
     

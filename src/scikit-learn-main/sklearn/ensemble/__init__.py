@@ -14,8 +14,10 @@ from ._forest import (
     IQRRandomForestRegressor,
     PercentileTrimmingRandomForestRegressor,
     OOBRandomForestRegressor,
+    OOBRandomForestRegressorSigmoid,
+    OOBRandomForestRegressorTanh,
+    OOBRandomForestRegressorSoftPlus,
     NewValRandomForestRegressor,
-    #IntersectionOOBRandomForestRegressor,
     RandomTreesEmbedding,
 )
 from ._gb import GradientBoostingClassifier, GradientBoostingRegressor
@@ -36,8 +38,10 @@ __all__ = [
     "IQRRandomForestRegressor",
     "PercentileTrimmingRandomForestRegressor",
     "OOBRandomForestRegressor",
+    "OOBRandomForestRegressorSigmoid",
+    "OOBRandomForestRegressorTanh",
+    "OOBRandomForestRegressorSoftPlus",
     "NewValRandomForestRegressor",
-    #"IntersectionOOBRandomForestRegressor",
     "RandomTreesEmbedding",
     "ExtraTreesClassifier",
     "ExtraTreesRegressor",
