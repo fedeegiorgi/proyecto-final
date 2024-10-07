@@ -9,7 +9,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 
 SEED = 14208
 DATASETS_COLUMNS = {'boston_housing': 'MEDV', 'salary_football': 'Wage', 'house_8L': 'price', 'Height': 'childHeight'}
-DATASETS_FOLDER = '/home/marustina/Documents/2024_2S/TD8/proyecto-final/src/datasets'
+DATASETS_FOLDER = 'datasets/'
 SAVE_CSV = True
 
 def process_dataset(filepath, extension, dataset_name):
