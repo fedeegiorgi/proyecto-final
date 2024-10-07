@@ -42,13 +42,8 @@ from numbers import Integral, Real
 from warnings import catch_warnings, simplefilter, warn
 
 import numpy as np
-import pandas as pd
 from scipy.sparse import hstack as sparse_hstack
 from scipy.sparse import issparse
-from scipy.stats import zscore #agregado para descartar extremos
-from scipy.stats import mstats
-from sklearn.metrics import mean_squared_error #agregado para calcular el mse de cada arbol en sus oob y sacar su peso en la prediccion 
-from sklearn.model_selection import train_test_split
 
 from ..base import (
     ClassifierMixin,
@@ -722,32 +717,20 @@ class BaseForest(MultiOutputMixin, BaseEnsemble, metaclass=ABCMeta):
         return {"allow_nan": _safe_tags(estimator, key="allow_nan")}
 
 
-import threading
-
-def _accumulate_prediction(predict, X, out, lock=None):
+def _accumulate_prediction(predict, X, out, lock):
     """
     This is a utility function for joblib's Parallel.
-    
-    It can’t go locally in ForestClassifier or ForestRegressor, because joblib
+
+    It can't go locally in ForestClassifier or ForestRegressor, because joblib
     complains that it cannot pickle it when placed there.
     """
     prediction = predict(X, check_input=False)
-    
-    if lock is None:
-        # If no lock is provided, directly accumulate the predictions
+    with lock:
         if len(out) == 1:
             out[0] += prediction
         else:
             for i in range(len(out)):
                 out[i] += prediction[i]
-    else:
-        # Use the lock for thread safety
-        with lock:
-            if len(out) == 1:
-                out[0] += prediction
-            else:
-                for i in range(len(out)):
-                    out[i] += prediction[i]
 
 
 class ForestClassifier(ClassifierMixin, BaseForest, metaclass=ABCMeta):
@@ -1922,6 +1905,7 @@ class RandomForestRegressor(ForestRegressor):
         self.min_impurity_decrease = min_impurity_decrease
         self.ccp_alpha = ccp_alpha
         self.monotonic_cst = monotonic_cst
+
 
 class ExtraTreesClassifier(ForestClassifier):
     """

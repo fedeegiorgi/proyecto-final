@@ -1,7 +1,6 @@
 from sklearn.ensemble import RandomForestRegressor
 import threading
 import numpy as np
-import pandas as pd
 from scipy.sparse import hstack as sparse_hstack
 from scipy.sparse import issparse
 from scipy.stats import zscore #agregado para descartar extremos
