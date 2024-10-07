@@ -10,15 +10,19 @@ from ._forest import (
     ExtraTreesRegressor,
     RandomForestClassifier,
     RandomForestRegressor,
+    RandomTreesEmbedding,
+)
+from ._extremos_forest import (
     ZscoreRandomForestRegressor,
     IQRRandomForestRegressor,
     PercentileTrimmingRandomForestRegressor,
+)
+from ._oob_forest import (
     OOBRandomForestRegressor,
     OOBRandomForestRegressorSigmoid,
     OOBRandomForestRegressorTanh,
     OOBRandomForestRegressorSoftPlus,
     NewValRandomForestRegressor,
-    RandomTreesEmbedding,
 )
 from ._gb import GradientBoostingClassifier, GradientBoostingRegressor
 from ._hist_gradient_boosting.gradient_boosting import (
