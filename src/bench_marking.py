@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 
 SEED = 14208
-DATASETS_COLUMNS = {'boston_housing': 'MEDV', 'salary_football': 'Wage', 'house_8L': 'price', 'Height': 'childHeight'}
+DATASETS_COLUMNS = {'boston_housing': 'MEDV'}
 DATASETS_FOLDER = 'datasets/'
 SAVE_CSV = True
 

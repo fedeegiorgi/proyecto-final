@@ -12,6 +12,9 @@ from ._forest import (
     RandomForestRegressor,
     RandomTreesEmbedding,
 )
+from ._group_debate import (
+    RandomForestGroupDebate,
+)
 from ._extremos_forest import (
     ZscoreRandomForestRegressor,
     IQRRandomForestRegressor,

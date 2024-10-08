@@ -1,4 +1,4 @@
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestGroupDebate
 import threading
 import numpy as np
 from scipy.sparse import hstack as sparse_hstack
@@ -39,34 +39,19 @@ from ..utils.validation import (
 )
 from ._base import BaseEnsemble, _partition_estimators
 
-def _accumulate_prediction(predict, X, out, lock=None):
+def _store_prediction(predict, X, out, lock, tree_index):
+    # AGREGAR DISCLAIMER MISMO DE LA DOC ORIGINAL
     """
-    This is a utility function for joblib's Parallel.
-    
-    It can’t go locally in ForestClassifier or ForestRegressor, because joblib
-    complains that it cannot pickle it when placed there.
+    Store each tree's prediction in the 2D array `out`.
+    Now we store the predictions in the tree's corresponding column.
     """
     prediction = predict(X, check_input=False)
-    
-    if lock is None:
-        # If no lock is provided, directly accumulate the predictions
-        if len(out) == 1:
-            out[0] += prediction
-        else:
-            for i in range(len(out)):
-                out[i] += prediction[i]
-    else:
-        # Use the lock for thread safety
-        with lock:
-            if len(out) == 1:
-                out[0] += prediction
-            else:
-                for i in range(len(out)):
-                    out[i] += prediction[i]
+    with lock:
+        out[0][tree_index] = prediction   # Store predictions in the column corresponding to the tree
 
 # --------------------------------------------------------- Alternativa A --------------------------------------------------------------------
 
-class ZscoreRandomForestRegressor(RandomForestRegressor):
+class ZscoreRandomForestRegressor(RandomForestGroupDebate):
 
     def predict(self, X):
         """
@@ -92,7 +77,7 @@ class ZscoreRandomForestRegressor(RandomForestRegressor):
         X = self._validate_X_predict(X)
 
         n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
-        lock = threading.Lock() if n_jobs != 1 else None
+        lock = threading.Lock()
 
         if self.n_outputs_ > 1:
             all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
@@ -100,7 +85,7 @@ class ZscoreRandomForestRegressor(RandomForestRegressor):
             all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
 
         Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
-            delayed(_accumulate_prediction)(e.predict, X, [all_predictions[i]], None)
+            delayed(_store_prediction)(e.predict, X, [all_predictions], lock, i)
             for i, e in enumerate(self.estimators_)
         )
 
@@ -118,14 +103,14 @@ class ZscoreRandomForestRegressor(RandomForestRegressor):
 
         return y_hat
 
-class IQRRandomForestRegressor(RandomForestRegressor):
+class IQRRandomForestRegressor(RandomForestGroupDebate):
 
     def predict(self, X):
         check_is_fitted(self)
         X = self._validate_X_predict(X)
 
         n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
-        lock = threading.Lock() if n_jobs != 1 else None
+        lock = threading.Lock()
 
         if self.n_outputs_ > 1:
             all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
@@ -133,41 +118,98 @@ class IQRRandomForestRegressor(RandomForestRegressor):
             all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
 
         Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
-            delayed(_accumulate_prediction)(e.predict, X, [all_predictions[i]], None)
+            delayed(_store_prediction)(e.predict, X, [all_predictions], lock, i)
             for i, e in enumerate(self.estimators_)
         )
 
-        # calculamos los cuartiles Q1 y Q3
-        Q1 = np.percentile(all_predictions, 25, axis=0)
-        Q3 = np.percentile(all_predictions, 75, axis=0)
-        #calculamos IQR
-        IQR = Q3 - Q1
+        grouped_trees = self.random_group_split(all_predictions)
 
-        # definimos el rango de exclusión
-        lower_bound = Q1 - 1.5 * IQR
-        upper_bound = Q3 + 1.5 * IQR
+        group_averages = np.empty((self._n_groups, X.shape[0]))
 
-        # filtramos los valores fuera del rango IQR
-        filtered_predictions = np.where((all_predictions >= lower_bound) & 
-                                        (all_predictions <= upper_bound), 
-                                        all_predictions, np.nan)
+        # For each group
+        for i in range(self._n_groups):
+            # Extract the current group
+            group_predictions = grouped_trees[i]
 
-        # calculamos la media de las predicciones filtradas (ignorando NaNs)
-        y_hat = np.nanmean(filtered_predictions, axis=0)
+            # Calculate Q1 and Q3 for the current group
+            Q1 = np.percentile(group_predictions, 25, axis=0)
+            Q3 = np.percentile(group_predictions, 75, axis=0)
 
-        # manejo los casos donde todas las predicciones son NaN
-        if np.isnan(y_hat).any():
-            y_hat = np.nan_to_num(y_hat, nan=np.nanmedian(all_predictions, axis=0))
+            # Calculate IQR
+            IQR = Q3 - Q1
+
+            # Define the exclusion range
+            lower_bound = Q1 - 1.5 * IQR
+            upper_bound = Q3 + 1.5 * IQR
+
+            # Filter values outside the exclusion range
+            filtered_predictions = np.where((group_predictions >= lower_bound) & 
+                                            (group_predictions <= upper_bound), 
+                                            group_predictions, np.nan)
+
+            # Calculate the mean of the filtered predictions (ignoring NaNs)
+            group_averages[i] = np.nanmean(filtered_predictions, axis=0)
+
+        y_hat = np.mean(group_averages, axis=0)
 
         return y_hat
 
-class PercentileTrimmingRandomForestRegressor(RandomForestRegressor):
+class PercentileTrimmingRandomForestRegressor(RandomForestGroupDebate):
+    def __init__(
+        self,
+        n_estimators=100,
+        *,
+        criterion="squared_error",
+        max_depth=None,
+        min_samples_split=2,
+        min_samples_leaf=1,
+        min_weight_fraction_leaf=0.0,
+        max_features=1.0,
+        max_leaf_nodes=None,
+        min_impurity_decrease=0.0,
+        bootstrap=True,
+        oob_score=False,
+        n_jobs=None,
+        random_state=None,
+        verbose=0,
+        warm_start=False,
+        ccp_alpha=0.0,
+        max_samples=None,
+        monotonic_cst=None,
+        group_size=10,
+        percentile=10,  # New parameter for percentile trimming
+    ):
+        super().__init__(
+            n_estimators=n_estimators,
+            criterion=criterion,
+            max_depth=max_depth,
+            min_samples_split=min_samples_split,
+            min_samples_leaf=min_samples_leaf,
+            min_weight_fraction_leaf=min_weight_fraction_leaf,
+            max_features=max_features,
+            max_leaf_nodes=max_leaf_nodes,
+            min_impurity_decrease=min_impurity_decrease,
+            bootstrap=bootstrap,
+            oob_score=oob_score,
+            n_jobs=n_jobs,
+            random_state=random_state,
+            verbose=verbose,
+            warm_start=warm_start,
+            ccp_alpha=ccp_alpha,
+            max_samples=max_samples,
+            monotonic_cst=monotonic_cst,
+            group_size=group_size,
+        )
+
+        # Initialize the new parameter specific to this class
+        self.percentile = percentile
+
     def predict(self, X):
         check_is_fitted(self)
         X = self._validate_X_predict(X)
 
         n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
-        lock = threading.Lock() if n_jobs != 1 else None
+        lock = threading.Lock()
 
         if self.n_outputs_ > 1:
             all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
@@ -175,13 +217,13 @@ class PercentileTrimmingRandomForestRegressor(RandomForestRegressor):
             all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
 
         Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
-            delayed(_accumulate_prediction)(e.predict, X, [all_predictions[i]], None)
+            delayed(_store_prediction)(e.predict, X, [all_predictions], lock, i)
             for i, e in enumerate(self.estimators_)
         )
 
         # definimos los percentiles de exclusión
-        lower_percentile = 5
-        upper_percentile = 95
+        lower_percentile = self.percentile
+        upper_percentile = 100 - self.percentile
 
         # calculamos los valores de corte
         lower_bound = np.percentile(all_predictions, lower_percentile, axis=0)
