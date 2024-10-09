@@ -13,7 +13,7 @@ from ._forest import (
     RandomTreesEmbedding,
 )
 from ._group_debate import (
-    RandomForestGroupDebate,
+    RandomForestGroupDebate, 
 )
 from ._extremos_forest import (
     ZscoreRandomForestRegressor,
@@ -22,6 +22,7 @@ from ._extremos_forest import (
 )
 from ._oob_forest import (
     OOBRandomForestRegressor,
+    OOBRandomForestRegressorGroups,
     OOBRandomForestRegressorSigmoid,
     OOBRandomForestRegressorTanh,
     OOBRandomForestRegressorSoftPlus,
@@ -41,10 +42,12 @@ __all__ = [
     "BaseEnsemble",
     "RandomForestClassifier",
     "RandomForestRegressor",
+    "RandomForestGroupDebate",
     "ZscoreRandomForestRegressor",
     "IQRRandomForestRegressor",
     "PercentileTrimmingRandomForestRegressor",
     "OOBRandomForestRegressor",
+    "OOBRandomForestRegressorGroups",
     "OOBRandomForestRegressorSigmoid",
     "OOBRandomForestRegressorTanh",
     "OOBRandomForestRegressorSoftPlus",

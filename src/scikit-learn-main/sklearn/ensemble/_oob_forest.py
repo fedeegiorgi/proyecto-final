@@ -1,4 +1,5 @@
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestGroupDebate
 import threading
 from abc import ABCMeta, abstractmethod
 from numbers import Integral, Real
@@ -44,6 +45,16 @@ from ..utils.validation import (
 )
 from ._base import BaseEnsemble, _partition_estimators
 
+def _store_prediction(predict, X, out, lock, tree_index):
+    # AGREGAR DISCLAIMER MISMO DE LA DOC ORIGINAL
+    """
+    Store each tree's prediction in the 2D array `out`.
+    Now we store the predictions in the tree's corresponding column.
+    """
+    prediction = predict(X, check_input=False)
+    with lock:
+        out[0][tree_index] = prediction   # Store predictions in the column corresponding to the tree
+
     
 # ------------------------------------------------------- Alternativa B -----------------------------------------------------------------------------
 
@@ -56,7 +67,7 @@ class OOBRandomForestRegressor(RandomForestRegressor):
         if isinstance(X, pd.DataFrame):
             X = X.values
         
-        super().fit(X, y)
+        super().fit(X, y) #utilizamos el fit original de BaseForest
         
         n_samples = X.shape[0]
         self.tree_weights = []
@@ -103,6 +114,82 @@ class OOBRandomForestRegressor(RandomForestRegressor):
             all_predictions += tree_prediction * self.tree_weights[i] #ponderamos la prediccion de cada arbol con su peso correspondiente
         
         return all_predictions
+    
+# -------------- version 1 (con grupos)------------------------
+
+class OOBRandomForestRegressorGroups(RandomForestGroupDebate):
+    
+    def fit(self, X, y):
+
+        # convertimos X a un array numpy si es un DataFrame, para no tener los feature names
+        if isinstance(X, pd.DataFrame):
+            X = X.values
+        
+        super().fit(X, y) #utilizamos el fit original de BaseForest
+        
+        n_samples = X.shape[0]
+        self.tree_weights = []
+
+        # calculamos pesos OOB para cada árbol
+        for i, tree in enumerate(self.estimators_):
+            oob_sample_mask = np.ones(n_samples, dtype=bool) #inicializo una mascara con 1's
+
+            # asignamos false a las muestras que el arbol utilizo para entrenar, ya que no son OOB
+            oob_sample_mask[self.estimators_samples_[i]] = False
+            
+            oob_samples_X = X[oob_sample_mask] # solo se seleccionan las observaciones que tienen valor True, las OOB observations
+            oob_samples_y = y[oob_sample_mask]
+            
+            if len(oob_samples_X) == 0: #si no hay muestras oob, asignamos a todos los arboles el mismo peso
+                self.tree_weights.append(1 / self.n_estimators) 
+                continue
+            
+            oob_pred = tree.predict(oob_samples_X)
+            peso = 1 / mean_squared_error(oob_samples_y, oob_pred) #utilizamos la inverse del MSE para que arboles con mayor MSE, tengan menor peso
+            self.tree_weights.append(peso)
+
+        # normalizar pesos para que sumen 1
+        self.tree_weights = np.array(self.tree_weights)
+        self.tree_weights /= self.tree_weights.sum()
+    
+    def predict(self, X):
+            check_is_fitted(self)
+
+            # Convert X to numpy array if it is a DataFrame
+            if isinstance(X, pd.DataFrame):
+                X = X.values
+
+            X = self._validate_X_predict(X)
+            
+            n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
+            lock = threading.Lock()
+
+            if self.n_outputs_ > 1:
+                all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
+            else:
+                all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
+
+            Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
+                delayed(_store_prediction)(e.predict, X, [all_predictions], lock, i)
+                for i, e in enumerate(self.estimators_)
+            )
+
+            grouped_trees = self.random_group_split(all_predictions)
+
+            group_predictions = np.empty((self._n_groups, X.shape[0]))
+
+            # For each group, compute weighted OOB predictions
+            for i in range(self._n_groups):
+                group_predictions_i = grouped_trees[i]  # Predictions for this group of trees
+                group_weights = self.tree_weights[i * self.group_size: (i + 1) * self.group_size]  # Corresponding weights
+
+                # Weighted average of the group predictions (axis=0 for sample-wise averaging)
+                group_predictions[i] = np.average(group_predictions_i, axis=0, weights=group_weights)
+
+            # Final prediction is the mean of the group predictions
+            y_hat = np.mean(group_predictions, axis=0)
+
+            return y_hat
 
 # ------------- version 2 (funcion sigmoidea) -------------------------------
 

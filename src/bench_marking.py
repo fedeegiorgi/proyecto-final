@@ -2,7 +2,7 @@ import os
 import time
 import pandas as pd
 from scipy.io import arff
-from sklearn.ensemble import RandomForestRegressor, ZscoreRandomForestRegressor, IQRRandomForestRegressor, OOBRandomForestRegressor, OOBRandomForestRegressorSigmoid, OOBRandomForestRegressorTanh, OOBRandomForestRegressorSoftPlus, NewValRandomForestRegressor
+from sklearn.ensemble import RandomForestRegressor, ZscoreRandomForestRegressor, IQRRandomForestRegressor, OOBRandomForestRegressor, OOBRandomForestRegressorSigmoid, OOBRandomForestRegressorTanh, OOBRandomForestRegressorSoftPlus, NewValRandomForestRegressor, OOBRandomForestRegressorGroups
 #, IntersectionOOBRandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
@@ -60,6 +60,16 @@ def process_dataset(filepath, extension, dataset_name):
     oob_r2 = r2_score(y_valid, oob_predictions)
     oob_time = oob_end_time - oob_start_time
 
+    # Evaluacion modelo alternativa B [OOBgrupos]
+    oobgroup_model = OOBRandomForestRegressorGroups(random_state=SEED)
+    oobgroup_start_time = time.time()
+    oobgroup_model.fit(X_train, y_train)
+    oobgroup_end_time = time.time()
+    oobgroup_predictions = oobgroup_model.predict(X_valid)
+    oobgroup_mse = mean_squared_error(y_valid, oobgroup_predictions)
+    oobgroup_r2 = r2_score(y_valid, oobgroup_predictions)
+    oobgroup_time = oobgroup_end_time - oobgroup_start_time
+
     # Evaluacion modelo alternativa B [OOB con suavización Sigmoidea]
     oob_s_model = OOBRandomForestRegressorSigmoid(random_state=SEED)
     oob_s_start_time = time.time()
@@ -90,7 +100,7 @@ def process_dataset(filepath, extension, dataset_name):
     oob_sp_r2 = r2_score(y_valid, oob_sp_predictions)
     oob_sp_time = oob_sp_end_time - oob_sp_start_time
 
-    return default_mse, default_r2, default_time, iqr_mse, iqr_r2, iqr_time, oob_mse, oob_r2, oob_time, oob_s_mse, oob_s_r2, oob_s_time, oob_t_mse, oob_t_r2, oob_t_time, oob_sp_mse, oob_sp_r2, oob_sp_time
+    return default_mse, default_r2, default_time, iqr_mse, iqr_r2, iqr_time, oob_mse, oob_r2, oob_time, oobgroup_mse, oobgroup_r2, oobgroup_time, oob_s_mse, oob_s_r2, oob_s_time, oob_t_mse, oob_t_r2, oob_t_time, oob_sp_mse, oob_sp_r2, oob_sp_time
 
 # Inicializa un DataFrame vacío
 results_df = pd.DataFrame()
@@ -101,14 +111,14 @@ for filename in os.listdir(DATASETS_FOLDER):
     if file_extension not in [".arff", ".csv"]:
         continue
     else:
-        default_mse, default_r2, default_time, iqr_mse, iqr_r2, iqr_time, oob_mse, oob_r2, oob_time, oob_s_mse, oob_s_r2, oob_s_time, oob_t_mse, oob_t_r2, oob_t_time, oob_sp_mse, oob_sp_r2, oob_sp_time = process_dataset(filepath=filepath, extension=file_extension, dataset_name=dataset_name)
+        default_mse, default_r2, default_time, iqr_mse, iqr_r2, iqr_time, oob_mse, oob_r2, oob_time, oobgroup_mse, oobgroup_r2, oobgroup_time, oob_s_mse, oob_s_r2, oob_s_time, oob_t_mse, oob_t_r2, oob_t_time, oob_sp_mse, oob_sp_r2, oob_sp_time = process_dataset(filepath=filepath, extension=file_extension, dataset_name=dataset_name)
 
         # Crea un DataFrame temporal con los resultados del dataset actual
         df_temp = pd.DataFrame({
-            'Metric': ['Default MSE', 'Default R2', 'Default Time', 'IQR MSE', 'IQR R2', 'IQR Time', 'OOB MSE', 'OOB R2', 'OOB Time',
+            'Metric': ['Default MSE', 'Default R2', 'Default Time', 'IQR MSE', 'IQR R2', 'IQR Time', 'OOB MSE', 'OOB R2', 'OOB Time', 'OOBGroup MSE', 'OOBGroup R2', 'OOBGroup Time',
                        'OOB Sigmoid MSE', 'OOB Sigmoid R2', 'OOB Sigmoid Time', 'OOB Tanh MSE', 'OOB Tanh R2', 'OOB Tanh Time',
                        'OOB SoftPlus MSE', 'OOB SoftPlus R2', 'OOB SoftPlus Time'],
-            dataset_name: [default_mse, default_r2, default_time, iqr_mse, iqr_r2, iqr_time, oob_mse, oob_r2, oob_time,
+            dataset_name: [default_mse, default_r2, default_time, iqr_mse, iqr_r2, iqr_time, oob_mse, oob_r2, oob_time, oobgroup_mse, oobgroup_r2, oobgroup_time,
                            oob_s_mse, oob_s_r2, oob_s_time, oob_t_mse, oob_t_r2, oob_t_time, oob_sp_mse, oob_sp_r2, oob_sp_time]
         })
         

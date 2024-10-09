@@ -1,6 +1,7 @@
 from sklearn.ensemble import RandomForestGroupDebate
 import threading
 import numpy as np
+import pandas as pd
 from scipy.sparse import hstack as sparse_hstack
 from scipy.sparse import issparse
 from scipy.stats import zscore #agregado para descartar extremos
@@ -106,7 +107,8 @@ class ZscoreRandomForestRegressor(RandomForestGroupDebate):
 class IQRRandomForestRegressor(RandomForestGroupDebate):
 
     def predict(self, X):
-        check_is_fitted(self)
+        check_is_fitted(self) #fijarse que no estamos ocultando las features?
+
         X = self._validate_X_predict(X)
 
         n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
