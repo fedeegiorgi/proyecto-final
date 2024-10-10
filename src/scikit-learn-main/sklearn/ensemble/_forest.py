@@ -1860,7 +1860,7 @@ class RandomForestRegressor(ForestRegressor):
         max_features=1.0,
         max_leaf_nodes=None,
         min_impurity_decrease=0.0,
-        bootstrap=True,
+        bootstrap=True, # default = True --> para las estrategias con OOB
         oob_score=False,
         n_jobs=None,
         random_state=None,

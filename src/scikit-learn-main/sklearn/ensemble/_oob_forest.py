@@ -118,78 +118,72 @@ class OOBRandomForestRegressor(RandomForestRegressor):
 # -------------- version 1 (con grupos)------------------------
 
 class OOBRandomForestRegressorGroups(RandomForestGroupDebate):
-    
-    def fit(self, X, y):
 
-        # convertimos X a un array numpy si es un DataFrame, para no tener los feature names
-        if isinstance(X, pd.DataFrame):
-            X = X.values
-        
-        super().fit(X, y) #utilizamos el fit original de BaseForest
-        
+    def fit(self, X, y):
+        # Call to original fit method
+        super().fit(X, y)
+
         n_samples = X.shape[0]
         self.tree_weights = []
 
-        # calculamos pesos OOB para cada árbol
+        # Calculate OOB MSE for each tree
         for i, tree in enumerate(self.estimators_):
-            oob_sample_mask = np.ones(n_samples, dtype=bool) #inicializo una mascara con 1's
+            # Create a mask with True for all samples
+            oob_sample_mask = np.ones(n_samples, dtype=bool) 
 
-            # asignamos false a las muestras que el arbol utilizo para entrenar, ya que no son OOB
+            # Assign False to the samples that the tree used for training, as they are not OOB
             oob_sample_mask[self.estimators_samples_[i]] = False
             
-            oob_samples_X = X[oob_sample_mask] # solo se seleccionan las observaciones que tienen valor True, las OOB observations
+            # Select only the observations that have True value, the OOB observations
+            oob_samples_X = X[oob_sample_mask] 
             oob_samples_y = y[oob_sample_mask]
             
-            if len(oob_samples_X) == 0: #si no hay muestras oob, asignamos a todos los arboles el mismo peso
-                self.tree_weights.append(1 / self.n_estimators) 
-                continue
+            # If no OOB samples, assign the same weight to all trees?
+            if len(oob_samples_X) == 0: 
+                self.tree_weights = [1] * self.n_estimators
+                print("No OOB samples")
+                break
             
             oob_pred = tree.predict(oob_samples_X)
-            peso = 1 / mean_squared_error(oob_samples_y, oob_pred) #utilizamos la inverse del MSE para que arboles con mayor MSE, tengan menor peso
-            self.tree_weights.append(peso)
+            mse = mean_squared_error(oob_samples_y, oob_pred)
 
-        # normalizar pesos para que sumen 1
-        self.tree_weights = np.array(self.tree_weights)
-        self.tree_weights /= self.tree_weights.sum()
-    
+            # Use the inverse of the MSE so that trees with higher MSE have lower weight
+            self.tree_weights.append(1/mse)
+
+        # Reshape groups to match predictions shape
+        self.tree_weights = np.array(self.tree_weights).astype(float) 
+        self.tree_weights = self.tree_weights.reshape(self._n_groups, self.group_size, 1)
+
+        # Normalize weights so that they sum up to 1
+        sums = np.sum(self.tree_weights, axis=1, keepdims=True)  # Sum along the group_size dimension
+        self.tree_weights /= sums
+   
     def predict(self, X):
-            check_is_fitted(self)
+        check_is_fitted(self)
+        X = self._validate_X_predict(X)
+        
+        n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
+        lock = threading.Lock()
 
-            # Convert X to numpy array if it is a DataFrame
-            if isinstance(X, pd.DataFrame):
-                X = X.values
+        if self.n_outputs_ > 1:
+            all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
+        else:
+            all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
 
-            X = self._validate_X_predict(X)
-            
-            n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
-            lock = threading.Lock()
+        Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
+            delayed(_store_prediction)(e.predict, X, [all_predictions], lock, i)
+            for i, e in enumerate(self.estimators_)
+        )
 
-            if self.n_outputs_ > 1:
-                all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
-            else:
-                all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
+        grouped_trees = self.random_group_split(all_predictions)
 
-            Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
-                delayed(_store_prediction)(e.predict, X, [all_predictions], lock, i)
-                for i, e in enumerate(self.estimators_)
-            )
+        # Multiply using broadcasting to get the weighted group predictions
+        group_predictions = np.sum(grouped_trees * self.tree_weights, axis=1)
 
-            grouped_trees = self.random_group_split(all_predictions)
+        # Final prediction is the mean of the group predictions
+        y_hat = np.mean(group_predictions, axis=0)
 
-            group_predictions = np.empty((self._n_groups, X.shape[0]))
-
-            # For each group, compute weighted OOB predictions
-            for i in range(self._n_groups):
-                group_predictions_i = grouped_trees[i]  # Predictions for this group of trees
-                group_weights = self.tree_weights[i * self.group_size: (i + 1) * self.group_size]  # Corresponding weights
-
-                # Weighted average of the group predictions (axis=0 for sample-wise averaging)
-                group_predictions[i] = np.average(group_predictions_i, axis=0, weights=group_weights)
-
-            # Final prediction is the mean of the group predictions
-            y_hat = np.mean(group_predictions, axis=0)
-
-            return y_hat
+        return y_hat
 
 # ------------- version 2 (funcion sigmoidea) -------------------------------
 
@@ -411,116 +405,76 @@ class OOBRandomForestRegressorSoftPlus(RandomForestRegressor):
             all_predictions += tree_prediction * self.tree_weights[i] #ponderamos la prediccion de cada arbol con su peso correspondiente
         
         return all_predictions
-    
 
-#------- new validation set ----------------
+class OOBRandomForestRegressorGroupsSoftPlus(RandomForestGroupDebate):
 
-class NewValRandomForestRegressor(RandomForestRegressor):
-    
     def fit(self, X, y):
+        # Call to original fit method
+        super().fit(X, y)
 
-        # Convertir X a un array numpy si es un DataFrame
-        if isinstance(X, pd.DataFrame):
-            X = X.values
-        
-        # Separar el 10% de los datos de entrenamiento para calcular el MSE
-        X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.1, random_state=42)
-
-        # Ajustar el modelo con el 80% de los datos
-        super().fit(X_train, y_train)
-        
+        n_samples = X.shape[0]
         self.tree_weights = []
 
-        # Calcular pesos para cada árbol usando el 10% del set de validación
+        # Calculate OOB MSE for each tree
         for i, tree in enumerate(self.estimators_):
-            val_pred = tree.predict(X_val)
-            mse_val = mean_squared_error(y_val, val_pred)
+            # Create a mask with True for all samples
+            oob_sample_mask = np.ones(n_samples, dtype=bool) 
+
+            # Assign False to the samples that the tree used for training, as they are not OOB
+            oob_sample_mask[self.estimators_samples_[i]] = False
             
-            # Manejar la división por cero para MSE muy bajos
-            peso = 1 / (mse_val + 1e-5)  
-            self.tree_weights.append(peso)
+            # Select only the observations that have True value, the OOB observations
+            oob_samples_X = X[oob_sample_mask] 
+            oob_samples_y = y[oob_sample_mask]
+            
+            # If no OOB samples, assign the same weight to all trees?
+            if len(oob_samples_X) == 0: 
+                self.tree_weights = [1 * self.n_estimators]
+                print("No OOB samples")
+                break
+            
+            oob_pred = tree.predict(oob_samples_X)
+            mse = mean_squared_error(oob_samples_y, oob_pred)
 
-        # Normalizar pesos para que sumen 1
-        self.tree_weights = np.array(self.tree_weights)
-        self.tree_weights /= self.tree_weights.sum()
+            # Use the inverse of the MSE so that trees with higher MSE have lower weight
+            self.tree_weights.append(1/mse)
 
+        # Reshape groups to match predictions shape
+        self.tree_weights = np.array(self.tree_weights).astype(float) 
+        self.tree_weights = self.tree_weights.reshape(self._n_groups, self.group_size, 1)
+
+        # Aplly softplus function to weights
+        means = np.mean(self.tree_weights, axis=1, keepdims=True)
+        stds = np.std(self.tree_weights, axis=1, keepdims=True)
+        self.tree_weights = np.log(1 + np.exp(-(self.tree_weights - means) / stds))
+
+        # Normalize weights so that they sum up to 1
+        sums = np.sum(self.tree_weights, axis=1, keepdims=True)  # Sum along the group_size dimension
+        self.tree_weights /= sums
+   
     def predict(self, X):
         check_is_fitted(self)
-        
-        # Convertir X a un array numpy si es un DataFrame
-        if isinstance(X, pd.DataFrame):
-            X = X.values
-        
         X = self._validate_X_predict(X)
         
-        # Recoger predicciones para cada árbol
-        all_predictions = np.zeros((X.shape[0],), dtype=np.float64)
+        n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
+        lock = threading.Lock()
 
-        # Sumar las predicciones con los pesos calculados
-        for i, tree in enumerate(self.estimators_):
-            tree_prediction = tree.predict(X)
-            all_predictions += tree_prediction * self.tree_weights[i]
-        
-        return all_predictions
-    
-# class IntersectionOOBRandomForestRegressor(RandomForestRegressor):
-    
-#     def fit(self, X, y):
+        if self.n_outputs_ > 1:
+            all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
+        else:
+            all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
 
-#         # Convertir X a un array numpy si es un DataFrame
-#         if isinstance(X, pd.DataFrame):
-#             X = X.values
-        
-#         super().fit(X, y)
-        
-#         n_samples = X.shape[0]
-#         self.tree_weights = []
+        Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
+            delayed(_store_prediction)(e.predict, X, [all_predictions], lock, i)
+            for i, e in enumerate(self.estimators_)
+        )
 
-#         # Crear un mask de True para todas las muestras (ninguna OOB)
-#         oob_intersection_mask = np.ones(n_samples, dtype=bool)
+        grouped_trees = self.random_group_split(all_predictions)
 
-#         # Encontrar la intersección de las OOB en todos los árboles
-#         for i in range(self.n_estimators):
-#             oob_sample_mask = np.ones(n_samples, dtype=bool)
-#             oob_sample_mask[self.estimators_samples_[i]] = False
-#             oob_intersection_mask &= oob_sample_mask
+        # Multiply using broadcasting to get the weighted group predictions
+        group_predictions = np.sum(grouped_trees * self.tree_weights, axis=1)
 
-#         # Extraer las muestras y etiquetas de la intersección OOB
-#         oob_samples_X = X[oob_intersection_mask]
-#         oob_samples_y = y[oob_intersection_mask]
+        # Final prediction is the mean of the group predictions
+        y_hat = np.mean(group_predictions, axis=0)
 
-#         # Si no hay muestras en la intersección OOB, salir
-#         if len(oob_samples_X) == 0:
-#             raise ValueError("No hay muestras en la intersección de las observaciones OOB.")
-
-#         # Calcular pesos usando las muestras de la intersección OOB
-#         for i, tree in enumerate(self.estimators_):
-#             oob_pred = tree.predict(oob_samples_X)
-#             mse_oob = mean_squared_error(oob_samples_y, oob_pred)
-            
-#             # Manejar la división por cero para MSE muy bajos
-#             peso = 1 / (mse_oob + 1e-5)  
-#             self.tree_weights.append(peso)
-
-#         # Normalizar pesos para que sumen 1
-#         self.tree_weights = np.array(self.tree_weights)
-#         self.tree_weights /= self.tree_weights.sum()
-
-#     def predict(self, X):
-#         check_is_fitted(self)
-        
-#         # Convertir X a un array numpy si es un DataFrame
-#         if isinstance(X, pd.DataFrame):
-#             X = X.values
-        
-#         X = self._validate_X_predict(X)
-        
-#         # Recoger predicciones para cada árbol
-#         all_predictions = np.zeros((X.shape[0],), dtype=np.float64)
-
-#         # Sumar las predicciones con los pesos OOB
-#         for i, tree in enumerate(self.estimators_):
-#             tree_prediction = tree.predict(X)
-#             all_predictions += tree_prediction * self.tree_weights[i]
-        
-#         return all_predictions
+        return y_hat

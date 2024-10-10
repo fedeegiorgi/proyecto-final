@@ -26,7 +26,7 @@ from ._oob_forest import (
     OOBRandomForestRegressorSigmoid,
     OOBRandomForestRegressorTanh,
     OOBRandomForestRegressorSoftPlus,
-    NewValRandomForestRegressor,
+    OOBRandomForestRegressorGroupsSoftPlus,
 )
 from ._gb import GradientBoostingClassifier, GradientBoostingRegressor
 from ._hist_gradient_boosting.gradient_boosting import (
@@ -51,6 +51,7 @@ __all__ = [
     "OOBRandomForestRegressorSigmoid",
     "OOBRandomForestRegressorTanh",
     "OOBRandomForestRegressorSoftPlus",
+    "OOBRandomForestRegressorGroupsSoftPlus",
     "NewValRandomForestRegressor",
     "RandomTreesEmbedding",
     "ExtraTreesClassifier",
