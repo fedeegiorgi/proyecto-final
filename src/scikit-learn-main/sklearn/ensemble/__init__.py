@@ -23,9 +23,8 @@ from ._extremos_forest import (
 from ._oob_forest import (
     OOBRandomForestRegressor,
     OOBRandomForestRegressorGroups,
-    OOBRandomForestRegressorSigmoid,
-    OOBRandomForestRegressorTanh,
-    OOBRandomForestRegressorSoftPlus,
+    OOBRandomForestRegressorGroupsSigmoid,
+    OOBRandomForestRegressorGroupsTanh,
     OOBRandomForestRegressorGroupsSoftPlus,
 )
 from ._gb import GradientBoostingClassifier, GradientBoostingRegressor
@@ -48,9 +47,8 @@ __all__ = [
     "PercentileTrimmingRandomForestRegressor",
     "OOBRandomForestRegressor",
     "OOBRandomForestRegressorGroups",
-    "OOBRandomForestRegressorSigmoid",
-    "OOBRandomForestRegressorTanh",
-    "OOBRandomForestRegressorSoftPlus",
+    "OOBRandomForestRegressorGroupsSigmoid",
+    "OOBRandomForestRegressorGroupsTanh",
     "OOBRandomForestRegressorGroupsSoftPlus",
     "NewValRandomForestRegressor",
     "RandomTreesEmbedding",
