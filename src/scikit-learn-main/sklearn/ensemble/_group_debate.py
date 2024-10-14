@@ -1,6 +1,7 @@
 from sklearn.ensemble import RandomForestRegressor
 import threading
 import numpy as np
+from itertools import islice
 from scipy.sparse import hstack as sparse_hstack
 from scipy.sparse import issparse
 
@@ -100,3 +101,7 @@ class RandomForestGroupDebate(RandomForestRegressor):
             tree_groups_tensor = predictions.reshape(self._n_groups, self.group_size, n_samples)
 
         return tree_groups_tensor
+
+    def group_split(self, iterable):
+        # Create a list of lists by slicing the iterable into groups of size `self._n_groups`
+        return [list(islice(iterable, self._n_groups)) for _ in range(0, len(iterable), self.group_size)]
