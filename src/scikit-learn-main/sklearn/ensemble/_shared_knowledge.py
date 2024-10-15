@@ -1,5 +1,4 @@
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.ensemble import RandomForestGroupDebate
+from sklearn.ensemble import RandomForestRegressor, RandomForestGroupDebate
 import threading
 from abc import ABCMeta, abstractmethod
 from numbers import Integral, Real
@@ -10,7 +9,6 @@ import pandas as pd
 from scipy.sparse import hstack as sparse_hstack
 from scipy.sparse import issparse
 from scipy.stats import mstats
-from sklearn.metrics import mean_squared_error #agregado para calcular el mse de cada arbol en sus oob y sacar su peso en la prediccion 
 from sklearn.model_selection import train_test_split
 
 from ..base import (
@@ -57,7 +55,7 @@ def _store_prediction(predict, X, out, lock, tree_index):
 
 # ----------------------------------- Alternativa C (idea Ramiro) -----------------------------------
 
-class ContinueTrainRandomForestRegressor(RandomForestGroupDebate):
+class SharedKnowledgeeRandomForestRegressor(RandomForestGroupDebate):
     def __init__(
         self,
         n_estimators=100,
@@ -105,6 +103,7 @@ class ContinueTrainRandomForestRegressor(RandomForestGroupDebate):
         )
 
         self.initial_max_depth = initial_max_depth
+        self.initial_grouped_trees = []
 
     def fit(self, X, y):
 
@@ -118,12 +117,14 @@ class ContinueTrainRandomForestRegressor(RandomForestGroupDebate):
         initial_trees = rf.estimators_
         trees_samples = rf.estimators_samples_
 
-        grouped_trees = self.group_split(initial_trees)
+        # Divide the trees into groups
+        self.initial_grouped_trees = self.group_split(initial_trees)
         grouped_samples = self.group_split(trees_samples)
+        
         grouped_new_columns = []
 
         # For each group of trees and samples
-        for i, trees_group in enumerate(grouped_trees):
+        for i, trees_group in enumerate(self.initial_grouped_trees):
 
             samples_group = grouped_samples[i]
             group_new_columns = []
@@ -137,7 +138,7 @@ class ContinueTrainRandomForestRegressor(RandomForestGroupDebate):
                 for k, other_tree in enumerate(trees_group):
                     if k != j:
                         # Predict the samples for the current tree
-                        predictions = tree.predict(X[samples_group[j]])
+                        predictions = other_tree.predict(X[samples_group[j]])
                         other_tree_predictions.append(predictions)
             
                 # Append the predictions for this tree
@@ -154,7 +155,21 @@ class ContinueTrainRandomForestRegressor(RandomForestGroupDebate):
         # Concatenate the new columns with the original features
         new_X = np.hstack((X[grouped_samples[0][0]], grouped_new_columns[0][0]))
         print(f"Shape of X after hstack for tree 0 in group 0: {new_X.shape}")
-                
+
+        # For each group
+            # For each tree in group
+                # # Concatenate the other tree's predictions with the original features
+                # new_X = np.hstack(X[samples_group[i][j]], grouped_new_columns[i][j])
+
+                # # Fit the extended tree with the new features based on the original tree
+                # tree.fit(new_X, y[samples_group[i][j]], initial_trees[i][j])
+
+                # # Add fitted tree to the estimators_ list
+                # self.estimators_.append(tree)
+        
+        # # Divide the trees into groups
+        # self.estimators_ = self.group_split(self.estimators_)
+
     def predict(self, X):
         
         check_is_fitted(self) #fijarse que no estamos ocultando las features?
@@ -165,14 +180,38 @@ class ContinueTrainRandomForestRegressor(RandomForestGroupDebate):
         lock = threading.Lock()
 
         if self.n_outputs_ > 1:
-            all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
+            initial_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
         else:
-            all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
+            initial_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
 
         Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
-            delayed(_store_prediction)(e.predict, X, [all_predictions], lock, i)
-            for i, e in enumerate(self.estimators_)
+            delayed(_store_prediction)(e.predict, X, [initial_predictions], lock, i)
+            for i, e in enumerate(self.initial_grouped_trees) # En vez de self.estimators_ uso los initial_grouped_trees (aun no están las predicciones de los otros árboles)
         )
 
-        grouped_trees = self.random_group_split(all_predictions) #dividir arboles y no predicciones
+        grouped_predictions = self.random_group_split(initial_predictions)
 
+        # Initialize the new grouped predictions
+        new_grouped_predictions = np.zeros_like(grouped_predictions)
+        group_averages = np.empty((self._n_groups, X.shape[0]))
+
+        for i, group in enumerate(grouped_predictions):
+            for j, tree in enumerate(group):
+                # Remove the j-th tree's predictions
+                shared_predictions = np.delete(grouped_predictions[i], j, axis=0)
+
+                # Concatenate the shared predictions with the original features
+                new_X = np.hstack((X, shared_predictions.T))
+
+                # Predict the samples for the current complete tree
+                predictions = self.estimators_[i][j].predict(new_X)
+
+                # Store the predictions in corresponding group and tree
+                new_grouped_predictions[i, j, :] = predictions
+
+            # Calculate the group average
+            group_averages[i] = np.mean(new_grouped_predictions[i], axis=0)
+
+        y_hat = np.mean(group_averages, axis=0)
+
+        return y_hat

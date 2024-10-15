@@ -27,8 +27,8 @@ from ._oob_forest import (
     OOBRandomForestRegressorGroupsTanh,
     OOBRandomForestRegressorGroupsSoftPlus,
 )
-from ._continue_train import (
-    ContinueTrainRandomForestRegressor,
+from ._shared_knowledge import (
+    SharedKnowledgeRandomForestRegressor,
 )
 from ._gb import GradientBoostingClassifier, GradientBoostingRegressor
 from ._hist_gradient_boosting.gradient_boosting import (
@@ -53,7 +53,7 @@ __all__ = [
     "OOBRandomForestRegressorGroupsSigmoid",
     "OOBRandomForestRegressorGroupsTanh",
     "OOBRandomForestRegressorGroupsSoftPlus",
-    "ContinueTrainRandomForestRegressor",
+    "SharedKnowledgeRandomForestRegressor",
     "RandomTreesEmbedding",
     "ExtraTreesClassifier",
     "ExtraTreesRegressor",
