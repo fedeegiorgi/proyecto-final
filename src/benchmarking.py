@@ -27,8 +27,8 @@ MODEL_CLASSES = [
 NEW_CLASS = OOBRandomForestRegressorGroupsSoftPlus # Clase del nuevo algoritmo a evaluar
 
 # Decision variables
-RUN_NEW_DATASET = True
-RUN_NEW_ALGORITHM = False
+RUN_NEW_DATASET = False
+RUN_NEW_ALGORITHM = True
 
 def process_dataset(filepath, extension, dataset_name):
     """

@@ -390,7 +390,7 @@ class OOBRandomForestRegressorGroupsSoftPlus(RandomForestGroupDebate):
         # Aplly softplus function to weights
         means = np.mean(self.tree_weights, axis=1, keepdims=True)
         stds = np.std(self.tree_weights, axis=1, keepdims=True)
-        self.tree_weights = np.log(1 + np.exp(-(self.tree_weights - means) / stds))
+        self.tree_weights = np.log(1 + np.exp((self.tree_weights - means) / stds))
 
         # Normalize weights so that they sum up to 1
         sums = np.sum(self.tree_weights, axis=1, keepdims=True)  # Sum along the group_size dimension

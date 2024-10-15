@@ -223,20 +223,32 @@ class PercentileTrimmingRandomForestRegressor(RandomForestGroupDebate):
             for i, e in enumerate(self.estimators_)
         )
 
-        # definimos los percentiles de exclusión
-        lower_percentile = self.percentile
-        upper_percentile = 100 - self.percentile
+        grouped_trees = self.random_group_split(all_predictions)
 
-        # calculamos los valores de corte
-        lower_bound = np.percentile(all_predictions, lower_percentile, axis=0)
-        upper_bound = np.percentile(all_predictions, upper_percentile, axis=0)
+        group_averages = np.empty((self._n_groups, X.shape[0]))
 
-        # filtramos los valores fuera de los percentiles
-        filtered_predictions = np.where((all_predictions >= lower_bound) & 
-                                        (all_predictions <= upper_bound), 
-                                        all_predictions, np.nan)
+
+        for i in range(self._n_groups):
+            # Extract the current group
+            group_predictions = grouped_trees[i]
+
+            # definimos los percentiles de exclusión
+            lower_percentile = self.percentile
+            upper_percentile = 100 - self.percentile
+
+            # calculamos los valores de corte
+            lower_bound = np.percentile(group_predictions, lower_percentile, axis=0)
+            upper_bound = np.percentile(group_predictions, upper_percentile, axis=0)
+
+            # filtramos los valores fuera de los percentiles
+            filtered_predictions = np.where((group_predictions >= lower_bound) & 
+                                            (group_predictions <= upper_bound), 
+                                            group_predictions, np.nan)
+            
+            # Calculate the mean of the filtered predictions (ignoring NaNs)
+            group_averages[i] = np.nanmean(filtered_predictions, axis=0)
 
         # calculamos la media de las predicciones filtradas (ignorando NaNs)
-        y_hat = np.nanmean(filtered_predictions, axis=0)
+        y_hat = np.mean(group_averages, axis=0)
 
         return y_hat
