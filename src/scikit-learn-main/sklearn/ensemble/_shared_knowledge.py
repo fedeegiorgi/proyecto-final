@@ -53,7 +53,45 @@ def _store_prediction(predict, X, out, lock, tree_index):
     with lock:
         out[0][tree_index] = prediction   # Store predictions in the column corresponding to the tree
 
-# ----------------------------------- Alternativa C (idea Ramiro) -----------------------------------
+# ----------------------------------- Alternativa D (idea Ramiro) -----------------------------------
+
+def get_tree_data(tree):
+    """
+    Extract the necessary data from a trained DecisionTreeRegressor
+    """
+
+    t = tree.tree_
+    n_nodes = t.node_count
+
+    is_lefts = [1 if i in t.children_left else 0 for i in range(n_nodes)]
+    is_leafs = [1 if t.children_left[i] == -1 else 0 for i in range(n_nodes)]
+    features = list(t.feature)
+    thresholds = list(t.threshold)
+    impurities = list(t.impurity)
+    n_node_samples = list(t.n_node_samples)
+    weighted_n_node_samples = list(t.weighted_n_node_samples)
+    missing_go_to_lefts = [0] * n_nodes 
+
+    parents = [-1] * n_nodes
+
+    for parent, (left, right) in enumerate(zip(t.children_left, t.children_right)):
+        if left != -1:  # If there is a left child
+            parents[left] = parent
+        if right != -1:  # If there is a right child
+            parents[right] = parent
+
+    return {
+        "parents": parents,
+        "is_lefts": is_lefts,
+        "is_leafs": is_leafs,
+        "features": features,
+        "thresholds": thresholds,
+        "impurities": impurities,
+        "n_node_samples": n_node_samples,
+        "weighted_n_node_samples": weighted_n_node_samples,
+        "missing_go_to_lefts": missing_go_to_lefts,
+    }
+
 
 class SharedKnowledgeeRandomForestRegressor(RandomForestGroupDebate):
     def __init__(
@@ -156,16 +194,21 @@ class SharedKnowledgeeRandomForestRegressor(RandomForestGroupDebate):
         new_X = np.hstack((X[grouped_samples[0][0]], grouped_new_columns[0][0]))
         print(f"Shape of X after hstack for tree 0 in group 0: {new_X.shape}")
 
-        # For each group
-            # For each tree in group
+        for i, trees_group in enumerate(self.initial_grouped_trees):
+            for j, tree in enumerate(trees_group):
+                
+                # Extract the necessary data from the tree
+                tree_data = get_tree_data(tree)
+                
                 # # Concatenate the other tree's predictions with the original features
-                # new_X = np.hstack(X[samples_group[i][j]], grouped_new_columns[i][j])
+                new_X = np.hstack(X[samples_group[i][j]], grouped_new_columns[i][j])
 
                 # # Fit the extended tree with the new features based on the original tree
-                # tree.fit(new_X, y[samples_group[i][j]], initial_trees[i][j])
+                # new_tree = ContinuedDecisionTreeRegressor(initial_tree_data=tree_data)
+                # new_tree.fit(new_X, y[samples_group[i][j]])
 
                 # # Add fitted tree to the estimators_ list
-                # self.estimators_.append(tree)
+                # self.estimators_.append(new_tree)
         
         # # Divide the trees into groups
         # self.estimators_ = self.group_split(self.estimators_)
@@ -187,7 +230,7 @@ class SharedKnowledgeeRandomForestRegressor(RandomForestGroupDebate):
         Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
             delayed(_store_prediction)(e.predict, X, [initial_predictions], lock, i)
             for i, e in enumerate(self.initial_grouped_trees) # En vez de self.estimators_ uso los initial_grouped_trees (aun no están las predicciones de los otros árboles)
-        )
+        ) # initial_grouped_trees es lista de lista asi que hay que hacer un for anidado/ aplanar
 
         grouped_predictions = self.random_group_split(initial_predictions)
 
