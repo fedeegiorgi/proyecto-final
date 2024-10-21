@@ -23,11 +23,8 @@ from ..exceptions import DataConversionWarning
 from ..metrics import accuracy_score, r2_score
 from ..preprocessing import OneHotEncoder
 from ..tree import (
-    BaseDecisionTree,
-    DecisionTreeClassifier,
     DecisionTreeRegressor,
-    ExtraTreeClassifier,
-    ExtraTreeRegressor,
+    ContinuedDecisionTreeRegressor
 )
 from ..tree._tree import DOUBLE, DTYPE
 from ..utils import check_random_state, compute_sample_weight
@@ -43,6 +40,10 @@ from ..utils.validation import (
 )
 from ._base import BaseEnsemble, _partition_estimators
 
+__all__ = [
+    "SharedKnowledgeRandomForestRegressor",
+]
+
 def _store_prediction(predict, X, out, lock, tree_index):
     # AGREGAR DISCLAIMER MISMO DE LA DOC ORIGINAL
     """
@@ -55,45 +56,7 @@ def _store_prediction(predict, X, out, lock, tree_index):
 
 # ----------------------------------- Alternativa D (idea Ramiro) -----------------------------------
 
-def get_tree_data(tree):
-    """
-    Extract the necessary data from a trained DecisionTreeRegressor
-    """
-
-    t = tree.tree_
-    n_nodes = t.node_count
-
-    is_lefts = [1 if i in t.children_left else 0 for i in range(n_nodes)]
-    is_leafs = [1 if t.children_left[i] == -1 else 0 for i in range(n_nodes)]
-    features = list(t.feature)
-    thresholds = list(t.threshold)
-    impurities = list(t.impurity)
-    n_node_samples = list(t.n_node_samples)
-    weighted_n_node_samples = list(t.weighted_n_node_samples)
-    missing_go_to_lefts = [0] * n_nodes 
-
-    parents = [-1] * n_nodes
-
-    for parent, (left, right) in enumerate(zip(t.children_left, t.children_right)):
-        if left != -1:  # If there is a left child
-            parents[left] = parent
-        if right != -1:  # If there is a right child
-            parents[right] = parent
-
-    return {
-        "parents": parents,
-        "is_lefts": is_lefts,
-        "is_leafs": is_leafs,
-        "features": features,
-        "thresholds": thresholds,
-        "impurities": impurities,
-        "n_node_samples": n_node_samples,
-        "weighted_n_node_samples": weighted_n_node_samples,
-        "missing_go_to_lefts": missing_go_to_lefts,
-    }
-
-
-class SharedKnowledgeeRandomForestRegressor(RandomForestGroupDebate):
+class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
     def __init__(
         self,
         n_estimators=100,
@@ -143,7 +106,102 @@ class SharedKnowledgeeRandomForestRegressor(RandomForestGroupDebate):
         self.initial_max_depth = initial_max_depth
         self.initial_grouped_trees = []
 
-    def fit(self, X, y):
+    def _original_fit_validations(self, X, y, sample_weight):
+        # Validate or convert input data
+        if issparse(y):
+            raise ValueError("sparse multilabel-indicator for y is not supported.")
+
+        X, y = self._validate_data(
+            X,
+            y,
+            multi_output=True,
+            accept_sparse="csc",
+            dtype=DTYPE,
+            ensure_all_finite=False,
+        )
+
+        estimator = type(self.estimator)(criterion=self.criterion)
+        missing_values_in_feature_mask = (
+            estimator._compute_missing_values_in_feature_mask(
+                X, estimator_name=self.__class__.__name__
+            )
+        )
+
+        if sample_weight is not None:
+            sample_weight = _check_sample_weight(sample_weight, X)
+
+        if issparse(X):
+            # Pre-sort indices to avoid that each individual tree of the
+            # ensemble sorts the indices.
+            X.sort_indices()
+
+        y = np.atleast_1d(y)
+        if y.ndim == 2 and y.shape[1] == 1:
+            warn(
+                (
+                    "A column-vector y was passed when a 1d array was"
+                    " expected. Please change the shape of y to "
+                    "(n_samples,), for example using ravel()."
+                ),
+                DataConversionWarning,
+                stacklevel=2,
+            )
+
+        if y.ndim == 1:
+            # reshape is necessary to preserve the data contiguity against vs
+            # [:, np.newaxis] that does not.
+            y = np.reshape(y, (-1, 1))
+
+        if self.criterion == "poisson":
+            if np.any(y < 0):
+                raise ValueError(
+                    "Some value(s) of y are negative which is "
+                    "not allowed for Poisson regression."
+                )
+            if np.sum(y) <= 0:
+                raise ValueError(
+                    "Sum of y is not strictly positive which "
+                    "is necessary for Poisson regression."
+                )
+
+        self._n_samples, self.n_outputs_ = y.shape
+
+        y, expanded_class_weight = self._validate_y_class_weight(y)
+
+        if getattr(y, "dtype", None) != DOUBLE or not y.flags.contiguous:
+            y = np.ascontiguousarray(y, dtype=DOUBLE)
+
+        if expanded_class_weight is not None:
+            if sample_weight is not None:
+                sample_weight = sample_weight * expanded_class_weight
+            else:
+                sample_weight = expanded_class_weight
+
+        if not self.bootstrap and self.max_samples is not None:
+            raise ValueError(
+                "`max_sample` cannot be set if `bootstrap=False`. "
+                "Either switch to `bootstrap=True` or set "
+                "`max_sample=None`."
+            )
+        elif self.bootstrap:
+            n_samples_bootstrap = _get_n_samples_bootstrap(
+                n_samples=X.shape[0], max_samples=self.max_samples
+            )
+        else:
+            n_samples_bootstrap = None
+
+        random_state = check_random_state(self.random_state)
+
+        # Decapsulate classes_ attributes
+        if hasattr(self, "classes_") and self.n_outputs_ == 1:
+            self.n_classes_ = self.n_classes_[0]
+            self.classes_ = self.classes_[0]
+
+        return X, y, sample_weight, missing_values_in_feature_mask #, n_samples_bootstrap, random_state
+        
+        # creo que tenemos que devolver n_samples_bootstrap y random_state para que se entrenen los árboles con boostrap
+
+    def fit(self, X, y, sample_weight=None):
 
         # original RandomForestsRegressor with max_depth=self.initial_max_depth
         rf = RandomForestRegressor(random_state=self.random_state, max_depth=self.initial_max_depth)
@@ -184,27 +242,27 @@ class SharedKnowledgeeRandomForestRegressor(RandomForestGroupDebate):
         
             grouped_new_columns.append(group_new_columns)
         
-        # Print test
-        print(f"new columns for tree 0 in group 0: {grouped_new_columns[0][0]}")
-        print(f"Shape new columns for tree 0 in group 0: {grouped_new_columns[0][0].shape}")
-        print(f"Count of samples for tree 0 in group 0: {len(grouped_samples[0][0])}")
-        print(f"Shape of X for tree 0 in group 0: {X[grouped_samples[0][0]].shape}")
-        print(f"Ratio Silvio: {(self.group_size-1)/X[grouped_samples[0][0]].shape[1]}")
-        # Concatenate the new columns with the original features
-        new_X = np.hstack((X[grouped_samples[0][0]], grouped_new_columns[0][0]))
-        print(f"Shape of X after hstack for tree 0 in group 0: {new_X.shape}")
+        # # Print test
+        # print(f"new columns for tree 0 in group 0: {grouped_new_columns[0][0]}")
+        # print(f"Shape new columns for tree 0 in group 0: {grouped_new_columns[0][0].shape}")
+        # print(f"Count of samples for tree 0 in group 0: {len(grouped_samples[0][0])}")
+        # print(f"Shape of X for tree 0 in group 0: {X[grouped_samples[0][0]].shape}")
+        # print(f"Ratio Silvio: {(self.group_size-1)/X[grouped_samples[0][0]].shape[1]}")
+        # # Concatenate the new columns with the original features
+        # new_X = np.hstack((X[grouped_samples[0][0]], grouped_new_columns[0][0]))
+        # print(f"Shape of X after hstack for tree 0 in group 0: {new_X.shape}")
 
         for i, trees_group in enumerate(self.initial_grouped_trees):
             for j, tree in enumerate(trees_group):
-                
-                # Extract the necessary data from the tree
-                tree_data = get_tree_data(tree)
-                
-                # # Concatenate the other tree's predictions with the original features
+                               
+                # Concatenate the other tree's predictions with the original features
                 new_X = np.hstack(X[samples_group[i][j]], grouped_new_columns[i][j])
 
+                # Validate training data
+                new_X, y, sample_weight, missing_values_in_feature_mask = self._original_fit_validations(new_X, y, sample_weight)
+
                 # # Fit the extended tree with the new features based on the original tree
-                # new_tree = ContinuedDecisionTreeRegressor(initial_tree_data=tree_data)
+                # new_tree = ContinuedDecisionTreeRegressor(intial_tree=tree)
                 # new_tree.fit(new_X, y[samples_group[i][j]])
 
                 # # Add fitted tree to the estimators_ list

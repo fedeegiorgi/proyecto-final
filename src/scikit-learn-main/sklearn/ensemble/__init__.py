@@ -12,9 +12,6 @@ from ._forest import (
     RandomForestRegressor,
     RandomTreesEmbedding,
 )
-from ._group_debate import (
-    RandomForestGroupDebate, 
-)
 from ._extremos_forest import (
     ZscoreRandomForestRegressor,
     IQRRandomForestRegressor,
@@ -44,7 +41,6 @@ __all__ = [
     "BaseEnsemble",
     "RandomForestClassifier",
     "RandomForestRegressor",
-    "RandomForestGroupDebate",
     "ZscoreRandomForestRegressor",
     "IQRRandomForestRegressor",
     "PercentileTrimmingRandomForestRegressor",
