@@ -102,15 +102,19 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
         missing_go_to_lefts = np.zeros(n_nodes)  # Create a numpy array of zeros
 
         parents = np.full(n_nodes, -1)  # Initialize parents array with -1
+        depths = np.full(n_nodes, 0) # Initialize depths in 0
 
         for parent, (left, right) in enumerate(zip(t.children_left, t.children_right)):
             if left != -1:  # If there is a left child
                 parents[left] = parent
+                depths[left] = depths[parent] + 1 # Increment depth for left child
             if right != -1:  # If there is a right child
                 parents[right] = parent
+                depths[right] = depths[parent] + 1 # Increment depth for right child
 
         return {
             "parents": parents,
+            "depths": depths,
             "is_lefts": is_lefts,
             "is_leafs": is_leafs,
             "features": features,
