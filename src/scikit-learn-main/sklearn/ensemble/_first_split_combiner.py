@@ -30,6 +30,7 @@ from ..tree import (
     DecisionTreeRegressor,
     ExtraTreeClassifier,
     ExtraTreeRegressor,
+    DecisionTreeRegressorCombiner,
 )
 from ..tree._tree import DOUBLE, DTYPE
 from ..utils import check_random_state, compute_sample_weight
@@ -45,17 +46,22 @@ from ..utils.validation import (
 )
 from ._base import BaseEnsemble, _partition_estimators
 
-def _store_prediction(predict, X, out, lock, tree_index):
-    # AGREGAR DISCLAIMER MISMO DE LA DOC ORIGINAL
+def _accumulate_prediction(predict, X, out, lock):
     """
-    Store each tree's prediction in the 2D array `out`.
-    Now we store the predictions in the tree's corresponding column.
+    This is a utility function for joblib's Parallel.
+
+    It can't go locally in ForestClassifier or ForestRegressor, because joblib
+    complains that it cannot pickle it when placed there.
     """
     prediction = predict(X, check_input=False)
     with lock:
-        out[0][tree_index] = prediction   # Store predictions in the column corresponding to the tree
+        if len(out) == 1:
+            out[0] += prediction
+        else:
+            for i in range(len(out)):
+                out[i] += prediction[i]
 
-class RFRegressorFirstCutCombiner(RandomForestGroupDebate):
+class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
     def __init__(
         self,
         n_estimators=100,
@@ -138,16 +144,19 @@ class RFRegressorFirstCutCombiner(RandomForestGroupDebate):
         n_jobs, _, _ = _partition_estimators(self._n_groups, self.n_jobs)
         lock = threading.Lock()
 
+        # avoid storing the output of every estimator by summing them here
         if self.n_outputs_ > 1:
-            group_predictions = np.zeros((self._n_groups, X.shape[0], self.n_outputs_), dtype=np.float64)
+            y_hat = np.zeros((X.shape[0], self.n_outputs_), dtype=np.float64)
         else:
-            group_predictions = np.zeros((self._n_groups, X.shape[0]), dtype=np.float64)
+            y_hat = np.zeros((X.shape[0]), dtype=np.float64)
 
+        # Parallel loop
+        lock = threading.Lock()
         Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
-            delayed(_store_prediction)(e.predict, X, [group_predictions], lock, i)
-            for i, e in enumerate(self.combined_trees) # Uso las predicciones de los arboles agrupados
+            delayed(_accumulate_prediction)(e.predict, X, [y_hat], lock)
+            for e in self.combined_trees
         )
 
-        y_hat = np.mean(group_predictions, axis=0)
+        y_hat /= len(self.combined_trees) # promedia las estimaciones de los arboles
 
         return y_hat

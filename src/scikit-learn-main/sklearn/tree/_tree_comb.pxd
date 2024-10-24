@@ -6,9 +6,12 @@ cimport numpy as cnp
 cnp.import_array()
 
 cdef class TreeCombiner(Tree):
-    cdef double[:] features
-    cdef double[:] thresholds
+    cdef cnp.ndarray features
+    cdef cnp.ndarray thresholds
+    cdef cnp.ndarray impurities
+    cdef cnp.ndarray n_node_samples
+    cdef cnp.ndarray weighted_n_node_samples
+    cdef cnp.ndarray missing_go_to_lefts
     
-    cdef combiner
-    cdef recompute_values
-    cdef tree_combiner
+    cdef combiner()
+    cdef recompute_values()

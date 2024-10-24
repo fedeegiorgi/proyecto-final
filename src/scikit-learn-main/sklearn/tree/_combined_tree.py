@@ -42,6 +42,7 @@ from ._tree import (
     _build_pruned_tree_ccp,
     ccp_pruning_path,
 )
+from ._tree_comb import TreeCombiner
 from ._utils import _any_isnan_axis0
 
 # import nuevos
@@ -92,39 +93,31 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
         t = tree.tree_
 
         if t.node_count != 3:
-            raise ValueError("No valid split available")
+            raise ValueError("No valid split available.")
 
-        n_nodes = t.node_count
-        features = t.feature
-        thresholds = t.threshold
-        impurities = t.impurity
-        n_node_samples = np.zeros(n_nodes)
-        weighted_n_node_samples = np.ones(n_nodes)
-        missing_go_to_lefts = np.zeros(n_nodes)  # Create a numpy array of zeros
+        # n_nodes = t.node_count
+        feature = t.feature[0]
+        threshold = t.threshold[0]
+        impurity = t.impurity[0]
+        # n_node_samples = np.zeros(n_nodes)
+        # weighted_n_node_samples = np.ones(n_nodes)
+        # missing_go_to_lefts = np.zeros(n_nodes)  # Create a numpy array of zeros
 
-        return {
-            "features": features,
-            "thresholds": thresholds,
-            "impurities": impurities,
-            "n_node_samples": n_node_samples,
-            "weighted_n_node_samples": weighted_n_node_samples,
-            "missing_go_to_lefts": missing_go_to_lefts,
-        }
+        return feature, threshold, impurity
 
     def _get_initial_trees_data(self):
-        features = np.array((3, len(self.initial_trees)))
-        thresholds, impurities, n_node_samples, weighted_n_node_samples, missing_go_to_lefts = np.empty_like(features), np.empty_like(features), np.empty_like(features), np.empty_like(features), np.empty_like(features)
-
-        for i, tree in enumerate(self.initial_trees):
+        features, thresholds, impurities, n_node_samples, weighted_n_node_samples, missing_go_to_lefts = [], [], [], [], [], []
+        
+        for tree in self.initial_trees:
             tree_attributes = self._get_single_tree_data(tree)
-            features[i] = (tree_attributes['features'])
-            thresholds[i] = (tree_attributes['thresholds'])
-            impurities[i] = (tree_attributes['impurities'])
-            n_node_samples[i] = (tree_attributes['n_node_samples'])
-            weighted_n_node_samples[i] = (tree_attributes['weighted_n_node_samples'])
-            missing_go_to_lefts[i] = (tree_attributes['missing_go_to_lefts'])
+            features.append(tree_attributes[0])
+            thresholds.append(tree_attributes[1])
+            impurities.append(tree_attributes[2])
+            n_node_samples.append(0)
+            weighted_n_node_samples.append(1)
+            missing_go_to_lefts.append(0)
 
-        return features, thresholds, impurities, n_node_samples, weighted_n_node_samples, missing_go_to_lefts
+        return np.array(features), np.array(thresholds), np.array(impurities), np.array(n_node_samples), np.array(weighted_n_node_samples), np.array(missing_go_to_lefts)
 
     @_fit_context(prefer_skip_nested_validation=True)
     def fit(self, X, y, sample_weight=None, check_input=False): # No agregamos check_input porque desde RandomForestRegressor siempre se llama en False
@@ -160,5 +153,20 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
 
         # Build Tree
         features, thresholds, impurities, n_node_samples, weighted_n_node_samples, missing_go_to_lefts = self._get_initial_trees_data()
-        # builder = ...
-        # builder.build(_tree, features, thresholds, n_node_samples, weighted_n_node_samples, missing_go_to_lefts)
+        
+        self.tree_ = TreeCombiner(
+            self.n_features_in_,
+            # TODO: tree shouldn't need this in this case
+            np.array([1] * self.n_outputs_, dtype=np.intp),
+            self.n_outputs_,
+            features,
+            thresholds,
+            impurities,
+            n_node_samples,
+            weighted_n_node_samples,
+            missing_go_to_lefts,
+        )
+        
+        self.tree_.combiner()
+        out = self.tree_.apply(X)
+        self.tree_.recompute_values(out, y)

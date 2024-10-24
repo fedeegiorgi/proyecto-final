@@ -10,7 +10,8 @@ from ._classes import (
     ExtraTreeClassifier,
     ExtraTreeRegressor,
 )
-from ._extended_class import ContinuedDecisionTreeRegressor # New class
+from ._combined_tree import DecisionTreeRegressorCombiner # New class
+# from ._extended_class import ContinuedDecisionTreeRegressor # New class
 from ._export import export_graphviz, export_text, plot_tree
 
 __all__ = [
@@ -19,7 +20,7 @@ __all__ = [
     "DecisionTreeRegressor",
     "ExtraTreeClassifier",
     "ExtraTreeRegressor",
-    "ContinuedDecisionTreeRegressor", # New class
+    "DecisionTreeRegressorCombiner", # New class
     "export_graphviz",
     "plot_tree",
     "export_text",
