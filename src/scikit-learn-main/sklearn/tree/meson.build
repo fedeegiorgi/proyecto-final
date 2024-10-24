@@ -14,6 +14,9 @@ tree_extension_metadata = {
   '_utils':
     {'sources': ['_utils.pyx'],
      'override_options': ['optimization=3']},
+  '_tree_comb':
+    {'sources': ['_tree_comb.pyx'],
+      'override_options': ['optimization=3']}
 }
 
 foreach ext_name, ext_dict : tree_extension_metadata
