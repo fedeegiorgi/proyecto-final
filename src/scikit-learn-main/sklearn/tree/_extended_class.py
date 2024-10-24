@@ -240,7 +240,7 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
                 # *positive class*, all signs must be flipped.
                 monotonic_cst *= -1
 
-        if not isinstance(self.splitter, Splitter):
+        if not isinstance(self.splitter, Splitter): # vamos a usar el único splitter que modificamos
             splitter = SPLITTERS[self.splitter](
                 criterion,
                 self.max_features_,
