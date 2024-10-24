@@ -6,7 +6,7 @@ from scipy.io import arff
 from sklearn.ensemble import (
     RandomForestRegressor, IQRRandomForestRegressor, OOBRandomForestRegressor,
     OOBRandomForestRegressorGroups, OOBRandomForestRegressorGroupsSigmoid,
-    OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus
+    OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus, OOB_plus_IQR
 )
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
@@ -22,9 +22,10 @@ DATASETS_FOLDER = 'datasets/'
 MODEL_CLASSES = [
     RandomForestRegressor, IQRRandomForestRegressor, OOBRandomForestRegressor,
     OOBRandomForestRegressorGroups, OOBRandomForestRegressorGroupsSigmoid,
-    OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus
+    OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus,
+    OOB_plus_IQR,
 ]
-NEW_CLASS = OOBRandomForestRegressorGroupsSoftPlus # Clase del nuevo algoritmo a evaluar
+NEW_CLASS = OOB_plus_IQR
 
 # Decision variables
 RUN_NEW_DATASET = False

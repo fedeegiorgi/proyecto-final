@@ -12,6 +12,9 @@ from ._forest import (
     RandomForestRegressor,
     RandomTreesEmbedding,
 )
+from ._group_debate import(
+    RandomForestGroupDebate,
+)
 from ._extremos_forest import (
     ZscoreRandomForestRegressor,
     IQRRandomForestRegressor,
@@ -23,6 +26,9 @@ from ._oob_forest import (
     OOBRandomForestRegressorGroupsSigmoid,
     OOBRandomForestRegressorGroupsTanh,
     OOBRandomForestRegressorGroupsSoftPlus,
+)
+from ._oob_plus_iqr import (
+    OOB_plus_IQR,
 )
 from ._shared_knowledge import (
     SharedKnowledgeRandomForestRegressor,
@@ -49,6 +55,7 @@ __all__ = [
     "OOBRandomForestRegressorGroupsSigmoid",
     "OOBRandomForestRegressorGroupsTanh",
     "OOBRandomForestRegressorGroupsSoftPlus",
+    "OOB_plus_IQR",
     "SharedKnowledgeRandomForestRegressor",
     "RandomTreesEmbedding",
     "ExtraTreesClassifier",

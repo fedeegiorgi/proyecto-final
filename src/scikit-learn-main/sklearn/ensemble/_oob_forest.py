@@ -1,48 +1,12 @@
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestGroupDebate
 import threading
-from abc import ABCMeta, abstractmethod
-from numbers import Integral, Real
-from warnings import catch_warnings, simplefilter, warn
 
 import numpy as np
-import pandas as pd
-from scipy.sparse import hstack as sparse_hstack
-from scipy.sparse import issparse
-from scipy.stats import mstats
 from sklearn.metrics import mean_squared_error #agregado para calcular el mse de cada arbol en sus oob y sacar su peso en la prediccion 
-from sklearn.model_selection import train_test_split
 
-from ..base import (
-    ClassifierMixin,
-    MultiOutputMixin,
-    RegressorMixin,
-    TransformerMixin,
-    _fit_context,
-    is_classifier,
-)
-from ..exceptions import DataConversionWarning
-from ..metrics import accuracy_score, r2_score
-from ..preprocessing import OneHotEncoder
-from ..tree import (
-    BaseDecisionTree,
-    DecisionTreeClassifier,
-    DecisionTreeRegressor,
-    ExtraTreeClassifier,
-    ExtraTreeRegressor,
-)
-from ..tree._tree import DOUBLE, DTYPE
-from ..utils import check_random_state, compute_sample_weight
-from ..utils._param_validation import Interval, RealNotInt, StrOptions
-from ..utils._tags import _safe_tags
-from ..utils.multiclass import check_classification_targets, type_of_target
 from ..utils.parallel import Parallel, delayed
-from ..utils.validation import (
-    _check_feature_names_in,
-    _check_sample_weight,
-    _num_samples,
-    check_is_fitted,
-)
+from ..utils.validation import check_is_fitted
 from ._base import BaseEnsemble, _partition_estimators
 
 def _store_prediction(predict, X, out, lock, tree_index):

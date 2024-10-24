@@ -7,42 +7,20 @@ de continuación de entrenamiento de árboles en base a otro inicial con menos d
 
 import copy
 import numbers
-from abc import ABCMeta, abstractmethod
 from math import ceil
-from numbers import Integral, Real
 
 import numpy as np
 from scipy.sparse import issparse
 
 from ..base import (
-    BaseEstimator,
-    ClassifierMixin,
-    MultiOutputMixin,
-    RegressorMixin,
     _fit_context,
-    clone,
     is_classifier,
 )
-from ..utils import Bunch, check_random_state, compute_sample_weight
-from ..utils._param_validation import Hidden, Interval, RealNotInt, StrOptions
-from ..utils.multiclass import check_classification_targets
-from ..utils.validation import (
-    _assert_all_finite_element_wise,
-    _check_sample_weight,
-    assert_all_finite,
-    check_is_fitted,
-)
-from . import _criterion, _splitter, _tree
+
+from ..utils.validation import _check_sample_weight
 from ._criterion import Criterion
 from ._splitter import Splitter
-from ._tree import (
-    BestFirstTreeBuilder,
-    DepthFirstTreeBuilder,
-    Tree,
-    _build_pruned_tree_ccp,
-    ccp_pruning_path,
-)
-from ._utils import _any_isnan_axis0
+from ._tree import Tree
 
 # import nuevos
 
