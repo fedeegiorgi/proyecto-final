@@ -1,4 +1,6 @@
-from _tree cimport DepthFirstTreeBuilder, StackRecord, Tree, intp_t, float64_t, uint8_t, stack
+from _tree cimport DepthFirstTreeBuilder, StackRecord, Tree
+from libcpp.stack cimport stack
+from ..utils._typedefs cimport float32_t, float64_t, intp_t, int32_t, uint8_t, uint32_t
 
 cimport numpy as cnp
 cnp.import_array()
