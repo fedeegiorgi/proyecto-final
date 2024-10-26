@@ -30,9 +30,9 @@ from ._oob_forest import (
 from ._oob_plus_iqr import (
     OOB_plus_IQR,
 )
-from ._shared_knowledge import (
-    SharedKnowledgeRandomForestRegressor,
-)
+# from ._shared_knowledge import (
+#     SharedKnowledgeRandomForestRegressor,
+# )
 from ._gb import GradientBoostingClassifier, GradientBoostingRegressor
 from ._hist_gradient_boosting.gradient_boosting import (
     HistGradientBoostingClassifier,

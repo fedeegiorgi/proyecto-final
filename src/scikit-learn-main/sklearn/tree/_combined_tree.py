@@ -45,6 +45,9 @@ from ._tree import (
 from ._tree_comb import TreeCombiner
 from ._utils import _any_isnan_axis0
 
+DTYPE = _tree.DTYPE
+DOUBLE = _tree.DOUBLE
+
 # import nuevos
 
 from ._classes import DecisionTreeRegressor
@@ -66,7 +69,7 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
         min_impurity_decrease=0.0,
         ccp_alpha=0.0,
         monotonic_cst=None,
-        intial_trees=None, # New parameter of type list of DecisionTreeRegressor
+        initial_trees=None, # New parameter of type list of DecisionTreeRegressor
     ):
         super().__init__(
             criterion=criterion,
@@ -83,7 +86,7 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
             monotonic_cst=monotonic_cst,
         )
 
-        self.initial_trees = intial_trees
+        self.initial_trees = initial_trees
 
     def _get_single_tree_data(self, tree):
         """
