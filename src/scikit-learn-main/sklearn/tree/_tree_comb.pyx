@@ -65,7 +65,7 @@ cdef struct StackNode:
     float64_t impurity
     intp_t n_node_samples
     intp_t weighted_n_node_samples
-    intp_t missing_go_to_lefts
+    intp_t missing_go_to_left
 
 cdef class TreeCombiner:
     def __cinit__(
@@ -98,6 +98,7 @@ cdef class TreeCombiner:
         """Combines the trees into a single one using first split."""
         
         cdef intp_t final_depth = self.features.shape[0]
+        cdef bint is_child_leaf
 
         if final_depth <= 10:
             init_capacity = <intp_t> (2 ** (final_depth + 1)) - 1
@@ -142,7 +143,7 @@ cdef class TreeCombiner:
 
             if not is_leaf:
                 depth += 1
-                cdef is_child_leaf = <bint>(self.features.shape[0] - 1) == depth
+                is_child_leaf = <bint>(self.features.shape[0] - 1) == depth
 
                 # Push right child on stack
                 builder_stack.push({
@@ -171,12 +172,12 @@ cdef class TreeCombiner:
                 })
 
     cdef recompute_values(self, cnp.ndarray out, cnp.ndarray y):
-        cdef cnp.ndarray values = np.zeros(self.node_count, dtype=float64_t)
+        cdef cnp.ndarray values = np.zeros(self.node_count, dtype=np.float64)
 
         for i in range(y.shape[0]):
             values[out[i]] += y[i]
 
-        cdef cnp.ndarray counts = np.zeros(self.node_count, dtype=intp_t)
+        cdef cnp.ndarray counts = np.zeros(self.node_count, dtype=np.intp)
 
         for num in out:
             counts[num] += 1
@@ -185,4 +186,4 @@ cdef class TreeCombiner:
             if counts[i] > 0:
                 values[i] /= counts[i]
 
-        self.value = values # match flot64_t* value in _tree.pxd con cnp.ndarray
+        self.value = <float64_t *> values.data # Cannot convert Python object to 'float64_t *'
