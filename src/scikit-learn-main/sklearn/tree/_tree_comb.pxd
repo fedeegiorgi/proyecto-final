@@ -13,5 +13,7 @@ cdef class TreeCombiner(Tree):
     cdef cnp.ndarray weighted_n_node_samples
     cdef cnp.ndarray missing_go_to_lefts
     
-    cdef combiner(self)
-    cdef recompute_values(self, cnp.ndarray out, cnp.ndarray y)
+    cpdef void combiner(self, cnp.ndarray features, cnp.ndarray thresholds, 
+                cnp.ndarray impurities, cnp.ndarray n_node_samples, 
+                cnp.ndarray weighted_n_node_samples, cnp.ndarray missing_go_to_lefts)
+    cpdef recompute_values(self, cnp.ndarray out, cnp.ndarray y)

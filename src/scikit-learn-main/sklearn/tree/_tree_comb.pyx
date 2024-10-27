@@ -55,6 +55,7 @@ cdef intp_t _TREE_LEAF = TREE_LEAF
 cdef intp_t _TREE_UNDEFINED = TREE_UNDEFINED
 
 ############################################
+from ._tree cimport Tree
 
 cdef struct StackNode:
     intp_t parent
@@ -67,38 +68,29 @@ cdef struct StackNode:
     intp_t weighted_n_node_samples
     intp_t missing_go_to_left
 
-cdef class TreeCombiner:
+cdef class TreeCombiner(Tree):
     def __cinit__(
         self, 
         intp_t n_features, 
         cnp.ndarray n_classes, 
-        intp_t n_outputs,
-        cnp.ndarray features, 
-        cnp.ndarray thresholds,
-        cnp.ndarray impurities,
-        cnp.ndarray n_node_samples,
-        cnp.ndarray weighted_n_node_samples,
-        cnp.ndarray missing_go_to_lefts
+        intp_t n_outputs
     ):
         """
         Cython constructor (__cinit__) for TreeCombiner, calling the base Tree's __cinit__.
         """
-
         # Call the parent Tree class's __cinit__
-        Tree.__cinit__(n_features, n_classes, n_outputs)
+        Tree(n_features, n_classes, n_outputs)
 
-        self.features = features
-        self.thresholds = thresholds
-        self.impurities = impurities
-        self.n_node_samples = n_node_samples
-        self.weighted_n_node_samples = weighted_n_node_samples
-        self.missing_go_to_lefts = missing_go_to_lefts
-
-    cdef combiner(self):
+    cpdef void combiner(self, cnp.ndarray features, cnp.ndarray thresholds, 
+                cnp.ndarray impurities, cnp.ndarray n_node_samples, 
+                cnp.ndarray weighted_n_node_samples, cnp.ndarray missing_go_to_lefts):
         """Combines the trees into a single one using first split."""
         
-        cdef intp_t final_depth = self.features.shape[0]
+        cdef intp_t final_depth = features.shape[0]
         cdef bint is_child_leaf
+
+        print(features.shape[0])
+        print(final_depth)
 
         if final_depth <= 10:
             init_capacity = <intp_t> (2 ** (final_depth + 1)) - 1
@@ -114,12 +106,12 @@ cdef class TreeCombiner:
             "parent": -1,
             "is_left": 0,
             "is_leaf": 0,
-            "feature": self.features[depth],
-            "threshold": self.thresholds[depth],
-            "impurity": self.impurities[depth],
-            "n_node_samples": self.n_node_samples[depth],
-            "weighted_n_node_samples": self.weighted_n_node_samples[depth],
-            "missing_go_to_left": self.missing_go_to_lefts[depth]
+            "feature": features[depth],
+            "threshold": thresholds[depth],
+            "impurity": impurities[depth],
+            "n_node_samples": n_node_samples[depth],
+            "weighted_n_node_samples": weighted_n_node_samples[depth],
+            "missing_go_to_left": missing_go_to_lefts[depth]
         })
 
         while not builder_stack.empty():
@@ -132,30 +124,32 @@ cdef class TreeCombiner:
             feature = current.feature
             threshold = current.threshold
             impurity = current.impurity
-            n_node_samples = current.n_node_samples
-            weighted_n_node_samples = current.weighted_n_node_samples
+            n_node_samples_i = current.n_node_samples
+            weighted_n_node_samples_i = current.weighted_n_node_samples
             missing_go_to_left = current.missing_go_to_left
 
             node_id = self._add_node(parent, is_left, is_leaf, feature,
                                     threshold, impurity,
-                                    n_node_samples, weighted_n_node_samples,
+                                    n_node_samples_i, weighted_n_node_samples_i,
                                     missing_go_to_left)
 
             if not is_leaf:
                 depth += 1
-                is_child_leaf = <bint>(self.features.shape[0] - 1) == depth
+                is_child_leaf = features.shape[0] - 1 == depth
+
+                print(is_child_leaf)
 
                 # Push right child on stack
                 builder_stack.push({
                     "parent": node_id,
                     "is_left": 0,
                     "is_leaf": is_child_leaf,
-                    "feature": self.features[depth],
-                    "threshold": self.thresholds[depth],
-                    "impurity": self.impurities[depth],
-                    "n_node_samples": self.n_node_samples[depth],
-                    "weighted_n_node_samples": self.weighted_n_node_samples[depth],
-                    "missing_go_to_left": self.missing_go_to_lefts[depth]
+                    "feature": features[depth],
+                    "threshold": thresholds[depth],
+                    "impurity": impurities[depth],
+                    "n_node_samples": n_node_samples[depth],
+                    "weighted_n_node_samples": weighted_n_node_samples[depth],
+                    "missing_go_to_left": missing_go_to_lefts[depth]
                 })
 
                 # Push left child on stack
@@ -163,15 +157,15 @@ cdef class TreeCombiner:
                     "parent": node_id,
                     "is_left": 1,
                     "is_leaf": is_child_leaf,
-                    "feature": self.features[depth],
-                    "threshold": self.thresholds[depth],
-                    "impurity": self.impurities[depth],
-                    "n_node_samples": self.n_node_samples[depth],
-                    "weighted_n_node_samples": self.weighted_n_node_samples[depth],
-                    "missing_go_to_left": self.missing_go_to_lefts[depth]
+                    "feature": features[depth],
+                    "threshold": thresholds[depth],
+                    "impurity": impurities[depth],
+                    "n_node_samples": n_node_samples[depth],
+                    "weighted_n_node_samples": weighted_n_node_samples[depth],
+                    "missing_go_to_left": missing_go_to_lefts[depth]
                 })
 
-    cdef recompute_values(self, cnp.ndarray out, cnp.ndarray y):
+    cpdef recompute_values(self, cnp.ndarray out, cnp.ndarray y):
         cdef cnp.ndarray values = np.zeros(self.node_count, dtype=np.float64)
 
         for i in range(y.shape[0]):

@@ -161,15 +161,19 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
             self.n_features_in_,
             # TODO: tree shouldn't need this in this case
             np.array([1] * self.n_outputs_, dtype=np.intp),
-            self.n_outputs_,
-            features,
+            self.n_outputs_
+        )
+        
+        self.tree_.combiner(features,
             thresholds,
             impurities,
             n_node_samples,
             weighted_n_node_samples,
-            missing_go_to_lefts,
-        )
+            missing_go_to_lefts)
+
+        print(f"tree count: {self.tree_.node_count}")
+        print(f"capacity: {self.tree_.capacity}")
+        print(f"max_depth: {self.tree_.max_depth}")
         
-        self.tree_.combiner()
         out = self.tree_.apply(X)
         self.tree_.recompute_values(out, y)
