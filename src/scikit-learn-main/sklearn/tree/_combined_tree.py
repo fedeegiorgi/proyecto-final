@@ -171,9 +171,9 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
             weighted_n_node_samples,
             missing_go_to_lefts)
 
-        print(f"tree count: {self.tree_.node_count}")
-        print(f"capacity: {self.tree_.capacity}")
-        print(f"max_depth: {self.tree_.max_depth}")
+        # print(f"tree count: {self.tree_.node_count}")
+        # print(f"capacity: {self.tree_.capacity}")
+        # print(f"max_depth: {self.tree_.max_depth}")
         # print("Primer nivel")
         # print(self.tree_.feature[0], features[0])
         # print(self.tree_.threshold[0], thresholds[0])

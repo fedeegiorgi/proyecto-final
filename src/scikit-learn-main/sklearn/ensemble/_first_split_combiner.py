@@ -110,16 +110,15 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
         self.combined_trees = []
     
     def fit(self, X, y, sample_weights=None):
-        # Fit a random forest regressor with max_depth = 1 for each tree.
-        rf = RandomForestRegressor(random_state=self.random_state, max_depth=1)
-        rf.fit(X, y)
+        # Set max_depth = 1. We only care about the first split.
+        self.max_depth = 1
 
-        # Get the trees and samples used
-        initial_trees, trees_samples = rf.estimators_, rf.estimators_samples_
+        # Call to original fit method
+        super().fit(X, y)
 
         # Divide the trees into groups
-        self.initial_grouped_trees = self.group_split(initial_trees)
-        grouped_samples = self.group_split(trees_samples)
+        self.initial_grouped_trees = self.group_split(self.estimators_)
+        grouped_samples = self.group_split(self.estimators_samples_)
 
         for i, tree_group in enumerate(self.initial_grouped_trees):
             group_samples_used = grouped_samples[i]
@@ -130,10 +129,14 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
                     samplesidx.add(sampleidx)
             samplesidx = list(samplesidx)
 
-            X_union = X.iloc[samplesidx].to_numpy()
+            # TODO: @fede chquear como hacer esto asegurando que funcionen los indices 
+            # creo que en algun momento X siempre se convierte a numpy por lo que el iloc no tiene sentido
+            # se lo saqué (el iloc) y me tiraba error también
+            X_union = X.iloc[samplesidx].to_numpy() 
             y_union = y.iloc[samplesidx].to_numpy()
 
-            group_combined_tree = DecisionTreeRegressorCombiner(X_union, y_union, tree_group)
+            group_combined_tree = DecisionTreeRegressorCombiner(initial_trees=tree_group)
+            group_combined_tree.fit(X_union, y_union)
             self.combined_trees.append(group_combined_tree)
         
     def predict(self, X):
@@ -157,6 +160,6 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
             for e in self.combined_trees
         )
 
-        y_hat /= len(self.combined_trees) # promedia las estimaciones de los arboles
+        y_hat /= len(self.combined_trees) # promedia las estimaciones de los arboles combinados
 
         return y_hat

@@ -30,6 +30,9 @@ from ._oob_forest import (
 from ._oob_plus_iqr import (
     OOB_plus_IQR,
 )
+from ._first_split_combiner import (
+    RFRegressorFirstSplitCombiner,
+)
 # from ._shared_knowledge import (
 #     SharedKnowledgeRandomForestRegressor,
 # )
@@ -56,7 +59,7 @@ __all__ = [
     "OOBRandomForestRegressorGroupsTanh",
     "OOBRandomForestRegressorGroupsSoftPlus",
     "OOB_plus_IQR",
-    "SharedKnowledgeRandomForestRegressor",
+    "RFRegressorFirstSplitCombiner",
     "RandomTreesEmbedding",
     "ExtraTreesClassifier",
     "ExtraTreesRegressor",

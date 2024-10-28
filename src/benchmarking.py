@@ -6,7 +6,8 @@ from scipy.io import arff
 from sklearn.ensemble import (
     RandomForestRegressor, IQRRandomForestRegressor, OOBRandomForestRegressor,
     OOBRandomForestRegressorGroups, OOBRandomForestRegressorGroupsSigmoid,
-    OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus, OOB_plus_IQR
+    OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus, OOB_plus_IQR,
+    RFRegressorFirstSplitCombiner
 )
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
@@ -23,9 +24,9 @@ MODEL_CLASSES = [
     RandomForestRegressor, IQRRandomForestRegressor, OOBRandomForestRegressor,
     OOBRandomForestRegressorGroups, OOBRandomForestRegressorGroupsSigmoid,
     OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus,
-    OOB_plus_IQR,
+    OOB_plus_IQR, RFRegressorFirstSplitCombiner
 ]
-NEW_CLASS = OOB_plus_IQR
+NEW_CLASS = RFRegressorFirstSplitCombiner
 
 # Decision variables
 RUN_NEW_DATASET = False
@@ -56,7 +57,7 @@ def process_dataset(filepath, extension, dataset_name):
     train_df, validation_df = train_test_split(df, test_size=0.2, random_state=SEED)
     y_train, y_valid = train_df[DATASETS_COLUMNS[dataset_name]], validation_df[DATASETS_COLUMNS[dataset_name]]
     X_train, X_valid = train_df.drop(DATASETS_COLUMNS[dataset_name], axis=1), validation_df.drop(DATASETS_COLUMNS[dataset_name], axis=1)
-    X_train = pd.get_dummies(X_train) # a chequear
+    X_train = pd.get_dummies(X_train)
     X_valid = pd.get_dummies(X_valid)
     X_train, X_valid = X_train.align(X_valid, join='left', axis=1, fill_value=0)
 

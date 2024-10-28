@@ -90,8 +90,6 @@ cdef class TreeCombiner(Tree):
         cdef intp_t final_depth = features.shape[0]
         cdef bint is_child_leaf
 
-        print(features.shape[0])
-        print(final_depth)
         self.max_depth = final_depth
 
         if self.max_depth <= 10:
@@ -184,6 +182,3 @@ cdef class TreeCombiner(Tree):
             if counts[i] > 0:
                 values[i] /= counts[i]
                 self.value[i] = values[i]
-                
-        print("Llegué a recomputar los values")
-        # self.value = <float64_t *> values.data # Cannot convert Python object to 'float64_t *'
