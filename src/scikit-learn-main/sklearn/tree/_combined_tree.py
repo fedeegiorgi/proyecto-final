@@ -174,6 +174,18 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
         print(f"tree count: {self.tree_.node_count}")
         print(f"capacity: {self.tree_.capacity}")
         print(f"max_depth: {self.tree_.max_depth}")
+        # print("Primer nivel")
+        # print(self.tree_.feature[0], features[0])
+        # print(self.tree_.threshold[0], thresholds[0])
+
+        # print("Segundo nivel")
+        # print(self.tree_.feature[1], features[1])
+        # print(self.tree_.threshold[1], thresholds[1])
+
+        # print("Tercer nivel")
+        # print(self.tree_.feature[2], features[2])
+        # print(self.tree_.threshold[2], thresholds[2])
         
-        out = self.tree_.apply(X)
+        out = self.apply(X)
+        
         self.tree_.recompute_values(out, y)
