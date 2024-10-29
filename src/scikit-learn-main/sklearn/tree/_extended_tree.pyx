@@ -85,44 +85,17 @@ cdef class DepthFirstTreeExtensionBuilder(DepthFirstTreeBuilder):
 
     def __cinit__(self, Splitter splitter, intp_t min_samples_split,
                   intp_t min_samples_leaf, float64_t min_weight_leaf,
-                  intp_t max_depth, float64_t min_impurity_decrease,
-                  cnp.ndarray[cnp.double_t] parents,
-                  cnp.ndarray[cnp.double_t] is_lefts,
-                  cnp.ndarray[cnp.double_t] is_leafs,
-                  cnp.ndarray[cnp.double_t] features,
-                  cnp.ndarray[cnp.double_t] thresholds,
-                  cnp.ndarray[cnp.double_t] impurities,
-                  cnp.ndarray[cnp.double_t] n_node_samples,
-                  cnp.ndarray[cnp.double_t] weighted_n_node_samples,
-                  cnp.ndarray[cnp.double_t] missing_go_to_lefts
-                ):
-        
+                  intp_t max_depth, float64_t min_impurity_decrease
+    ):
+    
         # Call the parent class constructor
-        DepthFirstTreeBuilder.__cinit__(
+        DepthFirstTreeBuilder(
             self, splitter, min_samples_split, min_samples_leaf,
             min_weight_leaf, max_depth, min_impurity_decrease
         )
 
-        # Ensure the input arrays are one-dimensional
-        if (parents.ndim != 1 or is_lefts.ndim != 1 or is_leafs.ndim != 1 or 
-            features.ndim != 1 or thresholds.ndim != 1 or 
-            impurities.ndim != 1 or n_node_samples.ndim != 1 or 
-            weighted_n_node_samples.ndim != 1 or missing_go_to_lefts.ndim != 1):
-            raise ValueError("All parameters must be one-dimensional NumPy arrays.")
-        
-        # Assign the memoryviews
-        self.parents = parents
-        self.is_lefts = is_lefts
-        self.is_leafs = is_leafs
-        self.features = features
-        self.thresholds = thresholds
-        self.impurities = impurities
-        self.n_node_samples = n_node_samples
-        self.weighted_n_node_samples = weighted_n_node_samples
-        self.missing_go_to_lefts = missing_go_to_lefts
-
         # Initialize the stack to store the leafs of the initial tree
-        self.initial_builder_stack = stack[StackRecord]()
+        self.builder_stack = stack[StackRecord]()
 
         # Using the new parameters load the tree
         self._load_initial_tree()
@@ -198,12 +171,40 @@ cdef class DepthFirstTreeExtensionBuilder(DepthFirstTreeBuilder):
         Tree tree,
         object X,
         const float64_t[:, ::1] y,
+        cnp.ndarray parents,
+        cnp.ndarray is_lefts,
+        cnp.ndarray is_leafs,
+        cnp.ndarray features,
+        cnp.ndarray thresholds,
+        cnp.ndarray impurities,
+        cnp.ndarray n_node_samples,
+        cnp.ndarray weighted_n_node_samples,
+        cnp.ndarray missing_go_to_lefts,
         const float64_t[:] sample_weight=None,
         const uint8_t[::1] missing_values_in_feature_mask=None,
     ):
         """
         Build a decision tree with additional features.
         """
+        # Ensure the input arrays are one-dimensional
+        if (parents.ndim != 1 or is_lefts.ndim != 1 or is_leafs.ndim != 1 or 
+            features.ndim != 1 or thresholds.ndim != 1 or 
+            impurities.ndim != 1 or n_node_samples.ndim != 1 or 
+            weighted_n_node_samples.ndim != 1 or missing_go_to_lefts.ndim != 1):
+            raise ValueError("All parameters must be one-dimensional NumPy arrays.")
+        
+        # Assign the cnp.ndarray objects to the class attributes
+        self.parents = parents
+        self.is_lefts = is_lefts
+        self.is_leafs = is_leafs
+        self.features = features
+        self.thresholds = thresholds
+        self.impurities = impurities
+        self.n_node_samples = n_node_samples
+        self.weighted_n_node_samples = weighted_n_node_samples
+        self.missing_go_to_lefts = missing_go_to_lefts
+
+        #####################################################################################
 
         # check input
         X, y, sample_weight = self._check_input(X, y, sample_weight)
@@ -255,3 +256,11 @@ cdef class DepthFirstTreeExtensionBuilder(DepthFirstTreeBuilder):
         cdef ParentInfo parent_record
         # probablemente hay q inicializarlo distinto
         _init_parent_record(&parent_record)
+
+        #####################################################################################
+
+        # Load initial tree in the builder process
+        self._load_initial_tree(tree)
+
+        # Continue training almost copying the original code but building from the loaded stack
+        

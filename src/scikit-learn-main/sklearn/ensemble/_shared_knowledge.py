@@ -104,7 +104,7 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         )
 
         self.initial_max_depth = initial_max_depth
-        self.initial_grouped_trees = []
+        self.extended_grouped_estimators_ = []
 
     def _original_fit_validations(self, X, y, sample_weight):
         # Validate or convert input data
@@ -199,28 +199,26 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
 
         return X, y, sample_weight, missing_values_in_feature_mask #, n_samples_bootstrap, random_state
         
-        # creo que tenemos que devolver n_samples_bootstrap y random_state para que se entrenen los árboles con boostrap
+        # TODO: creo que tenemos que devolver n_samples_bootstrap y random_state para que se entrenen los árboles con boostrap
 
     def fit(self, X, y, sample_weight=None):
-
-        # original RandomForestsRegressor with max_depth=self.initial_max_depth
-        rf = RandomForestRegressor(random_state=self.random_state, max_depth=self.initial_max_depth)
+        # Ensure max_depth is set to initial_max_depth
+        self.max_depth = self.initial_max_depth
         
-        # Fit the model with original algorithm
-        rf.fit(X, y)
+        # Call to original fit method
+        super().fit(X, y)
 
-        # Get the trees and samples
-        initial_trees = rf.estimators_
-        trees_samples = rf.estimators_samples_
+        # max_depth back to None as no limit for extended trees
+        self.max_depth = None
 
         # Divide the trees into groups
-        self.initial_grouped_trees = self.group_split(initial_trees)
-        grouped_samples = self.group_split(trees_samples)
-        
+        initial_grouped_trees = self.group_split(self.estimators_)
+        grouped_samples = self.group_split(self.estimators_samples_)
+
         grouped_new_columns = []
 
         # For each group of trees and samples
-        for i, trees_group in enumerate(self.initial_grouped_trees):
+        for i, trees_group in enumerate(initial_grouped_trees):
 
             samples_group = grouped_samples[i]
             group_new_columns = []
@@ -252,7 +250,9 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         # new_X = np.hstack((X[grouped_samples[0][0]], grouped_new_columns[0][0]))
         # print(f"Shape of X after hstack for tree 0 in group 0: {new_X.shape}")
 
-        for i, trees_group in enumerate(self.initial_grouped_trees):
+        for i, trees_group in enumerate(initial_grouped_trees):
+            extended_trees_group = []
+
             for j, tree in enumerate(trees_group):
                                
                 # Concatenate the other tree's predictions with the original features
@@ -261,15 +261,15 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
                 # Validate training data
                 new_X, y, sample_weight, missing_values_in_feature_mask = self._original_fit_validations(new_X, y, sample_weight)
 
-                # # Fit the extended tree with the new features based on the original tree
-                # new_tree = ContinuedDecisionTreeRegressor(intial_tree=tree)
-                # new_tree.fit(new_X, y[samples_group[i][j]])
+                # Fit the extended tree with the new features based on the original tree
+                extended_tree = ContinuedDecisionTreeRegressor(intial_tree=tree)
+                extended_tree.fit(new_X, y[samples_group[i][j]])
 
-                # # Add fitted tree to the estimators_ list
-                # self.estimators_.append(new_tree)
-        
-        # # Divide the trees into groups
-        # self.estimators_ = self.group_split(self.estimators_)
+                # Add fitted extended tree to the group
+                extended_trees_group.append(extended_tree)
+            
+            # Add group of trees to the list of extended grouped estimators
+            self.extended_grouped_estimators_.append(extended_trees_group)
 
     def predict(self, X):
         
@@ -285,27 +285,33 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         else:
             initial_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
 
+        # Compute predictions on original trees with original features in X
         Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
             delayed(_store_prediction)(e.predict, X, [initial_predictions], lock, i)
-            for i, e in enumerate(self.initial_grouped_trees) # En vez de self.estimators_ uso los initial_grouped_trees (aun no están las predicciones de los otros árboles)
-        ) # initial_grouped_trees es lista de lista asi que hay que hacer un for anidado/ aplanar
+            for i, e in enumerate(self.estimators_) 
+        )
 
+        # Divide the predictions into groups
         grouped_predictions = self.random_group_split(initial_predictions)
+        # TODO: a chequear pero por como están estos métodos de split se dividen las predicciones de 
+        # igual forma que se dividieron en el fit los árboles
 
-        # Initialize the new grouped predictions
+        # Initialize vector for the new predictions
         new_grouped_predictions = np.zeros_like(grouped_predictions)
         group_averages = np.empty((self._n_groups, X.shape[0]))
 
         for i, group in enumerate(grouped_predictions):
             for j, tree in enumerate(group):
                 # Remove the j-th tree's predictions
+                # TODO: no habría que hacer un deep copy o algo así? 
+                # Pq si esto es mutable para el proximo arbol me van a faltar las predicciones
                 shared_predictions = np.delete(grouped_predictions[i], j, axis=0)
 
                 # Concatenate the shared predictions with the original features
                 new_X = np.hstack((X, shared_predictions.T))
 
-                # Predict the samples for the current complete tree
-                predictions = self.estimators_[i][j].predict(new_X)
+                # Predict the samples for the current extended complete tree
+                predictions = self.extended_grouped_estimators_[i][j].predict(new_X)
 
                 # Store the predictions in corresponding group and tree
                 new_grouped_predictions[i, j, :] = predictions
