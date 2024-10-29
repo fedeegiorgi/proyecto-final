@@ -137,35 +137,64 @@ cdef class TreeCombiner(Tree):
 
             if not is_leaf:
                 depth += 1
-                is_child_leaf = features.shape[0] - 1 == depth
+                is_child_leaf = features.shape[0] == depth
 
-                # Push right child on stack
-                builder_stack.push({
-                    "parent": node_id,
-                    "is_left": 0,
-                    "is_leaf": is_child_leaf,
-                    "feature": features[depth],
-                    "threshold": thresholds[depth],
-                    "impurity": impurities[depth],
-                    "n_node_samples": n_node_samples[depth],
-                    "weighted_n_node_samples": weighted_n_node_samples[depth],
-                    "missing_go_to_left": missing_go_to_lefts[depth],
-                    "node_depth": depth
-                })
+                if not is_child_leaf:
+                    # Push right child on stack
+                    builder_stack.push({
+                        "parent": node_id,
+                        "is_left": 0,
+                        "is_leaf": is_child_leaf,
+                        "feature": features[depth],
+                        "threshold": thresholds[depth],
+                        "impurity": impurities[depth],
+                        "n_node_samples": n_node_samples[depth],
+                        "weighted_n_node_samples": weighted_n_node_samples[depth],
+                        "missing_go_to_left": missing_go_to_lefts[depth],
+                        "node_depth": depth
+                    })
 
-                # Push left child on stack
-                builder_stack.push({
-                    "parent": node_id,
-                    "is_left": 1,
-                    "is_leaf": is_child_leaf,
-                    "feature": features[depth],
-                    "threshold": thresholds[depth],
-                    "impurity": impurities[depth],
-                    "n_node_samples": n_node_samples[depth],
-                    "weighted_n_node_samples": weighted_n_node_samples[depth],
-                    "missing_go_to_left": missing_go_to_lefts[depth],
-                    "node_depth": depth
-                })
+                    # Push left child on stack
+                    builder_stack.push({
+                        "parent": node_id,
+                        "is_left": 1,
+                        "is_leaf": is_child_leaf,
+                        "feature": features[depth],
+                        "threshold": thresholds[depth],
+                        "impurity": impurities[depth],
+                        "n_node_samples": n_node_samples[depth],
+                        "weighted_n_node_samples": weighted_n_node_samples[depth],
+                        "missing_go_to_left": missing_go_to_lefts[depth],
+                        "node_depth": depth
+                    })
+                else:
+                    # Push right child (leaf) on stack
+                    builder_stack.push({
+                        "parent": node_id,
+                        "is_left": 0,
+                        "is_leaf": is_child_leaf,
+                        "feature": 0,
+                        "threshold": 0,
+                        "impurity": 0,
+                        "n_node_samples": 0,
+                        "weighted_n_node_samples": 0,
+                        "missing_go_to_left": 0,
+                        "node_depth": depth
+                    })
+
+                    # Push left child (leaf) on stack
+                    builder_stack.push({
+                        "parent": node_id,
+                        "is_left": 1,
+                        "is_leaf": is_child_leaf,
+                        "feature": 0,
+                        "threshold": 0,
+                        "impurity": 0,
+                        "n_node_samples": 0,
+                        "weighted_n_node_samples": 0,
+                        "missing_go_to_left": 0,
+                        "node_depth": depth
+                    })
 
     cpdef recompute_values(self, cnp.ndarray out, cnp.ndarray y):
         cdef cnp.ndarray values = np.zeros(self.node_count, dtype=np.float64)

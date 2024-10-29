@@ -104,4 +104,10 @@ class RandomForestGroupDebate(RandomForestRegressor):
 
     def group_split(self, iterable):
         # Create a list of lists by slicing the iterable into groups of size `self._n_groups`
-        return [list(islice(iterable, self._n_groups)) for _ in range(0, len(iterable), self.group_size)]
+        grouped = []
+        for i in range(self._n_groups):
+            lower_bound = i * self.group_size
+            upper_bound = (i + 1) * self.group_size
+            group = iterable[lower_bound:upper_bound]
+            grouped.append(group)
+        return grouped

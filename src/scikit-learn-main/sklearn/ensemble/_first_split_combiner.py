@@ -109,12 +109,29 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
 
         self.combined_trees = []
     
+    def _compute_group_sample(self, group_samples_used, n_samples):
+        """
+        Compute the sample of each group of trees.
+        """
+        # Create a mask with False for all sample
+        sample_mask = np.zeros(n_samples, dtype=bool)
+
+        # Loop over the the samples used in the group
+        for samples in group_samples_used:
+            for sampleidx in samples:
+                # Set the mask to True for the samples used
+                sample_mask[sampleidx] = True
+    
+        return sample_mask
+
     def fit(self, X, y, sample_weights=None):
         # Set max_depth = 1. We only care about the first split.
         self.max_depth = 1
 
         # Call to original fit method
         super().fit(X, y)
+
+        n_samples = X.shape[0]
 
         # Divide the trees into groups
         self.initial_grouped_trees = self.group_split(self.estimators_)
@@ -123,17 +140,10 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
         for i, tree_group in enumerate(self.initial_grouped_trees):
             group_samples_used = grouped_samples[i]
 
-            samplesidx = set()
-            for samples in group_samples_used:
-                for sampleidx in samples:
-                    samplesidx.add(sampleidx)
-            samplesidx = list(samplesidx)
+            sample_mask = self._compute_group_sample(group_samples_used, n_samples)
 
-            # TODO: @fede chquear como hacer esto asegurando que funcionen los indices 
-            # creo que en algun momento X siempre se convierte a numpy por lo que el iloc no tiene sentido
-            # se lo saqué (el iloc) y me tiraba error también
-            X_union = X.iloc[samplesidx].to_numpy() 
-            y_union = y.iloc[samplesidx].to_numpy()
+            X_union = X[sample_mask] 
+            y_union = y[sample_mask]
 
             group_combined_tree = DecisionTreeRegressorCombiner(initial_trees=tree_group)
             group_combined_tree.fit(X_union, y_union)
