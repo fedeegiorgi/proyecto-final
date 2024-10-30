@@ -1,21 +1,12 @@
 dataset_name,prop_lognormal,prop_normal,alpha,pred_col_name
-titanic_fare_test.arff,0.0038167938931297,0.2061068702290076,0.05,Fare
-medical_costs.csv,0.0,0.0074626865671641,0.05,medical charges
-salary_football.csv,0.0,0.2237851662404092,0.05,Wage
-flight_price.csv,0.0004679457182966,0.0383715489003275,0.05,Price
-Height.csv,0.0,0.0802139037433155,0.05,childHeight
-wine_quality.arff,0.0,0.0053846153846153,0.05,quality
-house_8L.arff,0.0232609172701338,0.4821154268158876,0.05,price
 titanic_fare_test.arff,0.0190839694656488,0.3816793893129771,0.1,Fare
 medical_costs.csv,0.0,0.0783582089552238,0.1,medical charges
 salary_football.csv,0.0025575447570332,0.4859335038363171,0.1,Wage
 Height.csv,0.0,0.4171122994652406,0.1,childHeight
 wine_quality.arff,0.0,0.0338461538461538,0.1,quality
 house_8L.arff,0.0438885231511959,0.6954136493307,0.1,price
-kidney.arff,0.0,0.0,0.05,frailty
 kidney.arff,0.0,0.25,0.1,frailty
 flight_price.csv,0.0004679457182966,0.1066916237716424,0.1,Price
-boston_housing.arff,0.0098039215686274,0.3137254901960784,0.05,MEDV
 boston_housing.arff,0.0098039215686274,0.5980392156862745,0.1,MEDV
 liver_disorders.arff,0.0,0.3623188405797101,0.1,drinks
 aerospace_stock.arff,0.0,0.3157894736842105,0.1,company10
@@ -24,3 +15,8 @@ laptops.csv,0.01,0.78,0.1,Price
 Metro_Interstate_Traffic_Volume_test.csv,0.0012578616352201,0.2220125786163522,0.1,traffic_volume
 used_car.csv,0.0,0.2295081967213114,0.1,Selling_Price
 weight.csv,0.0,0.2097812097812098,0.1,weight
+laptop.csv,0.0050251256281407,0.614321608040201,0.1,Price
+rainfall.arff,0.0,0.1316025067144136,0.1,Rainfall
+abalone.csv,0.0,0.5406698564593302,0.1,Age
+wind_dataset.csv,0.0035460992907801,0.7367021276595744,0.1,WIND
+Carbon_Emission.csv,0.058,0.937,0.1,CarbonEmission
