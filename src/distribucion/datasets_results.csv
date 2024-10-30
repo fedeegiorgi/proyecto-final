@@ -16,4 +16,11 @@ kidney.arff,0.0,0.0,0.05,frailty
 kidney.arff,0.0,0.25,0.1,frailty
 flight_price.csv,0.0004679457182966,0.1066916237716424,0.1,Price
 boston_housing.arff,0.0098039215686274,0.3137254901960784,0.05,MEDV
-boston_housing.arff,0.00980392156862745,0.5980392156862745,0.1,MEDV
+boston_housing.arff,0.0098039215686274,0.5980392156862745,0.1,MEDV
+liver_disorders.arff,0.0,0.3623188405797101,0.1,drinks
+aerospace_stock.arff,0.0,0.3157894736842105,0.1,company10
+Concrete_Strength.csv,0.0,0.3009708737864077,0.1,Concretestrength
+laptops.csv,0.01,0.78,0.1,Price
+Metro_Interstate_Traffic_Volume_test.csv,0.0012578616352201,0.2220125786163522,0.1,traffic_volume
+used_car.csv,0.0,0.2295081967213114,0.1,Selling_Price
+weight.csv,0.0,0.2097812097812098,0.1,weight
