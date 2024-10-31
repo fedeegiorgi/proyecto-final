@@ -33,9 +33,9 @@ from ._oob_plus_iqr import (
 from ._first_split_combiner import (
     RFRegressorFirstSplitCombiner,
 )
-# from ._shared_knowledge import (
-#     SharedKnowledgeRandomForestRegressor,
-# )
+from ._shared_knowledge import (
+    SharedKnowledgeRandomForestRegressor,
+)
 from ._gb import GradientBoostingClassifier, GradientBoostingRegressor
 from ._hist_gradient_boosting.gradient_boosting import (
     HistGradientBoostingClassifier,
@@ -50,7 +50,6 @@ __all__ = [
     "BaseEnsemble",
     "RandomForestClassifier",
     "RandomForestRegressor",
-    "ZscoreRandomForestRegressor",
     "IQRRandomForestRegressor",
     "PercentileTrimmingRandomForestRegressor",
     "OOBRandomForestRegressor",
@@ -60,6 +59,7 @@ __all__ = [
     "OOBRandomForestRegressorGroupsSoftPlus",
     "OOB_plus_IQR",
     "RFRegressorFirstSplitCombiner",
+    "SharedKnowledgeRandomForestRegressor"
     "RandomTreesEmbedding",
     "ExtraTreesClassifier",
     "ExtraTreesRegressor",

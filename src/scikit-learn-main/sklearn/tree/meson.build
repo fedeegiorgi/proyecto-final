@@ -17,6 +17,12 @@ tree_extension_metadata = {
   '_tree_comb':
     {'sources': ['_tree_comb.pyx'],
       'override_options': ['cython_language=cpp', 'optimization=3']},
+  '_extended_tree':
+    {'sources': ['_extended_tree.pyx'],
+      'override_options': ['cython_language=cpp', 'optimization=3']},
+  '_splitter_addon':
+    {'sources': ['_splitter_addon.pyx'],
+     'override_options': ['optimization=3']},
 }
 
 foreach ext_name, ext_dict : tree_extension_metadata

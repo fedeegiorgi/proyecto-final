@@ -184,7 +184,7 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
                 "`max_sample=None`."
             )
         elif self.bootstrap:
-            n_samples_bootstrap = _get_n_samples_bootstrap(
+            n_samples_bootstrap = _get_n_samples_bootstrap(  # TODO: hay que importarla desde donde esté
                 n_samples=X.shape[0], max_samples=self.max_samples
             )
         else:
@@ -197,11 +197,16 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
             self.n_classes_ = self.n_classes_[0]
             self.classes_ = self.classes_[0]
 
-        return X, y, sample_weight, missing_values_in_feature_mask #, n_samples_bootstrap, random_state
+        return X, y, sample_weight, missing_values_in_feature_mask, random_state
         
-        # TODO: creo que tenemos que devolver n_samples_bootstrap y random_state para que se entrenen los árboles con boostrap
+        # TODO: creo que tenemos que devolver random_state para que se entrenen los árboles con misma seed
 
     def fit(self, X, y, sample_weight=None):
+        n_samples = X.shape[0]
+
+        # Save the extended tree max_depth
+        original_max_depth = self.max_depth
+
         # Ensure max_depth is set to initial_max_depth
         self.max_depth = self.initial_max_depth
         
@@ -209,7 +214,10 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         super().fit(X, y)
 
         # max_depth back to None as no limit for extended trees
-        self.max_depth = None
+        self.max_depth = original_max_depth
+
+        # We don't need to bootstrap the data for the extended trees training
+        self.bootstrap = False
 
         # Divide the trees into groups
         initial_grouped_trees = self.group_split(self.estimators_)
@@ -231,8 +239,14 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
                 # For each tree in the group (except the j-th tree)
                 for k, other_tree in enumerate(trees_group):
                     if k != j:
+                        # Create a mask with False for all samples
+                        used_sample_mask = np.zeros(n_samples, dtype=bool) 
+
+                        # Assign True to the samples that the tree used for training
+                        used_sample_mask[samples_group[j]] = True
+
                         # Predict the samples for the current tree
-                        predictions = other_tree.predict(X[samples_group[j]])
+                        predictions = other_tree.predict(X[used_sample_mask])
                         other_tree_predictions.append(predictions)
             
                 # Append the predictions for this tree
@@ -252,18 +266,25 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
 
         for i, trees_group in enumerate(initial_grouped_trees):
             extended_trees_group = []
+            samples_group = grouped_samples[i]
 
             for j, tree in enumerate(trees_group):
+                # Create a mask with False for all samples
+                used_sample_mask = np.zeros(n_samples, dtype=bool) 
+
+                # Assign True to the samples that the tree used for training
+                used_sample_mask[samples_group[j]] = True
                                
                 # Concatenate the other tree's predictions with the original features
-                new_X = np.hstack(X[samples_group[i][j]], grouped_new_columns[i][j])
+                new_X = np.hstack((X[used_sample_mask], grouped_new_columns[i][j]))
+                new_y = y[used_sample_mask]
 
                 # Validate training data
-                new_X, y, sample_weight, missing_values_in_feature_mask = self._original_fit_validations(new_X, y, sample_weight)
+                new_X, new_y, sample_weight, missing_values_in_feature_mask, random_state = self._original_fit_validations(new_X, new_y, sample_weight)
 
                 # Fit the extended tree with the new features based on the original tree
-                extended_tree = ContinuedDecisionTreeRegressor(intial_tree=tree)
-                extended_tree.fit(new_X, y[samples_group[i][j]])
+                extended_tree = ContinuedDecisionTreeRegressor(initial_tree=tree, random_state=random_state)
+                extended_tree.fit(new_X, new_y)
 
                 # Add fitted extended tree to the group
                 extended_trees_group.append(extended_tree)
@@ -300,13 +321,18 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         new_grouped_predictions = np.zeros_like(grouped_predictions)
         group_averages = np.empty((self._n_groups, X.shape[0]))
 
-        for i, group in enumerate(grouped_predictions):
-            for j, tree in enumerate(group):
+        for i, group_preds in enumerate(grouped_predictions):
+            for j, tree_preds in enumerate(group_preds):
                 # Remove the j-th tree's predictions
-                # TODO: no habría que hacer un deep copy o algo así? 
-                # Pq si esto es mutable para el proximo arbol me van a faltar las predicciones
-                shared_predictions = np.delete(grouped_predictions[i], j, axis=0)
+                shared_predictions = []
 
+                # For each tree in the group (except the j-th tree)
+                for k, other_tree_preds in enumerate(group_preds):
+                    if k != j:
+                        shared_predictions.append(other_tree_preds)
+                # Convert to np.array
+                shared_predictions = np.array(shared_predictions)
+                
                 # Concatenate the shared predictions with the original features
                 new_X = np.hstack((X, shared_predictions.T))
 

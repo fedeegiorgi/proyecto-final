@@ -18,13 +18,31 @@ from ..base import (
 )
 
 from ..utils.validation import _check_sample_weight
+from . import _criterion, _splitter, _tree
 from ._criterion import Criterion
 from ._splitter import Splitter
 from ._tree import Tree
 
+DTYPE = _tree.DTYPE
+DOUBLE = _tree.DOUBLE
+
+CRITERIA_CLF = {
+    "gini": _criterion.Gini,
+    "log_loss": _criterion.Entropy,
+    "entropy": _criterion.Entropy,
+}
+CRITERIA_REG = {
+    "squared_error": _criterion.MSE,
+    "friedman_mse": _criterion.FriedmanMSE,
+    "absolute_error": _criterion.MAE,
+    "poisson": _criterion.Poisson,
+}
+
 # import nuevos
 
 from ._classes import DecisionTreeRegressor
+from ._splitter_addon import AddOnBestSplitter
+from ._extended_tree import DepthFirstTreeExtensionBuilder
 
 class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
 
@@ -43,7 +61,7 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
         min_impurity_decrease=0.0,
         ccp_alpha=0.0,
         monotonic_cst=None,
-        intial_tree=None, # new parameter of type DecisionTreeRegressor
+        initial_tree=None, # new parameter of type DecisionTreeRegressor
     ):
         super().__init__(
             criterion=criterion,
@@ -60,7 +78,7 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
             monotonic_cst=monotonic_cst,
         )
 
-        self.initial_tree = intial_tree
+        self.initial_tree = initial_tree
     
     def _get_initial_tree_data(self, tree):
         """
@@ -104,7 +122,7 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
         }
 
     @_fit_context(prefer_skip_nested_validation=True)
-    def fit(self, X, y, sample_weight=None, check_input=False): # No agregamos check_input porque desde RandomForestRegressor siempre se llama en False
+    def fit(self, X, y, sample_weight=None, missing_values_in_feature_mask=None, check_input=False): # No agregamos check_input porque desde RandomForestRegressor siempre se llama en False
         """
         Continues the training of the DecisionTreeRegressor with the new provided data.
         """
@@ -192,72 +210,28 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
         # Build tree
         criterion = self.criterion
         if not isinstance(criterion, Criterion):
-            if is_classification:
-                criterion = CRITERIA_CLF[self.criterion](
-                    self.n_outputs_, self.n_classes_
-                )
-            else:
-                criterion = CRITERIA_REG[self.criterion](self.n_outputs_, n_samples)
+            criterion = CRITERIA_REG[self.criterion](self.n_outputs_, n_samples)
         else:
             # Make a deepcopy in case the criterion has mutable attributes that
             # might be shared and modified concurrently during parallel fitting
             criterion = copy.deepcopy(criterion)
 
-        # TODO: revisar tema de splitter --> siempre vamos a usar el denso BestSplitter(Splitter) que llama a node_split_best
-
-        SPLITTERS = SPARSE_SPLITTERS if issparse(X) else DENSE_SPLITTERS
-
-        splitter = self.splitter
         if self.monotonic_cst is None:  # siempre va a ser None para nosotros
             monotonic_cst = None
         else:
-            if self.n_outputs_ > 1:
-                raise ValueError(
-                    "Monotonicity constraints are not supported with multiple outputs."
-                )
-            # Check to correct monotonicity constraint' specification,
-            # by applying element-wise logical conjunction
-            # Note: we do not cast `np.asarray(self.monotonic_cst, dtype=np.int8)`
-            # straight away here so as to generate error messages for invalid
-            # values using the original values prior to any dtype related conversion.
-            monotonic_cst = np.asarray(self.monotonic_cst)
-            if monotonic_cst.shape[0] != X.shape[1]:
-                raise ValueError(
-                    "monotonic_cst has shape {} but the input data "
-                    "X has {} features.".format(monotonic_cst.shape[0], X.shape[1])
-                )
-            valid_constraints = np.isin(monotonic_cst, (-1, 0, 1))
-            if not np.all(valid_constraints):
-                unique_constaints_value = np.unique(monotonic_cst)
-                raise ValueError(
-                    "monotonic_cst must be None or an array-like of -1, 0 or 1, but"
-                    f" got {unique_constaints_value}"
-                )
-            monotonic_cst = np.asarray(monotonic_cst, dtype=np.int8)
-            if is_classifier(self):
-                if self.n_classes_[0] > 2:
-                    raise ValueError(
-                        "Monotonicity constraints are not supported with multiclass "
-                        "classification"
-                    )
-                # Binary classification trees are built by constraining probabilities
-                # of the *negative class* in order to make the implementation similar
-                # to regression trees.
-                # Since self.monotonic_cst encodes constraints on probabilities of the
-                # *positive class*, all signs must be flipped.
-                monotonic_cst *= -1
-
-        if not isinstance(self.splitter, Splitter): # vamos a usar el único splitter que modificamos
-            splitter = SPLITTERS[self.splitter](
-                criterion,
-                self.max_features_,
-                min_samples_leaf,
-                min_weight_leaf,
-                random_state,
-                monotonic_cst,
-            )
+            raise ValueError("This implementation does not support monotonic constraints")
 
         ##############################################################################
+
+        # Our splitter instantiation
+        splitter = AddOnBestSplitter(
+            criterion,
+            self.max_features_,
+            min_samples_leaf,
+            min_weight_leaf,
+            self.random_state,
+            monotonic_cst,
+        )
         
         # Normal tree instantiation
         self.tree_ = Tree(
@@ -281,7 +255,7 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
         initial_tree_data = self._get_initial_tree_data(self.initial_tree)
 
         # Continue training
-        builder.build(
+        builder.build_extended(
             self.tree_, 
             X, 
             y, 
@@ -296,5 +270,5 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
             initial_tree_data["weighted_n_node_samples"],
             initial_tree_data["missing_go_to_lefts"],
             sample_weight, 
-            missing_values_in_feature_mask
+            missing_values_in_feature_mask,
         )
