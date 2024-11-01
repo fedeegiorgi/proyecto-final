@@ -114,6 +114,11 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         cdef cnp.ndarray split_pos = np.empty(n_nodes, dtype=np.intp)
         cdef cnp.ndarray end_pos = np.empty(n_nodes, dtype=np.intp)
 
+        # Fix ponele
+        cdef float64_t weighted_n_node_samples
+
+        print("Instanciated the things before loading the nodes")
+
         for i in range(n_nodes):
             if not self.is_leafs[i]:
                 
@@ -122,23 +127,47 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                 feature = self.features[i]
 
                 if first:
+                    # Define the start and end positions for this split
                     start = 0
                     end = self.n_node_samples_vec[0]
+
+                    # Define what my childs will see
+                    start_pos[0] = start
+                    end_pos[0] = end
+
+                    # Not first anymore
                     first = 0
                 else:
-                    start = start_pos[self.parents[i]]
-                    end = end_pos[self.parents[i]]
+                    if self.is_lefts[i]:
+                        # Define the start and end positions for this split
+                        start = start_pos[self.parents[i]]
+                        end = split_pos[self.parents[i]]
 
-                # self.splitter.node_reset(start, end, &self.weighted_n_node_samples_vec[i])
+                        # Define what my childs will see
+                        start_pos[i] = start
+                        end_pos[i] = pos
+                    else:
+                        # Define the start and end positions for this split
+                        start = split_pos[self.parents[i]]
+                        end = end_pos[self.parents[i]]
+                        
+                        # Define what my childs will see
+                        start_pos[i] = pos
+                        end_pos[i] = end
+
+                print("Start: ", start)
+                print("End: ", end)
+
+                self.splitter.node_reset(start, end, &weighted_n_node_samples)
 
                 # Compute the split position
                 pos = self.splitter.recompute_node_split(&parent_record, &split, feature, threshold)
 
-                start_pos[i] = start
+                print("I found the split position p = ", pos)
+                
                 split_pos[i] = pos
-                end_pos[i] = end
 
-                tree._add_node(
+                node_id = tree._add_node(
                     self.parents[i], self.is_lefts[i], self.is_leafs[i],
                     self.features[i], self.thresholds[i], self.impurities[i],
                     self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
@@ -171,6 +200,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                         "lower_bound": -INFINITY,
                         "upper_bound": INFINITY,
                     })
+                    print("Pushed the children of node ", i)
                 
     cpdef build_extended(
         self,
@@ -217,6 +247,8 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         # check input
         X, y, sample_weight = self._check_input(X, y, sample_weight)
         
+        print("Passed the check_input")
+
         # Initial capacity
         cdef intp_t init_capacity
 
@@ -227,6 +259,8 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
 
         tree._resize(init_capacity)
 
+        print("Passed the resize process")
+
         # Parameters
         cdef intp_t max_depth = self.max_depth
         cdef intp_t min_samples_leaf = self.min_samples_leaf
@@ -236,6 +270,8 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
 
         # Recursive partition (without actual recursion)
         self.splitter.init(X, y, sample_weight, missing_values_in_feature_mask)
+
+        print("Passed the splitter init")
 
         cdef intp_t start
         cdef intp_t end

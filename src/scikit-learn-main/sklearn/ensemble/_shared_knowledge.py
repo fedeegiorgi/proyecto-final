@@ -288,7 +288,7 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
                 print(f"About to fit extended tree {j} in group {i}")
                 
                 # Fit the extended tree with the new features based on the original tree
-                extended_tree = ContinuedDecisionTreeRegressor(initial_tree=tree, random_state=random_state)
+                extended_tree = ContinuedDecisionTreeRegressor(initial_tree=tree, random_state=random_state, max_depth=self.max_depth)
                 extended_tree.fit(new_X, new_y)
 
                 # Add fitted extended tree to the group

@@ -17,7 +17,7 @@ X_train = pd.get_dummies(X_train)
 X_valid = pd.get_dummies(X_valid)
 X_train, X_valid = X_train.align(X_valid, join='left', axis=1, fill_value=0)
 
-rf_test = SharedKnowledgeRandomForestRegressor(random_state=SEED, n_estimators=30, group_size=3)
+rf_test = SharedKnowledgeRandomForestRegressor(random_state=SEED, n_estimators=30, group_size=3, initial_max_depth=2)
 rf_test.fit(X_train.values, y_train.values)
 
 predictions = rf_test.predict(X_valid.values)

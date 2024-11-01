@@ -925,18 +925,18 @@ cdef inline int recompute_node_split_func(
     intp_t feature, # feature index of initial_tree
     float64_t threshold # threshold of initial_tree
 ) except -1 nogil:
-    # Variables (de node_split_best function en _splitter.pyx)
+        # Variables (de node_split_best function en _splitter.pyx)
         cdef intp_t start = splitter.start
         cdef intp_t end = splitter.end
         cdef intp_t n_missing = 0
-        # cdef bint has_missing = 0
-        # cdef intp_t n_searches
-        # cdef intp_t n_left, n_right
+        cdef bint has_missing = 0
+        cdef intp_t n_searches
+        cdef intp_t n_left, n_right
         cdef bint missing_go_to_left
 
         cdef intp_t[::1] samples = splitter.samples
         cdef intp_t[::1] features = splitter.features
-        # cdef intp_t[::1] constant_features = splitter.constant_features
+        cdef intp_t[::1] constant_features = splitter.constant_features
         cdef intp_t n_features = splitter.n_features
 
         cdef float32_t[::1] feature_values = splitter.feature_values
@@ -956,7 +956,7 @@ cdef inline int recompute_node_split_func(
         # cdef intp_t f_i = n_features
         # cdef intp_t f_j
         cdef intp_t p
-        # cdef intp_t p_prev
+        cdef intp_t p_prev
         
         _init_split(&best_split, end)
 
@@ -967,7 +967,11 @@ cdef inline int recompute_node_split_func(
         partitioner.sort_samples_and_feature_values(best_split.feature)
         n_missing = partitioner.n_missing
         end_non_missing = end - n_missing
-
+        with gil:
+            print("Feature: ", best_split.feature)
+            print("Threshold: ", threshold)
+            print("Missing values: ", n_missing)
+            print("End non missing: ", end_non_missing)
         # Find the position of the threshold in the sorted feature values
         p = start
         while p < end_non_missing:
