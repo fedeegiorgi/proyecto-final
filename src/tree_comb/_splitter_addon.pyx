@@ -383,7 +383,6 @@ cdef inline int recompute_node_split_func(
 
 cdef class AddOnBestSplitter(Splitter):
     """Splitter for finding the best split on dense data with additions to continue training."""
-    cdef DensePartitioner partitioner
     cdef int init(
         self,
         object X,

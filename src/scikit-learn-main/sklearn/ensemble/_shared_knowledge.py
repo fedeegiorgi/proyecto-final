@@ -213,6 +213,8 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         # Call to original fit method
         super().fit(X, y)
 
+        print("Finished fitting original trees")
+        
         # max_depth back to None as no limit for extended trees
         self.max_depth = original_max_depth
 
@@ -254,6 +256,7 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         
             grouped_new_columns.append(group_new_columns)
         
+        print("Finished loading new columns")
         # # Print test
         # print(f"new columns for tree 0 in group 0: {grouped_new_columns[0][0]}")
         # print(f"Shape new columns for tree 0 in group 0: {grouped_new_columns[0][0].shape}")
@@ -282,6 +285,8 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
                 # Validate training data
                 new_X, new_y, sample_weight, missing_values_in_feature_mask, random_state = self._original_fit_validations(new_X, new_y, sample_weight)
 
+                print(f"About to fit extended tree {j} in group {i}")
+                
                 # Fit the extended tree with the new features based on the original tree
                 extended_tree = ContinuedDecisionTreeRegressor(initial_tree=tree, random_state=random_state)
                 extended_tree.fit(new_X, new_y)
@@ -291,6 +296,8 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
             
             # Add group of trees to the list of extended grouped estimators
             self.extended_grouped_estimators_.append(extended_trees_group)
+        
+        print("Finished fitting extended trees")
 
     def predict(self, X):
         

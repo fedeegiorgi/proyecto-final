@@ -104,3 +104,13 @@ cdef class Splitter:
     cdef void clip_node_value(self, float64_t* dest, float64_t lower_bound, float64_t upper_bound) noexcept nogil
 
     cdef float64_t node_impurity(self) noexcept nogil
+
+    ### Agregado para Alternativa D: AddOnBestSplitter
+
+    cdef int recompute_node_split(
+        self,
+        ParentInfo* parent_record,
+        SplitRecord* split,
+        intp_t feature, # feature index of initial_tree
+        float64_t threshold, # threshold of initial_tree
+    ) except -1 nogil

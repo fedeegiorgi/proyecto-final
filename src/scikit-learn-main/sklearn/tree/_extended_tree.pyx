@@ -132,7 +132,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                 # self.splitter.node_reset(start, end, &self.weighted_n_node_samples_vec[i])
 
                 # Compute the split position
-                pos = self.splitter.recompute_node_split(parent_record, split, feature, threshold)
+                pos = self.splitter.recompute_node_split(&parent_record, &split, feature, threshold)
 
                 start_pos[i] = start
                 split_pos[i] = pos
@@ -202,6 +202,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         
         # Assign the cnp.ndarray objects to the class attributes
         self.parents = parents
+        self.depths = depths
         self.is_lefts = is_lefts
         self.is_leafs = is_leafs
         self.features = features

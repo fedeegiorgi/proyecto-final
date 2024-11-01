@@ -265,6 +265,18 @@ cdef class Splitter:
 
         return self.criterion.node_impurity()
 
+    ################################################################################################
+
+    cdef int recompute_node_split(
+        self,
+        ParentInfo* parent_record,
+        SplitRecord* split,
+        intp_t feature, # feature index of initial_tree
+        float64_t threshold, # threshold of initial_tree
+    ) except -1 nogil:
+        pass
+
+    ################################################################################################
 
 cdef inline int node_split_best(
     Splitter splitter,
@@ -898,4 +910,130 @@ cdef class RandomSparseSplitter(Splitter):
             self.criterion,
             split,
             parent_record,
+        )
+
+##############################################################################################
+####                     AGREGADO PARA ALT D: Extensión de árboles                        ####
+##############################################################################################
+
+cdef inline int recompute_node_split_func(
+    Splitter splitter,
+    Partitioner partitioner,
+    Criterion criterion,
+    SplitRecord* split,
+    ParentInfo* parent_record,
+    intp_t feature, # feature index of initial_tree
+    float64_t threshold # threshold of initial_tree
+) except -1 nogil:
+    # Variables (de node_split_best function en _splitter.pyx)
+        cdef intp_t start = splitter.start
+        cdef intp_t end = splitter.end
+        cdef intp_t n_missing = 0
+        # cdef bint has_missing = 0
+        # cdef intp_t n_searches
+        # cdef intp_t n_left, n_right
+        cdef bint missing_go_to_left
+
+        cdef intp_t[::1] samples = splitter.samples
+        cdef intp_t[::1] features = splitter.features
+        # cdef intp_t[::1] constant_features = splitter.constant_features
+        cdef intp_t n_features = splitter.n_features
+
+        cdef float32_t[::1] feature_values = splitter.feature_values
+        cdef intp_t max_features = splitter.max_features
+        cdef intp_t min_samples_leaf = splitter.min_samples_leaf
+        cdef float64_t min_weight_leaf = splitter.min_weight_leaf
+        cdef uint32_t* random_state = &splitter.rand_r_state
+
+        cdef SplitRecord best_split #, current_split
+        # cdef float64_t current_proxy_improvement = -INFINITY
+        # cdef float64_t best_proxy_improvement = -INFINITY
+
+        # cdef float64_t impurity = parent_record.impurity
+        # cdef float64_t lower_bound = parent_record.lower_bound
+        # cdef float64_t upper_bound = parent_record.upper_bound
+
+        # cdef intp_t f_i = n_features
+        # cdef intp_t f_j
+        cdef intp_t p
+        # cdef intp_t p_prev
+        
+        _init_split(&best_split, end)
+
+        partitioner.init_node_split(start, end)
+
+        # Lines 374-376 from _splitter.pyx
+        best_split.feature = features[feature]
+        partitioner.sort_samples_and_feature_values(best_split.feature)
+        n_missing = partitioner.n_missing
+        end_non_missing = end - n_missing
+
+        # Find the position of the threshold in the sorted feature values
+        p = start
+        while p < end_non_missing:
+            if feature_values[p] >= threshold:
+                break
+            p += 1
+        
+        best_split.pos = p
+
+        # Lines 504-524 from _splitter.pyx
+        partitioner.partition_samples_final(
+            best_split.pos,
+            best_split.threshold,
+            best_split.feature,
+            best_split.n_missing
+        )
+
+        criterion.reset()
+        criterion.update(best_split.pos)
+
+        # Return values
+        parent_record.n_constant_features = 0
+        split[0] = best_split
+        return best_split.pos
+
+cdef class AddOnBestSplitter(Splitter):
+    """Splitter for finding the best split on dense data with additions to continue training."""
+    cdef DensePartitioner partitioner
+    cdef int init(
+        self,
+        object X,
+        const float64_t[:, ::1] y,
+        const float64_t[:] sample_weight,
+        const uint8_t[::1] missing_values_in_feature_mask,
+    ) except -1:
+        Splitter.init(self, X, y, sample_weight, missing_values_in_feature_mask)
+        self.partitioner = DensePartitioner(
+            X, self.samples, self.feature_values, missing_values_in_feature_mask
+        )
+
+    cdef int node_split(
+            self,
+            ParentInfo* parent_record,
+            SplitRecord* split,
+    ) except -1 nogil:
+        return node_split_best(
+            self,
+            self.partitioner,
+            self.criterion,
+            split,
+            parent_record,
+        )
+    
+    cdef int recompute_node_split(
+            self,
+            ParentInfo* parent_record,
+            SplitRecord* split,
+            intp_t feature, # feature index of initial_tree
+            float64_t threshold, # threshold of initial_tree
+    ) except -1 nogil:
+        return recompute_node_split_func(
+            self,
+            self.partitioner,
+            self.criterion,
+            split,
+            parent_record,
+            feature,
+            threshold,
         )

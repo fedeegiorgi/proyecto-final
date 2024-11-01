@@ -22,6 +22,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
     Extended depth-first tree builder based on initial tree with additional features .
     """
     cdef cnp.ndarray parents
+    cdef cnp.ndarray depths
     cdef cnp.ndarray is_lefts
     cdef cnp.ndarray is_leafs
     cdef cnp.ndarray features
@@ -53,4 +54,4 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         const uint8_t[::1] missing_values_in_feature_mask=*,
     )
 
-    cpdef _load_initial_tree(self, Tree tree)  # Acá el tree tiene que ser por referencia??
+    cpdef _load_initial_tree(self, Tree tree)

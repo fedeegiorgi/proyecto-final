@@ -41,7 +41,7 @@ CRITERIA_REG = {
 # import nuevos
 
 from ._classes import DecisionTreeRegressor
-from ._splitter_addon import AddOnBestSplitter
+from ._splitter import AddOnBestSplitter
 from ._extended_tree import DepthFirstTreeExtensionBuilder
 
 class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
@@ -254,6 +254,8 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
         # Get initial tree data
         initial_tree_data = self._get_initial_tree_data(self.initial_tree)
 
+        print("Instanciated the splitter, tree and builder inside the fit method of ContinuedDecisionTreeRegressor")
+        
         # Continue training
         builder.build_extended(
             self.tree_, 
