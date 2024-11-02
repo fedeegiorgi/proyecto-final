@@ -1,0 +1,797 @@
+Unnamed: 0,Brand,Price,Processor_Name,Processor_Brand,RAM_Expandable,RAM,RAM_TYPE,Ghz,Display_type,Display,GPU,GPU_Brand,SSD,HDD,Adapter,Battery_Life
+3560,Lenovo,56690,Intel Core i5 (7th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.5 Ghz Processor,LED,15.6,"GeForce 940MX GPU, 4 GB",NVIDIA,NO SSD,2048 GB HDD Storage,65,65W Adapter
+3561,HP,29497,Intel Core i3 (7th Gen),Intel, 8 GB Expandable,4 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,HD 620,Intel,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3562,HP,31290,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,14,HD 620,Intel,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3563,Acer,59990,Intel Core i5 (12th Gen),Intel, 8 GB Expandable,8 GB LP, LPDDR4X RAM , 1.7 Ghz Processor,LCD,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3564,Acer,24610,Intel Pentium Dual-Core,Intel, 12 GB Expandable,4 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,HD 610,Intel,NO SSD,1024 GB HDD Storage,45, Upto 7 Hrs Battery Life
+3565,Acer,45999,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"GeForce MX150 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65, Upto 7 Hrs Battery Life
+3566,Apple,104990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 1.6 Ghz Processor,LED,13.3,UHD 617,Intel,256 GB SSD Storage,No HDD,49, Upto 12 Hrs Battery Life
+3567,Dell,43990,Intel Core i3 (11th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 4.0 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage,No HDD,no,Upto 6 Hrs Battery Life
+3568,Lenovo,18890,AMD Dual-Core APU,AMD,Not Expandable,4 GB , DDR4 RAM, 1.8 Ghz Processor,LED,15.6,Radeon R2,AMD,NO SSD,1024 GB HDD Storage,45, Upto 5 Hrs Battery Life
+3569,ASUS,38990,Intel Core i3 (12th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.1 Ghz Processor,LCD,15.6,UHD,Intel,512 GB SSD Storage,No HDD,65, Upto 8 Hrs Battery Life
+3570,ASUS,44990,Intel Core i3 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.2 Ghz Processor,LED,14,UHD 620,Intel,256 GB SSD Storage , 1024 GB HDD Storage,42,42W Adapter
+3571,MSI,52990,Intel Core i7 (9th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,"Geforce GTX 1650 Ti with Max-Q GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,120,120W Adapter
+3572,HP,49999,Intel Core i5 (11th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 4.2 Ghz Processor,LED,15.6,"GeForce MX350 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,no,Upto 12 Hrs Battery Life
+3573,HP,82490,Intel Core i7 (8th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 1.8 Ghz Processor,LED,14,"Geforce MX250 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,41,41W Adapter
+3574,Dell,63990,Intel Core i5 (7th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.5 Ghz Processor,LED,14,"GeForce GTX 940MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3575,MSI,74990,Intel Core i7 (9th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LED,17.3,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,150,150W Adapter
+3584,Lenovo,45540,Intel Core i5 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.5 Ghz Processor,LED,15.6,"GeForce 920MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,45, Upto 4 Hrs Battery Life
+3585,Dell,29643,Intel Pentium Gold,Intel, 16 GB Expandable,4 GB , DDR4 RAM , 2.3 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage,No HDD,no,Upto 6 Hrs Battery Life
+3586,Dell,46359,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,"GeForce GTX 1050 GPU, 4 GB",NVIDIA,16 GB SSD Storage , 1024 GB HDD Storage,130,130W Adapter
+3587,Dell,44890,Intel Core i3 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.2 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,no,
+3588,HP,32743,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB LP, LPDDR4 RAM, 1.1 Ghz Processor,LED,14,UHD 600,Intel,32 GB SSD Storage,No HDD,45,45W Adapter
+3589,HP,22490,Intel Pentium Gold,Intel,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,HD 610,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3590,ASUS,19990,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB LP, LPDDR3 RAM, 1.1 Ghz Processor,LED,15.6,HD 500,Intel,NO SSD,1024 GB HDD Storage,33,33W Adapter
+3591,Dell,27254,AMD Dual-Core A9 APU,AMD, 16 GB Expandable,4 GB , DDR4 RAM , 3.1 Ghz Processor,LED,15.6,Radeon R5,AMD,NO SSD,1024 GB HDD Storage,no,Upto 4 Hrs Battery Life
+3592,HP,57990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,14,UHD,Intel,128 GB SSD Storage , 1024 GB HDD Storage,41,41W Adapter
+3593,AVITA,42990,Intel Core i5 (7th Gen),Intel,Not Expandable,8 GB , DDR3 RAM, 1.2 Ghz Processor,LED,13.3,HD 615,Intel,256 GB SSD Storage,No HDD,no,Upto 10 Hrs Battery Life
+3594,Dell,46303,Intel Core i5 (8th Gen),Intel, 10 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,14,UHD 620,Intel,NO SSD,1024 GB HDD Storage,65, Upto 6 Hrs Battery Life
+3595,ASUS,45990,Intel Core i3 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 3.0 Ghz Processor,LED,15.6,UHD,Intel,256 GB SSD Storage,No HDD,65,65W Adapter
+3596,ASUS,64990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,256 GB SSD Storage , 1024 GB HDD Storage,42,42W Adapter
+3597,ASUS,49999,Intel Core i7 (7th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.8 Ghz Processor,LED,15.6,"GeForce GTX 1050 GPU, 4 GB",NVIDIA,NO SSD,1024 GB HDD Storage,48,48W Adapter
+3598,Lenovo,39499,Intel Core i3 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.2 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage,No HDD,no,Upto 7.5 Hrs Battery Life
+3599,Apple,111190,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 1.6 Ghz Processor,LED,13.3,UHD 617,Intel,256 GB SSD Storage,No HDD,49, Upto 12 Hrs Battery Life
+3600,Lenovo,47493,Intel Core i5 (7th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.5 Ghz Processor,LED,14,HD 620,Intel,NO SSD,1024 GB HDD Storage,no,Upto 5 Hrs Battery Life
+3601,HP,31731,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 1.2 Ghz Processor,LED,14,UHD,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3602,Lenovo,31990,Intel Core i3 (6th Gen),Intel, 8 GB Expandable,4 GB , DDR4 RAM , 2.0 Ghz Processor,LED,15.6,"GeForce 920MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,no,Upto 5 Hrs Battery Life
+3603,HP,41391,Intel Core i3 (11th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 4.0 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,no,
+3604,Infinix,39990,Intel Core i5 (13th Gen),Intel,Not Expandable,16 GB LP, LPDDR5X RAM, 4.7 Ghz Processor,LCD,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,96, Upto 10 Hrs Battery Life
+3605,Dell,60999,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.8 Ghz Processor,LED,13.3,UHD 620,Intel,256 GB SSD Storage,No HDD,38,38W Adapter
+3606,Dell,72990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.7 Ghz Processor,LCD,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,56,56W Adapter
+3607,ASUS,93990,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,"Geforce GTX 1650Ti GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,75,75W Adapter
+3608,Acer,87990,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,"GeForce GTX 1060 GPU, 6 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,180, Upto 7 Hrs Battery Life
+3609,Apple,127990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 1.6 Ghz Processor,LED,13.3,UHD 617,Intel,256 GB SSD Storage,No HDD,no, Upto 13 Hrs Battery Life
+3610,Lenovo,35990,Intel Core i3 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.2 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage,No HDD,35,35W Adapter
+3611,ASUS,43507,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.2 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3612,ASUS,89990,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.2 Ghz Processor,LED,15.6,"Geforce GTX 1050Ti GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,64,64W Adapter
+3613,Lenovo,98990,Intel Core i5 (9th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.4 Ghz Processor,LED,15.6,"Geforce GTX 1650 GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,135, Upto 9 Hrs Battery Life
+3614,ASUS,72990,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR4 RAM, 3.1 Ghz Processor,LCD,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,200,200W Adapter
+3615,Microsoft,49990,Intel Core M3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 1.0 Ghz Processor,LED,12.3,HD 615,Intel,128 GB SSD Storage,No HDD,no,Upto 13 Hrs Battery Life
+3616,ASUS,40990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LCD,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,65, Upto 6 Hrs Battery Life
+3617,HP,32990,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,HD 620,Intel,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3618,ASUS,36500,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 1.2 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage,No HDD,no,
+3619,Dell,85750,Intel Core i7 (9th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,"Geforce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage , 1024 GB HDD Storage,51,51W Adapter
+3620,ASUS,201734,Intel Core i7 (6th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"GeForce GTX 960M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,120, Upto 5 Hrs Battery Life
+3621,HP,46990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,"GeForce MX110 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3622,ASUS,78990,AMD Quad-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,"Geforce GTX 1650 GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,48,48W Adapter
+3623,Acer,44168,Intel Core i5 (10th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 1.0 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+3624,HP,58830,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,256 GB SSD Storage , 1024 GB HDD Storage,41,41W Adapter
+3628,HP,38999,Intel Core i3 (11th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 4.0 Ghz Processor,LCD,15.6,UHD,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+3633,MSI,71990,Intel Core i5 (9th Gen) Processor,Intel,Not Expandable,8 GB , DDR4 RAM,0,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,41,41W Adapter
+3634,Lenovo,49021,Intel Core i5 (10th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.0 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3635,Acer,57999,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"Geforce 940MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65, Upto 7 Hrs Battery Life
+3636,Dell,35233,Intel Core i3 (10th Gen),Intel, 32 GB Expandable,4 GB , DDR4 RAM , 2.2 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,no,
+3637,MSI,49980,AMD Hexa-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 3.0 Ghz Processor,LED,15.6,"Radeon RX 5500M GPU, 4 GB",AMD,512 GB SSD Storage,No HDD,180,180W Adapter
+3638,HP,36054,Intel Core i3 (8th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.2 Ghz Processor,LED,15.6,"Geforce MX110 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3639,Acer,19490,AMD Dual-Core APU,AMD, 8 GB Expandable,4 GB , DDR4 RAM , 1.8 Ghz Processor,LED,15.6,Radeon R2,AMD,NO SSD,1024 GB HDD Storage,37, Upto 5.5 Hrs Battery Life
+3640,Apple,159490,Intel Core i5 (10th Gen),Intel, 32 GB Expandable,16 GB LP, LPDDR4X RAM , 2.0 Ghz Processor,LED,13,Iris Plus,Intel,512 GB SSD Storage,No HDD,61,61W Adapter
+3641,ASUS,44990,Intel Core i3 (7th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.4 Ghz Processor,LED,14,HD 620,Intel,128 GB SSD Storage , 1024 GB HDD Storage,45,45W Adapter
+3642,Dell,79000,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.8 Ghz Processor,LED,13,"Radeon 530 GPU, 2 GB",AMD,256 GB SSD Storage,No HDD,38,38W Adapter
+3643,Infinix,30990,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB LP, LPDDR4X RAM, 3.0 Ghz Processor,LCD,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65, Upto 11 Hrs Battery Life
+3644,MSI,74990,Intel Core i7 (12th Gen),Intel, 64 GB Expandable,16 GB , DDR5 RAM , 4.7 Ghz Processor,LCD,15.6,"GeForce RTX 4050 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,no,
+3645,HP,40890,1.7 Ghz Processor,1.7,Not Expandable,4 GB , DDR3 RAM,0,LED,15.6,"Geforce GT 820M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3646,HP,81900,Intel Core i7 (9th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,52,52W Adapter
+3647,HP,30950,AMD Quad-Core Ryzen 3,AMD,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,Radeon Vega 6,AMD,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3648,Acer,75800,AMD Hexa-Core Ryzen 5,AMD, 32 GB Expandable,16 GB , DDR4 RAM , 3.1 Ghz Processor,LED,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+3649,Acer,42900,Intel Core i5 (7th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.5 Ghz Processor,LED,15.6,"GeForce 940MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,45, Upto 8 Hrs Battery Life
+3650,Acer,72024,AMD Hexa-Core Ryzen 5,AMD,Not Expandable,16 GB , DDR4 RAM, 3.1 Ghz Processor,LCD,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage , 1024 GB HDD Storage,no,
+3651,HP,85743,Intel Pentium Dual-Core,Intel,Not Expandable,4 GB , DDR4 RAM, 1.1 Ghz Processor,LED,11.6,UHD 605,Intel,128 GB SSD Storage,No HDD,45,45W Adapter
+3652,Acer,57990,AMD Quad-Core Ryzen 5,AMD, 32 GB Expandable,8 GB , DDR4 RAM , 2.1 Ghz Processor,LED,15.6,"Geforce GTX 1650 GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,135, Upto 10 Hrs Battery Life
+3653,Acer,72024,AMD Hexa-Core Ryzen 5,AMD,Not Expandable,16 GB , DDR4 RAM, 3.3 Ghz Processor,LCD,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage , 1024 GB HDD Storage,65,65W Adapter
+3655,Acer,56890,AMD Hexa-Core Ryzen 5,AMD, 32 GB Expandable,8 GB , DDR4 RAM , 3.3 Ghz Processor,LCD,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,180,180W Adapter
+3656,Acer,78500,AMD Hexa-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR3 RAM, 3.1 Ghz Processor,LCD,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage , 1024 GB HDD Storage,65,65W Adapter
+3657,ASUS,89990,Intel Core i5 (11th Gen) Processor,Intel, 32 GB Expandable,16 GB , DDR4 RAM ,0,LED,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,200,200W Adapter
+3658,HP,65890,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 4.2 Ghz Processor,LED,13.3,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3659,HP,63854,Intel Core i5 (7th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.5 Ghz Processor,LED,15.6,"GeForce 940MX GPU, 4 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3660,HP,29990,Intel Core i3 (8th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.2 Ghz Processor,LED,15.6,UHD 620,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3661,Acer,22999,Intel Celeron Dual-Core,Intel,Not Expandable,2 GB , DDR3 RAM, 1.1 Ghz Processor,LED,15.6,HD 500,Intel,NO SSD,500 GB HDD Storage,45,45W Adapter
+3662,HP,62990,Intel Core i5 (9th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.4 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,52,52W Adapter
+3663,ASUS,59999,Intel Core i7 (11th Gen) Processor,Intel,Not Expandable,8 GB , DDR4 RAM,0,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3664,Lenovo,69990,AMD Hexa-Core Ryzen 5,AMD, 16 GB Expandable,8 GB , DDR4 RAM , 3.0 Ghz Processor,LED,15.6,"Geforce GTX 1650 Ti GPU, 4 GB",NVIDIA,256  SSD Storage , 1024 GB HDD Storage,135,135W Adapter
+3665,ASUS,78990,Intel Core i5 (11th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.7 Ghz Processor,LED,17.3,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,180,180W Adapter
+3666,Lenovo,53826,Intel Core i5 (7th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.1 Ghz Processor,LED,15.6,"GeForce 920MX GPU, 2 GB",NVIDIA,NO SSD,2048 GB HDD Storage,30, Upto 6 Hrs Battery Life
+3667,MSI,92990,Intel Core i7 (10th Gen) Processor,Intel,Not Expandable,16 GB , DDR4 RAM,0,LED,15.6,"GeForce RTX 2060 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,180,180W Adapter
+3668,ASUS,89990,Intel Core i7 (11th Gen) Processor,Intel,Not Expandable,16 GB LP, LPDDR4X RAM,0,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3669,HP,31823,Intel Core i5 (8th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,UHD 620,Intel,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3670,Lenovo,22150,Intel Pentium Quad-Core,Intel,Not Expandable,4 GB , DDR3 RAM, 1.6 Ghz Processor,LED,15.6,HD,Intel,NO SSD,1024 GB HDD Storage,no,Upto 4 Hrs Battery Life
+3671,Lenovo,32500,2.0 Ghz Processor,2, 16 GB Expandable,8 GB , DDR3 RAM ,0,LED,15.6,"R5 M230 GPU, 2 GB",,NO SSD,1024 GB HDD Storage,65, Upto 4 Hrs Battery Life
+3672,ASUS,58990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB LP, LPDDR4X RAM, 4.2 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3673,ASUS,48990,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"Geforce MX130 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,33,33W Adapter
+3680,ASUS,30923,Intel Core i3 (7th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 2.3 Ghz Processor,LED,14,UHD 620,Intel,NO SSD,1024 GB HDD Storage,32,32W Adapter
+3682,Infinix,36990,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB LP, LPDDR4X RAM, 2.5 Ghz Processor,LCD,14,UHD,Intel,1024 GB SSD Storage,No HDD,no,Upto 11 Hrs Battery Life
+3683,HP,30990,Intel Core i3 (6th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.0 Ghz Processor,LED,15.6,HD 520,Intel,NO SSD,2048 GB HDD Storage,41,41W Adapter
+3684,ASUS,49999,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"GeForce MX150  GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3685,Microsoft,79999,Intel Core i5 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.6 Ghz Processor,LED,12.3,HD 620,Intel,128 GB SSD Storage,No HDD,65, Upto 13.5 Hrs Battery Life
+3686,Lenovo,52820,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,15.6,UHD,Intel,256 GB SSD Storage , 1024 GB HDD Storage,65, Upto 6 Hrs Battery Life
+3687,Lenovo,41990,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,UHD 620,Intel,NO SSD,1024 GB HDD Storage,45, Upto 6 Hrs Battery Life
+3688,HP,24913,AMD Dual-Core A6 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,Radeon R4,AMD,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3689,HP,32990,Intel Core i3 (6th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.0 Ghz Processor,LED,15.6,HD 520,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3690,Acer,41900,Intel Core i5 (7th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.5 Ghz Processor,LED,15.6,"GeForce 940MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65, Upto 8 Hrs Battery Life
+3691,Lenovo,46794,Intel Core i5 (9th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,"GeForce GTX 1050 GPU, 3 GB",NVIDIA,NO SSD,1024 GB HDD Storage,45, Upto 9 Hrs Battery Life
+3692,Lenovo,34990,Intel Core i3 (8th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.2 Ghz Processor,LED,15.6,UHD 620,Intel,256 GB SSD Storage,No HDD,45,45W Adapter
+3693,iball,16900,Intel Celeron Dual-Core,Intel,Not Expandable,3 GB , DDR3 RAM, 1.1 Ghz Processor,LED,14,HD 500,Intel,32 GB SSD Storage,No HDD,38,38W Adapter
+3694,ASUS,48990,Intel Core i5 (12th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.3 Ghz Processor,LCD,14,UHD,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+3695,Dell,71990,AMD Hexa-Core Ryzen 5,AMD, 32 GB Expandable,8 GB , DDR4 RAM , 3.3 Ghz Processor,LCD,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+3696,Lenovo,64200,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage,No HDD,45,45W Adapter
+3697,Lenovo,58990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,no,56.5W Adapter
+3698,Acer,39999,AMD Dual-Core Athlon,AMD,Not Expandable,4 GB , DDR4 RAM, 2.4 Ghz Processor,LED,14,Radeon Vega 3,AMD,NO SSD,1024 GB HDD Storage,45, Upto 10 Hrs Battery Life
+3699,Lenovo,19990,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB , DDR4 RAM, 1.8 Ghz Processor,LED,15.6,HD 610,Intel,NO SSD,1024 GB HDD Storage,35,35W Adapter
+3700,Lenovo,27990,AMD Dual-Core Ryzen 3,AMD,Not Expandable,4 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,Radeon Vega 3,AMD,NO SSD,1024 GB HDD Storage,no,Upto 4 Hrs Battery Life
+3701,ASUS,70500,Intel Core i7 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.8 Ghz Processor,LED,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,42,42W Adapter
+3702,Lenovo,39990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,UHD 620,Intel,NO SSD,1024 GB HDD Storage,45, Upto 6 Hrs Battery Life
+3703,Dell,30990,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 1.2 Ghz Processor,LED,14,UHD,Intel,NO SSD,1024 GB HDD Storage,no,
+3704,ASUS,44990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+3705,HP,81990,Intel Core i7 (9th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,52,52W Adapter
+3706,HP,64990,Intel Core i5 (11th Gen) Processor,Intel, 16 GB Expandable,8 GB , DDR4 RAM ,0,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3707,HP,63641,Intel Core i5 (9th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,"Geforce GTX 1050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,135,135W Adapter
+3708,ASUS,94249,Intel Core i7 (12th Gen),Intel, 64 GB Expandable,8 GB , DDR5 RAM , 2.3 Ghz Processor,LCD,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,65,65W Adapter
+3709,HP,44900,Intel Core i5 (6th Gen),Intel, 16 GB Expandable,4 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,"Radeon R5 M430 GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3710,HP,23990,AMD Quad-Core A6 APU,AMD,Not Expandable,4 GB , DDR3 RAM, 2.0 Ghz Processor,LED,15.6,Radeon R4,AMD,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3711,LG,64990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.2 Ghz Processor,LED,14,Iris Plus,Intel,256 GB SSD Storage,No HDD,no,Upto 18.5 Hrs Battery Life
+3712,Dell,53490,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.2 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,53,53W Adapter
+3713,Lenovo,65212,Intel Core i7 (7th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.7 Ghz Processor,LED,15.6,GeForce 920M,NVIDIA,NO SSD,1024 GB HDD Storage,65, Upto 5 Hrs Battery Life
+3714,Acer,36147,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+3715,Acer,55990,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,"GeForce GTX 1050Ti GPU, 4 GB",NVIDIA,16 GB SSD Storage , 1024 GB HDD Storage,135,135W Adapter
+3716,ASUS,36990,Intel Core i3 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.2 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+3717,ASUS,32197,AMD Quad-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,Radeon Vega 8,AMD,NO SSD,1024 GB HDD Storage,32,32W Adapter
+3718,HP,53490,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB LP, LPDDR3 RAM, 2.4 Ghz Processor,LED,13.3,HD 620,Intel,128 GB SSD Storage,No HDD,65,65W Adapter
+3719,ASUS,46999,Intel Core i3 (11th Gen),Intel,Not Expandable,8 GB RAM, RAM, 4.0 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,65, Upto 6 Hrs Battery Life
+3720,ASUS,73204,Intel Core M5 (6th Gen),Intel, 8 GB Expandable,4 GB LP, LPDDR3 RAM , 1.1 Ghz Processor,LED,12.5,HD 515,Intel,64 GB SSD Storage,No HDD,39,39W Adapter
+3721,Dell,63590,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.2 Ghz Processor,LED,15.6,"GeForce MX230 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,no,Upto 8 Hrs Battery Life
+3722,HP,25397,AMD Dual-Core A6 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 2.5 Ghz Processor,LED,15.6,Radeon R4,AMD,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3724,Apple,97040,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 1.4 Ghz Processor,LED,13.3,Iris Plus Graphics 645,Intel,128 GB SSD Storage,No HDD,58, Upto 10 Hrs Battery Life
+3725,Lenovo,81990,AMD Octa-Core Ryzen 7,AMD, 16 GB Expandable,16 GB , DDR4 RAM , 3.1 Ghz Processor,LCD,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,65, Upto 5 Hrs Battery Life
+3726,Lenovo,86690,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,170, Upto 6 Hrs Battery Life
+3727,Lenovo,27990,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,HD 620,Intel,NO SSD,1024 GB HDD Storage,30, Upto 5 Hrs Battery Life
+3728,MSI,35990,AMD Hexa-Core Ryzen 5,AMD, 64 GB Expandable,8 GB , DDR4 RAM , 4.0 Ghz Processor,LCD,14,Radeon,AMD,256 GB SSD Storage,No HDD,39,39W Adapter
+3729,HP,63761,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,14,"GeForce MX250 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,65,65W Adapter
+3730,Acer,79990,Intel Core i5 (9th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.4 Ghz Processor,LED,17.3,"Geforce GTX 1660 Ti GPU, 6 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,180,180W Adapter
+3731,Acer,87999,Intel Core i7 (7th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.8 Ghz Processor,LED,15.6,"GeForce GTX 1050 GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,135, Upto 6 Hrs Battery Life
+3732,Lenovo,51990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.1 Ghz Processor,LED,15.6,Iris Plus,Intel,512 GB SSD Storage,No HDD,no,52.5W Adapter
+3733,MSI,54990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3734,ASUS,49671,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.4 Ghz Processor,LCD,17.3,Iris Xe,Intel,256 GB SSD Storage , 1024 GB HDD Storage,65,65W Adapter
+3735,Acer,17990,AMD Dual-Core E1 APU,AMD,Not Expandable,4 GB , DDR3 RAM, 1.8 Ghz Processor,LED,15.6,HD Graphics,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3736,AVITA,38990,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 1.8 Ghz Processor,LED,14,UHD,Intel,1024 GB SSD Storage,No HDD,no, Upto 10 Hrs Battery Life
+3737,MSI,101651,Intel Core i7 (11th Gen) Processor,Intel,Not Expandable,16 GB , DDR4 RAM,0,LED,15.6,"GeForce RTX 3070 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,no,
+3738,Dell,103794,Intel Core i7 (10th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"Geforce GTX 1660 Ti GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,no,
+3739,Lenovo,54994,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65, Upto 11 Hrs Battery Life
+3740,MSI,43231,Intel Core i5 (11th Gen) Processor,Intel,Not Expandable,8 GB , DDR4 RAM,0,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3741,ASUS,46990,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,4 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"Geforce MX130 GPU, 2 GB",NVIDIA,16 GB SSD Storage , 1024 GB HDD Storage,42,42W Adapter
+3742,ASUS,27999,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB , DDR4 RAM, 1.1 Ghz Processor,LED,15.6,UHD 600,Intel,NO SSD,1024 GB HDD Storage,33,33W Adapter
+3743,Apple,112040,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 2.4 Ghz Processor,LED,13.3,Iris Plus 655,Intel,256 GB SSD Storage,No HDD,58, Upto 10 Hrs Battery Life
+3744,ASUS,15990,Intel Celeron Dual-Core,Intel, 64 GB Expandable,4 GB LP, LPDDR4 RAM , 1.1 Ghz Processor,LED,14,HD 500,Intel,64 GB SSD Storage,No HDD,45,45W Adapter
+3745,Lenovo,56990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,"Geforce MX230 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+3746,Lenovo,101490,Intel Core i7 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.8 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65, Upto 10 Hrs Battery Life
+3747,Dell,59790,AMD Hexa-Core Ryzen 5,AMD, 16 GB Expandable,8 GB , DDR4 RAM , 2.4 Ghz Processor,LED,15.6,Radeon Vega,AMD,512 GB SSD Storage,No HDD,no,Upto 10 Hrs Battery Life
+3748,HP,63494,AMD Hexa-Core Ryzen 5,AMD, 16 GB Expandable,8 GB , DDR4 RAM , 3.0 Ghz Processor,LED,15.6,"Geforce GTX 1650 Ti GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,no,52.5W Adapter
+3749,Lenovo,66000,Intel Core i3 (10th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.2 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3750,ASUS,32200,AMD Dual-Core Ryzen 3,AMD, 12 GB Expandable,4 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,Radeon,AMD,256 GB SSD Storage,No HDD,no,
+3751,HP,42890,Intel Core i5 (8th Gen),Intel, 8 GB Expandable,4 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"Radeon 520 GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3752,Dell,35500,Intel Pentium Quad-Core,Intel, 16 GB Expandable,4 GB , DDR4 RAM , 1.1 Ghz Processor,LCD,15.6,Integrated,Intel,256 GB SSD Storage,No HDD,65,65W Adapter
+3753,Lenovo,37490,Intel Core i3 (11th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 3.0 Ghz Processor,LCD,15.6,UHD,Intel,256 GB SSD Storage , 1024 GB HDD Storage,65, Upto 5.5 Hrs Battery Life
+3754,HP,24335,AMD Dual-Core APU,AMD, 8 GB Expandable,4 GB , DDR3 RAM , 1.5 Ghz Processor,LED,15.6,Radeon R2,AMD,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3755,Microsoft,147400,Intel Core i7 (7th Gen),Intel,Not Expandable,16 GB , DDR3 RAM, 2.5 Ghz Processor,LED,12.3,Iris Plus 640,Intel,512 GB SSD Storage,No HDD,65, Upto 13.5 Hrs Battery Life
+3756,HP,27990,AMD Dual-Core Ryzen 3,AMD,Not Expandable,8 GB , DDR4 RAM, 3.4 Ghz Processor,LCD,15.6,Radeon,AMD,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3757,Lenovo,21190,AMD Dual-Core APU,AMD,Not Expandable,4 GB , DDR4 RAM, 1.8 Ghz Processor,LED,15.6,Radeon R2,AMD,NO SSD,1024 GB HDD Storage,45, Upto 4 Hrs Battery Life
+3758,LG,52990,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,14,UHD 620,Intel,256 GB SSD Storage,No HDD,72, Upto 23.5 Hrs Battery Life
+3759,ASUS,20990,Intel Celeron Dual-Core,Intel, 8 GB Expandable,4 GB , DDR4 RAM , 1.1 Ghz Processor,LED,15.6,UHD 600,Intel,NO SSD,1024 GB HDD Storage,33,33W Adapter
+3760,Lenovo,24990,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,14,HD 620,Intel,NO SSD,1024 GB HDD Storage,30,30W Adapter
+3761,ASUS,28990,AMD Dual-Core A9 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 3.0 Ghz Processor,LED,15.6,Radeon R5,AMD,NO SSD,1024 GB HDD Storage,38,38W Adapter
+3762,ASUS,84990,Intel Core i5 (12th Gen),Intel, 32 GB Expandable,16 GB , DDR5 RAM , 4.7 Ghz Processor,LCD,17.3,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,200,200W Adapter
+3763,Dell,49490,Intel Core i5 (11th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.4 Ghz Processor,LED,15.6,"GeForce MX330 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,no,Upto 7 Hrs Battery Life
+3764,Dell,67990,Intel Core i3 (10th Gen),Intel, 32 GB Expandable,4 GB , DDR4 RAM , 2.1 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage , 1024 GB HDD Storage,no,Upto 6 Hrs Battery Life
+3765,HP,27195,AMD Dual-Core Athlon,AMD,Not Expandable,4 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,Radeon Vega 3,AMD,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3766,Dell,29590,AMD Dual-Core Ryzen 3,AMD, 16 GB Expandable,4 GB , DDR4 RAM , 2.5 Ghz Processor,LED,15.6,Radeon Vega 3,AMD,NO SSD,1024 GB HDD Storage,no,Upto 6 Hrs Battery Life
+3767,HP,71990,Intel Core i5 (9th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.4 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,52,52W Adapter
+3768,Dell,43146,Intel Core i3 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.0 Ghz Processor,LED,15.6,UHD,Intel,256 GB SSD Storage,No HDD,no,
+3769,HP,28490,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,HD 620,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3770,ASUS,23990,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB , DDR4 RAM, 1.1 Ghz Processor,LED,15.6,UHD 600,Intel,256 GB SSD Storage,No HDD,33,33W Adapter
+3771,Lenovo,44990,Intel Core i5 (7th Gen),Intel, 16 GB Expandable,4 GB , DDR4 RAM , 2.5 Ghz Processor,LED,15.6,"Geforce 940MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3773,ASUS,11990,Intel Celeron Dual-Core,Intel, 64 GB Expandable,4 GB , DDR4 RAM , 1.1 Ghz Processor,LED,11.6,UHD 600,Intel,64 GB SSD Storage,No HDD,33,33W Adapter
+3774,HP,73990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage , 1024 GB HDD Storage,65,65W Adapter
+3775,Acer,48899,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LCD,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,45, Upto 9.5 Hrs Battery Life
+3776,Dell,63990,Intel Core i5 (11th Gen),Intel, 16 GB Expandable,16 GB , DDR4 RAM , 2.6 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,no,Upto 6 Hrs Battery Life
+3777,Acer,52431,Intel Core i7 (9th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"Geforce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,135, Upto 8.5 Hrs Battery Life
+3778,Lenovo,32927,Intel Core i5 (10th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 1.0 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,65, Upto 7.3 Hrs Battery Life
+3779,Apple,215990,Intel Core i9 (9th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.3 Ghz Processor,LED,16,"Radeon Pro 5500M GPU, 4 GB",AMD,1024 GB SSD Storage,No HDD,96, Upto 11 Hrs Battery Life
+3781,ASUS,63990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.2 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65, Upto 6 Hrs Battery Life
+3783,AVITA,42790,Intel Core i5 (7th Gen),Intel,Not Expandable,8 GB , DDR3 RAM, 1.2 Ghz Processor,LED,14,HD 615,Intel,128 GB SSD Storage,No HDD,no,Upto 10 Hrs Battery Life
+3784,Lenovo,72990,AMD Octa-Core Ryzen 7 Processor,AMD,Not Expandable,16 GB , DDR4 RAM,0,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,45, Upto 5 Hrs Battery Life
+3785,ASUS,52790,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"GeForce MX150 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,42,42W Adapter
+3786,Lenovo,50407,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,"GeForce MX450 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,57,57W Adapter
+3787,Lenovo,69303,Intel Core i5 (10th Gen),Intel, 12 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"GeForce MX250 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,no,52.5W Adapter
+3788,HP,108990,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.2 Ghz Processor,LED,15.6,"Geforce GTX 1050Ti GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,52,52W Adapter
+3789,MSI,66990,Intel Core i5 (11th Gen),Intel, 64 GB Expandable,8 GB , DDR4 RAM , 2.5 Ghz Processor,LCD,14,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3790,HP,23952,Intel Pentium Quad-Core,Intel,Not Expandable,4 GB , DDR3 RAM, 1.6 Ghz Processor,LED,15.6,HD 405,Intel,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3791,ASUS,89752,AMD Hexa-Core Ryzen 5 Processor,AMD,Not Expandable,16 GB , DDR4 RAM,0,LED,15.6,"GeForce RTX 3050 Ti GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,200,200W Adapter
+3792,HP,82267,Intel Core i5 (7th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.5 Ghz Processor,LED,15.6,"GeForce GTX 1050  GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,150,150W Adapter
+3793,Lenovo,56990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.5 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,NO SSD,1024 GB HDD Storage,45,45W Adapter
+3794,ASUS,34990,AMD Quad-Core Ryzen 5,AMD,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,Radeon Vega 8,AMD,256 GB SSD Storage,No HDD,32,32W Adapter
+3795,ASUS,49990,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"Geforce MX150 GPU, 2 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,42,42W Adapter
+3796,Lenovo,30990,AMD Dual-Core Ryzen 3,AMD, 12 GB Expandable,4 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,Radeon,AMD,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3797,HP,116941,Intel Core i7 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.2 Ghz Processor,LED,15.6,"Geforce GTX 1050Ti GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,52,52W Adapter
+3798,Dell,49990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,14,"GeForce MX330 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,no,Upto 10 Hrs Battery Life
+3799,ASUS,55990,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 4.8 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,150,150W Adapter
+3800,ASUS,160905,Intel Core i7 (8th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 1.8 Ghz Processor,LED,14,HD 620,Intel,512 GB SSD Storage,No HDD,50, Upto 9 Hrs Battery Life
+3801,iball,13900,Intel Atom Quad-Core,Intel,Not Expandable,2 GB , DDR3 RAM, 1.4 Ghz Processor,LED,10.1,HD,Intel,32 GB SSD Storage,No HDD,no,Upto 12 Hrs Battery Life
+3802,Lenovo,39990,AMD Quad-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,Radeon Vega 8,AMD,512 GB SSD Storage,No HDD,65, Upto 4.5 Hrs Battery Life
+3803,ASUS,68000,Intel Core i7 (6th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"GeForce GTX 960M GPU, 4 GB",NVIDIA,NO SSD,1024 GB HDD Storage,120,120W Adapter
+3804,ASUS,42090,Intel Core i5 (7th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.5 Ghz Processor,LED,15.6,"GeForce GT 940MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65, Upto 4.5 Hrs Battery Life
+3805,Acer,79990,Intel Core i5 (10th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.5 Ghz Processor,LED,15.6,"Geforce GTX 1650 Ti GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,180,180W Adapter
+3806,HP,53779,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3807,Lenovo,41990,AMD Quad-Core Ryzen 3,AMD, 48 GB Expandable,8 GB , DDR4 RAM , 2.6 Ghz Processor,LCD,15.6,Radeon,AMD,512 GB SSD Storage,No HDD,65, Upto 7.5 Hrs Battery Life
+3808,Lenovo,49671,Intel Core i5 (11th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 4.2 Ghz Processor,LCD,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,45, Upto 7.5 Hrs Battery Life
+3809,ASUS,45990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,512 GB SSD Storage,No HDD,32,32W Adapter
+3810,ASUS,19990,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB , DDR4 RAM, 1.1 Ghz Processor,LED,11.6,UHD 600,Intel,NO SSD,500 GB HDD Storage,42,42W Adapter
+3811,ASUS,40643,AMD Quad-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 4.0 Ghz Processor,LCD,15.6,Radeon,AMD,512 GB SSD Storage,No HDD,65, Upto 6 Hrs Battery Life
+3812,ASUS,57599,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+3813,ASUS,27990,AMD Quad-Core A12 APU,AMD, 16 GB Expandable,8 GB , DDR4 RAM , 2.7 Ghz Processor,LED,15.6,Radeon R7,AMD,512 GB SSD Storage,No HDD,42,42W Adapter
+3814,Lenovo,64999,Intel Core i5 (11th Gen),Intel, 16 GB Expandable,16 GB LP, LPDDR4X RAM , 3.1 Ghz Processor,LCD,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65, Upto 13 Hrs Battery Life
+3815,Lenovo,73990,Intel Core i7 (10th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,135, Upto 8 Hrs Battery Life
+3816,Lenovo,57990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,"Radeon 530 GPU, 2 GB",AMD,NO SSD,2048 GB HDD Storage,65, Upto 6 Hrs Battery Life
+3817,HP,68990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3818,ASUS,38970,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,NO SSD,1024 GB HDD Storage,no,
+3819,HP,68990,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 4.7 Ghz Processor,LCD,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,43, Upto 12 Hrs Battery Life
+3820,ASUS,66990,Intel Core i7 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.8 Ghz Processor,LED,15.6,"GeForce MX150 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,42, Upto 8 Hrs Battery Life
+3822,ASUS,64000,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"Geforce MX150 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,42,42W Adapter
+3823,Dell,81390,Intel Core i5 (11th Gen),Intel, 16 GB Expandable,16 GB , DDR4 RAM , 2.2 Ghz Processor,LCD,15.6,"GeForce RTX 3050 Ti GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,65, Upto 10 Hrs Battery Life
+3824,HP,31897,AMD Dual-Core Ryzen 3,AMD,Not Expandable,4 GB , DDR4 RAM, 2.5 Ghz Processor,LED,15.6,Radeon Vega 3,AMD,256 GB SSD Storage , 1024 GB HDD Storage,41,41W Adapter
+3825,ASUS,60999,AMD Quad-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,Radeon Vega 8,AMD,512 GB SSD Storage,No HDD,45,45W Adapter
+3826,Acer,25990,Intel Core i3 (7th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 2.7 Ghz Processor,LED,15.6,HD 620,Intel,NO SSD,1024 GB HDD Storage,45, Upto 6.5 Hrs Battery Life
+3827,Dell,27990,Intel Core i3 (6th Gen),Intel, 16 GB Expandable,4 GB , DDR3 RAM , 2.3 Ghz Processor,LED,15.6,HD,Intel,NO SSD,1024 GB HDD Storage,65, Upto 4 Hrs Battery Life
+3828,HP,43500,Intel Core i3 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,UHD 620,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3829,HP,64000,AMD Hexa-Core Ryzen 5,AMD,Not Expandable,16 GB , DDR4 RAM, 4.0 Ghz Processor,LED,15.6,Radeon,AMD,512 GB SSD Storage,No HDD,65,65W Adapter
+3830,Acer,93780,Intel Core i7 (10th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,no,57.5W Adapter
+3831,iball,12499,Intel Atom Quad-Core,Intel, 64 GB Expandable,2 GB , DDR3 RAM , 1.4 Ghz Processor,LED,11.6,HD 5300,Intel,32 GB SSD Storage,No HDD,no,Upto 8.5 Hrs Battery Life
+3832,Lenovo,22490,Intel Pentium Quad-Core,Intel,Not Expandable,4 GB , DDR4 RAM, 1.1 Ghz Processor,LED,15.6,UHD 605 ,Intel,NO SSD,1024 GB HDD Storage,30,30W Adapter
+3833,HP,67000,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.5 Ghz Processor,LED,15.6,"Geforce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,150,150W Adapter
+3834,ASUS,36363,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,UHD,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3836,Dell,64200,Intel Core i7 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.8 Ghz Processor,LED,15.6,"Radeon 520 GPU, 2 GB",AMD,NO SSD,2048 GB HDD Storage,40,40W Adapter
+3837,Microsoft,116990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR3 RAM, 1.6 Ghz Processor,LED,13.5,UHD 620,Intel,256 GB SSD Storage,No HDD,no,Upto 14 Hrs Battery Life
+3838,ASUS,45808,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,14,UHD,Intel,NO SSD,1024 GB HDD Storage,32,32W Adapter
+3839,AVITA,47199,AMD Quad-Core Ryzen 7,AMD,Not Expandable,8 GB , DDR4 RAM, 2.3 Ghz Processor,LED,14,Radeon RX Vega 10,AMD,512 GB SSD Storage,No HDD,no,36.7W Adapter
+3840,ASUS,99990,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,"Geforce GTX 1660 Ti GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,230,230W Adapter
+3841,ASUS,30990,AMD Dual-Core A9 APU,AMD, 8 GB Expandable,4 GB , DDR4 RAM , 1.8 Ghz Processor,LED,15.6,Radeon R5,AMD,NO SSD,1024 GB HDD Storage,45, Upto 5 Hrs Battery Life
+3842,HP,56991,Intel Core i5 (9th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,"Geforce GTX 1050 GPU, 4 GB",NVIDIA,NO SSD,1024 GB HDD Storage,no,63.3W Adapter
+3843,ASUS,73990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.7 Ghz Processor,LED,17.3,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,180,180W Adapter
+3844,ASUS,41190,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"Geforce MX130 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3845,Dell,44855,AMD Quad-Core Ryzen 5,AMD, 16 GB Expandable,8 GB , DDR4 RAM , 2.0 Ghz Processor,LED,15,Radeon Vega 8,AMD,512 GB SSD Storage,No HDD,42,42W Adapter
+3846,Lenovo,27990,AMD Dual-Core Athlon,AMD,Not Expandable,4 GB , DDR4 RAM, 2.6 Ghz Processor,LED,14,Radeon,AMD,256 GB SSD Storage,No HDD,65,65W Adapter
+3847,ASUS,68990,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 4.2 Ghz Processor,LED,15.6,UHD,Intel,256 GB SSD Storage , 1024 GB HDD Storage,42,42W Adapter
+3848,Dell,20990,Intel Celeron Dual-Core,Intel, 16 GB Expandable,4 GB , DDR4 RAM , 1.8 Ghz Processor,LED,15.6,HD Graphics,Intel,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3849,ASUS,57990,AMD Hexa-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 4.0 Ghz Processor,LED,14,Radeon RX Vega 6,AMD,512 GB SSD Storage,No HDD,50,50W Adapter
+3850,Lenovo,51890,Intel Core i5 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.5 Ghz Processor,LED,15.6,HD 620,Intel,NO SSD,1024 GB HDD Storage,41, Upto 4 Hrs Battery Life
+3851,Apple,149990,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB LP, LPDDR3 RAM , 2.3 Ghz Processor,LED,13.3,Iris Plus Graphics 655,Intel,512 GB SSD Storage,No HDD,61, Upto 10 Hrs Battery Life
+3852,Lenovo,36190,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,UHD,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+3853,Dell,19990,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB , DDR3 RAM, 1.6 Ghz Processor,LED,15.6,HD Graphics,Intel,NO SSD,500 GB HDD Storage,40,40W Adapter
+3854,ASUS,109990,Intel Core i7 (10th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"Geforce GTX 1660 Ti GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,230,230W Adapter
+3855,Acer,59989,Intel Core i5 (11th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.4 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+3856,HP,256403,Intel Core i7 (9th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LED,17.3,"GeForce RTX 2080 GPU, 8 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,70,70W Adapter
+3857,HP,49800,Intel Core i3 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.2 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage , 1024 GB HDD Storage,65,65W Adapter
+3858,ASUS,45260,Intel Core i5 (11th Gen) Processor,Intel,Not Expandable,8 GB , DDR4 RAM,0,LED,15.6,"GeForce MX330 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,no,
+3859,Lenovo,44500,AMD Quad-Core Ryzen 5,AMD,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,Radeon Vega 8,AMD,NO SSD,1024 GB HDD Storage,35,35W Adapter
+3860,Dell,47490,Intel Core i3 (11th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 4.2 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage,No HDD,no,Upto 6 Hrs Battery Life
+3861,Dell,96990,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 1.8 Ghz Processor,LED,13.3,UHD 620,Intel,512 GB SSD Storage,No HDD,38,38W Adapter
+3862,MSI,64871,Intel Core i7 (11th Gen),Intel, 64 GB Expandable,16 GB , DDR4 RAM , 4.7 Ghz Processor,LCD,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,no,
+3863,HP,61490,AMD Quad-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 2.0 Ghz Processor,LED,15.6,Radeon Vega 8,AMD,128 GB SSD Storage , 1024 GB HDD Storage,41,41W Adapter
+3864,Acer,19320,AMD Dual-Core A4 APU,AMD, 12 GB Expandable,4 GB , DDR4 RAM , 1.5 Ghz Processor,LED,15.6,Radeon R4,AMD,NO SSD,1024 GB HDD Storage,45, Upto 5.5 Hrs Battery Life
+3865,Acer,38744,Intel Core i3 (11th Gen) Processor,Intel,Not Expandable,4 GB , DDR4 RAM,0,LED,15.6,UHD,Intel,256 GB SSD Storage,No HDD,45, Upto 9 Hrs Battery Life
+3866,Lenovo,33990,Intel Core i3 (10th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 1.2 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage,No HDD,65, Upto 5 Hrs Battery Life
+3867,RDP,10499,Intel Atom Quad-Core,Intel,Not Expandable,2 GB , DDR3 RAM, 1.9 Ghz Processor,LED,11.6,HD ,Intel,32 GB SSD Storage,No HDD,no,Upto 10.5 Hrs Battery Life
+3868,Acer,32990,Intel Core i3 (12th Gen) Processor,Intel,Not Expandable,8 GB , DDR4 RAM,0,LCD,15.6,UHD,Intel,512 GB SSD Storage,No HDD,45, Upto 4 Hrs Battery Life
+3869,Dell,50990,Intel Core i5 (11th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.4 Ghz Processor,LED,15.6,"GeForce MX350 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,no,Upto 7 Hrs Battery Life
+3871,ASUS,56490,Intel Core i5 (12th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.3 Ghz Processor,LCD,14,UHD Graphics,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+3872,HP,20990,AMD Quad-Core APU,AMD,Not Expandable,4 GB , DDR3 RAM, 1.8 Ghz Processor,LED,15.6,Radeon R2,AMD,NO SSD,500 GB HDD Storage,65,65W Adapter
+3873,ASUS,90590,AMD Octa-Core Ryzen 7,AMD,Not Expandable,8 GB , DDR4 RAM, 3.0 Ghz Processor,LED,14,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,76,76W Adapter
+3874,HP,33799,AMD Quad-Core A10 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,"Radeon R7 M440 GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,no,
+3875,ASUS,34990,Intel Core i5 (6th Gen),Intel, 16 GB Expandable,4 GB , DDR3 RAM , 2.3 Ghz Processor,LED,15.6,"GeForce 920MX GPU, 2 GB",Nvidia,NO SSD,1024 GB HDD Storage,no,
+3876,HP,33424,Intel Pentium Quad-Core,Intel, 8 GB Expandable,4 GB , DDR3 RAM , 1.6 Ghz Processor,LED,11.6,HD,Intel,NO SSD,500 GB HDD Storage,65,65W Adapter
+3877,Lenovo,19679,AMD Dual-Core Athlon,AMD,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,Radeon,AMD,NO SSD,1024 GB HDD Storage,no,
+3878,MSI,53990,Intel Core i7 (7th Gen),Intel, 16 GB Expandable,4 GB , DDR4 RAM , 2.7 Ghz Processor,LED,15.6,"Geforce 940M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,no,Upto 5 Hrs Battery Life
+3879,ASUS,37990,Intel Core i3 (12th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 3.3 Ghz Processor,LCD,14,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3880,Microsoft,99990,Intel Core i5 (6th Gen),Intel,Not Expandable,8 GB , DDR3 RAM, 2.4 Ghz Processor,LCD,12.3,HD 520,Intel,256 GB SSD Storage,No HDD,no,Upto 9 Hrs Battery Life
+3881,ASUS,22807,Intel Core i3 (8th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.2 Ghz Processor,LED,15,UHD 620,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+3882,ASUS,42990,Intel Core i5 (6th Gen),Intel, 8 GB Expandable,4 GB , DDR3 RAM , 2.3 Ghz Processor,LED,15.6,"GeForce 930M GPU, 2 GB",Nvidia,NO SSD,1024 GB HDD Storage,65, Upto 4.5 Hrs Battery Life
+3883,Lenovo,52890,AMD Dual-Core Ryzen 3,AMD, 12 GB Expandable,8 GB , DDR4 RAM , 2.6 Ghz Processor,LED,14,Radeon Vega 3,AMD,128 GB SSD Storage , 1024 GB HDD Storage,65,65W Adapter
+3884,ASUS,84500,Intel Core i7 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.3 Ghz Processor,LED,17.3,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,180,180W Adapter
+3885,HP,22490,AMD Quad-Core A6 APU,AMD,Not Expandable,4 GB , DDR3 RAM, 2.0 Ghz Processor,LED,15.6,Radeon R4,AMD,NO SSD,500 GB HDD Storage,no,
+3886,ASUS,37490,AMD Quad-Core Ryzen 5,AMD, 12 GB Expandable,8 GB , DDR4 RAM , 2.1 Ghz Processor,LED,15.6,Radeon Vega 8,AMD,256 GB SSD Storage , 1024 GB HDD Storage,45,45W Adapter
+3887,ASUS,58990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,14,UHD,Intel,1024 GB SSD Storage,No HDD,45,45W Adapter
+3888,ASUS,30131,2.1 Ghz Processor,2.1,Not Expandable,2 GB , DDR3 RAM,0,LED,15.6,HD,Intel,NO SSD,500 GB HDD Storage,no,
+3889,Microsoft,77399,Intel Core M3 (6th Gen),Intel,Not Expandable,4 GB , DDR3 RAM, 2.2 Ghz Processor,LED,12.3,HD,Intel,128 GB SSD Storage,No HDD,65, Upto 9 Hrs Battery Life
+3890,ASUS,32639,Intel Core i3 (6th Gen),Intel, 16 GB Expandable,4 GB , DDR4 RAM , 2.0 Ghz Processor,LED,15.6,"GeForce 920M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,45,45W Adapter
+3891,ASUS,29000,Intel Core i3 (5th Gen),Intel,Not Expandable,4 GB , DDR3 RAM, 2.0 Ghz Processor,LED,15.6,HD 5500,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3892,ASUS,57990,AMD Hexa-Core Ryzen 5,AMD, 12 GB Expandable,8 GB , DDR4 RAM , 2.1 Ghz Processor,LED,15.6,Radeon,AMD,256 GB SSD Storage , 1024 GB HDD Storage,65, Upto 4 Hrs Battery Life
+3893,ASUS,46990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,15.6,UHD,Intel,256 GB SSD Storage,No HDD,45,45W Adapter
+3894,ASUS,92990,Intel Core i7 (9th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,150,150W Adapter
+3895,Microsoft,116999,Intel Core i7 (6th Gen),Intel,Not Expandable,8 GB , DDR3 RAM, 2.2 Ghz Processor,LCD,12.3,Iris graphics,Intel,256 GB SSD Storage,No HDD,no,Upto 9 Hrs Battery Life
+3896,ASUS,44274,AMD Quad-Core Ryzen 5,AMD, 12 GB Expandable,8 GB , DDR4 RAM , 2.0 Ghz Processor,LED,15.6,Radeon Vega 8,AMD,512 GB SSD Storage,No HDD,37,37W Adapter
+3897,HP,33990,2.4 Ghz Processor,2.4, 8 GB Expandable,4 GB , DDR3 RAM ,0,LED,15.6,"Radeon HD 8570M GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3898,ASUS,71990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.7 Ghz Processor,LED,17.3,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,180,180W Adapter
+3899,ASUS,86990,Intel Core i5 (12th Gen),Intel,Not Expandable,16 GB LP, LPDDR5 RAM, 2.0 Ghz Processor,LED,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,150,150W Adapter
+3900,HP,42400,Intel Core i5 (6th Gen),Intel, 16 GB Expandable,4 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,"Radeon R5 M430 GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,65, Upto 4 Hrs Battery Life
+3901,Lenovo,25890,AMD Quad-Core A8 APU,AMD, 16 GB Expandable,4 GB , DDR3 RAM , 2.0 Ghz Processor,LED,15.6,R5,,NO SSD,500 GB HDD Storage,65, Upto 4 Hrs Battery Life
+3902,ASUS,42000,Intel Core i3 (5th Gen),Intel,Not Expandable,4 GB , DDR3 RAM, 2.1 Ghz Processor,LED,15.6,"GeForce 930M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3903,Apple,205900,Intel Core i7 (6th Gen),Intel,Not Expandable,16 GB LP, LPDDR3 RAM, 2.6 Ghz Processor,LED,15.4,"Radeon Pro 450 GPU, 2 GB",AMD,256 GB SSD Storage,No HDD,87, Upto 10 Hrs Battery Life
+3904,HP,39390,Intel Core i3 (4th Gen),Intel, 8 GB Expandable,4 GB , DDR3 RAM , 1.7 Ghz Processor,LED,15.6,"Radeon HD 8670M GPU, 2 GB",AMD,NO SSD,500 GB HDD Storage,65,65W Adapter
+3905,MSI,38390,Intel Core i3 (11th Gen) Processor,Intel,Not Expandable,8 GB , DDR4 RAM,0,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3906,ASUS,33990,Intel Core i3 (8th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 2.1 Ghz Processor,LED,15.6,UHD 620,Intel,256 GB SSD Storage,No HDD,40,40W Adapter
+3907,HP,41800,Intel Core i5 (5th Gen),Intel, 8 GB Expandable,4 GB , DDR3 RAM , 2.2 Ghz Processor,LED,15.6,"GeForce 820M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3909,ASUS,94990,Intel Core i7 (10th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"Geforce GTX 1650 Ti GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,150,150W Adapter
+3910,HP,62890,2.0 Ghz Processor,2,Not Expandable,8 GB , DDR3 RAM,0,LED,15.6,"GeForce 840M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3911,Lenovo,20990,Intel Pentium Quad-Core,Intel, 8 GB Expandable,4 GB , DDR3 RAM , 1.6 Ghz Processor,LED,11.6,HD 4400,Intel,8 GB SSD Storage , 500 GB HDD Storage,45, Upto 4.5 Hrs Battery Life
+3912,Dell,48300,Intel Core i5 (4th Gen),Intel, 8 GB Expandable,4 GB , DDR3 RAM , 1.7 Ghz Processor,LED,14,"Radeon HD R7 M265 GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,no,
+3913,HP,19499,AMD Dual-Core E1 APU,AMD, 8 GB Expandable,4 GB , DDR3 RAM , 1.4 Ghz Processor,LED,15.6,Radeon R2,AMD,NO SSD,500 GB HDD Storage,45, Upto 3 Hrs Battery Life
+3914,Lenovo,31490,Intel Core i3 (10th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 1.2 Ghz Processor,LCD,15.6,UHD,Intel,256 GB SSD Storage,No HDD,65, Upto 7.3 Hrs Battery Life
+3915,ASUS,20599,1.8 Ghz Processor,1.8, 4 GB Expandable,2 GB , DDR3 RAM ,0,LED,11.6,HD Graphics,Intel,NO SSD,500 GB HDD Storage,65, Upto 4.5 Hrs Battery Life
+3916,HP,101065,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,15.6,UHD,Intel,512 GB SSD Storage,No HDD,45, Upto 10 Hrs Battery Life
+3917,HP,49990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,256 GB SSD Storage,No HDD,65,65W Adapter
+3918,HP,47390,Intel Core i3 (5th Gen),Intel, 16 GB Expandable,8 GB , DDR3 RAM , 2.1 Ghz Processor,LED,15.6,"GeForce 830M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3920,Acer,36999,Intel Core i3 (6th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.0 Ghz Processor,LED,14,HD 520,Intel,128 GB SSD Storage,No HDD,45, Upto 12 Hrs Battery Life
+3921,ASUS,147990,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR3 RAM, 3.3 Ghz Processor,LED,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,240,240W Adapter
+3922,HP,45990,Intel Core i5 (4th Gen),Intel,Not Expandable,4 GB , DDR3 RAM, 1.6 Ghz Processor,LED,15.6,"Radeon HD 8670M GPU, 1 GB",AMD,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3923,MSI,139990,Intel Core i7 (7th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.8 Ghz Processor,LED,15.6,"GeForce GTX 1060 GPU, 6 GB",Nvidia,256 GB SSD Storage , 1024 GB HDD Storage,180,180W Adapter
+3924,HP,45890,1.7 Ghz Processor,1.7, 8 GB Expandable,4 GB , DDR3 RAM ,0,LED,13.3,HD 4400,Intel,NO SSD,1024 GB HDD Storage,65, Upto 3 Hrs Battery Life
+3925,HP,44441,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage,No HDD,65,65W Adapter
+3926,HP,36990,Intel Core i3 (3rd Gen),Intel, 12 GB Expandable,4 GB , DDR3 RAM , 1.8 Ghz Processor,LED,15.6,HD 4000,Intel,NO SSD,500 GB HDD Storage,65,65W Adapter
+3927,HP,29990,Intel Core i3 (6th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.0 Ghz Processor,LED,14,HD 520,Intel,NO SSD,1024 GB HDD Storage,41, Upto 12.5 Hrs Battery Life
+3928,HP,52990,Intel Core i5 (5th Gen),Intel, 16 GB Expandable,8 GB , DDR3 RAM , 2.2 Ghz Processor,LED,15.6,"GeForce 830M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3929,HP,39290,Intel Core i3 (3rd Gen),Intel, 16 GB Expandable,4 GB , DDR3 RAM , 2.4 Ghz Processor,LED,15.6,HD 4000,Intel,NO SSD,500 GB HDD Storage,65,65W Adapter
+3930,HP,69990,Intel Core i7 (7th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.7 Ghz Processor,LED,15.6,"GeForce 940M GPU, 4 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3931,HP,49990,Intel Core i5 (5th Gen),Intel, 8 GB Expandable,4 GB , DDR3 RAM , 2.2 Ghz Processor,LED,15.6,"GeForce 830M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3932,Acer,66890,AMD Octa-Core Ryzen 7,AMD,Not Expandable,8 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,"Geforce GTX 1650 GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,135,135W Adapter
+3933,HP,77154,Intel Core i3 (8th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.2 Ghz Processor,LED,15.6,HD 620,Intel,128 GB SSD Storage,No HDD,45,45W Adapter
+3934,ASUS,19499,Intel Celeron Quad-Core,Intel, 4 GB Expandable,2 GB , DDR3 RAM , 1.8 Ghz Processor,LCD,15.6,HD Graphics,Intel,NO SSD,500 GB HDD Storage,65, Upto 4.5 Hrs Battery Life
+3935,ASUS,135890,AMD Octa-Core Ryzen 9,AMD,Not Expandable,16 GB , DDR4 RAM, 4.7 Ghz Processor,LCD,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,240,240W Adapter
+3936,ASUS,45274,Intel Core i5 (6th Gen),Intel, 16 GB Expandable,4 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,"GeForce 930MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,no,Upto 4.5 Hrs Battery Life
+3937,Dell,75195,Intel Core i7 (7th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.7 Ghz Processor,LED,13.3,HD 520,Intel,NO SSD,1024 GB HDD Storage,no,
+3938,Lenovo,42500,Intel Core i5 (5th Gen),Intel, 8 GB Expandable,4 GB , DDR3 RAM , 2.2 Ghz Processor,LED,14,HD,Intel,8 GB SSD Storage , 500 GB HDD Storage,45, Upto 6 Hrs Battery Life
+3939,HP,53811,Intel Core i5 (5th Gen),Intel, 16 GB Expandable,8 GB , DDR3 RAM , 2.0 Ghz Processor,LED,15.6,"GeForce 830M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,no,
+3940,HP,51784,Intel Core i5 (4th Gen),Intel,Not Expandable,4 GB , DDR3 RAM, 1.6 Ghz Processor,LED,14,"GeForce GT 740M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3941,HP,77490,Intel Core i7 (5th Gen),Intel, 16 GB Expandable,8 GB , DDR3 RAM , 2.4 Ghz Processor,LED,15.6,"GeForce GTX 850M GPU, 4 GB",NVIDIA,NO SSD,1024 GB HDD Storage,90,90W Adapter
+3942,Lenovo,59791,Intel Core i3 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,13.6,UHD,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+3943,HP,39890,Intel Core i5 (5th Gen),Intel, 8 GB Expandable,4 GB , DDR3 RAM , 2.2 Ghz Processor,LED,15.6,HD 5500,Intel,NO SSD,1024 GB HDD Storage,no,
+3944,ASUS,16010,Intel Celeron Dual-Core,Intel,Not Expandable,2 GB , DDR3 RAM, 1.6 Ghz Processor,LED,11.6,HD,Intel,NO SSD,500 GB HDD Storage,no,Upto 7 Hrs Battery Life
+3945,ASUS,164990,AMD Octa-Core Ryzen 9,AMD,Not Expandable,16 GB , DDR4 RAM, 2.8 Ghz Processor,LED,14,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,76, Upto 12 Hrs Battery Life
+3946,HP,37490,Intel Core i3 (6th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.0 Ghz Processor,LED,15.6,"Radeon HD 520 GPU, 2 GB",AMD,NO SSD,2048 GB HDD Storage,41,41W Adapter
+3947,HP,75279,2.1 Ghz Processor,2.1, 8 GB Expandable,4 GB , DDR3 RAM ,0,LED,15.6,HD,Intel,NO SSD,500 GB HDD Storage,45,45W Adapter
+3948,HP,499373,Intel Core i7 (9th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LED,17.3,"GeForce RTX 2080 GPU, 8 GB",NVIDIA,512 GB SSD Storage,No HDD,330,330W Adapter
+3949,MSI,92990,Intel Core i7 (7th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.8 Ghz Processor,LED,15.6,"GeForce GTX 1050Ti GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,no,
+3950,MSI,61990,Intel Core i7 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.7 Ghz Processor,LED,14,"GeForce MX450 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,90,90W Adapter
+3952,Dell,44632,Intel Core i5 (11th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.6 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,no,Upto 6 Hrs Battery Life
+3953,HP,36390,Intel Core i3 (4th Gen),Intel, 12 GB Expandable,4 GB , DDR3 RAM , 1.7 Ghz Processor,LED,15.6,HD 4400,Intel,NO SSD,500 GB HDD Storage,65,65W Adapter
+3954,ASUS,58990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB LP, LPDDR4X RAM, 1.0 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3955,ASUS,21900,Intel Atom Quad-Core,Intel,Not Expandable,2 GB , DDR3 RAM, 1.4 Ghz Processor,LED,10.1,HD 4000,Intel,32 GB SSD Storage , 500 GB HDD Storage,no,
+3956,Microsoft,222999,Intel Core i7 (8th Gen),Intel,Not Expandable,16 GB , DDR3 RAM, 1.9 Ghz Processor,LED,13.5,"GeForce GTX 1050 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,95, Upto 17 Hrs Battery Life
+3957,ASUS,119900,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR4 RAM, 3.0 Ghz Processor,LED,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,no,
+3958,Lenovo,59990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD,Intel,128 GB SSD Storage , 1024 GB HDD Storage,65,65W Adapter
+3959,ASUS,84990,Intel Core i5 (11th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 3.1 Ghz Processor,LED,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,200,200W Adapter
+3960,ASUS,40400,Intel Core i5 (4th Gen),Intel, 8 GB Expandable,4 GB , DDR3 RAM , 1.6 Ghz Processor,LED,15.6,"GeForce GT 820M GPU, 1 GB",NVIDIA,NO SSD,500 GB HDD Storage,65,65W Adapter
+3961,ASUS,229990,AMD Octa-Core Ryzen 9,AMD, 64 GB Expandable,32 GB , DDR4 RAM , 3.0 Ghz Processor,LED,15.6,"GeForce RTX 3080 GPU, 16 GB",NVIDIA,1024 GB SSD Storage,No HDD,240,240W Adapter
+3962,HP,144990,Intel Core i7 (7th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.8 Ghz Processor,LED,17.3,"GeForce GTX 1060 GPU, 6 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,230,230W Adapter
+3963,ASUS,134990,AMD Octa-Core Ryzen 7,AMD, 32 GB Expandable,16 GB , DDR4 RAM , 3.0 Ghz Processor,LED,17.3,"Radeon RX 580 GPU, 4 GB",AMD,256 GB SSD Storage , 1024 GB HDD Storage,76,76W Adapter
+3964,MSI,105990,Intel Core i7 (12th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 4.7 Ghz Processor,LCD,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,240,240W Adapter
+3965,MSI,154990,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.2 Ghz Processor,LED,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,230,230W Adapter
+3966,ASUS,125990,AMD Octa-Core Ryzen 7,AMD, 32 GB Expandable,16 GB , DDR5 RAM , 4.7 Ghz Processor,LCD,17.3,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,240,240W Adapter
+3967,ASUS,199990,AMD Octa-Core Ryzen 9,AMD, 64 GB Expandable,16 GB , DDR4 RAM , 3.3 Ghz Processor,LED,15.6,"GeForce RTX 3080 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,240,240W Adapter
+3969,ASUS,117853,AMD Octa-Core Ryzen 9,AMD,Not Expandable,16 GB , DDR4 RAM, 3.3 Ghz Processor,LED,15.6,"GeForce RTX 3050 Ti GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,200,200W Adapter
+3970,Acer,34990,Intel Core i3 (8th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,UHD 620,Intel,NO SSD,1024 GB HDD Storage,48, Upto 8 Hrs Battery Life
+3971,HP,65990,AMD Hexa-Core Ryzen 5,AMD,Not Expandable,16 GB , DDR4 RAM, 4.2 Ghz Processor,LED,13.3,Radeon,AMD,512 GB SSD Storage,No HDD,43, Upto 10 Hrs Battery Life
+3972,HP,20990,AMD Quad-Core APU,AMD,Not Expandable,4 GB , DDR2 RAM, 1.8 Ghz Processor,LED,15.6,Radeon R2,AMD,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3973,Lenovo,29690,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,HD 620,Intel,NO SSD,1024 GB HDD Storage,30, Upto 5.5 Hrs Battery Life
+3974,ASUS,69890,AMD Octa-Core Ryzen 7,AMD,Not Expandable,8 GB , DDR4 RAM, 1.8 Ghz Processor,LED,14,Radeon,AMD,512 GB SSD Storage,No HDD,65,65W Adapter
+3975,Infinix,81978,Intel Core i9 (12th Gen),Intel,Not Expandable,32 GB LP, LPDDR5 RAM, 3.4 Ghz Processor,LCD,15.6,Iris Xe,Intel,1024 GB SSD Storage,No HDD,100, Upto 10 Hrs Battery Life
+3976,Dell,57390,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+3977,ASUS,70990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR3 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+3978,ASUS,35490,Intel Core i5 (7th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 2.5 Ghz Processor,LED,15.6,"GeForce 940MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65, Upto 4.5 Hrs Battery Life
+3979,Lenovo,31271,Intel Core i3 (11th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 3.0 Ghz Processor,LED,15,UHD,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3980,HP,119600,Intel Core i7 (10th Gen),Intel,Not Expandable,8 GB LP, LPDDR4 RAM, 1.3 Ghz Processor,LED,13.3,Iris Plus,Intel,512 GB SSD Storage,No HDD,65, Upto 19 Hrs Battery Life
+3982,HP,35990,AMD Quad-Core Ryzen 5,AMD,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,Radeon Vega 8,AMD,NO SSD,1024 GB HDD Storage,65,65W Adapter
+3983,Acer,60990,Intel Core i5 (11th Gen) Processor,Intel,Not Expandable,8 GB LP, LPDDR4X RAM,0,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3984,ASUS,69770,Intel Core i5 (9th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,48,48W Adapter
+3986,Acer,43500,Intel Core i5 (8th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,256 GB SSD Storage,No HDD,65, Upto 10 Hrs Battery Life
+3987,Acer,97695,Intel Core i7 (11th Gen) Processor,Intel,Not Expandable,16 GB , DDR4 RAM,0,LED,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,230, Upto 6 Hrs Battery Life
+3988,HP,24400,AMD Dual-Core Ryzen 3,AMD,Not Expandable,4 GB , DDR4 RAM, 2.5 Ghz Processor,LED,14,Radeon Vega 3,AMD,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3989,Lenovo,28490,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,HD 620,Intel,NO SSD,1024 GB HDD Storage,35,35W Adapter
+3990,Lenovo,21990,AMD Dual-Core A9 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 3.1 Ghz Processor,LED,15.6,Radeon R5,AMD,NO SSD,1024 GB HDD Storage,45,45W Adapter
+3991,Dell,52400,Intel Core i5 (11th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.4 Ghz Processor,LCD,15.6,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+3992,ASUS,80990,AMD Hexa-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 3.0 Ghz Processor,LED,14,"Geforce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,76,76W Adapter
+3993,HP,55490,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,"GeForce MX110 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,41,41W Adapter
+3994,HP,113990,AMD Octa-Core Ryzen 7,AMD, 16 GB Expandable,16 GB , DDR5 RAM , 4.8 Ghz Processor,LCD,16.1,"GeForce RTX 4060 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,280,280W Adapter
+3995,HP,34812,Intel Pentium Quad-Core,Intel,Not Expandable,4 GB , DDR4 RAM, 1.1 Ghz Processor,LED,11.6,UHD 605,Intel,NO SSD,1024 GB HDD Storage,37,37W Adapter
+3996,Dell,64344,Intel Core i5 (11th Gen),Intel, 32 GB Expandable,8 GB LP, LPDDR4X RAM , 4.2 Ghz Processor,LED,13.3,Iris Xe,Intel,512 GB SSD Storage,No HDD,no,Upto 6 Hrs Battery Life
+3997,ASUS,51990,Intel Core i7 (7th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.7 Ghz Processor,LED,15.6,"Geforce 940M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,no,Upto 4 Hrs Battery Life
+3998,ASUS,19000,Intel Pentium Quad-Core,Intel,Not Expandable,4 GB , DDR3 RAM, 1.6 Ghz Processor,LED,15.6,HD,Intel,NO SSD,500 GB HDD Storage,no,
+3999,Acer,50990,Intel Core i3 (6th Gen),Intel,Not Expandable,4 GB , DDR3 RAM, 2.3 Ghz Processor,LED,12,HD 520,Intel,128 GB SSD Storage,No HDD,37, Upto 8 Hrs Battery Life
+4000,Acer,62994,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.2 Ghz Processor,LED,13.3,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4001,ASUS,38490,Intel Core i5 (10th Gen),Intel, 12 GB Expandable,8 GB , DDR4 RAM , 1.0 Ghz Processor,LCD,14,Integrated,Intel,NO SSD,1024 GB HDD Storage,45, Upto 6 Hrs Battery Life
+4002,Lenovo,20990,AMD Dual-Core A6 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,Radeon R4,AMD,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4003,ASUS,27990,Intel Core i3 (6th Gen),Intel, 8 GB Expandable,4 GB , DDR4 RAM , 2.0 Ghz Processor,LED,15.6,HD 520,Intel,NO SSD,1024 GB HDD Storage,33,33W Adapter
+4004,Lenovo,84990,Intel Core i7 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.8 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4005,Lenovo,53990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.8 Ghz Processor,LED,15.6,"GeForce GTX 1050 GPU, 4 GB",NVIDIA,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4006,ASUS,81990,Intel Core i7 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.8 Ghz Processor,LED,14,UHD 620,Intel,256 GB SSD Storage,No HDD,45,45W Adapter
+4007,HP,77995,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 1.6 Ghz Processor,LED,13.3,HD 620,Intel,256 GB SSD Storage,No HDD,no,53.6W Adapter
+4008,ASUS,31490,Intel Core i3 (7th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,HD 620,Intel,NO SSD,1024 GB HDD Storage,no,
+4009,ASUS,27889,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB , DDR4 RAM, 1.1 Ghz Processor,LED,15.6,UHD 600,Intel,NO SSD,1024 GB HDD Storage,33,33W Adapter
+4010,Lenovo,66000,Intel Core i3 (10th Gen),Intel, 12 GB Expandable,8 GB , DDR4 RAM , 2.1 Ghz Processor,LED,14,UHD 620,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4011,iball,13999,Intel Atom Quad-Core,Intel,Not Expandable,4 GB , DDR3 RAM, 1.4 Ghz Processor,LED,14,HD Graphics,Intel,32 GB SSD Storage,No HDD,no,
+4012,Dell,54990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,40,40W Adapter
+4013,ASUS,45990,AMD Quad-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,Radeon Vega 8,AMD,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4014,HP,40172,Intel Core i3 (7th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,"GeForce MX110 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4016,Apple,187990,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.2 Ghz Processor,LED,15.4,"Pro 555X GPU, 4 GB",,256 GB SSD Storage,No HDD,no, Upto 10 Hrs Battery Life
+4018,Acer,80118,Intel Core i7 (7th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.8 Ghz Processor,LED,15.6,"GeForce GTX 1050 GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,135,135W Adapter
+4019,Acer,49990,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"Geforce MX130 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65, Upto 8 Hrs Battery Life
+4020,HP,28990,Intel Core i3 (6th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.0 Ghz Processor,LED,15.6,HD 520,Intel,NO SSD,1024 GB HDD Storage,41,41W Adapter
+4021,HP,51990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,64 GB SSD Storage,No HDD,45, Upto 11 Hrs Battery Life
+4022,Lenovo,30990,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 1.2 Ghz Processor,LED,14,UHD,Intel,NO SSD,1024 GB HDD Storage,65, Upto 5.5 Hrs Battery Life
+4023,Acer,58490,Intel Core i5 (11th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 4.2 Ghz Processor,LED,14,"Iris Xe Max GPU, 4 GB",Intel,512  SSD Storage,No HDD,65,65W Adapter
+4024,Acer,41990,Intel Core i5 (6th Gen),Intel,Not Expandable,4 GB , DDR3 RAM, 2.3 Ghz Processor,LED,12,HD 520,Intel,256 GB SSD Storage,No HDD,45, Upto 8 Hrs Battery Life
+4025,ASUS,49990,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,"GeForce GTX 1050TI GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,48,48W Adapter
+4026,ASUS,24145,Intel Pentium Quad-Core,Intel,Not Expandable,4 GB , DDR4 RAM, 1.1 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,32,32W Adapter
+4027,Lenovo,44990,Intel Core i3 (11th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 3.0 Ghz Processor,LED,15.6,UHD,Intel,256 GB SSD Storage,No HDD,45,45W Adapter
+4028,Acer,36990,Intel Core i3 (6th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,HD 520,Intel,NO SSD,500 GB HDD Storage,45, Upto 9 Hrs Battery Life
+4029,Dell,66255,Intel Core i5 (11th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.4 Ghz Processor,LED,15.6,"GeForce MX350 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,no,
+4030,Lenovo,39100,Intel Core i3 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.2 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,38,38W Adapter
+4031,Lenovo,26487,AMD Dual-Core Ryzen 3,AMD,Not Expandable,4 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,Radeon,AMD,NO SSD,1024 GB HDD Storage,30,30W Adapter
+4032,MSI,79990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,"Geforce MX250 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,90,90W Adapter
+4033,ASUS,34990,Intel Core i3 (7th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 2.4 Ghz Processor,LED,15.6,"GeForce 920MX  GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4034,ASUS,104999,Intel Core i7 (11th Gen) Processor,Intel,Not Expandable,16 GB LP, LPDDR4X RAM,0,LED,13.3,Iris Xe,Intel,1024 GB SSD Storage,No HDD,65,65W Adapter
+4035,ASUS,78812,Intel Core i7 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.0 Ghz Processor,LED,15.6,"GeForce MX350 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,no,
+4036,Lenovo,70990,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,"GeForce MX450 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,57,57W Adapter
+4037,HP,42990,Intel Core i3 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.2 Ghz Processor,LED,14,UHD 620,Intel,64 GB SSD Storage,No HDD,45,45W Adapter
+4038,HP,76390,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.5 Ghz Processor,LED,16.1,"Geforce GTX 1650 GPU, 4 GB",NVIDIA,NO SSD,1024 GB HDD Storage,150,150W Adapter
+4040,Lenovo,24990,AMD Dual-Core A6 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 3.0 Ghz Processor,LED,14,Radeon R4,AMD,NO SSD,1024 GB HDD Storage,45, Upto 4 Hrs Battery Life
+4041,Lenovo,58222,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4042,ASUS,53490,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,no,
+4043,Infinix,64990,Intel Core i5 (12th Gen),Intel,Not Expandable,16 GB LP, LPDDR5X RAM, 2.0 Ghz Processor,LCD,16,"GeForce RTX 3050 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,210,210W Adapter
+4044,ASUS,70990,Intel Core i5 (12th Gen) Processor,Intel,Not Expandable,16 GB , DDR4 RAM,0,LCD,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4045,MSI,115990,Intel Core i7 (12th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 4.7 Ghz Processor,LCD,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,240,240W Adapter
+4046,ASUS,39298,Intel Core i3 (8th Gen),Intel, 16 GB Expandable,4 GB , DDR4 RAM , 2.2 Ghz Processor,LED,15.6,UHD 620,Intel,16 GB SSD Storage , 1024 GB HDD Storage,no,Upto 8 Hrs Battery Life
+4047,Lenovo,23500,Intel Core i3 (7th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 2.3 Ghz Processor,LED,14,HD 620,Intel,NO SSD,1024 GB HDD Storage,45, Upto 6.5 Hrs Battery Life
+4048,Lenovo,79449,Intel Core i5 (11th Gen) Processor,Intel,Not Expandable,16 GB , DDR4 RAM,0,LED,15.6,Iris Xe,Intel,1024 GB SSD Storage,No HDD,45,45W Adapter
+4049,HP,60641,AMD Dual-Core Ryzen 3,AMD,Not Expandable,4 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,Radeon,AMD,256 GB SSD Storage,No HDD,45,45W Adapter
+4050,Dell,50990,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"Radeon 520 GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,65, Upto 6 Hrs Battery Life
+4051,Acer,17990,Intel Celeron Dual-Core,Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.1 Ghz Processor,LCD,11.6,UHD,Intel,256 GB SSD Storage,No HDD,no,
+4052,ASUS,69900,Intel Core i5 (12th Gen),Intel,Not Expandable,16 GB LP, LPDDR5 RAM, 1.7 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,75, Upto 18 Hrs Battery Life
+4053,HP,57823,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage , 1024 GB HDD Storage,41,41W Adapter
+4054,ASUS,90000,Intel Core i5 (13th Gen),Intel, 32 GB Expandable,16 GB , DDR5 RAM , 2.4 Ghz Processor,LCD,16,"GeForce RTX 3050 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,no,
+4055,HP,114990,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,"GeForce 1650 Ti GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,150,150W Adapter
+4056,ASUS,45000,Intel Core i5 (7th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 2.5 Ghz Processor,LED,15.6,"GeForce 940 MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4057,HP,36740,Intel Core i5 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.5 Ghz Processor,LED,15.6,"Radeon 520 GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,41,41W Adapter
+4058,ASUS,76990,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR4 RAM, 4.2 Ghz Processor,LED,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,120,120W Adapter
+4059,ASUS,121490,Intel Core i7 (9th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"GeForce GTX 1660 Ti GPU, 6 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,230,230W Adapter
+4060,Dell,69494,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"GeForce 940MX GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,42,42W Adapter
+4061,Microsoft,65000,Microsoft SQ1 Processor,Microsoft,Not Expandable,8 GB LP, LPDDR4X RAM,0,LED,13,SQ1 Adreno 685 GPU,Microsoft,128 GB SSD Storage,No HDD,no,Upto 13 Hrs Battery Life
+4062,Acer,62500,Intel Core i7 (11th Gen) Processor,Intel,Not Expandable,16 GB , DDR4 RAM,0,LED,14,Iris Xe,Intel,1024 GB SSD Storage,No HDD,65,65W Adapter
+4063,MSI,134990,Intel Core i7 (12th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.3 Ghz Processor,LCD,15.6,"GeForce RTX 3070 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,240,240W Adapter
+4064,HP,68990,AMD Hexa-Core Ryzen 5,AMD,Not Expandable,16 GB , DDR4 RAM, 4.2 Ghz Processor,LED,13.3,Radeon,AMD,512 GB SSD Storage,No HDD,43,43W Adapter
+4065,ASUS,175146,Intel Core i7 (4th Gen),Intel,Not Expandable,12 GB , DDR4 RAM, 2.5 Ghz Processor,LED,17.3,"Geforce GTX 860M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,56, Upto 3.5 Hrs Battery Life
+4067,Acer,42999,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.2 Ghz Processor,LED,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,48,48W Adapter
+4069,ASUS,129791,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.2 Ghz Processor,LED,15.6,"GeForce GTX 1060 GPU, 6 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,180,180W Adapter
+4070,Lenovo,80990,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR4 RAM, 3.3 Ghz Processor,LCD,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,45, Upto 5 Hrs Battery Life
+4071,Lenovo,57741,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,512 GB SSD Storage,No HDD,65, Upto 8 Hrs Battery Life
+4072,HP,128190,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,"Geforce GTX 1660 Ti GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,200,200W Adapter
+4073,ASUS,77990,Intel Core i7 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.8 Ghz Processor,LED,14,UHD 620,Intel,256 GB SSD Storage , 1024 GB HDD Storage,45,45W Adapter
+4074,HP,30990,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,HD 620,Intel,NO SSD,1024 GB HDD Storage,41,41W Adapter
+4075,HP,29990,Intel Core i3 (11th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 4.0 Ghz Processor,LED,15.6,UHD,Intel,256 GB SSD Storage,No HDD,65, Upto 5 Hrs Battery Life
+4076,Lenovo,38999,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,UHD,Intel,NO SSD,1 GB HDD Storage,65, Upto 9 Hrs Battery Life
+4077,Dell,53990,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,UHD 620,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4078,ASUS,68500,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB LP, LPDDR4X RAM, 4.2 Ghz Processor,LED,14,"Iris Xe GPU, 4 GB",Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4079,Dell,89990,AMD Hexa-Core Ryzen 5,AMD, 32 GB Expandable,8 GB , DDR4 RAM , 3.0 Ghz Processor,LED,15.6,"Radeon RX 5600M GPU, 6 GB",AMD,512 GB SSD Storage,No HDD,no,
+4080,Lenovo,54990,AMD Quad-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,Radeon Vega 8,AMD,1024 GB SSD Storage,No HDD,45,45W Adapter
+4081,Acer,69990,AMD Dual-Core A9 APU Processor,AMD, 12 GB Expandable,4 GB , DDR4 RAM ,0,LED,15.6,Radeon R5,AMD,256 GB SSD Storage,No HDD,45,45W Adapter
+4082,ASUS,70990,Intel Core i5 (12th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 4.2 Ghz Processor,LCD,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,200,200W Adapter
+4083,HP,69390,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,256 GB SSD Storage,No HDD,41, Upto 10.5 Hrs Battery Life
+4084,Lenovo,62000,Intel Core i5 (10th Gen),Intel, 12 GB Expandable,8 GB , DDR4 RAM , 1.0 Ghz Processor,LED,15.6,UHD,Intel,256 GB SSD Storage , 1024 GB HDD Storage,65, Upto 7.3 Hrs Battery Life
+4085,Gigabyte,57990,Intel Core i5 (12th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.5 Ghz Processor,LCD,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,no,
+4086,ASUS,31990,Intel Core i3 (6th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.0 Ghz Processor,LED,15.6,HD 520,Intel,NO SSD,1024 GB HDD Storage,33,33W Adapter
+4087,Lenovo,21999,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,14,HD 620,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4088,HP,102300,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,12 GB , DDR4 RAM , 1.8 Ghz Processor,LED,14,"GeForce MX130 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,41,41W Adapter
+4089,ASUS,94890,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR4 RAM, 4.7 Ghz Processor,LCD,14,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,180,180W Adapter
+4090,MSI,84990,Intel Core i7 (7th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.8 Ghz Processor,LED,15.6,"GeForce GTX 1050 GPU, 4 GB",NVIDIA,NO SSD,1024 GB HDD Storage,41, Upto 4 Hrs Battery Life
+4091,HP,164345,Intel Core i7 (8th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.2 Ghz Processor,LED,15.6,"GeForce RTX 2060 GPU, 8 GB",NVIDIA,NO SSD,1024 GB HDD Storage,70,70W Adapter
+4092,MSI,88990,Intel Core i7 (12th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 4.7 Ghz Processor,LCD,16,"GeForce RTX A1000 GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,180,180W Adapter
+4093,MSI,40990,AMD Hexa-Core Ryzen 5,AMD, 16 GB Expandable,16 GB , DDR4 RAM , 4.2 Ghz Processor,LCD,15.6,Radeon,AMD,512 GB SSD Storage,No HDD,no,
+4094,HP,55157,Intel Core i5 (11th Gen) Processor,Intel,Not Expandable,8 GB , DDR4 RAM,0,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,150,150W Adapter
+4095,ASUS,32490,Intel Core i3 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.0 Ghz Processor,LCD,14,UHD,Intel,512 GB SSD Storage,No HDD,65, Upto 8 Hrs Battery Life
+4096,ASUS,80990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR3 RAM, 1.6 Ghz Processor,LED,14,"Geforce MX150 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+4097,Lenovo,67999,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+4098,ASUS,65990,Intel Core i7 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.1 Ghz Processor,LED,15.6,"Geforce MX250 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,no,
+4099,Lenovo,25990,AMD Dual-Core A9 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 3.1 Ghz Processor,LED,15.6,"Radeon 530 GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4100,Lenovo,102990,Intel Core i7 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.8 Ghz Processor,LED,14,Iris Xe,Intel,1024 GB SSD Storage,No HDD,no,60.7W Adapter
+4101,Microsoft,250000,Intel Core i7 (8th Gen),Intel,Not Expandable,16 GB LP, LPDDR3 RAM, 1.9 Ghz Processor,LED,13.5,"GeForce GTX 1050 GPU, 2 GB",NVIDIA,1024 GB SSD Storage,No HDD,95, Upto 15 Hrs Battery Life
+4102,Lenovo,36990,Intel Core i3 (7th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,"Radeon 530 GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,35,35W Adapter
+4103,Lenovo,49190,Intel Core i3 (13th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 3.3 Ghz Processor,LCD,16,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4104,Acer,34990,Intel Celeron Dual-Core,Intel,Not Expandable,8 GB , DDR4 RAM, 1.1 Ghz Processor,LCD,14,UHD,Intel,256 GB SSD Storage,No HDD,65,65W Adapter
+4105,Acer,79258,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"GeForce GTX 1050 GPU, 4 GB",NVIDIA,NO SSD,1024 GB HDD Storage,no,
+4106,ASUS,55990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,"Geforce MX250 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,no,
+4107,HP,65999,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 4.2 Ghz Processor,LED,15.6,"GeForce MX450 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65, Upto 8 Hrs Battery Life
+4108,Dell,23990,AMD Dual-Core APU,AMD, 16 GB Expandable,4 GB , DDR4 RAM , 1.8 Ghz Processor,LED,15.6,Radeon R2,AMD,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4109,HP,35990,AMD Dual-Core Ryzen 3,AMD,Not Expandable,8 GB , DDR4 RAM, 2.6 Ghz Processor,LCD,15.6,Radeon,AMD,256 GB SSD Storage,No HDD,65,65W Adapter
+4110,Acer,17990,Intel Pentium Quad-Core,Intel, 16 GB Expandable,4 GB , DDR4 RAM , 2.0 Ghz Processor,LCD,14,UHD Graphics,Intel,256 GB SSD Storage,No HDD,45,45W Adapter
+4111,Lenovo,55999,Intel Core i3 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 3.0 Ghz Processor,LED,15.6,UHD,Intel,256 GB SSD Storage,No HDD,45, Upto 10.8 Hrs Battery Life
+4112,ASUS,84990,Intel Core i7 (13th Gen),Intel,Not Expandable,16 GB LP, LPDDR5 RAM, 2.2 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4113,Dell,39990,Intel Core i3 (10th Gen),Intel, 32 GB Expandable,4 GB , DDR4 RAM , 1.2 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,no,
+4114,AVITA,22990,AMD Dual-Core A9 APU,AMD,Not Expandable,8 GB , DDR4 RAM, 3.0 Ghz Processor,LED,14,Radeon R5,AMD,256 GB SSD Storage,No HDD,no,36.7W Adapter
+4116,Lenovo,25935,Intel Core i3 (7th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,"Geforce MX150 GPU, 2 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,65, Upto 6 Hrs Battery Life
+4117,ASUS,109999,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR4 RAM, 4.2 Ghz Processor,LCD,14,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,76, Upto 8 Hrs Battery Life
+4118,Dell,59390,Intel Core i5 (11th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.4 Ghz Processor,LCD,14,Iris Xe,Intel,256 GB SSD Storage , 1024 GB HDD Storage,65, Upto 10 Hrs Battery Life
+4119,HP,39643,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 1.2 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,41,41W Adapter
+4120,ASUS,117990,Intel Core i7 (7th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.8 Ghz Processor,LED,15.6,"GeForce GTX 1050T GPU, 4 GB",NVIDIA,NO SSD,1024 GB HDD Storage,48,48W Adapter
+4121,Apple,199900,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.2 Ghz Processor,LED,15.4,"Pro 555X GPU, 4 GB",,256 GB SSD Storage,No HDD,no, Upto 10 Hrs Battery Life
+4122,Dell,34990,Intel Core i3 (10th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.2 Ghz Processor,LED,14,UHD,Intel,NO SSD,1024 GB HDD Storage,45, Upto 10 Hrs Battery Life
+4123,Acer,22590,Intel Pentium Quad-Core,Intel, 8 GB Expandable,4 GB , DDR4 RAM , 3.4 Ghz Processor,LCD,15.6,UHD 605,Intel,NO SSD,1024 GB HDD Storage,45, Upto 6.5 Hrs Battery Life
+4124,HP,51416,Intel Core i5 (6th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,"Radeon R5 M430 GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4125,MSI,149900,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.2 Ghz Processor,LED,15.6,"Geforce GTX 1070 GPU, 8 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,no,
+4126,Lenovo,46790,Intel Core i5 (11th Gen),Intel, 12 GB Expandable,8 GB , DDR4 RAM , 2.4 Ghz Processor,LCD,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,65, Upto 5.5 Hrs Battery Life
+4127,Lenovo,29990,AMD Dual-Core A6 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,Radeon,AMD,NO SSD,1024 GB HDD Storage,no,
+4128,Lenovo,50347,Intel Core i5 (7th Gen),Intel, 8 GB Expandable,4 GB , DDR4 RAM , 2.5 Ghz Processor,LED,14,"GeForce 920MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,no,Upto 12 Hrs Battery Life
+4129,ASUS,29876,Intel Core i3 (6th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 2.0 Ghz Processor,LED,15.6,HD 520,Intel,NO SSD,1024 GB HDD Storage,no,
+4130,Lenovo,77392,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,"GeForce MX230 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+4131,ASUS,30999,3.0 Ghz Processor,3,Not Expandable,32 GB , DDR4 RAM,0,LED,14,"Geforce RTX 2060 with Max-Q Design GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,180,180W Adapter
+4132,HP,49000,AMD Dual-Core A6 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,Radeon R4,AMD,NO SSD,1024 GB HDD Storage,41,41W Adapter
+4133,Dell,65990,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"Radeon 530 GPU, 4 GB",AMD,NO SSD,2048 GB HDD Storage,no,
+4134,ASUS,69990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 1.6 Ghz Processor,LED,14,"Geforce MX250 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+4135,Dell,59900,Intel Core i5 (10th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.0 Ghz Processor,LED,15.6,UHD,Intel,512 GB SSD Storage,No HDD,no,Upto 6 Hrs Battery Life
+4136,ASUS,234990,Intel Core i7 (10th Gen),Intel,Not Expandable,32 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,"Geforce RTX 2070 Super GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,76,76W Adapter
+4137,ASUS,59990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 1.6 Ghz Processor,LED,14,"GeForce MX250 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+4138,ASUS,46833,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,14,UHD 620,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+4139,Lenovo,46990,Intel Core i5 (1st Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,14,"GeForce MX230 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,no,52.5W Adapter
+4140,LG,39990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.2 Ghz Processor,LED,15.6,Iris Plus,Intel,256 GB SSD Storage,No HDD,no,Upto 18.5 Hrs Battery Life
+4141,Lenovo,27155,AMD Dual-Core A9 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 3.1 Ghz Processor,LED,15.6,Radeon R5,AMD,NO SSD,500 GB HDD Storage,65, Upto 4 Hrs Battery Life
+4142,ASUS,38990,Intel Core i3 (6th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.0 Ghz Processor,LED,15.6,"GeForce MX110 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,33,33W Adapter
+4143,Lenovo,58990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,no,
+4144,HP,165999,Intel Core i7 (9th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,"GeForce GTX 1660 Ti GPU, 6 GB",NVIDIA,512 GB SSD Storage , 1024 GB HDD Storage,69,69W Adapter
+4145,ASUS,35990,Intel Core i3 (6th Gen),Intel, 8 GB Expandable,4 GB , DDR4 RAM , 2.0 Ghz Processor,LED,15.6,"GeForce MX110 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,33,33W Adapter
+4146,Dell,89990,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.8 Ghz Processor,LED,15.6,"Geforce GTX 1050Ti GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,56,56W Adapter
+4147,HP,32999,AMD Dual-Core Athlon,AMD,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,Radeon Vega 6,AMD,NO SSD,1024 GB HDD Storage,65, Upto 5 Hrs Battery Life
+4148,Lenovo,64821,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"GeForce MX150 GPU, 4 GB",NVIDIA,NO SSD,2048 GB HDD Storage,45,45W Adapter
+4149,ASUS,174990,AMD Octa-Core Ryzen 9 Processor,AMD, 32 GB Expandable,16 GB , DDR4 RAM ,0,LED,17.3,"GeForce RTX 3070 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,240,240W Adapter
+4150,HP,36390,Intel Core i3 (4th Gen),Intel, 12 GB Expandable,4 GB , DDR3 RAM , 1.7 Ghz Processor,LED,15.6,HD 4400,Intel,NO SSD,500 GB HDD Storage,65,65W Adapter
+4151,ASUS,128000,AMD Octa-Core Ryzen 7,AMD, 32 GB Expandable,8 GB , DDR4 RAM , 2.9 Ghz Processor,LED,15.6,"Geforce GTX 1660 Ti GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,180,180W Adapter
+4152,ASUS,117990,AMD Octa-Core Ryzen 7 Processor,AMD, 32 GB Expandable,16 GB , DDR5 RAM ,0,LCD,17.3,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,200,200W Adapter
+4153,HP,39390,Intel Core i3 (3rd Gen),Intel, 12 GB Expandable,4 GB , DDR3 RAM , 1.8 Ghz Processor,LED,15.6,"Radeon HD 8670M GPU, 2 GB",AMD,NO SSD,500 GB HDD Storage,65,65W Adapter
+4154,ASUS,26500,Intel Pentium Quad-Core,Intel,Not Expandable,8 GB , DDR4 RAM, 1.1 Ghz Processor,LED,14.1,Integrated UHD,Intel,256 GB SSD Storage,No HDD,41, Upto 6 Hrs Battery Life
+4155,Lenovo,46590,Intel Core i5 (6th Gen),Intel,Not Expandable,4 GB , DDR3 RAM, 2.3 Ghz Processor,LED,15.6,"Radeon R5 M330 GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,65, Upto 4 Hrs Battery Life
+4156,ASUS,139990,Intel Core i7 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.3 Ghz Processor,LED,16,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,90,90W Adapter
+4157,Dell,40660,Intel Core i3 (10th Gen),Intel, 32 GB Expandable,4 GB , DDR4 RAM , 1.2 Ghz Processor,LED,14,UHD,Intel,NO SSD,1024 GB HDD Storage,no,Upto 6 Hrs Battery Life
+4158,Dell,42290,Intel Core i3 (10th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.2 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,no,Upto 7 Hrs Battery Life
+4159,Lenovo,47990,Intel Core i3 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 3.0 Ghz Processor,LED,15,UHD,Intel,256 GB SSD Storage,No HDD,45,45W Adapter
+4160,Acer,34999,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"Geforce MX130 GPU, 2 GB",NVIDIA,16 GB SSD Storage , 1024 GB HDD Storage,65, Upto 7 Hrs Battery Life
+4161,Dell,41990,Intel Core i3 (7th Gen),Intel, 16 GB Expandable,4 GB , DDR4 RAM , 2.4 Ghz Processor,LED,13.3,HD Graphics 620,Intel,NO SSD,1024 GB HDD Storage,no,
+4162,HP,70990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,13.3,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4163,Lenovo,119990,Intel Core i7 (11th Gen),Intel,Not Expandable,16 GB LP, LPDDR4X RAM, 2.8 Ghz Processor,LED,13.3,Iris Xe,Intel,1024 GB SSD Storage,No HDD,50, Upto 13 Hrs Battery Life
+4165,HP,27990,Intel Core i3 (6th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.0 Ghz Processor,LED,15.6,HD 620,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4166,HP,70990,AMD Quad-Core Ryzen 7,AMD,Not Expandable,8 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,no,52.5W Adapter
+4167,ASUS,79990,Intel Core i5 (9th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.4 Ghz Processor,LED,17.3,"Geforce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,150,150W Adapter
+4168,ASUS,99900,AMD Quad-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,"GeForce RTX 2060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,48,48W Adapter
+4169,HP,96490,Intel Core i5 (11th Gen) Processor,Intel,Not Expandable,16 GB LP, LPDDR4X RAM,0,LED,13.5,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4170,Dell,101775,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 1.6 Ghz Processor,LED,13.3,UHD 620,Intel,256 GB SSD Storage,No HDD,52,52W Adapter
+4171,Lenovo,41990,AMD Quad-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,Radeon,AMD,128 GB SSD Storage , 1024 GB HDD Storage,35,35W Adapter
+4172,ASUS,69437,Intel Core i7 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.8 Ghz Processor,LED,15.6,"GeForce MX250 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,37,37W Adapter
+4173,MSI,199990,Intel Core i7 (11th Gen) Processor,Intel,Not Expandable,16 GB , DDR4 RAM,0,LED,15.6,"GeForce RTX 3070 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,240,240W Adapter
+4174,ASUS,65287,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,"GeForce MX250 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,37,37W Adapter
+4175,ASUS,60000,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.0 Ghz Processor,LED,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,42,42W Adapter
+4176,Dell,75994,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 3.0 Ghz Processor,LED,13.3,UHD 620,Intel,256 GB SSD Storage,No HDD,60,60W Adapter
+4177,Dell,88990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR3 RAM, 1.6 Ghz Processor,LED,13,UHD 620,Intel,256 GB SSD Storage,No HDD,60,60W Adapter
+4178,HP,79990,AMD Octa-Core Ryzen 7 Processor,AMD,Not Expandable,16 GB , DDR4 RAM,0,LED,14,"GeForce MX450 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+4179,Lenovo,82990,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR4 RAM, 2.9 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,170, Upto 7.8 Hrs Battery Life
+4180,HP,93094,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,14,UHD,Intel,256 GB SSD Storage,No HDD,45,45W Adapter
+4181,ASUS,45190,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4182,iball,14999,Intel Atom Quad-Core,Intel,Not Expandable,2 GB , DDR3 RAM, 1.4 Ghz Processor,LED,10.1,HD 400,Intel,32 GB SSD Storage,No HDD,no,
+4183,Lenovo,48794,AMD Hexa-Core Ryzen 5,AMD, 32 GB Expandable,16 GB , DDR4 RAM , 2.1 Ghz Processor,LED,13.3,Radeon,AMD,512 GB SSD Storage,No HDD,60,60W Adapter
+4184,ASUS,28480,AMD Dual-Core Ryzen 3,AMD, 12 GB Expandable,4 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,Radeon,AMD,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4185,HP,101400,Intel Core i7 (11th Gen) Processor,Intel,Not Expandable,16 GB , DDR4 RAM,0,LED,13.3,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4186,ASUS,128990,Intel Core i7 (10th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"Geforce RTX 2060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,230,230W Adapter
+4188,ASUS,81990,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB LP, LPDDR4X RAM, 2.4 Ghz Processor,LED,13.3,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4189,HP,33990,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB LP, LPDDR4 RAM, 1.1 Ghz Processor,LED,14,UHD 600,Intel,64 GB SSD Storage,No HDD,45,45W Adapter
+4190,HP,99990,Intel Core i7 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,"Geforce GTX 1650 Ti GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,150,150W Adapter
+4191,HP,297377,Intel Core i9 (9th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,"GeForce RTX 2080 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,72,72W Adapter
+4192,ASUS,78850,Intel Core i7 (11th Gen) Processor,Intel,Not Expandable,8 GB , DDR4 RAM,0,LED,15.6,"GeForce MX350 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,42,42W Adapter
+4193,Dell,77701,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,13.3,UHD 620,Intel,256 GB SSD Storage,No HDD,38,38W Adapter
+4194,Dell,85590,AMD Octa-Core Ryzen 7,AMD, 16 GB Expandable,16 GB , DDR4 RAM , 1.8 Ghz Processor,LCD,14,Radeon,AMD,512 GB SSD Storage,No HDD,65, Upto 12 Hrs Battery Life
+4195,Lenovo,45990,Intel Core i3 (7th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,"Radeon 535 GPU, 2 GB",AMD,NO SSD,1024 GB HDD Storage,no,52.5W Adapter
+4196,HP,44190,Intel Core i3 (5th Gen),Intel, 16 GB Expandable,4 GB , DDR3 RAM , 2.1 Ghz Processor,LED,15.6,"GeForce 830M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4197,ASUS,99990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,512 GB SSD Storage,No HDD,50,50W Adapter
+4198,Lenovo,21994,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB LP, LPDDR4 RAM, 1.1 Ghz Processor,LED,10.1,UHD 600,Intel,128 GB SSD Storage,No HDD,39, Upto 13 Hrs Battery Life
+4199,Dell,95990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB LP, LPDDR4 RAM, 2.4 Ghz Processor,LED,14.5,"GeForce MX350 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,no,
+4200,MSI,107990,Intel Core i7 (9th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,51,51W Adapter
+4201,ASUS,105871,Intel Core i7 (11th Gen),Intel,Not Expandable,16 GB LP, LPDDR4X RAM, 4.8 Ghz Processor,LED,14,Iris Xe,Intel,1024 GB SSD Storage,No HDD,no,Upto 17 Hrs Battery Life
+4202,Gigabyte,80004,Intel Core i5 (12th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.5 Ghz Processor,LCD,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,no,
+4203,Lenovo,83990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,"GeForce MX130 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,45,45W Adapter
+4204,HP,60990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,"Geforce MX130 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,41,41W Adapter
+4205,Dell,95990,AMD Octa-Core Ryzen 7 Processor,AMD,Not Expandable,16 GB , DDR4 RAM,0,LCD,14,Radeon,AMD,512 GB SSD Storage,No HDD,65,65W Adapter
+4206,ASUS,24900,Intel Core i3 (5th Gen),Intel,Not Expandable,4 GB , DDR3 RAM, 2.0 Ghz Processor,LED,15.6,HD 4400,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4207,Lenovo,129990,Intel Core i7 (11th Gen),Intel, 32 GB Expandable,32 GB , DDR4 RAM , 2.3 Ghz Processor,LCD,16,"GeForce RTX 3070 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,300, Upto 7 Hrs Battery Life
+4208,HP,60479,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.2 Ghz Processor,LCD,14,UHD,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4209,Lenovo,72990,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB LP, LPDDR4 RAM, 2.4 Ghz Processor,LED,13,Iris Xe,Intel,1024 GB SSD Storage,No HDD,65,65W Adapter
+4210,MSI,133990,Intel Core i7 (9th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"GeForce GTX 1660 GPU, 6 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,51,51W Adapter
+4211,MSI,56990,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,14,UHD 620,Intel,512 GB SSD Storage,No HDD,65, Upto 10 Hrs Battery Life
+4212,Dell,36990,Intel Pentium Quad-Core,Intel, 16 GB Expandable,8 GB , DDR4 RAM , 3.1 Ghz Processor,LCD,15.6,UHD 605 ,Intel,256 GB SSD Storage,No HDD,65, Upto 7 Hrs Battery Life
+4214,Lenovo,66990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,"Geforce GT 940MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4215,ASUS,89990,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 1.3 Ghz Processor,LED,13.3,Iris Plus,Intel,1024 GB SSD Storage,No HDD,65,65W Adapter
+4216,ASUS,121990,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB LP, LPDDR5 RAM, 3.3 Ghz Processor,LCD,13.4,Radeon,AMD,1024 GB SSD Storage,No HDD,100,100W Adapter
+4217,Dell,69608,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,13.3,UHD 620,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4218,HP,40056,1.9 Ghz Processor,1.9, 12 GB Expandable,4 GB , DDR3 RAM ,0,LED,14,HD 4400,Intel,NO SSD,1024 GB HDD Storage,65, Upto 3 Hrs Battery Life
+4219,ASUS,51990,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 4.2 Ghz Processor,LED,17.3,Iris Xe,Intel,256 GB SSD Storage , 1024 GB HDD Storage,65,65W Adapter
+4220,HP,41990,AMD Quad-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 2.3 Ghz Processor,LED,14,Radeon Vega 8,AMD,NO SSD,1024 GB HDD Storage,no,
+4221,Lenovo,28999,Intel Core i3 (6th Gen),Intel, 16 GB Expandable,4 GB , DDR4 RAM , 2.0 Ghz Processor,LED,15.6,HD 520,Intel,NO SSD,1024 GB HDD Storage,45, Upto 8 Hrs Battery Life
+4222,Lenovo,99990,Intel Core i7 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.8 Ghz Processor,LED,15.6,"GeForce MX450 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+4223,Acer,57990,Intel Core i5 (11th Gen) Processor,Intel,Not Expandable,8 GB , DDR4 RAM,0,LED,15.6,"GeForce MX350 GPU, 2 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,65, Upto 9 Hrs Battery Life
+4224,ASUS,73990,Intel Core i5 (7th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.5 Ghz Processor,LED,15.6,"GeForce GTX 1050 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,48,48W Adapter
+4225,ASUS,23189,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB , DDR4 RAM, 1.1 Ghz Processor,LED,11.6,UHD 600,Intel,128 GB SSD Storage,No HDD,no,Upto 10 Hrs Battery Life
+4226,Acer,74990,Intel Core i7 (9th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.6 Ghz Processor,LED,17.3,"Geforce GTX 1650 GPU, 4 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,135,135W Adapter
+4227,Lenovo,51990,Intel Core i3 (7th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.7 Ghz Processor,LED,14,"GeForce GT 940MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,52,52W Adapter
+4228,Acer,26487,Intel Core i5 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 1.0 Ghz Processor,LED,15.6,"Geforce GTX MX330 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4229,ASUS,221000,Intel Core i9 (10th Gen),Intel,Not Expandable,32 GB , DDR4 RAM, 2.4 Ghz Processor,LED,14,"Geforce RTX 2060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,230,230W Adapter
+4230,Lenovo,89990,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.4 Ghz Processor,LED,14,Iris Xe,Intel,1024 GB SSD Storage,No HDD,65,65W Adapter
+4231,Lenovo,161494,Intel Core i7 (10th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"Geforce RTX 2070 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,230,230W Adapter
+4232,HP,40490,Intel Core i5 (8th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,UHD 620,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4233,ASUS,96990,AMD Octa-Core Ryzen 7,AMD, 32 GB Expandable,16 GB , DDR5 RAM , 4.7 Ghz Processor,LCD,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,240,240W Adapter
+4234,Dell,51199,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 4.2 Ghz Processor,LCD,14,Integrated,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4235,Lenovo,38490,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,UHD,Intel,NO SSD,1024 GB HDD Storage,no,
+4236,Lenovo,59900,Intel Core i5 (11th Gen),Intel, 16 GB Expandable,16 GB , DDR4 RAM , 2.4 Ghz Processor,LCD,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,65, Upto 8 Hrs Battery Life
+4237,ASUS,27990,Intel Pentium Quad-Core,Intel,Not Expandable,4 GB , DDR4 RAM, 1.1 Ghz Processor,LED,14,UHD 605,Intel,256 GB SSD Storage,No HDD,no,
+4238,Acer,169999,Intel Core i9 (11th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 4.8 Ghz Processor,LED,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,59,59W Adapter
+4239,Lenovo,72533,Intel Core i7 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.2 Ghz Processor,LED,15.6,"GeForce GTX 1050 GPU, 4 GB",NVIDIA,16 GB SSD Storage , 1024 GB HDD Storage,135, Upto 8 Hrs Battery Life
+4240,HP,47890,1.7 Ghz Processor,1.7, 12 GB Expandable,4 GB , DDR3 RAM ,0,LED,15.6,"GeForce 830M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4241,ASUS,26990,AMD Dual-Core Athlon,AMD,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,Radeon,AMD,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4242,Lenovo,79990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,71,71W Adapter
+4243,Lenovo,29799,AMD Dual-Core Athlon,AMD,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,Radeon,AMD,NO SSD,1024 GB HDD Storage,no,
+4244,Lenovo,54990,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 3.0 Ghz Processor,LED,15.6,UHD 620,Intel,NO SSD,1024 GB HDD Storage,30,30W Adapter
+4245,Dell,74999,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.5 Ghz Processor,LED,14,"GeForce MX350 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,no,
+4246,HP,39990,Intel Core i3 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.2 Ghz Processor,LCD,15.6,Integrated,Intel,NO SSD,1024 GB HDD Storage,65, Upto 6 Hrs Battery Life
+4247,Lenovo,28000,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,UHD,Intel,NO SSD,1024 GB HDD Storage,45, Upto 9 Hrs Battery Life
+4248,Dell,45990,Intel Core i3 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,"GeForce MX130 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4249,Acer,63999,Intel Core i5 (7th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.5 Ghz Processor,LED,15.6,"GeForce 940MX GPU, 4 GB",NVIDIA,NO SSD,2048 GB HDD Storage,45, Upto 6.5 Hrs Battery Life
+4250,ASUS,36990,Intel Core i3 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4251,Lenovo,50319,AMD Hexa-Core Ryzen 5 Processor,AMD,Not Expandable,8 GB , DDR4 RAM,0,LCD,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,65, Upto 6 Hrs Battery Life
+4252,ASUS,28990,AMD Dual-Core Athlon,AMD,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,14,Radeon R2,AMD,256 GB SSD Storage,No HDD,45,45W Adapter
+4253,HP,75490,Intel Core i7 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.0 Ghz Processor,LED,14,Iris X,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4254,ASUS,79990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR3 RAM, 1.6 Ghz Processor,LED,13.3,"Geforce MX150 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65, Upto 14 Hrs Battery Life
+4255,ASUS,119990,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.2 Ghz Processor,LED,15.6,"GeForce GTX 1060 GPU, 6 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,180,180W Adapter
+4256,Lenovo,19291,AMD Dual-Core A4 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,Radeon R3,AMD,NO SSD,1024 GB HDD Storage,45, Upto 4 Hrs Battery Life
+4257,ASUS,69990,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR3 RAM , 1.6 Ghz Processor,LED,13.3,UHD 620,Intel,256 GB SSD Storage,No HDD,65, Upto 14 Hrs Battery Life
+4258,Dell,42450,Intel Core i3 (11th Gen) Processor,Intel,Not Expandable,8 GB , DDR4 RAM,0,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,53,53W Adapter
+4259,Lenovo,26450,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB LP, LPDDR4 RAM, 1.1 Ghz Processor,LED,10.1,UHD 600,Intel,64 GB SSD Storage,No HDD,45, Upto 13 Hrs Battery Life
+4260,Lenovo,42990,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,"GeForce MX110 GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,no,
+4261,Dell,44900,Intel Core i3 (12th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 3.3 Ghz Processor,LCD,15.6,UHD,Intel,512 GB SSD Storage,No HDD,65, Upto 7 Hrs Battery Life
+4263,HP,24999,AMD Dual-Core Ryzen 3 Processor,AMD, 16 GB Expandable,4 GB , DDR4 RAM ,0,LCD,14,Integrated,AMD,NO SSD,1024 GB HDD Storage,65, Upto 5 Hrs Battery Life
+4264,Acer,34990,Intel Core i3 (6th Gen),Intel, 12 GB Expandable,4 GB , DDR4 RAM , 2.3 Ghz Processor,LED,15.6,HD 520,Intel,NO SSD,1024 GB HDD Storage,45, Upto 9 Hrs Battery Life
+4265,Lenovo,98990,Intel Core i7 (12th Gen),Intel, 48 GB Expandable,16 GB , DDR4 RAM , 1.7 Ghz Processor,LCD,14,Iris Xe,Intel,1024 GB SSD Storage,No HDD,65, Upto 9.4 Hrs Battery Life
+4266,Dell,41920,Intel Core i5 (6th Gen),Intel,Not Expandable,4 GB , DDR3 RAM, 2.3 Ghz Processor,LED,15.6,HD 520,Intel,NO SSD,1024 GB HDD Storage,no,
+4267,ASUS,84300,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB LP, LPDDR4X RAM, 1.9 Ghz Processor,LED,13.3,Radeon,AMD,1024 GB SSD Storage,No HDD,65,65W Adapter
+4268,Lenovo,144990,Intel Core i7 (12th Gen),Intel, 32 GB Expandable,32 GB , DDR5 RAM , 3.4 Ghz Processor,LCD,16,"GeForce RTX 3070 Ti GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,300, Upto 4 Hrs Battery Life
+4269,ASUS,53990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,UHD,Intel,256 GB SSD Storage , 1024 GB HDD Storage,65,65W Adapter
+4270,Lenovo,50990,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.3 Ghz Processor,LED,15.6,HD 620,Intel,256 GB SSD Storage , 1024 GB HDD Storage,35,35W Adapter
+4271,ASUS,45300,AMD Quad-Core Ryzen 5,AMD,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,Radeon Vega 8,AMD,512 GB SSD Storage,No HDD,45,45W Adapter
+4272,Acer,36990,Intel Core i3 (11th Gen),Intel, 12 GB Expandable,8 GB , DDR4 RAM , 1.7 Ghz Processor,LCD,15.6,UHD,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+4273,HP,119990,Intel Core i7 (7th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.8 Ghz Processor,LED,15.6,"GeForce GTX 1050 GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,150,150W Adapter
+4274,Lenovo,28490,AMD Dual-Core APU,AMD, 8 GB Expandable,4 GB , DDR4 RAM , 1.8 Ghz Processor,LED,15.6,Radeon R2,AMD,NO SSD,1024 GB HDD Storage,30,30W Adapter
+4275,Lenovo,87500,AMD Octa-Core Ryzen 7,AMD, 16 GB Expandable,16 GB LP, LPDDR5 RAM , 2.7 Ghz Processor,LED,14,Integrated,Intel,1024 GB SSD Storage,No HDD,no,Upto 12.5 Hrs Battery Life
+4276,ASUS,114990,Intel Core i9 (13th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LED,14,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,90,90W Adapter
+4277,Lenovo,29671,Intel Core i3 (6th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,HD 520,Intel,NO SSD,2048 GB HDD Storage,30,30W Adapter
+4278,MSI,149990,Intel Core i7 (12th Gen),Intel,Not Expandable,16 GB , DDR5 RAM, 2.3 Ghz Processor,LCD,17.3,"GeForce RTX 3070 Ti GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,280,280W Adapter
+4279,ASUS,75990,Intel Core i7 (11th Gen) Processor,Intel,Not Expandable,16 GB LP, LPDDR4X RAM,0,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4280,Dell,81900,Intel Core i5 (11th Gen),Intel, 16 GB Expandable,16 GB , DDR4 RAM , 2.4 Ghz Processor,LCD,14,"GeForce MX350 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+4281,Lenovo,63994,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.4 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65, Upto 14 Hrs Battery Life
+4282,ASUS,69990,AMD Hexa-Core Ryzen 5,AMD,Not Expandable,8 GB , DDR4 RAM, 4.0 Ghz Processor,LED,14,Radeon RX Vega 6,AMD,512 GB SSD Storage,No HDD,42,42W Adapter
+4283,Lenovo,89990,Intel Core i7 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.9 Ghz Processor,LED,13.3,UHD,Intel,512 GB SSD Storage,No HDD,48,48W Adapter
+4284,ASUS,149990,Intel Core i7 (11th Gen) Processor,Intel,Not Expandable,16 GB , DDR4 RAM,0,LED,15.6,"GeForce RTX 3070 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,200,200W Adapter
+4285,Acer,49990,AMD Hexa-Core Ryzen 5 Processor,AMD,Not Expandable,8 GB , DDR4 RAM,0,LED,15.6,Radeon,AMD,512 GB SSD Storage,No HDD,48,48W Adapter
+4286,Dell,356166,Intel Core i9 (10th Gen),Intel, 32 GB Expandable,32 GB , DDR4 RAM , 2.4 Ghz Processor,LED,15.6,"Geforce RTX 2080 with Max-Q GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,no,Upto 12 Hrs Battery Life
+4287,HP,21499,Intel Celeron Dual-Core,Intel,Not Expandable,4 GB , DDR4 RAM, 1.1 Ghz Processor,LED,15.6,UHD 600,Intel,NO SSD,1024 GB HDD Storage,41,41W Adapter
+4288,MSI,78990,Intel Core i5 (12th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 3.3 Ghz Processor,LCD,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,no,
+4289,ASUS,87990,Intel Core i7 (7th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.8 Ghz Processor,LED,15.6,"Geforce GTX 1050 GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,64,64W Adapter
+4290,Lenovo,140131,Intel Core i7 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.8 Ghz Processor,LED,15,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4291,HP,56496,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 3.4 Ghz Processor,LCD,15.6,UHD,Intel,512 GB SSD Storage,No HDD,41, Upto 6 Hrs Battery Life
+4292,Dell,151791,Intel Core i7 (12th Gen),Intel,Not Expandable,32 GB LP, LPDDR5 RAM, 4.7 Ghz Processor,LCD,14,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,80,80W Adapter
+4293,Lenovo,23490,AMD Dual-Core A4 APU,AMD,Not Expandable,4 GB , DDR4 RAM, 3.0 Ghz Processor,LED,14,Radeon R5,AMD,NO SSD,1024 GB HDD Storage,45, Upto 4 Hrs Battery Life
+4294,ASUS,29990,Intel Core i3 (11th Gen) Processor,Intel,Not Expandable,8 GB , DDR4 RAM,0,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,no,
+4295,ASUS,245990,Intel Core i9 (12th Gen),Intel, 64 GB Expandable,32 GB , DDR5 RAM , 2.5 Ghz Processor,LCD,17.3,"GeForce RTX 3070 Ti GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,280,280W Adapter
+4296,Dell,35990,AMD Dual-Core Ryzen 3,AMD, 16 GB Expandable,8 GB , DDR4 RAM , 2.6 Ghz Processor,LCD,15.6,Radeon,AMD,NO SSD,1024 GB HDD Storage,65, Upto 7 Hrs Battery Life
+4297,Dell,56590,AMD Hexa-Core Ryzen 5,AMD, 16 GB Expandable,8 GB , DDR4 RAM , 2.1 Ghz Processor,LCD,15.6,Radeon,AMD,512 GB SSD Storage,No HDD,65, Upto 10 Hrs Battery Life
+4298,Acer,27990,Intel Core i3 (11th Gen),Intel, 12 GB Expandable,8 GB , DDR4 RAM , 1.7 Ghz Processor,LCD,15.6,UHD,Intel,256 GB SSD Storage,No HDD,45,45W Adapter
+4299,Dell,68428,Intel Core i5 (10th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.0 Ghz Processor,LED,15.6,"GeForce MX230 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,no,Upto 6 Hrs Battery Life
+4300,Lenovo,79990,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 1.8 Ghz Processor,LED,14,"Radeon RX640 GPU, 2 GB",AMD,128 GB SSD Storage , 1024 GB HDD Storage,45,45W Adapter
+4301,ASUS,69500,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 1.6 Ghz Processor,LED,13.3,UHD 620,Intel,512 GB SSD Storage,No HDD,50, Upto 14 Hrs Battery Life
+4302,Acer,29980,Intel Core i3 (12th Gen),Intel,Not Expandable,8 GB LP, LPDDR5 RAM, 3.4 Ghz Processor,LCD,15.6,UHD,Intel,256 GB SSD Storage,No HDD,45,45W Adapter
+4303,Acer,51603,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB LP, LPDDR3 RAM, 1.6 Ghz Processor,LED,14,UHD 620,Intel,256 GB SSD Storage,No HDD,45, Upto 8 Hrs Battery Life
+4304,HP,39997,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,UHD 620,Intel,NO SSD,1024 GB HDD Storage,65, Upto 4 Hrs Battery Life
+4305,Lenovo,126000,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 1.8 Ghz Processor,LED,14,"Radeon RX 640 GPU, 2 GB",AMD,512 GB SSD Storage,No HDD,45,45W Adapter
+4306,ASUS,49990,Intel Core i5 (11th Gen) Processor,Intel,Not Expandable,8 GB , DDR4 RAM,0,LED,14,UHD,Intel,256 GB SSD Storage,No HDD,45,45W Adapter
+4307,ASUS,50990,Intel Core i7 (7th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 2.7 Ghz Processor,LED,15.6,"GeForce 820M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,38,38W Adapter
+4308,HP,163601,Intel Core i7 (8th Gen),Intel,Not Expandable,12 GB , DDR4 RAM, 1.8 Ghz Processor,LED,17.3,"GeForce MX150 GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,90,90W Adapter
+4309,ASUS,49990,AMD Quad-Core Ryzen 3,AMD,Not Expandable,4 GB , DDR4 RAM, 2.7 Ghz Processor,LED,14,Radeon RX Vega 5,AMD,256 GB SSD Storage,No HDD,42,42W Adapter
+4310,MSI,120235,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.2 Ghz Processor,LED,15.6,"GeForce RTX 2060 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,180,180W Adapter
+4312,HP,31063,AMD Dual-Core Ryzen 3,AMD,Not Expandable,4 GB , DDR4 RAM, 2.6 Ghz Processor,LED,14,Radeon,AMD,NO SSD,1024 GB HDD Storage,37,37W Adapter
+4313,Dell,44940,Intel Core i5 (5th Gen),Intel, 8 GB Expandable,4 GB , DDR3 RAM , 2.2 Ghz Processor,LED,15.6,"GeForce 820M GPU, 2 GB",NVIDIA,NO SSD,500 GB HDD Storage,65, Upto 4 Hrs Battery Life
+4314,Acer,69999,Intel Core i5 (13th Gen),Intel,Not Expandable,16 GB LP, LPDDR5 RAM, 4.7 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,100,100W Adapter
+4315,ASUS,61990,Intel Core M3 (7th Gen),Intel,Not Expandable,4 GB , DDR3 RAM, 1.0 Ghz Processor,LED,13.3,HD,Intel,512 GB SSD Storage,No HDD,45, Upto 5 Hrs Battery Life
+4316,HP,52188,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.4 Ghz Processor,LED,14,HD 620,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4317,Acer,41990,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LCD,15.6,"GeForce MX450 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+4318,Lenovo,40899,Intel Core i3 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,65, Upto 7.5 Hrs Battery Life
+4319,ASUS,115000,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,"GeForce RTX 2060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,no,
+4320,HP,41990,AMD Dual-Core Ryzen 3,AMD,Not Expandable,8 GB , DDR4 RAM, 2.6 Ghz Processor,LED,14,Radeon,AMD,512 GB SSD Storage,No HDD,65,65W Adapter
+4321,ASUS,51891,Intel Core i5 (12th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.7 Ghz Processor,LCD,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,65, Upto 6 Hrs Battery Life
+4322,MSI,94990,Intel Core i7 (13th Gen),Intel,Not Expandable,16 GB LP, LPDDR5 RAM, 4.8 Ghz Processor,LCD,14,Iris Xe,Intel,1024 GB SSD Storage,No HDD,100,100W Adapter
+4323,ASUS,64990,AMD Octa-Core Ryzen 7,AMD, 16 GB Expandable,16 GB LP, LPDDR5 RAM , 3.1 Ghz Processor,LCD,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,150,150W Adapter
+4324,Lenovo,199999,Intel Core i9 (10th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.4 Ghz Processor,LED,15.6,"Geforce RTX 2080 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,80,80W Adapter
+4325,ASUS,130990,AMD Octa-Core Ryzen 9,AMD,Not Expandable,16 GB , DDR5 RAM, 4.8 Ghz Processor,LCD,14,"Radeon RX 6700S GPU, 8 GB",AMD,1024 GB SSD Storage,No HDD,65, Upto 8 Hrs Battery Life
+4327,Acer,16990,Intel Celeron Dual-Core,Intel,Not Expandable,2 GB , DDR3 RAM, 2.0 Ghz Processor,LED,11.6,HD Graphics,Intel,NO SSD,500 GB HDD Storage,41, Upto 5.5 Hrs Battery Life
+4328,ASUS,139990,Intel Core i7 (7th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.8 Ghz Processor,LED,15.6,"Geforce GTX 1060 GPU, 6 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,90,90W Adapter
+4329,ASUS,43990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,37,37W Adapter
+4330,ASUS,47490,Intel Core i5 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,14,UHD 620,Intel,512 GB SSD Storage,No HDD,50, Upto 9 Hrs Battery Life
+4331,ASUS,34000,Intel Core i3 (7th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,"GeForce 920M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4332,ASUS,114990,Intel Core i5 (13th Gen),Intel,Not Expandable,16 GB , DDR5 RAM, 2.6 Ghz Processor,LED,16,"GeForce RTX 4050 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,150, Upto 8 Hrs Battery Life
+4333,Dell,56990,Intel Core i5 (11th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 3.0 Ghz Processor,LCD,15.6,Integrated,Intel,256 GB SSD Storage , 1024 GB HDD Storage,65, Upto 6 Hrs Battery Life
+4334,ASUS,90000,AMD Octa-Core Ryzen 7,AMD, 32 GB Expandable,8 GB , DDR4 RAM , 2.9 Ghz Processor,LED,15.6,"Geforce GTX 1660 Ti GPU, 6 GB",NVIDIA,512 GB SSD Storage , 1024 GB HDD Storage,180,180W Adapter
+4335,Lenovo,74390,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+4337,MSI,145990,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.2 Ghz Processor,LED,17.3,"GeForce RTX 2060 GPU, 6 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,180,180W Adapter
+4338,Lenovo,82190,Intel Core i3 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.1 Ghz Processor,LED,14,"GeForce MX230 GPU, 2 GB",NVIDIA,1024 GB SSD Storage,No HDD,45, Upto 8 Hrs Battery Life
+4339,ASUS,94990,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR4 RAM, 2.0 Ghz Processor,LED,14,Radeon RX Vega 7 ,AMD,512 GB SSD Storage,No HDD,65,65W Adapter
+4340,ASUS,27990,Intel Pentium Quad-Core,Intel,Not Expandable,8 GB , DDR4 RAM, 1.1 Ghz Processor,LCD,14.1,UHD,Intel,256 GB SSD Storage,No HDD,65, Upto 6 Hrs Battery Life
+4341,ASUS,109990,AMD Octa-Core Ryzen 7,AMD,Not Expandable,32 GB LP, LPDDR5 RAM, 3.3 Ghz Processor,LCD,13.4,"GeForce RTX 3050 Ti GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,100,100W Adapter
+4342,ASUS,100990,Intel Core i7 (8th Gen),Intel,Not Expandable,8 GB , DDR3 RAM, 1.8 Ghz Processor,LED,14,"Geforce MX150 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+4343,MSI,184990,2.6 Ghz Processor,2.6, 32 GB Expandable,16 GB , DDR4 RAM ,0,LED,15.6,"GeForce RTX 2060 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,51,51W Adapter
+4344,ASUS,39990,AMD Quad-Core Ryzen 5,AMD, 12 GB Expandable,4 GB , DDR4 RAM , 2.1 Ghz Processor,LED,15.6,Radeon Vega 8,AMD,256 GB SSD Storage,No HDD,no,
+4345,Lenovo,104990,Intel Core i7 (13th Gen),Intel, 16 GB Expandable,16 GB LP, LPDDR5 RAM , 3.4 Ghz Processor,LCD,14.5,"GeForce RTX 4050 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,140, Upto 9 Hrs Battery Life
+4346,ASUS,78990,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR4 RAM, 2.9 Ghz Processor,LED,14,"GeForce GTX 1650 Ti GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,180,180W Adapter
+4347,Lenovo,48890,AMD Quad-Core A10 APU,AMD,Not Expandable,8 GB , DDR3 RAM, 1.8 Ghz Processor,LED,15.6,"EXO PRO R5 M330 GPU, 2 GB",ATI,NO SSD,1024 GB HDD Storage,65, Upto 4 Hrs Battery Life
+4348,Smartron,42490,Intel Core M3 (7th Gen),Intel,Not Expandable,4 GB LP, LPDDR3 RAM, 1.0 Ghz Processor,LED,12.2,HD 615,Intel,128 GB SSD Storage,No HDD,45, Upto 10 Hrs Battery Life
+4349,ASUS,49000,Intel Core i5 (6th Gen),Intel, 12 GB Expandable,4 GB , DDR3 RAM , 2.3 Ghz Processor,LED,15.6,"GeForce 930M GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,no,Upto 6 Hrs Battery Life
+4350,Dell,71724,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,15.6,GeForce MX230,NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,42,42W Adapter
+4351,ASUS,164990,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.2 Ghz Processor,LED,15.6,"GeForce RTX 2060 GPU, 6 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,230,230W Adapter
+4352,Dell,57890,Intel Core i5 (12th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 3.3 Ghz Processor,LCD,15.6,"GeForce MX550 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,45,45W Adapter
+4353,ASUS,55190,Intel Core i7 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.8 Ghz Processor,LED,15.6,"Geforce 940MX GPU, 2 GB",NVIDIA,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4354,MSI,54990,AMD Octa-Core Ryzen 7,AMD, 16 GB Expandable,16 GB , DDR4 RAM , 4.2 Ghz Processor,LCD,15.6,Radeon,AMD,1024 GB SSD Storage,No HDD,no,
+4355,ASUS,52990,Intel Core i5 (7th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.5 Ghz Processor,LED,15.6,"Geforce Gt 940MX GPU, 2 GB",Nvidia,NO SSD,1024 GB HDD Storage,no,
+4356,Lenovo,110890,Intel Core i5 (9th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 2.4 Ghz Processor,LED,15.6,"GeForce RTX 2060 GPU, 6 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,57,57W Adapter
+4357,AVITA,38990,Intel Core i3 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.2 Ghz Processor,LED,14,UHD 620,Intel,128 GB SSD Storage,No HDD,36, Upto 10 Hrs Battery Life
+4358,Dell,64990,Intel Core i5 (12th Gen),Intel, 64 GB Expandable,8 GB , DDR4 RAM , 1.2 Ghz Processor,LCD,16,Integrated,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4359,ASUS,70990,Intel Core i5 (12th Gen),Intel,Not Expandable,16 GB LP, LPDDR5 RAM, 1.7 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65, Upto 18 Hrs Battery Life
+4361,HP,149490,Intel Core i7 (8th Gen),Intel,Not Expandable,16 GB LP, LPDDR3 RAM, 1.8 Ghz Processor,LED,13.3,UHD 620,Intel,512 GB SSD Storage,No HDD,60,60W Adapter
+4362,Lenovo,55139,Intel Core i5 (8th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,UHD 620,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4363,ASUS,146000,Intel Core i7 (11th Gen) Processor,Intel, 32 GB Expandable,16 GB , DDR4 RAM ,0,LED,15.6,"GeForce RTX 3070 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,200,200W Adapter
+4364,ASUS,32245,Intel Core i3 (5th Gen),Intel,Not Expandable,4 GB , DDR3 RAM, 2.0 Ghz Processor,LED,15.6,HD 4400,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4366,Acer,47990,AMD Hexa-Core Ryzen 5,AMD,Not Expandable,16 GB , DDR4 RAM, 4.2 Ghz Processor,LCD,14,Radeon,AMD,512 GB SSD Storage,No HDD,65, Upto 10 Hrs Battery Life
+4367,Lenovo,29990,Intel Core i3 (6th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.0 Ghz Processor,LED,15.6,HD 520,Intel,NO SSD,1024 GB HDD Storage,41,41W Adapter
+4368,Dell,129990,Intel Core i7 (8th Gen),Intel,Not Expandable,16 GB LP, LPDDR3 RAM, 1.8 Ghz Processor,LED,13.3,UHD 620,Intel,512 GB SSD Storage,No HDD,52,52W Adapter
+4369,ASUS,46990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,14,UHD,Intel,NO SSD,1024 GB HDD Storage,45,45W Adapter
+4370,ASUS,67990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,"Geforce MX110 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+4372,Lenovo,118195,Intel Core i5 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,50,50W Adapter
+4373,Lenovo,29240,Intel Core i3 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.0 Ghz Processor,LCD,15.6,UHD,Intel,NO SSD,1024 GB HDD Storage,65,65W Adapter
+4374,Acer,169990,Intel Core i9 (11th Gen),Intel, 32 GB Expandable,32 GB , DDR4 RAM , 4.8 Ghz Processor,LCD,15.6,"GeForce RTX 3070 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,59,59W Adapter
+4375,MSI,194990,Intel Core i7 (13th Gen),Intel,Not Expandable,32 GB , DDR5 RAM, 3.4 Ghz Processor,LCD,17.3,"GeForce RTX 4070 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,65,65W Adapter
+4376,Dell,154366,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR5 RAM, 4.7 Ghz Processor,LCD,15.6,"GeForce RTX 3060 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+4377,ASUS,45999,Intel Core i5 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.4 Ghz Processor,LED,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,no,
+4378,ASUS,38990,Intel Core i3 (10th Gen),Intel,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,UHD,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+4379,ASUS,93990,Intel Core i7 (8th Gen),Intel, 16 GB Expandable,8 GB , DDR4 RAM , 1.8 Ghz Processor,LED,14,"GeForce MX150 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,50, Upto 9 Hrs Battery Life
+4380,ASUS,146990,Intel Core i7 (11th Gen) Processor,Intel, 32 GB Expandable,16 GB , DDR4 RAM ,0,LED,15.6,"GeForce RTX 3070 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,200,200W Adapter
+4381,Microsoft,114999,Intel Core i5 (7th Gen),Intel,Not Expandable,8 GB , DDR3 RAM, 2.6 Ghz Processor,LED,13.5,HD 620,Intel,256 GB SSD Storage,No HDD,no,Upto 14 Hrs Battery Life
+4382,ASUS,41699,AMD Quad-Core Ryzen 5,AMD,Not Expandable,4 GB , DDR4 RAM, 2.1 Ghz Processor,LED,15.6,Radeon Vega 8,AMD,256 GB SSD Storage,No HDD,45,45W Adapter
+4383,ASUS,62990,Intel Core i5 (11th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.4 Ghz Processor,LED,14,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4384,HP,200777,Intel Core i7 (9th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LED,15.6,"GeForce RTX 2080 GPU, 8 GB",NVIDIA,256 GB SSD Storage,No HDD,72,72W Adapter
+4385,Lenovo,74990,Intel Core i7 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.8 Ghz Processor,LED,14,UHD,Intel,128 GB SSD Storage , 1024 GB HDD Storage,45,45W Adapter
+4386,ASUS,179990,Intel Core i7 (10th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.6 Ghz Processor,LED,17.3,"Geforce RTX 2060 GPU, 6 GB",NVIDIA,1024 GB SSD Storage,No HDD,240,240W Adapter
+4387,Dell,139990,Intel Core i7 (9th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.6 Ghz Processor,LED,15.6,"GeForce RTX 2060 GPU, 6 GB",NVIDIA,512 GB SSD Storage,No HDD,no,Upto 8 Hrs Battery Life
+4388,ASUS,269990,Intel Core i9 (10th Gen),Intel,Not Expandable,32 GB , DDR4 RAM, 2.4 Ghz Processor,LED,17.3,"Geforce RTX 2080 Super GPU, 8 GB",NVIDIA,2048 GB SSD Storage,No HDD,280,280W Adapter
+4389,ASUS,27490,Intel Core i3 (7th Gen),Intel, 8 GB Expandable,4 GB , DDR4 RAM , 2.4 Ghz Processor,LED,15.6,HD 620,Intel,NO SSD,1024 GB HDD Storage,36,36W Adapter
+4390,ASUS,299990,Intel Core i7 (9th Gen),Intel, 64 GB Expandable,32 GB , DDR4 RAM , 2.6 Ghz Processor,LED,17.3,"GeForce RTX 2080 GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,230,230W Adapter
+4391,ASUS,48990,Intel Core i5 (12th Gen),Intel, 12 GB Expandable,8 GB , DDR4 RAM , 2.5 Ghz Processor,LCD,15.6,Iris Xe,Intel,512 GB SSD Storage,No HDD,65,65W Adapter
+4392,Dell,61500,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.2 Ghz Processor,LED,15.6,"Geforce MX230 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,65,65W Adapter
+4393,ASUS,49990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.0 Ghz Processor,LED,15.6,UHD,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+4394,HP,94990,Intel Core i7 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.2 Ghz Processor,LED,15.6,"Geforce GTX 1050Ti GPU, 4 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,52,52W Adapter
+4395,Dell,72000,Intel Core i5 (8th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,15.6,"Geforce MX150 GPU, 2 GB",NVIDIA,128 GB SSD Storage , 1024 GB HDD Storage,65,65W Adapter
+4396,Lenovo,78000,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 1.6 Ghz Processor,LED,14,UHD,Intel,512 GB SSD Storage,No HDD,45,45W Adapter
+4397,ASUS,180990,Intel Core i7 (10th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.3 Ghz Processor,LED,17.3,"Geforce RTX 2080 Super GPU, 8 GB",NVIDIA,1024 GB SSD Storage,No HDD,no,
+4398,ASUS,69990,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,15.6,"GeForce MX150 GPU, 2 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,42,42W Adapter
+4399,HP,103990,AMD Octa-Core Ryzen 7,AMD, 16 GB Expandable,16 GB , DDR5 RAM , 3.1 Ghz Processor,LCD,16.2,"GeForce RTX 3050 Ti GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,65,65W Adapter
+4400,Dell,35990,Intel Core i3 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.0 Ghz Processor,LCD,15.6,UHD,Intel,512 GB SSD Storage,No HDD,65, Upto 6 Hrs Battery Life
+4401,ASUS,109990,Intel Core i9 (13th Gen),Intel,Not Expandable,16 GB , DDR4 RAM, 2.6 Ghz Processor,LCD,16,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,120, Upto 6 Hrs Battery Life
+4402,MSI,185990,Intel Core i7 (7th Gen),Intel, 32 GB Expandable,16 GB , DDR4 RAM , 2.8 Ghz Processor,LED,17.3,"Geforce GTX 1070 GPU, 8 GB",NVIDIA,256 GB SSD Storage , 1024 GB HDD Storage,no,
+4403,ASUS,84990,Intel Core i5 (8th Gen),Intel, 32 GB Expandable,8 GB , DDR4 RAM , 1.6 Ghz Processor,LED,14,"Geforce MX150 GPU, 2 GB",NVIDIA,512 GB SSD Storage,No HDD,65, Upto 9 Hrs Battery Life
+4404,ASUS,40031,Intel Core i3 (11th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 4.0 Ghz Processor,LED,15.6,UHD,Intel,256 GB SSD Storage,No HDD,65, Upto 3 Hrs Battery Life
+4405,ASUS,75990,AMD Octa-Core Ryzen 7,AMD,Not Expandable,16 GB , DDR4 RAM, 3.1 Ghz Processor,LED,15.6,"GeForce RTX 3050 GPU, 4 GB",NVIDIA,1024 GB SSD Storage,No HDD,120, Upto 3 Hrs Battery Life
+4407,ASUS,71909,AMD Quad-Core Ryzen 5,AMD, 32 GB Expandable,8 GB , DDR4 RAM , 2.1 Ghz Processor,LED,15.6,"GeForce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,150,150W Adapter
+4408,Lenovo,69990,Intel Core i5 (10th Gen),Intel,Not Expandable,8 GB , DDR4 RAM, 2.5 Ghz Processor,LED,15.6,"Geforce GTX 1650 GPU, 4 GB",NVIDIA,512 GB SSD Storage,No HDD,60,60W Adapter
