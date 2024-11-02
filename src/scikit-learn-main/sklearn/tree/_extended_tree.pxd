@@ -54,4 +54,6 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         const uint8_t[::1] missing_values_in_feature_mask=*,
     )
 
-    cpdef _load_initial_tree(self, Tree tree)
+    cdef _continue_training(self, Tree tree)
+
+    # cpdef _load_initial_tree(self, Tree tree)

@@ -86,192 +86,136 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         # Initialize the stack to store the leafs of the initial tree
         self.builder_stack = stack[StackRecord]()
 
-    cpdef _load_initial_tree(
-        self, 
-        Tree tree
-    ):
-        """
-        Load the tree from lists containing node information.
-        """
-        # Get the number of nodes from the parents array
-        cdef int n_nodes = self.parents.shape[0]
-        cdef int i
+    # cpdef _load_initial_tree(
+    #     self, 
+    #     Tree tree
+    # ):
+    #     """
+    #     Load the tree from lists containing node information.
+    #     """
+    #     # Get the number of nodes from the parents array
+    #     cdef int n_nodes = self.parents.shape[0]
+    #     cdef int i
 
-        cdef SplitRecord split
-        cdef ParentInfo parent_record
-        cdef bint first = 1
-        cdef intp_t start
-        cdef intp_t end
+    #     cdef SplitRecord split
+    #     cdef ParentInfo parent_record
+    #     cdef bint first = 1
+    #     cdef intp_t start
+    #     cdef intp_t end
 
-        # Initialize the parent record
-        parent_record.lower_bound = -INFINITY      
-        parent_record.upper_bound = INFINITY
-        parent_record.impurity = self.impurities[0]
-        parent_record.n_constant_features = 0
+    #     # Initialize the parent record
+    #     parent_record.lower_bound = -INFINITY      
+    #     parent_record.upper_bound = INFINITY
+    #     parent_record.impurity = self.impurities[0]
+    #     parent_record.n_constant_features = 0
 
-        # Definition of vector of start, split and end positions
-        cdef cnp.ndarray start_pos = np.empty(n_nodes, dtype=np.intp)
-        cdef cnp.ndarray split_pos = np.empty(n_nodes, dtype=np.intp)
-        cdef cnp.ndarray end_pos = np.empty(n_nodes, dtype=np.intp)
+    #     # Definition of vector of start, split and end positions
+    #     cdef cnp.ndarray start_pos = np.empty(n_nodes, dtype=np.intp)
+    #     cdef cnp.ndarray split_pos = np.empty(n_nodes, dtype=np.intp)
+    #     cdef cnp.ndarray end_pos = np.empty(n_nodes, dtype=np.intp)
 
-        # Fix ponele
-        cdef float64_t weighted_n_node_samples
+    #     # Fix ponele
+    #     cdef float64_t weighted_n_node_samples
 
-        print("Instanciated the things before loading the nodes")
+    #     print("Instanciated the things before loading the nodes")
 
-        for i in range(n_nodes):
-            if not self.is_leafs[i]:
+    #     for i in range(n_nodes):
+    #         if not self.is_leafs[i]:
                 
-                # Compute the split position with the threshold and feature used
-                threshold = self.thresholds[i]
-                feature = self.features[i]
+    #             # Compute the split position with the threshold and feature used
+    #             threshold = self.thresholds[i]
+    #             feature = self.features[i]
 
-                if first:
-                    # Define the start and end positions for this split
-                    start = 0
-                    end = self.n_node_samples_vec[0]
+    #             if first:
+    #                 # Define the start and end positions for this split
+    #                 start = 0
+    #                 end = self.n_node_samples_vec[0]
 
-                    # Define what my childs will see
-                    start_pos[0] = start
-                    end_pos[0] = end
+    #                 # Define what my childs will see
+    #                 start_pos[0] = start
+    #                 end_pos[0] = end
 
-                    # Not first anymore
-                    first = 0
-                else:
-                    if self.is_lefts[i]:
-                        # Define the start and end positions for this split
-                        start = start_pos[self.parents[i]]
-                        end = split_pos[self.parents[i]]
+    #                 # Not first anymore
+    #                 first = 0
+    #             else:
+    #                 if self.is_lefts[i]:
+    #                     # Define the start and end positions for this split
+    #                     start = start_pos[self.parents[i]]
+    #                     end = split_pos[self.parents[i]]
 
-                        # Define what my childs will see
-                        start_pos[i] = start
-                        end_pos[i] = pos
-                    else:
-                        # Define the start and end positions for this split
-                        start = split_pos[self.parents[i]]
-                        end = end_pos[self.parents[i]]
+    #                     # Define what my childs will see
+    #                     start_pos[i] = start
+    #                     end_pos[i] = pos
+    #                 else:
+    #                     # Define the start and end positions for this split
+    #                     start = split_pos[self.parents[i]]
+    #                     end = end_pos[self.parents[i]]
                         
-                        # Define what my childs will see
-                        start_pos[i] = pos
-                        end_pos[i] = end
+    #                     # Define what my childs will see
+    #                     start_pos[i] = pos
+    #                     end_pos[i] = end
 
-                print("Start: ", start)
-                print("End: ", end)
+    #             print("Start: ", start)
+    #             print("End: ", end)
 
-                self.splitter.node_reset(start, end, &weighted_n_node_samples)
+    #             self.splitter.node_reset(start, end, &weighted_n_node_samples)
 
-                # Compute the split position
-                pos = self.splitter.recompute_node_split(&parent_record, &split, feature, threshold)
+    #             # Compute the split position
+    #             pos = self.splitter.recompute_node_split(&parent_record, &split, feature, threshold)
 
-                print("I found the split position p = ", pos)
+    #             print("I found the split position p = ", pos)
                 
-                split_pos[i] = pos
+    #             split_pos[i] = pos
 
-                node_id = tree._add_node(
-                    self.parents[i], self.is_lefts[i], self.is_leafs[i],
-                    self.features[i], self.thresholds[i], self.impurities[i],
-                    self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
-                    self.missing_go_to_lefts[i]
-                ) 
-            else:
-                if not self.is_lefts[i]:
-                    # Push right child on stack
-                    self.builder_stack.push({
-                        "start": split_pos[self.parents[i]],
-                        "end": end_pos[self.parents[i]],
-                        "depth": self.depths[i],
-                        "parent": self.parents[i],
-                        "is_left": 0,
-                        "impurity": self.impurities[i],
-                        "n_constant_features": parent_record.n_constant_features,
-                        "lower_bound": -INFINITY,
-                        "upper_bound": INFINITY,
-                    })
-
-                    # Push left child on stack
-                    self.builder_stack.push({
-                        "start": start_pos[self.parents[i]],
-                        "end": split_pos[self.parents[i]],
-                        "depth": self.depths[i],
-                        "parent": self.parents[i],
-                        "is_left": 1,
-                        "impurity": self.impurities[i],
-                        "n_constant_features": parent_record.n_constant_features,
-                        "lower_bound": -INFINITY,
-                        "upper_bound": INFINITY,
-                    })
-                    print("Pushed the children of node ", i)
-                
-    cpdef build_extended(
+    #             node_id = tree._add_node(
+    #                 self.parents[i], self.is_lefts[i], self.is_leafs[i],
+    #                 self.features[i], self.thresholds[i], self.impurities[i],
+    #                 self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
+    #                 self.missing_go_to_lefts[i]
+    #             ) 
+    #         else:
+    #             if not self.is_lefts[i]:
+    #                 # Push right child on stack
+    #                 self.builder_stack.push({
+    #                     "start": split_pos[self.parents[i]],
+    #                     "end": end_pos[self.parents[i]],
+    #                     "depth": self.depths[i],
+    #                     "parent": self.parents[i],
+    #                     "is_left": 0,
+    #                     "impurity": self.impurities[i],
+    #                     "n_constant_features": parent_record.n_constant_features,
+    #                     "lower_bound": -INFINITY,
+    #                     "upper_bound": INFINITY,
+    #                 })
+    #                 print("Pushed the right child. Node:", i)
+    #             else:
+    #                 # Push left child on stack
+    #                 self.builder_stack.push({
+    #                     "start": start_pos[self.parents[i]],
+    #                     "end": split_pos[self.parents[i]],
+    #                     "depth": self.depths[i],
+    #                     "parent": self.parents[i],
+    #                     "is_left": 1,
+    #                     "impurity": self.impurities[i],
+    #                     "n_constant_features": parent_record.n_constant_features,
+    #                     "lower_bound": -INFINITY,
+    #                     "upper_bound": INFINITY,
+    #                 })
+    #                 print("Pushed the left child. Node:", i)
+    
+    cdef _continue_training(
         self,
         Tree tree,
-        object X,
-        const float64_t[:, ::1] y,
-        cnp.ndarray parents,
-        cnp.ndarray depths,
-        cnp.ndarray is_lefts,
-        cnp.ndarray is_leafs,
-        cnp.ndarray features,
-        cnp.ndarray thresholds,
-        cnp.ndarray impurities,
-        cnp.ndarray n_node_samples_vec,
-        cnp.ndarray weighted_n_node_samples_vec,
-        cnp.ndarray missing_go_to_lefts,
-        const float64_t[:] sample_weight=None,
-        const uint8_t[::1] missing_values_in_feature_mask=None,
     ):
         """
-        Build a decision tree with additional features.
+        Continue training the tree with unique node loaded in builder_stack.
         """
-        # Ensure the input arrays are one-dimensional
-        if (parents.ndim != 1 or is_lefts.ndim != 1 or is_leafs.ndim != 1 or 
-            features.ndim != 1 or thresholds.ndim != 1 or 
-            impurities.ndim != 1 or n_node_samples_vec.ndim != 1 or 
-            weighted_n_node_samples_vec.ndim != 1 or missing_go_to_lefts.ndim != 1):
-            raise ValueError("All parameters must be one-dimensional NumPy arrays.")
-        
-        # Assign the cnp.ndarray objects to the class attributes
-        self.parents = parents
-        self.depths = depths
-        self.is_lefts = is_lefts
-        self.is_leafs = is_leafs
-        self.features = features
-        self.thresholds = thresholds
-        self.impurities = impurities
-        self.n_node_samples_vec = n_node_samples_vec
-        self.weighted_n_node_samples_vec = weighted_n_node_samples_vec
-        self.missing_go_to_lefts = missing_go_to_lefts
-
-        #####################################################################################
-
-        # check input
-        X, y, sample_weight = self._check_input(X, y, sample_weight)
-        
-        print("Passed the check_input")
-
-        # Initial capacity
-        cdef intp_t init_capacity
-
-        if tree.max_depth <= 10:
-            init_capacity = <intp_t> (2 ** (tree.max_depth + 1)) - 1
-        else:
-            init_capacity = 2047
-
-        tree._resize(init_capacity)
-
-        print("Passed the resize process")
-
         # Parameters
         cdef intp_t max_depth = self.max_depth
         cdef intp_t min_samples_leaf = self.min_samples_leaf
         cdef float64_t min_weight_leaf = self.min_weight_leaf
         cdef intp_t min_samples_split = self.min_samples_split
         cdef float64_t min_impurity_decrease = self.min_impurity_decrease
-
-        # Recursive partition (without actual recursion)
-        self.splitter.init(X, y, sample_weight, missing_values_in_feature_mask)
-
-        print("Passed the splitter init")
 
         cdef intp_t start
         cdef intp_t end
@@ -296,16 +240,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         cdef StackRecord stack_record
 
         cdef ParentInfo parent_record
-        _init_parent_record(&parent_record)
-
-        #####################################################################################
-
-        # Load initial tree in the builder process
-        self._load_initial_tree(tree)
-
-        # print(self.builder_stack)
-
-        # Continue training almost copying the original code but building from the loaded stack
+        # _init_parent_record(&parent_record)
 
         with nogil:
             while not self.builder_stack.empty():
@@ -321,6 +256,10 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                 parent_record.n_constant_features = stack_record.n_constant_features
                 parent_record.lower_bound = stack_record.lower_bound
                 parent_record.upper_bound = stack_record.upper_bound
+
+                with gil:
+                    if start == end:
+                        print("Start = end =", start)
 
                 n_node_samples = end - start
                 self.splitter.node_reset(start, end, &weighted_n_node_samples)
@@ -429,4 +368,227 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                 tree.max_depth = max_depth_seen
         if rc == -1:
             raise MemoryError()
+        
+
+    cpdef build_extended(
+        self,
+        Tree tree,
+        object X,
+        const float64_t[:, ::1] y,
+        cnp.ndarray parents,
+        cnp.ndarray depths,
+        cnp.ndarray is_lefts,
+        cnp.ndarray is_leafs,
+        cnp.ndarray features,
+        cnp.ndarray thresholds,
+        cnp.ndarray impurities,
+        cnp.ndarray n_node_samples_vec,
+        cnp.ndarray weighted_n_node_samples_vec,
+        cnp.ndarray missing_go_to_lefts,
+        const float64_t[:] sample_weight=None,
+        const uint8_t[::1] missing_values_in_feature_mask=None,
+    ):
+        """
+        Build a decision tree with additional features.
+        """
+        # Ensure the input arrays are one-dimensional
+        if (parents.ndim != 1 or is_lefts.ndim != 1 or is_leafs.ndim != 1 or 
+            features.ndim != 1 or thresholds.ndim != 1 or 
+            impurities.ndim != 1 or n_node_samples_vec.ndim != 1 or 
+            weighted_n_node_samples_vec.ndim != 1 or missing_go_to_lefts.ndim != 1):
+            raise ValueError("All parameters must be one-dimensional NumPy arrays.")
+        
+        # Assign the cnp.ndarray objects to the class attributes
+        self.parents = parents
+        self.depths = depths
+        self.is_lefts = is_lefts
+        self.is_leafs = is_leafs
+        self.features = features
+        self.thresholds = thresholds
+        self.impurities = impurities
+        self.n_node_samples_vec = n_node_samples_vec
+        self.weighted_n_node_samples_vec = weighted_n_node_samples_vec
+        self.missing_go_to_lefts = missing_go_to_lefts
+
+        #####################################################################################
+
+        # check input
+        X, y, sample_weight = self._check_input(X, y, sample_weight)
+        
+        print("Passed the check_input")
+
+        # Initial capacity
+        cdef intp_t init_capacity
+
+        if tree.max_depth <= 10:
+            init_capacity = <intp_t> (2 ** (tree.max_depth + 1)) - 1
+        else:
+            init_capacity = 2047
+
+        tree._resize(init_capacity)
+
+        print("Passed the resize process")
+
+        # Parameters
+        cdef intp_t max_depth = self.max_depth
+        cdef intp_t min_samples_leaf = self.min_samples_leaf
+        cdef float64_t min_weight_leaf = self.min_weight_leaf
+        cdef intp_t min_samples_split = self.min_samples_split
+        cdef float64_t min_impurity_decrease = self.min_impurity_decrease
+
+        # Recursive partition (without actual recursion)
+        self.splitter.init(X, y, sample_weight, missing_values_in_feature_mask)
+
+        print("Passed the splitter init")
+
+        cdef intp_t start
+        cdef intp_t end
+        cdef intp_t pos
+        # cdef intp_t depth
+        # cdef intp_t parent
+        # cdef bint is_left
+        # cdef intp_t n_node_samples = self.splitter.n_samples
+        cdef float64_t weighted_n_node_samples
+        cdef SplitRecord split
+        cdef intp_t node_id
+
+        # cdef float64_t middle_value
+        # cdef float64_t left_child_min
+        # cdef float64_t left_child_max
+        # cdef float64_t right_child_min
+        # cdef float64_t right_child_max
+        # cdef bint is_leaf
+        cdef bint first = 1
+        # cdef intp_t max_depth_seen = -1
+        # cdef int rc = 0
+
+        cdef StackRecord stack_record
+
+        cdef ParentInfo parent_record
+        _init_parent_record(&parent_record)
+
+        #####################################################################################
+
+        # Get the number of nodes from the parents array
+        cdef intp_t initial_n_nodes = self.parents.shape[0]
+        cdef intp_t i
+
+        # Definition of vector of start, split and end positions
+        cdef cnp.ndarray start_pos = np.empty(initial_n_nodes, dtype=np.intp)
+        cdef cnp.ndarray split_pos = np.empty(initial_n_nodes, dtype=np.intp)
+        cdef cnp.ndarray end_pos = np.empty(initial_n_nodes, dtype=np.intp)
+
+        for i in range(initial_n_nodes):
+            if not self.is_leafs[i]:
+
+                # Compute the split position with the threshold and feature used
+                threshold = self.thresholds[i]
+                feature = self.features[i]
+
+                if first:
+                    # Define the start and end positions for this split
+                    start = 0
+                    end = self.n_node_samples_vec[0]
+
+                    # Define what my childs will see
+                    start_pos[0] = start
+                    end_pos[0] = end
+
+                    # Not first anymore
+                    first = 0
+
+                    # Add root node from initial tree
+                    self.splitter.node_reset(start, end, &weighted_n_node_samples)
+
+                    # Compute the split position
+                    pos = self.splitter.recompute_node_split(&parent_record, &split, feature, threshold)
+
+                    print("I am first")
+                    print("I found the split position p = ", pos)
+                    
+                    split_pos[i] = pos
+
+                    node_id = tree._add_node(
+                        self.parents[i], self.is_lefts[i], self.is_leafs[i],
+                        self.features[i], self.thresholds[i], self.impurities[i],
+                        self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
+                        self.missing_go_to_lefts[i]
+                    )
+
+                else:
+                    if self.is_lefts[i]:
+                        # Define the start and end positions for this split
+                        start = start_pos[self.parents[i]]
+                        end = split_pos[self.parents[i]]
+
+                        # Define what my childs will see
+                        start_pos[i] = start
+                        end_pos[i] = pos
+                        print("I am left node:", i)
+                    else:
+                        # Define the start and end positions for this split
+                        start = split_pos[self.parents[i]]
+                        end = end_pos[self.parents[i]]
+                        
+                        # Define what my childs will see
+                        start_pos[i] = pos
+                        end_pos[i] = end
+                        print("I am right node:", i)
+
+                    self.splitter.node_reset(start, end, &weighted_n_node_samples)
+
+                    # Compute the split position
+                    pos = self.splitter.recompute_node_split(&parent_record, &split, feature, threshold)
+
+                    print("I found the split position p = ", pos)
+                    
+                    split_pos[i] = pos
+
+                    node_id = tree._add_node(
+                        self.parents[i], self.is_lefts[i], self.is_leafs[i],
+                        self.features[i], self.thresholds[i], self.impurities[i],
+                        self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
+                        self.missing_go_to_lefts[i]
+                    )
+
+                parent_record.impurity = self.impurities[i]
+
+            else:
+                if not self.is_lefts[i]:
+                    # Push right child on stack
+                    # if abs(self.impurities[i+2] - split.impurity_right) > 1e-6:
+                    #     print("Impurity right is different")
+
+                    self.builder_stack.push({
+                        "start": split_pos[self.parents[i]],
+                        "end": end_pos[self.parents[i]],
+                        "depth": self.depths[i],
+                        "parent": self.parents[i],
+                        "is_left": 0,
+                        "impurity": split.impurity_right,
+                        "n_constant_features": parent_record.n_constant_features,
+                        "lower_bound": -INFINITY,
+                        "upper_bound": INFINITY,
+                    })
+                    print("Pushed the right child. Node:", i)
+                else:
+                    # Push left child on stack
+                    # if abs(self.impurities[i+1] - split.impurity_right) > 1e-6:
+                    #     print("Impurity left is different")
+
+                    self.builder_stack.push({
+                        "start": start_pos[self.parents[i]],
+                        "end": split_pos[self.parents[i]],
+                        "depth": self.depths[i],
+                        "parent": self.parents[i],
+                        "is_left": 1,
+                        "impurity": split.impurity_left,
+                        "n_constant_features": parent_record.n_constant_features,
+                        "lower_bound": -INFINITY,
+                        "upper_bound": INFINITY,
+                    })
+                    print("Pushed the left child. Node:", i)
+                
+                print("About to continue training from node:", i)
+                self._continue_training(tree)    
         

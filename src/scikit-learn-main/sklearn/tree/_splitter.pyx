@@ -949,7 +949,7 @@ cdef inline int recompute_node_split_func(
         # cdef float64_t current_proxy_improvement = -INFINITY
         # cdef float64_t best_proxy_improvement = -INFINITY
 
-        # cdef float64_t impurity = parent_record.impurity
+        cdef float64_t impurity = parent_record.impurity
         # cdef float64_t lower_bound = parent_record.lower_bound
         # cdef float64_t upper_bound = parent_record.upper_bound
 
@@ -971,11 +971,13 @@ cdef inline int recompute_node_split_func(
             print("Feature: ", best_split.feature)
             print("Threshold: ", threshold)
             print("Missing values: ", n_missing)
+            print("Start: ", start)
             print("End non missing: ", end_non_missing)
+
         # Find the position of the threshold in the sorted feature values
         p = start
         while p < end_non_missing:
-            if feature_values[p] >= threshold:
+            if feature_values[p] > threshold:
                 break
             p += 1
         
@@ -991,6 +993,14 @@ cdef inline int recompute_node_split_func(
 
         criterion.reset()
         criterion.update(best_split.pos)
+        criterion.children_impurity(
+            &best_split.impurity_left, &best_split.impurity_right
+        )
+        best_split.improvement = criterion.impurity_improvement(
+            impurity,
+            best_split.impurity_left,
+            best_split.impurity_right
+        )
 
         # Return values
         parent_record.n_constant_features = 0
