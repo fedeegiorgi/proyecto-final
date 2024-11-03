@@ -17,8 +17,9 @@ DATASETS_COLUMNS = { # Acá se agregan todos los datasets que están en la carpe
     'Height': 'childHeight',
     'salary_football': 'Wage',
     'boston_housing': 'MEDV',
+    'Carbon_Emission_transformed': 'CarbonEmission',
 } 
-NEW_DATASET_NAME = 'boston_housing.arff' # Nombre del nuevo dataset a evaluar
+NEW_DATASET_NAME = 'Carbon_Emission_transformed.csv' # Nombre del nuevo dataset a evaluar
 DATASETS_FOLDER = 'datasets/'
 MODEL_CLASSES = [
     RandomForestRegressor, IQRRandomForestRegressor, OOBRandomForestRegressor,
@@ -29,8 +30,8 @@ MODEL_CLASSES = [
 NEW_CLASS = RFRegressorFirstSplitCombiner
 
 # Decision variables
-RUN_NEW_DATASET = False
-RUN_NEW_ALGORITHM = True
+RUN_NEW_DATASET = True
+RUN_NEW_ALGORITHM = False
 
 def process_dataset(filepath, extension, dataset_name):
     """
