@@ -40,6 +40,7 @@ from ..utils.validation import (
 )
 from ._base import BaseEnsemble, _partition_estimators
 
+from ._forest import _get_n_samples_bootstrap
 __all__ = [
     "SharedKnowledgeRandomForestRegressor",
 ]
@@ -219,7 +220,7 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         self.max_depth = original_max_depth
 
         # We don't need to bootstrap the data for the extended trees training
-        self.bootstrap = False
+        # self.bootstrap = False
 
         # Divide the trees into groups
         initial_grouped_trees = self.group_split(self.estimators_)
@@ -284,7 +285,8 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
 
                 # Validate training data
                 new_X, new_y, sample_weight, missing_values_in_feature_mask, random_state = self._original_fit_validations(new_X, new_y, sample_weight)
-
+                # print(f"Shape of X for tree {j} in group {i}: {new_X.shape}")
+                # print(f"Shape of y for tree {j} in group {i}: {new_y.shape}")
                 print(f"About to fit extended tree {j} in group {i}")
                 
                 # Fit the extended tree with the new features based on the original tree

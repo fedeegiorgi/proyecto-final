@@ -85,128 +85,8 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
 
         # Initialize the stack to store the leafs of the initial tree
         self.builder_stack = stack[StackRecord]()
-
-    # cpdef _load_initial_tree(
-    #     self, 
-    #     Tree tree
-    # ):
-    #     """
-    #     Load the tree from lists containing node information.
-    #     """
-    #     # Get the number of nodes from the parents array
-    #     cdef int n_nodes = self.parents.shape[0]
-    #     cdef int i
-
-    #     cdef SplitRecord split
-    #     cdef ParentInfo parent_record
-    #     cdef bint first = 1
-    #     cdef intp_t start
-    #     cdef intp_t end
-
-    #     # Initialize the parent record
-    #     parent_record.lower_bound = -INFINITY      
-    #     parent_record.upper_bound = INFINITY
-    #     parent_record.impurity = self.impurities[0]
-    #     parent_record.n_constant_features = 0
-
-    #     # Definition of vector of start, split and end positions
-    #     cdef cnp.ndarray start_pos = np.empty(n_nodes, dtype=np.intp)
-    #     cdef cnp.ndarray split_pos = np.empty(n_nodes, dtype=np.intp)
-    #     cdef cnp.ndarray end_pos = np.empty(n_nodes, dtype=np.intp)
-
-    #     # Fix ponele
-    #     cdef float64_t weighted_n_node_samples
-
-    #     print("Instanciated the things before loading the nodes")
-
-    #     for i in range(n_nodes):
-    #         if not self.is_leafs[i]:
-                
-    #             # Compute the split position with the threshold and feature used
-    #             threshold = self.thresholds[i]
-    #             feature = self.features[i]
-
-    #             if first:
-    #                 # Define the start and end positions for this split
-    #                 start = 0
-    #                 end = self.n_node_samples_vec[0]
-
-    #                 # Define what my childs will see
-    #                 start_pos[0] = start
-    #                 end_pos[0] = end
-
-    #                 # Not first anymore
-    #                 first = 0
-    #             else:
-    #                 if self.is_lefts[i]:
-    #                     # Define the start and end positions for this split
-    #                     start = start_pos[self.parents[i]]
-    #                     end = split_pos[self.parents[i]]
-
-    #                     # Define what my childs will see
-    #                     start_pos[i] = start
-    #                     end_pos[i] = pos
-    #                 else:
-    #                     # Define the start and end positions for this split
-    #                     start = split_pos[self.parents[i]]
-    #                     end = end_pos[self.parents[i]]
-                        
-    #                     # Define what my childs will see
-    #                     start_pos[i] = pos
-    #                     end_pos[i] = end
-
-    #             print("Start: ", start)
-    #             print("End: ", end)
-
-    #             self.splitter.node_reset(start, end, &weighted_n_node_samples)
-
-    #             # Compute the split position
-    #             pos = self.splitter.recompute_node_split(&parent_record, &split, feature, threshold)
-
-    #             print("I found the split position p = ", pos)
-                
-    #             split_pos[i] = pos
-
-    #             node_id = tree._add_node(
-    #                 self.parents[i], self.is_lefts[i], self.is_leafs[i],
-    #                 self.features[i], self.thresholds[i], self.impurities[i],
-    #                 self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
-    #                 self.missing_go_to_lefts[i]
-    #             ) 
-    #         else:
-    #             if not self.is_lefts[i]:
-    #                 # Push right child on stack
-    #                 self.builder_stack.push({
-    #                     "start": split_pos[self.parents[i]],
-    #                     "end": end_pos[self.parents[i]],
-    #                     "depth": self.depths[i],
-    #                     "parent": self.parents[i],
-    #                     "is_left": 0,
-    #                     "impurity": self.impurities[i],
-    #                     "n_constant_features": parent_record.n_constant_features,
-    #                     "lower_bound": -INFINITY,
-    #                     "upper_bound": INFINITY,
-    #                 })
-    #                 print("Pushed the right child. Node:", i)
-    #             else:
-    #                 # Push left child on stack
-    #                 self.builder_stack.push({
-    #                     "start": start_pos[self.parents[i]],
-    #                     "end": split_pos[self.parents[i]],
-    #                     "depth": self.depths[i],
-    #                     "parent": self.parents[i],
-    #                     "is_left": 1,
-    #                     "impurity": self.impurities[i],
-    #                     "n_constant_features": parent_record.n_constant_features,
-    #                     "lower_bound": -INFINITY,
-    #                     "upper_bound": INFINITY,
-    #                 })
-    #                 print("Pushed the left child. Node:", i)
-    
-    cdef _continue_training(
-        self,
-        Tree tree,
-    ):
+   
+    cdef _continue_training(self, Tree tree):
         """
         Continue training the tree with unique node loaded in builder_stack.
         """
@@ -257,10 +137,6 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                 parent_record.lower_bound = stack_record.lower_bound
                 parent_record.upper_bound = stack_record.upper_bound
 
-                with gil:
-                    if start == end:
-                        print("Start = end =", start)
-
                 n_node_samples = end - start
                 self.splitter.node_reset(start, end, &weighted_n_node_samples)
 
@@ -269,6 +145,13 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                            n_node_samples < 2 * min_samples_leaf or
                            weighted_n_node_samples < 2 * min_weight_leaf)
 
+                if first:
+                    with gil:
+                        print("---- Continue training root ----")
+                        print("* Parent record impurity:", parent_record.impurity)
+                        print("* Start:", start)
+                        print("* End:", end)
+                    first = 0 
                 # impurity == 0 with tolerance due to rounding errors
                 is_leaf = is_leaf or parent_record.impurity <= EPSILON
 
@@ -285,9 +168,9 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                                 min_impurity_decrease))
 
                 node_id = tree._add_node(parent, is_left, is_leaf, split.feature,
-                                         split.threshold, parent_record.impurity,
-                                         n_node_samples, weighted_n_node_samples,
-                                         split.missing_go_to_left)
+                                            split.threshold, parent_record.impurity,
+                                            n_node_samples, weighted_n_node_samples,
+                                            split.missing_go_to_left)
 
                 if node_id == INTPTR_MAX:
                     rc = -1
@@ -490,10 +373,6 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                     start = 0
                     end = self.n_node_samples_vec[0]
 
-                    # Define what my childs will see
-                    start_pos[0] = start
-                    end_pos[0] = end
-
                     # Not first anymore
                     first = 0
 
@@ -506,10 +385,13 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                     print("I am first")
                     print("I found the split position p = ", pos)
                     
-                    split_pos[i] = pos
-
+                    # Define what my childs will see
+                    start_pos[0] = start
+                    split_pos[0] = pos
+                    end_pos[0] = end
+                    
                     node_id = tree._add_node(
-                        self.parents[i], self.is_lefts[i], self.is_leafs[i],
+                        _TREE_UNDEFINED, self.is_lefts[i], self.is_leafs[i],
                         self.features[i], self.thresholds[i], self.impurities[i],
                         self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
                         self.missing_go_to_lefts[i]
@@ -520,29 +402,26 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                         # Define the start and end positions for this split
                         start = start_pos[self.parents[i]]
                         end = split_pos[self.parents[i]]
-
-                        # Define what my childs will see
-                        start_pos[i] = start
-                        end_pos[i] = pos
                         print("I am left node:", i)
                     else:
                         # Define the start and end positions for this split
                         start = split_pos[self.parents[i]]
                         end = end_pos[self.parents[i]]
-                        
-                        # Define what my childs will see
-                        start_pos[i] = pos
-                        end_pos[i] = end
-                        print("I am right node:", i)
+                        print("I am right node:", i, start_pos[i], end_pos[i])
 
                     self.splitter.node_reset(start, end, &weighted_n_node_samples)
+
+                    parent_record.impurity = self.impurities[i]
 
                     # Compute the split position
                     pos = self.splitter.recompute_node_split(&parent_record, &split, feature, threshold)
 
-                    print("I found the split position p = ", pos)
+                    print("I found the split position p = ", pos, split.pos)
                     
+                    # Define what my childs will see
+                    start_pos[i] = start
                     split_pos[i] = pos
+                    end_pos[i] = end
 
                     node_id = tree._add_node(
                         self.parents[i], self.is_lefts[i], self.is_leafs[i],
@@ -550,22 +429,18 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                         self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
                         self.missing_go_to_lefts[i]
                     )
-
-                parent_record.impurity = self.impurities[i]
-
+                                        
             else:
                 if not self.is_lefts[i]:
                     # Push right child on stack
-                    # if abs(self.impurities[i+2] - split.impurity_right) > 1e-6:
-                    #     print("Impurity right is different")
-
+                    print(f"impurity del original node der {i}:", self.impurities[i])
                     self.builder_stack.push({
                         "start": split_pos[self.parents[i]],
                         "end": end_pos[self.parents[i]],
                         "depth": self.depths[i],
-                        "parent": self.parents[i],
+                        "parent": self.parents[i], # Aca hay q calcularlo 
                         "is_left": 0,
-                        "impurity": split.impurity_right,
+                        "impurity": self.impurities[i],
                         "n_constant_features": parent_record.n_constant_features,
                         "lower_bound": -INFINITY,
                         "upper_bound": INFINITY,
@@ -573,16 +448,20 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                     print("Pushed the right child. Node:", i)
                 else:
                     # Push left child on stack
-                    # if abs(self.impurities[i+1] - split.impurity_right) > 1e-6:
-                    #     print("Impurity left is different")
+                    # if i == 5:
+                    #     print("Feature del nodo 5:", self.features[i], feature)
+                    #     print("Estando en 5:")
+                    #     print("* start:", start_pos[self.parents[i]], self.parents[i])
+                    #     print("* end:", split_pos[self.parents[i]], self.parents[i])
 
+                    print(f"impurity del original node izq {i}:", self.impurities[i])
                     self.builder_stack.push({
                         "start": start_pos[self.parents[i]],
                         "end": split_pos[self.parents[i]],
                         "depth": self.depths[i],
-                        "parent": self.parents[i],
+                        "parent": self.parents[i], # Aca hay q calcularlo
                         "is_left": 1,
-                        "impurity": split.impurity_left,
+                        "impurity": self.impurities[i],
                         "n_constant_features": parent_record.n_constant_features,
                         "lower_bound": -INFINITY,
                         "upper_bound": INFINITY,
@@ -590,5 +469,5 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                     print("Pushed the left child. Node:", i)
                 
                 print("About to continue training from node:", i)
-                self._continue_training(tree)    
+                self._continue_training(tree)
         

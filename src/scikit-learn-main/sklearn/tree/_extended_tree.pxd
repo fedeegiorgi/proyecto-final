@@ -55,5 +55,3 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
     )
 
     cdef _continue_training(self, Tree tree)
-
-    # cpdef _load_initial_tree(self, Tree tree)

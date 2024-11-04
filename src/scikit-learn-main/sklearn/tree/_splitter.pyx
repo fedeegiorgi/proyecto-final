@@ -963,7 +963,7 @@ cdef inline int recompute_node_split_func(
         partitioner.init_node_split(start, end)
 
         # Lines 374-376 from _splitter.pyx
-        best_split.feature = features[feature]
+        best_split.feature = feature
         partitioner.sort_samples_and_feature_values(best_split.feature)
         n_missing = partitioner.n_missing
         end_non_missing = end - n_missing
@@ -973,6 +973,7 @@ cdef inline int recompute_node_split_func(
             print("Missing values: ", n_missing)
             print("Start: ", start)
             print("End non missing: ", end_non_missing)
+            print("Parent impurity: ", impurity)
 
         # Find the position of the threshold in the sorted feature values
         p = start
