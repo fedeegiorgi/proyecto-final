@@ -429,7 +429,9 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                         self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
                         self.missing_go_to_lefts[i]
                     )
-                                        
+            # if i + 2 < len(self.parents):
+                # self.parents[i+1] = node_id
+                # self.parents[i+2] = node_id                        
             else:
                 if not self.is_lefts[i]:
                     # Push right child on stack
