@@ -85,10 +85,10 @@ class RandomForestGroupDebate(RandomForestRegressor):
         # Initialize the new parameter specific to this class
         self.group_size = group_size
 
-        if self.n_estimators % self.group_size == 0:
+        if self.n_estimators % self.group_size == 0 and self.n_estimators > self.group_size:
             self._n_groups = int(self.n_estimators / self.group_size)
         else:
-            raise ValueError("La # árboles mod group_size diferente que 0.")
+            raise ValueError("La # árboles mod group_size diferente que 0 o la # árboles es menor o igual al group_size")
 
     def random_group_split(self, predictions):
         n_samples = predictions.shape[1]

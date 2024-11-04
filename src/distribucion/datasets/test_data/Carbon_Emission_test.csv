@@ -1,4 +1,1004 @@
 Body Type,Sex,Diet,How Often Shower,Heating Energy Source,Transport,Social Activity,Monthly Grocery Bill,Frequency of Traveling by Air,Vehicle Monthly Distance Km,Waste Bag Size,Waste Bag Weekly Count,How Long TV PC Daily Hour,How Many New Clothes Monthly,How Long Internet Daily Hour,Energy efficiency,CarbonEmission,Recycling_Metal,Recycling_Glass,Recycling_Paper,Recycling_Plastic,Cooking_With_Microwave,Cooking_With_Stove,Cooking_With_Grill,Cooking_With_Oven,Cooking_With_Airfryer
+overweight,male,vegetarian,more frequently,wood,private,sometimes,160,rarely,759,large,5,6,38,23,Sometimes,2289,0,1,1,0,1,0,0,1,0
+normal,female,vegan,daily,natural gas,walk/bicycle,never,68,never,49,small,5,3,22,10,No,854,1,0,0,1,0,1,0,0,0
+overweight,female,vegan,daily,natural gas,walk/bicycle,often,119,very frequently,40,large,6,4,47,8,Sometimes,2888,1,0,1,1,1,0,1,1,1
+obese,female,vegetarian,more frequently,wood,private,never,250,frequently,6704,large,3,9,45,21,No,2271,0,1,1,1,0,1,1,0,1
+underweight,male,omnivore,daily,electricity,walk/bicycle,never,65,rarely,44,small,1,6,4,4,No,369,1,1,1,0,0,0,0,1,0
+underweight,male,pescatarian,twice a day,coal,walk/bicycle,never,95,very frequently,29,large,6,2,5,0,Sometimes,2487,0,1,1,0,0,0,1,0,1
+normal,male,vegan,twice a day,electricity,walk/bicycle,sometimes,62,rarely,69,large,3,9,20,3,Sometimes,1033,1,0,0,1,0,0,1,0,1
+underweight,male,vegetarian,daily,natural gas,private,sometimes,279,very frequently,1982,medium,3,6,15,1,Yes,2933,0,0,1,1,1,0,1,1,1
+underweight,male,vegetarian,daily,coal,private,never,232,frequently,9685,extra large,7,16,20,3,No,2594,0,0,1,0,1,0,0,0,0
+normal,female,pescatarian,more frequently,coal,public,never,293,frequently,934,large,1,9,29,1,Sometimes,1765,1,0,1,0,0,1,1,0,1
+underweight,female,vegetarian,less frequently,wood,walk/bicycle,sometimes,158,very frequently,16,large,3,17,50,12,Yes,2212,1,1,1,1,1,0,0,0,0
+underweight,female,vegan,daily,wood,walk/bicycle,sometimes,120,very frequently,96,small,3,4,34,11,Yes,1890,1,0,0,1,0,0,0,0,0
+normal,female,omnivore,twice a day,wood,walk/bicycle,often,196,rarely,77,small,1,13,43,21,Sometimes,1380,1,1,1,0,0,1,0,0,0
+obese,female,vegan,more frequently,wood,walk/bicycle,often,83,very frequently,49,small,2,18,15,23,Yes,2235,0,1,1,1,0,1,0,0,0
+normal,male,omnivore,twice a day,coal,private,sometimes,211,very frequently,9626,medium,2,0,24,9,Sometimes,4181,1,1,1,0,0,0,1,1,1
+underweight,male,omnivore,more frequently,natural gas,private,often,70,very frequently,4996,large,1,14,36,8,No,3352,1,1,0,1,0,0,1,1,1
+underweight,male,vegetarian,daily,natural gas,walk/bicycle,often,166,frequently,55,extra large,7,12,35,22,Yes,2732,1,0,0,0,1,1,1,1,1
+obese,female,pescatarian,less frequently,electricity,walk/bicycle,never,71,rarely,99,medium,5,19,3,16,Sometimes,986,0,1,0,0,0,1,0,0,0
+normal,male,vegan,less frequently,coal,public,never,188,very frequently,1304,small,3,14,21,20,No,2721,0,1,0,1,0,1,0,1,0
+normal,male,pescatarian,more frequently,wood,walk/bicycle,often,253,very frequently,22,extra large,2,0,19,19,Sometimes,2776,0,0,1,0,1,1,0,0,0
+obese,female,pescatarian,daily,electricity,public,often,223,frequently,1262,small,5,7,28,16,No,1878,1,1,1,1,1,1,1,1,1
+obese,female,omnivore,twice a day,wood,public,sometimes,109,rarely,1156,medium,1,18,12,22,No,1366,0,1,1,1,1,0,1,1,1
+overweight,female,vegan,less frequently,coal,walk/bicycle,never,268,never,78,medium,4,11,32,24,Sometimes,1525,1,1,0,0,1,1,1,1,1
+underweight,female,pescatarian,daily,electricity,walk/bicycle,sometimes,240,rarely,40,large,6,22,5,12,No,1148,1,0,0,1,0,0,1,0,1
+obese,male,vegetarian,twice a day,coal,public,often,158,frequently,525,extra large,6,5,31,20,No,3406,1,0,1,0,1,0,1,1,1
+normal,male,vegan,more frequently,natural gas,public,sometimes,195,very frequently,204,small,7,14,26,0,No,2521,1,0,1,0,0,1,1,0,1
+underweight,male,vegan,more frequently,natural gas,public,often,193,rarely,618,medium,7,18,1,9,Yes,1479,0,0,0,1,0,1,0,1,0
+obese,female,pescatarian,less frequently,coal,public,never,63,very frequently,1993,large,4,2,2,13,No,2732,0,0,1,0,0,0,0,0,0
+overweight,male,omnivore,daily,natural gas,private,often,101,frequently,9727,large,7,7,50,23,No,4786,1,1,0,1,1,0,1,1,1
+normal,female,vegetarian,more frequently,electricity,walk/bicycle,sometimes,254,frequently,20,large,5,14,33,17,Yes,1862,0,0,0,1,0,0,0,0,0
+normal,male,vegetarian,daily,coal,walk/bicycle,never,197,never,48,extra large,3,6,14,1,Sometimes,1150,1,1,1,1,1,1,0,1,0
+overweight,female,pescatarian,daily,natural gas,private,never,152,very frequently,8082,small,1,10,3,9,Yes,3824,0,0,0,1,1,0,1,0,1
+obese,male,omnivore,daily,natural gas,walk/bicycle,sometimes,281,frequently,77,medium,3,13,26,22,No,2813,1,0,0,0,1,0,0,1,0
+obese,male,pescatarian,twice a day,natural gas,public,often,223,never,1975,medium,2,15,47,2,Yes,1968,1,1,0,0,1,0,0,0,0
+underweight,female,pescatarian,more frequently,electricity,private,often,140,very frequently,1542,medium,7,24,48,11,Sometimes,2401,1,0,1,0,1,0,1,0,1
+overweight,male,vegetarian,daily,wood,public,sometimes,199,very frequently,554,small,7,1,27,7,No,2805,0,0,1,1,0,1,0,0,0
+underweight,male,vegetarian,twice a day,natural gas,public,never,152,rarely,1030,large,1,0,21,16,Yes,1117,1,1,0,0,0,0,0,1,0
+overweight,female,omnivore,more frequently,electricity,walk/bicycle,often,247,frequently,86,large,2,10,27,16,No,1861,1,1,0,1,1,1,0,0,0
+obese,female,vegan,less frequently,coal,public,never,219,frequently,22,extra large,5,21,17,20,Sometimes,2554,0,1,0,1,0,1,1,0,1
+underweight,female,pescatarian,less frequently,natural gas,walk/bicycle,sometimes,245,very frequently,62,extra large,5,17,19,14,Yes,2206,1,1,1,0,0,0,1,0,1
+overweight,male,vegan,more frequently,coal,walk/bicycle,never,252,very frequently,8,large,7,5,22,21,Yes,3581,1,0,0,1,0,0,0,1,0
+overweight,female,omnivore,twice a day,coal,public,often,259,very frequently,1028,medium,3,10,16,1,No,3026,0,0,0,1,1,0,1,0,1
+underweight,female,vegetarian,more frequently,electricity,walk/bicycle,never,189,very frequently,22,large,1,1,2,23,Yes,1527,0,0,1,0,0,1,1,0,1
+obese,male,pescatarian,daily,wood,walk/bicycle,often,118,frequently,98,medium,2,3,20,6,Yes,2067,1,1,0,0,1,1,1,0,1
+obese,male,omnivore,daily,electricity,public,never,120,very frequently,211,small,6,11,19,23,Sometimes,2559,1,0,1,1,0,1,1,0,1
+underweight,male,vegetarian,more frequently,wood,private,often,262,rarely,1074,small,3,12,30,17,Yes,1965,1,1,0,0,1,1,0,1,0
+overweight,male,omnivore,more frequently,electricity,public,often,134,frequently,1620,large,3,3,1,18,Yes,1797,1,0,0,0,1,0,0,0,0
+underweight,female,vegan,daily,electricity,walk/bicycle,never,232,rarely,74,large,5,10,39,22,Sometimes,1179,1,1,1,1,0,1,1,1,1
+underweight,male,vegan,more frequently,wood,private,often,256,very frequently,1048,extra large,1,17,1,24,Yes,2292,0,1,0,1,1,1,1,1,1
+obese,male,pescatarian,less frequently,electricity,walk/bicycle,often,137,rarely,46,large,1,21,18,3,No,1040,1,0,1,1,0,1,0,0,0
+obese,female,pescatarian,twice a day,electricity,public,never,253,rarely,1561,large,3,1,35,18,No,1624,1,1,0,1,1,0,1,0,1
+underweight,male,vegetarian,daily,wood,walk/bicycle,often,112,frequently,88,large,5,16,4,1,Sometimes,1473,1,0,1,1,0,0,0,0,0
+overweight,female,omnivore,less frequently,natural gas,public,sometimes,202,frequently,119,small,4,3,33,3,Yes,1945,1,0,0,0,1,0,1,0,1
+underweight,female,pescatarian,twice a day,wood,public,never,195,very frequently,505,small,1,9,20,6,Sometimes,1666,1,1,1,1,0,0,0,0,0
+obese,male,pescatarian,less frequently,coal,private,never,251,never,6959,extra large,1,19,26,18,No,4808,1,0,0,1,0,1,1,0,1
+underweight,female,vegetarian,daily,wood,walk/bicycle,often,277,rarely,57,large,7,21,28,20,Sometimes,1823,0,0,1,1,1,0,0,0,0
+normal,female,vegan,twice a day,wood,walk/bicycle,sometimes,214,never,30,extra large,3,13,35,13,Sometimes,1284,0,1,1,1,1,1,1,0,1
+obese,female,vegan,twice a day,wood,public,sometimes,275,very frequently,733,medium,1,17,22,6,Sometimes,2597,0,0,0,1,0,1,0,0,0
+overweight,female,vegan,daily,wood,walk/bicycle,sometimes,183,very frequently,34,extra large,7,20,12,10,No,2822,0,0,1,1,1,1,1,0,1
+overweight,male,vegan,twice a day,coal,walk/bicycle,never,175,very frequently,88,medium,3,4,10,7,Sometimes,2607,0,0,1,0,1,1,0,0,0
+normal,male,vegan,twice a day,electricity,private,never,95,never,3954,large,6,1,16,1,Yes,1967,1,1,0,0,0,0,0,1,0
+obese,female,pescatarian,more frequently,natural gas,public,often,253,frequently,1378,extra large,3,22,44,16,Yes,2809,0,0,1,1,0,1,0,1,0
+obese,female,vegan,daily,natural gas,public,never,133,frequently,664,small,7,19,50,6,Yes,2361,0,0,1,0,1,0,1,0,1
+normal,female,vegan,less frequently,electricity,public,often,202,never,1699,small,5,14,47,2,Yes,855,1,1,1,1,0,0,0,0,0
+normal,male,pescatarian,twice a day,wood,public,never,226,rarely,1702,small,2,3,8,2,Yes,1263,0,0,0,1,1,1,1,1,1
+underweight,female,pescatarian,twice a day,natural gas,walk/bicycle,sometimes,147,never,41,large,7,2,33,23,Yes,1437,1,0,1,1,0,1,1,1,1
+obese,female,vegetarian,twice a day,electricity,walk/bicycle,never,256,very frequently,5,large,6,19,33,6,Sometimes,2942,0,0,0,0,0,1,0,0,0
+obese,male,pescatarian,less frequently,wood,private,sometimes,256,frequently,3390,large,6,0,20,9,Yes,2500,1,1,1,0,1,0,1,0,1
+overweight,female,pescatarian,daily,coal,public,often,111,frequently,1242,small,7,12,32,22,Sometimes,2394,1,0,0,1,1,0,0,0,0
+obese,male,omnivore,twice a day,electricity,public,sometimes,155,frequently,671,large,5,9,31,3,Sometimes,2511,0,0,1,1,1,0,1,1,1
+overweight,female,vegan,twice a day,coal,private,never,172,never,9035,medium,7,17,48,9,No,1641,1,1,1,1,0,1,0,0,0
+underweight,male,vegan,more frequently,coal,public,sometimes,77,frequently,358,extra large,7,18,14,16,Sometimes,2458,1,1,1,0,1,0,1,1,1
+obese,male,vegan,twice a day,natural gas,walk/bicycle,never,175,rarely,10,medium,2,21,44,18,Yes,2059,0,0,0,0,0,1,1,1,1
+obese,male,vegetarian,daily,natural gas,public,sometimes,81,rarely,427,large,1,7,50,16,Sometimes,1985,0,0,0,1,0,1,0,1,0
+normal,male,vegan,twice a day,electricity,public,sometimes,242,very frequently,1191,medium,2,18,12,23,No,2192,1,0,1,1,0,1,1,1,1
+normal,male,vegan,less frequently,electricity,public,often,170,rarely,196,medium,1,9,2,6,Sometimes,627,0,1,1,0,0,0,0,0,0
+underweight,male,pescatarian,less frequently,wood,private,often,233,very frequently,1144,large,2,11,10,20,Yes,2418,1,1,0,0,0,1,1,0,1
+normal,female,vegetarian,twice a day,natural gas,walk/bicycle,never,204,very frequently,76,large,2,21,9,9,Yes,1851,1,0,1,0,1,1,0,1,0
+obese,female,pescatarian,more frequently,electricity,walk/bicycle,often,176,frequently,99,small,3,23,44,9,No,1814,1,1,1,1,0,1,0,0,0
+underweight,female,pescatarian,less frequently,wood,private,sometimes,181,frequently,2767,small,2,19,38,1,Yes,2091,1,0,0,1,0,1,0,1,0
+underweight,male,vegetarian,twice a day,natural gas,public,never,270,rarely,717,large,1,23,25,7,No,1492,0,0,0,1,0,1,1,0,1
+overweight,female,pescatarian,more frequently,natural gas,public,sometimes,176,very frequently,1521,small,4,10,15,5,Sometimes,2257,1,1,1,1,1,1,0,1,0
+obese,male,vegan,daily,natural gas,public,often,258,frequently,1354,small,4,19,35,4,No,2408,0,1,1,0,0,0,0,1,0
+normal,female,omnivore,less frequently,wood,walk/bicycle,never,263,very frequently,99,large,7,9,16,12,Yes,2520,1,1,1,1,0,0,1,0,1
+overweight,male,vegan,twice a day,wood,private,often,222,very frequently,6512,medium,2,12,25,1,Yes,5110,1,0,1,1,0,0,0,1,0
+obese,female,vegetarian,daily,wood,walk/bicycle,never,155,never,45,small,1,8,43,23,Sometimes,1345,1,0,0,0,0,1,0,0,0
+overweight,female,omnivore,twice a day,coal,private,often,192,frequently,4097,extra large,5,17,41,23,Sometimes,3929,1,1,0,1,0,0,1,0,1
+normal,female,omnivore,less frequently,coal,walk/bicycle,often,121,never,76,medium,1,21,31,19,Yes,1198,0,1,1,1,1,0,0,1,0
+obese,male,omnivore,less frequently,natural gas,public,never,189,rarely,1038,small,4,14,50,18,No,2529,0,0,0,1,1,1,1,1,1
+overweight,male,vegan,less frequently,wood,walk/bicycle,never,287,never,24,medium,2,23,38,2,Yes,1398,0,1,0,0,1,1,0,0,0
+normal,female,vegan,daily,natural gas,private,often,261,never,2962,extra large,2,11,46,18,Yes,1993,1,0,1,1,0,0,1,0,1
+normal,female,vegetarian,twice a day,natural gas,walk/bicycle,never,87,very frequently,86,large,5,6,21,6,Sometimes,2200,0,1,0,1,0,0,0,1,0
+overweight,female,vegan,less frequently,electricity,private,often,62,very frequently,3630,extra large,7,14,11,15,Sometimes,3088,1,0,1,1,0,1,0,1,0
+underweight,female,vegan,less frequently,electricity,walk/bicycle,sometimes,168,never,11,medium,6,22,7,1,Sometimes,656,0,1,1,0,1,1,0,0,0
+underweight,female,vegetarian,daily,natural gas,private,sometimes,263,frequently,7537,large,2,20,29,7,No,3256,0,1,0,1,1,1,1,1,1
+obese,female,vegan,less frequently,coal,public,never,266,frequently,389,medium,2,20,45,21,Yes,2341,1,1,0,1,1,0,0,0,0
+obese,female,vegetarian,less frequently,natural gas,public,often,237,never,579,medium,6,17,1,11,Sometimes,1159,1,1,0,1,1,0,1,0,1
+underweight,female,vegan,twice a day,coal,private,often,57,rarely,3462,extra large,4,23,49,0,Yes,1875,1,0,0,0,1,0,0,0,0
+underweight,male,vegetarian,twice a day,electricity,public,often,140,frequently,924,large,6,6,33,19,Yes,2242,1,0,0,0,1,1,0,1,0
+obese,male,vegan,twice a day,natural gas,public,never,69,never,1903,medium,1,18,22,4,Yes,1079,1,0,0,1,0,0,0,0,0
+obese,female,vegan,less frequently,electricity,private,often,89,frequently,5509,medium,5,6,33,22,No,3144,1,0,0,1,0,0,1,1,1
+underweight,female,pescatarian,twice a day,wood,private,often,262,never,9885,extra large,3,2,37,7,Yes,3561,0,1,1,0,0,1,0,1,0
+normal,female,vegan,daily,wood,walk/bicycle,often,175,never,12,medium,4,20,44,8,Yes,1524,0,0,0,0,0,0,0,0,0
+underweight,male,vegan,less frequently,coal,private,often,97,rarely,9947,large,7,19,4,8,No,3566,0,0,0,0,1,0,1,1,1
+obese,female,omnivore,twice a day,electricity,private,often,65,very frequently,6215,medium,7,17,33,1,Yes,2682,0,0,1,1,0,0,1,0,1
+obese,male,vegan,more frequently,natural gas,walk/bicycle,never,144,rarely,20,extra large,3,12,47,20,Yes,2046,0,1,1,1,0,0,1,1,1
+normal,female,omnivore,more frequently,electricity,private,often,298,frequently,6086,small,2,0,46,3,No,2759,0,0,0,0,0,1,0,0,0
+normal,male,pescatarian,more frequently,coal,private,often,149,very frequently,724,large,4,12,33,14,Yes,3272,1,0,0,0,1,0,0,1,0
+obese,female,vegetarian,more frequently,wood,public,often,59,very frequently,1939,medium,1,10,37,2,Yes,2668,0,1,1,1,1,1,0,1,0
+underweight,male,vegetarian,less frequently,natural gas,walk/bicycle,sometimes,173,very frequently,8,medium,6,24,43,15,Sometimes,3119,0,0,0,0,1,1,0,1,0
+obese,female,vegan,daily,wood,private,often,163,rarely,8904,extra large,1,24,16,12,Sometimes,3740,1,0,1,0,0,0,0,0,0
+normal,female,vegan,daily,coal,walk/bicycle,sometimes,205,never,8,extra large,4,10,31,1,Yes,1369,1,0,1,0,1,1,1,1,1
+overweight,female,vegan,daily,coal,public,often,152,rarely,830,medium,3,10,19,14,No,1604,0,1,1,0,1,1,1,1,1
+underweight,male,omnivore,less frequently,coal,private,never,57,very frequently,6776,large,4,17,17,0,No,2542,1,0,1,0,0,0,1,1,1
+overweight,male,vegan,daily,natural gas,public,never,252,rarely,465,medium,7,24,44,1,Sometimes,1964,0,0,1,1,0,1,1,0,1
+obese,male,vegan,more frequently,wood,walk/bicycle,often,254,frequently,98,extra large,1,8,5,22,Yes,2029,0,0,0,1,0,0,0,0,0
+underweight,female,omnivore,daily,electricity,walk/bicycle,often,141,very frequently,92,extra large,2,15,39,5,Yes,2086,1,1,1,0,0,1,1,0,1
+underweight,male,vegetarian,less frequently,natural gas,private,never,276,never,8744,extra large,1,1,23,1,Sometimes,893,1,1,0,1,0,1,1,1,1
+overweight,male,vegetarian,twice a day,natural gas,public,often,224,rarely,1263,extra large,7,24,17,9,No,2611,1,0,0,0,0,0,0,0,0
+underweight,female,pescatarian,daily,coal,walk/bicycle,never,112,frequently,68,medium,3,23,2,20,Sometimes,1279,1,1,1,1,1,0,1,1,1
+obese,female,omnivore,less frequently,coal,walk/bicycle,sometimes,70,very frequently,81,large,3,19,30,18,Sometimes,2947,0,1,1,0,0,0,1,1,1
+underweight,female,pescatarian,twice a day,natural gas,public,sometimes,147,never,708,extra large,6,16,24,23,No,1504,1,1,1,0,1,1,1,0,1
+underweight,female,pescatarian,less frequently,natural gas,public,sometimes,290,very frequently,433,medium,3,18,15,11,Yes,2099,0,1,0,1,1,1,1,1,1
+obese,female,vegetarian,twice a day,coal,walk/bicycle,often,128,frequently,29,large,1,17,37,12,Yes,2344,0,1,0,0,0,1,1,0,1
+normal,female,omnivore,less frequently,coal,public,never,101,never,1041,small,7,9,22,13,Yes,1442,0,0,0,1,0,1,1,1,1
+obese,male,omnivore,less frequently,wood,private,often,132,rarely,5653,large,5,0,43,0,Yes,4240,0,1,1,0,0,1,0,0,0
+normal,male,omnivore,twice a day,wood,private,sometimes,248,very frequently,7434,large,4,9,27,1,Sometimes,4768,1,0,0,0,0,0,1,1,1
+underweight,male,pescatarian,daily,electricity,walk/bicycle,never,81,frequently,25,small,3,0,18,0,Sometimes,1196,1,1,0,0,1,0,1,1,1
+normal,female,vegan,twice a day,wood,private,sometimes,260,rarely,9700,large,6,18,34,16,Yes,1722,0,0,0,1,0,1,0,1,0
+normal,male,vegan,twice a day,natural gas,public,often,136,frequently,1934,medium,2,9,7,13,Yes,1612,0,1,1,1,1,0,1,1,1
+overweight,female,vegan,more frequently,wood,public,sometimes,88,frequently,1755,large,1,23,45,13,No,2020,1,0,1,0,1,0,0,0,0
+underweight,female,vegan,less frequently,coal,walk/bicycle,sometimes,210,rarely,36,large,4,11,40,17,Sometimes,1709,1,0,0,0,0,1,0,1,0
+overweight,male,vegan,more frequently,wood,private,often,213,rarely,3014,medium,6,6,2,11,No,1544,1,1,0,0,1,1,1,0,1
+underweight,female,omnivore,twice a day,electricity,private,never,204,never,5787,small,5,11,17,1,No,2456,1,0,1,1,1,1,0,1,0
+obese,female,vegetarian,more frequently,electricity,walk/bicycle,sometimes,268,very frequently,48,medium,5,15,36,13,No,2883,0,1,0,1,0,0,1,0,1
+normal,male,vegan,twice a day,natural gas,walk/bicycle,often,169,very frequently,81,small,4,10,14,9,Yes,2452,0,0,0,0,1,0,0,1,0
+underweight,male,omnivore,more frequently,natural gas,public,never,200,frequently,1360,large,6,16,38,22,Yes,2476,1,1,0,0,1,0,1,0,1
+underweight,female,vegan,less frequently,wood,public,often,104,frequently,1738,medium,2,20,15,6,Yes,1365,0,0,1,1,0,0,0,1,0
+normal,female,vegetarian,more frequently,coal,walk/bicycle,sometimes,251,never,62,extra large,4,19,22,8,No,1564,1,0,0,1,0,0,1,1,1
+obese,female,pescatarian,twice a day,wood,private,sometimes,213,frequently,7174,medium,2,5,44,20,Sometimes,3582,1,0,0,0,1,1,1,0,1
+underweight,female,vegetarian,less frequently,electricity,private,sometimes,89,never,5030,medium,5,4,45,24,No,2313,1,0,0,0,1,0,1,1,1
+underweight,male,omnivore,more frequently,wood,walk/bicycle,never,186,rarely,58,large,3,17,25,20,Sometimes,1781,0,1,0,0,1,1,0,1,0
+obese,male,vegan,less frequently,electricity,public,never,243,never,1878,extra large,6,10,27,22,Sometimes,1747,1,1,1,0,1,0,1,0,1
+normal,female,vegetarian,less frequently,wood,public,sometimes,158,never,821,small,1,0,25,17,Sometimes,1026,0,1,0,0,0,0,1,0,1
+normal,male,vegetarian,daily,natural gas,public,sometimes,253,rarely,1342,medium,1,7,38,4,Sometimes,1560,1,0,0,1,1,1,1,0,1
+obese,female,omnivore,twice a day,coal,private,never,223,very frequently,6727,extra large,4,19,46,24,No,5754,1,0,0,0,1,1,0,0,0
+overweight,male,vegan,less frequently,electricity,public,often,238,frequently,44,extra large,2,9,6,23,Yes,1947,0,0,0,1,1,1,0,0,0
+underweight,male,vegetarian,daily,natural gas,public,never,84,rarely,35,medium,1,15,29,4,Sometimes,1272,0,0,0,0,0,1,0,1,0
+underweight,female,vegetarian,twice a day,coal,public,never,244,rarely,1907,extra large,4,9,36,4,Yes,1693,1,0,1,0,1,0,0,0,0
+normal,female,vegan,daily,coal,public,often,261,never,117,extra large,5,2,16,21,Sometimes,1490,1,1,1,1,0,1,0,0,0
+overweight,male,vegetarian,daily,electricity,walk/bicycle,never,62,rarely,41,extra large,3,14,21,8,Sometimes,1428,0,0,0,1,1,0,1,1,1
+underweight,male,vegetarian,daily,natural gas,private,never,181,frequently,7804,small,3,22,28,2,No,2678,1,0,1,1,0,1,0,1,0
+obese,female,vegan,less frequently,electricity,private,sometimes,235,never,5659,large,7,7,19,6,Yes,2902,1,1,0,0,0,0,0,1,0
+obese,female,pescatarian,less frequently,electricity,walk/bicycle,never,285,never,6,large,4,9,8,10,Sometimes,868,1,0,1,1,0,1,1,1,1
+normal,male,pescatarian,twice a day,coal,public,often,95,rarely,1636,medium,4,14,22,23,Yes,1876,0,0,1,0,1,1,0,0,0
+obese,male,omnivore,less frequently,natural gas,private,never,200,frequently,2678,small,1,1,7,1,Yes,2881,0,1,0,1,1,1,0,1,0
+normal,male,pescatarian,daily,natural gas,public,sometimes,116,frequently,1709,small,3,2,34,1,No,2007,1,1,0,0,1,0,1,1,1
+normal,female,pescatarian,more frequently,natural gas,private,never,123,frequently,647,extra large,6,2,4,24,Yes,1995,0,0,0,0,0,0,1,0,1
+normal,male,vegan,daily,electricity,public,never,284,never,1965,medium,2,22,39,7,Yes,984,1,1,1,0,0,0,1,1,1
+overweight,female,omnivore,twice a day,electricity,walk/bicycle,never,258,frequently,59,large,5,19,34,5,No,2003,1,1,1,1,0,0,1,0,1
+underweight,female,pescatarian,twice a day,electricity,walk/bicycle,often,101,frequently,81,medium,2,19,36,3,Sometimes,1278,1,0,1,1,0,0,0,0,0
+obese,male,vegan,twice a day,coal,public,often,252,very frequently,321,large,4,4,32,9,No,3884,1,1,0,0,1,0,1,1,1
+overweight,female,pescatarian,more frequently,coal,walk/bicycle,often,110,very frequently,49,large,6,21,12,8,Sometimes,3115,0,0,0,1,0,1,1,1,1
+obese,male,omnivore,twice a day,natural gas,walk/bicycle,often,215,very frequently,80,large,7,18,33,18,Yes,4039,1,1,1,1,1,1,0,0,0
+normal,female,pescatarian,less frequently,coal,walk/bicycle,sometimes,193,never,67,extra large,1,13,49,15,Yes,1499,1,0,0,1,0,1,1,0,1
+normal,female,pescatarian,more frequently,natural gas,walk/bicycle,sometimes,97,very frequently,28,extra large,7,6,7,2,Sometimes,2476,1,1,1,1,1,1,0,1,0
+overweight,female,vegetarian,more frequently,coal,walk/bicycle,often,214,very frequently,12,large,4,3,36,12,No,3217,0,1,0,1,0,1,0,0,0
+normal,female,omnivore,daily,natural gas,public,often,106,never,10,small,1,10,36,22,No,1245,1,0,0,1,1,1,0,1,0
+obese,female,omnivore,twice a day,wood,walk/bicycle,sometimes,215,never,54,large,1,15,35,12,No,1435,0,1,1,1,0,1,1,0,1
+obese,male,vegan,daily,electricity,walk/bicycle,often,100,frequently,26,small,5,13,49,5,Yes,2201,0,0,1,1,0,1,1,0,1
+obese,male,omnivore,more frequently,electricity,walk/bicycle,sometimes,152,frequently,71,large,4,16,40,5,Sometimes,2479,0,1,1,1,1,0,1,1,1
+overweight,female,vegetarian,more frequently,wood,public,often,156,never,1153,small,4,13,2,22,No,964,1,0,1,0,0,0,1,1,1
+obese,female,vegan,less frequently,electricity,public,sometimes,111,never,1839,medium,6,3,9,15,No,1039,0,1,1,0,1,1,0,1,0
+obese,female,omnivore,less frequently,natural gas,private,often,178,never,8620,extra large,1,9,23,21,Yes,3781,1,1,0,1,0,1,1,0,1
+obese,female,vegetarian,less frequently,natural gas,private,often,105,very frequently,2173,large,4,21,4,8,Yes,3419,1,0,0,0,1,1,1,1,1
+obese,male,vegetarian,twice a day,wood,walk/bicycle,never,227,frequently,50,extra large,7,15,32,24,No,3307,0,1,0,1,1,0,1,0,1
+normal,male,vegetarian,less frequently,wood,walk/bicycle,often,126,never,82,small,5,5,37,24,No,1542,1,0,0,1,0,1,0,0,0
+overweight,female,vegan,twice a day,wood,walk/bicycle,never,241,rarely,49,small,7,6,22,9,No,1064,1,1,1,1,1,0,0,0,0
+normal,female,omnivore,daily,electricity,walk/bicycle,sometimes,259,never,25,extra large,4,13,38,17,Sometimes,1323,1,1,1,0,1,0,1,1,1
+normal,male,vegan,twice a day,coal,walk/bicycle,often,72,rarely,56,extra large,1,14,15,17,Sometimes,1331,1,0,1,0,1,0,0,1,0
+normal,female,pescatarian,twice a day,electricity,public,never,118,frequently,1552,medium,3,13,2,23,Sometimes,1370,0,0,0,1,0,1,0,0,0
+obese,female,vegan,less frequently,natural gas,walk/bicycle,sometimes,222,frequently,24,medium,1,11,21,0,No,1515,1,0,1,0,0,0,1,1,1
+underweight,male,pescatarian,less frequently,electricity,public,sometimes,265,rarely,1802,medium,1,2,38,6,Yes,1053,1,1,1,0,1,0,0,0,0
+normal,male,vegetarian,more frequently,natural gas,walk/bicycle,often,157,very frequently,89,large,5,12,13,3,Yes,2675,1,0,0,1,0,0,1,0,1
+underweight,male,vegan,daily,electricity,private,never,131,frequently,2490,extra large,4,24,27,8,Yes,1710,0,0,1,1,0,1,1,1,1
+overweight,male,pescatarian,twice a day,wood,public,never,163,frequently,320,small,2,13,9,7,No,1621,1,1,0,0,0,0,1,0,1
+obese,female,vegetarian,twice a day,electricity,public,often,204,very frequently,28,small,6,22,36,13,Sometimes,2775,0,1,0,1,1,1,0,0,0
+normal,female,pescatarian,daily,wood,walk/bicycle,sometimes,111,never,28,extra large,7,4,2,10,Yes,1232,1,0,1,1,0,1,0,1,0
+underweight,female,pescatarian,daily,electricity,public,never,155,rarely,1962,small,6,2,14,6,No,881,0,1,1,1,1,1,0,1,0
+normal,male,vegan,more frequently,natural gas,private,sometimes,63,very frequently,8953,extra large,1,12,27,6,Sometimes,4676,0,1,1,1,0,1,1,0,1
+underweight,male,vegan,more frequently,electricity,private,sometimes,210,frequently,1668,small,7,14,27,12,No,1748,1,1,1,1,1,1,0,1,0
+overweight,female,omnivore,more frequently,wood,public,sometimes,231,never,1474,medium,2,21,33,2,Sometimes,1375,1,0,1,0,0,1,1,0,1
+underweight,female,pescatarian,less frequently,wood,private,never,111,rarely,6340,extra large,4,8,44,9,Sometimes,2920,1,0,1,1,0,1,1,1,1
+overweight,male,vegetarian,twice a day,natural gas,walk/bicycle,sometimes,80,frequently,5,large,4,19,46,23,No,2568,0,1,1,1,0,0,0,1,0
+obese,male,vegetarian,less frequently,wood,private,often,160,rarely,243,small,4,7,7,24,Yes,1587,0,0,1,0,1,1,1,0,1
+normal,male,vegan,twice a day,coal,private,sometimes,115,very frequently,6828,extra large,2,8,17,22,No,4586,1,1,0,0,1,1,0,1,0
+underweight,male,vegan,twice a day,natural gas,public,never,96,very frequently,855,small,3,17,13,17,Yes,2174,1,0,0,0,0,1,1,1,1
+overweight,male,pescatarian,less frequently,natural gas,public,sometimes,141,very frequently,545,small,6,22,8,23,No,2598,1,1,0,1,0,1,1,0,1
+underweight,male,omnivore,more frequently,electricity,public,sometimes,165,very frequently,555,large,1,5,48,7,Sometimes,2619,0,0,0,0,0,1,1,0,1
+normal,male,omnivore,less frequently,electricity,public,often,125,rarely,180,extra large,4,1,26,12,Yes,1640,0,1,0,0,0,1,1,0,1
+obese,female,omnivore,daily,electricity,private,never,137,frequently,3571,medium,7,5,45,9,No,2343,1,0,0,0,1,1,1,0,1
+underweight,female,vegetarian,daily,natural gas,walk/bicycle,sometimes,239,frequently,74,large,1,13,8,23,Sometimes,1329,1,0,1,0,1,1,1,1,1
+overweight,male,omnivore,more frequently,natural gas,walk/bicycle,never,256,frequently,65,medium,3,17,0,8,Yes,1908,0,1,0,0,0,0,0,1,0
+normal,male,vegetarian,more frequently,electricity,private,often,245,very frequently,8371,medium,6,21,46,11,Sometimes,5020,0,1,1,1,1,0,0,1,0
+obese,male,vegan,twice a day,coal,public,never,157,very frequently,1724,medium,4,15,28,8,No,3292,0,1,1,1,0,0,1,0,1
+normal,female,pescatarian,daily,coal,walk/bicycle,often,247,rarely,45,large,6,12,15,18,No,1745,0,1,1,0,0,0,0,0,0
+underweight,male,omnivore,daily,natural gas,public,sometimes,255,frequently,1489,medium,6,17,37,19,Sometimes,2700,0,1,0,0,0,1,1,1,1
+obese,female,vegetarian,less frequently,coal,public,never,97,rarely,686,medium,1,7,30,21,Yes,1451,1,1,0,0,1,0,1,1,1
+underweight,male,pescatarian,daily,wood,walk/bicycle,never,201,rarely,70,large,4,19,18,20,Yes,1555,0,0,0,0,1,0,1,0,1
+underweight,male,omnivore,twice a day,natural gas,private,sometimes,171,never,5459,extra large,6,3,42,18,Yes,3818,0,1,1,1,1,0,1,1,1
+normal,male,pescatarian,daily,coal,walk/bicycle,never,146,very frequently,80,extra large,7,10,23,14,No,3046,1,1,1,0,1,1,0,0,0
+underweight,male,vegan,daily,coal,private,often,248,never,7685,medium,4,12,8,16,Sometimes,1279,1,0,1,1,0,0,1,1,1
+normal,female,vegetarian,less frequently,coal,public,sometimes,270,rarely,457,small,3,21,7,4,Yes,976,0,1,1,1,1,0,1,0,1
+overweight,male,pescatarian,less frequently,wood,public,sometimes,122,never,1322,extra large,2,16,23,15,No,1469,0,1,0,1,0,0,0,0,0
+underweight,male,vegetarian,more frequently,natural gas,private,never,203,frequently,1405,extra large,2,16,46,10,No,2019,1,1,1,1,1,1,1,0,1
+obese,male,vegetarian,daily,coal,private,sometimes,279,rarely,3142,medium,7,1,14,9,No,2802,0,0,0,1,1,1,0,1,0
+underweight,female,omnivore,less frequently,wood,public,sometimes,93,rarely,1639,medium,4,18,29,6,Sometimes,1399,0,0,1,1,0,1,1,1,1
+underweight,female,vegetarian,more frequently,natural gas,walk/bicycle,never,113,very frequently,75,small,1,13,6,20,Sometimes,1795,0,0,0,1,0,0,0,0,0
+normal,male,pescatarian,less frequently,electricity,private,never,136,never,7708,medium,7,1,20,11,No,4048,0,1,0,1,1,1,0,0,0
+overweight,male,vegan,twice a day,natural gas,walk/bicycle,never,212,never,43,large,4,24,15,4,Sometimes,1141,1,1,0,1,0,0,0,0,0
+obese,male,vegan,more frequently,wood,public,often,276,rarely,1397,small,4,7,11,23,No,1675,1,1,1,0,1,0,1,1,1
+normal,male,omnivore,twice a day,electricity,walk/bicycle,never,268,frequently,53,extra large,1,13,49,15,Yes,2047,1,0,0,1,1,0,0,0,0
+overweight,male,vegan,twice a day,coal,walk/bicycle,often,158,rarely,83,extra large,4,17,42,8,Yes,2272,1,1,0,1,1,0,0,1,0
+underweight,male,vegan,more frequently,wood,private,sometimes,123,frequently,3288,small,6,10,14,9,Sometimes,2823,1,0,0,0,1,1,1,1,1
+underweight,male,vegan,less frequently,natural gas,private,never,171,frequently,8405,medium,3,19,32,19,No,3156,1,0,0,0,1,0,0,1,0
+normal,female,omnivore,less frequently,coal,private,often,50,rarely,1838,medium,4,15,43,10,No,2004,0,1,1,1,0,1,1,0,1
+obese,male,pescatarian,daily,electricity,walk/bicycle,often,134,very frequently,3,medium,2,13,22,3,No,2606,1,0,1,0,1,1,0,1,0
+normal,female,vegan,less frequently,electricity,public,never,140,rarely,1579,extra large,6,16,21,13,Yes,1541,0,0,0,0,1,1,1,0,1
+overweight,female,pescatarian,twice a day,wood,walk/bicycle,often,242,never,45,extra large,5,13,19,0,Sometimes,1606,1,0,0,1,0,1,0,1,0
+overweight,male,pescatarian,daily,electricity,private,never,78,rarely,7135,extra large,4,16,40,4,Yes,4956,0,1,0,0,0,0,0,1,0
+obese,female,pescatarian,less frequently,coal,walk/bicycle,often,149,very frequently,63,medium,5,19,10,17,No,2840,1,1,0,1,0,0,1,0,1
+normal,male,omnivore,twice a day,coal,walk/bicycle,sometimes,119,very frequently,1,extra large,7,10,14,0,Sometimes,3192,1,1,0,0,1,0,0,0,0
+underweight,female,omnivore,daily,natural gas,walk/bicycle,often,151,very frequently,60,extra large,5,8,18,7,No,2755,0,0,0,0,1,1,1,1,1
+obese,female,pescatarian,more frequently,coal,public,sometimes,53,very frequently,1787,small,4,6,42,18,Yes,3063,1,0,1,1,1,1,1,0,1
+obese,female,pescatarian,less frequently,wood,private,often,77,rarely,9095,large,7,6,48,11,Sometimes,3905,0,1,0,0,1,1,1,0,1
+obese,male,omnivore,daily,wood,public,never,284,very frequently,635,medium,1,20,23,9,Yes,3154,1,1,1,0,0,0,1,1,1
+normal,female,vegetarian,daily,natural gas,walk/bicycle,sometimes,221,very frequently,56,medium,2,22,34,12,Yes,2327,0,1,0,1,1,1,0,1,0
+normal,male,vegetarian,twice a day,electricity,private,often,164,very frequently,9030,extra large,6,19,23,0,Yes,5145,0,0,1,1,1,1,0,0,0
+normal,male,omnivore,less frequently,coal,public,never,61,very frequently,1159,medium,2,19,39,19,No,2980,0,1,1,0,1,0,1,1,1
+normal,male,omnivore,less frequently,electricity,public,sometimes,66,frequently,23,large,3,12,45,17,Sometimes,1807,1,1,1,0,1,1,0,0,0
+underweight,male,pescatarian,more frequently,natural gas,public,never,57,rarely,1398,small,4,16,25,20,Yes,1217,0,1,1,1,1,1,0,0,0
+underweight,male,vegan,more frequently,electricity,private,never,206,rarely,4477,medium,6,9,37,5,No,1912,0,1,1,1,0,0,0,0,0
+normal,female,omnivore,twice a day,natural gas,public,often,104,very frequently,174,small,6,0,15,0,Yes,2219,0,1,0,0,0,0,1,1,1
+normal,female,pescatarian,less frequently,coal,walk/bicycle,sometimes,177,frequently,38,large,7,21,29,11,Yes,2051,1,1,1,1,0,1,0,1,0
+overweight,male,omnivore,twice a day,natural gas,public,often,123,never,1318,large,3,17,30,3,Sometimes,1753,0,0,1,1,0,1,1,1,1
+normal,male,vegetarian,more frequently,electricity,walk/bicycle,often,180,never,69,large,1,12,26,8,Yes,810,1,0,1,1,1,1,1,0,1
+underweight,female,omnivore,less frequently,electricity,walk/bicycle,sometimes,98,frequently,27,large,3,17,6,22,No,1378,0,1,0,0,0,1,1,0,1
+normal,female,vegetarian,less frequently,electricity,public,never,235,rarely,1360,large,5,13,9,2,Sometimes,1139,0,0,0,0,0,1,0,1,0
+obese,female,vegan,twice a day,natural gas,private,often,127,rarely,9280,extra large,6,21,36,12,No,3963,0,0,1,0,1,1,0,1,0
+overweight,male,vegetarian,more frequently,natural gas,private,never,266,never,3338,small,4,3,35,6,Sometimes,2758,0,0,1,1,0,1,0,0,0
+overweight,female,vegan,more frequently,natural gas,public,never,206,rarely,1959,small,6,16,35,7,No,1466,1,1,0,1,1,0,1,1,1
+underweight,female,omnivore,daily,electricity,walk/bicycle,sometimes,268,frequently,9,small,7,3,29,6,Sometimes,1515,1,0,0,1,0,0,1,0,1
+overweight,male,vegan,twice a day,wood,walk/bicycle,often,81,frequently,62,extra large,5,14,25,0,Yes,2372,0,1,1,0,1,1,0,0,0
+overweight,female,vegetarian,twice a day,natural gas,private,often,172,never,4389,extra large,3,12,22,7,No,1392,1,0,0,0,0,1,1,0,1
+normal,male,omnivore,twice a day,wood,private,often,155,rarely,8387,large,7,9,42,13,No,4443,1,0,1,0,1,0,0,1,0
+normal,male,vegan,twice a day,coal,walk/bicycle,sometimes,223,never,34,small,2,2,16,9,Yes,1114,1,0,0,1,0,1,0,0,0
+normal,female,vegan,twice a day,natural gas,walk/bicycle,never,99,never,9,large,2,10,26,2,Yes,703,0,1,1,1,1,0,0,0,0
+normal,female,vegan,daily,coal,public,sometimes,179,very frequently,317,medium,7,16,35,17,Sometimes,2816,0,0,1,0,1,0,0,1,0
+underweight,female,pescatarian,less frequently,electricity,public,never,264,never,575,extra large,2,15,28,15,No,1047,1,0,0,0,1,1,0,0,0
+normal,male,vegetarian,twice a day,electricity,public,sometimes,76,very frequently,368,large,5,19,32,11,Sometimes,2807,1,1,0,1,1,1,0,0,0
+normal,female,pescatarian,more frequently,wood,public,never,186,never,872,large,3,4,26,1,No,1299,0,0,0,0,0,1,0,1,0
+underweight,male,vegetarian,twice a day,coal,private,often,198,rarely,7323,large,5,0,35,13,Yes,2141,0,0,0,0,1,0,1,1,1
+normal,female,omnivore,daily,coal,walk/bicycle,sometimes,220,very frequently,88,small,2,12,50,18,Yes,2603,1,0,0,1,0,1,1,1,1
+overweight,female,vegetarian,less frequently,coal,private,sometimes,81,never,9216,medium,2,21,12,1,No,3476,0,0,0,1,1,0,0,0,0
+underweight,female,omnivore,more frequently,coal,private,sometimes,214,rarely,7245,medium,4,17,22,15,Sometimes,2860,1,0,1,1,1,1,1,1,1
+obese,male,pescatarian,daily,electricity,private,sometimes,159,never,9536,extra large,5,14,15,19,No,1807,1,0,0,1,0,0,1,1,1
+overweight,female,pescatarian,more frequently,coal,public,often,174,rarely,1723,large,6,1,48,12,No,2469,0,1,1,0,0,1,0,0,0
+overweight,female,vegan,less frequently,coal,private,never,105,frequently,4031,large,1,1,43,7,Sometimes,3309,0,0,0,0,0,0,1,0,1
+obese,female,vegan,daily,coal,public,sometimes,188,rarely,284,extra large,1,17,3,24,Yes,1542,0,0,0,1,0,0,1,1,1
+overweight,male,pescatarian,less frequently,coal,walk/bicycle,sometimes,254,very frequently,54,medium,7,18,27,24,No,3347,1,0,1,1,1,1,1,0,1
+overweight,female,vegetarian,twice a day,natural gas,private,never,91,rarely,6868,extra large,5,17,22,1,No,3356,1,0,1,0,0,0,1,1,1
+obese,female,vegetarian,daily,wood,walk/bicycle,never,168,very frequently,75,large,3,5,10,18,No,2417,1,0,1,0,0,1,0,1,0
+normal,male,vegetarian,twice a day,wood,public,never,276,never,1764,extra large,2,10,20,19,Yes,1226,1,0,1,1,1,1,1,0,1
+overweight,female,vegan,twice a day,wood,walk/bicycle,sometimes,99,never,7,large,5,0,50,18,Yes,1663,1,1,0,0,0,0,0,0,0
+obese,female,vegan,twice a day,coal,private,often,176,very frequently,6053,medium,2,2,33,17,No,4034,1,0,0,0,1,1,1,1,1
+underweight,female,omnivore,more frequently,coal,walk/bicycle,often,275,rarely,11,extra large,3,16,32,7,Sometimes,1786,1,1,0,1,0,0,1,0,1
+overweight,female,omnivore,less frequently,natural gas,public,often,260,very frequently,110,large,3,21,20,10,Sometimes,2554,1,0,1,0,0,1,1,1,1
+underweight,female,vegetarian,twice a day,wood,walk/bicycle,never,276,very frequently,97,large,2,11,1,5,Yes,1714,0,0,1,0,0,0,0,1,0
+underweight,male,vegan,daily,coal,public,sometimes,238,very frequently,1143,large,2,1,34,7,Sometimes,2594,1,0,1,0,0,0,0,0,0
+normal,male,pescatarian,daily,natural gas,private,often,242,never,812,small,5,17,38,16,Sometimes,1890,1,0,0,1,1,0,0,1,0
+obese,female,vegetarian,more frequently,natural gas,walk/bicycle,sometimes,237,very frequently,16,medium,6,21,31,1,Yes,2908,0,1,1,0,0,0,1,1,1
+obese,female,vegetarian,more frequently,natural gas,walk/bicycle,never,79,frequently,26,small,5,1,40,22,Sometimes,2131,0,0,1,0,1,0,1,1,1
+obese,male,pescatarian,less frequently,natural gas,walk/bicycle,often,66,frequently,65,small,3,12,2,8,Sometimes,1673,0,0,1,1,1,0,1,1,1
+underweight,female,vegan,less frequently,coal,public,sometimes,210,never,1924,large,7,12,30,6,No,1697,1,1,0,0,0,1,0,1,0
+underweight,female,omnivore,daily,coal,walk/bicycle,never,173,very frequently,19,extra large,4,14,36,11,Sometimes,2673,0,0,1,0,1,0,1,0,1
+underweight,female,vegetarian,daily,wood,private,sometimes,226,frequently,1034,extra large,2,11,34,18,Yes,1868,1,0,0,1,0,1,0,1,0
+overweight,female,omnivore,less frequently,electricity,walk/bicycle,sometimes,148,rarely,43,small,2,11,24,20,No,1078,1,0,0,1,0,0,1,0,1
+obese,female,vegetarian,daily,natural gas,private,sometimes,149,rarely,4711,large,3,0,22,9,Sometimes,1397,0,0,1,1,1,1,1,0,1
+normal,male,omnivore,less frequently,natural gas,walk/bicycle,often,59,very frequently,23,extra large,4,3,19,19,No,2944,0,1,0,1,1,1,0,0,0
+normal,female,pescatarian,more frequently,coal,walk/bicycle,never,172,never,73,extra large,5,16,24,16,No,1686,0,0,1,0,1,1,0,1,0
+underweight,male,vegan,daily,coal,public,often,166,frequently,1838,large,5,6,34,9,No,2604,1,0,0,0,0,1,0,1,0
+obese,female,omnivore,twice a day,wood,public,sometimes,283,never,970,medium,6,18,28,6,Sometimes,1754,1,0,1,1,0,0,1,1,1
+underweight,male,pescatarian,twice a day,electricity,private,sometimes,184,frequently,4493,small,7,10,48,14,Sometimes,1812,1,0,1,1,0,0,0,0,0
+underweight,female,vegetarian,less frequently,wood,walk/bicycle,sometimes,191,never,89,medium,7,15,47,13,Sometimes,1413,0,0,1,1,0,0,1,0,1
+underweight,female,omnivore,less frequently,electricity,walk/bicycle,sometimes,103,frequently,47,extra large,6,6,7,8,Yes,1561,0,0,1,0,0,1,1,0,1
+normal,female,vegetarian,twice a day,wood,walk/bicycle,never,183,very frequently,26,extra large,1,21,11,0,No,1779,1,1,0,1,0,1,1,1,1
+normal,female,vegan,more frequently,coal,private,never,289,very frequently,3737,extra large,6,12,22,3,Yes,3720,1,0,0,0,1,0,1,1,1
+overweight,female,vegetarian,daily,coal,private,never,264,rarely,3829,medium,5,14,15,18,Yes,2818,0,1,1,0,1,0,1,0,1
+underweight,male,pescatarian,less frequently,wood,walk/bicycle,sometimes,239,rarely,45,extra large,5,20,38,22,Sometimes,1972,0,1,1,1,0,0,1,1,1
+overweight,male,vegan,less frequently,natural gas,walk/bicycle,sometimes,262,frequently,16,medium,4,20,36,18,No,2243,0,1,1,1,1,1,0,0,0
+overweight,male,omnivore,twice a day,coal,public,never,69,never,1025,extra large,1,22,16,24,Sometimes,1262,0,1,1,1,1,0,0,0,0
+normal,female,omnivore,twice a day,electricity,walk/bicycle,never,123,very frequently,68,medium,4,3,30,4,Sometimes,2026,0,1,1,0,1,0,0,1,0
+underweight,male,pescatarian,more frequently,coal,private,often,106,never,9350,small,5,13,27,12,Sometimes,3825,1,0,0,0,1,0,0,0,0
+normal,female,vegetarian,daily,electricity,walk/bicycle,never,77,frequently,25,small,6,4,7,22,Sometimes,1133,0,0,1,1,0,1,0,1,0
+obese,female,vegetarian,twice a day,electricity,public,sometimes,156,rarely,646,large,7,0,44,12,Yes,1927,0,1,1,1,1,0,0,1,0
+obese,female,omnivore,less frequently,wood,private,sometimes,155,never,3964,medium,2,18,7,20,Yes,2002,1,0,1,1,1,1,1,1,1
+overweight,male,vegan,more frequently,natural gas,public,never,73,rarely,380,extra large,1,1,35,3,No,1490,0,1,0,1,1,1,0,1,0
+overweight,male,pescatarian,twice a day,natural gas,walk/bicycle,often,74,very frequently,31,extra large,7,11,13,1,No,3389,1,0,0,1,1,1,0,0,0
+normal,female,pescatarian,daily,coal,public,sometimes,289,never,1276,large,6,23,30,18,Yes,1690,0,1,1,1,1,1,0,0,0
+obese,male,pescatarian,twice a day,wood,private,never,70,frequently,9914,medium,1,14,33,6,Yes,1872,0,0,1,1,1,0,0,0,0
+obese,female,pescatarian,daily,wood,walk/bicycle,sometimes,79,frequently,54,large,5,23,39,9,Yes,2468,0,1,1,0,1,0,0,1,0
+overweight,male,pescatarian,more frequently,electricity,walk/bicycle,sometimes,264,rarely,64,small,3,13,41,5,Sometimes,1534,0,0,1,1,1,1,0,0,0
+overweight,female,vegan,more frequently,electricity,public,never,70,very frequently,829,large,7,18,5,5,Sometimes,2117,1,1,1,0,0,1,0,1,0
+overweight,male,vegetarian,more frequently,electricity,walk/bicycle,sometimes,231,frequently,61,large,2,17,17,6,Yes,1437,1,1,1,1,1,0,0,1,0
+underweight,male,vegan,twice a day,wood,private,never,181,very frequently,7885,large,1,0,39,6,Sometimes,3492,0,1,0,0,0,0,0,1,0
+obese,male,pescatarian,daily,wood,public,never,100,rarely,331,extra large,2,9,33,15,Sometimes,1805,0,0,1,0,1,0,1,0,1
+normal,female,pescatarian,daily,natural gas,walk/bicycle,never,123,frequently,98,extra large,7,19,46,1,No,2333,1,0,1,0,1,0,0,1,0
+normal,male,omnivore,twice a day,electricity,private,sometimes,296,never,1050,small,2,12,17,12,Sometimes,1066,0,0,1,1,1,1,0,0,0
+obese,female,omnivore,daily,electricity,public,sometimes,279,never,1557,extra large,1,22,39,14,No,1560,1,1,0,1,1,1,1,0,1
+underweight,male,pescatarian,twice a day,coal,walk/bicycle,often,169,never,28,extra large,2,0,39,8,Yes,1696,1,0,0,0,1,1,0,0,0
+underweight,male,omnivore,twice a day,electricity,private,often,298,frequently,5914,medium,1,13,21,9,No,3134,0,1,1,1,0,1,1,1,1
+obese,female,pescatarian,twice a day,coal,public,often,220,frequently,790,extra large,4,6,34,8,Sometimes,2674,1,0,1,0,0,0,0,1,0
+overweight,male,vegetarian,less frequently,electricity,walk/bicycle,often,105,never,73,small,2,22,23,11,Yes,583,1,1,1,1,1,0,0,0,0
+overweight,female,pescatarian,daily,wood,public,often,287,rarely,1419,medium,2,15,5,11,Yes,1588,0,0,0,1,1,1,1,0,1
+underweight,female,vegan,more frequently,natural gas,public,sometimes,236,never,1585,medium,3,1,42,23,Sometimes,1281,1,0,1,1,1,0,1,1,1
+normal,female,vegetarian,twice a day,electricity,private,never,285,frequently,1131,large,5,18,14,8,Sometimes,1644,1,1,0,1,1,1,0,1,0
+underweight,female,vegetarian,daily,electricity,private,often,202,never,8413,extra large,2,10,11,5,Yes,2319,1,1,0,1,1,0,0,0,0
+underweight,female,vegan,daily,coal,public,often,54,rarely,1768,extra large,6,10,20,3,Yes,1819,0,0,1,0,1,1,0,0,0
+overweight,female,vegan,twice a day,coal,walk/bicycle,often,207,rarely,37,extra large,5,20,35,7,Yes,2094,0,1,1,0,1,0,0,0,0
+normal,male,vegetarian,less frequently,natural gas,walk/bicycle,sometimes,185,never,69,medium,6,20,25,16,No,1680,1,0,0,0,0,1,1,1,1
+obese,female,omnivore,twice a day,coal,walk/bicycle,often,228,never,34,extra large,4,15,50,18,Yes,2495,0,0,1,1,0,1,1,0,1
+normal,male,pescatarian,less frequently,electricity,public,never,84,frequently,922,small,7,10,39,1,Sometimes,1628,1,1,0,1,1,0,0,1,0
+underweight,female,vegan,daily,wood,private,never,63,rarely,2977,small,7,14,7,1,Yes,1566,1,0,0,0,1,0,1,0,1
+underweight,male,pescatarian,daily,electricity,private,never,91,very frequently,2996,extra large,4,14,3,5,No,1906,1,0,1,1,1,1,0,1,0
+underweight,female,vegan,daily,coal,private,never,217,frequently,6360,small,1,16,8,18,Sometimes,2634,0,0,0,1,0,0,0,0,0
+overweight,male,omnivore,daily,coal,public,sometimes,235,frequently,1278,small,3,5,30,17,No,2744,0,1,0,0,0,1,1,1,1
+overweight,female,pescatarian,less frequently,wood,private,often,163,rarely,4779,small,1,24,28,23,Yes,2576,1,0,0,1,0,0,0,1,0
+obese,female,pescatarian,more frequently,wood,public,sometimes,136,rarely,1491,small,3,1,38,22,Sometimes,1461,1,1,1,1,0,1,0,1,0
+underweight,female,pescatarian,daily,electricity,public,never,174,rarely,1612,large,6,10,36,11,Sometimes,1447,0,0,1,1,1,0,0,1,0
+underweight,male,vegetarian,daily,electricity,private,never,120,very frequently,6331,small,3,7,38,24,Sometimes,4166,0,1,1,1,0,0,1,0,1
+obese,female,vegetarian,daily,electricity,private,never,184,never,9136,extra large,7,7,27,11,Yes,4913,1,1,1,0,0,1,1,0,1
+obese,male,vegetarian,more frequently,electricity,walk/bicycle,sometimes,276,never,29,large,6,8,46,23,Sometimes,2387,1,0,0,1,1,1,1,1,1
+obese,female,pescatarian,less frequently,electricity,walk/bicycle,often,250,never,35,medium,2,4,26,17,Yes,1086,0,0,1,1,0,0,0,0,0
+underweight,female,omnivore,daily,coal,walk/bicycle,never,61,never,60,large,7,18,45,13,No,1621,1,1,1,0,0,0,0,1,0
+overweight,male,omnivore,daily,natural gas,private,often,234,frequently,7128,large,7,13,46,12,Yes,3257,0,1,0,1,0,1,0,1,0
+overweight,female,vegetarian,more frequently,electricity,private,sometimes,109,never,6906,small,4,12,44,20,Yes,2896,0,1,0,1,0,1,1,1,1
+overweight,male,vegan,twice a day,coal,walk/bicycle,never,254,rarely,14,large,1,10,45,17,Sometimes,2092,1,0,0,1,0,1,1,1,1
+obese,female,vegetarian,less frequently,wood,private,sometimes,93,rarely,6238,extra large,6,8,26,24,Sometimes,2009,1,1,0,0,0,0,1,1,1
+overweight,female,vegetarian,twice a day,coal,walk/bicycle,often,288,very frequently,82,medium,2,2,3,5,Yes,2029,1,1,1,1,0,1,0,0,0
+normal,female,vegan,less frequently,wood,walk/bicycle,often,121,very frequently,97,large,5,12,18,24,No,2502,1,0,0,0,1,0,1,1,1
+obese,female,vegan,daily,electricity,private,sometimes,293,never,6668,medium,2,5,27,14,Yes,2896,0,1,0,1,1,1,1,0,1
+overweight,male,omnivore,more frequently,wood,private,often,72,rarely,5806,small,4,15,7,17,Sometimes,2772,0,1,1,1,1,0,1,0,1
+obese,male,omnivore,more frequently,electricity,private,never,109,rarely,201,medium,5,14,9,3,No,1326,1,0,0,0,0,1,0,0,0
+underweight,female,pescatarian,twice a day,wood,public,often,229,rarely,1041,large,7,8,18,19,No,1790,1,0,0,1,0,1,1,1,1
+normal,female,vegan,twice a day,wood,public,sometimes,258,very frequently,1365,medium,6,3,16,11,Sometimes,2230,1,1,0,1,1,0,1,0,1
+obese,male,omnivore,daily,natural gas,walk/bicycle,never,91,frequently,84,large,6,1,32,16,Yes,2466,0,1,1,0,1,0,0,0,0
+obese,female,pescatarian,less frequently,wood,public,sometimes,75,frequently,820,extra large,5,15,42,15,Yes,2547,0,1,1,0,0,1,0,0,0
+normal,female,vegetarian,less frequently,electricity,public,never,265,frequently,1505,medium,5,14,24,22,Yes,1454,0,1,1,1,1,0,0,1,0
+obese,male,vegan,twice a day,electricity,walk/bicycle,never,146,very frequently,78,small,5,12,45,20,No,3069,0,0,1,0,1,1,0,1,0
+normal,female,vegetarian,more frequently,electricity,private,often,182,never,631,medium,5,15,14,12,Sometimes,1120,1,1,0,0,0,1,1,1,1
+obese,female,vegetarian,more frequently,electricity,walk/bicycle,sometimes,167,never,91,medium,3,11,17,11,No,898,1,1,0,0,1,1,0,1,0
+normal,female,vegan,twice a day,wood,walk/bicycle,never,111,very frequently,40,extra large,4,10,6,13,Yes,1981,1,1,1,0,1,0,1,1,1
+normal,male,omnivore,twice a day,natural gas,private,sometimes,113,frequently,4960,extra large,5,20,45,10,Yes,2656,0,1,1,0,1,1,0,1,0
+normal,male,omnivore,daily,natural gas,walk/bicycle,never,127,never,33,extra large,3,14,21,14,Yes,1350,0,1,0,1,0,0,1,1,1
+overweight,male,pescatarian,twice a day,natural gas,walk/bicycle,often,282,never,59,small,3,23,22,23,Sometimes,1416,1,1,1,1,0,0,1,1,1
+underweight,female,vegan,daily,electricity,public,never,280,frequently,472,extra large,4,16,6,22,No,1445,1,0,0,1,1,0,0,1,0
+underweight,female,pescatarian,less frequently,natural gas,walk/bicycle,often,244,frequently,72,medium,6,23,45,11,Yes,2002,0,1,1,1,0,1,1,1,1
+underweight,female,omnivore,daily,coal,private,never,258,never,7604,extra large,2,7,42,19,Sometimes,3206,0,1,0,0,0,1,1,1,1
+obese,male,vegetarian,more frequently,natural gas,public,often,69,very frequently,1766,medium,6,15,16,24,No,3558,1,1,0,0,0,1,0,1,0
+overweight,male,vegan,less frequently,coal,public,never,159,frequently,1567,extra large,7,0,3,16,Sometimes,3085,0,0,0,0,0,0,1,1,1
+obese,female,omnivore,daily,wood,public,never,230,never,1949,extra large,1,13,16,21,Yes,1562,0,0,0,1,1,1,1,1,1
+underweight,male,omnivore,less frequently,electricity,walk/bicycle,never,165,rarely,53,large,1,18,23,13,No,940,1,0,1,1,1,0,1,1,1
+obese,male,pescatarian,twice a day,coal,public,never,127,rarely,847,large,3,11,42,13,No,1964,1,1,1,1,0,1,0,0,0
+overweight,female,pescatarian,twice a day,natural gas,walk/bicycle,sometimes,290,never,57,medium,2,0,16,0,Yes,1122,0,0,0,1,1,0,0,0,0
+normal,female,vegan,less frequently,natural gas,public,often,165,frequently,30,small,4,20,19,16,No,1596,1,1,0,0,1,0,1,0,1
+normal,male,pescatarian,more frequently,wood,private,sometimes,284,never,6348,extra large,1,17,10,10,Sometimes,2747,0,1,0,0,1,0,1,0,1
+obese,male,vegetarian,twice a day,natural gas,public,never,208,very frequently,1788,extra large,3,22,7,0,Yes,3156,0,0,1,0,0,0,1,1,1
+obese,male,omnivore,twice a day,electricity,walk/bicycle,never,130,frequently,32,medium,7,9,8,23,Yes,1803,1,1,0,1,0,0,1,1,1
+obese,male,vegetarian,daily,natural gas,private,often,246,rarely,9394,medium,2,15,4,0,Sometimes,3931,0,1,1,1,1,0,1,0,1
+overweight,male,vegetarian,daily,coal,walk/bicycle,never,125,very frequently,25,extra large,3,17,44,20,Sometimes,3423,1,0,1,1,0,1,1,1,1
+normal,male,pescatarian,less frequently,electricity,public,never,256,frequently,1654,large,1,20,16,21,No,1755,0,1,0,0,0,1,1,0,1
+normal,female,vegetarian,twice a day,wood,walk/bicycle,sometimes,278,rarely,87,medium,1,0,4,11,Yes,853,1,0,0,0,1,0,0,0,0
+obese,female,omnivore,twice a day,electricity,walk/bicycle,sometimes,85,frequently,63,large,6,17,22,21,Yes,2003,0,1,1,0,1,1,0,0,0
+overweight,male,vegetarian,less frequently,wood,private,often,190,rarely,618,medium,4,1,4,13,No,1564,1,1,0,0,0,0,1,1,1
+overweight,male,omnivore,more frequently,electricity,public,sometimes,164,very frequently,1794,medium,6,21,13,22,Yes,2893,0,0,1,1,1,0,1,0,1
+normal,female,omnivore,more frequently,wood,public,sometimes,106,rarely,992,large,3,20,39,13,Sometimes,1734,0,0,0,0,0,1,0,0,0
+obese,male,vegetarian,less frequently,coal,public,sometimes,232,never,721,small,5,10,1,15,Sometimes,1418,0,0,1,1,1,0,1,0,1
+normal,female,vegetarian,less frequently,coal,public,often,52,never,318,small,5,22,27,9,No,1328,0,0,0,1,1,0,0,0,0
+underweight,male,omnivore,daily,natural gas,private,often,278,very frequently,82,extra large,7,6,13,12,Sometimes,3369,1,0,0,0,0,1,0,0,0
+underweight,male,omnivore,more frequently,electricity,private,sometimes,253,frequently,9920,medium,6,17,2,23,Yes,1822,0,0,1,1,1,1,1,1,1
+underweight,female,omnivore,twice a day,coal,walk/bicycle,sometimes,222,very frequently,74,medium,2,15,43,6,Sometimes,2432,0,1,1,1,1,0,1,1,1
+normal,female,pescatarian,twice a day,wood,private,often,98,never,4188,extra large,7,17,27,17,Yes,2300,1,0,1,1,0,1,0,0,0
+underweight,female,vegetarian,daily,coal,private,never,99,frequently,4776,extra large,5,1,21,23,Sometimes,3263,1,0,0,1,1,0,1,1,1
+overweight,female,omnivore,daily,coal,public,sometimes,221,frequently,225,large,6,9,41,7,Sometimes,2969,0,0,0,1,0,1,1,1,1
+obese,female,vegan,more frequently,wood,walk/bicycle,often,163,rarely,69,medium,4,21,8,10,No,1296,0,0,1,1,0,0,0,0,0
+normal,male,vegan,less frequently,coal,private,often,292,very frequently,5167,large,5,6,44,23,Sometimes,4488,1,0,0,0,0,1,0,0,0
+underweight,male,omnivore,less frequently,natural gas,private,often,177,very frequently,115,large,5,13,15,23,Sometimes,2895,1,0,1,0,0,0,1,1,1
+obese,female,vegan,daily,wood,walk/bicycle,often,246,frequently,29,extra large,2,19,48,1,No,2327,1,1,0,1,0,1,1,1,1
+obese,female,vegetarian,less frequently,wood,public,often,79,never,1238,large,2,8,5,2,No,1118,1,0,0,0,0,0,0,1,0
+normal,male,vegan,daily,electricity,public,never,274,frequently,1927,small,6,12,45,6,No,1874,0,1,1,1,0,1,0,0,0
+obese,female,vegan,less frequently,wood,public,often,185,frequently,179,extra large,1,12,9,11,Yes,1818,0,0,0,0,1,1,1,0,1
+underweight,female,vegan,twice a day,coal,public,often,79,never,1524,extra large,4,10,11,19,Yes,1369,1,1,0,0,1,1,1,0,1
+normal,male,vegan,less frequently,electricity,walk/bicycle,never,166,rarely,97,extra large,3,4,36,12,Sometimes,1150,1,1,1,1,0,0,0,0,0
+obese,female,vegetarian,daily,coal,walk/bicycle,often,125,very frequently,51,large,3,22,28,6,Yes,2730,0,1,1,0,0,1,0,1,0
+overweight,male,vegetarian,more frequently,wood,walk/bicycle,often,85,very frequently,58,small,2,15,31,0,No,2883,1,0,0,0,1,0,0,1,0
+normal,male,vegetarian,twice a day,natural gas,public,never,279,very frequently,635,large,4,4,28,16,Sometimes,2923,0,1,0,1,1,1,0,1,0
+overweight,female,vegan,more frequently,natural gas,walk/bicycle,never,70,very frequently,7,small,4,5,21,13,No,2112,0,0,1,0,0,0,0,1,0
+underweight,female,vegan,daily,natural gas,public,often,120,never,1324,small,4,16,17,7,Sometimes,968,0,1,0,1,0,0,1,1,1
+normal,male,pescatarian,less frequently,wood,walk/bicycle,sometimes,271,rarely,28,large,4,8,23,21,Sometimes,1516,1,1,1,1,0,0,1,0,1
+underweight,female,omnivore,less frequently,wood,private,sometimes,232,rarely,9118,large,2,8,44,3,No,3566,1,1,0,0,1,1,1,1,1
+obese,male,pescatarian,daily,electricity,public,sometimes,248,very frequently,1426,extra large,6,3,5,9,Yes,3164,0,1,1,0,0,1,1,1,1
+overweight,female,vegetarian,daily,natural gas,public,sometimes,104,frequently,812,small,7,5,37,10,Sometimes,2075,0,0,0,1,1,1,1,0,1
+normal,female,pescatarian,daily,natural gas,public,often,57,frequently,1279,extra large,7,16,49,8,Sometimes,2637,0,0,1,0,1,1,0,1,0
+overweight,female,vegan,twice a day,coal,public,sometimes,149,never,845,extra large,7,14,24,24,Sometimes,2132,0,1,1,1,1,0,1,1,1
+underweight,female,vegetarian,less frequently,wood,walk/bicycle,often,121,never,52,medium,6,13,42,10,Sometimes,1518,0,0,0,0,1,1,1,1,1
+normal,male,vegetarian,daily,electricity,private,often,132,never,4737,large,3,6,30,2,Sometimes,1904,0,1,0,1,0,1,0,0,0
+overweight,male,pescatarian,less frequently,natural gas,private,sometimes,193,frequently,9825,large,5,11,24,13,Yes,6793,0,0,0,1,0,0,1,1,1
+obese,female,vegetarian,daily,coal,walk/bicycle,sometimes,98,rarely,2,small,5,12,3,17,Sometimes,1214,0,1,1,1,0,1,1,0,1
+obese,male,vegetarian,more frequently,wood,walk/bicycle,often,284,frequently,41,extra large,5,24,38,16,Sometimes,3193,1,1,1,1,0,1,1,1,1
+normal,female,pescatarian,more frequently,electricity,walk/bicycle,never,231,frequently,87,large,3,22,25,20,Yes,1641,0,0,1,0,1,1,0,1,0
+overweight,male,omnivore,less frequently,electricity,public,often,183,very frequently,755,extra large,7,14,39,16,Sometimes,4039,0,0,0,1,1,0,0,1,0
+obese,female,vegan,more frequently,wood,walk/bicycle,sometimes,138,very frequently,63,extra large,7,19,45,20,Yes,3707,0,0,1,0,1,0,1,0,1
+normal,female,vegetarian,more frequently,electricity,private,sometimes,106,never,563,medium,1,2,27,1,Yes,743,1,0,0,1,0,1,0,1,0
+normal,female,omnivore,less frequently,wood,walk/bicycle,often,220,frequently,17,extra large,1,12,12,2,Yes,1436,1,1,0,1,1,1,1,0,1
+overweight,male,vegetarian,more frequently,coal,private,often,120,very frequently,4469,small,3,12,40,3,Sometimes,4492,0,0,1,0,0,0,0,0,0
+obese,female,omnivore,daily,natural gas,private,never,200,very frequently,3946,small,3,12,10,9,Sometimes,3618,0,0,0,1,1,0,1,1,1
+normal,male,omnivore,twice a day,natural gas,private,often,259,never,8787,medium,1,7,4,16,Yes,3555,1,0,0,0,0,0,0,0,0
+underweight,female,vegetarian,more frequently,wood,private,sometimes,204,very frequently,6072,medium,4,4,12,14,Yes,1799,1,1,1,0,1,0,1,0,1
+obese,female,vegetarian,twice a day,coal,private,never,270,frequently,7795,medium,5,10,49,21,Sometimes,5616,0,1,0,0,1,0,0,1,0
+obese,male,pescatarian,more frequently,natural gas,private,often,106,frequently,6588,medium,7,22,14,6,Yes,2505,0,0,0,0,0,1,0,0,0
+obese,male,vegetarian,twice a day,natural gas,walk/bicycle,often,178,never,72,medium,2,6,20,24,Yes,1315,1,0,1,0,0,0,0,1,0
+underweight,male,vegetarian,less frequently,natural gas,walk/bicycle,often,90,frequently,32,large,4,16,10,0,Sometimes,1669,1,1,0,0,0,1,1,0,1
+underweight,male,pescatarian,daily,coal,public,never,274,frequently,634,extra large,3,22,26,2,Sometimes,2063,0,1,1,1,0,0,0,0,0
+normal,male,omnivore,less frequently,electricity,walk/bicycle,sometimes,219,frequently,78,large,3,2,2,24,Sometimes,1672,0,0,1,1,1,1,1,0,1
+obese,female,omnivore,less frequently,electricity,private,never,221,frequently,1642,medium,3,18,6,4,Sometimes,1993,1,1,0,1,0,0,1,1,1
+normal,male,omnivore,less frequently,wood,private,sometimes,290,frequently,7794,large,3,12,49,21,No,5306,1,1,0,0,0,1,0,0,0
+overweight,male,pescatarian,daily,wood,public,never,205,never,1252,extra large,2,17,26,4,Yes,1394,1,1,0,0,0,0,1,0,1
+obese,male,vegan,more frequently,coal,private,often,169,frequently,6979,medium,5,4,34,5,No,4284,1,0,1,0,1,0,0,1,0
+underweight,female,vegan,daily,electricity,walk/bicycle,often,141,never,87,small,3,3,16,1,Sometimes,667,0,0,0,1,0,0,1,0,1
+overweight,male,pescatarian,less frequently,coal,walk/bicycle,never,85,never,69,medium,5,21,12,7,Sometimes,1342,0,0,1,0,1,1,0,0,0
+normal,female,vegetarian,more frequently,natural gas,walk/bicycle,often,142,very frequently,68,extra large,4,22,8,17,Yes,2240,0,1,1,1,0,0,1,0,1
+normal,male,pescatarian,daily,electricity,private,often,292,frequently,310,small,5,6,7,21,Sometimes,1686,0,1,1,0,1,1,0,0,0
+overweight,female,omnivore,twice a day,wood,public,never,193,never,916,extra large,4,10,22,21,Yes,1689,0,1,0,1,0,0,1,1,1
+overweight,female,pescatarian,more frequently,wood,private,often,160,never,854,large,4,5,45,6,Sometimes,1969,0,0,0,1,1,0,1,0,1
+underweight,female,omnivore,more frequently,wood,public,never,170,never,389,medium,3,2,8,1,Yes,779,0,1,1,0,1,1,1,0,1
+underweight,male,vegetarian,daily,electricity,walk/bicycle,often,122,very frequently,13,large,6,22,11,4,Sometimes,2210,1,1,1,1,0,1,0,0,0
+normal,male,vegetarian,twice a day,coal,public,sometimes,99,very frequently,620,small,3,0,35,4,Sometimes,2483,1,1,1,1,1,1,1,0,1
+overweight,female,omnivore,daily,coal,private,often,211,never,7587,extra large,3,4,7,22,No,4239,1,1,0,0,1,1,1,0,1
+overweight,male,vegan,more frequently,natural gas,public,never,211,very frequently,18,large,3,13,36,9,No,2855,0,1,1,1,0,0,1,1,1
+normal,female,vegetarian,less frequently,natural gas,walk/bicycle,often,163,never,55,medium,1,12,30,10,Yes,1007,1,0,0,1,1,0,1,1,1
+overweight,male,omnivore,less frequently,electricity,private,often,114,rarely,8315,large,1,23,44,12,No,3871,0,1,1,1,1,1,1,0,1
+underweight,female,vegan,daily,coal,walk/bicycle,often,106,never,90,medium,3,22,22,6,No,1004,1,0,1,1,1,1,1,1,1
+normal,male,omnivore,less frequently,electricity,private,sometimes,260,rarely,4946,large,6,21,37,2,Sometimes,2043,0,1,0,0,1,1,0,1,0
+underweight,male,vegetarian,daily,natural gas,private,often,244,rarely,9349,medium,5,22,33,15,Sometimes,3981,1,1,1,0,0,1,0,0,0
+normal,male,omnivore,daily,electricity,public,often,264,frequently,1746,extra large,5,17,42,14,No,2705,0,0,1,1,0,0,1,0,1
+normal,male,omnivore,twice a day,natural gas,public,never,127,rarely,1863,large,7,13,12,0,Sometimes,1696,0,1,0,1,1,1,0,0,0
+underweight,male,vegan,daily,electricity,walk/bicycle,often,203,frequently,43,large,1,16,34,10,Yes,1815,0,0,0,0,1,1,0,1,0
+overweight,male,omnivore,twice a day,natural gas,public,often,51,rarely,1446,extra large,6,16,24,3,Yes,2134,1,0,1,1,1,1,0,0,0
+underweight,female,pescatarian,daily,coal,private,sometimes,229,rarely,1540,extra large,6,4,8,6,Sometimes,1940,1,0,0,1,1,1,0,0,0
+underweight,female,vegan,daily,coal,walk/bicycle,never,149,rarely,73,extra large,3,12,41,22,Yes,1763,0,0,0,1,0,0,0,1,0
+overweight,male,omnivore,more frequently,electricity,private,never,104,never,1149,medium,2,11,34,0,Sometimes,1476,0,0,1,0,0,1,1,1,1
+underweight,female,omnivore,twice a day,wood,walk/bicycle,never,68,rarely,22,small,4,11,30,6,No,1093,0,0,1,0,0,1,0,1,0
+underweight,male,pescatarian,twice a day,electricity,public,sometimes,174,rarely,1502,large,2,9,45,17,Sometimes,1451,0,1,1,0,1,1,0,0,0
+overweight,female,omnivore,daily,electricity,walk/bicycle,never,122,rarely,39,medium,3,18,10,6,Sometimes,1106,0,0,0,0,0,1,0,1,0
+normal,female,pescatarian,less frequently,wood,public,never,186,never,822,small,1,19,33,4,No,1154,0,0,0,0,0,0,0,1,0
+normal,male,vegetarian,daily,electricity,private,often,277,never,4154,large,1,17,8,18,Sometimes,2649,0,0,0,0,1,0,0,1,0
+overweight,male,vegetarian,daily,coal,walk/bicycle,never,119,very frequently,51,small,2,4,18,6,No,2527,1,1,0,1,0,0,1,0,1
+obese,female,vegetarian,twice a day,coal,public,never,172,very frequently,1130,extra large,7,16,6,3,Yes,3212,1,0,0,0,1,1,0,1,0
+normal,male,pescatarian,twice a day,natural gas,walk/bicycle,never,207,never,58,medium,6,15,9,8,Yes,1164,0,1,0,1,1,0,0,0,0
+overweight,male,vegetarian,daily,natural gas,public,sometimes,121,never,1346,large,3,6,33,15,Sometimes,1801,1,0,0,0,0,1,1,1,1
+underweight,male,vegan,more frequently,coal,walk/bicycle,never,235,frequently,99,small,2,16,25,4,No,1675,0,1,1,0,1,0,1,0,1
+overweight,male,vegetarian,more frequently,coal,walk/bicycle,never,106,never,69,medium,2,22,22,1,No,1356,0,0,1,1,0,1,1,1,1
+overweight,male,omnivore,twice a day,wood,walk/bicycle,often,110,very frequently,62,medium,6,20,26,7,Sometimes,3041,1,1,0,0,0,0,1,1,1
+normal,male,vegetarian,more frequently,wood,walk/bicycle,often,242,rarely,82,large,7,20,7,0,Yes,1572,1,0,1,1,1,1,1,0,1
+underweight,female,vegetarian,less frequently,natural gas,walk/bicycle,sometimes,256,frequently,87,small,7,16,20,13,No,1354,1,1,1,0,1,1,1,0,1
+obese,male,vegetarian,daily,natural gas,walk/bicycle,sometimes,289,never,57,medium,2,13,14,18,Sometimes,1355,0,0,1,0,0,0,0,1,0
+obese,female,omnivore,twice a day,natural gas,walk/bicycle,never,82,rarely,67,small,3,13,41,5,No,1340,1,1,1,0,0,1,1,1,1
+underweight,female,vegan,less frequently,electricity,private,sometimes,289,frequently,7230,medium,1,7,27,0,Sometimes,2511,1,0,1,0,0,1,1,1,1
+normal,female,vegetarian,more frequently,wood,walk/bicycle,sometimes,154,never,30,small,6,3,12,22,No,924,0,1,1,0,0,1,0,1,0
+normal,male,pescatarian,twice a day,coal,private,sometimes,215,very frequently,5566,small,4,17,44,24,Yes,4633,0,1,0,1,0,1,0,1,0
+normal,male,vegetarian,daily,wood,private,never,181,never,1333,small,4,15,27,20,Sometimes,1323,0,0,0,1,1,0,0,0,0
+obese,male,vegan,less frequently,natural gas,private,sometimes,180,frequently,5673,large,7,18,29,13,Sometimes,5318,1,1,1,0,0,0,1,1,1
+underweight,female,pescatarian,more frequently,electricity,public,sometimes,72,never,1603,large,4,11,1,22,No,668,1,1,1,1,0,0,0,1,0
+overweight,male,omnivore,daily,coal,public,sometimes,271,very frequently,1004,small,7,0,11,4,Sometimes,3009,1,0,1,1,1,0,0,1,0
+overweight,female,vegetarian,more frequently,coal,public,often,64,frequently,1282,medium,3,22,46,14,Yes,2233,1,0,1,0,0,1,0,0,0
+normal,female,pescatarian,less frequently,coal,public,sometimes,286,very frequently,1277,extra large,6,18,3,9,Yes,2722,1,0,0,0,0,1,1,1,1
+underweight,female,vegan,daily,wood,walk/bicycle,never,213,very frequently,13,medium,2,20,20,10,Yes,1801,1,1,0,1,0,0,1,1,1
+underweight,male,vegetarian,twice a day,electricity,private,sometimes,226,frequently,2897,small,6,4,13,22,Sometimes,2251,1,0,0,0,0,1,0,0,0
+normal,female,vegan,twice a day,electricity,private,often,97,very frequently,340,extra large,4,15,50,5,Yes,2439,1,1,1,1,0,1,1,0,1
+normal,female,vegetarian,daily,wood,public,sometimes,295,frequently,210,small,4,23,24,18,Sometimes,1603,1,1,0,1,0,0,1,0,1
+normal,female,pescatarian,twice a day,electricity,private,often,197,very frequently,4602,small,4,11,7,1,No,2310,1,1,1,1,0,1,0,1,0
+underweight,male,pescatarian,less frequently,electricity,public,never,164,never,1745,large,2,24,49,15,No,1156,1,1,1,0,0,0,1,0,1
+obese,male,pescatarian,daily,electricity,private,often,286,never,6723,small,6,10,37,2,Sometimes,4603,0,1,0,1,1,0,1,0,1
+underweight,male,vegetarian,more frequently,electricity,public,never,294,frequently,1384,small,1,0,3,15,Sometimes,1216,0,0,1,0,0,0,0,0,0
+obese,male,vegan,more frequently,coal,walk/bicycle,often,80,frequently,30,medium,7,0,17,3,No,2433,1,1,1,0,0,0,0,1,0
+overweight,male,pescatarian,daily,wood,public,sometimes,234,very frequently,92,large,4,12,35,21,Yes,3416,0,1,1,1,1,0,0,1,0
+overweight,female,pescatarian,less frequently,coal,private,often,116,frequently,1855,extra large,1,7,48,18,Sometimes,2635,1,0,1,0,1,0,1,1,1
+obese,female,vegan,daily,electricity,public,sometimes,245,frequently,1435,medium,2,15,32,9,No,1838,0,1,1,0,0,1,0,1,0
+normal,female,omnivore,daily,wood,private,never,199,very frequently,9670,extra large,1,18,47,6,Sometimes,2361,1,1,0,0,0,1,0,0,0
+underweight,male,vegetarian,more frequently,wood,private,sometimes,207,very frequently,9107,medium,5,22,18,9,Yes,4920,0,0,1,1,0,0,1,1,1
+normal,female,omnivore,more frequently,coal,private,often,296,very frequently,8430,extra large,7,11,21,5,Sometimes,5366,0,0,0,0,1,1,1,1,1
+normal,female,omnivore,daily,electricity,walk/bicycle,sometimes,129,never,13,medium,1,22,8,4,Sometimes,665,0,0,0,0,0,0,0,1,0
+obese,male,omnivore,more frequently,coal,private,often,261,frequently,2684,extra large,1,24,32,23,Yes,3881,1,1,0,1,0,1,1,0,1
+normal,male,vegan,twice a day,wood,public,sometimes,107,very frequently,8,extra large,1,9,42,7,Yes,2745,0,0,0,0,1,1,1,1,1
+normal,male,vegetarian,less frequently,natural gas,walk/bicycle,often,139,frequently,93,large,6,19,20,7,No,2216,1,0,1,0,0,1,0,0,0
+underweight,female,pescatarian,twice a day,coal,walk/bicycle,often,80,rarely,98,extra large,5,4,43,20,Sometimes,1840,1,1,0,0,0,0,1,0,1
+overweight,male,vegetarian,twice a day,coal,private,often,238,very frequently,8651,extra large,3,20,25,19,Sometimes,5741,0,0,1,1,0,1,1,0,1
+overweight,female,pescatarian,daily,wood,walk/bicycle,sometimes,234,very frequently,67,small,7,9,22,22,Yes,2387,0,0,1,1,1,1,0,0,0
+underweight,male,omnivore,daily,natural gas,private,never,67,never,841,extra large,2,8,27,2,Yes,1125,1,1,0,1,0,1,0,0,0
+obese,female,omnivore,twice a day,electricity,private,often,174,never,2356,small,4,9,38,4,No,2027,0,0,1,0,0,1,0,0,0
+obese,female,omnivore,daily,coal,walk/bicycle,sometimes,89,frequently,53,medium,1,1,18,21,Sometimes,1805,0,1,1,1,1,1,0,0,0
+obese,male,omnivore,daily,electricity,public,often,195,rarely,606,medium,2,7,15,24,Sometimes,1574,0,1,1,0,0,0,1,1,1
+overweight,male,vegetarian,less frequently,natural gas,public,often,265,frequently,1551,medium,3,13,50,8,Yes,2425,1,1,1,0,1,1,1,0,1
+normal,female,omnivore,less frequently,electricity,public,often,59,very frequently,1014,small,5,7,33,13,Yes,2166,1,0,0,1,0,1,1,0,1
+underweight,male,pescatarian,daily,wood,walk/bicycle,sometimes,260,frequently,42,medium,4,13,23,17,Sometimes,2092,1,0,0,0,0,1,1,1,1
+overweight,male,omnivore,daily,coal,private,sometimes,62,rarely,3383,large,1,1,11,7,Yes,2190,0,0,0,0,0,1,1,1,1
+underweight,female,omnivore,less frequently,natural gas,private,sometimes,242,frequently,6095,small,3,7,20,1,Yes,2168,0,1,1,0,0,1,0,1,0
+underweight,female,pescatarian,twice a day,coal,private,never,224,never,9326,large,7,3,5,23,Sometimes,4629,0,1,0,0,1,0,0,0,0
+obese,male,vegetarian,more frequently,wood,walk/bicycle,never,281,frequently,50,extra large,1,8,37,4,Yes,2189,1,1,0,1,1,1,0,1,0
+underweight,female,omnivore,daily,coal,walk/bicycle,often,66,frequently,89,large,6,15,44,18,No,2450,0,0,1,1,1,1,0,1,0
+underweight,female,vegetarian,more frequently,wood,public,often,122,frequently,272,small,4,24,11,6,Yes,1394,0,1,1,0,1,0,1,0,1
+obese,male,vegetarian,more frequently,wood,walk/bicycle,never,238,frequently,73,medium,6,8,22,20,Sometimes,2278,1,0,1,1,0,1,1,0,1
+underweight,male,omnivore,twice a day,coal,private,sometimes,76,rarely,4038,medium,7,13,30,24,Sometimes,2972,0,1,1,1,1,0,1,1,1
+obese,female,vegetarian,daily,wood,private,never,82,never,2900,large,1,15,37,10,Yes,1679,1,0,0,1,1,1,1,0,1
+normal,male,pescatarian,more frequently,natural gas,walk/bicycle,often,71,rarely,88,small,5,16,17,24,No,1659,0,0,0,0,1,0,0,1,0
+overweight,male,vegetarian,less frequently,natural gas,private,never,228,never,3266,extra large,6,3,25,17,Sometimes,2163,0,0,0,1,0,0,1,0,1
+normal,female,omnivore,more frequently,natural gas,private,never,234,rarely,5688,small,7,17,21,3,Sometimes,2171,0,1,1,0,1,1,0,1,0
+overweight,male,omnivore,daily,electricity,private,never,167,frequently,5978,extra large,6,24,13,21,Sometimes,4364,1,0,0,0,1,1,1,1,1
+normal,female,vegetarian,more frequently,wood,walk/bicycle,sometimes,239,never,87,extra large,6,16,42,4,No,1655,1,1,1,1,0,1,1,1,1
+underweight,female,vegan,less frequently,wood,walk/bicycle,sometimes,134,rarely,71,medium,1,16,29,0,No,1087,0,0,0,0,0,0,1,0,1
+overweight,female,omnivore,more frequently,wood,walk/bicycle,often,274,frequently,1,medium,7,16,22,18,No,2462,0,1,0,0,1,1,0,0,0
+normal,male,vegetarian,daily,natural gas,walk/bicycle,never,279,frequently,26,extra large,6,23,14,4,No,2225,0,0,1,1,1,0,0,0,0
+normal,female,pescatarian,more frequently,electricity,public,never,157,never,1444,extra large,7,17,44,6,Yes,1610,0,0,1,1,1,0,0,0,0
+normal,male,vegan,more frequently,coal,walk/bicycle,sometimes,61,very frequently,27,large,6,0,29,11,Sometimes,3063,1,1,0,1,0,1,1,1,1
+normal,female,vegan,daily,electricity,private,never,106,frequently,8553,extra large,7,15,26,24,No,4057,0,1,0,1,1,1,1,1,1
+normal,male,omnivore,daily,natural gas,private,sometimes,155,rarely,6710,large,4,23,4,19,Sometimes,1224,1,1,1,1,1,0,0,1,0
+obese,male,vegetarian,more frequently,natural gas,private,sometimes,208,frequently,4423,small,5,9,24,5,Sometimes,2890,0,0,1,1,0,1,0,1,0
+underweight,male,vegan,daily,natural gas,private,often,232,never,384,small,7,9,14,20,No,1360,1,1,0,0,1,1,1,1,1
+underweight,female,omnivore,less frequently,natural gas,public,often,245,never,1341,small,7,15,13,7,Sometimes,1066,1,0,1,1,0,0,0,1,0
+normal,male,pescatarian,more frequently,wood,public,often,56,very frequently,1253,large,7,18,25,2,Sometimes,3197,1,0,0,0,1,0,1,0,1
+overweight,female,vegetarian,more frequently,electricity,public,sometimes,67,never,1695,medium,6,6,4,3,Yes,771,0,1,1,0,1,1,1,0,1
+underweight,male,vegan,more frequently,electricity,walk/bicycle,sometimes,178,frequently,71,medium,7,22,38,17,Yes,2031,0,0,1,0,0,0,1,1,1
+obese,female,omnivore,twice a day,wood,walk/bicycle,often,228,rarely,7,medium,2,13,40,12,Sometimes,1689,1,1,1,1,1,1,0,1,0
+overweight,female,vegetarian,twice a day,natural gas,walk/bicycle,sometimes,297,frequently,71,extra large,5,2,27,10,Sometimes,2206,1,1,1,0,1,1,0,1,0
+underweight,male,vegan,less frequently,natural gas,walk/bicycle,sometimes,106,very frequently,56,large,3,23,31,16,Sometimes,2495,0,0,1,0,0,1,0,0,0
+overweight,female,vegan,more frequently,electricity,public,often,107,never,213,large,6,10,34,23,Yes,1420,0,1,1,0,0,1,1,0,1
+obese,male,omnivore,less frequently,electricity,public,never,96,frequently,1434,small,3,18,47,2,Sometimes,2193,0,1,1,0,0,1,1,1,1
+normal,male,vegan,twice a day,natural gas,private,never,249,never,4294,extra large,2,24,49,19,Yes,2592,1,0,1,0,1,0,0,1,0
+overweight,female,vegetarian,twice a day,wood,walk/bicycle,never,50,very frequently,43,large,5,24,24,6,Yes,2343,1,0,1,0,0,1,1,1,1
+underweight,male,vegetarian,more frequently,coal,public,sometimes,136,never,1493,small,5,20,20,1,Sometimes,1508,0,0,0,0,1,0,1,1,1
+normal,male,omnivore,more frequently,electricity,walk/bicycle,often,238,frequently,98,small,4,19,2,16,Yes,1731,0,0,1,1,0,0,1,1,1
+overweight,female,vegetarian,more frequently,electricity,walk/bicycle,often,264,very frequently,78,medium,3,20,13,23,Yes,2048,1,1,1,1,0,0,1,1,1
+obese,female,pescatarian,more frequently,natural gas,private,sometimes,120,never,4911,large,4,5,12,5,Sometimes,3075,1,0,0,1,1,0,1,1,1
+normal,female,vegan,daily,wood,walk/bicycle,sometimes,268,never,14,small,6,18,31,24,No,1040,1,1,1,1,1,1,1,0,1
+overweight,female,omnivore,twice a day,electricity,private,sometimes,221,frequently,8159,medium,6,15,19,19,Sometimes,4040,0,0,1,0,1,0,1,1,1
+normal,male,omnivore,twice a day,coal,public,often,51,frequently,1878,small,7,2,50,16,Yes,2543,0,0,1,1,1,1,0,1,0
+obese,male,pescatarian,daily,electricity,public,never,57,rarely,802,large,3,8,39,12,Sometimes,1578,0,0,1,1,0,0,1,0,1
+obese,male,vegetarian,more frequently,electricity,walk/bicycle,often,92,very frequently,94,medium,7,18,6,15,Sometimes,2946,0,1,0,1,0,1,1,0,1
+normal,female,vegan,daily,natural gas,private,sometimes,87,rarely,7273,small,3,9,38,21,Yes,1346,0,1,0,0,1,0,1,0,1
+underweight,male,vegetarian,daily,coal,private,sometimes,298,frequently,7606,extra large,4,24,46,17,Yes,4798,0,0,0,1,1,0,1,1,1
+overweight,male,omnivore,daily,electricity,private,often,190,never,1718,medium,5,16,34,7,Sometimes,2124,1,1,0,0,0,1,0,1,0
+obese,male,vegan,daily,wood,private,often,242,very frequently,4943,large,5,16,32,10,No,4544,0,1,1,1,0,0,1,1,1
+underweight,male,vegetarian,twice a day,electricity,walk/bicycle,sometimes,294,rarely,28,large,5,2,16,12,Sometimes,1085,1,1,1,1,1,1,0,1,0
+overweight,male,omnivore,more frequently,electricity,walk/bicycle,often,217,rarely,90,extra large,5,19,23,12,Sometimes,2136,0,0,1,1,0,1,0,1,0
+underweight,female,vegan,twice a day,wood,public,never,213,never,1035,extra large,1,8,22,12,Yes,702,1,1,1,0,0,1,0,1,0
+obese,male,vegan,daily,coal,public,often,171,rarely,293,small,4,2,4,21,No,1959,0,0,0,0,1,1,0,1,0
+overweight,male,pescatarian,less frequently,natural gas,private,never,121,very frequently,995,medium,1,18,45,8,Yes,3299,0,0,0,1,1,1,0,0,0
+obese,female,omnivore,less frequently,coal,walk/bicycle,sometimes,197,rarely,37,medium,1,11,41,11,Yes,1716,1,1,1,1,1,0,1,0,1
+underweight,female,omnivore,more frequently,coal,public,never,98,frequently,1725,large,6,4,6,4,Yes,1801,1,1,0,1,0,1,0,1,0
+underweight,female,pescatarian,less frequently,natural gas,private,sometimes,132,never,235,extra large,6,14,13,7,Yes,1192,0,1,1,1,0,0,0,0,0
+normal,male,omnivore,more frequently,natural gas,public,sometimes,177,very frequently,1610,small,7,0,22,20,Yes,2644,1,0,1,1,0,1,0,1,0
+obese,female,vegan,less frequently,coal,public,often,260,very frequently,1886,small,3,18,41,1,Yes,3152,0,1,0,0,0,0,0,0,0
+normal,male,omnivore,less frequently,wood,public,often,108,never,109,extra large,1,1,8,21,Yes,1055,0,1,0,1,0,0,0,1,0
+normal,female,pescatarian,more frequently,wood,walk/bicycle,sometimes,74,very frequently,43,medium,3,3,4,11,Yes,1803,0,1,1,0,0,1,1,1,1
+overweight,male,omnivore,more frequently,wood,walk/bicycle,often,212,very frequently,58,small,1,23,48,14,Sometimes,3235,0,1,1,0,0,0,0,0,0
+underweight,male,omnivore,less frequently,wood,walk/bicycle,never,192,rarely,30,small,2,6,47,13,No,1598,1,0,1,0,1,1,0,1,0
+obese,female,omnivore,daily,natural gas,public,sometimes,175,very frequently,1726,large,1,3,13,14,No,2631,0,0,1,1,0,0,0,1,0
+overweight,female,pescatarian,twice a day,coal,public,sometimes,268,very frequently,841,large,3,15,3,18,No,2554,1,0,1,0,1,0,0,0,0
+underweight,female,pescatarian,twice a day,natural gas,walk/bicycle,sometimes,77,never,7,medium,7,11,22,13,No,1153,0,0,1,1,0,0,0,1,0
+overweight,male,vegan,daily,electricity,walk/bicycle,often,56,never,17,extra large,5,22,49,20,Sometimes,2161,0,1,0,1,1,1,1,0,1
+overweight,female,vegetarian,daily,wood,public,often,193,frequently,990,small,7,13,15,12,Yes,1788,1,0,0,1,0,0,0,0,0
+underweight,female,omnivore,more frequently,electricity,public,never,220,never,1155,large,2,10,23,8,No,985,0,0,1,1,0,1,1,0,1
+obese,male,omnivore,more frequently,electricity,walk/bicycle,often,104,frequently,16,medium,2,18,9,16,No,1760,1,0,1,1,1,0,1,0,1
+underweight,female,vegan,daily,natural gas,public,never,53,very frequently,886,medium,5,23,47,2,Sometimes,2278,0,0,1,1,1,0,0,0,0
+underweight,female,vegan,twice a day,coal,walk/bicycle,sometimes,204,very frequently,44,extra large,6,5,3,17,Yes,2375,1,0,1,1,1,1,1,1,1
+overweight,male,vegan,twice a day,wood,walk/bicycle,often,129,frequently,99,small,5,20,29,6,Yes,1900,1,0,1,0,0,1,1,1,1
+overweight,male,vegetarian,less frequently,natural gas,walk/bicycle,sometimes,291,frequently,20,extra large,6,23,23,18,Yes,2649,0,1,1,1,0,1,1,0,1
+obese,male,pescatarian,more frequently,natural gas,walk/bicycle,often,259,never,67,medium,4,18,9,23,Sometimes,1552,1,1,0,0,0,1,0,1,0
+underweight,female,pescatarian,twice a day,natural gas,public,often,285,frequently,1054,large,6,0,36,18,Sometimes,2322,0,1,0,0,1,0,1,1,1
+overweight,male,omnivore,daily,coal,private,never,294,very frequently,2299,large,6,8,35,8,Sometimes,4281,1,0,1,0,0,1,0,0,0
+overweight,male,pescatarian,less frequently,coal,public,often,214,very frequently,69,extra large,1,5,17,14,Sometimes,2848,1,1,0,0,1,0,0,1,0
+normal,male,pescatarian,more frequently,electricity,public,often,270,very frequently,1611,small,4,5,33,2,Sometimes,2565,0,0,1,0,1,0,1,0,1
+normal,male,pescatarian,twice a day,electricity,public,never,158,rarely,1787,small,6,11,7,3,Yes,716,1,0,1,1,0,1,0,0,0
+obese,female,vegetarian,more frequently,electricity,private,never,237,frequently,1958,large,5,7,46,11,No,2788,0,0,0,0,1,0,1,1,1
+normal,female,pescatarian,more frequently,wood,walk/bicycle,sometimes,184,very frequently,96,extra large,2,16,30,12,Yes,2125,1,0,1,1,1,1,1,0,1
+overweight,female,vegetarian,less frequently,electricity,private,sometimes,209,rarely,2763,large,1,0,24,11,Yes,1504,0,0,0,0,0,0,0,0,0
+overweight,male,vegetarian,twice a day,wood,public,sometimes,199,frequently,209,large,4,2,7,23,Sometimes,1810,1,1,1,0,0,1,0,0,0
+underweight,male,omnivore,twice a day,wood,private,sometimes,117,frequently,2826,medium,5,0,1,22,Yes,2134,1,1,0,0,0,0,0,1,0
+underweight,male,omnivore,daily,electricity,public,sometimes,147,never,1227,small,2,9,30,23,Sometimes,1034,0,1,1,1,0,1,1,0,1
+underweight,male,vegan,daily,natural gas,walk/bicycle,often,153,very frequently,12,small,2,23,21,10,Yes,2221,1,1,0,0,1,0,1,0,1
+obese,male,vegan,less frequently,natural gas,private,never,193,frequently,729,large,6,21,4,24,Yes,2487,0,0,0,1,0,1,1,1,1
+normal,female,pescatarian,more frequently,coal,public,sometimes,263,never,1224,extra large,5,1,4,5,Sometimes,1523,1,1,0,0,1,1,1,0,1
+obese,male,vegan,more frequently,electricity,walk/bicycle,sometimes,232,frequently,43,large,6,1,3,14,Yes,1944,1,0,0,1,0,0,1,0,1
+overweight,male,omnivore,daily,electricity,public,never,126,never,1537,extra large,3,14,47,0,Sometimes,1463,1,1,1,0,1,1,0,0,0
+overweight,male,pescatarian,twice a day,wood,private,sometimes,291,very frequently,4617,small,1,4,36,19,Yes,4443,0,0,0,1,0,1,1,1,1
+obese,female,omnivore,twice a day,coal,public,sometimes,106,very frequently,976,extra large,4,6,17,15,No,3260,0,0,1,1,0,0,1,1,1
+obese,male,omnivore,daily,coal,public,often,228,very frequently,629,small,6,8,46,19,No,3997,1,1,0,1,1,0,0,0,0
+obese,female,vegan,less frequently,electricity,walk/bicycle,sometimes,132,rarely,70,extra large,2,9,43,7,Yes,1461,0,0,0,0,1,0,0,0,0
+overweight,female,vegan,more frequently,electricity,walk/bicycle,often,116,never,84,large,3,8,24,9,Sometimes,916,1,0,1,0,1,1,0,0,0
+obese,female,pescatarian,more frequently,wood,private,never,291,frequently,8574,extra large,5,19,22,15,Sometimes,4595,1,0,1,0,1,0,1,0,1
+underweight,male,vegan,less frequently,wood,walk/bicycle,never,250,frequently,54,large,5,17,0,12,Sometimes,1703,1,0,0,0,1,1,0,0,0
+overweight,male,vegetarian,more frequently,wood,walk/bicycle,often,190,never,21,extra large,4,15,42,12,Sometimes,2213,1,0,0,0,0,1,0,0,0
+underweight,female,vegetarian,twice a day,coal,private,sometimes,170,rarely,8184,small,4,9,40,22,No,1492,1,0,1,0,1,0,1,1,1
+underweight,male,omnivore,more frequently,wood,public,sometimes,241,frequently,1678,extra large,2,10,38,21,Sometimes,2323,0,0,1,1,1,0,0,0,0
+obese,female,omnivore,more frequently,electricity,public,sometimes,238,frequently,1420,large,5,13,26,2,Sometimes,2270,0,0,1,1,0,1,0,0,0
+underweight,male,pescatarian,less frequently,wood,private,often,234,very frequently,2827,medium,7,5,22,24,No,3939,1,1,0,0,0,0,0,0,0
+normal,male,vegan,less frequently,wood,private,often,92,frequently,1930,small,1,21,43,7,No,2741,0,0,1,0,0,1,0,0,0
+normal,female,vegan,daily,wood,walk/bicycle,never,185,very frequently,9,extra large,6,18,29,23,Sometimes,2647,1,1,0,1,1,0,1,1,1
+overweight,female,pescatarian,less frequently,natural gas,walk/bicycle,often,206,rarely,47,extra large,1,1,16,15,Sometimes,993,1,1,1,1,1,0,0,0,0
+obese,female,pescatarian,less frequently,coal,walk/bicycle,never,62,frequently,76,extra large,4,10,5,7,Yes,2001,0,1,0,1,0,1,0,0,0
+overweight,female,omnivore,less frequently,wood,public,sometimes,75,very frequently,1541,medium,2,7,10,6,No,1952,1,1,1,0,1,0,0,0,0
+overweight,female,vegan,more frequently,electricity,walk/bicycle,often,178,frequently,17,small,2,20,10,0,Yes,1084,1,0,1,1,1,1,1,1,1
+normal,male,vegan,daily,coal,public,never,229,very frequently,1270,large,3,18,1,23,Sometimes,2297,1,1,1,0,1,0,0,0,0
+normal,male,omnivore,less frequently,natural gas,public,sometimes,162,frequently,457,extra large,3,12,34,2,Yes,2021,1,1,1,1,0,0,0,1,0
+normal,male,pescatarian,more frequently,electricity,walk/bicycle,never,199,frequently,25,medium,6,22,41,9,No,2180,0,0,1,0,0,0,0,1,0
+normal,female,pescatarian,less frequently,natural gas,public,never,178,frequently,243,extra large,4,0,9,2,Sometimes,1583,0,1,0,1,0,1,0,1,0
+underweight,female,omnivore,daily,natural gas,walk/bicycle,sometimes,192,frequently,47,small,2,19,29,14,Sometimes,1549,0,0,1,1,0,1,1,0,1
+underweight,male,vegan,daily,electricity,public,never,113,frequently,1482,large,3,11,33,19,No,1616,0,1,1,1,1,0,0,1,0
+underweight,female,omnivore,twice a day,electricity,private,sometimes,197,rarely,5853,small,2,7,11,0,No,1705,0,1,1,1,1,1,1,1,1
+obese,female,omnivore,less frequently,electricity,private,never,116,frequently,9684,extra large,5,13,30,1,Yes,4839,0,1,0,0,0,1,0,0,0
+obese,female,omnivore,twice a day,coal,public,never,267,rarely,1115,small,7,12,23,15,Yes,2207,0,0,0,0,1,0,1,0,1
+overweight,male,vegan,less frequently,natural gas,private,often,144,very frequently,5859,large,2,2,3,4,Sometimes,2624,0,0,0,0,1,1,0,0,0
+overweight,male,pescatarian,less frequently,natural gas,private,never,52,frequently,4832,large,7,11,0,2,Sometimes,3798,0,1,1,1,0,1,1,0,1
+obese,male,pescatarian,more frequently,wood,public,never,229,rarely,239,small,3,8,44,5,No,1648,1,1,1,1,0,0,0,0,0
+obese,male,vegetarian,twice a day,electricity,private,often,82,rarely,2130,extra large,5,8,33,19,Yes,2999,0,0,0,1,1,0,0,1,0
+normal,male,pescatarian,twice a day,electricity,private,never,94,never,1306,small,5,15,15,0,Sometimes,940,1,0,0,0,1,1,1,0,1
+underweight,female,omnivore,daily,natural gas,public,often,109,frequently,1644,extra large,5,15,15,10,Sometimes,2137,0,0,0,0,0,0,0,1,0
+underweight,male,pescatarian,daily,natural gas,walk/bicycle,never,226,frequently,89,small,6,15,48,6,Sometimes,1927,1,0,1,1,1,0,1,0,1
+underweight,male,omnivore,twice a day,wood,private,never,179,very frequently,7671,medium,2,23,26,15,No,2738,0,0,0,1,0,0,0,0,0
+overweight,male,vegetarian,daily,natural gas,walk/bicycle,never,84,rarely,38,medium,6,4,8,4,Sometimes,1364,0,0,0,1,1,0,0,1,0
+obese,male,omnivore,more frequently,coal,private,often,181,very frequently,922,medium,4,11,43,22,Yes,4421,0,0,1,0,1,1,0,1,0
+obese,female,vegetarian,less frequently,electricity,public,never,156,never,176,extra large,5,2,45,7,Sometimes,1405,1,1,1,0,0,0,1,0,1
+underweight,male,vegetarian,daily,natural gas,public,never,294,frequently,1692,extra large,4,22,40,3,No,2522,0,1,0,1,1,0,0,1,0
+normal,male,vegan,less frequently,wood,private,sometimes,57,very frequently,9787,medium,4,21,45,22,No,5773,0,0,0,0,0,1,1,1,1
+underweight,female,vegan,twice a day,wood,private,sometimes,252,frequently,7324,extra large,2,3,40,14,Yes,3840,1,0,1,0,1,0,1,0,1
+obese,female,vegetarian,less frequently,natural gas,public,never,246,never,1103,large,7,23,22,23,No,1931,1,1,0,0,1,0,0,1,0
+underweight,male,omnivore,daily,electricity,walk/bicycle,sometimes,183,very frequently,98,medium,4,6,24,20,Sometimes,2382,1,0,0,0,1,0,1,1,1
+overweight,female,omnivore,more frequently,electricity,public,never,279,never,428,small,1,22,19,19,No,1127,0,1,0,0,1,1,1,0,1
+overweight,male,vegetarian,more frequently,natural gas,public,sometimes,196,very frequently,891,medium,7,12,10,13,No,3280,0,0,0,1,1,1,0,1,0
+normal,female,pescatarian,twice a day,natural gas,private,often,234,never,6486,large,2,23,41,4,Yes,2229,0,1,1,1,1,0,0,0,0
+overweight,male,vegetarian,more frequently,electricity,public,sometimes,287,frequently,1556,extra large,2,9,38,17,Sometimes,2494,0,1,0,0,0,1,1,1,1
+obese,male,vegan,less frequently,wood,walk/bicycle,never,295,rarely,97,small,4,1,36,3,No,1894,0,0,0,1,0,1,1,0,1
+normal,female,vegan,more frequently,coal,private,sometimes,57,frequently,1504,medium,4,8,47,21,No,2650,1,0,1,1,1,1,1,1,1
+underweight,female,pescatarian,more frequently,coal,public,sometimes,93,never,142,large,4,22,37,4,Yes,1370,0,0,1,1,1,0,1,0,1
+overweight,male,vegan,less frequently,electricity,private,often,98,never,9541,large,3,23,2,17,Sometimes,2492,1,0,1,0,1,0,0,0,0
+normal,female,vegetarian,twice a day,coal,private,often,178,never,9719,extra large,1,9,36,3,Yes,3353,0,0,1,0,1,1,0,0,0
+overweight,male,vegetarian,less frequently,coal,public,often,213,frequently,1402,large,4,19,5,23,No,2303,1,1,1,1,0,1,1,0,1
+obese,male,vegan,less frequently,electricity,walk/bicycle,sometimes,250,frequently,39,extra large,1,20,38,16,No,2150,1,0,0,1,1,0,1,1,1
+normal,male,pescatarian,more frequently,wood,walk/bicycle,often,74,very frequently,9,small,1,20,31,8,No,2743,0,0,0,1,0,0,0,1,0
+obese,female,omnivore,twice a day,electricity,public,never,176,very frequently,1886,large,5,7,34,20,Yes,3153,0,1,0,0,1,1,1,0,1
+obese,male,vegan,more frequently,wood,public,sometimes,286,very frequently,1575,small,3,7,41,21,Sometimes,3560,0,0,0,1,1,1,0,1,0
+overweight,female,pescatarian,more frequently,electricity,private,sometimes,162,never,5067,medium,7,0,26,14,Sometimes,2342,1,1,0,0,0,0,1,1,1
+obese,male,pescatarian,more frequently,natural gas,private,often,153,never,2614,extra large,5,19,26,6,No,2152,1,0,0,1,1,1,1,0,1
+obese,male,omnivore,less frequently,coal,public,never,229,very frequently,109,large,6,16,10,0,Yes,3725,0,0,0,0,0,0,0,0,0
+underweight,male,pescatarian,daily,natural gas,walk/bicycle,often,180,frequently,21,medium,7,7,15,15,Sometimes,1885,1,1,0,1,0,0,0,1,0
+overweight,female,vegetarian,twice a day,electricity,public,often,96,frequently,492,small,2,6,18,1,Sometimes,1252,1,0,1,0,0,0,0,0,0
+overweight,female,vegan,less frequently,coal,public,never,126,very frequently,358,small,6,4,24,22,Yes,2535,0,1,0,0,0,0,0,1,0
+overweight,female,vegan,more frequently,coal,walk/bicycle,sometimes,228,never,10,small,5,8,40,23,No,1634,1,0,0,0,1,0,0,1,0
+normal,male,vegan,twice a day,wood,public,never,221,very frequently,1312,large,7,5,36,4,Sometimes,3402,0,1,0,0,0,0,1,1,1
+overweight,female,omnivore,twice a day,wood,walk/bicycle,often,256,very frequently,43,small,6,13,7,18,No,2501,0,1,1,1,1,1,1,1,1
+normal,male,omnivore,daily,natural gas,public,sometimes,226,frequently,961,large,3,7,7,23,No,2283,0,0,0,1,1,1,0,1,0
+normal,female,omnivore,less frequently,wood,private,sometimes,178,frequently,3981,medium,3,2,29,5,No,2863,0,0,0,0,0,1,0,1,0
+overweight,male,vegan,twice a day,wood,public,never,282,frequently,527,small,3,0,39,24,Sometimes,2335,1,0,0,1,0,1,1,1,1
+underweight,male,pescatarian,more frequently,wood,walk/bicycle,never,189,frequently,53,small,4,14,23,16,No,1715,0,0,1,1,1,1,0,0,0
+obese,female,vegan,less frequently,natural gas,walk/bicycle,sometimes,168,never,63,extra large,6,8,47,1,Yes,1827,1,1,1,0,0,1,1,1,1
+underweight,male,pescatarian,twice a day,wood,public,never,260,frequently,259,small,2,5,2,12,Yes,1224,1,1,1,0,1,1,1,0,1
+obese,male,pescatarian,daily,wood,private,often,142,never,9252,large,1,16,19,5,Yes,3011,0,1,1,0,0,0,0,1,0
+obese,female,vegan,less frequently,wood,walk/bicycle,sometimes,74,frequently,92,large,6,11,33,5,Yes,2048,1,1,1,1,1,1,0,0,0
+underweight,female,pescatarian,twice a day,coal,private,often,226,never,9954,medium,6,1,24,17,No,2970,0,0,0,0,1,1,0,1,0
+normal,male,vegetarian,less frequently,electricity,public,sometimes,271,never,1552,medium,6,15,16,1,Yes,866,1,1,1,0,0,0,1,0,1
+overweight,male,vegan,twice a day,natural gas,private,never,54,rarely,9794,medium,7,21,15,21,Yes,1723,0,0,0,0,1,0,0,0,0
+overweight,female,omnivore,more frequently,natural gas,private,often,214,frequently,4105,large,5,3,7,4,No,2590,1,0,1,1,0,1,1,0,1
+overweight,female,vegetarian,daily,electricity,walk/bicycle,sometimes,100,never,44,extra large,4,15,26,6,No,1088,0,1,1,1,1,0,1,0,1
+underweight,male,vegan,more frequently,natural gas,private,often,203,frequently,8507,large,2,18,45,16,No,3335,1,0,1,0,0,0,1,0,1
+normal,female,vegan,more frequently,natural gas,walk/bicycle,never,154,very frequently,92,large,1,18,27,5,No,1969,0,0,1,0,1,0,0,1,0
+normal,male,omnivore,less frequently,coal,private,sometimes,67,never,3171,small,5,0,33,0,Sometimes,2375,1,1,1,0,0,0,0,1,0
+underweight,female,pescatarian,less frequently,natural gas,private,never,191,very frequently,7175,small,3,0,5,2,No,3852,1,0,1,1,0,1,0,1,0
+obese,male,vegan,more frequently,coal,public,often,115,frequently,1341,extra large,2,17,7,19,Sometimes,2664,0,1,0,1,1,1,1,1,1
+normal,female,pescatarian,less frequently,coal,walk/bicycle,often,164,never,72,medium,2,7,32,23,Sometimes,1343,1,0,0,0,0,1,0,0,0
+underweight,female,omnivore,twice a day,electricity,walk/bicycle,never,65,frequently,86,medium,5,21,27,23,Yes,1399,1,1,0,1,0,1,0,1,0
+underweight,female,pescatarian,less frequently,wood,walk/bicycle,never,88,rarely,14,extra large,3,20,5,2,No,1051,0,1,0,0,0,1,0,1,0
+normal,male,omnivore,twice a day,coal,public,sometimes,223,rarely,1624,medium,4,6,39,5,Sometimes,2210,0,1,1,0,1,1,1,0,1
+underweight,male,vegetarian,less frequently,electricity,private,never,225,rarely,8625,small,3,18,37,22,Sometimes,3195,0,1,1,1,0,0,1,0,1
+underweight,male,vegan,less frequently,coal,public,never,225,never,1631,extra large,1,10,38,21,Yes,1605,0,0,0,1,0,0,0,0,0
+overweight,male,pescatarian,less frequently,natural gas,public,never,177,rarely,1973,small,5,9,41,3,Sometimes,1742,1,0,0,1,1,1,0,1,0
+underweight,male,vegetarian,more frequently,electricity,private,never,92,frequently,8367,medium,7,19,38,3,No,3926,0,1,0,0,0,1,0,1,0
+obese,female,omnivore,less frequently,electricity,public,often,161,rarely,1553,extra large,1,0,22,22,Yes,1313,0,1,1,1,1,1,1,0,1
+underweight,female,vegan,less frequently,coal,public,often,185,frequently,377,medium,1,10,8,17,No,1392,1,1,1,0,0,0,1,0,1
+underweight,female,pescatarian,less frequently,coal,public,often,294,frequently,1664,small,4,11,45,3,Sometimes,2238,0,0,0,1,0,1,1,0,1
+underweight,female,vegetarian,more frequently,coal,walk/bicycle,sometimes,222,never,38,large,7,4,36,8,No,1652,1,0,1,0,1,1,0,0,0
+normal,male,vegan,daily,wood,public,sometimes,197,rarely,1631,medium,6,6,32,19,Yes,1760,0,0,1,1,0,1,0,1,0
+normal,male,vegan,twice a day,wood,private,sometimes,130,never,6363,small,6,17,47,20,No,3317,0,1,1,1,1,0,1,1,1
+normal,male,pescatarian,daily,wood,private,sometimes,149,frequently,485,large,5,8,1,14,No,1889,1,1,0,0,1,1,1,1,1
+overweight,female,vegan,more frequently,wood,public,sometimes,276,rarely,1527,extra large,3,15,24,12,No,1580,1,0,1,1,1,1,1,0,1
+overweight,female,vegan,more frequently,natural gas,public,never,94,rarely,766,extra large,2,6,4,12,Yes,865,1,0,1,1,0,1,0,1,0
+overweight,female,pescatarian,more frequently,natural gas,public,sometimes,216,very frequently,1385,extra large,4,1,21,10,Sometimes,2880,0,0,0,1,1,1,1,0,1
+overweight,female,pescatarian,more frequently,electricity,public,never,81,never,1002,medium,6,11,40,4,Yes,1171,1,0,0,1,0,1,0,0,0
+obese,female,pescatarian,less frequently,wood,walk/bicycle,often,269,frequently,88,extra large,5,23,34,22,Sometimes,3037,0,0,0,1,0,0,1,0,1
+normal,male,omnivore,daily,electricity,public,never,123,frequently,1034,large,6,15,14,1,Sometimes,1835,1,0,0,0,1,0,1,1,1
+underweight,male,vegetarian,less frequently,electricity,public,never,227,never,1879,medium,4,3,31,8,Yes,1291,0,0,0,0,0,0,0,1,0
+normal,male,pescatarian,daily,natural gas,walk/bicycle,never,273,never,0,small,5,7,49,11,Sometimes,1535,0,1,0,1,0,1,1,0,1
+underweight,male,vegetarian,more frequently,wood,walk/bicycle,often,188,frequently,68,small,2,2,39,9,Sometimes,1790,1,1,1,0,1,1,0,0,0
+overweight,female,pescatarian,daily,natural gas,walk/bicycle,often,129,rarely,69,large,1,11,3,5,No,997,1,1,0,0,0,1,0,1,0
+obese,male,vegan,daily,wood,private,sometimes,126,very frequently,2321,extra large,5,8,16,13,Yes,3289,1,1,0,0,0,1,0,1,0
+overweight,female,omnivore,daily,coal,public,never,279,rarely,1952,medium,1,19,48,12,No,1881,1,1,1,1,1,1,0,0,0
+underweight,male,pescatarian,twice a day,electricity,walk/bicycle,often,85,never,24,extra large,4,0,7,16,Sometimes,1067,0,1,1,0,1,1,1,1,1
+overweight,male,vegan,daily,electricity,walk/bicycle,never,223,very frequently,76,small,6,21,8,23,Yes,2254,1,0,0,1,1,0,0,0,0
+normal,male,vegan,more frequently,wood,private,never,213,never,3653,large,2,11,21,7,No,1552,1,0,1,1,1,1,0,1,0
+overweight,female,vegan,twice a day,electricity,private,never,105,rarely,7745,medium,7,12,48,7,No,4022,1,1,1,1,1,0,0,1,0
+obese,male,vegetarian,daily,electricity,private,often,109,very frequently,1726,extra large,1,14,16,24,No,3237,0,0,1,1,0,0,1,1,1
+overweight,male,vegan,daily,wood,walk/bicycle,sometimes,165,very frequently,29,small,2,4,20,18,Sometimes,2530,1,0,1,1,1,1,0,1,0
+obese,male,omnivore,daily,electricity,private,often,204,very frequently,8360,small,2,0,12,2,Sometimes,5691,0,1,1,0,0,0,0,1,0
+overweight,female,vegan,more frequently,natural gas,walk/bicycle,sometimes,183,frequently,72,small,2,5,26,5,Sometimes,1448,1,1,1,0,0,0,0,1,0
+overweight,female,omnivore,more frequently,natural gas,private,often,232,very frequently,2202,small,5,11,29,4,No,3341,0,0,1,0,0,1,1,0,1
+obese,male,omnivore,less frequently,natural gas,public,never,88,rarely,1960,small,4,14,32,8,Yes,1702,0,1,0,1,1,1,0,0,0
+overweight,male,pescatarian,daily,coal,public,often,126,frequently,1595,small,1,4,7,0,Yes,1956,1,0,0,0,0,1,0,1,0
+obese,female,pescatarian,twice a day,natural gas,walk/bicycle,often,239,never,84,small,3,15,20,21,No,1490,0,1,0,0,0,1,0,1,0
+overweight,male,pescatarian,less frequently,electricity,private,often,210,never,4420,medium,4,14,24,5,Sometimes,2083,0,0,0,1,1,1,0,0,0
+overweight,female,omnivore,daily,wood,private,often,171,very frequently,6094,medium,4,3,31,8,Sometimes,3739,0,1,1,0,1,0,0,1,0
+normal,female,vegan,daily,wood,private,never,116,very frequently,6713,small,5,21,36,14,No,3820,1,1,0,0,1,0,1,1,1
+underweight,female,vegan,less frequently,coal,private,never,92,rarely,2027,small,6,10,4,8,No,1311,1,1,0,1,0,1,1,0,1
+overweight,female,omnivore,more frequently,electricity,private,sometimes,139,very frequently,7319,extra large,1,15,39,7,No,4195,1,1,0,0,1,1,0,1,0
+underweight,male,vegetarian,less frequently,natural gas,public,often,209,very frequently,1317,large,4,22,4,20,No,2561,0,0,1,0,0,1,0,1,0
+obese,male,vegetarian,more frequently,wood,walk/bicycle,often,296,very frequently,5,extra large,5,4,32,11,No,4089,0,0,0,0,0,0,0,0,0
+underweight,female,pescatarian,more frequently,coal,private,sometimes,209,never,6528,extra large,6,8,24,22,No,1858,0,0,0,1,1,0,1,1,1
+underweight,female,vegan,daily,wood,walk/bicycle,never,68,rarely,48,extra large,7,22,21,13,Yes,1382,1,0,1,1,0,1,1,0,1
+overweight,male,pescatarian,less frequently,natural gas,walk/bicycle,often,62,never,44,large,1,18,6,15,Yes,925,1,0,0,1,0,0,0,1,0
+normal,male,omnivore,daily,electricity,private,often,213,never,7782,medium,5,6,25,21,No,4394,0,0,1,1,0,1,1,1,1
+obese,female,pescatarian,twice a day,wood,private,often,262,never,6172,large,6,18,43,10,Sometimes,4478,1,0,1,1,0,1,1,1,1
+normal,female,pescatarian,less frequently,wood,walk/bicycle,often,281,never,66,extra large,2,22,13,12,Yes,1065,0,1,1,0,0,0,0,1,0
+obese,female,omnivore,twice a day,natural gas,private,often,239,never,8414,extra large,3,16,0,6,No,4833,1,0,0,0,1,1,1,1,1
+underweight,female,vegan,daily,electricity,public,sometimes,59,never,613,large,2,19,38,10,No,819,1,1,1,0,0,0,1,1,1
+normal,male,omnivore,less frequently,coal,walk/bicycle,often,120,rarely,75,medium,1,3,8,0,Sometimes,1330,0,0,1,0,1,0,1,1,1
+underweight,male,vegan,twice a day,coal,private,never,272,never,8961,extra large,6,20,35,17,Sometimes,3669,1,0,0,0,1,0,1,0,1
+normal,male,omnivore,twice a day,electricity,public,sometimes,222,never,1356,small,3,14,39,0,No,1312,0,0,1,1,1,0,1,1,1
+obese,male,vegetarian,daily,coal,public,sometimes,130,very frequently,1131,small,3,9,10,20,Sometimes,3074,1,0,0,0,0,1,0,1,0
+normal,male,omnivore,daily,coal,walk/bicycle,often,194,frequently,81,medium,5,23,6,12,No,2135,0,1,1,1,1,0,0,1,0
+normal,male,vegan,daily,electricity,public,never,84,frequently,1522,extra large,7,20,3,11,Sometimes,1865,1,0,1,0,0,0,0,1,0
+normal,male,omnivore,less frequently,natural gas,public,never,283,very frequently,1943,medium,4,16,9,3,Yes,2467,0,1,1,1,0,0,0,1,0
+overweight,female,omnivore,less frequently,electricity,private,sometimes,255,never,7416,large,7,1,31,3,Sometimes,2648,0,1,1,0,1,1,0,1,0
+underweight,male,vegan,more frequently,wood,private,never,58,very frequently,1275,extra large,5,13,11,12,Sometimes,2817,0,0,1,1,0,0,1,0,1
+underweight,male,vegan,more frequently,wood,walk/bicycle,sometimes,149,rarely,69,large,2,21,43,9,Yes,1776,0,0,0,0,0,0,1,1,1
+underweight,male,vegan,daily,natural gas,walk/bicycle,never,55,rarely,64,medium,3,11,31,23,No,1276,1,1,0,1,0,0,0,1,0
+overweight,male,vegan,less frequently,coal,private,often,85,rarely,3471,large,2,15,26,20,Sometimes,2966,1,0,0,0,1,1,0,0,0
+obese,female,omnivore,less frequently,coal,private,often,276,never,5557,medium,3,10,45,10,No,4237,1,1,1,1,0,0,1,0,1
+underweight,female,omnivore,twice a day,wood,public,never,283,very frequently,237,large,4,7,50,10,Sometimes,2610,1,1,0,1,1,0,0,0,0
+overweight,male,vegetarian,daily,coal,walk/bicycle,never,74,never,17,medium,6,1,20,17,No,1440,1,1,0,1,0,1,0,0,0
+obese,female,pescatarian,more frequently,electricity,walk/bicycle,never,129,rarely,1,large,4,12,44,3,Sometimes,1600,0,1,1,0,1,1,1,1,1
+normal,female,vegetarian,more frequently,coal,walk/bicycle,often,230,rarely,75,small,4,16,32,1,Sometimes,1490,1,1,0,0,1,1,1,0,1
+obese,female,vegan,twice a day,coal,public,never,256,rarely,448,extra large,3,10,11,11,Yes,1741,0,1,0,0,1,0,1,0,1
+overweight,female,pescatarian,daily,coal,walk/bicycle,never,179,rarely,26,medium,2,8,30,23,Sometimes,1520,0,1,1,0,1,0,0,0,0
+overweight,male,vegan,daily,coal,walk/bicycle,sometimes,209,rarely,12,extra large,2,10,11,5,Sometimes,1508,0,1,1,1,1,0,1,1,1
+overweight,male,pescatarian,daily,electricity,public,never,252,very frequently,1461,medium,5,21,20,5,Sometimes,2599,0,0,1,1,0,0,0,0,0
+underweight,female,pescatarian,twice a day,wood,public,often,208,rarely,1818,medium,6,14,18,17,Sometimes,1444,1,1,0,1,1,0,0,0,0
+overweight,male,pescatarian,more frequently,electricity,walk/bicycle,never,271,rarely,6,medium,3,5,49,16,Sometimes,1916,0,1,0,0,0,1,1,1,1
+overweight,male,omnivore,more frequently,coal,public,never,130,rarely,1987,medium,3,17,50,20,Sometimes,2603,0,1,0,1,1,0,0,1,0
+overweight,female,vegetarian,twice a day,natural gas,private,often,272,rarely,6568,large,4,17,30,4,Sometimes,3187,1,1,0,1,1,1,0,0,0
+overweight,male,vegan,less frequently,wood,public,sometimes,68,never,1792,large,7,5,23,19,Yes,1678,1,0,1,1,0,1,0,0,0
+obese,female,pescatarian,twice a day,natural gas,public,often,130,very frequently,1169,extra large,2,10,50,17,Yes,3015,1,0,1,1,0,0,0,0,0
+underweight,male,omnivore,daily,electricity,public,often,188,never,138,small,6,24,16,16,No,987,1,1,1,0,1,0,1,1,1
+underweight,male,vegan,less frequently,wood,walk/bicycle,often,241,never,25,extra large,2,3,21,10,Yes,928,1,1,1,1,1,1,0,0,0
+overweight,female,vegetarian,twice a day,natural gas,public,sometimes,128,frequently,924,medium,7,16,5,0,Sometimes,1765,0,1,0,1,1,0,0,1,0
+normal,female,omnivore,more frequently,natural gas,private,never,260,frequently,396,extra large,3,14,17,23,Sometimes,2044,0,1,0,0,0,0,0,0,0
+obese,female,vegetarian,more frequently,natural gas,private,never,52,never,3583,large,5,20,47,14,No,2907,1,0,0,0,1,0,1,0,1
+obese,female,omnivore,less frequently,coal,walk/bicycle,often,160,very frequently,33,extra large,6,16,18,4,Yes,3252,1,1,0,0,0,1,0,1,0
+underweight,male,vegetarian,less frequently,coal,public,often,86,frequently,917,extra large,4,24,49,18,No,2806,1,0,0,1,0,1,1,1,1
+overweight,male,omnivore,twice a day,natural gas,public,sometimes,201,frequently,881,large,3,1,42,19,No,2624,1,1,1,1,0,0,1,1,1
+obese,male,vegan,daily,electricity,walk/bicycle,sometimes,240,frequently,52,large,4,24,13,23,Yes,1820,1,1,1,1,0,1,1,0,1
+normal,male,vegetarian,twice a day,natural gas,walk/bicycle,sometimes,123,never,90,large,3,20,7,16,No,1095,1,0,0,1,0,1,0,1,0
+overweight,male,vegan,more frequently,natural gas,walk/bicycle,often,277,rarely,22,medium,3,8,24,0,Sometimes,1565,1,1,0,0,1,0,0,0,0
+underweight,male,omnivore,less frequently,natural gas,private,sometimes,221,rarely,7132,large,1,2,43,16,Sometimes,1789,0,1,0,1,1,0,1,1,1
+obese,male,pescatarian,twice a day,coal,private,often,86,frequently,2019,large,4,3,4,13,Sometimes,3514,0,0,0,0,0,0,1,0,1
+underweight,female,omnivore,more frequently,coal,walk/bicycle,never,260,frequently,80,small,3,11,8,15,Sometimes,1441,1,1,1,0,0,0,0,0,0
+overweight,female,vegan,less frequently,wood,walk/bicycle,never,293,frequently,55,medium,1,22,10,1,Sometimes,1248,1,1,0,0,0,0,0,0,0
+overweight,female,vegan,more frequently,coal,walk/bicycle,never,270,very frequently,89,large,2,15,1,15,No,2072,1,0,0,1,0,1,1,0,1
+overweight,female,omnivore,twice a day,natural gas,public,never,259,very frequently,986,small,4,8,26,2,No,2783,0,0,0,0,1,1,1,1,1
+obese,male,pescatarian,more frequently,natural gas,walk/bicycle,sometimes,231,rarely,17,medium,7,4,14,11,Yes,1860,0,1,1,1,1,1,0,1,0
+overweight,female,omnivore,twice a day,natural gas,walk/bicycle,never,143,rarely,97,small,4,0,16,1,Yes,1143,0,0,1,0,0,1,1,1,1
+normal,female,omnivore,twice a day,coal,public,sometimes,197,very frequently,1910,medium,7,9,4,8,No,2721,0,0,1,0,1,0,0,0,0
+obese,female,omnivore,twice a day,natural gas,private,sometimes,263,rarely,6969,small,4,8,38,7,No,3512,1,0,1,0,0,1,1,0,1
+overweight,female,vegan,more frequently,natural gas,public,often,262,very frequently,1205,extra large,7,10,27,1,Yes,3079,1,1,0,1,1,1,0,0,0
+normal,male,pescatarian,more frequently,coal,public,never,103,rarely,1537,extra large,5,0,1,18,Sometimes,1906,1,0,0,1,1,0,1,1,1
+underweight,male,omnivore,daily,natural gas,public,often,228,rarely,190,medium,2,12,2,6,Yes,1070,1,0,1,1,1,1,0,0,0
+obese,female,pescatarian,less frequently,electricity,walk/bicycle,sometimes,152,rarely,21,small,5,7,15,6,Yes,1148,0,1,0,0,0,1,1,1,1
+underweight,female,omnivore,daily,wood,walk/bicycle,often,57,never,66,extra large,6,13,16,1,Yes,1381,0,0,1,1,1,1,0,1,0
+obese,male,omnivore,daily,wood,walk/bicycle,never,241,frequently,75,extra large,5,12,18,6,Yes,2495,1,0,1,1,1,1,1,1,1
+underweight,female,vegetarian,daily,natural gas,private,sometimes,73,never,6251,medium,5,12,38,15,Yes,1304,0,0,0,1,1,0,1,0,1
+underweight,female,vegan,twice a day,natural gas,public,often,78,rarely,328,small,1,5,14,6,Sometimes,1001,0,0,0,1,0,0,1,1,1
+overweight,female,omnivore,twice a day,natural gas,private,often,120,rarely,2220,medium,2,11,45,7,No,1953,0,1,1,0,1,1,0,1,0
+underweight,female,vegan,daily,electricity,walk/bicycle,never,73,never,92,extra large,2,20,6,9,Yes,392,0,1,1,0,0,0,0,0,0
+normal,female,pescatarian,less frequently,wood,public,often,94,very frequently,1826,large,2,15,6,24,Yes,1943,1,1,1,1,0,1,1,0,1
+obese,male,vegetarian,daily,electricity,public,never,217,rarely,1183,extra large,3,24,45,16,Yes,2075,1,0,0,1,1,1,1,0,1
+normal,female,pescatarian,twice a day,electricity,private,sometimes,102,frequently,2088,extra large,6,0,17,12,No,2082,0,1,1,1,1,0,0,1,0
+underweight,male,vegetarian,daily,electricity,public,sometimes,99,very frequently,80,extra large,7,2,34,9,Sometimes,2737,0,1,1,1,0,1,0,1,0
+underweight,male,omnivore,less frequently,coal,public,sometimes,90,never,1257,medium,7,2,20,6,Sometimes,1454,1,1,0,1,1,1,1,0,1
+overweight,female,vegan,twice a day,wood,public,sometimes,247,never,726,large,6,5,43,0,Sometimes,1794,1,1,0,0,0,1,1,1,1
+underweight,male,omnivore,more frequently,natural gas,public,sometimes,86,very frequently,1824,medium,1,23,42,13,Sometimes,2667,1,1,0,0,1,0,0,1,0
+obese,male,vegan,less frequently,coal,private,never,245,frequently,9401,extra large,4,5,26,14,No,2988,0,1,0,1,1,1,0,0,0
+normal,female,omnivore,less frequently,electricity,private,often,274,frequently,6352,extra large,5,16,6,21,No,3278,1,0,1,1,1,0,1,0,1
+overweight,male,pescatarian,less frequently,electricity,public,never,273,rarely,1463,medium,1,14,31,5,Yes,1250,0,1,1,0,0,1,0,0,0
+normal,male,omnivore,less frequently,wood,private,sometimes,76,rarely,9182,small,5,0,8,1,Yes,2559,0,1,0,0,1,0,1,1,1
+underweight,female,omnivore,twice a day,electricity,walk/bicycle,never,153,never,67,medium,1,23,15,21,No,531,1,1,1,0,0,1,0,0,0
+normal,male,omnivore,daily,coal,private,sometimes,114,rarely,5047,small,2,10,31,21,No,2617,1,1,0,0,0,0,0,1,0
+normal,female,pescatarian,more frequently,coal,public,often,135,frequently,1578,small,5,18,23,13,No,2115,1,0,0,0,1,0,1,0,1
+overweight,male,omnivore,less frequently,electricity,walk/bicycle,often,298,rarely,8,small,4,10,29,15,Sometimes,1439,1,1,1,0,0,0,0,0,0
+overweight,male,pescatarian,more frequently,coal,public,never,185,never,838,large,6,7,31,17,No,2096,1,0,1,1,1,0,0,1,0
+overweight,female,pescatarian,more frequently,coal,public,never,192,rarely,406,small,2,7,29,0,Sometimes,1368,1,0,0,1,0,1,1,1,1
+overweight,female,vegan,daily,coal,public,never,88,frequently,925,large,7,13,43,1,No,2746,0,0,1,0,1,1,1,0,1
+underweight,female,pescatarian,more frequently,electricity,walk/bicycle,often,260,very frequently,33,small,4,1,35,15,Sometimes,2240,1,0,0,1,1,1,0,1,0
+overweight,female,vegetarian,twice a day,electricity,public,never,182,never,1275,medium,3,22,41,4,Yes,1141,1,0,0,0,0,1,0,1,0
+normal,female,vegan,daily,natural gas,private,often,215,very frequently,6930,small,1,18,9,24,Sometimes,4298,1,1,0,0,1,1,1,0,1
+underweight,female,omnivore,more frequently,wood,walk/bicycle,never,150,never,25,extra large,4,24,12,13,Sometimes,1037,1,1,1,0,1,0,0,1,0
+overweight,female,pescatarian,less frequently,coal,walk/bicycle,sometimes,281,very frequently,65,medium,2,16,36,24,No,2940,0,0,1,1,1,0,1,1,1
+obese,male,vegetarian,daily,electricity,walk/bicycle,often,159,never,45,small,7,19,23,24,Yes,1428,0,1,0,0,0,1,1,0,1
+normal,male,omnivore,less frequently,electricity,walk/bicycle,sometimes,210,never,76,medium,6,21,33,21,No,1591,0,0,1,1,0,0,1,1,1
+overweight,male,vegetarian,twice a day,electricity,public,never,287,very frequently,1136,medium,2,2,41,1,Sometimes,2649,0,1,0,0,0,1,0,1,0
+underweight,female,pescatarian,more frequently,natural gas,private,never,291,never,7614,large,7,22,40,16,No,2949,0,0,0,0,1,1,0,1,0
+normal,female,vegetarian,daily,natural gas,private,often,69,frequently,3278,medium,3,24,12,16,No,2270,1,1,0,0,1,1,1,1,1
+normal,female,pescatarian,less frequently,wood,public,often,246,very frequently,539,extra large,2,20,6,3,Yes,2291,0,0,0,1,0,0,1,1,1
+underweight,female,vegetarian,less frequently,wood,public,sometimes,261,rarely,135,medium,7,18,10,5,Sometimes,1332,0,1,0,0,1,0,1,1,1
+normal,female,vegetarian,more frequently,electricity,walk/bicycle,often,234,rarely,5,large,3,3,24,22,Sometimes,1273,0,0,1,1,0,1,1,0,1
+overweight,male,omnivore,more frequently,natural gas,public,often,281,very frequently,1539,small,3,17,45,14,Sometimes,3430,1,1,1,1,0,1,0,1,0
+normal,female,pescatarian,less frequently,electricity,walk/bicycle,sometimes,184,never,91,small,5,19,48,23,No,1365,0,0,0,1,0,0,1,0,1
+normal,male,vegetarian,less frequently,electricity,walk/bicycle,never,262,very frequently,21,extra large,3,10,43,19,Yes,2522,0,1,1,1,0,0,0,0,0
+normal,male,pescatarian,less frequently,natural gas,walk/bicycle,sometimes,271,never,53,small,1,5,50,9,Yes,1242,1,1,1,0,1,1,0,0,0
+overweight,male,pescatarian,daily,natural gas,public,never,237,rarely,643,medium,4,2,30,22,No,1695,1,0,1,0,1,0,1,0,1
+normal,female,pescatarian,more frequently,natural gas,private,sometimes,158,frequently,5406,small,7,14,24,20,Yes,1768,0,0,0,1,1,1,1,0,1
+overweight,female,pescatarian,daily,wood,private,never,142,never,162,extra large,3,15,41,24,Sometimes,1706,1,0,0,0,0,0,1,1,1
+underweight,male,omnivore,more frequently,wood,public,sometimes,201,very frequently,325,large,2,19,32,14,Yes,2653,0,0,1,1,0,1,0,0,0
+underweight,female,omnivore,more frequently,coal,walk/bicycle,never,50,never,36,medium,7,1,21,2,Sometimes,1015,0,1,1,1,0,0,0,0,0
+obese,female,pescatarian,more frequently,electricity,public,never,142,rarely,710,medium,3,10,37,15,Sometimes,1318,1,0,1,1,1,1,0,1,0
+underweight,female,vegan,daily,electricity,private,often,166,never,4012,large,7,5,9,10,Yes,1843,1,1,0,0,1,1,0,1,0
+overweight,male,vegetarian,daily,wood,public,never,199,frequently,1686,extra large,1,4,41,6,Sometimes,2369,0,1,0,0,1,1,0,0,0
+underweight,male,vegan,twice a day,natural gas,private,never,163,very frequently,4850,extra large,1,1,43,19,Sometimes,4099,0,0,0,0,0,1,1,0,1
+underweight,male,vegan,daily,coal,private,never,267,very frequently,3448,medium,2,22,41,7,No,3621,0,1,0,1,0,1,1,0,1
+normal,male,omnivore,daily,electricity,private,sometimes,258,very frequently,308,large,4,19,6,22,Yes,2490,1,1,0,0,0,0,1,0,1
+obese,male,omnivore,more frequently,natural gas,private,sometimes,197,rarely,1562,extra large,2,18,31,8,No,2608,0,1,1,1,0,1,1,1,1
+obese,male,vegetarian,daily,wood,walk/bicycle,never,143,rarely,43,extra large,3,5,49,1,Sometimes,1988,0,1,1,1,0,1,1,1,1
+overweight,male,pescatarian,more frequently,wood,walk/bicycle,sometimes,162,frequently,42,large,5,5,21,9,Yes,2165,1,0,1,1,0,1,0,1,0
+overweight,male,vegetarian,twice a day,wood,private,sometimes,54,very frequently,1218,small,1,14,46,10,Sometimes,2591,0,1,1,1,0,0,0,0,0
+obese,male,omnivore,more frequently,coal,walk/bicycle,never,95,never,75,large,7,15,25,19,Sometimes,2445,1,0,0,0,0,0,1,1,1
+underweight,male,omnivore,twice a day,coal,private,often,283,very frequently,2534,small,3,2,14,6,Yes,2659,1,0,0,0,0,1,1,1,1
+overweight,female,vegetarian,daily,natural gas,walk/bicycle,sometimes,104,frequently,10,medium,7,11,41,17,Sometimes,2052,1,1,1,0,1,1,0,0,0
+overweight,male,pescatarian,less frequently,electricity,private,sometimes,167,rarely,8537,large,1,7,22,4,Yes,3533,1,0,1,0,0,1,0,0,0
+obese,female,pescatarian,daily,wood,public,never,94,frequently,1201,large,4,19,35,0,Yes,2034,1,0,1,1,1,0,0,1,0
+overweight,male,vegetarian,daily,electricity,private,never,211,very frequently,5879,extra large,5,14,45,6,Sometimes,5354,1,0,0,1,0,0,0,1,0
+normal,female,vegetarian,less frequently,electricity,walk/bicycle,sometimes,149,very frequently,27,extra large,4,22,34,8,Sometimes,2484,0,0,0,1,0,1,0,1,0
+normal,male,omnivore,less frequently,natural gas,public,often,223,very frequently,750,medium,3,9,27,22,No,2924,1,0,1,1,0,0,0,1,0
+normal,male,vegan,daily,electricity,public,often,90,never,861,large,5,17,18,13,Sometimes,1350,0,0,0,1,0,1,1,1,1
+obese,male,omnivore,more frequently,wood,private,sometimes,193,very frequently,2634,medium,4,16,18,1,Yes,3893,1,1,0,1,0,0,1,1,1
+obese,female,vegetarian,daily,coal,private,never,190,rarely,7997,medium,1,15,15,16,No,2706,1,1,0,0,0,1,1,0,1
+obese,female,pescatarian,twice a day,wood,public,often,57,never,1910,small,4,9,43,8,Sometimes,1586,1,1,0,0,1,1,1,1,1
+normal,female,omnivore,twice a day,coal,walk/bicycle,sometimes,52,never,1,large,3,14,48,11,Sometimes,1511,1,1,0,0,0,1,0,1,0
+underweight,male,omnivore,less frequently,wood,public,never,165,very frequently,368,large,4,13,9,3,No,2317,1,1,0,0,1,0,1,0,1
+underweight,male,omnivore,less frequently,natural gas,walk/bicycle,often,98,very frequently,43,medium,5,11,18,7,Yes,2300,1,1,0,0,0,1,0,0,0
+underweight,male,vegetarian,more frequently,coal,private,often,261,never,7929,small,7,13,18,0,Yes,2665,0,0,1,1,0,1,1,1,1
+underweight,female,vegan,less frequently,electricity,private,never,178,never,4758,medium,4,9,49,22,No,2380,1,1,1,0,1,1,1,1,1
+obese,male,vegan,less frequently,wood,private,never,283,very frequently,1167,small,3,23,44,4,Sometimes,3542,1,0,0,1,1,1,1,0,1
+underweight,male,pescatarian,more frequently,natural gas,walk/bicycle,sometimes,204,frequently,35,small,7,20,17,8,No,1953,0,1,0,0,0,0,0,0,0
+normal,female,vegan,more frequently,electricity,private,never,228,rarely,9420,extra large,3,2,42,16,Sometimes,2683,0,1,1,0,1,0,0,0,0
+normal,female,pescatarian,less frequently,wood,walk/bicycle,often,126,frequently,20,small,1,21,5,21,Sometimes,1395,1,1,0,0,0,0,1,1,1
+underweight,female,vegan,more frequently,electricity,walk/bicycle,often,116,rarely,54,medium,6,9,43,2,Sometimes,1204,1,1,0,0,0,0,0,0,0
+obese,male,vegetarian,twice a day,electricity,walk/bicycle,never,187,frequently,68,large,7,23,32,16,No,2874,0,0,1,1,0,0,1,1,1
+normal,female,pescatarian,daily,coal,walk/bicycle,sometimes,154,frequently,65,small,3,1,3,7,Sometimes,1118,1,1,1,1,1,1,0,0,0
+obese,male,vegetarian,more frequently,natural gas,walk/bicycle,sometimes,121,very frequently,15,extra large,1,1,24,0,Yes,2468,1,1,1,1,0,1,0,1,0
+underweight,male,vegetarian,more frequently,natural gas,walk/bicycle,sometimes,179,rarely,54,medium,4,3,30,19,Yes,1284,1,1,1,0,1,0,0,0,0
+obese,female,omnivore,twice a day,electricity,walk/bicycle,sometimes,241,never,83,extra large,7,13,25,4,No,1871,1,0,1,0,0,0,1,0,1
+normal,female,pescatarian,daily,electricity,walk/bicycle,never,245,frequently,90,large,3,6,5,15,No,1200,0,1,1,0,1,0,0,0,0
+overweight,male,vegan,less frequently,electricity,private,often,143,never,1986,large,4,6,10,14,No,1153,1,1,1,1,0,0,1,0,1
+overweight,male,pescatarian,less frequently,coal,walk/bicycle,sometimes,127,very frequently,99,large,7,10,29,6,Yes,3755,0,0,0,0,0,0,1,0,1
+obese,male,vegan,twice a day,electricity,walk/bicycle,often,238,never,83,extra large,7,17,21,9,Yes,1860,1,1,1,0,1,0,1,0,1
+overweight,female,vegetarian,more frequently,natural gas,public,never,268,never,773,medium,3,17,5,12,Yes,1066,0,1,0,0,0,1,1,1,1
+underweight,male,pescatarian,less frequently,wood,walk/bicycle,sometimes,65,never,62,medium,6,14,49,8,No,1624,1,0,0,0,0,0,0,0,0
+obese,female,vegetarian,more frequently,wood,private,sometimes,275,frequently,2684,extra large,2,22,18,19,Sometimes,2908,0,0,1,0,0,1,0,1,0
+overweight,female,vegan,daily,wood,walk/bicycle,often,53,very frequently,65,large,2,1,33,20,No,2712,0,1,0,1,1,1,1,1,1
+overweight,female,pescatarian,more frequently,wood,walk/bicycle,never,180,rarely,49,medium,5,23,45,9,Sometimes,1713,0,0,1,1,0,1,1,0,1
+overweight,male,omnivore,less frequently,coal,private,often,51,rarely,4132,extra large,5,13,9,19,Sometimes,2149,0,0,0,1,1,1,1,0,1
+overweight,female,vegetarian,more frequently,coal,walk/bicycle,sometimes,218,rarely,26,small,6,15,48,24,Yes,1730,1,1,1,1,0,1,1,0,1
+underweight,female,vegan,less frequently,coal,public,sometimes,207,never,1020,small,2,11,9,0,Yes,790,1,0,0,0,1,0,1,0,1
+normal,male,vegan,less frequently,wood,public,often,149,very frequently,1046,small,1,24,29,10,Sometimes,2629,0,0,0,0,0,1,0,0,0
+overweight,male,omnivore,less frequently,wood,public,never,137,frequently,1180,large,5,19,39,17,Yes,2419,1,1,1,0,1,1,0,0,0
+normal,male,pescatarian,daily,electricity,private,often,80,never,5204,small,4,21,17,23,Sometimes,1079,0,0,0,1,0,0,1,0,1
+normal,male,pescatarian,more frequently,coal,public,sometimes,228,frequently,315,small,5,12,24,17,Yes,2158,0,1,0,1,0,1,0,0,0
+underweight,female,pescatarian,daily,wood,walk/bicycle,often,100,frequently,69,small,6,8,42,3,No,1852,0,0,1,0,0,0,1,1,1
+overweight,male,vegan,less frequently,coal,private,never,69,rarely,7614,small,5,21,3,2,Yes,3123,1,1,1,1,1,1,1,1,1
+underweight,male,pescatarian,more frequently,wood,private,never,89,rarely,6576,extra large,5,7,16,10,Yes,2849,1,1,1,0,1,1,0,0,0
+underweight,male,vegetarian,more frequently,natural gas,walk/bicycle,sometimes,284,very frequently,36,extra large,5,6,50,6,Sometimes,3307,0,0,0,1,0,0,1,0,1
+obese,female,vegan,less frequently,coal,public,often,105,never,1264,medium,5,9,14,21,No,1408,1,0,1,1,0,0,0,0,0
+obese,female,vegan,more frequently,electricity,walk/bicycle,sometimes,198,rarely,39,large,4,14,46,8,Yes,1777,0,1,0,1,0,1,1,0,1
+overweight,female,omnivore,daily,electricity,public,often,276,very frequently,1035,medium,4,12,50,13,No,2701,1,0,1,1,0,0,1,0,1
+obese,male,vegan,less frequently,coal,public,never,249,very frequently,1440,extra large,6,14,28,3,Sometimes,3998,0,0,0,1,0,0,1,1,1
+overweight,female,pescatarian,daily,coal,walk/bicycle,sometimes,73,very frequently,28,large,2,17,14,11,Sometimes,2551,0,1,0,0,0,1,0,0,0
+underweight,male,vegetarian,daily,wood,private,often,79,frequently,5328,extra large,2,1,35,24,Sometimes,3906,1,0,1,0,1,1,1,1,1
+underweight,female,pescatarian,less frequently,wood,walk/bicycle,often,101,very frequently,30,small,7,9,38,19,No,2150,1,1,1,1,0,1,0,1,0
+obese,female,omnivore,less frequently,coal,private,often,268,never,398,medium,5,8,9,2,Yes,1754,0,0,1,0,1,1,1,1,1
+obese,male,vegetarian,more frequently,natural gas,public,never,123,frequently,994,large,5,6,27,19,No,2416,1,1,1,1,1,0,0,0,0
+obese,female,vegetarian,less frequently,electricity,private,never,133,very frequently,3587,large,7,7,48,11,No,4300,1,1,1,0,0,0,0,0,0
+overweight,male,vegetarian,daily,coal,private,often,102,rarely,9372,small,1,13,25,13,Yes,4312,0,1,1,0,0,0,0,1,0
+underweight,female,vegan,daily,electricity,private,never,246,very frequently,2183,small,3,2,32,10,Sometimes,2510,0,1,0,0,0,0,1,1,1
+obese,female,vegetarian,more frequently,coal,public,sometimes,257,very frequently,1972,large,6,2,48,10,Sometimes,3697,0,0,1,1,1,0,1,0,1
+normal,female,vegetarian,twice a day,coal,walk/bicycle,often,271,never,14,extra large,6,14,36,22,Sometimes,1974,0,1,1,1,0,1,0,0,0
+obese,male,omnivore,less frequently,wood,walk/bicycle,often,224,frequently,81,small,1,10,10,9,No,2031,1,1,1,0,0,1,1,1,1
+underweight,female,vegan,twice a day,coal,private,sometimes,292,never,1328,small,4,15,2,15,Sometimes,1285,0,1,1,0,1,1,0,1,0
+underweight,male,pescatarian,twice a day,electricity,walk/bicycle,never,65,rarely,83,extra large,7,11,23,13,Yes,1735,0,1,0,1,1,1,1,0,1
+underweight,female,vegetarian,twice a day,natural gas,public,never,298,never,236,medium,7,1,2,4,Sometimes,1089,0,0,0,1,1,1,0,1,0
+normal,male,vegetarian,twice a day,electricity,public,sometimes,119,frequently,1099,small,4,5,15,6,Yes,1389,0,0,1,0,0,0,1,0,1
+overweight,female,vegetarian,twice a day,electricity,private,often,214,very frequently,4586,large,5,12,34,19,Yes,4457,0,1,0,1,1,1,1,0,1
+overweight,female,omnivore,less frequently,natural gas,private,often,146,rarely,6179,large,7,2,2,19,No,3529,0,1,0,0,1,1,0,1,0
+normal,female,vegan,twice a day,wood,walk/bicycle,never,199,frequently,20,medium,3,4,20,17,No,1467,1,0,0,1,1,0,0,1,0
+obese,female,pescatarian,daily,coal,walk/bicycle,often,293,never,92,large,2,10,7,3,Sometimes,1342,0,1,0,1,1,1,0,0,0
+overweight,male,omnivore,twice a day,wood,public,sometimes,252,very frequently,872,medium,4,14,40,10,No,3302,1,0,1,1,1,0,1,0,1
+normal,female,vegan,twice a day,wood,public,never,128,very frequently,1652,large,4,18,41,8,Sometimes,2475,1,0,0,0,1,1,0,1,0
+obese,male,omnivore,twice a day,electricity,private,sometimes,88,never,3052,small,4,0,28,8,Sometimes,1868,1,0,1,0,1,1,0,0,0
+overweight,female,vegan,less frequently,wood,walk/bicycle,often,106,never,76,extra large,2,10,44,11,No,1424,1,0,0,1,1,0,0,1,0
+obese,male,vegan,twice a day,wood,public,often,100,frequently,595,extra large,3,10,14,5,No,2446,0,1,0,1,1,1,1,0,1
+normal,male,vegetarian,less frequently,wood,public,never,228,never,1095,large,4,12,35,12,Sometimes,1554,0,0,1,0,0,0,1,0,1
+underweight,male,vegetarian,less frequently,wood,walk/bicycle,often,71,rarely,94,large,5,15,16,7,Yes,1480,0,0,1,0,1,1,0,1,0
+normal,female,vegan,more frequently,electricity,public,often,164,never,147,large,4,16,11,9,No,956,0,0,1,0,0,0,1,0,1
+normal,female,omnivore,more frequently,electricity,walk/bicycle,often,233,frequently,73,medium,2,7,32,11,Yes,1701,0,1,0,1,1,1,1,1,1
+obese,female,vegan,less frequently,wood,public,never,113,very frequently,249,small,7,0,13,11,No,2511,0,0,1,0,1,0,1,0,1
+overweight,female,vegetarian,daily,natural gas,public,never,131,rarely,164,extra large,5,24,1,18,No,1455,0,0,0,1,0,0,0,0,0
+obese,female,omnivore,twice a day,electricity,private,never,160,never,2885,extra large,3,3,9,10,No,1650,1,0,0,0,1,0,1,1,1
+obese,male,omnivore,less frequently,coal,private,sometimes,208,rarely,9126,extra large,4,14,4,4,Yes,1900,0,0,1,1,0,0,0,0,0
+obese,male,vegan,less frequently,electricity,walk/bicycle,often,98,very frequently,38,extra large,3,14,12,5,Sometimes,2553,1,1,0,0,1,1,1,0,1
+obese,male,pescatarian,twice a day,coal,private,often,247,never,3824,extra large,5,12,8,5,Sometimes,3968,1,1,0,1,1,1,1,1,1
+overweight,female,omnivore,less frequently,natural gas,public,never,250,frequently,1535,small,5,21,22,16,No,1875,1,0,1,1,0,1,1,0,1
+obese,female,pescatarian,more frequently,natural gas,public,never,115,never,1928,extra large,1,24,4,19,No,889,0,1,1,1,0,0,0,0,0
+overweight,male,vegan,daily,coal,public,often,281,frequently,733,extra large,5,8,30,5,Sometimes,2801,1,1,0,1,1,0,0,0,0
+normal,male,pescatarian,twice a day,coal,walk/bicycle,never,71,frequently,22,small,4,13,13,6,Sometimes,1658,1,1,0,1,1,0,0,1,0
+overweight,female,omnivore,twice a day,wood,public,often,68,never,1922,small,4,23,7,4,Sometimes,1038,0,1,1,0,0,1,1,0,1
+normal,male,pescatarian,daily,wood,private,sometimes,273,rarely,6091,extra large,3,20,47,9,Yes,2812,1,1,0,1,0,1,0,1,0
+normal,male,pescatarian,less frequently,natural gas,private,sometimes,180,never,2603,medium,2,15,45,18,Sometimes,2369,1,1,0,1,0,0,0,1,0
+overweight,male,vegetarian,daily,electricity,public,sometimes,222,rarely,1815,extra large,3,7,44,5,No,1754,0,1,0,1,0,0,0,0,0
+normal,male,vegetarian,daily,coal,walk/bicycle,often,168,very frequently,79,extra large,4,12,25,2,Sometimes,2964,1,1,0,0,0,1,1,1,1
+normal,male,vegan,daily,natural gas,private,often,154,frequently,681,medium,7,17,4,19,Sometimes,1941,0,0,1,0,1,1,0,1,0
+overweight,male,omnivore,more frequently,electricity,private,never,90,very frequently,854,large,3,16,24,0,Sometimes,2385,1,0,1,0,1,1,0,1,0
+normal,male,omnivore,more frequently,coal,public,often,252,very frequently,873,large,4,12,9,14,No,3119,1,1,0,1,0,1,1,1,1
+normal,female,omnivore,daily,coal,walk/bicycle,often,153,frequently,16,medium,2,1,48,0,Sometimes,2004,1,0,1,0,0,1,1,1,1
+overweight,male,vegan,twice a day,natural gas,private,never,103,rarely,2465,large,2,1,12,6,Yes,1842,1,1,0,0,1,1,1,0,1
+normal,female,vegan,more frequently,electricity,walk/bicycle,never,129,rarely,85,extra large,6,20,11,8,Yes,1270,0,1,1,0,1,1,1,1,1
+obese,male,pescatarian,less frequently,wood,public,often,170,rarely,1887,medium,1,17,33,12,Yes,1929,0,0,1,1,1,1,0,1,0
+obese,female,vegan,twice a day,natural gas,public,never,89,never,459,small,3,17,7,4,Sometimes,512,1,1,1,1,1,0,1,1,1
+overweight,male,omnivore,more frequently,natural gas,private,never,217,very frequently,8854,extra large,6,9,38,0,No,3886,0,1,1,0,1,1,1,0,1
+underweight,male,omnivore,more frequently,wood,private,often,112,rarely,7389,medium,6,19,3,14,Sometimes,3249,1,0,1,1,0,0,1,1,1
+normal,male,vegetarian,daily,wood,private,often,130,very frequently,13,extra large,6,11,5,0,Sometimes,3001,0,1,0,1,1,1,0,1,0
+underweight,male,pescatarian,less frequently,coal,private,sometimes,126,very frequently,4039,small,2,22,10,24,Yes,3039,0,0,0,1,0,0,1,0,1
+obese,female,vegan,twice a day,wood,private,sometimes,147,frequently,14,small,1,16,20,4,Yes,1581,0,0,1,0,0,0,0,1,0
+overweight,female,pescatarian,less frequently,natural gas,private,often,230,rarely,9710,extra large,3,5,5,1,Sometimes,4473,1,1,0,1,1,0,0,1,0
+normal,male,vegetarian,twice a day,natural gas,private,sometimes,82,never,7215,large,6,11,17,22,Yes,2666,0,0,1,0,0,0,1,0,1
+obese,male,pescatarian,twice a day,electricity,public,sometimes,161,frequently,1132,extra large,1,14,1,19,Sometimes,1862,0,1,0,0,0,1,0,1,0
+normal,male,vegan,more frequently,natural gas,walk/bicycle,sometimes,133,rarely,19,large,2,19,39,8,Sometimes,1709,0,1,0,0,1,0,1,1,1
+overweight,male,vegetarian,twice a day,wood,walk/bicycle,never,177,frequently,92,large,7,11,42,22,Sometimes,2668,1,0,1,0,1,1,1,0,1
+normal,male,pescatarian,daily,coal,walk/bicycle,sometimes,91,rarely,10,large,4,13,27,7,Sometimes,1655,0,1,1,1,0,0,0,1,0
+underweight,male,vegetarian,less frequently,electricity,public,often,70,very frequently,1320,large,2,16,9,11,Yes,2188,0,0,0,0,1,0,0,0,0
+normal,female,omnivore,less frequently,coal,public,often,249,never,580,large,1,22,8,6,Sometimes,1401,0,1,0,0,0,0,1,1,1
+normal,female,vegetarian,more frequently,electricity,public,never,110,very frequently,332,small,1,15,32,23,Sometimes,1873,0,1,1,0,1,0,0,1,0
+overweight,female,omnivore,more frequently,natural gas,public,never,204,rarely,1447,large,4,18,27,4,No,1601,1,0,1,1,0,0,0,1,0
+obese,female,vegetarian,less frequently,natural gas,public,often,235,frequently,883,small,7,11,48,22,Sometimes,2521,1,0,0,0,0,0,1,0,1
+obese,female,vegetarian,twice a day,coal,walk/bicycle,never,228,rarely,95,large,7,24,17,1,Yes,2020,0,0,1,0,1,1,1,1,1
+normal,male,vegetarian,twice a day,coal,public,sometimes,165,rarely,472,extra large,7,12,22,11,No,2404,0,0,0,1,1,0,1,1,1
+obese,female,vegan,less frequently,coal,public,sometimes,113,rarely,396,large,2,16,45,19,Yes,2010,0,1,0,0,0,1,0,0,0
+obese,female,vegan,twice a day,coal,private,never,230,frequently,1659,medium,6,11,40,23,Sometimes,2798,1,1,0,1,0,0,0,0,0
+overweight,female,vegan,more frequently,coal,public,often,166,never,1352,medium,3,0,24,16,No,1512,0,0,1,1,1,0,0,0,0
+overweight,female,vegetarian,twice a day,wood,public,sometimes,98,rarely,1025,medium,4,14,13,23,Yes,1359,0,1,0,0,1,0,1,1,1
+overweight,female,pescatarian,more frequently,natural gas,public,sometimes,262,very frequently,1861,extra large,5,0,12,17,No,3030,1,0,0,1,1,1,1,1,1
+normal,female,vegetarian,less frequently,wood,walk/bicycle,never,204,rarely,22,small,4,17,12,10,Sometimes,901,1,0,1,0,1,1,1,1,1
+overweight,male,omnivore,more frequently,coal,private,never,249,frequently,3007,large,3,24,46,24,Yes,3762,1,0,1,1,0,0,1,1,1
+normal,male,pescatarian,less frequently,natural gas,walk/bicycle,never,150,very frequently,54,medium,1,11,19,9,Yes,2007,1,1,1,1,1,0,1,1,1
+underweight,female,vegan,twice a day,electricity,walk/bicycle,never,213,very frequently,45,extra large,4,7,23,6,No,2039,1,0,0,1,0,0,0,0,0
+obese,female,vegan,less frequently,coal,private,never,279,very frequently,8125,extra large,1,10,20,13,No,4442,0,0,0,0,1,0,1,1,1
+underweight,male,vegan,daily,electricity,walk/bicycle,sometimes,238,frequently,73,small,6,8,17,5,Yes,1477,0,0,0,1,0,1,0,0,0
+obese,male,vegetarian,daily,coal,walk/bicycle,often,52,rarely,50,large,7,23,2,15,Yes,1938,1,1,1,0,0,0,1,0,1
+underweight,female,pescatarian,less frequently,natural gas,public,often,64,never,1728,extra large,7,3,33,16,No,1657,0,1,1,1,0,0,0,0,0
+obese,male,omnivore,less frequently,coal,walk/bicycle,never,137,frequently,54,large,3,11,23,17,Yes,2540,1,0,0,0,1,0,0,0,0
+normal,female,omnivore,twice a day,electricity,public,often,124,very frequently,1545,extra large,6,7,10,20,Sometimes,2424,1,1,1,1,0,0,1,0,1
+obese,male,vegan,twice a day,coal,walk/bicycle,often,181,frequently,68,small,2,17,42,10,No,2598,0,0,1,1,1,1,1,0,1
+obese,male,omnivore,less frequently,natural gas,walk/bicycle,sometimes,272,frequently,80,medium,5,2,39,6,No,3003,0,0,0,1,0,0,1,0,1
+obese,male,omnivore,more frequently,electricity,walk/bicycle,never,115,very frequently,80,large,3,21,7,1,Sometimes,2626,0,0,1,0,1,1,1,1,1
+normal,female,pescatarian,less frequently,coal,walk/bicycle,often,71,rarely,49,small,2,7,43,19,Yes,1430,0,1,1,1,0,1,1,1,1
+underweight,male,omnivore,less frequently,natural gas,private,never,232,frequently,7937,extra large,4,3,15,4,Yes,4077,1,0,0,1,0,0,1,0,1
+overweight,female,vegan,more frequently,electricity,private,sometimes,106,frequently,8237,large,7,9,5,15,Sometimes,1538,1,1,1,1,0,0,0,1,0
+obese,male,omnivore,twice a day,wood,private,never,168,very frequently,1601,medium,6,5,48,5,Yes,3550,0,1,1,1,0,1,1,0,1
+obese,male,vegan,more frequently,natural gas,public,never,72,rarely,410,small,3,2,34,12,No,1791,0,0,0,0,0,1,0,1,0
+underweight,female,vegan,twice a day,wood,private,sometimes,299,rarely,7440,medium,3,1,15,13,No,2007,1,0,0,1,0,0,0,0,0
+underweight,male,vegan,daily,coal,private,sometimes,275,frequently,741,extra large,7,10,40,3,No,2898,0,1,1,1,1,0,0,0,0
+obese,male,pescatarian,less frequently,electricity,public,never,241,rarely,1690,small,2,7,36,2,Yes,1474,0,1,0,1,0,1,0,0,0
+obese,male,vegan,more frequently,wood,public,sometimes,207,very frequently,1088,medium,7,2,42,10,Yes,3859,0,0,1,0,1,0,1,1,1
+obese,female,pescatarian,less frequently,natural gas,private,sometimes,68,frequently,4863,large,7,14,9,3,Sometimes,3796,0,0,0,0,1,1,1,1,1
+overweight,male,pescatarian,more frequently,natural gas,walk/bicycle,sometimes,219,frequently,89,large,2,13,47,23,Yes,2681,0,0,1,0,1,1,1,0,1
+overweight,female,vegetarian,daily,coal,walk/bicycle,sometimes,60,rarely,75,small,6,7,5,18,Yes,1022,1,1,1,0,1,1,0,1,0
 overweight,male,vegetarian,less frequently,electricity,walk/bicycle,often,235,very frequently,13,large,4,24,35,7,No,3053,1,0,1,0,1,1,1,0,1
 normal,male,omnivore,less frequently,wood,private,sometimes,287,rarely,5221,large,6,22,16,10,Sometimes,3785,1,0,1,1,1,0,0,0,0
 normal,female,vegetarian,more frequently,coal,public,sometimes,147,frequently,412,small,6,18,38,18,No,2010,0,1,1,1,1,0,0,1,0
