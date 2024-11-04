@@ -37,6 +37,7 @@ from ..utils.validation import (
     _check_sample_weight,
     _num_samples,
     check_is_fitted,
+    check_array
 )
 from ._base import BaseEnsemble, _partition_estimators
 
@@ -257,17 +258,6 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         
             grouped_new_columns.append(group_new_columns)
         
-        print("Finished loading new columns")
-        # # Print test
-        # print(f"new columns for tree 0 in group 0: {grouped_new_columns[0][0]}")
-        # print(f"Shape new columns for tree 0 in group 0: {grouped_new_columns[0][0].shape}")
-        # print(f"Count of samples for tree 0 in group 0: {len(grouped_samples[0][0])}")
-        # print(f"Shape of X for tree 0 in group 0: {X[grouped_samples[0][0]].shape}")
-        # print(f"Ratio Silvio: {(self.group_size-1)/X[grouped_samples[0][0]].shape[1]}")
-        # # Concatenate the new columns with the original features
-        # new_X = np.hstack((X[grouped_samples[0][0]], grouped_new_columns[0][0]))
-        # print(f"Shape of X after hstack for tree 0 in group 0: {new_X.shape}")
-
         for i, trees_group in enumerate(initial_grouped_trees):
             extended_trees_group = []
             samples_group = grouped_samples[i]
@@ -285,9 +275,6 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
 
                 # Validate training data
                 new_X, new_y, sample_weight, missing_values_in_feature_mask, random_state = self._original_fit_validations(new_X, new_y, sample_weight)
-                # print(f"Shape of X for tree {j} in group {i}: {new_X.shape}")
-                # print(f"Shape of y for tree {j} in group {i}: {new_y.shape}")
-                print(f"About to fit extended tree {j} in group {i}")
                 
                 # Fit the extended tree with the new features based on the original tree
                 extended_tree = ContinuedDecisionTreeRegressor(initial_tree=tree, random_state=random_state, max_depth=self.max_depth)
@@ -305,7 +292,8 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         
         check_is_fitted(self) #fijarse que no estamos ocultando las features?
 
-        X = self._validate_X_predict(X)
+        # X = self._validate_X_predict(X)
+        X = check_array(X, dtype=np.float32)
 
         n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
         lock = threading.Lock()
@@ -331,20 +319,30 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         group_averages = np.empty((self._n_groups, X.shape[0]))
 
         for i, group_preds in enumerate(grouped_predictions):
+            print(f"Group {i}")
             for j, tree_preds in enumerate(group_preds):
+                print(f"Tree {j}")
                 # Remove the j-th tree's predictions
                 shared_predictions = []
 
                 # For each tree in the group (except the j-th tree)
                 for k, other_tree_preds in enumerate(group_preds):
                     if k != j:
+                        print("Getting shared predictions of tree", k)
                         shared_predictions.append(other_tree_preds)
+                
                 # Convert to np.array
                 shared_predictions = np.array(shared_predictions)
                 
                 # Concatenate the shared predictions with the original features
                 new_X = np.hstack((X, shared_predictions.T))
 
+                # Validate the input data
+                new_X = self._validate_X_predict(new_X)
+
+                print("Completed creating new X")
+                print(self.extended_grouped_estimators_[i][j].tree_.max_depth)
+                print(self.extended_grouped_estimators_[i][j].tree_.children_left)
                 # Predict the samples for the current extended complete tree
                 predictions = self.extended_grouped_estimators_[i][j].predict(new_X)
 

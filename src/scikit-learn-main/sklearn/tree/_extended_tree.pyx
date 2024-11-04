@@ -361,6 +361,9 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         cdef cnp.ndarray split_pos = np.empty(initial_n_nodes, dtype=np.intp)
         cdef cnp.ndarray end_pos = np.empty(initial_n_nodes, dtype=np.intp)
 
+        # Vector to store new parents node ids
+        cdef cnp.ndarray new_parents = np.array(self.parents, dtype=np.intp, copy=True)
+
         for i in range(initial_n_nodes):
             if not self.is_leafs[i]:
 
@@ -424,14 +427,16 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                     end_pos[i] = end
 
                     node_id = tree._add_node(
-                        self.parents[i], self.is_lefts[i], self.is_leafs[i],
+                        new_parents[i], self.is_lefts[i], self.is_leafs[i],
                         self.features[i], self.thresholds[i], self.impurities[i],
                         self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
                         self.missing_go_to_lefts[i]
                     )
-            # if i + 2 < len(self.parents):
-                # self.parents[i+1] = node_id
-                # self.parents[i+2] = node_id                        
+
+                # Replace the parent node id with the new one
+                if i + 2 < len(self.parents):
+                    new_parents[i+1] = node_id
+                    new_parents[i+2] = node_id                        
             else:
                 if not self.is_lefts[i]:
                     # Push right child on stack
@@ -440,7 +445,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                         "start": split_pos[self.parents[i]],
                         "end": end_pos[self.parents[i]],
                         "depth": self.depths[i],
-                        "parent": self.parents[i], # Aca hay q calcularlo 
+                        "parent": new_parents[i],
                         "is_left": 0,
                         "impurity": self.impurities[i],
                         "n_constant_features": parent_record.n_constant_features,
@@ -461,7 +466,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                         "start": start_pos[self.parents[i]],
                         "end": split_pos[self.parents[i]],
                         "depth": self.depths[i],
-                        "parent": self.parents[i], # Aca hay q calcularlo
+                        "parent": new_parents[i],
                         "is_left": 1,
                         "impurity": self.impurities[i],
                         "n_constant_features": parent_record.n_constant_features,
