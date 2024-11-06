@@ -211,7 +211,6 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
 
         # Ensure max_depth is set to initial_max_depth
         self.max_depth = self.initial_max_depth
-        
         # Call to original fit method
         super().fit(X, y)
 
@@ -272,10 +271,8 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
                 # Concatenate the other tree's predictions with the original features
                 new_X = np.hstack((X[used_sample_mask], grouped_new_columns[i][j]))
                 new_y = y[used_sample_mask]
-
                 # Validate training data
                 new_X, new_y, sample_weight, missing_values_in_feature_mask, random_state = self._original_fit_validations(new_X, new_y, sample_weight)
-                
                 # Fit the extended tree with the new features based on the original tree
                 extended_tree = ContinuedDecisionTreeRegressor(initial_tree=tree, random_state=random_state, max_depth=self.max_depth)
                 extended_tree.fit(new_X, new_y)
@@ -319,16 +316,16 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         group_averages = np.empty((self._n_groups, X.shape[0]))
 
         for i, group_preds in enumerate(grouped_predictions):
-            print(f"Group {i}")
+            # print(f"Group {i}")
             for j, tree_preds in enumerate(group_preds):
-                print(f"Tree {j}")
+                # print(f"Tree {j}")
                 # Remove the j-th tree's predictions
                 shared_predictions = []
 
                 # For each tree in the group (except the j-th tree)
                 for k, other_tree_preds in enumerate(group_preds):
                     if k != j:
-                        print("Getting shared predictions of tree", k)
+                        # print("Getting shared predictions of tree", k)
                         shared_predictions.append(other_tree_preds)
                 
                 # Convert to np.array
@@ -340,9 +337,10 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
                 # Validate the input data
                 new_X = self._validate_X_predict(new_X)
 
-                print("Completed creating new X")
-                print(self.extended_grouped_estimators_[i][j].tree_.max_depth)
-                print(self.extended_grouped_estimators_[i][j].tree_.children_left)
+                # print("Completed creating new X")
+                # print(new_X.shape)
+                # print(self.extended_grouped_estimators_[i][j].tree_.max_depth)
+                # print(self.extended_grouped_estimators_[i][j].tree_.children_left)
                 # Predict the samples for the current extended complete tree
                 predictions = self.extended_grouped_estimators_[i][j].predict(new_X)
 

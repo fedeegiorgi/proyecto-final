@@ -145,15 +145,22 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                            n_node_samples < 2 * min_samples_leaf or
                            weighted_n_node_samples < 2 * min_weight_leaf)
 
-                if first:
-                    with gil:
-                        print("---- Continue training root ----")
-                        print("* Parent record impurity:", parent_record.impurity)
-                        print("* Start:", start)
-                        print("* End:", end)
-                    first = 0 
+                # if first:
+                #     with gil:
+                #         print("---- Continue training root ----")
+                #         print("* Parent record impurity:", parent_record.impurity)
+                #         print("* Start:", start)
+                #         print("* End:", end)
+                #     first = 0 
+
                 # impurity == 0 with tolerance due to rounding errors
+                # with gil:
+                    # print("Es leaf?:", is_leaf)
+
                 is_leaf = is_leaf or parent_record.impurity <= EPSILON
+
+                # with gil:
+                    # print("Es leaf post chequeo epsilon?:", is_leaf)
 
                 if not is_leaf:
                     self.splitter.node_split(
@@ -166,11 +173,17 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                     is_leaf = (is_leaf or split.pos >= end or
                                (split.improvement + EPSILON <
                                 min_impurity_decrease))
-
+                    # with gil:
+                    #     print("Es leaf post chequeo split?:", is_leaf)
+                    #     print(f"La feature encontrada fue: {split.feature}")
                 node_id = tree._add_node(parent, is_left, is_leaf, split.feature,
                                             split.threshold, parent_record.impurity,
                                             n_node_samples, weighted_n_node_samples,
                                             split.missing_go_to_left)
+
+                with gil:
+                    if split.feature > 205:
+                        print("!!!!!!!!!!!!!!!!!!!!!Use feature amiga!!!!!!!!!!!!!!!!!!!!!!:", split.feature)
 
                 if node_id == INTPTR_MAX:
                     rc = -1
@@ -298,7 +311,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         # check input
         X, y, sample_weight = self._check_input(X, y, sample_weight)
         
-        print("Passed the check_input")
+        # print("Passed the check_input")
 
         # Initial capacity
         cdef intp_t init_capacity
@@ -310,7 +323,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
 
         tree._resize(init_capacity)
 
-        print("Passed the resize process")
+        # print("Passed the resize process")
 
         # Parameters
         cdef intp_t max_depth = self.max_depth
@@ -322,7 +335,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         # Recursive partition (without actual recursion)
         self.splitter.init(X, y, sample_weight, missing_values_in_feature_mask)
 
-        print("Passed the splitter init")
+        # print("Passed the splitter init")
 
         cdef intp_t start
         cdef intp_t end
@@ -387,7 +400,8 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
 
                     print("I am first")
                     print("I found the split position p = ", pos)
-                    
+                    print("-------------")
+
                     # Define what my childs will see
                     start_pos[0] = start
                     split_pos[0] = pos
@@ -410,7 +424,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                         # Define the start and end positions for this split
                         start = split_pos[self.parents[i]]
                         end = end_pos[self.parents[i]]
-                        print("I am right node:", i, start_pos[i], end_pos[i])
+                        print("I am right node:", i)
 
                     self.splitter.node_reset(start, end, &weighted_n_node_samples)
 
@@ -419,7 +433,8 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                     # Compute the split position
                     pos = self.splitter.recompute_node_split(&parent_record, &split, feature, threshold)
 
-                    print("I found the split position p = ", pos, split.pos)
+                    print("I found the split position p = ", pos)
+                    print("-------------")
                     
                     # Define what my childs will see
                     start_pos[i] = start
@@ -433,11 +448,29 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                         self.missing_go_to_lefts[i]
                     )
 
+                self.splitter.node_value(tree.value + node_id * tree.value_stride)
+
                 # Replace the parent node id with the new one
-                if i + 2 < len(self.parents):
-                    new_parents[i+1] = node_id
-                    new_parents[i+2] = node_id                        
+                for j, parent in enumerate(self.parents):
+                    if parent == i:
+                        new_parents[j] = node_id
+                # if i + 2 < len(self.parents):
+                #     new_parents[i+1] = node_id
+                #     new_parents[i+2] = node_id
+                    # print('Original:', self.parents)
+                    # print('New:', new_parents)      
             else:
+                # if self.impurities[i] < 1e-6:
+                #     # print("La impureza estaba fea. Soy hoja?:", self.is_leafs[i])
+
+                #     node_id = tree._add_node(
+                #         new_parents[i], self.is_lefts[i], self.is_leafs[i],
+                #         self.features[i], self.thresholds[i], self.impurities[i],
+                #         self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
+                #         self.missing_go_to_lefts[i]
+                #     )
+
+                #     continue
                 if not self.is_lefts[i]:
                     # Push right child on stack
                     print(f"impurity del original node der {i}:", self.impurities[i])
@@ -452,7 +485,8 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                         "lower_bound": -INFINITY,
                         "upper_bound": INFINITY,
                     })
-                    print("Pushed the right child. Node:", i)
+                    # print("Pushed the right child. Node:", i)
+                    # print("His parent is:", new_parents[i])
                 else:
                     # Push left child on stack
                     # if i == 5:
@@ -473,7 +507,8 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                         "lower_bound": -INFINITY,
                         "upper_bound": INFINITY,
                     })
-                    print("Pushed the left child. Node:", i)
+                    # print("Pushed the left child. Node:", i)
+                    # print("His parent is:", new_parents[i])
                 
                 print("About to continue training from node:", i)
                 self._continue_training(tree)

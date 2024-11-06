@@ -44,8 +44,10 @@ cdef class Splitter:
     cdef intp_t n_samples                # X.shape[0]
     cdef float64_t weighted_n_samples       # Weighted number of samples
     cdef intp_t[::1] features            # Feature indices in X
+    cdef intp_t[::1] features_pp            # Feature indices in X
     cdef intp_t[::1] constant_features   # Constant features indices
     cdef intp_t n_features               # X.shape[1]
+    cdef intp_t n_features_pp
     cdef float32_t[::1] feature_values   # temp. array holding feature values
 
     cdef intp_t start                    # Start position for the current node
@@ -114,3 +116,13 @@ cdef class Splitter:
         intp_t feature, # feature index of initial_tree
         float64_t threshold, # threshold of initial_tree
     ) except -1 nogil
+
+    cdef int init_addon(
+        self,
+        object X_original,
+        object X_peer_prediction,
+        intp_t initial_max_depth,
+        const float64_t[:, ::1] y,
+        const float64_t[:] sample_weight,
+        const uint8_t[::1] missing_values_in_feature_mask,
+    ) except -1
