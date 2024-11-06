@@ -268,14 +268,20 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
                 # Assign True to the samples that the tree used for training
                 used_sample_mask[samples_group[j]] = True
                                
+                # Get this tree samples
+                j_tree_original_X = X[used_sample_mask]
+                j_tree_y = y[used_sample_mask] 
+
                 # Concatenate the other tree's predictions with the original features
-                new_X = np.hstack((X[used_sample_mask], grouped_new_columns[i][j]))
-                new_y = y[used_sample_mask]
+                j_tree_pp_X = np.hstack((j_tree_original_X, grouped_new_columns[i][j]))
+                
                 # Validate training data
-                new_X, new_y, sample_weight, missing_values_in_feature_mask, random_state = self._original_fit_validations(new_X, new_y, sample_weight)
+                j_tree_original_X, _, _, _, _ = self._original_fit_validations(j_tree_original_X, j_tree_y, sample_weight)
+                j_tree_pp_X, j_tree_y, sample_weight, missing_values_in_feature_mask, random_state = self._original_fit_validations(j_tree_pp_X, j_tree_y, sample_weight)
+                
                 # Fit the extended tree with the new features based on the original tree
                 extended_tree = ContinuedDecisionTreeRegressor(initial_tree=tree, random_state=random_state, max_depth=self.max_depth)
-                extended_tree.fit(new_X, new_y)
+                extended_tree.fit_v2(j_tree_original_X, j_tree_pp_X, j_tree_y, sample_weight, missing_values_in_feature_mask, False)
 
                 # Add fitted extended tree to the group
                 extended_trees_group.append(extended_tree)

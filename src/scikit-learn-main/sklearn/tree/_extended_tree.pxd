@@ -54,4 +54,15 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         const uint8_t[::1] missing_values_in_feature_mask=*,
     )
 
+    cpdef build_extended_2(
+        self,
+        Tree tree,
+        object X_original,
+        object X_peer_prediction,
+        intp_t initial_max_depth,
+        const float64_t[:, ::1] y,
+        const float64_t[:] sample_weight=*,
+        const uint8_t[::1] missing_values_in_feature_mask=*,
+    )
+
     cdef _continue_training(self, Tree tree)

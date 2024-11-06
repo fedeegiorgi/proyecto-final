@@ -42,12 +42,10 @@ cdef class Splitter:
 
     cdef intp_t[::1] samples             # Sample indices in X, y
     cdef intp_t n_samples                # X.shape[0]
-    cdef float64_t weighted_n_samples       # Weighted number of samples
+    cdef float64_t weighted_n_samples    # Weighted number of samples
     cdef intp_t[::1] features            # Feature indices in X
-    cdef intp_t[::1] features_pp            # Feature indices in X
     cdef intp_t[::1] constant_features   # Constant features indices
     cdef intp_t n_features               # X.shape[1]
-    cdef intp_t n_features_pp
     cdef float32_t[::1] feature_values   # temp. array holding feature values
 
     cdef intp_t start                    # Start position for the current node
@@ -62,6 +60,13 @@ cdef class Splitter:
     cdef const int8_t[:] monotonic_cst
     cdef bint with_monotonic_cst
     cdef const float64_t[:] sample_weight
+
+    # Para ALT D
+    cdef intp_t[::1] features_pp         # Feature indices in X_peer_prediction
+    cdef intp_t n_features_pp            # X_peer_prediction.shape[1]
+    cdef intp_t initial_max_depth        # max_depth of initial_tree
+    cdef intp_t current_depth            # current depth of the tree
+    #
 
     # The samples vector `samples` is maintained by the Splitter object such
     # that the samples contained in a node are contiguous. With this setting,
@@ -107,7 +112,7 @@ cdef class Splitter:
 
     cdef float64_t node_impurity(self) noexcept nogil
 
-    ### Agregado para Alternativa D: AddOnBestSplitter
+    ######## Agregado para Alternativa D: AddOnBestSplitter ########
 
     cdef int recompute_node_split(
         self,
@@ -119,10 +124,17 @@ cdef class Splitter:
 
     cdef int init_addon(
         self,
-        object X_original,
-        object X_peer_prediction,
-        intp_t initial_max_depth,
+        object X_original, # X without peer prediction
+        object X_peer_prediction, # X with peer prediction
+        intp_t initial_max_depth, # max_depth of initial_tree
         const float64_t[:, ::1] y,
         const float64_t[:] sample_weight,
         const uint8_t[::1] missing_values_in_feature_mask,
     ) except -1
+
+    cdef int node_split_dc(
+        self,
+        ParentInfo* parent,
+        SplitRecord* split,
+        intp_t current_depth, # for checking if we are in the initial tree
+    ) except -1 nogil
