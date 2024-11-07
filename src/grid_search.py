@@ -86,9 +86,9 @@ param_grids = {
     "1": {
         'model': IQRRandomForestRegressor(),
         'param_grid': {
-            'n_estimators': [30, 50, 100], 
-            'group_size': [3, 5, 10],
-            'max_depth': [None, 10, 20]},
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 2001, 50)) + list(range(2250, 4000, 250)), 
+            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
+            'max_depth': [None] + list(range(10, 51, 1))},
         'name': "IQR"
     },
     "2": {
@@ -103,9 +103,9 @@ param_grids = {
     "3": {
         'model': OOBRandomForestRegressorGroups(),
         'param_grid': {
-            'n_estimators': [30, 50, 100], 
-            'group_size': [3, 5, 10],
-            'max_depth': [None, 10, 20]},
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 2001, 50)) + list(range(2250, 4000, 250)), 
+            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
+            'max_depth': [None] + list(range(10, 51, 1))},
         'name': "OOB"
     },
     "4": {
@@ -119,7 +119,7 @@ param_grids = {
     # "5": {
     #     'model': RFRegressorFirstSplitCombiner(),
     #     'param_grid': {
-    #         'n_estimators': [30, 50, 100, 200], 
+    #         'n_estimators': [30, 50, 100], 
     #         'group_size': [3, 5, 10], 
     #         'max_depth': [None, 10, 20]},
     #     'name': "First_Splits_Combiner"
