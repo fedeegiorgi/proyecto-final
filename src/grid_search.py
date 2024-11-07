@@ -4,18 +4,19 @@ import torch
 from sklearn.ensemble import (
     RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, OOBRandomForestRegressor,
     OOBRandomForestRegressorGroups, OOBRandomForestRegressorGroupsSigmoid,
-    OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus, OOB_plus_IQR,
-    RFRegressorFirstSplitCombiner
+    OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus, OOB_plus_IQR
 )
 from sklearn.metrics import mean_squared_error
 import pandas as pd
+import numpy as np
 from scipy.io import arff
 import os
 from itertools import product
 
+
 SEED = 14208
 results = []
-tensor_results = {}
+models_results = {}
 
 # Mapping dataset names to target columns
 DATASETS_COLUMNS = {
@@ -29,8 +30,8 @@ DATASETS_COLUMNS = {
 print("Select the dataset you would like to use:")
 print("1: Carbon Emission")
 # print("2: Laptop")
-print("2: Wind")
-print("3: House_8L")
+print("2: House_8L")
+print("3: Wind")
 
 choice = input("Enter the number corresponding to your choice: ")
 
@@ -77,7 +78,7 @@ X_valid = pd.get_dummies(X_valid)
 X_train, X_valid = X_train.align(X_valid, join='left', axis=1, fill_value=0)
 
 # Ready for model training and grid search
-print("Data preprocessing complete. Ready for Hyperparameter Tuning.")
+print("Data preprocessing complete. Ready for Grid Search.")
 
 
 # Define Parameter Grids
@@ -85,35 +86,35 @@ param_grids = {
     "1": {
         'model': IQRRandomForestRegressor(),
         'param_grid': {
-            'n_estimators': list(range(50, 5001, 25)), 
-            'group_size': list(range(5, 101, 5)), 
-            'max_depth': [None] + list(range(10, 31, 1))},
+            'n_estimators': [30, 50, 100], 
+            'group_size': [3, 5, 10],
+            'max_depth': [None, 10, 20]},
         'name': "IQR"
     },
     "2": {
         'model': PercentileTrimmingRandomForestRegressor(),
         'param_grid': {
-            'n_estimators': list(range(50, 5001, 25)), 
-            'group_size': list(range(5, 101, 5)), 
-            'max_depth': [None] + list(range(10, 31, 1)),
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 2001, 50)) + list(range(2250, 4000, 250)), 
+            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
+            'max_depth': [None] + list(range(10, 51, 1)),
             'percentile': list(range(1, 16, 1))}, 
-        'name': "Percentile Trimming"
+        'name': "Percentile_Trimming"
     },
     "3": {
         'model': OOBRandomForestRegressorGroups(),
         'param_grid': {
-            'n_estimators': list(range(50, 5001, 25)), 
-            'group_size': list(range(5, 101, 5)), 
-            'max_depth': [None] + list(range(10, 31, 1))},
+            'n_estimators': [30, 50, 100], 
+            'group_size': [3, 5, 10],
+            'max_depth': [None, 10, 20]},
         'name': "OOB"
     },
     "4": {
         'model': OOB_plus_IQR(),
         'param_grid': {
-            'n_estimators': list(range(50, 5001, 25)), 
-            'group_size': list(range(5, 101, 5)), 
-            'max_depth': [None] + list(range(10, 31, 1))},
-        'name': "OOB + IQR"
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 2001, 50)) + list(range(2250, 4000, 250)), 
+            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
+            'max_depth': [None] + list(range(10, 51, 1))},
+        'name': "OOB_plus_IQR"
     },
     # "5": {
     #     'model': RFRegressorFirstSplitCombiner(),
@@ -121,7 +122,7 @@ param_grids = {
     #         'n_estimators': [30, 50, 100, 200], 
     #         'group_size': [3, 5, 10], 
     #         'max_depth': [None, 10, 20]},
-    #     'name': "First Splits Combiner"
+    #     'name': "First_Splits_Combiner"
     # },
     # "6": {
     #     'model': SharedKnowledgeRandomForestRegressor(),
@@ -130,8 +131,8 @@ param_grids = {
     #         'group_size': [3, 5, 10], 
     #         'max_depth': [None, 10, 20], 
     #         'initial_max_depth': [5, 10, 15, 20, 25, 30]},
-    #     'name': "Shared Knowledge"
-    # },
+    #     'name': "Shared_Knowledge"
+    # }
 }
 
 # Prompt to select the model(s)
@@ -140,7 +141,7 @@ print("1: IQR")
 print("2: Percentile Trimming")
 print("3: OOB")
 print("4: OOB + IQR")
-#print("5: First Splits Combiner")
+# print("5: First Splits Combiner")
 # print("6: Shared Knowledge")
 
 choices = input("Enter the numbers corresponding to your choice(s): ").split(',')
@@ -149,7 +150,7 @@ for choice in tqdm(choices):
     choice = choice.strip()
     if choice not in param_grids:
         print(f"Invalid choice: {choice}. Skipping.")
-        continue
+        exit()
 
     config = param_grids[choice]
     model, param_grid, model_name = config['model'], config['param_grid'], config['name']
@@ -161,7 +162,7 @@ for choice in tqdm(choices):
     # List to hold MSE values for each parameter combination
     mse_list = []
 
-    if model_name == 'Shared Knowledge':
+    if model_name == 'Shared_Knowledge':
         for i in param_grid['n_estimators']:         
             for j in param_grid['group_size']:  
                 for k in param_grid['max_depth']:
@@ -184,7 +185,7 @@ for choice in tqdm(choices):
                 best_mse = mse
                 best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_depth': max_depth, 'initial_max_depth': initial_max_depth}
     
-    elif model_name == 'Percentile Trimming':
+    elif model_name == 'Percentile_Trimming':
         for i in param_grid['n_estimators']:         
             for j in param_grid['group_size']:  
                 for k in param_grid['max_depth']:
@@ -227,22 +228,20 @@ for choice in tqdm(choices):
             if mse < best_mse:
                 best_mse = mse
                 best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_depth': max_depth}
-
-    # print(f"Best Parameters for {model_name}: {best_params}")
-    # print(f"Validation MSE for {model_name}: {best_mse}")
     
-    # Replace each None with float('inf') in the parameters list
-    parameters = [(a, b, float('inf') if c is None else c) for (a, b, c) in parameters]
-
-
     # Create a tensor of parameter combinations with their corresponding MSE values
-    parameter_tensor = torch.tensor(parameters, dtype=torch.float32)
-    mse_tensor = torch.tensor(mse_list, dtype=torch.float32).unsqueeze(1)  # Convert MSE list to a tensor and add a dimension for concatenation
-    result_tensor = torch.cat((parameter_tensor, mse_tensor), dim=1)  # Combine parameters and MSE values
-    #np.save
+    parameter_np = np.array(parameters, dtype=np.float32)
+    mse_np = np.array(mse_list, dtype=np.float32).reshape(-1, 1)  # Convert MSE list to a tensor and add a dimension for concatenation
+    result_np = np.concatenate((parameter_np, mse_np), axis=1)  # Combine parameters and MSE values
+    
+    # Nombre del archivo basado en el dataset y el modelo
+    file_name = f"resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy"
+
+    # Guardar el resultado como un archivo .npy
+    np.save(file_name, result_np)
 
     # Save the tensor in the dictionary with the model name as the key
-    tensor_results[model_name] = result_tensor
+    models_results[model_name] = result_np
 
     results.append({
         'Model': model_name,
@@ -251,11 +250,12 @@ for choice in tqdm(choices):
     })
 
 # Display all results
-print("\nAll Results:")
+print("\nBest Parameters and MSE:")
 for result in results:
     print(result)
 
 # Display tensor results for each model
-for model_name, tensor in tensor_results.items():
-    print(f"\nParameter combinations and MSE tensor for {model_name}:")
-    print(tensor)
+for model_name, arr in models_results.items():
+    path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy'
+    data = np.load(path)
+    print(data)
