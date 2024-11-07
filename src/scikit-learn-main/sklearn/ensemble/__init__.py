@@ -16,7 +16,7 @@ from ._group_debate import(
     RandomForestGroupDebate,
 )
 from ._extremos_forest import (
-    ZscoreRandomForestRegressor,
+    #ZscoreRandomForestRegressor,
     IQRRandomForestRegressor,
     PercentileTrimmingRandomForestRegressor,
 )

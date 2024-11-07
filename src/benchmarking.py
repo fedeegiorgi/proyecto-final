@@ -4,7 +4,7 @@ import pandas as pd
 from tqdm import tqdm
 from scipy.io import arff
 from sklearn.ensemble import (
-    RandomForestRegressor, IQRRandomForestRegressor, OOBRandomForestRegressor,
+    RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, OOBRandomForestRegressor,
     OOBRandomForestRegressorGroups, OOBRandomForestRegressorGroupsSigmoid,
     OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus, OOB_plus_IQR,
     RFRegressorFirstSplitCombiner
@@ -22,16 +22,16 @@ DATASETS_COLUMNS = { # Acá se agregan todos los datasets que están en la carpe
 NEW_DATASET_NAME = 'Carbon_Emission_transformed.csv' # Nombre del nuevo dataset a evaluar
 DATASETS_FOLDER = 'datasets/'
 MODEL_CLASSES = [
-    RandomForestRegressor, IQRRandomForestRegressor, OOBRandomForestRegressor,
+    RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, OOBRandomForestRegressor,
     OOBRandomForestRegressorGroups, OOBRandomForestRegressorGroupsSigmoid,
     OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus,
     OOB_plus_IQR, RFRegressorFirstSplitCombiner
 ]
-NEW_CLASS = RFRegressorFirstSplitCombiner
+NEW_CLASS = PercentileTrimmingRandomForestRegressor
 
 # Decision variables
-RUN_NEW_DATASET = True
-RUN_NEW_ALGORITHM = False
+RUN_NEW_DATASET = False
+RUN_NEW_ALGORITHM = True
 
 def process_dataset(filepath, extension, dataset_name):
     """
