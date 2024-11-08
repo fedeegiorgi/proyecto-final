@@ -38,6 +38,9 @@ class OOBRandomForestRegressor(RandomForestGroupDebate):
         n_samples = X.shape[0]
         self.tree_weights = []
 
+        if not self.bootstrap:
+            raise ValueError("bootstrap must be set to True to have OOB samples.")
+
         # Calculate OOB MSE for each tree
         for i, tree in enumerate(self.estimators_):
             # Create a mask with True for all samples
@@ -45,23 +48,21 @@ class OOBRandomForestRegressor(RandomForestGroupDebate):
 
             # Assign False to the samples that the tree used for training, as they are not OOB
             oob_sample_mask[self.estimators_samples_[i]] = False
-            
+
             # Select only the observations that have True value, the OOB observations
             oob_samples_X = X[oob_sample_mask] 
             oob_samples_y = y[oob_sample_mask]
-            
-            # If no OOB samples, assign the same weight to all trees?
+
+            # If no OOB samples even with bootstrap=True, raise an error (shouldn't happen!)
             if len(oob_samples_X) == 0: 
-                self.tree_weights = [1] * self.n_estimators
-                print("No OOB samples")     # ------> ACA PONER UN RAISE EXCEPTION (nunca pasa igual creo)
-                break
+                raise ValueError("No OOB samples detected.")
             
             oob_pred = tree.predict(oob_samples_X)
             mse = mean_squared_error(oob_samples_y, oob_pred)
 
             # Use the inverse of the MSE so that trees with higher MSE have lower weight
-            self.tree_weights.append(1/mse)
-
+            self.tree_weights.append(1 / mse)
+            
         # Reshape groups to match predictions shape
         self.tree_weights = np.array(self.tree_weights).astype(float) 
         self.tree_weights = self.tree_weights.reshape(self._n_groups, self.group_size, 1)
