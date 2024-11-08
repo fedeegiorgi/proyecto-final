@@ -1,17 +1,13 @@
-from sklearn.model_selection import GridSearchCV, train_test_split
+from sklearn.model_selection import train_test_split
 from tqdm import tqdm
-import torch
 from sklearn.ensemble import (
-    RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, OOBRandomForestRegressor,
-    OOBRandomForestRegressorGroups, OOBRandomForestRegressorGroupsSigmoid,
-    OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus, OOB_plus_IQR
+    IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, OOBRandomForestRegressor, OOB_plus_IQR, RFRegressorFirstSplitCombiner
 )
 from sklearn.metrics import mean_squared_error
 import pandas as pd
 import numpy as np
 from scipy.io import arff
-import os
-from itertools import product
+import random
 
 
 SEED = 14208
@@ -21,7 +17,6 @@ models_results = {}
 # Mapping dataset names to target columns
 DATASETS_COLUMNS = {
     'Carbon_Emission': 'CarbonEmission',
-    # 'Laptop': 'Price', 
     'Wind': 'WIND',
     'House_8L': 'price',
 }
@@ -29,7 +24,6 @@ DATASETS_COLUMNS = {
 # Select from the terminal which dataset to use:
 print("Select the dataset you would like to use:")
 print("1: Carbon Emission")
-# print("2: Laptop")
 print("2: House_8L")
 print("3: Wind")
 
@@ -89,6 +83,11 @@ param_grids = {
             'n_estimators': list(range(50, 301, 10)) + list(range(350, 2001, 50)) + list(range(2250, 4000, 250)), 
             'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
             'max_depth': [None] + list(range(10, 51, 1))},
+            
+            # ejemplo de juegete: 
+            # 'n_estimators': [30, 50, 100], 
+            # 'group_size': [3, 5, 10], 
+            # 'max_depth': [None, 10, 20]},
         'name': "IQR"
     },
     "2": {
@@ -101,7 +100,7 @@ param_grids = {
         'name': "Percentile_Trimming"
     },
     "3": {
-        'model': OOBRandomForestRegressorGroups(),
+        'model': OOBRandomForestRegressor(),
         'param_grid': {
             'n_estimators': list(range(50, 301, 10)) + list(range(350, 2001, 50)) + list(range(2250, 4000, 250)), 
             'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
@@ -116,14 +115,13 @@ param_grids = {
             'max_depth': [None] + list(range(10, 51, 1))},
         'name': "OOB_plus_IQR"
     },
-    # "5": {
-    #     'model': RFRegressorFirstSplitCombiner(),
-    #     'param_grid': {
-    #         'n_estimators': [30, 50, 100], 
-    #         'group_size': [3, 5, 10], 
-    #         'max_depth': [None, 10, 20]},
-    #     'name': "First_Splits_Combiner"
-    # },
+    "5": {
+        'model': RFRegressorFirstSplitCombiner(),
+        'param_grid': {
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 2001, 50)) + list(range(2250, 4000, 250)), 
+            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5))}, 
+        'name': "First_Splits_Combiner"
+    },
     # "6": {
     #     'model': SharedKnowledgeRandomForestRegressor(),
     #     'param_grid': {
@@ -141,7 +139,7 @@ print("1: IQR")
 print("2: Percentile Trimming")
 print("3: OOB")
 print("4: OOB + IQR")
-# print("5: First Splits Combiner")
+print("5: First Splits Combiner")
 # print("6: Shared Knowledge")
 
 choices = input("Enter the numbers corresponding to your choice(s): ").split(',')
@@ -154,11 +152,11 @@ for choice in tqdm(choices):
 
     config = param_grids[choice]
     model, param_grid, model_name = config['model'], config['param_grid'], config['name']
-    
-    print(f"\nRunning grid search for model: {model_name}")
 
-    # Generate filtered parameter combinations
+    # Generate filtered parameter combinations and sampled parameters combinations
     parameters = []
+    sampled_params = []
+
     # List to hold MSE values for each parameter combination
     mse_list = []
 
@@ -173,11 +171,30 @@ for choice in tqdm(choices):
         
         # Manual grid search
         best_mse, best_params = float('inf'), None
-        for n_estimators, group_size, max_depth, initial_max_depth in tqdm(parameters):
+
+        max_combinations = len(parameters)
+
+        # Input del usuario para muestreo de combinaciones
+        try:
+            n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+            
+            if n > max_combinations: 
+                print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+                exit()
+        
+        except ValueError:
+            print("Please enter a valid integer for the number of combinations.")
+            exit()
+        
+        sampled_params = random.sample(parameters, n)
+
+        print(f"\nRunning grid search for model: {model_name}")
+        
+        for n_estimators, group_size, max_depth, initial_max_depth in tqdm(sampled_params):
             model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_depth=max_depth, initial_max_depth = initial_max_depth, random_state=SEED)
             model_instance.fit(X_train.values, y_train)
             
-            y_pred = model_instance.predict(X_valid)
+            y_pred = model_instance.predict(X_valid.values)
             mse = mean_squared_error(y_valid, y_pred)
             mse_list.append(mse)
             
@@ -191,22 +208,80 @@ for choice in tqdm(choices):
                 for k in param_grid['max_depth']:
                     for z in param_grid['percentile']:
                         if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
-                            if z < 100: # Ensures percentile isnt above a certain value
+                            if z < 50: # Ensures percentile isnt above a certain value
                                 parameters.append((i, j, k, z)) 
         
         # Manual grid search
         best_mse, best_params = float('inf'), None
-        for n_estimators, group_size, max_depth, percentile in tqdm(parameters):
+
+        max_combinations = len(parameters)
+
+        # Input del usuario para muestreo de combinaciones
+        try:
+            n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+            
+            if n > max_combinations: 
+                print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+                exit()
+        
+        except ValueError:
+            print("Please enter a valid integer for the number of combinations.")
+            exit()
+        
+        sampled_params = random.sample(parameters, n)
+
+        print(f"\nRunning grid search for model: {model_name}")
+
+        for n_estimators, group_size, max_depth, percentile in tqdm(sampled_params):
             model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_depth=max_depth, percentile=percentile, random_state=SEED)
             model_instance.fit(X_train.values, y_train)
             
-            y_pred = model_instance.predict(X_valid)
+            y_pred = model_instance.predict(X_valid.values)
             mse = mean_squared_error(y_valid, y_pred)
             mse_list.append(mse)
             
             if mse < best_mse:
                 best_mse = mse
-                best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_depth': max_depth, 'initial_max_depth': initial_max_depth}
+                best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_depth': max_depth, 'percentile': percentile}
+    
+    elif model_name == 'First_Splits_Combiner':
+        for i in param_grid['n_estimators']:         
+            for j in param_grid['group_size']:  
+                if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
+                    parameters.append((i, j))
+        
+        # Manual grid search
+        best_mse, best_params = float('inf'), None
+
+        max_combinations = len(parameters)
+
+        # Input del usuario para muestreo de combinaciones
+        try:
+            n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+            
+            if n > max_combinations: 
+                print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+                exit()
+        
+        except ValueError:
+            print("Please enter a valid integer for the number of combinations.")
+            exit()
+        
+        sampled_params = random.sample(parameters, n)
+
+        print(f"\nRunning grid search for model: {model_name}")
+
+        for n_estimators, group_size in tqdm(sampled_params):
+            model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, random_state=SEED)
+            model_instance.fit(X_train.values, y_train)
+            
+            y_pred = model_instance.predict(X_valid.values)
+            mse = mean_squared_error(y_valid, y_pred)
+            mse_list.append(mse)
+            
+            if mse < best_mse:
+                best_mse = mse
+                best_params = {'n_estimators': n_estimators, 'group_size': group_size}
         
     else: 
         for i in param_grid['n_estimators']:         
@@ -217,7 +292,26 @@ for choice in tqdm(choices):
 
         # Manual grid search
         best_mse, best_params = float('inf'), None
-        for n_estimators, group_size, max_depth in tqdm(parameters):
+
+        max_combinations = len(parameters)
+
+        # Input del usuario para muestreo de combinaciones
+        try:
+            n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+            
+            if n > max_combinations: 
+                print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+                exit()
+        
+        except ValueError:
+            print("Please enter a valid integer for the number of combinations.")
+            exit()
+        
+        sampled_params = random.sample(parameters, n)
+
+        print(f"\nRunning grid search for model: {model_name}")
+
+        for n_estimators, group_size, max_depth in tqdm(sampled_params):
             model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_depth=max_depth, random_state=SEED)
             model_instance.fit(X_train.values, y_train)
             
@@ -230,7 +324,7 @@ for choice in tqdm(choices):
                 best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_depth': max_depth}
     
     # Create a tensor of parameter combinations with their corresponding MSE values
-    parameter_np = np.array(parameters, dtype=np.float32)
+    parameter_np = np.array(sampled_params, dtype=np.float32)
     mse_np = np.array(mse_list, dtype=np.float32).reshape(-1, 1)  # Convert MSE list to a tensor and add a dimension for concatenation
     result_np = np.concatenate((parameter_np, mse_np), axis=1)  # Combine parameters and MSE values
     
@@ -254,7 +348,7 @@ print("\nBest Parameters and MSE:")
 for result in results:
     print(result)
 
-# Display tensor results for each model
+# Display results for each model
 for model_name, arr in models_results.items():
     path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy'
     data = np.load(path)

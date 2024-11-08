@@ -120,7 +120,11 @@ class PercentileTrimmingRandomForestRegressor(RandomForestGroupDebate):
         # Initialize the new parameter specific to this class
         self.percentile = percentile
 
+        if not (0 <= self.percentile < 50):
+            raise ValueError("The percentile must be between 0 and 50.")
+
     def predict(self, X):
+
         check_is_fitted(self)
         X = self._validate_X_predict(X)
 
