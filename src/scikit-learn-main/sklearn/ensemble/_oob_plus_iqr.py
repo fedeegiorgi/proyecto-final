@@ -1,17 +1,22 @@
 from sklearn.ensemble import RandomForestGroupDebate
 import threading
-import numpy as np
 
-from sklearn.metrics import mean_squared_error #agregado para calcular el mse de cada arbol en sus oob y sacar su peso en la prediccion 
+import numpy as np
+# New, to calculate weight of tree according to MSE in OOB samples.
+from sklearn.metrics import mean_squared_error
 
 from ..utils.parallel import Parallel, delayed
 from ..utils.validation import check_is_fitted
-
-from ._base import BaseEnsemble, _partition_estimators
+from ._base import _partition_estimators
 
 def _store_prediction(predict, X, out, lock, tree_index):
     # AGREGAR DISCLAIMER MISMO DE LA DOC ORIGINAL
     """
+    --------------------------------------------------------------------------
+    This is a utility function for joblib's Parallel.
+    It can't go locally in ForestClassifier or ForestRegressor, because joblib
+    complains that it cannot pickle it when placed there.
+    --------------------------------------------------------------------------
     Store each tree's prediction in the 2D array `out`.
     Now we store the predictions in the tree's corresponding column.
     """
@@ -41,11 +46,9 @@ class OOB_plus_IQR(RandomForestGroupDebate):
             oob_samples_X = X[oob_sample_mask] 
             oob_samples_y = y[oob_sample_mask]
             
-            # If no OOB samples, assign the same weight to all trees?
-            if len(oob_samples_X) == 0: 
-                self.tree_weights = [1] * self.n_estimators
-                print("No OOB samples")
-                break
+            # If no OOB samples, raise Exeption
+            if oob_samples_X.shape[0] == 0: 
+                raise ValueError("No out-of-bag samples available for some tree. Use more estimators or larger dataset.")
             
             oob_pred = tree.predict(oob_samples_X)
             mse = mean_squared_error(oob_samples_y, oob_pred)
@@ -56,10 +59,6 @@ class OOB_plus_IQR(RandomForestGroupDebate):
         # Reshape groups to match predictions shape
         self.tree_weights = np.array(self.tree_weights).astype(float) 
         self.tree_weights = self.tree_weights.reshape(self._n_groups, self.group_size, 1)
-
-        # # Normalize weights so that they sum up to 1
-        # sums = np.sum(self.tree_weights, axis=1, keepdims=True)  # Sum along the group_size dimension
-        # self.tree_weights /= sums
 
    
     def predict(self, X):
@@ -104,16 +103,16 @@ class OOB_plus_IQR(RandomForestGroupDebate):
                 lower_bound = Q1 - 1.5 * IQR
                 upper_bound = Q3 + 1.5 * IQR
 
-                # Filtrar predicciones fuera de los límites
+                # FIlter predictions that are within the exclusion range
                 mask = (group_predictions >= lower_bound) & (group_predictions <= upper_bound)
 
-                # Aplicar máscara a las predicciones y pesos (mantener solo las predicciones válidas y sus pesos correspondientes)
+                # Apply mask to predictions and weights (keep only valid predictions and their corresponding weights)
                 valid_predictions = np.where(mask, group_predictions, np.nan)
                 valid_weights = np.where(mask, group_weights, np.nan)
 
-                # Normalizar los pesos solo para las predicciones válidas
-                weight_sums = np.nansum(valid_weights, axis=0, keepdims=True)  # Sumar pesos de árboles válidos
-                normalized_weights = np.nan_to_num(valid_weights / weight_sums)  # Normalizar pesos válidos
+                # Normalize weights only for valid predictions
+                weight_sums = np.nansum(valid_weights, axis=0, keepdims=True)  # Sum of weights for valid trees' predictions
+                normalized_weights = np.nan_to_num(valid_weights / weight_sums)  # Normalize weights (those with excluded will have weight 0)
 
                 # Calcular predicción ponderada utilizando los pesos normalizados
                 weighted_predictions = np.nansum(valid_predictions * normalized_weights, axis=0)
