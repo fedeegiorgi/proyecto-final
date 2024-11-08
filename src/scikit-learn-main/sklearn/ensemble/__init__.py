@@ -21,9 +21,6 @@ from ._extremos_forest import (
 )
 from ._oob_forest import (
     OOBRandomForestRegressor,
-    OOBRandomForestRegressorSigmoid,
-    OOBRandomForestRegressorTanh,
-    OOBRandomForestRegressorSoftPlus,
 )
 from ._oob_plus_iqr import (
     OOB_plus_IQR,

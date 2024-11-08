@@ -1,41 +1,4 @@
 from sklearn.ensemble import RandomForestRegressor
-import threading
-import numpy as np
-from itertools import islice
-from scipy.sparse import hstack as sparse_hstack
-from scipy.sparse import issparse
-
-from ..base import (
-    ClassifierMixin,
-    MultiOutputMixin,
-    RegressorMixin,
-    TransformerMixin,
-    _fit_context,
-    is_classifier,
-)
-from ..exceptions import DataConversionWarning
-from ..metrics import accuracy_score, r2_score
-from ..preprocessing import OneHotEncoder
-from ..tree import (
-    BaseDecisionTree,
-    DecisionTreeClassifier,
-    DecisionTreeRegressor,
-    ExtraTreeClassifier,
-    ExtraTreeRegressor,
-)
-from ..tree._tree import DOUBLE, DTYPE
-from ..utils import check_random_state, compute_sample_weight
-from ..utils._param_validation import Interval, RealNotInt, StrOptions
-from ..utils._tags import _safe_tags
-from ..utils.multiclass import check_classification_targets, type_of_target
-from ..utils.parallel import Parallel, delayed
-from ..utils.validation import (
-    _check_feature_names_in,
-    _check_sample_weight,
-    _num_samples,
-    check_is_fitted,
-)
-from ._base import BaseEnsemble, _partition_estimators
 
 class RandomForestGroupDebate(RandomForestRegressor):
     def __init__(
@@ -85,17 +48,19 @@ class RandomForestGroupDebate(RandomForestRegressor):
         # Initialize the new parameter specific to this class
         self.group_size = group_size
 
-        if self.n_estimators % self.group_size == 0 and self.n_estimators > self.group_size:
+        if self.n_estimators < self.group_size:
+            raise ValueError("group_size cannot be > n_estimators.")
+
+        if self.n_estimators % self.group_size == 0:
             self._n_groups = int(self.n_estimators / self.group_size)
         else:
-            raise ValueError("La # árboles mod group_size diferente que 0 o la # árboles es menor o igual al group_size")
+            raise ValueError("n_estimators % group_size must be equal to 0.")
 
     def group_split_predictions(self, predictions):
         n_samples = predictions.shape[1]
         
         if self.n_outputs_ > 1:
-            # Multi-output prediction: ver después si implementamos esto (sería transformar matrix 2D a 3D)
-            pass
+            raise ValueError("Multiprediction not available in this implementation of Random Forest.")
         else:
             # Reshape the array into a 3D tensor: (num_groups, group_size, n_samples)
             tree_groups_tensor = predictions.reshape(self._n_groups, self.group_size, n_samples)

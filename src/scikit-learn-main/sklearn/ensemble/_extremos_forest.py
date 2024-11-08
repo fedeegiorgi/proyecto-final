@@ -4,14 +4,21 @@ import numpy as np
 
 from ..utils.parallel import Parallel, delayed
 from ..utils.validation import check_is_fitted
-from ._base import BaseEnsemble, _partition_estimators
+from ._base import _partition_estimators
 
 def _store_prediction(predict, X, out, lock, tree_index):
-    # AGREGAR DISCLAIMER MISMO DE LA DOC ORIGINAL
     """
+    --------------------------------------------------------------------------
+    This is a utility function for joblib's Parallel.
+
+    It can't go locally in ForestClassifier or ForestRegressor, because joblib
+    complains that it cannot pickle it when placed there.
+    --------------------------------------------------------------------------
+
     Store each tree's prediction in the 2D array `out`.
     Now we store the predictions in the tree's corresponding column.
     """
+
     prediction = predict(X, check_input=False)
     with lock:
         out[0][tree_index] = prediction   # Store predictions in the column corresponding to the tree
@@ -21,7 +28,7 @@ def _store_prediction(predict, X, out, lock, tree_index):
 class IQRRandomForestRegressor(RandomForestGroupDebate):
 
     def predict(self, X):
-        check_is_fitted(self) #fijarse que no estamos ocultando las features?
+        check_is_fitted(self)
 
         X = self._validate_X_predict(X)
 
@@ -44,6 +51,7 @@ class IQRRandomForestRegressor(RandomForestGroupDebate):
 
         # For each group
         for i in range(self._n_groups):
+
             # Extract the current group
             group_predictions = grouped_predictions[i]
 
@@ -57,7 +65,7 @@ class IQRRandomForestRegressor(RandomForestGroupDebate):
             # Define the exclusion range
             lower_bound = Q1 - 1.5 * IQR
             upper_bound = Q3 + 1.5 * IQR
-
+    
             # Filter values outside the exclusion range
             filtered_predictions = np.where((group_predictions >= lower_bound) & 
                                             (group_predictions <= upper_bound), 
@@ -65,6 +73,15 @@ class IQRRandomForestRegressor(RandomForestGroupDebate):
 
             # Calculate the mean of the filtered predictions (ignoring NaNs)
             group_averages[i] = np.nanmean(filtered_predictions, axis=0)
+
+            # print(f"Grupo {i}\n---------------")
+            # print("IQR:", IQR)
+            # print("lower_bound:", lower_bound)
+            # print("upper_bound:", upper_bound)
+            # print("group_preds:", group_predictions)
+            # print("preds_post_filter:", filtered_predictions)
+            # print("Mean Filtered:", np.nanmean(filtered_predictions, axis=0))
+            # print("---------------")
 
         y_hat = np.mean(group_averages, axis=0)
 
@@ -120,8 +137,8 @@ class PercentileTrimmingRandomForestRegressor(RandomForestGroupDebate):
         # Initialize the new parameter specific to this class
         self.percentile = percentile
 
-        if not (0 <= self.percentile < 50):
-            raise ValueError("The percentile must be between 0 and 50.")
+        if not (0 < self.percentile < 50):
+            raise ValueError("The percentile must be in the range: (0, 50).")
 
     def predict(self, X):
 
@@ -165,6 +182,14 @@ class PercentileTrimmingRandomForestRegressor(RandomForestGroupDebate):
             
             # Calculate the mean of the filtered predictions (ignoring NaNs)
             group_averages[i] = np.nanmean(filtered_predictions, axis=0)
+
+            # print(f"Grupo {i}\n---------------")
+            # print("lower_bound:", lower_bound)
+            # print("upper_bound:", upper_bound)
+            # print("group_preds:", group_predictions)
+            # print("preds_post_filter:", filtered_predictions)
+            # print("Mean Filtered:", np.nanmean(filtered_predictions, axis=0))
+            # print("---------------")
 
         # calculamos la media de las predicciones filtradas (ignorando NaNs)
         y_hat = np.mean(group_averages, axis=0)
