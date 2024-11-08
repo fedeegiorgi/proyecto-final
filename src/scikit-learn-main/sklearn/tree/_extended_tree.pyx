@@ -314,7 +314,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         cdef intp_t parent
         cdef bint is_left
         cdef intp_t n_node_samples = self.splitter.n_samples
-        cdef float64_t weighted_n_node_samples
+        # cdef float64_t weighted_n_node_samples
         cdef SplitRecord split
         cdef intp_t node_id
 
@@ -349,12 +349,12 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                 parent_record.upper_bound = stack_record.upper_bound
 
                 n_node_samples = end - start
-                self.splitter.node_reset(start, end, &weighted_n_node_samples)
+                self.splitter.node_reset(start, end, &self.weighted_n_node_samples)
 
                 is_leaf = (depth >= max_depth or
                            n_node_samples < min_samples_split or
                            n_node_samples < 2 * min_samples_leaf or
-                           weighted_n_node_samples < 2 * min_weight_leaf)
+                           self.weighted_n_node_samples < 2 * min_weight_leaf)
 
                 # if first:
                 #     with gil:
@@ -389,9 +389,11 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                     #     print(f"La feature encontrada fue: {split.feature}")
                 node_id = tree._add_node(parent, is_left, is_leaf, split.feature,
                                             split.threshold, parent_record.impurity,
-                                            n_node_samples, weighted_n_node_samples,
+                                            n_node_samples, self.weighted_n_node_samples,
                                             split.missing_go_to_left)
 
+                with gil:
+                    print("*********************** cant samples: ", end - start)
                 with gil:
                     if split.feature > 205 and not is_leaf:
                         print("!!!!!!!!!!!!!!!!!!!!!Use feature amiga!!!!!!!!!!!!!!!!!!!!!!:", split.feature)
@@ -517,6 +519,8 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         self.weighted_n_node_samples_vec = weighted_n_node_samples_vec
         self.missing_go_to_lefts = missing_go_to_lefts
 
+        
+
         #####################################################################################
 
         # check input
@@ -555,7 +559,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
         # cdef intp_t parent
         # cdef bint is_left
         # cdef intp_t n_node_samples = self.splitter.n_samples
-        cdef float64_t weighted_n_node_samples
+        # cdef float64_t weighted_n_node_samples
         cdef SplitRecord split
         cdef intp_t node_id
 
@@ -598,13 +602,13 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                 if first:
                     # Define the start and end positions for this split
                     start = 0
-                    end = self.n_node_samples_vec[0]
+                    end = X.shape[0]
 
                     # Not first anymore
                     first = 0
 
                     # Add root node from initial tree
-                    self.splitter.node_reset(start, end, &weighted_n_node_samples)
+                    self.splitter.node_reset(start, end, &self.weighted_n_node_samples)
 
                     # Compute the split position
                     pos = self.splitter.recompute_node_split(&parent_record, &split, feature, threshold)
@@ -618,10 +622,12 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                     split_pos[0] = pos
                     end_pos[0] = end
                     
+                    n_node_samples = end - start
+
                     node_id = tree._add_node(
                         _TREE_UNDEFINED, self.is_lefts[i], self.is_leafs[i],
                         self.features[i], self.thresholds[i], self.impurities[i],
-                        self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
+                        n_node_samples, self.weighted_n_node_samples,
                         self.missing_go_to_lefts[i]
                     )
 
@@ -637,8 +643,8 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                         end = end_pos[self.parents[i]]
                         print("I am right node:", i)
 
-                    self.splitter.node_reset(start, end, &weighted_n_node_samples)
-
+                    self.splitter.node_reset(start, end, &self.weighted_n_node_samples)
+                    n_node_samples = end - start
                     parent_record.impurity = self.impurities[i]
 
                     # Compute the split position
@@ -655,11 +661,12 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
                     node_id = tree._add_node(
                         new_parents[i], self.is_lefts[i], self.is_leafs[i],
                         self.features[i], self.thresholds[i], self.impurities[i],
-                        self.n_node_samples_vec[i], self.weighted_n_node_samples_vec[i],
+                        n_node_samples, self.weighted_n_node_samples,
                         self.missing_go_to_lefts[i]
                     )
 
                 self.splitter.node_value(tree.value + node_id * tree.value_stride)
+                print("*********************** cant samples: ", self.n_node_samples_vec[i], end - start)
 
                 # Replace the parent node id with the new one
                 for j, parent in enumerate(self.parents):

@@ -10,8 +10,6 @@ import pandas as pd
 from scipy.sparse import hstack as sparse_hstack
 from scipy.sparse import issparse
 from scipy.stats import mstats
-from sklearn.metrics import mean_squared_error #agregado para calcular el mse de cada arbol en sus oob y sacar su peso en la prediccion 
-from sklearn.model_selection import train_test_split
 
 from ..base import (
     ClassifierMixin,

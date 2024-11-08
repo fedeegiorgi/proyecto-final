@@ -107,6 +107,7 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
 
         self.initial_max_depth = initial_max_depth
         self.extended_grouped_estimators_ = []
+        self.initial_estimators_ = []
 
     def _original_fit_validations(self, X, y, sample_weight):
         # Validate or convert input data
@@ -211,6 +212,7 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
 
         # Ensure max_depth is set to initial_max_depth
         self.max_depth = self.initial_max_depth
+
         # Call to original fit method
         super().fit(X, y)
 
@@ -226,61 +228,58 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
         initial_grouped_trees = self.group_split(self.estimators_)
         grouped_samples = self.group_split(self.estimators_samples_)
 
-        grouped_new_columns = []
+        grouped_new_X = []
 
         # For each group of trees and samples
         for i, trees_group in enumerate(initial_grouped_trees):
 
             samples_group = grouped_samples[i]
-            group_new_columns = []
+            extended_trees_group = []
 
             # For each tree in the group
             for j, tree in enumerate(trees_group):
                 # Initialize a list to store predictions from all other trees
                 other_tree_predictions = []
 
+                # Samples used by the j-th tree
+                j_tree_samples = samples_group[j]
+
+                # Original X, y for the j-th tree
+                j_tree_original_X = X[j_tree_samples]
+                j_tree_y = y[j_tree_samples]
+                
+                # print("Samples usado por el árbol", j, ":", j_tree_samples)
+                # print("Original X for the tree", j, ":", j_tree_original_X.shape)
+                # print(j_tree_original_X)
+
                 # For each tree in the group (except the j-th tree)
                 for k, other_tree in enumerate(trees_group):
                     if k != j:
-                        # Create a mask with False for all samples
-                        used_sample_mask = np.zeros(n_samples, dtype=bool) 
-
-                        # Assign True to the samples that the tree used for training
-                        used_sample_mask[samples_group[j]] = True
-
-                        # Predict the samples for the current tree
-                        predictions = other_tree.predict(X[used_sample_mask])
+                        # Predict the samples used by tree j using the current tree k
+                        predictions = other_tree.predict(j_tree_original_X)
                         other_tree_predictions.append(predictions)
-            
-                # Append the predictions for this tree
-                group_new_columns.append(np.array(other_tree_predictions).T)
-        
-            grouped_new_columns.append(group_new_columns)
-        
-        for i, trees_group in enumerate(initial_grouped_trees):
-            extended_trees_group = []
-            samples_group = grouped_samples[i]
-
-            for j, tree in enumerate(trees_group):
-                # Create a mask with False for all samples
-                used_sample_mask = np.zeros(n_samples, dtype=bool) 
-
-                # Assign True to the samples that the tree used for training
-                used_sample_mask[samples_group[j]] = True
-                               
-                # Get this tree samples
-                j_tree_original_X = X[used_sample_mask]
-                j_tree_y = y[used_sample_mask] 
-
-                # Concatenate the other tree's predictions with the original features
-                j_tree_pp_X = np.hstack((j_tree_original_X, grouped_new_columns[i][j]))
                 
+                # Define new columns for the j-th tree
+                new_columns = np.array(other_tree_predictions).T
+
+                # Concatenate the predictions of the other trees with j-th tree's original features
+                j_tree_pp_X = np.hstack((j_tree_original_X, new_columns))
+                
+                # print("New X for the tree", j, ":", j_tree_pp_X.shape)
+                # print(j_tree_pp_X)
+
                 # Validate training data
                 j_tree_original_X, _, _, _, _ = self._original_fit_validations(j_tree_original_X, j_tree_y, sample_weight)
                 j_tree_pp_X, j_tree_y, sample_weight, missing_values_in_feature_mask, random_state = self._original_fit_validations(j_tree_pp_X, j_tree_y, sample_weight)
                 
+                # Fit initial tree
+                initial_tree = DecisionTreeRegressor(random_state=random_state, max_depth=self.initial_max_depth)
+                initial_tree.fit(j_tree_original_X, j_tree_y, sample_weight=sample_weight, check_input=False)
+                self.initial_estimators_.append(initial_tree)
+
                 # Fit the extended tree with the new features based on the original tree
-                extended_tree = ContinuedDecisionTreeRegressor(initial_tree=tree, random_state=random_state, max_depth=self.max_depth)
+                extended_tree = ContinuedDecisionTreeRegressor(initial_tree=initial_tree, random_state=random_state, max_depth=self.max_depth)
+                # extended_tree.fit(j_tree_pp_X, j_tree_y, sample_weight=sample_weight)
                 extended_tree.fit_v2(j_tree_original_X, j_tree_pp_X, j_tree_y, sample_weight, missing_values_in_feature_mask, False)
 
                 # Add fitted extended tree to the group

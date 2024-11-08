@@ -1,7 +1,6 @@
 from sklearn.ensemble import RandomForestGroupDebate
 import threading
 import numpy as np
-from scipy.stats import zscore #agregado para descartar extremos
 
 from ..utils.parallel import Parallel, delayed
 from ..utils.validation import check_is_fitted
@@ -18,58 +17,6 @@ def _store_prediction(predict, X, out, lock, tree_index):
         out[0][tree_index] = prediction   # Store predictions in the column corresponding to the tree
 
 # --------------------------------------------------------- Alternativa A --------------------------------------------------------------------
-
-class ZscoreRandomForestRegressor(RandomForestGroupDebate):
-
-    def predict(self, X):
-        """
-        Predict regression target for X.
-
-        The predicted regression target of an input sample is computed as the
-        mean predicted regression targets of the trees in the forest, after
-        discarding extreme values based on Z-score.
-
-        Parameters
-        ----------
-        X : {array-like, sparse matrix} of shape (n_samples, n_features)
-            The input samples. Internally, its dtype will be converted to
-            ``dtype=np.float32``. If a sparse matrix is provided, it will be
-            converted into a sparse ``csr_matrix``.
-
-        Returns
-        -------
-        y : ndarray of shape (n_samples,) or (n_samples, n_outputs)
-            The predicted values.
-        """
-        check_is_fitted(self)
-        X = self._validate_X_predict(X)
-
-        n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
-        lock = threading.Lock()
-
-        if self.n_outputs_ > 1:
-            all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
-        else:
-            all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
-
-        Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
-            delayed(_store_prediction)(e.predict, X, [all_predictions], lock, i)
-            for i, e in enumerate(self.estimators_)
-        )
-
-        # calculamos el z-score para cada prediccion
-        z_scores = zscore(all_predictions, axis=0)
-
-        # definimos el threshole
-        threshold = 2.0  
-
-        # filtramos las predicciones que superan el threshole
-        filtered_predictions = np.where(np.abs(z_scores) <= threshold, all_predictions, np.nan)
-
-        # calculamos la media con las predicciones que pasaron el filtro
-        y_hat = np.nanmean(filtered_predictions, axis=0)
-
-        return y_hat
 
 class IQRRandomForestRegressor(RandomForestGroupDebate):
 
@@ -91,14 +38,14 @@ class IQRRandomForestRegressor(RandomForestGroupDebate):
             for i, e in enumerate(self.estimators_)
         )
 
-        grouped_trees = self.random_group_split(all_predictions)
+        grouped_predictions = self.group_split_predictions(all_predictions)
 
         group_averages = np.empty((self._n_groups, X.shape[0]))
 
         # For each group
         for i in range(self._n_groups):
             # Extract the current group
-            group_predictions = grouped_trees[i]
+            group_predictions = grouped_predictions[i]
 
             # Calculate Q1 and Q3 for the current group
             Q1 = np.percentile(group_predictions, 25, axis=0)
@@ -190,14 +137,14 @@ class PercentileTrimmingRandomForestRegressor(RandomForestGroupDebate):
             for i, e in enumerate(self.estimators_)
         )
 
-        grouped_trees = self.random_group_split(all_predictions)
+        grouped_predictions = self.group_split_predictions(all_predictions)
 
         group_averages = np.empty((self._n_groups, X.shape[0]))
 
 
         for i in range(self._n_groups):
             # Extract the current group
-            group_predictions = grouped_trees[i]
+            group_predictions = grouped_predictions[i]
 
             # definimos los percentiles de exclusión
             lower_percentile = self.percentile

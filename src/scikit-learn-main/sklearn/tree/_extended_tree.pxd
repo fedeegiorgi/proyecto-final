@@ -34,6 +34,7 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
 
     cdef stack[StackRecord] builder_stack # Stack to store the leafs of the initial tree
     cdef StackRecord stack_record
+    cdef float64_t weighted_n_node_samples
 
     cpdef build_extended(
         self,

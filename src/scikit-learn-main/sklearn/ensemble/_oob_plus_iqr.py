@@ -80,7 +80,7 @@ class OOB_plus_IQR(RandomForestGroupDebate):
                 for i, e in enumerate(self.estimators_)
             )
 
-            grouped_trees = self.random_group_split(all_predictions)
+            grouped_predictions = self.group_split_predictions(all_predictions)
 
             final_predictions = []
 
@@ -88,7 +88,7 @@ class OOB_plus_IQR(RandomForestGroupDebate):
             for i in range(self._n_groups):
                 
                 # Extract the current group
-                group_predictions = grouped_trees[i]
+                group_predictions = grouped_predictions[i]
                 
                 # Extract the weights of the current group
                 group_weights = self.tree_weights[i]

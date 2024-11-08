@@ -4,9 +4,9 @@ import pandas as pd
 from tqdm import tqdm
 from scipy.io import arff
 from sklearn.ensemble import (
-    RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, OOBRandomForestRegressor,
-    OOBRandomForestRegressorGroups, OOBRandomForestRegressorGroupsSigmoid,
-    OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus, OOB_plus_IQR,
+    RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor,
+    OOBRandomForestRegressor, OOBRandomForestRegressorSigmoid,
+    OOBRandomForestRegressorTanh, OOBRandomForestRegressorSoftPlus, OOB_plus_IQR,
     RFRegressorFirstSplitCombiner
 )
 from sklearn.model_selection import train_test_split
@@ -22,16 +22,16 @@ DATASETS_COLUMNS = { # Acá se agregan todos los datasets que están en la carpe
 NEW_DATASET_NAME = 'Carbon_Emission_transformed.csv' # Nombre del nuevo dataset a evaluar
 DATASETS_FOLDER = 'datasets/'
 MODEL_CLASSES = [
-    RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, OOBRandomForestRegressor,
-    OOBRandomForestRegressorGroups, OOBRandomForestRegressorGroupsSigmoid,
-    OOBRandomForestRegressorGroupsTanh, OOBRandomForestRegressorGroupsSoftPlus,
-    OOB_plus_IQR, RFRegressorFirstSplitCombiner
+    RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor,
+    OOBRandomForestRegressor, OOBRandomForestRegressorSigmoid,
+    OOBRandomForestRegressorTanh, OOBRandomForestRegressorSoftPlus, OOB_plus_IQR,
+    RFRegressorFirstSplitCombiner
 ]
 NEW_CLASS = PercentileTrimmingRandomForestRegressor
 
 # Decision variables
 RUN_NEW_DATASET = False
-RUN_NEW_ALGORITHM = True
+RUN_NEW_ALGORITHM = False
 
 def process_dataset(filepath, extension, dataset_name):
     """

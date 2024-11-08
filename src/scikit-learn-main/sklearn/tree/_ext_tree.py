@@ -447,6 +447,6 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
             X_peer_prediction,
             initial_max_depth,
             y,
-            sample_weight, 
+            None, # sample_weight
             missing_values_in_feature_mask,
         )

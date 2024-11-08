@@ -16,16 +16,14 @@ from ._group_debate import(
     RandomForestGroupDebate,
 )
 from ._extremos_forest import (
-    #ZscoreRandomForestRegressor,
     IQRRandomForestRegressor,
     PercentileTrimmingRandomForestRegressor,
 )
 from ._oob_forest import (
     OOBRandomForestRegressor,
-    OOBRandomForestRegressorGroups,
-    OOBRandomForestRegressorGroupsSigmoid,
-    OOBRandomForestRegressorGroupsTanh,
-    OOBRandomForestRegressorGroupsSoftPlus,
+    OOBRandomForestRegressorSigmoid,
+    OOBRandomForestRegressorTanh,
+    OOBRandomForestRegressorSoftPlus,
 )
 from ._oob_plus_iqr import (
     OOB_plus_IQR,
@@ -53,10 +51,9 @@ __all__ = [
     "IQRRandomForestRegressor",
     "PercentileTrimmingRandomForestRegressor",
     "OOBRandomForestRegressor",
-    "OOBRandomForestRegressorGroups",
-    "OOBRandomForestRegressorGroupsSigmoid",
-    "OOBRandomForestRegressorGroupsTanh",
-    "OOBRandomForestRegressorGroupsSoftPlus",
+    "OOBRandomForestRegressorSigmoid",
+    "OOBRandomForestRegressorTanh",
+    "OOBRandomForestRegressorSoftPlus",
     "OOB_plus_IQR",
     "RFRegressorFirstSplitCombiner",
     "SharedKnowledgeRandomForestRegressor"

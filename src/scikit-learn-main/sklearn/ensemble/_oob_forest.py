@@ -1,4 +1,3 @@
-from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestGroupDebate
 import threading
 
@@ -22,78 +21,7 @@ def _store_prediction(predict, X, out, lock, tree_index):
     
 # ------------------------------------------------------- Alternativa B -----------------------------------------------------------------------------
 
-# ------- version 1 (1/MSE) --------
-class OOBRandomForestRegressor(RandomForestRegressor):
-    
-    def fit(self, X, y):
-
-        # convertimos X a un array numpy si es un DataFrame, para no tener los feature names
-        # if isinstance(X, pd.DataFrame):
-        #     X = X.values
-        
-        super().fit(X, y) #utilizamos el fit original de BaseForest
-        
-        n_samples = X.shape[0]
-        self.tree_weights = []
-
-        # calculamos pesos OOB para cada árbol
-        for i, tree in enumerate(self.estimators_):
-            oob_sample_mask = np.ones(n_samples, dtype=bool) #inicializo una mascara con 1's
-
-            # asignamos false a las muestras que el arbol utilizo para entrenar, ya que no son OOB
-            oob_sample_mask[self.estimators_samples_[i]] = False
-            
-            oob_samples_X = X[oob_sample_mask] # solo se seleccionan las observaciones que tienen valor True, las OOB observations
-            oob_samples_y = y[oob_sample_mask]
-            
-            if len(oob_samples_X) == 0: 
-                self.tree_weights = [1] * self.n_estimators
-                print("No OOB samples")
-                break
-            
-            oob_pred = tree.predict(oob_samples_X)
-            mse = mean_squared_error(oob_samples_y, oob_pred) 
-            self.tree_weights.append(1/mse) # utilizamos la inverse del MSE para que arboles con mayor MSE, tengan menor peso
-
-        # normalizar pesos para que sumen 1
-        self.tree_weights = np.array(self.tree_weights)
-        self.tree_weights /= self.tree_weights.sum()
-
-    def predict(self, X):
-        
-        check_is_fitted(self)
-
-        # convertimos X a un array numpy si es un DataFrame, para no tener los feature names
-        # if isinstance(X, pd.DataFrame):
-        #     X = X.values
-
-        X = self._validate_X_predict(X)
-        
-        # Assign chunk of trees to jobs
-        n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
-        lock = threading.Lock()
-
-        if self.n_outputs_ > 1:
-            all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
-        else:
-            all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
-
-        # Parallel loop
-        Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
-            delayed(_store_prediction)(e.predict, X, [all_predictions], lock, i)
-            for i, e in enumerate(self.estimators_)
-        )
-
-        weighted_predictions = np.zeros(X.shape[0], dtype=np.float64)
-
-        for i in range(self.n_estimators):
-            weighted_predictions += all_predictions[i] * self.tree_weights[i] 
-    
-        return weighted_predictions
-    
-# -------------- version 1 (con grupos)------------------------
-
-class OOBRandomForestRegressorGroups(RandomForestGroupDebate):
+class OOBRandomForestRegressor(RandomForestGroupDebate):
 
     def fit(self, X, y):
         # Call to original fit method
@@ -117,7 +45,7 @@ class OOBRandomForestRegressorGroups(RandomForestGroupDebate):
             # If no OOB samples, assign the same weight to all trees?
             if len(oob_samples_X) == 0: 
                 self.tree_weights = [1] * self.n_estimators
-                print("No OOB samples")
+                print("No OOB samples")     # ------> ACA PONER UN RAISE EXCEPTION (nunca pasa igual creo)
                 break
             
             oob_pred = tree.predict(oob_samples_X)
@@ -152,10 +80,10 @@ class OOBRandomForestRegressorGroups(RandomForestGroupDebate):
             for i, e in enumerate(self.estimators_)
         )
 
-        grouped_trees = self.random_group_split(all_predictions)
+        grouped_predictions = self.group_split_predictions(all_predictions)
 
         # Multiply using broadcasting to get the weighted group predictions
-        group_predictions = np.sum(grouped_trees * self.tree_weights, axis=1)
+        group_predictions = np.sum(grouped_predictions * self.tree_weights, axis=1)
 
         # Final prediction is the mean of the group predictions
         y_hat = np.mean(group_predictions, axis=0)
@@ -164,7 +92,7 @@ class OOBRandomForestRegressorGroups(RandomForestGroupDebate):
 
 # ------------- version 2 (Función Sigmoidea) -------------------------------
 
-class OOBRandomForestRegressorGroupsSigmoid(RandomForestGroupDebate):
+class OOBRandomForestRegressorSigmoid(RandomForestGroupDebate):
 
     def fit(self, X, y):
         # Call to original fit method
@@ -227,7 +155,7 @@ class OOBRandomForestRegressorGroupsSigmoid(RandomForestGroupDebate):
             for i, e in enumerate(self.estimators_)
         )
 
-        grouped_trees = self.random_group_split(all_predictions)
+        grouped_trees = self.group_split_predictions(all_predictions)
 
         # Multiply using broadcasting to get the weighted group predictions
         group_predictions = np.sum(grouped_trees * self.tree_weights, axis=1)
@@ -239,7 +167,7 @@ class OOBRandomForestRegressorGroupsSigmoid(RandomForestGroupDebate):
 
 #----- version 3 (Tangente hiperbólica) --------
 
-class OOBRandomForestRegressorGroupsTanh(RandomForestGroupDebate):
+class OOBRandomForestRegressorTanh(RandomForestGroupDebate):
 
     def fit(self, X, y):
         # Call to original fit method
@@ -302,7 +230,7 @@ class OOBRandomForestRegressorGroupsTanh(RandomForestGroupDebate):
             for i, e in enumerate(self.estimators_)
         )
 
-        grouped_trees = self.random_group_split(all_predictions)
+        grouped_trees = self.group_split_predictions(all_predictions)
 
         # Multiply using broadcasting to get the weighted group predictions
         group_predictions = np.sum(grouped_trees * self.tree_weights, axis=1)
@@ -314,7 +242,7 @@ class OOBRandomForestRegressorGroupsTanh(RandomForestGroupDebate):
 
 #-------- version 4 (softplus) -----------
 
-class OOBRandomForestRegressorGroupsSoftPlus(RandomForestGroupDebate):
+class OOBRandomForestRegressorSoftPlus(RandomForestGroupDebate):
 
     def fit(self, X, y):
         # Call to original fit method
@@ -377,7 +305,7 @@ class OOBRandomForestRegressorGroupsSoftPlus(RandomForestGroupDebate):
             for i, e in enumerate(self.estimators_)
         )
 
-        grouped_trees = self.random_group_split(all_predictions)
+        grouped_trees = self.group_split_predictions(all_predictions)
 
         # Multiply using broadcasting to get the weighted group predictions
         group_predictions = np.sum(grouped_trees * self.tree_weights, axis=1)

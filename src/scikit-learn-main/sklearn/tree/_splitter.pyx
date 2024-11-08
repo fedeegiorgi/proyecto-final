@@ -1001,7 +1001,7 @@ cdef inline int recompute_node_split_func(
         # Find the position of the threshold in the sorted feature values
         p = start
         while p < end_non_missing:
-            if feature_values[p] > threshold:
+            if feature_values[p] >= threshold:
                 break
             p += 1
         
@@ -1076,7 +1076,7 @@ cdef inline int node_split_best_dc(
 
     ##### Check if we are in the initial tree or extended #####
 
-    cdef intp_t[::1] features
+    cdef intp_t[::1] features = splitter.features_pp
     cdef intp_t n_features
     cdef intp_t max_features
     cdef bint extended_tree
@@ -1084,17 +1084,15 @@ cdef inline int node_split_best_dc(
     with gil:
         if splitter.current_depth <= splitter.initial_max_depth:
             extended_tree = 0
-            # print("Aun estoy entrenando en inital. Depth:", splitter.current_depth)
+            print("Aun estoy entrenando en inital. Depth:", splitter.current_depth)
         else:
             extended_tree = 1
-            print("A partir de acá usamos las features amigas")
+            print("A partir de acá usamos las features amigas. Depth:", splitter.current_depth)
 
     if extended_tree:
-        features = splitter.features_pp
         n_features = splitter.n_features_pp
         max_features = splitter.n_features_pp
     else:
-        features = splitter.features
         n_features = splitter.n_features
         max_features = splitter.n_features
 

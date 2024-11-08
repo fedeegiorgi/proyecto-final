@@ -90,7 +90,7 @@ class RandomForestGroupDebate(RandomForestRegressor):
         else:
             raise ValueError("La # árboles mod group_size diferente que 0 o la # árboles es menor o igual al group_size")
 
-    def random_group_split(self, predictions):
+    def group_split_predictions(self, predictions):
         n_samples = predictions.shape[1]
         
         if self.n_outputs_ > 1:
