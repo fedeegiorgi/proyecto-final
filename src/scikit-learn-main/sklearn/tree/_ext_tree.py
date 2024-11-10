@@ -416,7 +416,7 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
             self.max_features_,
             min_samples_leaf,
             min_weight_leaf,
-            self.random_state,
+            random_state,
             monotonic_cst,
         )
         

@@ -42,175 +42,138 @@ cdef intp_t _TREE_UNDEFINED = TREE_UNDEFINED
 from ._tree cimport Tree
 
 cdef struct StackNode:
+    intp_t depth
     intp_t parent
     bint is_left
     bint is_leaf
     intp_t feature
     float64_t threshold
-    float64_t impurity
-    intp_t n_node_samples
-    intp_t weighted_n_node_samples
-    intp_t missing_go_to_left
-    intp_t node_depth
 
-cdef class TreeCombiner(Tree):
-    def __cinit__(
-        self, 
-        intp_t n_features, 
-        cnp.ndarray n_classes, 
-        intp_t n_outputs
-    ):
-        """
-        Cython constructor (__cinit__) for TreeCombiner, calling the base Tree's __cinit__.
-        """
-        # Call the parent Tree class's __cinit__
-        Tree(n_features, n_classes, n_outputs)
+cdef class DepthFirstTreeCombinerBuilder(TreeBuilder):
+    def __cinit__(self, Splitter splitter, intp_t min_samples_split,
+                  intp_t min_samples_leaf, float64_t min_weight_leaf,
+                  intp_t max_depth, float64_t min_impurity_decrease):
+        self.splitter = splitter
+        self.min_samples_split = min_samples_split
+        self.min_samples_leaf = min_samples_leaf
+        self.min_weight_leaf = min_weight_leaf
+        self.max_depth = max_depth
+        self.min_impurity_decrease = min_impurity_decrease        
 
-    cpdef void combiner(self, cnp.ndarray features, cnp.ndarray thresholds, 
-                cnp.ndarray impurities, cnp.ndarray n_node_samples, 
-                cnp.ndarray weighted_n_node_samples, cnp.ndarray missing_go_to_lefts):
+    cpdef combiner(self, Tree tree, cnp.ndarray features, cnp.ndarray thresholds):
         """Combines the trees into a single one using first split."""
         
         cdef intp_t final_depth = features.shape[0]
+        self.features = features
+        self.thresholds = thresholds
+
+        cdef intp_t depth
+        cdef intp_t parent
+        cdef bint is_left
+        cdef bint is_leaf
+        cdef intp_t feature
+        cdef float64_t threshold
+
         cdef bint is_child_leaf
+        cdef StackNode current
+        cdef intp_t node_id
 
-        self.max_depth = final_depth
+        tree.max_depth = final_depth
 
-        if self.max_depth <= 10:
-            init_capacity = <intp_t> (2 ** (self.max_depth + 1)) - 1
+        if tree.max_depth <= 10:
+            init_capacity = <intp_t> (2 ** (tree.max_depth + 1)) - 1
         else:
             init_capacity = 2047
-        
-        print(f"capacidad:", init_capacity)
 
-        self._resize(init_capacity)
+        tree._resize(init_capacity)
 
         cdef stack[StackNode] builder_stack
-        cdef intp_t depth = 0
+        depth = 0
 
-        # push root node onto stack
-        builder_stack.push({
-            "parent": -1,
-            "is_left": 0,
-            "is_leaf": 0,
-            "feature": features[depth],
-            "threshold": thresholds[depth],
-            "impurity": impurities[depth],
-            "n_node_samples": n_node_samples[depth],
-            "weighted_n_node_samples": weighted_n_node_samples[depth],
-            "missing_go_to_left": missing_go_to_lefts[depth],
-            "node_depth": depth
-        })
-        print("pushiamos al nodo root")
+        with nogil:
+            # Push root node onto stack
+            builder_stack.push({
+                "depth": depth,
+                "parent": _TREE_UNDEFINED,
+                "is_left": 0,
+                "is_leaf": 0,
+                "feature": self.features[depth],
+                "threshold": self.thresholds[depth]
+            })
 
-        while not builder_stack.empty():
-            current = builder_stack.top()
-            builder_stack.pop()
-            
-            parent = current.parent
-            is_left = current.is_left
-            is_leaf = current.is_leaf
-            feature = current.feature
-            threshold = current.threshold
-            impurity = current.impurity
-            n_node_samples_i = current.n_node_samples
-            weighted_n_node_samples_i = current.weighted_n_node_samples
-            missing_go_to_left = current.missing_go_to_left
-            depth = current.node_depth
+            while not builder_stack.empty():
+                current = builder_stack.top()
+                builder_stack.pop()
+                
+                depth = current.depth
+                parent = current.parent
+                is_left = current.is_left
+                is_leaf = current.is_leaf
+                feature = current.feature
+                threshold = current.threshold               
 
-            node_id = self._add_node(parent, is_left, is_leaf, feature,
-                                    threshold, impurity,
-                                    n_node_samples_i, weighted_n_node_samples_i,
-                                    missing_go_to_left)
+                node_id = tree._add_node(parent, is_left, is_leaf, feature,
+                                        threshold, 0, 0, 0, 0)
 
-            if not is_leaf:
-                depth += 1
-                is_child_leaf = features.shape[0] == depth
+                if not is_leaf:
+                    depth += 1
+                    is_child_leaf = features.shape[0] == depth
 
-                if not is_child_leaf:
-                    # Push right child on stack
-                    builder_stack.push({
-                        "parent": node_id,
-                        "is_left": 0,
-                        "is_leaf": is_child_leaf,
-                        "feature": features[depth],
-                        "threshold": thresholds[depth],
-                        "impurity": impurities[depth],
-                        "n_node_samples": n_node_samples[depth],
-                        "weighted_n_node_samples": weighted_n_node_samples[depth],
-                        "missing_go_to_left": missing_go_to_lefts[depth],
-                        "node_depth": depth
-                    })
-                    print("pushiamos al hijo derecho no hoja")
+                    if not is_child_leaf:
+                        # Push right child on stack
+                        builder_stack.push({
+                            "depth": depth,
+                            "parent": node_id,
+                            "is_left": 0,
+                            "is_leaf": is_child_leaf,
+                            "feature": self.features[depth],
+                            "threshold": self.thresholds[depth]
+                        })
 
-                    # Push left child on stack
-                    builder_stack.push({
-                        "parent": node_id,
-                        "is_left": 1,
-                        "is_leaf": is_child_leaf,
-                        "feature": features[depth],
-                        "threshold": thresholds[depth],
-                        "impurity": impurities[depth],
-                        "n_node_samples": n_node_samples[depth],
-                        "weighted_n_node_samples": weighted_n_node_samples[depth],
-                        "missing_go_to_left": missing_go_to_lefts[depth],
-                        "node_depth": depth
-                    })
-                    print("pushiamos al hijo izquierdo no hoja")
+                        # Push left child on stack
+                        builder_stack.push({
+                            "depth": depth,
+                            "parent": node_id,
+                            "is_left": 1,
+                            "is_leaf": is_child_leaf,
+                            "feature": self.features[depth],
+                            "threshold": self.thresholds[depth]
+                        })
 
-                else:
-                    # Push right child (leaf) on stack
-                    builder_stack.push({
-                        "parent": node_id,
-                        "is_left": 0,
-                        "is_leaf": is_child_leaf,
-                        "feature": 0,
-                        "threshold": 0,
-                        "impurity": 0,
-                        "n_node_samples": 0,
-                        "weighted_n_node_samples": 0,
-                        "missing_go_to_left": 0,
-                        "node_depth": depth
-                    })
-                    print("pushiamos al hijo derecho hoja")
+                    else:
+                        # Push right child (leaf) on stack
+                        builder_stack.push({
+                            "depth": depth,
+                            "parent": node_id,
+                            "is_left": 0,
+                            "is_leaf": is_child_leaf,
+                            "feature": 0,
+                            "threshold": 0
+                        })
 
+                        # Push left child (leaf) on stack
+                        builder_stack.push({
+                            "depth": depth,
+                            "parent": node_id,
+                            "is_left": 1,
+                            "is_leaf": is_child_leaf,
+                            "feature": 0,
+                            "threshold": 0
+                        })
 
-                    # Push left child (leaf) on stack
-                    builder_stack.push({
-                        "parent": node_id,
-                        "is_left": 1,
-                        "is_leaf": is_child_leaf,
-                        "feature": 0,
-                        "threshold": 0,
-                        "impurity": 0,
-                        "n_node_samples": 0,
-                        "weighted_n_node_samples": 0,
-                        "missing_go_to_left": 0,
-                        "node_depth": depth
-                    })
-                    print("pushiamos al hijo izquierdo hoja")
+    cpdef recompute_values(self, Tree tree, cnp.ndarray out, cnp.ndarray y):
+        cdef float64_t[:] values = np.zeros(tree.node_count, dtype=np.float64)
+        cdef intp_t[:] counts = np.zeros(tree.node_count, dtype=np.intp)
 
+        cdef intp_t j
+        for j in range(y.shape[0]):
+            values[out[j]] += y[j]
+            counts[out[j]] += 1
 
-    cpdef recompute_values(self, cnp.ndarray out, cnp.ndarray y):
-        cdef cnp.ndarray values = np.zeros(self.node_count, dtype=np.float64)
-        print(self.node_count)
-
-        for i in range(y.shape[0]):
-            values[out[i]] += y[i]
-
-        cdef cnp.ndarray counts = np.zeros(self.node_count, dtype=np.intp)
-        
-        print(f"out: ",out)
-
-        for num in out:
-            counts[num] += 1
-        
-        print(f"counts: ",counts) 
-
-        for i in range(self.node_count):
+        cdef float64_t* dest
+        cdef intp_t i
+        for i in range(tree.node_count):
             if counts[i] > 0:
                 values[i] /= counts[i]
-                self.value[i] = values[i]
-        print(f"values:", values)
-        
-        print("recomputamos los valores")
+                dest = tree.value + i * tree.value_stride
+                dest[0] = values[i]

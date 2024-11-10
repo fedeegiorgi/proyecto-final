@@ -102,7 +102,7 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
         # Divide the trees into groups
         self.initial_grouped_trees = self.group_split(self.estimators_)
         grouped_samples = self.group_split(self.estimators_samples_)
-
+        
         for i, tree_group in enumerate(self.initial_grouped_trees):
             group_samples_used = grouped_samples[i]
 
@@ -110,6 +110,9 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
 
             X_union = X[sample_mask] 
             y_union = y[sample_mask]
+
+            if i == 0:
+                print(sample_mask)
 
             group_combined_tree = DecisionTreeRegressorCombiner(initial_trees=tree_group)
             group_combined_tree.fit(X_union, y_union)
@@ -135,6 +138,11 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
             delayed(_accumulate_prediction)(e.predict, X, [y_hat], lock)
             for e in self.combined_trees
         )
+
+        # y_hat = np.zeros((X.shape[0]), dtype=np.float64)
+
+        # for tree in self.combined_trees:
+        #     y_hat += tree.predict(X)
 
         y_hat /= len(self.combined_trees) # Averages the estimates from the combined trees.
 

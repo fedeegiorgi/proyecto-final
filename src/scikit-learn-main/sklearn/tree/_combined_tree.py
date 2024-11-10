@@ -10,12 +10,36 @@ of continuing tree training based on an initial one with less data.
 
 import numpy as np
 
+import numbers
+from numbers import Integral, Real
+
 from ..base import _fit_context
-from . import _tree
-from ._tree_comb import TreeCombiner
+from ..utils import check_random_state
+from . import _criterion, _splitter, _tree
+from ._criterion import Criterion
+from ._splitter import Splitter
+from ._tree import Tree
+from ._tree_comb import DepthFirstTreeCombinerBuilder
+from ..utils.validation import check_array
+
+# =============================================================================
+# Types and constants
+# =============================================================================
 
 DTYPE = _tree.DTYPE
 DOUBLE = _tree.DOUBLE
+
+CRITERIA_CLF = {
+    "gini": _criterion.Gini,
+    "log_loss": _criterion.Entropy,
+    "entropy": _criterion.Entropy,
+}
+CRITERIA_REG = {
+    "squared_error": _criterion.MSE,
+    "friedman_mse": _criterion.FriedmanMSE,
+    "absolute_error": _criterion.MAE,
+    "poisson": _criterion.Poisson,
+}
 
 # new imports
 
@@ -97,12 +121,15 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
         Continues the training of the DecisionTreeRegressor with the new provided data.
         """
 
-        ########################## Copy of the original fit ##########################
+        ########################## Copia del fit original ##########################
+
+        random_state = check_random_state(self.random_state)
 
         # Determine output settings
         n_samples, self.n_features_in_ = X.shape
 
         y = np.atleast_1d(y)
+        expanded_class_weight = None
 
         if y.ndim == 1:
             # reshape is necessary to preserve the data contiguity against vs
@@ -114,6 +141,42 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
         if getattr(y, "dtype", None) != DOUBLE or not y.flags.contiguous:
             y = np.ascontiguousarray(y, dtype=DOUBLE)
 
+        max_depth = np.iinfo(np.int32).max if self.max_depth is None else self.max_depth
+
+        if isinstance(self.min_samples_leaf, numbers.Integral):
+            min_samples_leaf = self.min_samples_leaf
+        else:  # float
+            min_samples_leaf = int(ceil(self.min_samples_leaf * n_samples))
+
+        if isinstance(self.min_samples_split, numbers.Integral):
+            min_samples_split = self.min_samples_split
+        else:  # float
+            min_samples_split = int(ceil(self.min_samples_split * n_samples))
+            min_samples_split = max(2, min_samples_split)
+
+        min_samples_split = max(min_samples_split, 2 * min_samples_leaf)
+
+        if isinstance(self.max_features, str):
+            if self.max_features == "sqrt":
+                max_features = max(1, int(np.sqrt(self.n_features_in_)))
+            elif self.max_features == "log2":
+                max_features = max(1, int(np.log2(self.n_features_in_)))
+        elif self.max_features is None:
+            max_features = self.n_features_in_
+        elif isinstance(self.max_features, numbers.Integral):
+            max_features = self.max_features
+        else:  # float
+            if self.max_features > 0.0:
+                max_features = max(1, int(self.max_features * self.n_features_in_))
+            else:
+                max_features = 0
+
+        self.max_features_ = max_features
+
+        # Hardcodeado a -1 porque usamos el builder DepthFirst
+        # max_leaf_nodes = -1 if self.max_leaf_nodes is None else self.max_leaf_nodes
+        self.max_leaf_nodes = None
+
         if len(y) != n_samples:
             raise ValueError(
                 "Number of labels=%d does not match number of samples=%d"
@@ -121,42 +184,73 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
             )
 
         if sample_weight is not None:
-            raise ValueError("sample_weight not available in DecisionTreeRegressorCombiner.")
+            sample_weight = _check_sample_weight(sample_weight, X, DOUBLE)
 
-        # Build Tree
-        features, thresholds, impurities, n_node_samples, weighted_n_node_samples, missing_go_to_lefts = self._get_initial_trees_data()
+        if expanded_class_weight is not None:
+            if sample_weight is not None:
+                sample_weight = sample_weight * expanded_class_weight
+            else:
+                sample_weight = expanded_class_weight
+
+        # Set min_weight_leaf from min_weight_fraction_leaf
+        if sample_weight is None:
+            min_weight_leaf = self.min_weight_fraction_leaf * n_samples
+        else:
+            min_weight_leaf = self.min_weight_fraction_leaf * np.sum(sample_weight)
+
+        # Build tree
+        criterion = self.criterion
+        if not isinstance(criterion, Criterion):
+            criterion = CRITERIA_REG[self.criterion](self.n_outputs_, n_samples)
+        else:
+            # Make a deepcopy in case the criterion has mutable attributes that
+            # might be shared and modified concurrently during parallel fitting
+            criterion = copy.deepcopy(criterion)
+
+        if self.monotonic_cst is None:  # siempre va a ser None para nosotros
+            monotonic_cst = None
+        else:
+            raise ValueError("This implementation does not support monotonic constraints")
+
+        ##############################################################################
         
-        self.tree_ = TreeCombiner(
+        # Acá arranca lo importante!!
+
+        # Splitter instantiation
+        splitter = Splitter(
+            criterion,
+            self.max_features_,
+            min_samples_leaf,
+            min_weight_leaf,
+            self.random_state,
+            monotonic_cst,
+        )
+        
+        # Normal tree instantiation
+        self.tree_ = Tree(
             self.n_features_in_,
             # TODO: tree shouldn't need this in this case
             np.array([1] * self.n_outputs_, dtype=np.intp),
-            self.n_outputs_
+            self.n_outputs_,
         )
+        # Build Tree
+        features, thresholds, _, _, _, _ = self._get_initial_trees_data()
         
-        self.tree_.combiner(features,
-            thresholds,
-            impurities,
-            n_node_samples,
-            weighted_n_node_samples,
-            missing_go_to_lefts)
+        builder = DepthFirstTreeCombinerBuilder(
+            splitter,
+            min_samples_split,
+            min_samples_leaf,
+            min_weight_leaf,
+            max_depth,
+            self.min_impurity_decrease,
+        )
 
-        # print(f"tree count: {self.tree_.node_count}")
-        # print(f"capacity: {self.tree_.capacity}")
-        # print(f"max_depth: {self.tree_.max_depth}")
-        # print("Primer nivel")
-        # print(self.tree_.feature[0], features[0])
-        # print(self.tree_.threshold[0], thresholds[0])
+        builder.combiner(self.tree_, features, thresholds)
 
-        # print("Segundo nivel")
-        # print(self.tree_.feature[1], features[1])
-        # print(self.tree_.threshold[1], thresholds[1])
+        X = check_array(X, dtype=np.float32)
 
-        # print("Tercer nivel")
-        # print(self.tree_.feature[2], features[2])
-        # print(self.tree_.threshold[2], thresholds[2])
-        
-        out = self.apply(X) # Finds the terminal region (=leaf node) for each sample in X.
+        out = self.tree_.apply(X) # Finds the terminal region (=leaf node) for each sample in X.
 
         print(f"hice el apply:", out)
         
-        self.tree_.recompute_values(out, y) # Recompute the values of the leaf nodes
+        builder.recompute_values(self.tree_, out, y) # Recompute the values of the leaf nodes
