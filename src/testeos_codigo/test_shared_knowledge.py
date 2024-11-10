@@ -12,7 +12,7 @@ X, y = make_regression(n_samples=50, n_features=10, random_state=0)
 print("Original X:", X)
 SEED = 14208
 
-df = pd.read_csv('distribucion/datasets/laptops.csv')
+df = pd.read_csv('../distribucion/datasets/laptops.csv')
 
 # Preprocesamiento de datos
 train_df, validation_df = train_test_split(df, test_size=0.2, random_state=SEED)
