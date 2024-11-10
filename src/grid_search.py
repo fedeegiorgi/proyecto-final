@@ -33,7 +33,7 @@ if choice == "1":
     file_path = 'distribucion/datasets/train_data/Carbon_Emission_train.csv'
     dataset_name = 'Carbon_Emission'
 elif choice == "2":
-    file_path = 'distribucion/datasets/train_data/house_8L_train.csv'
+    file_path = 'distribucion/datasets/train_data/house_8L_train_7000.csv'
     dataset_name = 'House_8L'
 elif choice == "3":
     file_path = 'distribucion/datasets/train_data/wind_train.csv'
