@@ -1,54 +1,23 @@
 """
 Extensión del módulo de árboles de decisión de scikit-learn para la Alternativa C
 de continuación de entrenamiento de árboles en base a otro inicial con menos datos.
+------------------------------------------------------------------------------------
+Extension of scikit-learn's decision trees module for Alternative C
+of continuing tree training based on an initial one with less data.
 """
 
-# import originales (chequear cuáles no se usan)
-
-import copy
-import numbers
-from abc import ABCMeta, abstractmethod
-from math import ceil
-from numbers import Integral, Real
+# original imports
 
 import numpy as np
-from scipy.sparse import issparse
 
-from ..base import (
-    BaseEstimator,
-    ClassifierMixin,
-    MultiOutputMixin,
-    RegressorMixin,
-    _fit_context,
-    clone,
-    is_classifier,
-)
-from ..utils import Bunch, check_random_state, compute_sample_weight
-from ..utils._param_validation import Hidden, Interval, RealNotInt, StrOptions
-from ..utils.multiclass import check_classification_targets
-from ..utils.validation import (
-    _assert_all_finite_element_wise,
-    _check_sample_weight,
-    assert_all_finite,
-    check_is_fitted,
-)
-from . import _criterion, _splitter, _tree
-from ._criterion import Criterion
-from ._splitter import Splitter
-from ._tree import (
-    BestFirstTreeBuilder,
-    DepthFirstTreeBuilder,
-    Tree,
-    _build_pruned_tree_ccp,
-    ccp_pruning_path,
-)
+from ..base import _fit_context
+from . import _tree
 from ._tree_comb import TreeCombiner
-from ._utils import _any_isnan_axis0
 
 DTYPE = _tree.DTYPE
 DOUBLE = _tree.DOUBLE
 
-# import nuevos
+# new imports
 
 from ._classes import DecisionTreeRegressor
 
@@ -123,12 +92,12 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
         return np.array(features), np.array(thresholds), np.array(impurities), np.array(n_node_samples), np.array(weighted_n_node_samples), np.array(missing_go_to_lefts)
 
     @_fit_context(prefer_skip_nested_validation=True)
-    def fit(self, X, y, sample_weight=None, check_input=False): # No agregamos check_input porque desde RandomForestRegressor siempre se llama en False
+    def fit(self, X, y, sample_weight=None, check_input=False): # We don't add check_input because from RandomForestRegressor it is always called in False
         """
         Continues the training of the DecisionTreeRegressor with the new provided data.
         """
 
-        ########################## Copia del fit original ##########################
+        ########################## Copy of the original fit ##########################
 
         # Determine output settings
         n_samples, self.n_features_in_ = X.shape
@@ -186,6 +155,8 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
         # print(self.tree_.feature[2], features[2])
         # print(self.tree_.threshold[2], thresholds[2])
         
-        out = self.apply(X)
+        out = self.apply(X) # Finds the terminal region (=leaf node) for each sample in X.
+
+        print(f"hice el apply:", out)
         
-        self.tree_.recompute_values(out, y)
+        self.tree_.recompute_values(out, y) # Recompute the values of the leaf nodes
