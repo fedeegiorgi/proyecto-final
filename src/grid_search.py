@@ -79,7 +79,7 @@ param_grids = {
     "1": {
         'model': IQRRandomForestRegressor(),
         'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + list(range(1250, 2001, 250)), 
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500], 
             'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
             'max_depth': list(range(10, 51, 1))
         },
@@ -88,7 +88,7 @@ param_grids = {
     "2": {
         'model': PercentileTrimmingRandomForestRegressor(),
         'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + list(range(1250, 2001, 250)), 
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500], 
             'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
             'max_depth': list(range(10, 51, 1)),
             'percentile': list(range(1, 16, 1))
@@ -98,7 +98,7 @@ param_grids = {
     "3": {
         'model': OOBRandomForestRegressor(),
         'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + list(range(1250, 2001, 250)), 
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500], 
             'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
             'max_depth': list(range(10, 51, 1))
         },
@@ -107,7 +107,7 @@ param_grids = {
     "4": {
         'model': OOB_plus_IQR(),
         'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + list(range(1250, 2001, 250)), 
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500], 
             'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
             'max_depth': list(range(10, 51, 1))
         },
@@ -116,7 +116,7 @@ param_grids = {
     "5": {
         'model': RFRegressorFirstSplitCombiner(),
         'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 2001, 50)) + list(range(2250, 4000, 250)), 
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500],
             'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5))}, 
         'name': "First_Splits_Combiner"
     },
