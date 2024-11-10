@@ -250,7 +250,5 @@ class DecisionTreeRegressorCombiner(DecisionTreeRegressor):
         X = check_array(X, dtype=np.float32)
 
         out = self.tree_.apply(X) # Finds the terminal region (=leaf node) for each sample in X.
-
-        print(f"hice el apply:", out)
         
         builder.recompute_values(self.tree_, out, y) # Recompute the values of the leaf nodes

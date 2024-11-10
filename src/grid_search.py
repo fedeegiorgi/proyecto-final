@@ -117,7 +117,9 @@ param_grids = {
         'model': RFRegressorFirstSplitCombiner(),
         'param_grid': {
             'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500],
-            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5))}, 
+            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)),
+            'max_features': [-1, -2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
+        },
         'name': "First_Splits_Combiner"
     },
     # "6": {
@@ -244,9 +246,10 @@ for choice in tqdm(choices):
     
     elif model_name == 'First_Splits_Combiner':
         for i in param_grid['n_estimators']:         
-            for j in param_grid['group_size']:  
-                if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
-                    parameters.append((i, j))
+            for j in param_grid['group_size']:
+                for k in param_grid['max_features']: 
+                    if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
+                        parameters.append((i, j, k))
         
         # Manual grid search
         best_mse, best_params = float('inf'), None
@@ -269,8 +272,15 @@ for choice in tqdm(choices):
 
         print(f"\nRunning grid search for model: {model_name}")
 
-        for n_estimators, group_size in tqdm(sampled_params):
-            model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, random_state=SEED)
+        for n_estimators, group_size, max_features in tqdm(sampled_params):
+            print(f"n_estimators: {n_estimators}, group_size: {group_size}, max_features: {max_features}")
+
+            if max_features == -1:
+                max_features = 'sqrt'
+            elif max_features == -2:
+                max_features = 'log2'
+                
+            model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_features=max_features, random_state=SEED)
             model_instance.fit(X_train.values, y_train)
             
             y_pred = model_instance.predict(X_valid.values)
@@ -279,7 +289,7 @@ for choice in tqdm(choices):
             
             if mse < best_mse:
                 best_mse = mse
-                best_params = {'n_estimators': n_estimators, 'group_size': group_size}
+                best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_features': max_features}
         
     else: 
         for i in param_grid['n_estimators']:         
