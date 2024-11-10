@@ -1,48 +1,12 @@
-from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestGroupDebate
 import threading
-from abc import ABCMeta, abstractmethod
-from numbers import Integral, Real
-from warnings import catch_warnings, simplefilter, warn
-
 import numpy as np
-import pandas as pd
-from scipy.sparse import hstack as sparse_hstack
-from scipy.sparse import issparse
-from scipy.stats import mstats
 
-from ..base import (
-    ClassifierMixin,
-    MultiOutputMixin,
-    RegressorMixin,
-    TransformerMixin,
-    _fit_context,
-    is_classifier,
-)
-from ..exceptions import DataConversionWarning
-from ..metrics import accuracy_score, r2_score
-from ..preprocessing import OneHotEncoder
-from ..tree import (
-    BaseDecisionTree,
-    DecisionTreeClassifier,
-    DecisionTreeRegressor,
-    ExtraTreeClassifier,
-    ExtraTreeRegressor,
-    DecisionTreeRegressorCombiner,
-)
-from ..tree._tree import DOUBLE, DTYPE
-from ..utils import check_random_state, compute_sample_weight
-from ..utils._param_validation import Interval, RealNotInt, StrOptions
-from ..utils._tags import _safe_tags
-from ..utils.multiclass import check_classification_targets, type_of_target
+from ..tree import DecisionTreeRegressorCombiner
+
 from ..utils.parallel import Parallel, delayed
-from ..utils.validation import (
-    _check_feature_names_in,
-    _check_sample_weight,
-    _num_samples,
-    check_is_fitted,
-)
-from ._base import BaseEnsemble, _partition_estimators
+from ..utils.validation import check_is_fitted
+from ._base import _partition_estimators
 
 def _accumulate_prediction(predict, X, out, lock):
     """
@@ -106,6 +70,10 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
         )
 
         self.combined_trees = []
+
+        if max_depth is not None:
+            raise ValueError("max_depth not available in FirstSplitCombiner.")
+
     
     def _compute_group_sample(self, group_samples_used, n_samples):
         """
@@ -155,7 +123,7 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
         n_jobs, _, _ = _partition_estimators(self._n_groups, self.n_jobs)
         lock = threading.Lock()
 
-        # avoid storing the output of every estimator by summing them here
+        # Avoid storing the output of every estimator by summing them here
         if self.n_outputs_ > 1:
             y_hat = np.zeros((X.shape[0], self.n_outputs_), dtype=np.float64)
         else:
@@ -168,6 +136,6 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
             for e in self.combined_trees
         )
 
-        y_hat /= len(self.combined_trees) # promedia las estimaciones de los arboles combinados
+        y_hat /= len(self.combined_trees) # Averages the estimates from the combined trees.
 
         return y_hat

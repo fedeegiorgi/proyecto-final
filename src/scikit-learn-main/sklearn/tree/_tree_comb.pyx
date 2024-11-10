@@ -3,28 +3,12 @@
 
 from cpython cimport Py_INCREF, PyObject, PyTypeObject
 
-from libc.stdlib cimport free
-from libc.string cimport memcpy
-from libc.string cimport memset
-from libc.stdint cimport INTPTR_MAX
-from libc.math cimport isnan
-from libcpp.vector cimport vector
-from libcpp.algorithm cimport pop_heap
-from libcpp.algorithm cimport push_heap
 from libcpp.stack cimport stack
 from libcpp cimport bool
-
-import struct
 
 import numpy as np
 cimport numpy as cnp
 cnp.import_array()
-
-from scipy.sparse import issparse
-from scipy.sparse import csr_matrix
-
-from ._utils cimport safe_realloc
-from ._utils cimport sizet_ptr_to_ndarray
 
 cdef extern from "numpy/arrayobject.h":
     object PyArray_NewFromDescr(PyTypeObject* subtype, cnp.dtype descr,
@@ -96,12 +80,15 @@ cdef class TreeCombiner(Tree):
             init_capacity = <intp_t> (2 ** (self.max_depth + 1)) - 1
         else:
             init_capacity = 2047
+        
+        print(f"capacidad:", init_capacity)
 
         self._resize(init_capacity)
 
         cdef stack[StackNode] builder_stack
         cdef intp_t depth = 0
 
+        # push root node onto stack
         builder_stack.push({
             "parent": -1,
             "is_left": 0,
@@ -114,6 +101,7 @@ cdef class TreeCombiner(Tree):
             "missing_go_to_left": missing_go_to_lefts[depth],
             "node_depth": depth
         })
+        print("pushiamos al nodo root")
 
         while not builder_stack.empty():
             current = builder_stack.top()
@@ -153,6 +141,7 @@ cdef class TreeCombiner(Tree):
                         "missing_go_to_left": missing_go_to_lefts[depth],
                         "node_depth": depth
                     })
+                    print("pushiamos al hijo derecho no hoja")
 
                     # Push left child on stack
                     builder_stack.push({
@@ -167,6 +156,8 @@ cdef class TreeCombiner(Tree):
                         "missing_go_to_left": missing_go_to_lefts[depth],
                         "node_depth": depth
                     })
+                    print("pushiamos al hijo izquierdo no hoja")
+
                 else:
                     # Push right child (leaf) on stack
                     builder_stack.push({
@@ -181,6 +172,8 @@ cdef class TreeCombiner(Tree):
                         "missing_go_to_left": 0,
                         "node_depth": depth
                     })
+                    print("pushiamos al hijo derecho hoja")
+
 
                     # Push left child (leaf) on stack
                     builder_stack.push({
@@ -195,19 +188,29 @@ cdef class TreeCombiner(Tree):
                         "missing_go_to_left": 0,
                         "node_depth": depth
                     })
+                    print("pushiamos al hijo izquierdo hoja")
+
 
     cpdef recompute_values(self, cnp.ndarray out, cnp.ndarray y):
         cdef cnp.ndarray values = np.zeros(self.node_count, dtype=np.float64)
+        print(self.node_count)
 
         for i in range(y.shape[0]):
             values[out[i]] += y[i]
 
         cdef cnp.ndarray counts = np.zeros(self.node_count, dtype=np.intp)
+        
+        print(f"out: ",out)
 
         for num in out:
             counts[num] += 1
+        
+        print(f"counts: ",counts) 
 
         for i in range(self.node_count):
             if counts[i] > 0:
                 values[i] /= counts[i]
                 self.value[i] = values[i]
+        print(f"values:", values)
+        
+        print("recomputamos los valores")
