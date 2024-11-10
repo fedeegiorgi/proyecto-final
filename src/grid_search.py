@@ -79,39 +79,38 @@ param_grids = {
     "1": {
         'model': IQRRandomForestRegressor(),
         'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 2001, 50)) + list(range(2250, 4000, 250)), 
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + list(range(1250, 2001, 250)), 
             'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
-            'max_depth': [None] + list(range(10, 51, 1))},
-            
-            # ejemplo de juegete: 
-            # 'n_estimators': [30, 50, 100], 
-            # 'group_size': [3, 5, 10], 
-            # 'max_depth': [None, 10, 20]},
+            'max_depth': list(range(10, 51, 1))
+        },
         'name': "IQR"
     },
     "2": {
         'model': PercentileTrimmingRandomForestRegressor(),
         'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 2001, 50)) + list(range(2250, 4000, 250)), 
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + list(range(1250, 2001, 250)), 
             'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
-            'max_depth': [None] + list(range(10, 51, 1)),
-            'percentile': list(range(1, 16, 1))}, 
+            'max_depth': list(range(10, 51, 1)),
+            'percentile': list(range(1, 16, 1))
+        }, 
         'name': "Percentile_Trimming"
     },
     "3": {
         'model': OOBRandomForestRegressor(),
         'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 2001, 50)) + list(range(2250, 4000, 250)), 
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + list(range(1250, 2001, 250)), 
             'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
-            'max_depth': [None] + list(range(10, 51, 1))},
+            'max_depth': list(range(10, 51, 1))
+        },
         'name': "OOB"
     },
     "4": {
         'model': OOB_plus_IQR(),
         'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 2001, 50)) + list(range(2250, 4000, 250)), 
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + list(range(1250, 2001, 250)), 
             'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
-            'max_depth': [None] + list(range(10, 51, 1))},
+            'max_depth': list(range(10, 51, 1))
+        },
         'name': "OOB_plus_IQR"
     },
     "5": {
@@ -190,7 +189,7 @@ for choice in tqdm(choices):
         print(f"\nRunning grid search for model: {model_name}")
         
         for n_estimators, group_size, max_depth, initial_max_depth in tqdm(sampled_params):
-            model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_depth=max_depth, initial_max_depth = initial_max_depth, random_state=SEED)
+            model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_depth=max_depth, initial_max_depth = initial_max_depth, random_state=SEED, n_jobs=3)
             model_instance.fit(X_train.values, y_train)
             
             y_pred = model_instance.predict(X_valid.values)
