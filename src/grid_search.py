@@ -189,7 +189,7 @@ for choice in tqdm(choices):
         print(f"\nRunning grid search for model: {model_name}")
         
         for n_estimators, group_size, max_depth, initial_max_depth in tqdm(sampled_params):
-            model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_depth=max_depth, initial_max_depth = initial_max_depth, random_state=SEED, n_jobs=3)
+            model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_depth=max_depth, initial_max_depth = initial_max_depth, random_state=SEED)
             model_instance.fit(X_train.values, y_train)
             
             y_pred = model_instance.predict(X_valid.values)
@@ -231,7 +231,7 @@ for choice in tqdm(choices):
         print(f"\nRunning grid search for model: {model_name}")
 
         for n_estimators, group_size, max_depth, percentile in tqdm(sampled_params):
-            model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_depth=max_depth, percentile=percentile, random_state=SEED)
+            model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_depth=max_depth, percentile=percentile, random_state=SEED, n_jobs=3)
             model_instance.fit(X_train.values, y_train)
             
             y_pred = model_instance.predict(X_valid.values)
@@ -310,7 +310,7 @@ for choice in tqdm(choices):
         print(f"\nRunning grid search for model: {model_name}")
 
         for n_estimators, group_size, max_depth in tqdm(sampled_params):
-            model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_depth=max_depth, random_state=SEED)
+            model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_depth=max_depth, random_state=SEED, n_jobs=3)
             model_instance.fit(X_train.values, y_train)
             
             y_pred = model_instance.predict(X_valid.values)
