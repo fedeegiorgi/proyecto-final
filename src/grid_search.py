@@ -383,8 +383,10 @@ for choice in tqdm(choices):
     mse_np = np.array(mse_list, dtype=np.float32).reshape(-1, 1)  # Convert MSE list to a tensor and add a dimension for concatenation
     result_np = np.concatenate((parameter_np, mse_np), axis=1)  # Combine parameters and MSE values
     
-    # Nombre del archivo basado en el dataset y el modelo
-    file_name = f"resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy"
+    if search_choice == 2:
+        path = f'resultados_top_150/{dataset_name}/{dataset_name}_{model_name}_150.npy'
+    else:
+        path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy'
 
     # Guardar el resultado como un archivo .npy
     np.save(file_name, result_np)
