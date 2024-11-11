@@ -384,12 +384,12 @@ for choice in tqdm(choices):
     result_np = np.concatenate((parameter_np, mse_np), axis=1)  # Combine parameters and MSE values
     
     if search_choice == 2:
-        path = f'resultados_top_150/{dataset_name}/{dataset_name}_{model_name}_150.npy'
+        file_path = f'resultados_top_150/{dataset_name}/{dataset_name}_{model_name}_150.npy'
     else:
-        path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy'
+        file_path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy'
 
     # Guardar el resultado como un archivo .npy
-    np.save(file_name, result_np)
+    np.save(file_path, result_np)
 
     # Save the tensor in the dictionary with the model name as the key
     models_results[model_name] = result_np
@@ -405,11 +405,12 @@ print("\nBest Parameters and MSE:")
 for result in results:
     print(result)
 
-# Display results for each model
-for model_name, arr in models_results.items():
-    if search_choice == 2:
-        path = f'resultados_top_150/{dataset_name}/{dataset_name}_{model_name}_150.npy'
-    else:
-        path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy'
-    data = np.load(path)
-    print(data)
+if search_choice == 1:
+    # Display results for each model
+    for model_name, arr in models_results.items():
+        if search_choice == 2:
+            path = f'resultados_top_150/{dataset_name}/{dataset_name}_{model_name}_150.npy'
+        else:
+            path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy'
+        data = np.load(path)
+        print(data)
