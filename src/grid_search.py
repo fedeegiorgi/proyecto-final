@@ -8,10 +8,23 @@ import pandas as pd
 import numpy as np
 from scipy.io import arff
 import random
+import csv
 
 SEED = 14208
 results = []
 models_results = {}
+
+# Function to get the top 50 parameter combinations for a model
+def get_top_50_params(model_name):
+    # Load the top 50 parameter combinations
+    file_name = f"results_analysis/csvs/{model_name}_Top_150.csv"
+    f = open(file_name, 'r')
+    reader = csv.reader(f)
+    for row in reader:
+        params = tuple(map(float, row))
+        print(params)
+
+get_top_50_params('IQR')
 
 # Mapping dataset names to target columns
 DATASETS_COLUMNS = {
@@ -144,6 +157,15 @@ print("5: First Splits Combiner")
 
 choices = input("Enter the numbers corresponding to your choice(s): ").split(',')
 
+# Perform search or top_50
+print("Would you like to perform a grid search or use the top 50 parameter combinations?")
+print("1. Grid Search")
+print("2. Top 50 Parameter Combinations")
+
+search_choice = input("Enter the number corresponding to your choice: ")
+
+if search_choice == "1":
+
 for choice in tqdm(choices):
     choice = choice.strip()
     if choice not in param_grids:
@@ -203,32 +225,38 @@ for choice in tqdm(choices):
                 best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_depth': max_depth, 'initial_max_depth': initial_max_depth}
     
     elif model_name == 'Percentile_Trimming':
-        for i in param_grid['n_estimators']:         
-            for j in param_grid['group_size']:  
-                for k in param_grid['max_depth']:
-                    for z in param_grid['percentile']:
-                        if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
-                            if z < 50: # Ensures percentile isnt above a certain value
-                                parameters.append((i, j, k, z)) 
-        
-        # Manual grid search
-        best_mse, best_params = float('inf'), None
-
-        max_combinations = len(parameters)
-
-        # Input del usuario para muestreo de combinaciones
-        try:
-            n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+        if search_choice == 1:
+            for i in param_grid['n_estimators']:         
+                for j in param_grid['group_size']:  
+                    for k in param_grid['max_depth']:
+                        for z in param_grid['percentile']:
+                            if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
+                                if z < 50: # Ensures percentile isnt above a certain value
+                                    parameters.append((i, j, k, z)) 
             
-            if n > max_combinations: 
-                print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+            # Manual grid search
+            best_mse, best_params = float('inf'), None
+
+            max_combinations = len(parameters)
+
+            # Input del usuario para muestreo de combinaciones
+            try:
+                n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+                
+                if n > max_combinations: 
+                    print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+                    exit()
+            
+            except ValueError:
+                print("Please enter a valid integer for the number of combinations.")
                 exit()
-        
-        except ValueError:
-            print("Please enter a valid integer for the number of combinations.")
+            
+            sampled_params = random.sample(parameters, n)
+        elif search_choice == 2:
+            sampled_params = get_top_50_params(model_name)
+        else:
+            print("Invalid choice. Please select 1 or 2.")
             exit()
-        
-        sampled_params = random.sample(parameters, n)
 
         print(f"\nRunning grid search for model: {model_name}")
 
@@ -245,30 +273,36 @@ for choice in tqdm(choices):
                 best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_depth': max_depth, 'percentile': percentile}
     
     elif model_name == 'First_Splits_Combiner':
-        for i in param_grid['n_estimators']:         
-            for j in param_grid['group_size']:
-                for k in param_grid['max_features']: 
-                    if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
-                        parameters.append((i, j, k))
-        
-        # Manual grid search
-        best_mse, best_params = float('inf'), None
-
-        max_combinations = len(parameters)
-
-        # Input del usuario para muestreo de combinaciones
-        try:
-            n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+        if search_choice == 1:
+            for i in param_grid['n_estimators']:         
+                for j in param_grid['group_size']:
+                    for k in param_grid['max_features']: 
+                        if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
+                            parameters.append((i, j, k))
             
-            if n > max_combinations: 
-                print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+            # Manual grid search
+            best_mse, best_params = float('inf'), None
+
+            max_combinations = len(parameters)
+
+            # Input del usuario para muestreo de combinaciones
+            try:
+                n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+                
+                if n > max_combinations: 
+                    print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+                    exit()
+            
+            except ValueError:
+                print("Please enter a valid integer for the number of combinations.")
                 exit()
-        
-        except ValueError:
-            print("Please enter a valid integer for the number of combinations.")
+            
+            sampled_params = random.sample(parameters, n)
+        elif search_choice == 2:
+            sampled_params = get_top_50_params(model_name)
+        else:
+            print("Invalid choice. Please select 1 or 2.")
             exit()
-        
-        sampled_params = random.sample(parameters, n)
 
         print(f"\nRunning grid search for model: {model_name}")
 
@@ -290,30 +324,36 @@ for choice in tqdm(choices):
                 best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_features': max_features}
         
     else: 
-        for i in param_grid['n_estimators']:         
-            for j in param_grid['group_size']:  
-                for k in param_grid['max_depth']:
-                    if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
-                        parameters.append((i, j, k)) 
+        if serach_choice == 1:
+            for i in param_grid['n_estimators']:         
+                for j in param_grid['group_size']:  
+                    for k in param_grid['max_depth']:
+                        if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
+                            parameters.append((i, j, k)) 
 
-        # Manual grid search
-        best_mse, best_params = float('inf'), None
+            # Manual grid search
+            best_mse, best_params = float('inf'), None
 
-        max_combinations = len(parameters)
+            max_combinations = len(parameters)
 
-        # Input del usuario para muestreo de combinaciones
-        try:
-            n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+            # Input del usuario para muestreo de combinaciones
+            try:
+                n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+                
+                if n > max_combinations: 
+                    print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+                    exit()
             
-            if n > max_combinations: 
-                print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+            except ValueError:
+                print("Please enter a valid integer for the number of combinations.")
                 exit()
-        
-        except ValueError:
-            print("Please enter a valid integer for the number of combinations.")
+            
+            sampled_params = random.sample(parameters, n)
+        elif search_choice == 2:
+            sampled_params = get_top_50_params(model_name)
+        else:
+            print("Invalid choice. Please select 1 or 2.")
             exit()
-        
-        sampled_params = random.sample(parameters, n)
 
         print(f"\nRunning grid search for model: {model_name}")
 
