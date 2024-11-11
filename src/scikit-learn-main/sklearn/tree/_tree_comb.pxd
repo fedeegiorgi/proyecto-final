@@ -7,8 +7,6 @@ cimport numpy as cnp
 cnp.import_array()
 
 cdef class DepthFirstTreeCombinerBuilder(TreeBuilder):
-    cdef const intp_t[:] features
-    cdef const float64_t[:] thresholds
     
     cpdef combiner(self, Tree tree, cnp.ndarray features, cnp.ndarray thresholds)
     cpdef recompute_values(self, Tree tree, cnp.ndarray out, cnp.ndarray y)

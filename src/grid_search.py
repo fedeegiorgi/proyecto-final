@@ -117,7 +117,7 @@ param_grids = {
         'model': RFRegressorFirstSplitCombiner(),
         'param_grid': {
             'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500],
-            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)),
+            'group_size': list(range(3, 20, 1)),
             'max_features': [-1, -2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
         },
         'name': "First_Splits_Combiner"
@@ -273,8 +273,6 @@ for choice in tqdm(choices):
         print(f"\nRunning grid search for model: {model_name}")
 
         for n_estimators, group_size, max_features in tqdm(sampled_params):
-            print(f"n_estimators: {n_estimators}, group_size: {group_size}, max_features: {max_features}")
-
             if max_features == -1:
                 max_features = 'sqrt'
             elif max_features == -2:

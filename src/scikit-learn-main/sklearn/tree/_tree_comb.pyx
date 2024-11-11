@@ -5,6 +5,7 @@ from cpython cimport Py_INCREF, PyObject, PyTypeObject
 
 from libcpp.stack cimport stack
 from libcpp cimport bool
+from libc.stdint cimport INTPTR_MAX
 
 import numpy as np
 cimport numpy as cnp
@@ -64,8 +65,8 @@ cdef class DepthFirstTreeCombinerBuilder(TreeBuilder):
         """Combines the trees into a single one using first split."""
         
         cdef intp_t final_depth = features.shape[0]
-        self.features = features
-        self.thresholds = thresholds
+        cdef intp_t[:] features_mv = features
+        cdef float64_t[:] thresholds_mv = thresholds
 
         cdef intp_t depth
         cdef intp_t parent
@@ -77,6 +78,8 @@ cdef class DepthFirstTreeCombinerBuilder(TreeBuilder):
         cdef bint is_child_leaf
         cdef StackNode current
         cdef intp_t node_id
+
+        cdef int rc = 0
 
         tree.max_depth = final_depth
 
@@ -97,8 +100,8 @@ cdef class DepthFirstTreeCombinerBuilder(TreeBuilder):
                 "parent": _TREE_UNDEFINED,
                 "is_left": 0,
                 "is_leaf": 0,
-                "feature": self.features[depth],
-                "threshold": self.thresholds[depth]
+                "feature": features_mv[depth],
+                "threshold": thresholds_mv[depth]
             })
 
             while not builder_stack.empty():
@@ -115,6 +118,10 @@ cdef class DepthFirstTreeCombinerBuilder(TreeBuilder):
                 node_id = tree._add_node(parent, is_left, is_leaf, feature,
                                         threshold, 0, 0, 0, 0)
 
+                if node_id == INTPTR_MAX:
+                    rc = -1
+                    break
+
                 if not is_leaf:
                     depth += 1
                     is_child_leaf = features.shape[0] == depth
@@ -126,8 +133,8 @@ cdef class DepthFirstTreeCombinerBuilder(TreeBuilder):
                             "parent": node_id,
                             "is_left": 0,
                             "is_leaf": is_child_leaf,
-                            "feature": self.features[depth],
-                            "threshold": self.thresholds[depth]
+                            "feature": features_mv[depth],
+                            "threshold": thresholds_mv[depth]
                         })
 
                         # Push left child on stack
@@ -136,8 +143,8 @@ cdef class DepthFirstTreeCombinerBuilder(TreeBuilder):
                             "parent": node_id,
                             "is_left": 1,
                             "is_leaf": is_child_leaf,
-                            "feature": self.features[depth],
-                            "threshold": self.thresholds[depth]
+                            "feature": features_mv[depth],
+                            "threshold": thresholds_mv[depth]
                         })
 
                     else:
@@ -160,20 +167,39 @@ cdef class DepthFirstTreeCombinerBuilder(TreeBuilder):
                             "feature": 0,
                             "threshold": 0
                         })
+            
+            if rc >= 0:
+                rc = tree._resize_c(tree.node_count)
+                
+        if rc == -1:
+            raise MemoryError()
 
     cpdef recompute_values(self, Tree tree, cnp.ndarray out, cnp.ndarray y):
-        cdef float64_t[:] values = np.zeros(tree.node_count, dtype=np.float64)
-        cdef intp_t[:] counts = np.zeros(tree.node_count, dtype=np.intp)
+        cdef dict values = {}
+        cdef dict counts = {}
 
-        cdef intp_t j
+        # Populate values and counts dictionaries
+        cdef int j
+        cdef float y_j
+        cdef int out_j
         for j in range(y.shape[0]):
-            values[out[j]] += y[j]
-            counts[out[j]] += 1
+            y_j = y[j]
+            out_j = out[j]
+            
+            if out_j in values:
+                values[out_j] += y_j
+                counts[out_j] += 1
+            else:
+                values[out_j] = y_j
+                counts[out_j] = 1
 
+        # Update tree values based on the averages computed
+        cdef int i
         cdef float64_t* dest
-        cdef intp_t i
-        for i in range(tree.node_count):
+        cdef intp_t pos
+        for i in values:
             if counts[i] > 0:
                 values[i] /= counts[i]
-                dest = tree.value + i * tree.value_stride
+                pos = <intp_t> i
+                dest = tree.value + pos * tree.value_stride
                 dest[0] = values[i]
