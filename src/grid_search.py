@@ -20,11 +20,22 @@ def get_top_50_params(model_name):
     file_name = f"results_analysis/csvs/{model_name}_Top_150.csv"
     f = open(file_name, 'r')
     reader = csv.reader(f)
+    next(reader)  # Skip the header row
+    params = []
     for row in reader:
-        params = tuple(map(float, row))
-        print(params)
-
-get_top_50_params('IQR')
+        tup = []
+        for val in row:
+            try:
+                val = float(val)
+                if val.is_integer():
+                    val = int(val)
+            except ValueError:
+                val = None
+            tup.append(val)
+        
+        params.append(tuple(tup))
+    
+    return params
 
 # Mapping dataset names to target columns
 DATASETS_COLUMNS = {
@@ -162,9 +173,7 @@ print("Would you like to perform a grid search or use the top 50 parameter combi
 print("1. Grid Search")
 print("2. Top 50 Parameter Combinations")
 
-search_choice = input("Enter the number corresponding to your choice: ")
-
-if search_choice == "1":
+search_choice = int(input("Enter the number corresponding to your choice: "))
 
 for choice in tqdm(choices):
     choice = choice.strip()
@@ -225,6 +234,9 @@ for choice in tqdm(choices):
                 best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_depth': max_depth, 'initial_max_depth': initial_max_depth}
     
     elif model_name == 'Percentile_Trimming':
+        # Manual grid search
+        best_mse, best_params = float('inf'), None
+
         if search_choice == 1:
             for i in param_grid['n_estimators']:         
                 for j in param_grid['group_size']:  
@@ -234,9 +246,6 @@ for choice in tqdm(choices):
                                 if z < 50: # Ensures percentile isnt above a certain value
                                     parameters.append((i, j, k, z)) 
             
-            # Manual grid search
-            best_mse, best_params = float('inf'), None
-
             max_combinations = len(parameters)
 
             # Input del usuario para muestreo de combinaciones
@@ -273,6 +282,9 @@ for choice in tqdm(choices):
                 best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_depth': max_depth, 'percentile': percentile}
     
     elif model_name == 'First_Splits_Combiner':
+        # Manual grid search
+        best_mse, best_params = float('inf'), None
+
         if search_choice == 1:
             for i in param_grid['n_estimators']:         
                 for j in param_grid['group_size']:
@@ -280,9 +292,6 @@ for choice in tqdm(choices):
                         if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
                             parameters.append((i, j, k))
             
-            # Manual grid search
-            best_mse, best_params = float('inf'), None
-
             max_combinations = len(parameters)
 
             # Input del usuario para muestreo de combinaciones
@@ -324,15 +333,15 @@ for choice in tqdm(choices):
                 best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_features': max_features}
         
     else: 
-        if serach_choice == 1:
+        # Manual grid search
+        best_mse, best_params = float('inf'), None
+
+        if search_choice == 1:
             for i in param_grid['n_estimators']:         
                 for j in param_grid['group_size']:  
                     for k in param_grid['max_depth']:
                         if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
                             parameters.append((i, j, k)) 
-
-            # Manual grid search
-            best_mse, best_params = float('inf'), None
 
             max_combinations = len(parameters)
 
@@ -396,6 +405,9 @@ for result in results:
 
 # Display results for each model
 for model_name, arr in models_results.items():
-    path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy'
+    if search_choice == 2:
+        path = f'resultados_top_150/{dataset_name}/{dataset_name}_{model_name}_150.npy'
+    else:
+        path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy'
     data = np.load(path)
     print(data)
