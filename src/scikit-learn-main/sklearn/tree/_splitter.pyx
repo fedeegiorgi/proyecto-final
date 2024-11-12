@@ -31,6 +31,8 @@ from ._partitioner cimport (
 from ._utils cimport RAND_R_MAX, rand_int, rand_uniform
 
 import numpy as np
+cimport numpy as cnp
+cnp.import_array()
 
 # Introduce a fused-class to make it possible to share the split implementation
 # between the dense and sparse cases in the node_split_best and node_split_random
@@ -266,22 +268,15 @@ cdef class Splitter:
         return self.criterion.node_impurity()
 
     ################################################################################################
+    # For ContinuedDecisionTreeRegressor: AddOnBestSplitter
 
-    cdef int recompute_node_split(
-        self,
-        ParentInfo* parent_record,
-        SplitRecord* split,
-        intp_t feature, # feature index of initial_tree
-        float64_t threshold, # threshold of initial_tree
-    ) except -1 nogil:
-        pass
-    
     cdef int init_addon(
         self,
         object X_original, # X without peer prediction
         object X_peer_prediction, # X with peer prediction
         intp_t initial_max_depth, # max_depth of initial_tree
         const float64_t[:, ::1] y,
+        cnp.ndarray original_features,
         const float64_t[:] sample_weight,
         const uint8_t[::1] missing_values_in_feature_mask,
     ) except -1:
@@ -933,118 +928,8 @@ cdef class RandomSparseSplitter(Splitter):
         )
 
 ##############################################################################################
-####                     AGREGADO PARA ALT D: Extensión de árboles                        ####
+####                       For Alt D: ContinuedDecisionTreeRegressor                      ####
 ##############################################################################################
-
-cdef inline int recompute_node_split_func(
-    Splitter splitter,
-    Partitioner partitioner,
-    Criterion criterion,
-    SplitRecord* split,
-    ParentInfo* parent_record,
-    intp_t feature, # feature index of initial_tree
-    float64_t threshold # threshold of initial_tree
-) except -1 nogil:
-        # Variables (de node_split_best function en _splitter.pyx)
-        cdef intp_t start = splitter.start
-        cdef intp_t end = splitter.end
-        cdef intp_t n_missing = 0
-        cdef bint has_missing = 0
-        cdef intp_t n_searches
-        cdef intp_t n_left, n_right
-        cdef bint missing_go_to_left
-
-        cdef intp_t[::1] samples = splitter.samples
-        cdef intp_t[::1] features = splitter.features
-        cdef intp_t[::1] constant_features = splitter.constant_features
-        cdef intp_t n_features = splitter.n_features
-
-        cdef float32_t[::1] feature_values = splitter.feature_values
-        cdef intp_t max_features = splitter.max_features
-        cdef intp_t min_samples_leaf = splitter.min_samples_leaf
-        cdef float64_t min_weight_leaf = splitter.min_weight_leaf
-        cdef uint32_t* random_state = &splitter.rand_r_state
-
-        cdef SplitRecord best_split #, current_split
-        # cdef float64_t current_proxy_improvement = -INFINITY
-        # cdef float64_t best_proxy_improvement = -INFINITY
-
-        cdef float64_t impurity = parent_record.impurity
-        # cdef float64_t lower_bound = parent_record.lower_bound
-        # cdef float64_t upper_bound = parent_record.upper_bound
-
-        # cdef intp_t f_i = n_features
-        # cdef intp_t f_j
-        cdef intp_t p
-        cdef intp_t p_prev
-
-        cdef intp_t n_found_constants = 0
-        cdef intp_t n_known_constants = parent_record.n_constant_features
-
-        _init_split(&best_split, end)
-
-        partitioner.init_node_split(start, end)
-
-        # Lines 374-376 from _splitter.pyx
-        best_split.feature = feature
-        partitioner.sort_samples_and_feature_values(best_split.feature)
-        n_missing = partitioner.n_missing
-        end_non_missing = end - n_missing
-        # with gil:
-            # print("Feature: ", best_split.feature)
-            # print("Threshold: ", threshold)
-            # print("Missing values: ", n_missing)
-            # print("Start: ", start)
-            # print("End non missing: ", end_non_missing)
-            # print("Parent impurity: ", impurity)
-
-        # Find the position of the threshold in the sorted feature values
-        p = start
-        while p < end_non_missing:
-            if feature_values[p] >= threshold:
-                break
-            p += 1
-        
-        best_split.pos = p
-
-        if best_split.pos < end:
-            # Lines 504-524 from _splitter.pyx
-            partitioner.partition_samples_final(
-                best_split.pos,
-                best_split.threshold,
-                best_split.feature,
-                best_split.n_missing
-            )
-            criterion.init_missing(best_split.n_missing)
-            criterion.missing_go_to_left = best_split.missing_go_to_left
-
-            criterion.reset()
-            criterion.update(best_split.pos)
-            criterion.children_impurity(
-                &best_split.impurity_left, &best_split.impurity_right
-            )
-            best_split.improvement = criterion.impurity_improvement(
-                impurity,
-                best_split.impurity_left,
-                best_split.impurity_right
-            )
-
-            shift_missing_values_to_left_if_required(&best_split, samples, end)
-
-        # Respect invariant for constant features: the original order of
-        # element in features[:n_known_constants] must be preserved for sibling
-        # and child nodes
-        memcpy(&features[0], &constant_features[0], sizeof(intp_t) * n_known_constants)
-
-        # Copy newly found constant features
-        memcpy(&constant_features[n_known_constants],
-            &features[n_known_constants],
-            sizeof(intp_t) * n_found_constants)
-
-        # Return values
-        parent_record.n_constant_features = 0
-        split[0] = best_split
-        return best_split.pos
 
 
 cdef inline int node_split_best_dc(
@@ -1076,25 +961,34 @@ cdef inline int node_split_best_dc(
 
     ##### Check if we are in the initial tree or extended #####
 
-    cdef intp_t[::1] features = splitter.features_pp
+    cdef intp_t[::1] features
+    with gil:
+        # Always features_pp: we limit what we can see with n_features
+        features = np.copy(splitter.features_pp)
+
     cdef intp_t n_features
     cdef intp_t max_features
     cdef bint extended_tree
+    cdef bint use_original_features
 
-    with gil:
-        if splitter.current_depth <= splitter.initial_max_depth:
-            extended_tree = 0
-            print("Aun estoy entrenando en inital. Depth:", splitter.current_depth)
-        else:
-            extended_tree = 1
-            print("A partir de acá usamos las features amigas. Depth:", splitter.current_depth)
+    cdef intp_t current_depth = splitter.current_depth
+    cdef intp_t initial_max_depth = splitter.initial_max_depth
 
-    if extended_tree:
-        n_features = splitter.n_features_pp
-        max_features = splitter.n_features_pp
-    else:
+    if current_depth <= initial_max_depth:
+        extended_tree = 0
         n_features = splitter.n_features
         max_features = splitter.n_features
+    else:
+        extended_tree = 1
+        n_features = splitter.n_features_pp
+        max_features = splitter.n_features_pp
+
+    if current_depth < initial_max_depth:
+        use_original_features = 1
+    else:
+        use_original_features = 0
+    
+    cdef intp_t original_feature_index
 
     ##########################################################
 
@@ -1119,12 +1013,8 @@ cdef inline int node_split_best_dc(
     cdef intp_t p_prev
 
     cdef intp_t n_visited_features = 0
-    # Number of features discovered to be constant during the split search
-    cdef intp_t n_found_constants = 0
-    # Number of features known to be constant and drawn without replacement
-    cdef intp_t n_drawn_constants = 0
+
     cdef intp_t n_known_constants = parent_record.n_constant_features
-    # n_total_constants = n_known_constants + n_found_constants
     cdef intp_t n_total_constants = n_known_constants
 
     _init_split(&best_split, end)
@@ -1134,64 +1024,25 @@ cdef inline int node_split_best_dc(
     # Sample up to max_features without replacement using a
     # Fisher-Yates-based algorithm (using the local variables `f_i` and
     # `f_j` to compute a permutation of the `features` array).
-    #
-    # Skip the CPU intensive evaluation of the impurity criterion for
-    # features that were already detected as constant (hence not suitable
-    # for good splitting) by ancestor nodes and save the information on
-    # newly discovered constant features to spare computation on descendant
-    # nodes.
-    while (f_i > n_total_constants and  # Stop early if remaining features
-                                        # are constant
-            (n_visited_features < max_features or
-             # At least one drawn features must be non constant
-             n_visited_features <= n_found_constants + n_drawn_constants)):
+    while n_visited_features < max_features:
 
         n_visited_features += 1
 
-        # Loop invariant: elements of features in
-        # - [:n_drawn_constant[ holds drawn and known constant features;
-        # - [n_drawn_constant:n_known_constant[ holds known constant
-        #   features that haven't been drawn yet;
-        # - [n_known_constant:n_total_constant[ holds newly found constant
-        #   features;
-        # - [n_total_constant:f_i[ holds features that haven't been drawn
-        #   yet and aren't constant apriori.
-        # - [f_i:n_features[ holds features that have been drawn
-        #   and aren't constant.
-
-        # Draw a feature at random
-        f_j = rand_int(n_drawn_constants, f_i - n_found_constants,
-                       random_state)
+        # If we are in the initial tree, we use the original features
+        if (use_original_features and
+            # If the next index is less than the number of original features (for not exceeding the vector)
+            splitter.next_original_feature < splitter.n_original_features
+        ):
+            original_feature_index = splitter.original_features[splitter.next_original_feature]
+            f_j = original_feature_index
+        else:
+            # If we are in the extension of the tree we draw a random feature
+            f_j = rand_int(0, f_i, random_state)
         
-        if f_j < n_known_constants:
-            # f_j in the interval [n_drawn_constants, n_known_constants[
-            features[n_drawn_constants], features[f_j] = features[f_j], features[n_drawn_constants]
-
-            n_drawn_constants += 1
-            continue
-
-        # f_j in the interval [n_known_constants, f_i - n_found_constants[
-        f_j += n_found_constants
-        # f_j in the interval [n_total_constants, f_i[
         current_split.feature = features[f_j]
         partitioner.sort_samples_and_feature_values(current_split.feature)
         n_missing = partitioner.n_missing
         end_non_missing = end - n_missing
-
-        if (
-            # All values for this feature are missing, or
-            end_non_missing == start or
-            # This feature is considered constant (max - min <= FEATURE_THRESHOLD)
-            feature_values[end_non_missing - 1] <= feature_values[start] + FEATURE_THRESHOLD
-        ):
-            # We consider this feature constant in this case.
-            # Since finding a split among constant feature is not valuable,
-            # we do not consider this feature for splitting.
-            features[f_j], features[n_total_constants] = features[n_total_constants], features[f_j]
-
-            n_found_constants += 1
-            n_total_constants += 1
-            continue
 
         f_i -= 1
         features[f_i], features[f_j] = features[f_j], features[f_i]
@@ -1301,6 +1152,10 @@ cdef inline int node_split_best_dc(
                         current_split.n_missing = n_missing
                         current_split.pos = p
                         best_split = current_split
+        
+        # If we are in the initial tree, we only evaluate the first feature (the original)
+        if use_original_features:
+            break
 
     # Reorganize into samples[start:best_split.pos] + samples[best_split.pos:end]
     if best_split.pos < end:
@@ -1326,16 +1181,12 @@ cdef inline int node_split_best_dc(
 
         shift_missing_values_to_left_if_required(&best_split, samples, end)
 
-    # Respect invariant for constant features: the original order of
-    # element in features[:n_known_constants] must be preserved for sibling
-    # and child nodes
-    memcpy(&features[0], &constant_features[0], sizeof(intp_t) * n_known_constants)
-
-    # Copy newly found constant features
-    memcpy(&constant_features[n_known_constants],
-           &features[n_known_constants],
-           sizeof(intp_t) * n_found_constants)
-
+        # If we do split on the original feature, we need to update the next feature to split
+        # If no split, the same index will be used to the next iteration
+        # This is for edge cases where some leave in the initial tree is not splitted
+        if use_original_features:
+            splitter.next_original_feature += 1
+        
     # Return values
     parent_record.n_constant_features = n_total_constants
     split[0] = best_split
@@ -1364,6 +1215,7 @@ cdef class AddOnBestSplitter(Splitter):
         object X_peer_prediction,
         intp_t initial_max_depth,
         const float64_t[:, ::1] y,
+        cnp.ndarray original_features,
         const float64_t[:] sample_weight,
         const uint8_t[::1] missing_values_in_feature_mask,
     ) except -1:
@@ -1410,6 +1262,11 @@ cdef class AddOnBestSplitter(Splitter):
         # Current depth begins at 0
         self.current_depth = 0
 
+        # Original features
+        self.original_features = original_features
+        self.next_original_feature = 0
+        self.n_original_features = original_features.shape[0]
+
         self.feature_values = np.empty(n_samples, dtype=np.float32)
         self.constant_features = np.empty(n_features_pp, dtype=np.intp)  # n_features_pp porque es group_size - 1 mas grande que n_features y quedan valores empty pero no faltan index
 
@@ -1427,19 +1284,6 @@ cdef class AddOnBestSplitter(Splitter):
         )
 
         return 0
-    
-    cdef int node_split(
-            self,
-            ParentInfo* parent_record,
-            SplitRecord* split,
-    ) except -1 nogil:
-        return node_split_best(
-            self,
-            self.partitioner,
-            self.criterion,
-            split,
-            parent_record,
-        )
 
     cdef int node_split_dc(
             self,
@@ -1454,21 +1298,4 @@ cdef class AddOnBestSplitter(Splitter):
             self.criterion,
             split,
             parent_record
-        )
-    
-    cdef int recompute_node_split(
-            self,
-            ParentInfo* parent_record,
-            SplitRecord* split,
-            intp_t feature, # feature index of initial_tree
-            float64_t threshold, # threshold of initial_tree
-    ) except -1 nogil:
-        return recompute_node_split_func(
-            self,
-            self.partitioner,
-            self.criterion,
-            split,
-            parent_record,
-            feature,
-            threshold,
         )

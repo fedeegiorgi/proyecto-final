@@ -20,7 +20,6 @@ def _store_prediction(predict, X, out, lock, tree_index):
     --------------------------------------------------------------------------
 
     Store each tree's prediction in the 2D array `out`.
-    Now we store the predictions in the tree's corresponding column.
     """
     prediction = predict(X, check_input=False)
     with lock:
@@ -80,7 +79,7 @@ class OOBRandomForestRegressor(RandomForestGroupDebate):
         lock = threading.Lock()
 
         if self.n_outputs_ > 1:
-            all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
+            raise ValueError("Multiprediction not available in this implementation of Random Forest.")
         else:
             all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
 

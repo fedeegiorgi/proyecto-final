@@ -21,49 +21,14 @@ cdef class DepthFirstTreeExtensionBuilder(TreeBuilder):
     """
     Extended depth-first tree builder based on initial tree with additional features .
     """
-    cdef cnp.ndarray parents
-    cdef cnp.ndarray depths
-    cdef cnp.ndarray is_lefts
-    cdef cnp.ndarray is_leafs
-    cdef cnp.ndarray features
-    cdef cnp.ndarray thresholds
-    cdef cnp.ndarray impurities
-    cdef cnp.ndarray n_node_samples_vec
-    cdef cnp.ndarray weighted_n_node_samples_vec
-    cdef cnp.ndarray missing_go_to_lefts
-
-    cdef stack[StackRecord] builder_stack # Stack to store the leafs of the initial tree
-    cdef StackRecord stack_record
-    cdef float64_t weighted_n_node_samples
-
     cpdef build_extended(
-        self,
-        Tree tree,
-        object X,
-        const float64_t[:, ::1] y,
-        cnp.ndarray parents,
-        cnp.ndarray depths,
-        cnp.ndarray is_lefts,
-        cnp.ndarray is_leafs,
-        cnp.ndarray features,
-        cnp.ndarray thresholds,
-        cnp.ndarray impurities,
-        cnp.ndarray n_node_samples_vec,
-        cnp.ndarray weighted_n_node_samples_vec,
-        cnp.ndarray missing_go_to_lefts,
-        const float64_t[:] sample_weight=*,
-        const uint8_t[::1] missing_values_in_feature_mask=*,
-    )
-
-    cpdef build_extended_2(
         self,
         Tree tree,
         object X_original,
         object X_peer_prediction,
         intp_t initial_max_depth,
         const float64_t[:, ::1] y,
+        cnp.ndarray features,
         const float64_t[:] sample_weight=*,
         const uint8_t[::1] missing_values_in_feature_mask=*,
     )
-
-    cdef _continue_training(self, Tree tree)

@@ -14,11 +14,11 @@ def _store_prediction(predict, X, out, lock, tree_index):
     """
     --------------------------------------------------------------------------
     This is a utility function for joblib's Parallel.
+
     It can't go locally in ForestClassifier or ForestRegressor, because joblib
     complains that it cannot pickle it when placed there.
     --------------------------------------------------------------------------
     Store each tree's prediction in the 2D array `out`.
-    Now we store the predictions in the tree's corresponding column.
     """
     prediction = predict(X, check_input=False)
     with lock:
@@ -62,65 +62,65 @@ class OOB_plus_IQR(RandomForestGroupDebate):
 
    
     def predict(self, X):
-            check_is_fitted(self) #fijarse que no estamos ocultando las features?
+        check_is_fitted(self) #fijarse que no estamos ocultando las features?
 
-            X = self._validate_X_predict(X)
+        X = self._validate_X_predict(X)
 
-            n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
-            lock = threading.Lock()
+        n_jobs, _, _ = _partition_estimators(self.n_estimators, self.n_jobs)
+        lock = threading.Lock()
 
-            if self.n_outputs_ > 1:
-                all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
-            else:
-                all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
+        if self.n_outputs_ > 1:
+            raise ValueError("Multiprediction not available in this implementation of Random Forest.")
+        else:
+            all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
 
-            Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
-                delayed(_store_prediction)(e.predict, X, [all_predictions], lock, i)
-                for i, e in enumerate(self.estimators_)
-            )
+        Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
+            delayed(_store_prediction)(e.predict, X, [all_predictions], lock, i)
+            for i, e in enumerate(self.estimators_)
+        )
 
-            grouped_predictions = self.group_split_predictions(all_predictions)
+        grouped_predictions = self.group_split_predictions(all_predictions)
 
-            final_predictions = []
+        final_predictions = []
 
-            # For each group
-            for i in range(self._n_groups):
-                
-                # Extract the current group
-                group_predictions = grouped_predictions[i]
-                
-                # Extract the weights of the current group
-                group_weights = self.tree_weights[i]
+        # For each group
+        for i in range(self._n_groups):
+            
+            # Extract the current group
+            group_predictions = grouped_predictions[i]
+            
+            # Extract the weights of the current group
+            group_weights = self.tree_weights[i]
 
-                # Calculate Q1 and Q3 for the current group
-                Q1 = np.percentile(group_predictions, 25, axis=0)
-                Q3 = np.percentile(group_predictions, 75, axis=0)
+            # Calculate Q1 and Q3 for the current group
+            Q1 = np.percentile(group_predictions, 25, axis=0)
+            Q3 = np.percentile(group_predictions, 75, axis=0)
 
-                # Calculate IQR
-                IQR = Q3 - Q1
+            # Calculate IQR
+            IQR = Q3 - Q1
 
-                # Define the exclusion range
-                lower_bound = Q1 - 1.5 * IQR
-                upper_bound = Q3 + 1.5 * IQR
+            # Define the exclusion range
+            lower_bound = Q1 - 1.5 * IQR
+            upper_bound = Q3 + 1.5 * IQR
 
-                # FIlter predictions that are within the exclusion range
-                mask = (group_predictions >= lower_bound) & (group_predictions <= upper_bound)
+            # FIlter predictions that are within the exclusion range
+            mask = (group_predictions >= lower_bound) & (group_predictions <= upper_bound)
 
-                # Apply mask to predictions and weights (keep only valid predictions and their corresponding weights)
-                valid_predictions = np.where(mask, group_predictions, np.nan)
-                valid_weights = np.where(mask, group_weights, np.nan)
+            # Apply mask to predictions and weights (keep only valid predictions and their corresponding weights)
+            valid_predictions = np.where(mask, group_predictions, np.nan)
+            valid_weights = np.where(mask, group_weights, np.nan)
 
-                # Normalize weights only for valid predictions
-                weight_sums = np.nansum(valid_weights, axis=0, keepdims=True)  # Sum of weights for valid trees' predictions
-                normalized_weights = np.nan_to_num(valid_weights / weight_sums)  # Normalize weights (those with excluded will have weight 0)
+            # Normalize weights only for valid predictions
+            weight_sums = np.nansum(valid_weights, axis=0, keepdims=True)  # Sum of weights for valid trees' predictions
+            normalized_weights = np.nan_to_num(valid_weights / weight_sums)  # Normalize weights (those with excluded will have weight 0)
 
-                # Calcular predicción ponderada utilizando los pesos normalizados
-                weighted_predictions = np.nansum(valid_predictions * normalized_weights, axis=0)
-                
-                final_predictions.append(weighted_predictions)
+            # Calcular predicción ponderada utilizando los pesos normalizados
+            weighted_predictions = np.nansum(valid_predictions * normalized_weights, axis=0)
+            
+            final_predictions.append(weighted_predictions)
 
-            # Convertir a numpy array y calcular la media final para cada observación
-            final_predictions = np.array(final_predictions)
-            y_hat = np.mean(final_predictions, axis=0)
+        # Final predictions to numpy array and calculate the final mean for each observation
+        final_predictions = np.array(final_predictions)
+        y_hat = np.mean(final_predictions, axis=0)
 
-            return y_hat
+        return y_hat

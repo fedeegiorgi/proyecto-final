@@ -9,6 +9,9 @@ from ..utils._typedefs cimport (
 from ._criterion cimport Criterion
 from ._tree cimport ParentInfo
 
+import numpy as np
+cimport numpy as cnp
+cnp.import_array()
 
 cdef struct SplitRecord:
     # Data to track sample split
@@ -61,12 +64,14 @@ cdef class Splitter:
     cdef bint with_monotonic_cst
     cdef const float64_t[:] sample_weight
 
-    # Para ALT D
+    # For ContinuedDecisionTreeRegressor
     cdef intp_t[::1] features_pp         # Feature indices in X_peer_prediction
     cdef intp_t n_features_pp            # X_peer_prediction.shape[1]
     cdef intp_t initial_max_depth        # max_depth of initial_tree
     cdef intp_t current_depth            # current depth of the tree
-    #
+    cdef const intp_t[:] original_features     # initial tree original features
+    cdef intp_t n_original_features      # number of original features
+    cdef intp_t next_original_feature    # count for setting fixed original feature
 
     # The samples vector `samples` is maintained by the Splitter object such
     # that the samples contained in a node are contiguous. With this setting,
@@ -112,15 +117,7 @@ cdef class Splitter:
 
     cdef float64_t node_impurity(self) noexcept nogil
 
-    ######## Agregado para Alternativa D: AddOnBestSplitter ########
-
-    cdef int recompute_node_split(
-        self,
-        ParentInfo* parent_record,
-        SplitRecord* split,
-        intp_t feature, # feature index of initial_tree
-        float64_t threshold, # threshold of initial_tree
-    ) except -1 nogil
+    ######## For ContinuedDecisionTreeRegressor: AddOnBestSplitter ########
 
     cdef int init_addon(
         self,
@@ -128,6 +125,7 @@ cdef class Splitter:
         object X_peer_prediction, # X with peer prediction
         intp_t initial_max_depth, # max_depth of initial_tree
         const float64_t[:, ::1] y,
+        cnp.ndarray original_features,
         const float64_t[:] sample_weight,
         const uint8_t[::1] missing_values_in_feature_mask,
     ) except -1

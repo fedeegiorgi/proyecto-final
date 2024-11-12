@@ -14,9 +14,7 @@ def _store_prediction(predict, X, out, lock, tree_index):
     It can't go locally in ForestClassifier or ForestRegressor, because joblib
     complains that it cannot pickle it when placed there.
     --------------------------------------------------------------------------
-
     Store each tree's prediction in the 2D array `out`.
-    Now we store the predictions in the tree's corresponding column.
     """
 
     prediction = predict(X, check_input=False)
@@ -36,7 +34,7 @@ class IQRRandomForestRegressor(RandomForestGroupDebate):
         lock = threading.Lock()
 
         if self.n_outputs_ > 1:
-            all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
+            raise ValueError("Multiprediction not available in this implementation of Random Forest.")
         else:
             all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
 
@@ -73,15 +71,6 @@ class IQRRandomForestRegressor(RandomForestGroupDebate):
 
             # Calculate the mean of the filtered predictions (ignoring NaNs)
             group_averages[i] = np.nanmean(filtered_predictions, axis=0)
-
-            # print(f"Grupo {i}\n---------------")
-            # print("IQR:", IQR)
-            # print("lower_bound:", lower_bound)
-            # print("upper_bound:", upper_bound)
-            # print("group_preds:", group_predictions)
-            # print("preds_post_filter:", filtered_predictions)
-            # print("Mean Filtered:", np.nanmean(filtered_predictions, axis=0))
-            # print("---------------")
 
         y_hat = np.mean(group_averages, axis=0)
 
@@ -149,7 +138,7 @@ class PercentileTrimmingRandomForestRegressor(RandomForestGroupDebate):
         lock = threading.Lock()
 
         if self.n_outputs_ > 1:
-            all_predictions = np.zeros((self.n_estimators, X.shape[0], self.n_outputs_), dtype=np.float64)
+            raise ValueError("Multiprediction not available in this implementation of Random Forest.")
         else:
             all_predictions = np.zeros((self.n_estimators, X.shape[0]), dtype=np.float64)
 
@@ -162,36 +151,28 @@ class PercentileTrimmingRandomForestRegressor(RandomForestGroupDebate):
 
         group_averages = np.empty((self._n_groups, X.shape[0]))
 
-
+        # For each group
         for i in range(self._n_groups):
             # Extract the current group
             group_predictions = grouped_predictions[i]
 
-            # definimos los percentiles de exclusión
+            # Definition of the exclusion percentiles
             lower_percentile = self.percentile
             upper_percentile = 100 - self.percentile
 
-            # calculamos los valores de corte
+            # Calculate the lower and upper bounds for the current group
             lower_bound = np.percentile(group_predictions, lower_percentile, axis=0)
             upper_bound = np.percentile(group_predictions, upper_percentile, axis=0)
 
-            # filtramos los valores fuera de los percentiles
+            # Filter values outside the percentiles
             filtered_predictions = np.where((group_predictions >= lower_bound) & 
                                             (group_predictions <= upper_bound), 
                                             group_predictions, np.nan)
             
-            # Calculate the mean of the filtered predictions (ignoring NaNs)
+            # Calculate the mean of the filtered predictions inside the group (ignoring NaNs)
             group_averages[i] = np.nanmean(filtered_predictions, axis=0)
 
-            # print(f"Grupo {i}\n---------------")
-            # print("lower_bound:", lower_bound)
-            # print("upper_bound:", upper_bound)
-            # print("group_preds:", group_predictions)
-            # print("preds_post_filter:", filtered_predictions)
-            # print("Mean Filtered:", np.nanmean(filtered_predictions, axis=0))
-            # print("---------------")
-
-        # calculamos la media de las predicciones filtradas (ignorando NaNs)
+        # Calculate the final prediction as the mean of the group averages
         y_hat = np.mean(group_averages, axis=0)
 
         return y_hat

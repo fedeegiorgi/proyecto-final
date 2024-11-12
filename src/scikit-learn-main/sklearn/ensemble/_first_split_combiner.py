@@ -69,7 +69,7 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
             group_size=group_size,
         )
 
-        self.combined_trees = []
+        self.combined_trees_ = []
 
         if max_depth is not None:
             raise ValueError("max_depth not available in FirstSplitCombiner.")
@@ -103,17 +103,24 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
         self.initial_grouped_trees = self.group_split(self.estimators_)
         grouped_samples = self.group_split(self.estimators_samples_)
         
+        # For each group of trees
         for i, tree_group in enumerate(self.initial_grouped_trees):
+            # Get the samples used in the group
             group_samples_used = grouped_samples[i]
 
+            # Compute the sample mask for the combined group tree
             sample_mask = self._compute_group_sample(group_samples_used, n_samples)
 
+            # Select only the observations that have True value, the samples used in the group
             X_union = X[sample_mask] 
             y_union = y[sample_mask]
 
+            # Combine the trees in the group
             group_combined_tree = DecisionTreeRegressorCombiner(initial_trees=tree_group)
             group_combined_tree.fit(X_union, y_union)
-            self.combined_trees.append(group_combined_tree)
+
+            # Store the combined tree
+            self.combined_trees_.append(group_combined_tree)
         
     def predict(self, X):
         check_is_fitted(self)
@@ -125,7 +132,7 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
 
         # Avoid storing the output of every estimator by summing them here
         if self.n_outputs_ > 1:
-            y_hat = np.zeros((X.shape[0], self.n_outputs_), dtype=np.float64)
+            raise ValueError("Multiprediction not available in this implementation of Random Forest.")
         else:
             y_hat = np.zeros((X.shape[0]), dtype=np.float64)
 
@@ -133,9 +140,9 @@ class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
         lock = threading.Lock()
         Parallel(n_jobs=n_jobs, verbose=self.verbose, require="sharedmem")(
             delayed(_accumulate_prediction)(e.predict, X, [y_hat], lock)
-            for e in self.combined_trees
+            for e in self.combined_trees_
         )
 
-        y_hat /= len(self.combined_trees) # Averages the estimates from the combined trees.
+        y_hat /= len(self.combined_trees_) # Averages the estimates from the combined trees.
 
         return y_hat

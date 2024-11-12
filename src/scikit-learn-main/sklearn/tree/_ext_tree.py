@@ -46,7 +46,6 @@ from ._splitter import AddOnBestSplitter
 from ._extended_tree import DepthFirstTreeExtensionBuilder
 
 class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
-
     def __init__(
         self,
         *,
@@ -122,162 +121,9 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
             "weighted_n_node_samples": weighted_n_node_samples,
             "missing_go_to_lefts": missing_go_to_lefts,
         }
-
-    @_fit_context(prefer_skip_nested_validation=True)
-    def fit(self, X, y, sample_weight=None, missing_values_in_feature_mask=None, check_input=False): # No agregamos check_input porque desde RandomForestRegressor siempre se llama en False
-        """
-        Continues the training of the DecisionTreeRegressor with the new provided data.
-        """
-
-        ########################## Copia del fit original ##########################
-        
-        random_state = check_random_state(self.random_state)
-
-        # Determine output settings
-        n_samples, self.n_features_in_ = X.shape
-
-        y = np.atleast_1d(y)
-        expanded_class_weight = None
-
-        if y.ndim == 1:
-            # reshape is necessary to preserve the data contiguity against vs
-            # [:, np.newaxis] that does not.
-            y = np.reshape(y, (-1, 1))
-
-        self.n_outputs_ = y.shape[1]
-
-        if getattr(y, "dtype", None) != DOUBLE or not y.flags.contiguous:
-            y = np.ascontiguousarray(y, dtype=DOUBLE)
-
-        max_depth = np.iinfo(np.int32).max if self.max_depth is None else self.max_depth
-
-        if isinstance(self.min_samples_leaf, numbers.Integral):
-            min_samples_leaf = self.min_samples_leaf
-        else:  # float
-            min_samples_leaf = int(ceil(self.min_samples_leaf * n_samples))
-
-        if isinstance(self.min_samples_split, numbers.Integral):
-            min_samples_split = self.min_samples_split
-        else:  # float
-            min_samples_split = int(ceil(self.min_samples_split * n_samples))
-            min_samples_split = max(2, min_samples_split)
-
-        min_samples_split = max(min_samples_split, 2 * min_samples_leaf)
-
-        if isinstance(self.max_features, str):
-            if self.max_features == "sqrt":
-                max_features = max(1, int(np.sqrt(self.n_features_in_)))
-            elif self.max_features == "log2":
-                max_features = max(1, int(np.log2(self.n_features_in_)))
-        elif self.max_features is None:
-            max_features = self.n_features_in_
-        elif isinstance(self.max_features, numbers.Integral):
-            max_features = self.max_features
-        else:  # float
-            if self.max_features > 0.0:
-                max_features = max(1, int(self.max_features * self.n_features_in_))
-            else:
-                max_features = 0
-
-        self.max_features_ = max_features
-
-        # Hardcodeado a -1 porque usamos el builder DepthFirst
-        # max_leaf_nodes = -1 if self.max_leaf_nodes is None else self.max_leaf_nodes
-        self.max_leaf_nodes = None
-
-        if len(y) != n_samples:
-            raise ValueError(
-                "Number of labels=%d does not match number of samples=%d"
-                % (len(y), n_samples)
-            )
-
-        if sample_weight is not None:
-            sample_weight = _check_sample_weight(sample_weight, X, DOUBLE)
-
-        if expanded_class_weight is not None:
-            if sample_weight is not None:
-                sample_weight = sample_weight * expanded_class_weight
-            else:
-                sample_weight = expanded_class_weight
-
-        # Set min_weight_leaf from min_weight_fraction_leaf
-        if sample_weight is None:
-            min_weight_leaf = self.min_weight_fraction_leaf * n_samples
-        else:
-            min_weight_leaf = self.min_weight_fraction_leaf * np.sum(sample_weight)
-
-        # Build tree
-        criterion = self.criterion
-        if not isinstance(criterion, Criterion):
-            criterion = CRITERIA_REG[self.criterion](self.n_outputs_, n_samples)
-        else:
-            # Make a deepcopy in case the criterion has mutable attributes that
-            # might be shared and modified concurrently during parallel fitting
-            criterion = copy.deepcopy(criterion)
-
-        if self.monotonic_cst is None:  # siempre va a ser None para nosotros
-            monotonic_cst = None
-        else:
-            raise ValueError("This implementation does not support monotonic constraints")
-
-        ##############################################################################
-        
-        # Acá arranca lo importante!!
-
-        # Our splitter instantiation
-        splitter = AddOnBestSplitter(
-            criterion,
-            self.max_features_,
-            min_samples_leaf,
-            min_weight_leaf,
-            self.random_state,
-            monotonic_cst,
-        )
-        
-        # Normal tree instantiation
-        self.tree_ = Tree(
-            self.n_features_in_,
-            # TODO: tree shouldn't need this in this case
-            np.array([1] * self.n_outputs_, dtype=np.intp),
-            self.n_outputs_,
-        )
-
-        # Extended builder
-        builder = DepthFirstTreeExtensionBuilder(
-            splitter,
-            min_samples_split,
-            min_samples_leaf,
-            min_weight_leaf,
-            max_depth,
-            self.min_impurity_decrease,
-        )
-
-        # Get initial tree data
-        initial_tree_data = self._get_initial_tree_data(self.initial_tree)
-
-        print("Instanciated the splitter, tree and builder inside the fit method of ContinuedDecisionTreeRegressor")
-        
-        # Continue training
-        builder.build_extended(
-            self.tree_, 
-            X, 
-            y, 
-            initial_tree_data["parents"],
-            initial_tree_data["depths"],
-            initial_tree_data["is_lefts"],
-            initial_tree_data["is_leafs"],
-            initial_tree_data["features"],
-            initial_tree_data["thresholds"],
-            initial_tree_data["impurities"],
-            initial_tree_data["n_node_samples"],
-            initial_tree_data["weighted_n_node_samples"],
-            initial_tree_data["missing_go_to_lefts"],
-            sample_weight, 
-            missing_values_in_feature_mask,
-        )
     
     @_fit_context(prefer_skip_nested_validation=True)
-    def fit_v2(
+    def fit(
         self,
         X_original,
         X_peer_prediction,
@@ -285,7 +131,7 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
         sample_weight=None, 
         missing_values_in_feature_mask=None,
         check_input=False
-    ): # No agregamos check_input porque desde RandomForestRegressor siempre se llama en False
+    ):
         """
         Trains a new tree using X_original until initial_tree depth and then continues training with X_peer_prediction.
         """
@@ -294,7 +140,7 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
         random_state = check_random_state(self.random_state)
 
         # Determine output settings
-        n_samples, self.n_features_in_ = X_peer_prediction.shape # X_peer_prediction porque X_peer_prediction[1] es group_size - 1 mas grande que X_original[1] y quedan valores empty pero no faltan index
+        n_samples, self.n_features_in_ = X_peer_prediction.shape # X_peer_prediction because X_peer_prediction[1] is group_size - 1 bigger than X_original[1]
         is_classification = is_classifier(self)
 
         y = np.atleast_1d(y)
@@ -410,6 +256,18 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
 
         ######################################################################
 
+        # Get initial tree depth (initial_max_depth)
+        initial_max_depth = self.initial_tree.get_depth()
+
+        # Get initial tree data
+        initial_tree_data = self._get_initial_tree_data(self.initial_tree)
+
+        # Get initial tree features
+        features = initial_tree_data["features"]
+
+        # Remove -2 values from features (leave nodes)
+        features = np.array([f for f in features if f != -2])
+
         # Our splitter instantiation
         splitter = AddOnBestSplitter(
             criterion,
@@ -438,15 +296,12 @@ class ContinuedDecisionTreeRegressor(DecisionTreeRegressor):
             self.min_impurity_decrease,
         )
 
-        # Get initial tree depth (initial_max_depth)
-        initial_max_depth = self.initial_tree.get_depth()
-
-        builder.build_extended_2(
+        # Fit the tree
+        builder.build_extended(
             self.tree_, 
             X_original, 
             X_peer_prediction,
             initial_max_depth,
             y,
-            None, # sample_weight
-            missing_values_in_feature_mask,
+            features, 
         )
