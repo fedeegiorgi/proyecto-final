@@ -4,6 +4,7 @@ warnings.filterwarnings("ignore")
 import pandas as pd
 from sklearn.model_selection import KFold, train_test_split
 from sklearn.metrics import mean_squared_error
+from scipy.stats import kruskal
 from sklearn.ensemble import RandomForestRegressor, OOBRandomForestRegressor, IQRRandomForestRegressor
 
 df = pd.read_csv('distribucion/datasets/train_data/wind_train.csv')
@@ -27,9 +28,9 @@ def kfold_cross_validation(models, X, y, n_splits=10):
             X_train, X_test = X.iloc[train_index], X.iloc[test_index]  # .iloc porque KFold separa por numero de índice
             y_train, y_test = y.iloc[train_index], y.iloc[test_index]  # .iloc porque KFold separa por numero de índice
             
-            model.fit(X_train, y_train)
+            model.fit(X_train.values, y_train)
             
-            y_pred = model.predict(X_test)
+            y_pred = model.predict(X_test.values)
             
             mse = mean_squared_error(y_test, y_pred)
             all_scores.append({'Model': model.__class__.__name__, 'Fold': fold, 'MSE': mse})
@@ -43,9 +44,23 @@ def kfold_cross_validation(models, X, y, n_splits=10):
     return results_df
 
 
-rf_def = RandomForestRegressor()
-rf_oob = OOBRandomForestRegressor()
-rf_iqr = IQRRandomForestRegressor()
+rf_def = RandomForestRegressor(random_state=SEED)
+rf_oob = OOBRandomForestRegressor(random_state=SEED)
+rf_iqr = IQRRandomForestRegressor(random_state=SEED)
 
-models = [rf_def, rf_iqr]
+models = [rf_def, rf_oob]
 scores = kfold_cross_validation(models, X_train, y_train)
+
+# Agrupamos los MSEs de cada fold por modelo
+grouped_mses = [scores[scores['Model'] == model.__class__.__name__]['MSE'].values for model in models]
+#print(grouped_mses)
+
+# Kruskal-Wallis test
+stat, p_value = kruskal(*grouped_mses) # unpack
+print(f"Kruskal-Wallis H-statistic: {stat}") # A mayor valor de stat, mayor la diferencia de los MSEs entre los grupos.
+print(f"p-value: {p_value}")
+
+if p_value < 0.05:
+    print("There is a significant difference in MSEs between models.")
+else:
+    print("No significant difference in MSEs between models.")
