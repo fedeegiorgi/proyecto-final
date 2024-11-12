@@ -2,7 +2,7 @@ from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 from sklearn.ensemble import (
     IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, 
-    OOBRandomForestRegressor, OOB_plus_IQR, RFRegressorFirstSplitCombiner)
+    OOBRandomForestRegressor, OOB_plus_IQR, RFRegressorFirstSplitCombiner, SharedKnowledgeRandomForestRegressor)
 from sklearn.metrics import mean_squared_error
 import pandas as pd
 import numpy as np
@@ -146,15 +146,15 @@ param_grids = {
         },
         'name': "First_Splits_Combiner"
     },
-    # "6": {
-    #     'model': SharedKnowledgeRandomForestRegressor(),
-    #     'param_grid': {
-    #         'n_estimators': [30, 50, 100, 200], 
-    #         'group_size': [3, 5, 10], 
-    #         'max_depth': [None, 10, 20], 
-    #         'initial_max_depth': [5, 10, 15, 20, 25, 30]},
-    #     'name': "Shared_Knowledge"
-    # }
+    "6": {
+        'model': SharedKnowledgeRandomForestRegressor(),
+        'param_grid': {
+            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500], 
+            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)),
+            'max_depth': list(range(10, 51, 1)),
+            'initial_max_depth': list(range(2, 15, 1))},
+        'name': "Shared_Knowledge"
+    }
 }
 
 # Prompt to select the model(s)
@@ -164,7 +164,7 @@ print("2: Percentile Trimming")
 print("3: OOB")
 print("4: OOB + IQR")
 print("5: First Splits Combiner")
-# print("6: Shared Knowledge")
+print("6: Shared Knowledge")
 
 choices = input("Enter the numbers corresponding to your choice(s): ").split(',')
 
@@ -223,7 +223,7 @@ for choice in tqdm(choices):
         
         for n_estimators, group_size, max_depth, initial_max_depth in tqdm(sampled_params):
             model_instance = model.__class__(n_estimators=n_estimators, group_size=group_size, max_depth=max_depth, initial_max_depth = initial_max_depth, random_state=SEED)
-            model_instance.fit(X_train.values, y_train)
+            model_instance.fit(X_train.values, y_train.values)
             
             y_pred = model_instance.predict(X_valid.values)
             mse = mean_squared_error(y_valid, y_pred)
