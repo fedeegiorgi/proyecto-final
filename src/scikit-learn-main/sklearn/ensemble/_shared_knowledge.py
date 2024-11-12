@@ -22,7 +22,6 @@ from ..utils.validation import (
     check_array
 )
 
-
 __all__ = [
     "SharedKnowledgeRandomForestRegressor",
 ]
@@ -250,12 +249,6 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
                 # Validate training data
                 j_tree_original_X, _, _, _, _ = self._original_fit_validations(j_tree_original_X, j_tree_y, sample_weight)
                 j_tree_pp_X, j_tree_y, sample_weight, missing_values_in_feature_mask, random_state = self._original_fit_validations(j_tree_pp_X, j_tree_y, sample_weight)
-
-                # Fit initial tree
-                # initial_tree = DecisionTreeRegressor(random_state=random_state, max_depth=self.initial_max_depth)
-                # initial_tree.fit(j_tree_original_X, j_tree_y, sample_weight=sample_weight, check_input=False)
-
-                # self.initial_estimators_.append(initial_tree)
 
                 # Fit the extended tree with the new features based on the original tree
                 extended_tree = ContinuedDecisionTreeRegressor(initial_tree=tree, random_state=random_state, max_depth=self.max_depth)
