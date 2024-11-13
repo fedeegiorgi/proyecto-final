@@ -11,6 +11,7 @@ import random
 import csv
 
 SEED = 14208
+sampled_in_blocks = False
 results = []
 models_results = {}
 
@@ -50,21 +51,21 @@ print("1: Carbon Emission")
 print("2: House_8L")
 print("3: Wind")
 
-choice = input("Enter the number corresponding to your choice: ")
+dataset_choice = input("Enter the number corresponding to your dataset_choice: ")
 
-# Set the file path and dataset name based on the choice
-if choice == "1":
+# Set the file path and dataset name based on the dataset_choice
+if dataset_choice == "1":
     file_path = 'distribucion/datasets/train_data/Carbon_Emission_train.csv'
     dataset_name = 'Carbon_Emission'
-elif choice == "2":
+elif dataset_choice == "2":
     file_path = 'distribucion/datasets/train_data/house_8L_train_7000.csv'
     dataset_name = 'House_8L'
-elif choice == "3":
+elif dataset_choice == "3":
     file_path = 'distribucion/datasets/train_data/wind_train.csv'
     dataset_name = 'Wind'
 
 else:
-    print("Invalid choice. Please select 1, 2, or 3.")
+    print("Invalid dataset_choice. Please select 1, 2, or 3.")
     file_path = None
 
 # Check the file extension and load data accordingly
@@ -205,19 +206,37 @@ for choice in tqdm(choices):
 
         max_combinations = len(parameters)
 
-        # Input del usuario para muestreo de combinaciones
-        try:
-            n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+        if dataset_choice != '1':
+            # Input del usuario para muestreo de combinaciones
+            try:
+                n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+                
+                if n > max_combinations: 
+                    print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+                    exit()
             
-            if n > max_combinations: 
-                print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+            except ValueError:
+                print("Please enter a valid integer for the number of combinations.")
                 exit()
-        
-        except ValueError:
-            print("Please enter a valid integer for the number of combinations.")
-            exit()
-        
-        sampled_params = random.sample(parameters, n)
+            
+            sampled_params = random.sample(parameters, n)
+        else:
+            sampled_blocks = []
+            sampled_in_blocks = True
+            random.seed(SEED)
+
+            for block_num in range(6):
+            # Sample 300 unique parameter combinations
+                sampled_block = random.sample(parameters, 250)
+                sampled_blocks.append(sampled_block)
+            
+                # Remove the sampled items from the original parameters to avoid duplicates
+                parameters = [param for param in parameters if param not in sampled_block]
+
+            block_selection = int(input(f"\nEnter the block number (0, 1, 2, 3, 4, 5): "))
+            sampled_params = sampled_blocks[block_selection]
+
+        print(sampled_params)
 
         print(f"\nRunning grid search for model: {model_name}")
         
@@ -385,6 +404,8 @@ for choice in tqdm(choices):
     
     if search_choice == 2:
         file_path = f'resultados_top_150/{dataset_name}/{dataset_name}_{model_name}_150.npy'
+    elif sampled_in_blocks:
+        file_path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}_{block_selection}.npy'
     else:
         file_path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy'
 
@@ -410,6 +431,8 @@ if search_choice == 1:
     for model_name, arr in models_results.items():
         if search_choice == 2:
             path = f'resultados_top_150/{dataset_name}/{dataset_name}_{model_name}_150.npy'
+        elif sampled_in_blocks:
+            path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}_{block_selection}.npy'
         else:
             path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}.npy'
         data = np.load(path)
