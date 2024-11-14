@@ -1,3 +1,8 @@
+---
+geometry: "left=3cm,right=3cm,top=2.5cm,bottom=2.5cm"
+lang: "es"
+...
+
 # Parámetros default
 
 ### Original

@@ -1,7 +1,7 @@
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 from sklearn.ensemble import (
-    IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, 
+    RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, 
     OOBRandomForestRegressor, OOB_plus_IQR, RFRegressorFirstSplitCombiner, SharedKnowledgeRandomForestRegressor)
 from sklearn.metrics import mean_squared_error
 import pandas as pd
@@ -155,6 +155,13 @@ param_grids = {
             'max_depth': list(range(10, 51, 1)),
             'initial_max_depth': list(range(2, 15, 1))},
         'name': "Shared_Knowledge"
+    },
+    "7": {
+        'model': RandomForestRegressor(),
+        'param_grid': {
+            'max_depth': list(range(10, 51, 1))
+        },
+        'name': "Random_Forest"
     }
 }
 
@@ -166,6 +173,7 @@ print("3: OOB")
 print("4: OOB + IQR")
 print("5: First Splits Combiner")
 print("6: Shared Knowledge")
+print("7: Classic Random Forest")
 
 choices = input("Enter the numbers corresponding to your choice(s): ").split(',')
 
@@ -193,49 +201,54 @@ for choice in tqdm(choices):
     mse_list = []
 
     if model_name == 'Shared_Knowledge':
-        for i in param_grid['n_estimators']:         
-            for j in param_grid['group_size']:  
-                for k in param_grid['max_depth']:
-                    for z in param_grid['initial_max_depth']:
-                        if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
-                            if k > z: # Ensures max_depth > initial_max_depth
-                                parameters.append((i, j, k, z)) 
-        
-        # Manual grid search
-        best_mse, best_params = float('inf'), None
+        if search_choice == 1:
+            for i in param_grid['n_estimators']:         
+                for j in param_grid['group_size']:  
+                    for k in param_grid['max_depth']:
+                        for z in param_grid['initial_max_depth']:
+                            if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
+                                if k > z: # Ensures max_depth > initial_max_depth
+                                    parameters.append((i, j, k, z)) 
+            
+            # Manual grid search
+            best_mse, best_params = float('inf'), None
 
-        max_combinations = len(parameters)
+            max_combinations = len(parameters)
 
-        if dataset_choice != '1':
-            # Input del usuario para muestreo de combinaciones
-            try:
-                n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+            if dataset_choice != '1':
+                # Input del usuario para muestreo de combinaciones
+                try:
+                    n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+                    
+                    if n > max_combinations: 
+                        print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+                        exit()
                 
-                if n > max_combinations: 
-                    print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+                except ValueError:
+                    print("Please enter a valid integer for the number of combinations.")
                     exit()
-            
-            except ValueError:
-                print("Please enter a valid integer for the number of combinations.")
-                exit()
-            
-            sampled_params = random.sample(parameters, n)
+                
+                sampled_params = random.sample(parameters, n)
+            else:
+                sampled_blocks = []
+                sampled_in_blocks = True
+                random.seed(SEED)
+
+                for block_num in range(6):
+                # Sample 300 unique parameter combinations
+                    sampled_block = random.sample(parameters, 250)
+                    sampled_blocks.append(sampled_block)
+                
+                    # Remove the sampled items from the original parameters to avoid duplicates
+                    parameters = [param for param in parameters if param not in sampled_block]
+
+                block_selection = int(input(f"\nEnter the block number (0, 1, 2, 3, 4, 5): "))
+                sampled_params = sampled_blocks[block_selection]       
+        elif search_choice == 2:
+            sampled_params = get_top_50_params(model_name)
         else:
-            sampled_blocks = []
-            sampled_in_blocks = True
-            random.seed(SEED)
-
-            for block_num in range(6):
-            # Sample 300 unique parameter combinations
-                sampled_block = random.sample(parameters, 250)
-                sampled_blocks.append(sampled_block)
-            
-                # Remove the sampled items from the original parameters to avoid duplicates
-                parameters = [param for param in parameters if param not in sampled_block]
-
-            block_selection = int(input(f"\nEnter the block number (0, 1, 2, 3, 4, 5): "))
-            sampled_params = sampled_blocks[block_selection]
-
+            print("Invalid choice. Please select 1 or 2.")
+            exit()
         print(sampled_params)
 
         print(f"\nRunning grid search for model: {model_name}")
@@ -350,7 +363,38 @@ for choice in tqdm(choices):
             if mse < best_mse:
                 best_mse = mse
                 best_params = {'n_estimators': n_estimators, 'group_size': group_size, 'max_features': max_features}
-        
+    
+    elif model_name == 'Random_Forest':
+        # Manual grid search
+        best_mse, best_params = float('inf'), None
+
+        if search_choice == 1:
+            for i in param_grid['max_depth']:
+                parameters.append(i)
+            
+            max_combinations = len(parameters)
+
+            # Input del usuario para muestreo de combinaciones
+            try:
+                n = int(input(f"\nEnter the number of parameter combinations you want to sample from the {max_combinations} combinations: "))
+                
+                if n > max_combinations: 
+                    print(f"The number of parameter combinations must be less than or equal to {max_combinations}.")
+                    exit()
+            
+            except ValueError:
+                print("Please enter a valid integer for the number of combinations.")
+                exit()
+            
+            sampled_params = random.sample(parameters, n)
+        else:
+            print("Invalid choice. Classic random Please select 1 or 2.")
+            exit()
+
+        print(f"\nRunning grid search for model: {model_name}")
+
+        for max_depth in tqdm(sampled_params):
+            model_instance = model.__class__(max_depth=max_depth, random_state=SEED)
     else: 
         # Manual grid search
         best_mse, best_params = float('inf'), None
