@@ -201,6 +201,9 @@ for choice in tqdm(choices):
     mse_list = []
 
     if model_name == 'Shared_Knowledge':
+        # Manual grid search
+        best_mse, best_params = float('inf'), None
+
         if search_choice == 1:
             for i in param_grid['n_estimators']:         
                 for j in param_grid['group_size']:  
@@ -210,9 +213,6 @@ for choice in tqdm(choices):
                                 if k > z: # Ensures max_depth > initial_max_depth
                                     parameters.append((i, j, k, z)) 
             
-            # Manual grid search
-            best_mse, best_params = float('inf'), None
-
             max_combinations = len(parameters)
 
             if dataset_choice != '1':
@@ -249,7 +249,6 @@ for choice in tqdm(choices):
         else:
             print("Invalid choice. Please select 1 or 2.")
             exit()
-        print(sampled_params)
 
         print(f"\nRunning grid search for model: {model_name}")
         
@@ -388,13 +387,24 @@ for choice in tqdm(choices):
             
             sampled_params = random.sample(parameters, n)
         else:
-            print("Invalid choice. Classic random Please select 1 or 2.")
+            print("Invalid choice. Classic random only grid search.")
             exit()
 
         print(f"\nRunning grid search for model: {model_name}")
+        print(sampled_params)
 
         for max_depth in tqdm(sampled_params):
             model_instance = model.__class__(max_depth=max_depth, random_state=SEED)
+            model_instance.fit(X_train.values, y_train)
+            
+            y_pred = model_instance.predict(X_valid.values)
+            mse = mean_squared_error(y_valid, y_pred)
+            mse_list.append(mse)
+             
+            if mse < best_mse:
+                best_mse = mse
+                best_params = {'max_depth': max_depth}
+
     else: 
         # Manual grid search
         best_mse, best_params = float('inf'), None
@@ -443,6 +453,9 @@ for choice in tqdm(choices):
     
     # Create a tensor of parameter combinations with their corresponding MSE values
     parameter_np = np.array(sampled_params, dtype=np.float32)
+    if choice == '7':
+        parameter_np = parameter_np.reshape(-1, 1)
+
     mse_np = np.array(mse_list, dtype=np.float32).reshape(-1, 1)  # Convert MSE list to a tensor and add a dimension for concatenation
     result_np = np.concatenate((parameter_np, mse_np), axis=1)  # Combine parameters and MSE values
     
