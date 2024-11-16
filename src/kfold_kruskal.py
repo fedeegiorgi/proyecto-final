@@ -47,8 +47,8 @@ dataset_specific_params = {
         'PercentileTrimmingRandomForestRegressor': {'n_estimators': 150, 'group_size': 50,'percentile': 2, 'max_depth': 44},
         'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3,'max_depth': 20},
         'OOB_plus_IQR': {'n_estimators': 180, 'group_size': 3, 'max_depth': 21},
-        'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 20},
         'RFRegressorFirstSplitCombiner': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
+        'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 20},
         'RandomForestRegressor': {'max_depth': 20},
     },
     'House_8L': {
@@ -56,8 +56,8 @@ dataset_specific_params = {
         'PercentileTrimmingRandomForestRegressor': {'n_estimators': 150, 'group_size': 50,'percentile': 2, 'max_depth': 40},
         'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 32},
         'OOB_plus_IQR': {'n_estimators': 180, 'group_size': 3, 'max_depth': 42},
-        'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 23},
         'RFRegressorFirstSplitCombiner': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
+        'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 23},
         'RandomForestRegressor': {'max_depth': 17},
     },
     'Wind': {
@@ -65,8 +65,8 @@ dataset_specific_params = {
         'PercentileTrimmingRandomForestRegressor': {'n_estimators': 150, 'group_size': 50,'percentile': 2, 'max_depth': 44},
         'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 32},
         'OOB_plus_IQR': {'n_estimators': 180, 'group_size': 3, 'max_depth': 14},
-        'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 25},
         'RFRegressorFirstSplitCombiner': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
+        'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 25},
         'RandomForestRegressor': {'max_depth': 12},
     }
 }
@@ -79,12 +79,12 @@ def get_models_for_dataset():
         PercentileTrimmingRandomForestRegressor(),
         OOBRandomForestRegressor(),
         OOB_plus_IQR(),
-        RFRegressorFirstSplitCombiner(),
+        #RFRegressorFirstSplitCombiner(),
         SharedKnowledgeRandomForestRegressor(),
         RandomForestRegressor()
     ]
 
-def kfold_cross_validation(models, dataset_name,  X, y, n_splits=10):
+def kfold_cross_validation(models, dataset_name, X, y, n_splits=10):
     all_scores = []
     kf = KFold(n_splits=n_splits, shuffle=True, random_state=SEED)
     params = dataset_specific_params[dataset_name]
@@ -148,7 +148,7 @@ if TEST == False:
             posthoc_results = sp.posthoc_dunn(grouped_mses, p_adjust='bonferroni') # ver QUE modelos tienen diferencias significativas
             print("Dunn's post-hoc test results:")
             print(posthoc_results)
-            posthoc_results.to_csv('posthoc_results.csv', index=True)
+            posthoc_results.to_csv(f'posthoc_results{dataset_name}.csv', index=True)
 
         else:
             print(f"No significant difference in MSEs between models for dataset: {dataset_name}.")
@@ -170,7 +170,6 @@ elif TEST == True:
 
         # Agrupamos los MSEs por modelo
         grouped_mses = [scores[scores['Model'] == model.__class__.__name__]['MSE'].values for model in models]
-
         # Kruskal-Wallis test
         stat, p_value = kruskal(*grouped_mses) 
         print(f"Dataset: {dataset_name}")
@@ -184,7 +183,7 @@ elif TEST == True:
             posthoc_results = sp.posthoc_dunn(grouped_mses, p_adjust='bonferroni')
             print("Dunn's post-hoc test results:")
             print(posthoc_results)
-            posthoc_results.to_csv('posthoc_results.csv', index=True)
+            posthoc_results.to_csv(f'posthoc_results_{dataset_name}.csv', index=True)
 
         else:
             print(f"No significant difference in MSEs between models for dataset: {dataset_name}.")
