@@ -211,7 +211,7 @@ for choice in tqdm(choices):
                     for k in param_grid['max_depth']:
                         for z in param_grid['initial_max_depth']:
                             if i % j == 0 and i > j:  # Ensures n_estimators is a multiple of group_size and that group_size < n_estimators
-                                if k > z: # Ensures max_depth > initial_max_depth
+                                if not k or k > z: # Ensures max_depth > initial_max_depth
                                     parameters.append((i, j, k, z)) 
             
             max_combinations = len(parameters)
