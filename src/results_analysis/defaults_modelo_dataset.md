@@ -9,9 +9,9 @@ lang: "es"
 
 | Dataset \ Params  | max_depth |
 | ----------------- | --------- |
-| Carbon            | XX        |
-| House8L           | XX        |
-| Wind              | XX        |
+| Carbon            | 20        |
+| House8L           | 17        |
+| Wind              | 12        |
 
 ## Alternativa A
 
@@ -63,6 +63,6 @@ lang: "es"
 
 | Dataset \ Params  | n_estimators | group_size | initial_max_depth | max_depth |
 | ----------------- | ------------ | ---------- | ----------------- | --------- |
-| Carbon            |              |            |                   |           |
-| House8L           |              |            |                   |           |
-| Wind              |              |            |                   |           |
+| Carbon            | 280          | 7          | 14                | 20        |
+| House8L           | 280          | 7          | 14                | 23        |
+| Wind              | 280          | 7          | 14                | 25        |

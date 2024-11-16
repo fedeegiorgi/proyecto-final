@@ -73,61 +73,192 @@ print("Data preprocessing complete.")
 
 # Define Parameter Grids
 param_grids = {
-    "1": {
-        'model': IQRRandomForestRegressor(),
-        'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500], 
-            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
-            'max_depth': list(range(10, 51, 1))
+    "Carbon_Emission": {
+        "1": {
+            'model': IQRRandomForestRegressor(),
+            'param_grid': {
+                'n_estimators': list(range(30, 1351, 60)), 
+                'group_size': [2, 3, 5, 6, 10, 15, 20, 25, 30, 50, 75], 
+                'max_depth': list(range(2, 33, 1))
+            },
+            'name': "IQR",
+            'default_params': {'max_depth': 17}
         },
-        'name': "IQR"
-    },
-    "2": {
-        'model': PercentileTrimmingRandomForestRegressor(),
-        'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500], 
-            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
-            'max_depth': list(range(10, 51, 1)),
-            'percentile': list(range(1, 16, 1))
-        }, 
-        'name': "Percentile_Trimming"
-    },
-    "3": {
-        'model': OOBRandomForestRegressor(),
-        'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500], 
-            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
-            'max_depth': list(range(10, 51, 1))
+        "2": {
+            'model': PercentileTrimmingRandomForestRegressor(),
+            'param_grid': {
+                'n_estimators': list(range(100, 1250, 50)) , 
+                'group_size': [2, 3, 5, 6, 10, 15, 20, 25, 30, 50, 75], 
+                'max_depth': list(range(29, 60, 1)),
+                'percentile': list(range(1, 16, 1))
+            }, 
+            'name': "Percentile_Trimming",
+            'default_params': {'max_depth': 44}
         },
-        'name': "OOB"
-    },
-    "4": {
-        'model': OOB_plus_IQR(),
-        'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500], 
-            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
-            'max_depth': list(range(10, 51, 1))
+        "3": {
+            'model': OOBRandomForestRegressor(),
+            'param_grid': {
+                'n_estimators': list(range(30, 1381, 60)), 
+                'group_size': [2, 3, 4, 5, 6, 9, 10, 12, 15, 18, 20, 30, 36, 45, 60, 90], 
+                'max_depth': list(range(5, 36, 1))
+            },
+            'name': "OOB",
+            'default_params': {'max_depth': 20}
         },
-        'name': "OOB_plus_IQR"
-    },
-    "5": {
-        'model': RFRegressorFirstSplitCombiner(),
-        'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500],
-            'group_size': list(range(3, 20, 1)),
-            'max_features': [-1, -2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
+        "4": {
+            'model': OOB_plus_IQR(),
+            'param_grid': {
+                'n_estimators': list(range(30, 1381, 60)), 
+                'group_size': [2, 3, 4, 5, 6, 9, 10, 12, 15, 18, 20, 30, 36, 45, 60, 90], 
+                'max_depth': list(range(6, 47, 1))
+            },
+            'name': "OOB_plus_IQR",
+            'default_params': {'max_depth': 21}
         },
-        'name': "First_Splits_Combiner"
+        "5": {
+            'model': RFRegressorFirstSplitCombiner(),
+            'param_grid': {
+                'n_estimators': list(range(50, 1200, 50)),
+                'group_size': [2, 4, 5, 10, 20],
+                'max_features': [-1, -2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
+            },
+            'name': "First_Splits_Combiner"
+        },
+        "6": {
+            'model': SharedKnowledgeRandomForestRegressor(),
+            'param_grid': {
+                'n_estimators': list(range(70, 1331, 70)) , 
+                'group_size': [2, 4, 7, 8, 10, 14, 20, 28, 40, 70, 140],
+                'max_depth': list(range(5, 46, 1)),
+                'initial_max_depth': list(range(2, 19, 1))},
+            'name': "Shared_Knowledge",
+            'default_params': {'max_depth': 20}
+        }
     },
-    "6": {
-        'model': SharedKnowledgeRandomForestRegressor(),
-        'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500], 
-            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)),
-            'max_depth': list(range(10, 51, 1)),
-            'initial_max_depth': list(range(2, 15, 1))},
-        'name': "Shared_Knowledge"
-    }
+    "House_8L": {
+        "1": {
+            'model': IQRRandomForestRegressor(),
+            'param_grid': {
+                'n_estimators': list(range(30, 1351, 60)), 
+                'group_size': [2, 3, 5, 6, 10, 15, 20, 25, 30, 50, 75], 
+                'max_depth': list(range(2, 33, 1))
+            },
+            'name': "IQR",
+            'default_params': {'max_depth': 17}
+        },
+        "2": {
+            'model': PercentileTrimmingRandomForestRegressor(),
+            'param_grid': {
+                'n_estimators': list(range(100, 1250, 50)) , 
+                'group_size': [2, 3, 5, 6, 10, 15, 20, 25, 30, 50, 75], 
+                'max_depth': list(range(25, 56, 1)),
+                'percentile': list(range(1, 16, 1))
+            }, 
+            'name': "Percentile_Trimming",
+            'default_params': {'max_depth': 40}
+        },
+        "3": {
+            'model': OOBRandomForestRegressor(),
+            'param_grid': {
+                'n_estimators': list(range(30, 1381, 60)), 
+                'group_size': [2, 3, 4, 5, 6, 9, 10, 12, 15, 18, 20, 30, 36, 45, 60, 90], 
+                'max_depth': list(range(17, 48, 1))
+            },
+            'name': "OOB",
+            'default_params': {'max_depth': 32}
+        },
+        "4": {
+            'model': OOB_plus_IQR(),
+            'param_grid': {
+                'n_estimators': list(range(30, 1381, 60)), 
+                'group_size': [2, 3, 4, 5, 6, 9, 10, 12, 15, 18, 20, 30, 36, 45, 60, 90], 
+                'max_depth': list(range(27, 58, 1))
+            },
+            'name': "OOB_plus_IQR",
+            'default_params': {'max_depth': 42}
+        },
+        "5": {
+            'model': RFRegressorFirstSplitCombiner(),
+            'param_grid': {
+                'n_estimators': list(range(50, 1200, 50)),
+                'group_size': [2, 4, 5, 10, 20],
+                'max_features': [-1, -2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
+            },
+            'name': "First_Splits_Combiner"
+        },
+        "6": {
+            'model': SharedKnowledgeRandomForestRegressor(),
+            'param_grid': {
+                'n_estimators': list(range(70, 1331, 70)) , 
+                'group_size': [2, 4, 7, 8, 10, 14, 20, 28, 40, 70, 140],
+                'max_depth': list(range(8, 39, 1)),
+                'initial_max_depth': list(range(2, 19, 1))},
+            'name': "Shared_Knowledge",
+            'default_params': {'max_depth': 23}
+        }
+    },
+    "Wind": {
+        "1": {
+            'model': IQRRandomForestRegressor(),
+            'param_grid': {
+                'n_estimators': list(range(30, 1351, 60)), 
+                'group_size': [2, 3, 5, 6, 10, 15, 20, 25, 30, 50, 75], 
+                'max_depth': list(range(4, 35, 1))
+            },
+            'name': "IQR",
+            'default_params': {'max_depth': 19}
+        },
+        "2": {
+            'model': PercentileTrimmingRandomForestRegressor(),
+            'param_grid': {
+                'n_estimators': list(range(100, 1250, 50)) , 
+                'group_size': [2, 3, 5, 6, 10, 15, 20, 25, 30, 50, 75], 
+                'max_depth': list(range(29, 60, 1)),
+                'percentile': list(range(1, 16, 1))
+            }, 
+            'name': "Percentile_Trimming",
+            'default_params': {'max_depth': 44}
+        },
+        "3": {
+            'model': OOBRandomForestRegressor(),
+            'param_grid': {
+                'n_estimators': list(range(30, 1381, 60)), 
+                'group_size': [2, 3, 4, 5, 6, 9, 10, 12, 15, 18, 20, 30, 36, 45, 60, 90], 
+                'max_depth': list(range(17, 48, 1))
+            },
+            'name': "OOB",
+            'default_params': {'max_depth': 32}
+        },
+        "4": {
+            'model': OOB_plus_IQR(),
+            'param_grid': {
+                'n_estimators': list(range(30, 1381, 60)), 
+                'group_size': [2, 3, 4, 5, 6, 9, 10, 12, 15, 18, 20, 30, 36, 45, 60, 90], 
+                'max_depth': list(range(4, 30, 1))
+            },
+            'name': "OOB_plus_IQR",
+            'default_params': {'max_depth': 14}
+        },
+        "5": {
+            'model': RFRegressorFirstSplitCombiner(),
+            'param_grid': {
+                'n_estimators': list(range(50, 1200, 50)),
+                'group_size': [2, 4, 5, 10, 20],
+                'max_features': [-1, -2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
+            },
+            'name': "First_Splits_Combiner"
+        },
+        "6": {
+            'model': SharedKnowledgeRandomForestRegressor(),
+            'param_grid': {
+                'n_estimators': list(range(70, 1331, 70)) , 
+                'group_size': [2, 4, 7, 8, 10, 14, 20, 28, 40, 70, 140],
+                'max_depth': list(range(10, 41, 1)),
+                'initial_max_depth': list(range(2, 19, 1))},
+            'name': "Shared_Knowledge",
+            'default_params': {'max_depth': 25}
+        }
+    },
 }
 
 # Prompt to select the model(s)
