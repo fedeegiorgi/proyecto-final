@@ -153,7 +153,8 @@ param_grids = {
             'n_estimators': [280], 
             'group_size': [7],
             'max_depth': list(range(20, 41, 1)) + [None],
-            'initial_max_depth': [14],
+            'initial_max_depth': [14]
+        },
         'name': "Shared_Knowledge"
     },
     "7": {
