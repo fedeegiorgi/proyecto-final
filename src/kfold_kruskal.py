@@ -1,5 +1,5 @@
-import warnings
-warnings.filterwarnings("ignore")
+# import warnings
+# warnings.filterwarnings("ignore")
 
 import pandas as pd
 from tqdm import tqdm
@@ -28,7 +28,7 @@ DATASETS_COLUMNS = {
 }
 
 
-TEST = False
+TEST = True
 datasets_train = {
     'Carbon_Emission': 'distribucion/datasets/train_data/Carbon_Emission_train.csv',
     'House_8L': 'distribucion/datasets/train_data/house_8L_train_7000.csv',
@@ -41,61 +41,60 @@ datasets_test = {
     'Wind': 'distribucion/datasets/test_data/wind_test.csv'
 }
 
-
 dataset_specific_params = {
     'Carbon_Emission': {
-        'RandomForestRegressor': {'max_depth': None},
-        'IQRRandomForestRegressor': {'max_depth': 17},
-        'PercentileTrimmingRandomForestRegressor': {'max_depth': 44},
-        'OOBRandomForestRegressor': {'max_depth': 20},
-        'OOB_plus_IQR': {'max_depth': 21},
-        #'SharedKnowledgeRandomForestRegressor': {'max_depth': },
+        'IQRRandomForestRegressor': {'n_estimators': 150, 'group_size': 3, 'max_depth': 17},
+        'PercentileTrimmingRandomForestRegressor': {'n_estimators': 150, 'group_size': 50,'percentile': 2, 'max_depth': 44},
+        'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3,'max_depth': 20},
+        'OOB_plus_IQR': {'n_estimators': 180, 'group_size': 3, 'max_depth': 21},
+        'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 20},
+        'RandomForestRegressor': {'max_depth': 20},
     },
     'House_8L': {
-        'RandomForestRegressor': {'max_depth': None},
-        'IQRRandomForestRegressor': {'max_depth': 17},
-        'PercentileTrimmingRandomForestRegressor': {'max_depth': 40},
-        'OOBRandomForestRegressor': {'max_depth': 32},
-        'OOB_plus_IQR': {'max_depth': 42},
-        #'SharedKnowledgeRandomForestRegressor': {'max_depth': },
+        'IQRRandomForestRegressor': {'n_estimators': 150, 'group_size': 3, 'max_depth': 17},
+        'PercentileTrimmingRandomForestRegressor': {'n_estimators': 150, 'group_size': 50,'percentile': 2, 'max_depth': 40},
+        'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 32},
+        'OOB_plus_IQR': {'n_estimators': 180, 'group_size': 3, 'max_depth': 42},
+        'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 23},
+        'RandomForestRegressor': {'max_depth': 17},
     },
     'Wind': {
-        'RandomForestRegressor': {'max_depth': None},
-        'IQRRandomForestRegressor': {'max_depth': 19},
-        'PercentileTrimmingRandomForestRegressor': {'max_depth': 44},
-        'OOBRandomForestRegressor': {'max_depth': 32},
-        'OOB_plus_IQR': {'max_depth': 14},
-        'RFRegressorFirstSplitCombiner': {'max_depth': 27},
-        #'SharedKnowledgeRandomForestRegressor': {'max_depth': },
+        'IQRRandomForestRegressor': {'n_estimators': 150, 'group_size': 3, 'max_depth': 19},
+        'PercentileTrimmingRandomForestRegressor': {'n_estimators': 150, 'group_size': 50,'percentile': 2, 'max_depth': 44},
+        'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 32},
+        'OOB_plus_IQR': {'n_estimators': 180, 'group_size': 3, 'max_depth': 14},
+        'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 25},
+        'RandomForestRegressor': {'max_depth': 12},
     }
 }
 
-def get_models_for_dataset(dataset_name):
+
+def get_models_for_dataset():
     # Conseguimos los hiperparametros de cada modelo segun el dataset
-    params = dataset_specific_params[dataset_name]
     return [
-        RandomForestRegressor(**params['RandomForestRegressor'], random_state=SEED),
-        IQRRandomForestRegressor(n_estimators=150, group_size=3, **params['IQRRandomForestRegressor'], random_state=SEED),
-        PercentileTrimmingRandomForestRegressor(n_estimators=150, group_size=50, percentile=2, **params['PercentileTrimmingRandomForestRegressor'], random_state=SEED,),
-        OOBRandomForestRegressor(n_estimators=180, group_size=3, **params['OOBRandomForestRegressor'], random_state=SEED),
-        OOB_plus_IQR(n_estimators=180, group_size=3, **params['OOB_plus_IQR'], random_state=SEED),
-        RFRegressorFirstSplitCombiner(n_estimators=100, group_size=10, max_features='log2', random_state=SEED),
-        # SharedKnowledgeRandomForestRegressor()
+        IQRRandomForestRegressor(),
+        PercentileTrimmingRandomForestRegressor(),
+        OOBRandomForestRegressor(),
+        OOB_plus_IQR(),
+        RFRegressorFirstSplitCombiner(),
+        SharedKnowledgeRandomForestRegressor(),
+        RandomForestRegressor()
     ]
 
-def kfold_cross_validation(models, X, y, n_splits=10):
+def kfold_cross_validation(models, dataset_name,  X, y, n_splits=10):
     all_scores = []
-    
+    kf = KFold(n_splits=n_splits, shuffle=True, random_state=SEED)
+    params = dataset_specific_params[dataset_name]
     for model in tqdm(models, desc="Models"):
-        kf = KFold(n_splits=n_splits, shuffle=True, random_state=SEED)
         
         for fold, (train_index, test_index) in enumerate(kf.split(X), start=1):
             X_train, X_test = X.iloc[train_index], X.iloc[test_index]  # .iloc porque KFold separa por numero de índice, X and y tienen que ser pandas DataFrames 
             y_train, y_test = y.iloc[train_index], y.iloc[test_index]  # .iloc porque KFold separa por numero de índice
             
-            model.fit(X_train.values, y_train.values)
+            model_instance = model.__class__(**params[model.__class__.__name__], random_state=SEED)
+            model_instance.fit(X_train.values, y_train.values)
             
-            y_pred = model.predict(X_test.values)
+            y_pred = model_instance.predict(X_test.values)
             
             mse = mean_squared_error(y_test, y_pred)
             all_scores.append({'Model': model.__class__.__name__, 'Fold': fold, 'MSE': mse})
@@ -125,8 +124,9 @@ if TEST == False:
         X_train, X_valid = pd.get_dummies(X_train), pd.get_dummies(X_valid)
         X_train, X_valid = X_train.align(X_valid, join='left', axis=1, fill_value=0)
 
-        models = get_models_for_dataset(dataset_name)
-        scores = kfold_cross_validation(models, X_train, y_train)
+        models = get_models_for_dataset()
+        scores = kfold_cross_validation(models, dataset_name, X_train, y_train)
+        scores.to_csv(f'score_{dataset_name}.csv', index=False)
 
         # Agrupamos los MSEs por modelo
         grouped_mses = [scores[scores['Model'] == model.__class__.__name__]['MSE'].values for model in models]
@@ -145,12 +145,14 @@ if TEST == False:
             posthoc_results = sp.posthoc_dunn(grouped_mses, p_adjust='bonferroni') # ver QUE modelos tienen diferencias significativas
             print("Dunn's post-hoc test results:")
             print(posthoc_results)
+            posthoc_results.to_csv('posthoc_results.csv', index=True)
+
         else:
             print(f"No significant difference in MSEs between models for dataset: {dataset_name}.")
 
 elif TEST == True:
 
-    for dataset_name, path in tqdm(datasets_train.items(), desc="Datasets"): 
+    for dataset_name, path in tqdm(datasets_test.items(), desc="Datasets"): 
 
         # Preprocesamiento de datos de Test
         test_df = pd.read_csv(path)
@@ -159,8 +161,9 @@ elif TEST == True:
         X_test = test_df.drop(target_column, axis=1)
         X_test = pd.get_dummies(X_test)
 
-        models = get_models_for_dataset(dataset_name)
-        scores = kfold_cross_validation(models, X_test, y_test)
+        models = get_models_for_dataset()
+        scores = kfold_cross_validation(models, dataset_name, X_test, y_test)
+        scores.to_csv(f'score_{dataset_name}.csv', index=False)
 
         # Agrupamos los MSEs por modelo
         grouped_mses = [scores[scores['Model'] == model.__class__.__name__]['MSE'].values for model in models]
@@ -178,6 +181,7 @@ elif TEST == True:
             posthoc_results = sp.posthoc_dunn(grouped_mses, p_adjust='bonferroni')
             print("Dunn's post-hoc test results:")
             print(posthoc_results)
+            posthoc_results.to_csv('posthoc_results.csv', index=True)
 
         else:
             print(f"No significant difference in MSEs between models for dataset: {dataset_name}.")
