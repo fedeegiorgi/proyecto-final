@@ -150,10 +150,10 @@ param_grids = {
     "6": {
         'model': SharedKnowledgeRandomForestRegressor(),
         'param_grid': {
-            'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500], 
-            'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)),
-            'max_depth': list(range(10, 51, 1)),
-            'initial_max_depth': list(range(2, 15, 1))},
+            'n_estimators': [280], 
+            'group_size': [7],
+            'max_depth': list(range(20, 41, 1)) + [None],
+            'initial_max_depth': [14],
         'name': "Shared_Knowledge"
     },
     "7": {
