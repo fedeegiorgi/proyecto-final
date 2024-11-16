@@ -48,6 +48,7 @@ dataset_specific_params = {
         'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3,'max_depth': 20},
         'OOB_plus_IQR': {'n_estimators': 180, 'group_size': 3, 'max_depth': 21},
         'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 20},
+        'RFRegressorFirstSplitCombiner': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
         'RandomForestRegressor': {'max_depth': 20},
     },
     'House_8L': {
@@ -56,6 +57,7 @@ dataset_specific_params = {
         'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 32},
         'OOB_plus_IQR': {'n_estimators': 180, 'group_size': 3, 'max_depth': 42},
         'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 23},
+        'RFRegressorFirstSplitCombiner': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
         'RandomForestRegressor': {'max_depth': 17},
     },
     'Wind': {
@@ -64,6 +66,7 @@ dataset_specific_params = {
         'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 32},
         'OOB_plus_IQR': {'n_estimators': 180, 'group_size': 3, 'max_depth': 14},
         'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 25},
+        'RFRegressorFirstSplitCombiner': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
         'RandomForestRegressor': {'max_depth': 12},
     }
 }
