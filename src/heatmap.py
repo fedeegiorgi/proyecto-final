@@ -130,7 +130,7 @@ param_grids = {
             'param_grid': {
                 'n_estimators': list(range(70, 1331, 70)), 
                 'group_size': [2, 4, 7, 8, 10, 14, 20, 28, 40, 70, 140],
-                'max_depth': list(range(5, 46, 1)),
+                'max_depth': list(range(15, 46, 1)),
                 'initial_max_depth': list(range(2, 19, 1))},
             'name': "Shared_Knowledge",
             'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 20}
@@ -193,7 +193,7 @@ param_grids = {
             'param_grid': {
                 'n_estimators': list(range(70, 1331, 70)), 
                 'group_size': [2, 4, 7, 8, 10, 14, 20, 28, 40, 70, 140],
-                'max_depth': list(range(8, 39, 1)),
+                'max_depth': list(range(15, 39, 1)),
                 'initial_max_depth': list(range(2, 19, 1))},
             'name': "Shared_Knowledge",
             'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 23}
@@ -256,7 +256,7 @@ param_grids = {
             'param_grid': {
                 'n_estimators': list(range(70, 1331, 70)), 
                 'group_size': [2, 4, 7, 8, 10, 14, 20, 28, 40, 70, 140],
-                'max_depth': list(range(10, 41, 1)),
+                'max_depth': list(range(15, 41, 1)),
                 'initial_max_depth': list(range(2, 19, 1))},
             'name': "Shared_Knowledge",
             'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 25}
