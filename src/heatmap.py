@@ -314,7 +314,7 @@ for choice in tqdm(choices):
                     model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=def_params['group_size'], initial_max_depth=def_params['initial_max_depth'],
                                                      max_depth=max_depth, random_state=SEED, n_jobs=3)
 
-                model_instance.fit(X_train.values, y_train)
+                model_instance.fit(X_train.values, y_train.values)
                 
                 y_pred = model_instance.predict(X_valid.values)
                 mse = mean_squared_error(y_valid, y_pred)
@@ -335,7 +335,7 @@ for choice in tqdm(choices):
                 else:
                     model_instance = model.__class__(n_estimators=n_estimators, group_size=def_params['group_size'], initial_max_depth=def_params['initial_max_depth'],
                                                      max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
-                model_instance.fit(X_train.values, y_train)
+                model_instance.fit(X_train.values, y_train.values)
                 
                 y_pred = model_instance.predict(X_valid.values)
                 mse = mean_squared_error(y_valid, y_pred)
@@ -356,7 +356,7 @@ for choice in tqdm(choices):
                 else:
                     model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=group_size, initial_max_depth=def_params['initial_max_depth'],
                                                      max_depth=def_params['max_depth'], random_state=SEED)
-                model_instance.fit(X_train.values, y_train)
+                model_instance.fit(X_train.values, y_train.values)
                 
                 y_pred = model_instance.predict(X_valid.values)
                 mse = mean_squared_error(y_valid, y_pred)
@@ -371,7 +371,7 @@ for choice in tqdm(choices):
                 model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=def_params['group_size'], percentile=percentile,
                                                      max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
 
-                model_instance.fit(X_train.values, y_train)
+                model_instance.fit(X_train.values, y_train.values)
                 
                 y_pred = model_instance.predict(X_valid.values)
                 mse = mean_squared_error(y_valid, y_pred)
@@ -385,7 +385,7 @@ for choice in tqdm(choices):
             for initial_max_depth in tqdm(params):
                 model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=def_params['group_size'], initial_max_depth=initial_max_depth,
                                                  max_depth=def_params['max_depth'], random_state=SEED)
-                model_instance.fit(X_train.values, y_train)
+                model_instance.fit(X_train.values, y_train.values)
                 
                 y_pred = model_instance.predict(X_valid.values)
                 mse = mean_squared_error(y_valid, y_pred)
@@ -403,7 +403,7 @@ for choice in tqdm(choices):
                     max_features = 'log2'
 
                 model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=def_params['group_size'], max_features=max_features, random_state=SEED)
-                model_instance.fit(X_train.values, y_train)
+                model_instance.fit(X_train.values, y_train.values)
                 
                 y_pred = model_instance.predict(X_valid.values)
                 mse = mean_squared_error(y_valid, y_pred)
