@@ -330,8 +330,8 @@ for choice in tqdm(choices):
                     model_instance = model.__class__(n_estimators=n_estimators, group_size=def_params['group_size'], percentile=def_params['percentile'],
                                                      max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
                 elif model_name == 'First_Splits_Combiner':
-                    model_instance = model.__class__(n_estimators=n_estimators, group_size=def_params['group_size'], max_features=def_params['max_features'],
-                                                     max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
+                    model_instance = model.__class__(n_estimators=n_estimators, group_size=def_params['group_size'], 
+                                                     max_features=def_params['max_features'], random_state=SEED, n_jobs=3)
                 else:
                     model_instance = model.__class__(n_estimators=n_estimators, group_size=def_params['group_size'], initial_max_depth=def_params['initial_max_depth'],
                                                      max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
@@ -351,8 +351,8 @@ for choice in tqdm(choices):
                     model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=group_size, percentile=def_params['percentile'],
                                                      max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
                 elif model_name == 'First_Splits_Combiner':
-                    model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=group_size, max_features=def_params['max_features'],
-                                                     max_depth=def_params['max_depth'], random_state=SEED)
+                    model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=group_size, max_features=def_params['max_features'], 
+                                                     random_state=SEED)
                 else:
                     model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=group_size, initial_max_depth=def_params['initial_max_depth'],
                                                      max_depth=def_params['max_depth'], random_state=SEED)
