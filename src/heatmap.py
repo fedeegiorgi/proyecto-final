@@ -78,22 +78,22 @@ param_grids = {
             'model': IQRRandomForestRegressor(),
             'param_grid': {
                 'n_estimators': list(range(30, 1351, 60)), 
-                'group_size': [2, 3, 5, 6, 10, 15, 20, 25, 30, 50, 75], 
+                'group_size': [2, 3, 5, 6, 10, 15, 25, 30, 50, 75], 
                 'max_depth': list(range(2, 33, 1))
             },
             'name': "IQR",
-            'default_params': {'max_depth': 17}
+            'def_params': {'n_estimators': 150, 'group_size': 10, 'max_depth': 17}
         },
         "2": {
             'model': PercentileTrimmingRandomForestRegressor(),
             'param_grid': {
                 'n_estimators': list(range(100, 1250, 50)) , 
-                'group_size': [2, 3, 5, 6, 10, 15, 20, 25, 30, 50, 75], 
+                'group_size': [3, 5, 6, 10, 15, 25, 30, 50, 75], 
                 'max_depth': list(range(29, 60, 1)),
                 'percentile': list(range(1, 16, 1))
             }, 
             'name': "Percentile_Trimming",
-            'default_params': {'max_depth': 44}
+            'def_params': {'n_estimators': 150, 'group_size': 50, 'percentile': 2, 'max_depth': 44}
         },
         "3": {
             'model': OOBRandomForestRegressor(),
@@ -103,7 +103,7 @@ param_grids = {
                 'max_depth': list(range(5, 36, 1))
             },
             'name': "OOB",
-            'default_params': {'max_depth': 20}
+            'def_params': {'n_estimators': 180, 'group_size': 3, 'max_depth': 20}
         },
         "4": {
             'model': OOB_plus_IQR(),
@@ -113,7 +113,7 @@ param_grids = {
                 'max_depth': list(range(6, 47, 1))
             },
             'name': "OOB_plus_IQR",
-            'default_params': {'max_depth': 21}
+            'def_params': {'n_estimators': 180, 'group_size': 3, 'max_depth': 21}
         },
         "5": {
             'model': RFRegressorFirstSplitCombiner(),
@@ -122,17 +122,18 @@ param_grids = {
                 'group_size': [2, 4, 5, 10, 20],
                 'max_features': [-1, -2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
             },
-            'name': "First_Splits_Combiner"
+            'name': "First_Splits_Combiner",
+            'def_params': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'}
         },
         "6": {
             'model': SharedKnowledgeRandomForestRegressor(),
             'param_grid': {
-                'n_estimators': list(range(70, 1331, 70)) , 
+                'n_estimators': list(range(70, 1331, 70)), 
                 'group_size': [2, 4, 7, 8, 10, 14, 20, 28, 40, 70, 140],
                 'max_depth': list(range(5, 46, 1)),
                 'initial_max_depth': list(range(2, 19, 1))},
             'name': "Shared_Knowledge",
-            'default_params': {'max_depth': 20}
+            'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 20}
         }
     },
     "House_8L": {
@@ -140,22 +141,22 @@ param_grids = {
             'model': IQRRandomForestRegressor(),
             'param_grid': {
                 'n_estimators': list(range(30, 1351, 60)), 
-                'group_size': [2, 3, 5, 6, 10, 15, 20, 25, 30, 50, 75], 
+                'group_size': [2, 3, 5, 6, 10, 15, 25, 30, 50, 75], 
                 'max_depth': list(range(2, 33, 1))
             },
             'name': "IQR",
-            'default_params': {'max_depth': 17}
+            'def_params': {'n_estimators': 150, 'group_size': 10, 'max_depth': 17}
         },
         "2": {
             'model': PercentileTrimmingRandomForestRegressor(),
             'param_grid': {
-                'n_estimators': list(range(100, 1250, 50)) , 
-                'group_size': [2, 3, 5, 6, 10, 15, 20, 25, 30, 50, 75], 
+                'n_estimators': list(range(100, 1250, 50)), 
+                'group_size': [3, 5, 6, 10, 15, 25, 30, 50, 75], 
                 'max_depth': list(range(25, 56, 1)),
                 'percentile': list(range(1, 16, 1))
             }, 
             'name': "Percentile_Trimming",
-            'default_params': {'max_depth': 40}
+            'def_params': {'n_estimators': 150, 'group_size': 50, 'percentile': 2, 'max_depth': 40}
         },
         "3": {
             'model': OOBRandomForestRegressor(),
@@ -165,7 +166,7 @@ param_grids = {
                 'max_depth': list(range(17, 48, 1))
             },
             'name': "OOB",
-            'default_params': {'max_depth': 32}
+            'def_params': {'n_estimators': 180, 'group_size': 3, 'max_depth': 32}
         },
         "4": {
             'model': OOB_plus_IQR(),
@@ -175,7 +176,7 @@ param_grids = {
                 'max_depth': list(range(27, 58, 1))
             },
             'name': "OOB_plus_IQR",
-            'default_params': {'max_depth': 42}
+            'def_params': {'n_estimators': 180, 'group_size': 3, 'max_depth': 42}
         },
         "5": {
             'model': RFRegressorFirstSplitCombiner(),
@@ -184,17 +185,18 @@ param_grids = {
                 'group_size': [2, 4, 5, 10, 20],
                 'max_features': [-1, -2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
             },
-            'name': "First_Splits_Combiner"
+            'name': "First_Splits_Combiner",
+            'def_params': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'}
         },
         "6": {
             'model': SharedKnowledgeRandomForestRegressor(),
             'param_grid': {
-                'n_estimators': list(range(70, 1331, 70)) , 
+                'n_estimators': list(range(70, 1331, 70)), 
                 'group_size': [2, 4, 7, 8, 10, 14, 20, 28, 40, 70, 140],
                 'max_depth': list(range(8, 39, 1)),
                 'initial_max_depth': list(range(2, 19, 1))},
             'name': "Shared_Knowledge",
-            'default_params': {'max_depth': 23}
+            'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 23}
         }
     },
     "Wind": {
@@ -202,22 +204,22 @@ param_grids = {
             'model': IQRRandomForestRegressor(),
             'param_grid': {
                 'n_estimators': list(range(30, 1351, 60)), 
-                'group_size': [2, 3, 5, 6, 10, 15, 20, 25, 30, 50, 75], 
+                'group_size': [2, 3, 5, 6, 10, 15, 25, 30, 50, 75], 
                 'max_depth': list(range(4, 35, 1))
             },
             'name': "IQR",
-            'default_params': {'max_depth': 19}
+            'def_params': {'n_estimators': 150, 'group_size': 10, 'max_depth': 19}
         },
         "2": {
             'model': PercentileTrimmingRandomForestRegressor(),
             'param_grid': {
-                'n_estimators': list(range(100, 1250, 50)) , 
-                'group_size': [2, 3, 5, 6, 10, 15, 20, 25, 30, 50, 75], 
+                'n_estimators': list(range(100, 1250, 50)), 
+                'group_size': [3, 5, 6, 10, 15, 25, 30, 50, 75], 
                 'max_depth': list(range(29, 60, 1)),
                 'percentile': list(range(1, 16, 1))
             }, 
             'name': "Percentile_Trimming",
-            'default_params': {'max_depth': 44}
+            'def_params': {'n_estimators': 150, 'group_size': 50, 'percentile': 2, 'max_depth': 44}
         },
         "3": {
             'model': OOBRandomForestRegressor(),
@@ -227,7 +229,7 @@ param_grids = {
                 'max_depth': list(range(17, 48, 1))
             },
             'name': "OOB",
-            'default_params': {'max_depth': 32}
+            'def_params': {'n_estimators': 180, 'group_size': 3, 'max_depth': 32}
         },
         "4": {
             'model': OOB_plus_IQR(),
@@ -237,7 +239,7 @@ param_grids = {
                 'max_depth': list(range(4, 30, 1))
             },
             'name': "OOB_plus_IQR",
-            'default_params': {'max_depth': 14}
+            'def_params': {'n_estimators': 180, 'group_size': 3, 'max_depth': 14}
         },
         "5": {
             'model': RFRegressorFirstSplitCombiner(),
@@ -246,17 +248,18 @@ param_grids = {
                 'group_size': [2, 4, 5, 10, 20],
                 'max_features': [-1, -2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
             },
-            'name': "First_Splits_Combiner"
+            'name': "First_Splits_Combiner",
+            'def_params': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'}
         },
         "6": {
             'model': SharedKnowledgeRandomForestRegressor(),
             'param_grid': {
-                'n_estimators': list(range(70, 1331, 70)) , 
+                'n_estimators': list(range(70, 1331, 70)), 
                 'group_size': [2, 4, 7, 8, 10, 14, 20, 28, 40, 70, 140],
                 'max_depth': list(range(10, 41, 1)),
                 'initial_max_depth': list(range(2, 19, 1))},
             'name': "Shared_Knowledge",
-            'default_params': {'max_depth': 25}
+            'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 25}
         }
     },
 }
@@ -279,17 +282,18 @@ print("2: n_estimators")
 print("3: group_size")
 print("4: percentile")
 print("5: initial_max_depth")
+print("6: max_features")
 
 hp_choices = input("Enter the numbers corresponding to your choice(s): ").split(',')
 
 for choice in tqdm(choices):
     choice = choice.strip()
-    if choice not in param_grids:
+    if choice not in param_grids[dataset_name]:
         print(f"Invalid choice: {choice}. Skipping.")
         exit()
 
-    config = param_grids[choice]
-    model, param_grid, model_name = config['model'], config['param_grid'], config['name']
+    config = param_grids[dataset_name][choice]
+    model, param_grid, model_name, def_params = config['model'], config['param_grid'], config['name'], config['def_params']
 
     for hp_choice in hp_choices:
         mse_list = []
@@ -300,53 +304,106 @@ for choice in tqdm(choices):
 
             params, param_name = param_grid['max_depth'], 'max_depth'
             for max_depth in tqdm(params):
-                model_instance = model.__class__(max_depth=max_depth, random_state=SEED, n_jobs=3)
+                if model_name in ['IQR', 'OOB', 'OOB_plus_IQR']:
+                    model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=def_params['group_size'], 
+                                                     max_depth=max_depth, random_state=SEED, n_jobs=3)
+                elif model_name == 'Percentile_Trimming':
+                    model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=def_params['group_size'], percentile=def_params['percentile'],
+                                                     max_depth=max_depth, random_state=SEED, n_jobs=3)
+                else:
+                    model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=def_params['group_size'], initial_max_depth=def_params['initial_max_depth'],
+                                                     max_depth=max_depth, random_state=SEED, n_jobs=3)
+
                 model_instance.fit(X_train.values, y_train)
                 
                 y_pred = model_instance.predict(X_valid.values)
                 mse = mean_squared_error(y_valid, y_pred)
                 mse_list.append(mse)
 
-        if hp_choice == '2':
+        elif hp_choice == '2':
             params, param_name = param_grid['n_estimators'], 'n_estimators'
             for n_estimators in tqdm(params):
-                model_instance = model.__class__(n_estimators=n_estimators, random_state=SEED, n_jobs=3)
+                if model_name in ['IQR', 'OOB', 'OOB_plus_IQR']:
+                    model_instance = model.__class__(n_estimators=n_estimators, group_size=def_params['group_size'], 
+                                                     max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
+                elif model_name == 'Percentile_Trimming':
+                    model_instance = model.__class__(n_estimators=n_estimators, group_size=def_params['group_size'], percentile=def_params['percentile'],
+                                                     max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
+                elif model_name == 'First_Splits_Combiner':
+                    model_instance = model.__class__(n_estimators=n_estimators, group_size=def_params['group_size'], max_features=def_params['max_features'],
+                                                     max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
+                else:
+                    model_instance = model.__class__(n_estimators=n_estimators, group_size=def_params['group_size'], initial_max_depth=def_params['initial_max_depth'],
+                                                     max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
                 model_instance.fit(X_train.values, y_train)
                 
                 y_pred = model_instance.predict(X_valid.values)
                 mse = mean_squared_error(y_valid, y_pred)
                 mse_list.append(mse)
 
-        if hp_choice == '3':
+        elif hp_choice == '3':
             params, param_name = param_grid['group_size'], 'group_size'
             for group_size in tqdm(params):
-                model_instance = model.__class__(group_size=group_size, random_state=SEED, n_jobs=3)
+                if model_name in ['IQR', 'OOB', 'OOB_plus_IQR']:
+                    model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=group_size, 
+                                                     max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
+                elif model_name == 'Percentile_Trimming':
+                    model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=group_size, percentile=def_params['percentile'],
+                                                     max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
+                elif model_name == 'First_Splits_Combiner':
+                    model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=group_size, max_features=def_params['max_features'],
+                                                     max_depth=def_params['max_depth'], random_state=SEED)
+                else:
+                    model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=group_size, initial_max_depth=def_params['initial_max_depth'],
+                                                     max_depth=def_params['max_depth'], random_state=SEED)
                 model_instance.fit(X_train.values, y_train)
                 
                 y_pred = model_instance.predict(X_valid.values)
                 mse = mean_squared_error(y_valid, y_pred)
                 mse_list.append(mse)
 
-        if hp_choice == '4':
+        elif hp_choice == '4':
             if model_name != 'Percentile_Trimming':
                 continue
 
             params, param_name = param_grid['percentile'], 'percentile'
             for percentile in tqdm(params):
-                model_instance = model.__class__(percentile=percentile, random_state=SEED, n_jobs=3)
+                model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=def_params['group_size'], percentile=percentile,
+                                                     max_depth=def_params['max_depth'], random_state=SEED, n_jobs=3)
+
                 model_instance.fit(X_train.values, y_train)
                 
                 y_pred = model_instance.predict(X_valid.values)
                 mse = mean_squared_error(y_valid, y_pred)
                 mse_list.append(mse)
         
-        if hp_choice == '5':
+        elif hp_choice == '5':
             if model_name != 'Shared_Knowledge':
                 continue
 
             params, param_name = param_grid['initial_max_depth'], 'initial_max_depth'
             for initial_max_depth in tqdm(params):
-                model_instance = model.__class__(initial_max_depth=initial_max_depth, random_state=SEED, n_jobs=3)
+                model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=def_params['group_size'], initial_max_depth=initial_max_depth,
+                                                 max_depth=def_params['max_depth'], random_state=SEED)
+                model_instance.fit(X_train.values, y_train)
+                
+                y_pred = model_instance.predict(X_valid.values)
+                mse = mean_squared_error(y_valid, y_pred)
+                mse_list.append(mse)
+
+        else:
+            if model_name != 'First_Splits_Combiner':
+                continue
+
+            params, param_name = param_grid['max_features'], 'max_features'
+            for max_features in tqdm(params):
+                if max_features == -1:
+                    max_features = 'sqrt'
+                elif max_features == -2:
+                    max_features = 'log2'
+
+                model_instance = model.__class__(n_estimators=def_params['n_estimators'], group_size=def_params['group_size'], initial_max_depth=initial_max_depth,
+                                                 max_depth=def_params['max_depth'], max_features=max_features, random_state=SEED)
                 model_instance.fit(X_train.values, y_train)
                 
                 y_pred = model_instance.predict(X_valid.values)
