@@ -27,6 +27,9 @@ DATASETS_COLUMNS = {
     'Carbon_Emission': 'CarbonEmission',
     'Wind': 'WIND',
     'House_8L': 'price',
+    'Flight': 'Price',
+    'Rainfall': 'Rainfall',
+    'Abalone': 'Age'
 }
 
 
@@ -41,6 +44,12 @@ datasets_test = {
     'Carbon_Emission': 'distribucion/datasets/test_data/Carbon_Emission_test.csv',
     'House_8L': 'distribucion/datasets/test_data/house_8L_test.csv',
     'Wind': 'distribucion/datasets/test_data/wind_test.csv'
+}
+
+new_datasets_test = {
+    'Flight': 'distribucion/datasets/test_data/flight_test.csv',
+    'Rainfall': 'distribucion/datasets/test_data/rainfall_test.csv',
+    'Abalone': 'distribucion/datasets/test_data/abalone_test.csv'
 }
 
 dataset_specific_params = {
@@ -70,6 +79,33 @@ dataset_specific_params = {
         'FirstSplitCombinerRandomForestRegressor': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
         'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 25},
         'RandomForestRegressor': {'max_depth': 12},
+    },
+    'Flight': {
+        'IQRRandomForestRegressor': {'n_estimators': 150, 'group_size': 3, 'max_depth': 13},
+        'PercentileTrimmingRandomForestRegressor': {'n_estimators': 150, 'group_size': 50,'percentile': 2, 'max_depth': 13},
+        'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 13},
+        'OOBPlusIQRRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 13},
+        'FirstSplitCombinerRandomForestRegressor': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
+        'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 20},
+        'RandomForestRegressor': {'max_depth': 13},
+    },
+    'Rainfall': {
+        'IQRRandomForestRegressor': {'n_estimators': 150, 'group_size': 3, 'max_depth': 21},
+        'PercentileTrimmingRandomForestRegressor': {'n_estimators': 150, 'group_size': 50,'percentile': 2, 'max_depth': 23},
+        'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 23},
+        'OOBPlusIQRRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 23},
+        'FirstSplitCombinerRandomForestRegressor': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
+        'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 39},
+        'RandomForestRegressor': {'max_depth': 24},
+    },
+    'Abalone': {
+        'IQRRandomForestRegressor': {'n_estimators': 150, 'group_size': 3, 'max_depth': 12},
+        'PercentileTrimmingRandomForestRegressor': {'n_estimators': 150, 'group_size': 50,'percentile': 2, 'max_depth': 12},
+        'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 10},
+        'OOBPlusIQRRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 10},
+        'FirstSplitCombinerRandomForestRegressor': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
+        'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 23},
+        'RandomForestRegressor': {'max_depth': 15},
     }
 }
 
@@ -81,7 +117,7 @@ def get_models_for_dataset():
         PercentileTrimmingRandomForestRegressor(),
         OOBRandomForestRegressor(),
         OOBPlusIQRRandomForestRegressor(),
-        FirstSplitCombinerRandomForestRegressor(),
+        #FirstSplitCombinerRandomForestRegressor(),
         SharedKnowledgeRandomForestRegressor(),
         RandomForestRegressor()
     ]
@@ -157,7 +193,7 @@ if TEST == False:
 
 elif TEST == True:
 
-    for dataset_name, path in tqdm(datasets_test.items(), desc="Datasets"): 
+    for dataset_name, path in tqdm(new_datasets_test.items(), desc="Datasets"): 
 
         # Preprocesamiento de datos de Test
         test_df = pd.read_csv(path)
@@ -168,7 +204,7 @@ elif TEST == True:
 
         models = get_models_for_dataset()
         scores = kfold_cross_validation(models, dataset_name, X_test, y_test)
-        scores.to_csv(f'score_{dataset_name}.csv', index=False)
+        scores.to_csv(f'score_{dataset_name}_sinFSC.csv', index=False)
 
         # Agrupamos los MSEs por modelo
         grouped_mses = [scores[scores['Model'] == model.__class__.__name__]['MSE'].values for model in models]
@@ -185,7 +221,7 @@ elif TEST == True:
             posthoc_results = sp.posthoc_dunn(grouped_mses, p_adjust='bonferroni')
             print("Dunn's post-hoc test results:")
             print(posthoc_results)
-            posthoc_results.to_csv(f'posthoc_results_{dataset_name}.csv', index=True)
+            posthoc_results.to_csv(f'posthoc_results_{dataset_name}_sinFSC.csv', index=True)
 
         else:
             print(f"No significant difference in MSEs between models for dataset: {dataset_name}.")

@@ -46,6 +46,9 @@ DATASETS_COLUMNS = {
     'Carbon_Emission': 'CarbonEmission',
     'Wind': 'WIND',
     'House_8L': 'price',
+    'Flight': 'Price',
+    'Rainfall': 'Rainfall',
+    'Abalone': 'Age'
 }
 
 # Select from the terminal which dataset to use:
@@ -53,6 +56,9 @@ print("Select the dataset you would like to use:")
 print("1: Carbon Emission")
 print("2: House_8L")
 print("3: Wind")
+print("4: Flight")
+print("5: Rainfall")
+print("6: Abalone")
 
 dataset_choice = input("Enter the number corresponding to your dataset_choice: ")
 
@@ -66,11 +72,20 @@ elif dataset_choice == "2":
 elif dataset_choice == "3":
     file_path = 'distribucion/datasets/train_data/wind_train.csv'
     dataset_name = 'Wind'
+elif dataset_choice == "4":
+    file_path = 'distribucion/datasets/train_data/flight_train.csv'
+    dataset_name = 'Flight'
+elif dataset_choice == "5":
+    file_path = 'distribucion/datasets/train_data/rainfall_train.csv'
+    dataset_name = 'Rainfall'
+elif dataset_choice == "6":
+    file_path = 'distribucion/datasets/train_data/abalone_train.csv'
+    dataset_name = 'Abalone'
 
 else:
-    print("Invalid dataset_choice. Please select 1, 2, or 3.")
+    print("Invalid dataset_choice. Please select 1, 2, 3, 4, 5, o 6.")
     file_path = None
-
+    
 # Check the file extension and load data accordingly
 if file_path:
     if file_path.endswith('.csv'):
