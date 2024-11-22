@@ -7,9 +7,11 @@ from sklearn.model_selection import KFold, train_test_split
 from sklearn.metrics import mean_squared_error
 from scipy.stats import kruskal
 import scikit_posthocs as sp
+
 from sklearn.ensemble import (
     RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, 
-    OOBRandomForestRegressor, OOB_plus_IQR, RFRegressorFirstSplitCombiner, SharedKnowledgeRandomForestRegressor)
+    OOBRandomForestRegressor, OOBPlusIQRRandomForestRegressor,
+    FirstSplitCombinerRandomForestRegressor, SharedKnowledgeRandomForestRegressor)
 
 # Para cada dataset d: 
 #    Para cada algoritmo a:
@@ -46,8 +48,8 @@ dataset_specific_params = {
         'IQRRandomForestRegressor': {'n_estimators': 150, 'group_size': 3, 'max_depth': 17},
         'PercentileTrimmingRandomForestRegressor': {'n_estimators': 150, 'group_size': 50,'percentile': 2, 'max_depth': 44},
         'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3,'max_depth': 20},
-        'OOB_plus_IQR': {'n_estimators': 180, 'group_size': 3, 'max_depth': 21},
-        'RFRegressorFirstSplitCombiner': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
+        'OOBPlusIQRRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 21},
+        'FirstSplitCombinerRandomForestRegressor': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
         'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 20},
         'RandomForestRegressor': {'max_depth': 20},
     },
@@ -55,8 +57,8 @@ dataset_specific_params = {
         'IQRRandomForestRegressor': {'n_estimators': 150, 'group_size': 3, 'max_depth': 17},
         'PercentileTrimmingRandomForestRegressor': {'n_estimators': 150, 'group_size': 50,'percentile': 2, 'max_depth': 40},
         'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 32},
-        'OOB_plus_IQR': {'n_estimators': 180, 'group_size': 3, 'max_depth': 42},
-        'RFRegressorFirstSplitCombiner': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
+        'OOBPlusIQRRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 42},
+        'FirstSplitCombinerRandomForestRegressor': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
         'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 23},
         'RandomForestRegressor': {'max_depth': 17},
     },
@@ -64,8 +66,8 @@ dataset_specific_params = {
         'IQRRandomForestRegressor': {'n_estimators': 150, 'group_size': 3, 'max_depth': 19},
         'PercentileTrimmingRandomForestRegressor': {'n_estimators': 150, 'group_size': 50,'percentile': 2, 'max_depth': 44},
         'OOBRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 32},
-        'OOB_plus_IQR': {'n_estimators': 180, 'group_size': 3, 'max_depth': 14},
-        'RFRegressorFirstSplitCombiner': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
+        'OOBPlusIQRRandomForestRegressor': {'n_estimators': 180, 'group_size': 3, 'max_depth': 14},
+        'FirstSplitCombinerRandomForestRegressor': {'n_estimators': 100, 'group_size': 10, 'max_features': 'log2'},
         'SharedKnowledgeRandomForestRegressor': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 25},
         'RandomForestRegressor': {'max_depth': 12},
     }
@@ -78,8 +80,8 @@ def get_models_for_dataset():
         IQRRandomForestRegressor(),
         PercentileTrimmingRandomForestRegressor(),
         OOBRandomForestRegressor(),
-        OOB_plus_IQR(),
-        #RFRegressorFirstSplitCombiner(),
+        OOBPlusIQRRandomForestRegressor(),
+        FirstSplitCombinerRandomForestRegressor(),
         SharedKnowledgeRandomForestRegressor(),
         RandomForestRegressor()
     ]

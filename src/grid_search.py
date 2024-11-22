@@ -1,8 +1,11 @@
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
+
 from sklearn.ensemble import (
     RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, 
-    OOBRandomForestRegressor, OOB_plus_IQR, RFRegressorFirstSplitCombiner, SharedKnowledgeRandomForestRegressor)
+    OOBRandomForestRegressor, OOBPlusIQRRandomForestRegressor,
+    FirstSplitCombinerRandomForestRegressor, SharedKnowledgeRandomForestRegressor)
+
 from sklearn.metrics import mean_squared_error
 import pandas as pd
 import numpy as np
@@ -130,7 +133,7 @@ param_grids = {
         'name': "OOB"
     },
     "4": {
-        'model': OOB_plus_IQR(),
+        'model': OOBPlusIQRRandomForestRegressor(),
         'param_grid': {
             'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500], 
             'group_size': list(range(3, 11, 1)) + list(range(15, 51, 5)), 
@@ -139,7 +142,7 @@ param_grids = {
         'name': "OOB_plus_IQR"
     },
     "5": {
-        'model': RFRegressorFirstSplitCombiner(),
+        'model': FirstSplitCombinerRandomForestRegressor(),
         'param_grid': {
             'n_estimators': list(range(50, 301, 10)) + list(range(350, 1001, 50)) + [1250, 1500],
             'group_size': list(range(3, 20, 1)),

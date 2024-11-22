@@ -5,9 +5,8 @@ from tqdm import tqdm
 from scipy.io import arff
 from sklearn.ensemble import (
     RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor,
-    OOBRandomForestRegressor, OOBRandomForestRegressorSigmoid,
-    OOBRandomForestRegressorTanh, OOBRandomForestRegressorSoftPlus, OOB_plus_IQR,
-    RFRegressorFirstSplitCombiner
+    OOBRandomForestRegressor, OOBPlusIQRRandomForestRegressor,
+    FirstSplitCombinerRandomForestRegressor, SharedKnowledgeRandomForestRegressor
 )
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
@@ -23,11 +22,10 @@ NEW_DATASET_NAME = 'Carbon_Emission_transformed.csv' # Nombre del nuevo dataset 
 DATASETS_FOLDER = 'datasets/'
 MODEL_CLASSES = [
     RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor,
-    OOBRandomForestRegressor, OOBRandomForestRegressorSigmoid,
-    OOBRandomForestRegressorTanh, OOBRandomForestRegressorSoftPlus, OOB_plus_IQR,
-    RFRegressorFirstSplitCombiner
+    OOBRandomForestRegressor, OOBPlusIQRRandomForestRegressor,
+    FirstSplitCombinerRandomForestRegressor
 ]
-NEW_CLASS = PercentileTrimmingRandomForestRegressor
+NEW_CLASS = SharedKnowledgeRandomForestRegressor
 
 # Decision variables
 RUN_NEW_DATASET = False

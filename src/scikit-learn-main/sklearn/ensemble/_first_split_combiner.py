@@ -23,7 +23,7 @@ def _accumulate_prediction(predict, X, out, lock):
             for i in range(len(out)):
                 out[i] += prediction[i]
 
-class RFRegressorFirstSplitCombiner(RandomForestGroupDebate):
+class FirstSplitCombinerRandomForestRegressor(RandomForestGroupDebate):
     def __init__(
         self,
         n_estimators=100,

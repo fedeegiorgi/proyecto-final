@@ -1,8 +1,11 @@
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
+
 from sklearn.ensemble import (
-    IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, 
-    OOBRandomForestRegressor, OOB_plus_IQR, RFRegressorFirstSplitCombiner, SharedKnowledgeRandomForestRegressor)
+    RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor, 
+    OOBRandomForestRegressor, OOBPlusIQRRandomForestRegressor,
+    FirstSplitCombinerRandomForestRegressor, SharedKnowledgeRandomForestRegressor)
+
 from sklearn.metrics import mean_squared_error
 import pandas as pd
 import numpy as np
@@ -106,7 +109,7 @@ param_grids = {
             'def_params': {'n_estimators': 180, 'group_size': 3, 'max_depth': 20}
         },
         "4": {
-            'model': OOB_plus_IQR(),
+            'model': OOBPlusIQRRandomForestRegressor(),
             'param_grid': {
                 'n_estimators': list(range(30, 1381, 60)), 
                 'group_size': [2, 3, 4, 5, 6, 9, 10, 12, 15, 18, 20, 30, 36, 45, 60, 90], 
@@ -116,7 +119,7 @@ param_grids = {
             'def_params': {'n_estimators': 180, 'group_size': 3, 'max_depth': 21}
         },
         "5": {
-            'model': RFRegressorFirstSplitCombiner(),
+            'model': FirstSplitCombinerRandomForestRegressor(),
             'param_grid': {
                 'n_estimators': list(range(50, 1200, 50)),
                 'group_size': [2, 4, 5, 10, 20],
@@ -169,7 +172,7 @@ param_grids = {
             'def_params': {'n_estimators': 180, 'group_size': 3, 'max_depth': 32}
         },
         "4": {
-            'model': OOB_plus_IQR(),
+            'model': OOBPlusIQRRandomForestRegressor(),
             'param_grid': {
                 'n_estimators': list(range(30, 1381, 60)), 
                 'group_size': [2, 3, 4, 5, 6, 9, 10, 12, 15, 18, 20, 30, 36, 45, 60, 90], 
@@ -179,7 +182,7 @@ param_grids = {
             'def_params': {'n_estimators': 180, 'group_size': 3, 'max_depth': 42}
         },
         "5": {
-            'model': RFRegressorFirstSplitCombiner(),
+            'model': FirstSplitCombinerRandomForestRegressor(),
             'param_grid': {
                 'n_estimators': list(range(50, 1200, 50)),
                 'group_size': [2, 4, 5, 10, 20],
@@ -232,7 +235,7 @@ param_grids = {
             'def_params': {'n_estimators': 180, 'group_size': 3, 'max_depth': 32}
         },
         "4": {
-            'model': OOB_plus_IQR(),
+            'model': OOBPlusIQRRandomForestRegressor(),
             'param_grid': {
                 'n_estimators': list(range(30, 1381, 60)), 
                 'group_size': [2, 3, 4, 5, 6, 9, 10, 12, 15, 18, 20, 30, 36, 45, 60, 90], 
@@ -242,7 +245,7 @@ param_grids = {
             'def_params': {'n_estimators': 180, 'group_size': 3, 'max_depth': 14}
         },
         "5": {
-            'model': RFRegressorFirstSplitCombiner(),
+            'model': FirstSplitCombinerRandomForestRegressor(),
             'param_grid': {
                 'n_estimators': list(range(50, 1200, 50)),
                 'group_size': [2, 4, 5, 10, 20],

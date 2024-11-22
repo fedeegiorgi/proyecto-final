@@ -12,21 +12,16 @@ from ._forest import (
     RandomForestRegressor,
     RandomTreesEmbedding,
 )
-from ._group_debate import(
-    RandomForestGroupDebate,
-)
 from ._extremos_forest import (
     IQRRandomForestRegressor,
     PercentileTrimmingRandomForestRegressor,
 )
 from ._oob_forest import (
     OOBRandomForestRegressor,
-)
-from ._oob_plus_iqr import (
-    OOB_plus_IQR,
+    OOBPlusIQRRandomForestRegressor,
 )
 from ._first_split_combiner import (
-    RFRegressorFirstSplitCombiner,
+    FirstSplitCombinerRandomForestRegressor,
 )
 from ._shared_knowledge import (
     SharedKnowledgeRandomForestRegressor,
@@ -48,11 +43,8 @@ __all__ = [
     "IQRRandomForestRegressor",
     "PercentileTrimmingRandomForestRegressor",
     "OOBRandomForestRegressor",
-    "OOBRandomForestRegressorSigmoid",
-    "OOBRandomForestRegressorTanh",
-    "OOBRandomForestRegressorSoftPlus",
-    "OOB_plus_IQR",
-    "RFRegressorFirstSplitCombiner",
+    "OOBPlusIQRRandomForestRegressor",
+    "FirstSplitCombinerRandomForestRegressor",
     "SharedKnowledgeRandomForestRegressor"
     "RandomTreesEmbedding",
     "ExtraTreesClassifier",
