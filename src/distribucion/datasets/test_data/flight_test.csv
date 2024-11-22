@@ -1,0 +1,3206 @@
+Airline,Source,Destination,Total_Stops,Price,Date,Month,Year,Dep_hours,Dep_min,Arrival_hours,Arrival_min,Duration_hours,Duration_min
+Multiple carriers,Delhi,Cochin,1,13377,24,6,2019,13,0,1,30,12,30
+Multiple carriers,Delhi,Cochin,1,6145,27,3,2019,7,10,22,20,15,10
+SpiceJet,Mumbai,Hyderabad,0,1965,27,6,2019,22,45,0,15,1,30
+IndiGo,Delhi,Cochin,1,6442,27,3,2019,7,35,16,10,8,35
+Jet Airways,Kolkata,Banglore,1,13941,6,5,2019,16,30,16,20,23,50
+Air India,Delhi,Cochin,1,13002,3,3,2019,6,10,23,0,16,50
+Air India,Delhi,Cochin,1,8907,24,6,2019,13,30,23,0,9,30
+Jet Airways,Delhi,Cochin,2,14657,27,5,2019,9,35,12,35,27,0
+SpiceJet,Kolkata,Banglore,0,3873,6,5,2019,22,20,0,40,2,20
+Jet Airways,Kolkata,Banglore,1,14781,21,5,2019,14,5,23,35,9,30
+Air India,Banglore,Delhi,0,5228,18,6,2019,21,5,23,55,2,50
+Air Asia,Banglore,New Delhi,0,7652,9,3,2019,5,50,8,40,2,50
+Jet Airways,Banglore,New Delhi,0,7229,24,3,2019,8,20,11,15,2,55
+IndiGo,Kolkata,Banglore,1,4226,1,5,2019,6,20,10,20,4,0
+Jet Airways,Delhi,Cochin,1,12373,9,5,2019,20,55,19,0,22,5
+IndiGo,Banglore,New Delhi,0,6860,15,3,2019,8,30,11,30,3,0
+Jet Airways,Kolkata,Banglore,1,10844,24,5,2019,16,30,12,0,19,30
+Jet Airways,Delhi,Cochin,1,12373,18,5,2019,15,0,12,35,21,35
+IndiGo,Banglore,New Delhi,0,4238,24,3,2019,1,30,4,15,2,45
+Jet Airways,Banglore,New Delhi,1,13502,3,3,2019,8,0,5,5,21,5
+Jet Airways,Kolkata,Banglore,1,10953,6,5,2019,20,25,23,35,27,10
+Air Asia,Kolkata,Banglore,0,3782,21,3,2019,22,50,1,20,2,30
+Jet Airways,Kolkata,Banglore,1,14781,12,5,2019,14,5,19,50,5,45
+IndiGo,Kolkata,Banglore,0,4804,6,6,2019,20,25,23,10,2,45
+SpiceJet,Banglore,New Delhi,0,6860,3,3,2019,20,30,23,20,2,50
+Air India,Kolkata,Banglore,2,6117,24,5,2019,9,10,4,40,19,30
+Jet Airways,Banglore,Delhi,0,8016,15,6,2019,15,15,18,10,2,55
+Vistara,Delhi,Cochin,0,6216,21,6,2019,6,0,9,10,3,10
+Jet Airways,Banglore,Delhi,0,8016,12,6,2019,6,0,8,45,2,45
+Jet Airways,Banglore,New Delhi,1,11087,18,3,2019,22,50,10,25,11,35
+Jet Airways,Mumbai,Hyderabad,0,5678,18,5,2019,7,5,8,30,1,25
+Jet Airways,Banglore,Delhi,0,7229,9,5,2019,11,10,14,5,2,55
+IndiGo,Banglore,New Delhi,0,6860,3,3,2019,7,10,10,5,2,55
+Multiple carriers,Delhi,Cochin,1,10407,27,5,2019,8,0,19,0,11,0
+Multiple carriers,Delhi,Cochin,1,13797,24,6,2019,7,5,21,0,13,55
+Air India,Banglore,Delhi,0,6961,24,6,2019,6,10,8,55,2,45
+Jet Airways,Kolkata,Banglore,1,10624,9,5,2019,17,0,23,35,6,35
+Jet Airways,Delhi,Cochin,2,14300,15,6,2019,12,15,4,25,16,10
+SpiceJet,Chennai,Kolkata,0,5418,24,3,2019,17,45,20,5,2,20
+Jet Airways,Delhi,Cochin,2,15129,18,5,2019,5,30,4,25,22,55
+SpiceJet,Chennai,Kolkata,0,3543,18,6,2019,8,20,10,35,2,15
+SpiceJet,Mumbai,Hyderabad,0,1965,21,6,2019,13,15,14,45,1,30
+Air Asia,Banglore,Delhi,0,4282,6,5,2019,4,55,7,45,2,50
+Air India,Kolkata,Banglore,2,14508,6,5,2019,7,0,10,0,27,0
+Air Asia,Kolkata,Banglore,1,5162,12,5,2019,6,50,10,30,3,40
+Jet Airways,Delhi,Cochin,1,10262,12,6,2019,19,15,19,0,23,45
+Multiple carriers,Delhi,Cochin,1,15237,9,3,2019,7,0,19,45,12,45
+Multiple carriers,Delhi,Cochin,1,12524,1,6,2019,11,40,19,0,7,20
+Jet Airways,Kolkata,Banglore,1,10844,18,5,2019,18,55,19,50,24,55
+Air India,Banglore,New Delhi,1,5092,21,3,2019,11,50,13,0,25,10
+Multiple carriers,Delhi,Cochin,1,8309,18,5,2019,9,15,19,15,10,0
+GoAir,Delhi,Cochin,1,4106,9,4,2019,7,25,13,20,5,55
+Jet Airways,Kolkata,Banglore,1,14151,9,6,2019,9,35,10,55,25,20
+Jet Airways,Delhi,Cochin,1,5177,6,4,2019,2,15,12,35,10,20
+Jet Airways,Kolkata,Banglore,1,10844,21,5,2019,14,5,20,45,6,40
+IndiGo,Banglore,Delhi,0,4823,18,5,2019,16,55,19,55,3,0
+Jet Airways,Delhi,Cochin,1,10262,9,6,2019,17,30,19,0,25,30
+Air India,Delhi,Cochin,2,13381,21,5,2019,20,15,19,15,23,0
+IndiGo,Chennai,Kolkata,0,4332,1,5,2019,11,35,14,0,2,25
+Jet Airways,Banglore,New Delhi,1,26890,1,3,2019,5,45,18,25,12,40
+Air India,Delhi,Cochin,2,12803,15,5,2019,10,55,7,40,20,45
+Jet Airways,Kolkata,Banglore,1,8529,12,6,2019,14,5,16,20,26,15
+SpiceJet,Kolkata,Banglore,0,3873,3,4,2019,9,0,11,25,2,25
+Jet Airways,Kolkata,Banglore,1,10844,6,6,2019,8,25,16,20,7,55
+Jet Airways,Banglore,Delhi,0,6144,3,5,2019,19,50,22,50,3,0
+Jet Airways,Banglore,Delhi,0,7229,1,5,2019,11,10,14,5,2,55
+Jet Airways,Delhi,Cochin,1,12767,21,3,2019,7,5,18,50,11,45
+Jet Airways,Banglore,Delhi,0,7229,6,5,2019,15,15,18,10,2,55
+Multiple carriers,Delhi,Cochin,1,7354,12,6,2019,11,25,19,15,7,50
+IndiGo,Mumbai,Hyderabad,0,4049,21,5,2019,9,10,10,40,1,30
+Multiple carriers,Delhi,Cochin,1,13377,27,5,2019,11,30,1,30,14,0
+IndiGo,Banglore,New Delhi,0,6144,15,3,2019,10,10,13,0,2,50
+Multiple carriers,Delhi,Cochin,1,8266,15,5,2019,6,0,19,15,13,15
+Air India,Delhi,Cochin,2,10975,15,5,2019,7,5,9,25,26,20
+Multiple carriers,Delhi,Cochin,1,12192,15,6,2019,7,0,19,0,12,0
+Jet Airways,Delhi,Cochin,2,12273,27,3,2019,6,20,19,45,37,25
+Jet Airways,Banglore,New Delhi,1,26890,1,3,2019,14,5,0,45,10,40
+Multiple carriers,Delhi,Cochin,1,15136,6,3,2019,16,0,1,35,9,35
+Jet Airways,Delhi,Cochin,1,10262,9,6,2019,7,5,12,35,5,30
+Jet Airways,Delhi,Cochin,1,10262,3,6,2019,17,30,19,0,25,30
+Jet Airways,Mumbai,Hyderabad,0,2228,24,3,2019,15,50,17,20,1,30
+IndiGo,Chennai,Kolkata,0,3597,27,6,2019,19,35,21,55,2,20
+SpiceJet,Kolkata,Banglore,0,3841,15,5,2019,6,55,9,30,2,35
+Jet Airways,Kolkata,Banglore,1,9899,12,6,2019,16,30,23,35,7,5
+Multiple carriers,Delhi,Cochin,1,13587,9,6,2019,2,15,11,30,9,15
+Air Asia,Kolkata,Banglore,0,4409,9,6,2019,19,55,22,25,2,30
+IndiGo,Mumbai,Hyderabad,0,2227,6,5,2019,21,20,22,50,1,30
+Air India,Mumbai,Hyderabad,0,4937,3,3,2019,6,20,7,40,1,20
+IndiGo,Kolkata,Banglore,1,9319,24,3,2019,5,35,11,20,5,45
+Jet Airways,Kolkata,Banglore,1,14151,12,5,2019,9,35,18,0,8,25
+Jet Airways,Delhi,Cochin,1,14714,9,6,2019,13,0,19,0,6,0
+Jet Airways,Banglore,Delhi,0,7229,3,5,2019,17,45,20,45,3,0
+Vistara,Chennai,Kolkata,0,11982,3,5,2019,17,45,20,5,2,20
+IndiGo,Banglore,Delhi,0,4990,12,4,2019,18,25,21,20,2,55
+Multiple carriers,Delhi,Cochin,1,9103,21,5,2019,10,35,19,0,8,25
+SpiceJet,Chennai,Kolkata,0,6300,12,3,2019,9,30,12,5,2,35
+Jet Airways,Delhi,Cochin,2,14441,24,6,2019,5,30,12,35,7,5
+Air India,Kolkata,Banglore,1,8366,12,6,2019,9,25,18,30,9,5
+SpiceJet,Delhi,Cochin,1,7317,18,5,2019,15,45,22,5,6,20
+GoAir,Banglore,New Delhi,0,3898,24,3,2019,7,45,10,40,2,55
+Jet Airways,Delhi,Cochin,1,14714,1,6,2019,22,50,19,0,20,10
+SpiceJet,Kolkata,Banglore,0,3841,18,6,2019,9,0,11,25,2,25
+Multiple carriers,Delhi,Cochin,1,15373,1,5,2019,9,0,19,15,10,15
+Air India,Kolkata,Banglore,2,11222,9,5,2019,8,20,11,10,26,50
+Multiple carriers,Delhi,Cochin,1,7155,24,6,2019,4,55,19,15,14,20
+Multiple carriers,Delhi,Cochin,1,15200,9,3,2019,15,15,1,35,10,20
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,18,40,7,40,13,0
+IndiGo,Delhi,Cochin,1,6593,3,6,2019,16,0,21,0,5,0
+Air India,Kolkata,Banglore,3,13007,6,5,2019,7,0,10,30,27,30
+Jet Airways,Delhi,Cochin,1,15400,6,3,2019,9,55,18,50,8,55
+Air India,Kolkata,Banglore,1,6528,9,6,2019,14,35,14,35,24,0
+Jet Airways,Delhi,Cochin,2,10368,24,6,2019,9,40,12,35,26,55
+IndiGo,Delhi,Cochin,1,6162,24,4,2019,4,55,21,0,16,5
+Jet Airways,Banglore,New Delhi,1,17261,6,3,2019,14,5,9,0,18,55
+Jet Airways,Kolkata,Banglore,1,7064,1,4,2019,16,30,20,45,28,15
+Jet Airways,Delhi,Cochin,2,13882,9,6,2019,11,45,12,35,24,50
+Vistara,Delhi,Cochin,0,6216,3,6,2019,14,40,17,50,3,10
+Jet Airways,Delhi,Cochin,2,19644,18,5,2019,11,40,19,0,7,20
+Jet Airways,Banglore,Delhi,0,4544,9,5,2019,15,15,18,10,2,55
+IndiGo,Chennai,Kolkata,0,3384,27,3,2019,14,40,17,5,2,25
+IndiGo,Kolkata,Banglore,0,4804,6,6,2019,15,15,17,45,2,30
+Jet Airways,Kolkata,Banglore,1,10031,24,3,2019,19,45,19,40,23,55
+Jet Airways,Kolkata,Banglore,1,8586,12,5,2019,21,10,8,15,11,5
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,7,0,13,15,6,15
+Vistara,Kolkata,Banglore,1,10027,24,5,2019,17,0,9,5,16,5
+IndiGo,Mumbai,Hyderabad,0,2754,18,3,2019,12,0,13,25,1,25
+Jet Airways,Delhi,Cochin,1,12767,21,3,2019,8,0,4,25,20,25
+GoAir,Kolkata,Banglore,1,8777,9,5,2019,16,40,0,15,7,35
+GoAir,Delhi,Cochin,1,7870,24,6,2019,14,25,19,35,5,10
+Air India,Kolkata,Banglore,2,9416,12,6,2019,12,0,11,10,23,10
+SpiceJet,Mumbai,Hyderabad,0,2175,6,5,2019,22,45,0,15,1,30
+Multiple carriers,Delhi,Cochin,1,9646,24,6,2019,9,45,22,30,12,45
+Jet Airways,Kolkata,Banglore,1,13731,24,5,2019,20,0,4,40,8,40
+Air India,Delhi,Cochin,2,11552,6,3,2019,7,5,19,15,36,10
+Air India,Banglore,New Delhi,2,10783,18,3,2019,8,50,23,25,38,35
+Jet Airways,Kolkata,Banglore,1,11467,1,5,2019,17,0,14,25,21,25
+Air India,Delhi,Cochin,1,8879,3,6,2019,7,0,19,15,12,15
+Multiple carriers,Delhi,Cochin,1,6795,6,6,2019,12,50,1,30,12,40
+IndiGo,Delhi,Cochin,1,14871,3,3,2019,7,30,15,30,8,0
+Multiple carriers,Delhi,Cochin,2,34503,3,3,2019,15,5,1,35,10,30
+Air India,Delhi,Cochin,2,10975,15,6,2019,7,5,9,25,26,20
+Air India,Kolkata,Banglore,2,15170,24,5,2019,9,50,23,15,13,25
+Air India,Kolkata,Banglore,1,7001,1,5,2019,14,35,14,35,24,0
+Air India,Kolkata,Banglore,1,8576,18,5,2019,9,25,18,30,9,5
+Jet Airways,Delhi,Cochin,2,15129,9,5,2019,19,30,4,25,8,55
+IndiGo,Banglore,Delhi,0,4823,9,4,2019,8,30,11,20,2,50
+Jet Airways,Kolkata,Banglore,1,10844,21,5,2019,6,30,19,50,13,20
+Vistara,Kolkata,Banglore,1,8085,9,6,2019,20,20,20,20,24,0
+Jet Airways,Delhi,Cochin,2,20747,3,3,2019,18,20,4,25,34,5
+Air India,Kolkata,Banglore,1,10203,6,5,2019,17,30,8,55,15,25
+Jet Airways,Delhi,Cochin,1,12898,21,5,2019,19,45,19,0,23,15
+Jet Airways,Kolkata,Banglore,1,13941,12,5,2019,6,30,8,15,25,45
+IndiGo,Delhi,Cochin,1,7503,18,5,2019,10,35,21,0,10,25
+Jet Airways,Delhi,Cochin,1,14714,1,6,2019,9,0,19,0,10,0
+IndiGo,Delhi,Cochin,1,5054,24,6,2019,7,35,12,10,4,35
+GoAir,Banglore,New Delhi,0,8722,15,3,2019,20,55,23,50,2,55
+Jet Airways,Kolkata,Banglore,1,8586,6,5,2019,6,30,10,5,27,35
+Air India,Banglore,Delhi,0,5228,9,6,2019,21,5,23,55,2,50
+Air India,Mumbai,Hyderabad,0,3100,9,5,2019,13,55,15,25,1,30
+IndiGo,Delhi,Cochin,0,6541,1,6,2019,5,35,8,50,3,15
+Multiple carriers,Delhi,Cochin,1,8266,21,5,2019,10,20,19,15,8,55
+IndiGo,Delhi,Cochin,1,6628,3,6,2019,18,35,1,30,6,55
+Jet Airways,Kolkata,Banglore,1,9663,21,5,2019,16,30,4,40,12,10
+Jet Airways,Kolkata,Banglore,1,9899,12,6,2019,16,30,22,35,6,5
+IndiGo,Delhi,Cochin,2,6223,27,3,2019,4,55,21,20,16,25
+IndiGo,Kolkata,Banglore,1,5380,9,6,2019,15,15,20,30,5,15
+Multiple carriers,Delhi,Cochin,1,7740,6,6,2019,7,30,21,0,13,30
+Jet Airways,Kolkata,Banglore,1,9899,12,6,2019,6,30,19,50,13,20
+Jet Airways,Banglore,Delhi,0,5198,18,5,2019,11,10,14,5,2,55
+Jet Airways,Delhi,Cochin,2,9254,27,3,2019,5,25,4,25,23,0
+Jet Airways,Kolkata,Banglore,1,14388,18,5,2019,14,5,10,5,20,0
+Vistara,Kolkata,Banglore,1,8137,6,5,2019,7,10,9,5,25,55
+Air India,Delhi,Cochin,2,13591,9,5,2019,20,15,19,15,23,0
+SpiceJet,Kolkata,Banglore,1,8479,12,5,2019,11,35,18,50,7,15
+Jet Airways,Kolkata,Banglore,1,10844,15,5,2019,18,55,18,15,23,20
+Air India,Kolkata,Banglore,1,10203,12,6,2019,17,30,20,25,26,55
+IndiGo,Delhi,Cochin,1,6938,12,6,2019,14,20,22,30,8,10
+Multiple carriers,Delhi,Cochin,1,9646,15,6,2019,9,45,22,30,12,45
+IndiGo,Delhi,Cochin,1,6593,1,6,2019,16,0,21,0,5,0
+Vistara Premium economy,Chennai,Kolkata,0,9125,1,3,2019,7,5,9,20,2,15
+Multiple carriers,Delhi,Cochin,1,7670,15,5,2019,15,15,1,30,10,15
+Air India,Kolkata,Banglore,2,15894,6,6,2019,14,30,23,15,8,45
+Jet Airways,Kolkata,Banglore,1,5608,15,5,2019,10,20,17,35,7,15
+GoAir,Delhi,Cochin,1,5842,21,5,2019,7,25,13,20,5,55
+SpiceJet,Delhi,Cochin,1,4466,27,3,2019,8,45,13,15,4,30
+IndiGo,Chennai,Kolkata,0,3597,24,6,2019,13,15,15,35,2,20
+Jet Airways,Banglore,New Delhi,1,13555,18,3,2019,11,40,23,0,11,20
+Air India,Delhi,Cochin,1,10979,3,6,2019,10,0,19,15,9,15
+Jet Airways,Delhi,Cochin,2,15129,18,5,2019,5,30,19,0,13,30
+Air India,Delhi,Cochin,0,5674,21,3,2019,14,10,17,10,3,0
+Vistara,Banglore,Delhi,0,5613,27,4,2019,9,45,12,35,2,50
+SpiceJet,Kolkata,Banglore,0,5725,24,3,2019,22,20,0,40,2,20
+IndiGo,Banglore,New Delhi,0,10067,9,3,2019,16,55,19,45,2,50
+SpiceJet,Banglore,Delhi,0,4885,12,4,2019,9,30,12,20,2,50
+Air India,Delhi,Cochin,1,7690,9,6,2019,6,5,9,25,27,20
+IndiGo,Delhi,Cochin,1,8258,3,3,2019,20,30,1,35,5,5
+Multiple carriers,Delhi,Cochin,1,7408,12,6,2019,7,0,21,0,14,0
+Jet Airways,Kolkata,Banglore,1,10844,24,5,2019,8,25,20,45,12,20
+Jet Airways,Delhi,Cochin,2,8728,21,3,2019,16,10,18,50,26,40
+IndiGo,Delhi,Cochin,1,5894,24,6,2019,11,25,21,0,9,35
+Air India,Kolkata,Banglore,0,4435,12,3,2019,20,45,23,20,2,35
+Jet Airways,Mumbai,Hyderabad,0,4050,21,5,2019,2,55,4,20,1,25
+IndiGo,Kolkata,Banglore,0,4174,15,4,2019,22,15,0,50,2,35
+Air India,Delhi,Cochin,1,5957,27,3,2019,9,45,9,25,23,40
+Jet Airways,Kolkata,Banglore,1,12692,9,6,2019,17,0,21,5,28,5
+IndiGo,Banglore,New Delhi,0,7303,24,3,2019,16,55,19,45,2,50
+Air India,Kolkata,Banglore,1,6117,1,5,2019,19,0,11,5,16,5
+IndiGo,Delhi,Cochin,0,6015,12,5,2019,5,35,8,50,3,15
+Air India,Kolkata,Banglore,2,11642,9,6,2019,9,25,5,35,20,10
+Multiple carriers,Delhi,Cochin,1,7564,18,5,2019,6,40,19,15,12,35
+IndiGo,Banglore,Delhi,0,4823,24,4,2019,16,55,19,55,3,0
+IndiGo,Delhi,Cochin,1,6442,27,6,2019,5,5,16,10,11,5
+Air India,Kolkata,Banglore,1,6327,9,6,2019,19,0,11,5,16,5
+Air India,Delhi,Cochin,1,7416,27,3,2019,9,45,8,15,22,30
+Air India,Delhi,Cochin,2,14588,27,5,2019,7,10,7,40,24,30
+Multiple carriers,Delhi,Cochin,1,7198,12,6,2019,10,0,1,30,15,30
+Air India,Delhi,Cochin,1,8669,27,6,2019,7,0,19,15,12,15
+IndiGo,Delhi,Cochin,1,6093,9,6,2019,6,40,21,0,14,20
+Air India,Kolkata,Banglore,2,15107,9,5,2019,14,30,12,30,22,0
+Air India,Delhi,Cochin,1,8372,18,5,2019,9,0,7,40,22,40
+Jet Airways,Kolkata,Banglore,1,7064,1,4,2019,8,25,22,35,14,10
+Vistara,Kolkata,Banglore,1,12732,24,3,2019,7,10,22,55,15,45
+SpiceJet,Chennai,Kolkata,0,3597,27,6,2019,17,45,20,5,2,20
+IndiGo,Banglore,New Delhi,0,7303,24,3,2019,8,30,11,30,3,0
+Air India,Kolkata,Banglore,2,10991,6,6,2019,5,50,20,25,14,35
+Air India,Banglore,New Delhi,1,10321,9,3,2019,10,30,11,20,24,50
+IndiGo,Banglore,Delhi,0,3943,6,6,2019,13,0,15,50,2,50
+IndiGo,Delhi,Cochin,1,5636,21,5,2019,7,15,12,30,5,15
+IndiGo,Kolkata,Banglore,1,4268,9,4,2019,15,15,20,5,4,50
+Jet Airways,Delhi,Cochin,2,13014,9,6,2019,5,30,19,0,13,30
+Multiple carriers,Delhi,Cochin,1,13727,9,5,2019,9,0,21,0,12,0
+IndiGo,Kolkata,Banglore,0,4174,9,4,2019,15,15,17,45,2,30
+Air India,Delhi,Cochin,2,10493,27,3,2019,12,0,19,15,7,15
+IndiGo,Delhi,Cochin,1,6794,21,5,2019,10,35,21,0,10,25
+IndiGo,Kolkata,Banglore,1,7228,12,5,2019,21,0,2,15,5,15
+Jet Airways,Banglore,New Delhi,1,26890,1,3,2019,7,0,18,25,11,25
+Multiple carriers,Delhi,Cochin,1,7038,1,6,2019,7,10,16,10,9,0
+Jet Airways,Kolkata,Banglore,1,7064,1,4,2019,6,30,8,15,25,45
+Jet Airways,Kolkata,Banglore,1,10031,24,3,2019,21,10,23,25,26,15
+Jet Airways,Kolkata,Banglore,1,9663,6,5,2019,20,0,4,40,8,40
+Air Asia,Banglore,Delhi,0,4483,1,5,2019,23,55,2,45,2,50
+Jet Airways,Banglore,Delhi,0,5769,3,6,2019,8,20,11,20,3,0
+IndiGo,Kolkata,Banglore,0,4804,24,4,2019,15,15,17,45,2,30
+Air India,Kolkata,Banglore,0,4145,15,5,2019,20,45,23,20,2,35
+Air India,Kolkata,Banglore,0,4880,18,5,2019,20,45,23,20,2,35
+SpiceJet,Chennai,Kolkata,0,3543,6,6,2019,9,45,12,0,2,15
+Jet Airways,Banglore,New Delhi,1,27992,1,3,2019,8,55,21,20,12,25
+IndiGo,Delhi,Cochin,1,7191,9,5,2019,7,30,21,0,13,30
+Vistara,Banglore,Delhi,0,5403,1,4,2019,7,0,9,40,2,40
+Jet Airways,Delhi,Cochin,2,15812,9,6,2019,11,40,19,0,7,20
+Jet Airways,Banglore,Delhi,0,4544,9,4,2019,19,50,22,50,3,0
+Air Asia,Delhi,Cochin,1,11410,3,6,2019,16,45,22,25,5,40
+IndiGo,Chennai,Kolkata,0,4332,3,5,2019,11,35,14,0,2,25
+Jet Airways,Banglore,Delhi,0,4544,15,4,2019,17,45,20,45,3,0
+IndiGo,Kolkata,Banglore,1,4226,24,5,2019,6,20,10,20,4,0
+Air India,Kolkata,Banglore,0,4145,3,6,2019,20,45,23,20,2,35
+Multiple carriers,Delhi,Cochin,1,14848,27,6,2019,10,0,19,15,9,15
+IndiGo,Banglore,Delhi,0,3419,3,4,2019,0,30,3,25,2,55
+Jet Airways,Banglore,New Delhi,0,7229,24,3,2019,18,55,21,55,3,0
+SpiceJet,Delhi,Cochin,1,5830,3,6,2019,8,45,13,15,4,30
+Jet Airways,Banglore,New Delhi,1,10972,18,3,2019,14,5,7,40,17,35
+Jet Airways,Kolkata,Banglore,1,14231,24,3,2019,18,55,8,10,13,15
+Jet Airways,Kolkata,Banglore,1,10844,9,6,2019,18,55,19,50,24,55
+SpiceJet,Kolkata,Banglore,1,11468,12,5,2019,11,15,18,30,7,15
+Air Asia,Kolkata,Banglore,0,4409,18,5,2019,22,50,1,20,2,30
+Jet Airways,Delhi,Cochin,2,13376,27,6,2019,14,35,12,35,22,0
+IndiGo,Banglore,Delhi,0,4077,21,6,2019,23,30,2,20,2,50
+Jet Airways,Kolkata,Banglore,1,13067,9,5,2019,9,35,21,5,11,30
+IndiGo,Banglore,Delhi,0,4823,6,6,2019,7,10,10,5,2,55
+Multiple carriers,Delhi,Cochin,1,14817,9,3,2019,6,50,19,15,12,25
+IndiGo,Chennai,Kolkata,0,4326,24,3,2019,7,55,10,15,2,20
+Multiple carriers,Delhi,Cochin,1,15603,3,3,2019,7,0,21,0,14,0
+Air India,Kolkata,Banglore,2,13885,24,3,2019,16,45,23,15,30,30
+Jet Airways,Banglore,New Delhi,1,17261,6,3,2019,11,40,9,0,21,20
+Multiple carriers,Delhi,Cochin,3,15629,9,6,2019,11,35,21,0,9,25
+Air India,Kolkata,Banglore,2,6117,6,5,2019,9,10,4,40,19,30
+Jet Airways,Delhi,Cochin,2,12819,24,6,2019,23,5,4,25,29,20
+Multiple carriers,Delhi,Cochin,1,13377,27,5,2019,18,15,1,30,7,15
+Jet Airways,Banglore,New Delhi,1,26890,1,3,2019,7,0,15,15,8,15
+IndiGo,Banglore,Delhi,0,3419,15,5,2019,0,30,3,25,2,55
+Air India,Kolkata,Banglore,2,14960,15,5,2019,9,50,23,15,13,25
+Air India,Mumbai,Hyderabad,0,11185,3,3,2019,19,30,20,45,1,15
+Air India,Delhi,Cochin,1,8372,27,5,2019,19,0,19,15,24,15
+Jet Airways,Delhi,Cochin,1,10262,6,6,2019,2,15,12,35,10,20
+Air India,Kolkata,Banglore,2,11542,12,6,2019,16,50,13,45,20,55
+SpiceJet,Kolkata,Banglore,1,4649,3,4,2019,15,5,20,20,5,15
+Jet Airways,Mumbai,Hyderabad,0,5678,9,3,2019,19,40,21,10,1,30
+SpiceJet,Banglore,Delhi,0,3971,1,6,2019,9,30,12,20,2,50
+Multiple carriers,Delhi,Cochin,1,7878,3,6,2019,7,10,16,10,9,0
+Jet Airways,Delhi,Cochin,2,13014,27,6,2019,5,30,19,0,13,30
+IndiGo,Banglore,Delhi,0,4423,1,5,2019,6,5,8,50,2,45
+Jet Airways,Delhi,Cochin,1,10262,1,6,2019,14,0,4,25,14,25
+Vistara,Banglore,Delhi,0,4668,27,5,2019,9,45,12,35,2,50
+Jet Airways,Kolkata,Banglore,1,10844,21,5,2019,21,10,18,15,21,5
+Jet Airways,Delhi,Cochin,2,10368,24,6,2019,9,40,4,25,18,45
+IndiGo,Banglore,Delhi,0,4591,21,4,2019,10,10,13,0,2,50
+IndiGo,Delhi,Cochin,1,7191,6,5,2019,18,35,1,30,6,55
+Multiple carriers,Delhi,Cochin,1,9794,18,5,2019,6,0,12,35,6,35
+IndiGo,Banglore,Delhi,0,3943,1,6,2019,4,0,6,50,2,50
+Jet Airways,Kolkata,Banglore,1,13626,12,6,2019,6,30,12,0,5,30
+Jet Airways,Kolkata,Banglore,1,9663,12,5,2019,20,0,9,20,13,20
+Multiple carriers,Delhi,Cochin,1,6093,15,6,2019,7,10,16,10,9,0
+Jet Airways,Banglore,New Delhi,1,11717,12,3,2019,21,25,7,40,10,15
+Jet Airways,Kolkata,Banglore,1,14781,18,5,2019,20,0,9,20,13,20
+Jet Airways,Banglore,Delhi,0,7229,3,5,2019,6,0,8,45,2,45
+GoAir,Banglore,Delhi,0,3898,1,6,2019,20,55,23,40,2,45
+Jet Airways,Delhi,Cochin,1,14714,3,6,2019,22,50,12,35,13,45
+Multiple carriers,Delhi,Cochin,1,7005,27,5,2019,11,40,21,0,9,20
+IndiGo,Chennai,Kolkata,0,3597,15,6,2019,14,45,17,5,2,20
+SpiceJet,Kolkata,Banglore,0,4413,18,3,2019,6,55,9,35,2,40
+Multiple carriers,Delhi,Cochin,1,15353,6,3,2019,10,20,19,15,8,55
+IndiGo,Banglore,Delhi,0,3943,1,5,2019,10,10,13,0,2,50
+IndiGo,Chennai,Kolkata,0,6297,15,3,2019,13,20,15,35,2,15
+IndiGo,Banglore,New Delhi,0,6144,9,3,2019,20,0,22,55,2,55
+Air India,Delhi,Cochin,2,12257,21,5,2019,18,45,19,15,24,30
+Jet Airways,Delhi,Cochin,2,15129,21,5,2019,13,25,12,35,23,10
+Jet Airways,Delhi,Cochin,2,10368,24,6,2019,5,30,4,25,22,55
+Jet Airways,Delhi,Cochin,2,13029,9,5,2019,9,40,19,0,9,20
+Air India,Kolkata,Banglore,2,9416,6,6,2019,12,0,11,10,23,10
+Air India,Delhi,Cochin,0,6934,3,6,2019,18,5,21,10,3,5
+Jet Airways,Kolkata,Banglore,1,11467,21,5,2019,20,25,14,25,18,0
+Multiple carriers,Delhi,Cochin,1,6795,3,6,2019,15,15,1,30,10,15
+IndiGo,Kolkata,Banglore,0,5198,27,3,2019,15,20,17,55,2,35
+Jet Airways,Delhi,Cochin,1,14053,9,3,2019,17,25,18,50,25,25
+Vistara,Kolkata,Banglore,1,7927,1,4,2019,7,10,23,25,16,15
+IndiGo,Kolkata,Banglore,0,4462,18,3,2019,10,10,12,55,2,45
+GoAir,Banglore,Delhi,0,5048,27,4,2019,7,45,10,40,2,55
+Jet Airways,Kolkata,Banglore,1,10844,24,5,2019,20,0,23,35,27,35
+Multiple carriers,Delhi,Cochin,1,15411,3,3,2019,8,55,18,50,9,55
+IndiGo,Kolkata,Banglore,0,4462,18,3,2019,17,15,19,55,2,40
+Jet Airways,Mumbai,Hyderabad,0,5678,27,3,2019,15,50,17,20,1,30
+Jet Airways,Delhi,Cochin,1,15764,6,3,2019,9,55,4,25,18,30
+Jet Airways,Delhi,Cochin,1,17024,6,3,2019,22,20,19,45,21,25
+Air India,Mumbai,Hyderabad,0,3100,18,6,2019,6,20,7,40,1,20
+Jet Airways,Banglore,Delhi,0,7229,1,5,2019,18,55,22,0,3,5
+IndiGo,Kolkata,Banglore,0,4804,24,4,2019,14,25,16,55,2,30
+Jet Airways,Banglore,Delhi,0,5769,24,6,2019,8,20,11,20,3,0
+Air Asia,Kolkata,Banglore,0,4384,18,3,2019,19,35,22,5,2,30
+Air India,Delhi,Cochin,1,6587,27,6,2019,5,15,6,50,25,35
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,5,45,19,10,13,25
+Air India,Chennai,Kolkata,0,7082,15,3,2019,11,40,13,55,2,15
+SpiceJet,Chennai,Kolkata,0,6300,15,3,2019,8,20,10,35,2,15
+Jet Airways,Kolkata,Banglore,1,14571,6,6,2019,8,25,16,20,7,55
+IndiGo,Banglore,Delhi,0,3943,27,6,2019,13,0,15,50,2,50
+Multiple carriers,Delhi,Cochin,1,6878,21,5,2019,14,55,0,55,10,0
+SpiceJet,Mumbai,Hyderabad,0,1965,1,4,2019,5,45,7,15,1,30
+Vistara,Kolkata,Banglore,1,9187,21,5,2019,17,0,10,45,17,45
+Air India,Banglore,New Delhi,0,4441,24,3,2019,21,10,23,55,2,45
+IndiGo,Banglore,New Delhi,0,10067,1,3,2019,8,30,11,30,3,0
+IndiGo,Delhi,Cochin,1,5054,27,6,2019,20,25,1,30,5,5
+Multiple carriers,Delhi,Cochin,1,7005,6,6,2019,6,0,21,0,15,0
+Jet Airways,Kolkata,Banglore,1,12121,15,5,2019,9,35,21,5,11,30
+IndiGo,Delhi,Cochin,1,5912,27,5,2019,15,10,20,0,4,50
+Air Asia,Kolkata,Banglore,1,5192,1,4,2019,7,35,19,25,11,50
+IndiGo,Chennai,Kolkata,0,3597,9,6,2019,13,15,15,35,2,20
+Jet Airways,Banglore,New Delhi,0,8016,9,3,2019,18,20,21,0,2,40
+Air India,Mumbai,Hyderabad,0,2050,15,3,2019,15,0,16,25,1,25
+SpiceJet,Banglore,New Delhi,0,4839,21,3,2019,9,35,12,30,2,55
+IndiGo,Mumbai,Hyderabad,0,4049,27,5,2019,6,25,7,55,1,30
+Vistara,Delhi,Cochin,0,6216,18,6,2019,6,0,9,10,3,10
+SpiceJet,Kolkata,Banglore,0,3841,21,6,2019,22,20,0,40,2,20
+SpiceJet,Kolkata,Banglore,0,3815,15,3,2019,6,55,9,35,2,40
+Air India,Banglore,Delhi,0,5176,3,4,2019,17,0,19,45,2,45
+SpiceJet,Mumbai,Hyderabad,0,2017,9,5,2019,22,45,0,15,1,30
+Vistara,Kolkata,Banglore,1,9187,9,5,2019,7,10,9,5,25,55
+Vistara,Banglore,New Delhi,0,11598,9,3,2019,9,50,12,35,2,45
+Jet Airways,Delhi,Cochin,2,13014,1,6,2019,19,30,12,35,17,5
+Jet Airways,Delhi,Cochin,1,10262,1,6,2019,19,15,12,35,17,20
+Air India,Delhi,Cochin,2,9916,9,4,2019,20,15,19,15,23,0
+Jet Airways,Kolkata,Banglore,1,14231,24,3,2019,16,55,12,0,19,5
+Jet Airways,Banglore,Delhi,0,7229,15,6,2019,11,10,14,5,2,55
+IndiGo,Delhi,Cochin,1,6316,27,3,2019,17,10,1,35,8,25
+Air Asia,Kolkata,Banglore,0,4384,9,3,2019,10,20,12,55,2,35
+Air India,Delhi,Cochin,2,13381,12,6,2019,16,55,19,15,26,20
+IndiGo,Chennai,Kolkata,0,4332,12,5,2019,11,35,14,0,2,25
+Air India,Delhi,Cochin,1,8907,15,6,2019,13,30,23,0,9,30
+IndiGo,Kolkata,Banglore,0,4804,12,6,2019,4,40,7,15,2,35
+Air India,Delhi,Cochin,1,15407,6,3,2019,7,0,7,40,24,40
+Jet Airways,Delhi,Cochin,1,12898,27,5,2019,10,0,4,25,18,25
+Multiple carriers,Delhi,Cochin,1,6883,27,3,2019,13,0,21,0,8,0
+SpiceJet,Chennai,Kolkata,0,3543,3,5,2019,17,45,20,5,2,20
+IndiGo,Banglore,Delhi,0,4284,6,5,2019,1,30,4,15,2,45
+IndiGo,Mumbai,Hyderabad,0,2437,3,5,2019,21,20,22,50,1,30
+SpiceJet,Kolkata,Banglore,0,4174,18,4,2019,22,20,0,40,2,20
+Jet Airways,Kolkata,Banglore,1,14781,21,5,2019,20,0,12,0,16,0
+Air India,Kolkata,Banglore,2,14960,21,5,2019,16,45,8,55,16,10
+Jet Airways,Banglore,Delhi,0,5769,27,6,2019,11,10,14,5,2,55
+SpiceJet,Delhi,Cochin,1,4812,24,4,2019,8,45,13,15,4,30
+Vistara,Kolkata,Banglore,1,9345,18,5,2019,7,10,23,25,16,15
+IndiGo,Kolkata,Banglore,1,4864,15,5,2019,7,10,12,40,5,30
+IndiGo,Chennai,Kolkata,0,7295,6,3,2019,19,35,21,55,2,20
+Air India,Delhi,Cochin,2,10231,12,6,2019,22,0,19,15,21,15
+Jet Airways,Delhi,Cochin,1,14714,1,6,2019,14,0,19,0,5,0
+Jet Airways,Delhi,Cochin,1,12032,27,3,2019,19,15,19,45,24,30
+Jet Airways,Banglore,Delhi,0,4544,15,4,2019,15,15,18,10,2,55
+Jet Airways,Kolkata,Banglore,1,10844,15,5,2019,6,30,18,15,11,45
+Vistara,Banglore,New Delhi,1,12476,3,3,2019,6,40,12,35,5,55
+Jet Airways,Banglore,New Delhi,1,11087,12,3,2019,20,35,23,0,26,25
+Air India,Delhi,Cochin,3,10703,6,6,2019,5,15,19,15,38,0
+IndiGo,Delhi,Cochin,1,6734,9,5,2019,8,35,22,30,13,55
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,14,5,20,20,6,15
+Air India,Kolkata,Banglore,2,11516,1,4,2019,5,50,23,15,17,25
+IndiGo,Chennai,Kolkata,0,3850,18,3,2019,7,55,10,15,2,20
+Jet Airways,Delhi,Cochin,2,17229,9,3,2019,13,55,4,25,14,30
+SpiceJet,Kolkata,Banglore,0,3873,27,6,2019,22,20,0,40,2,20
+Jet Airways,Mumbai,Hyderabad,0,4160,3,4,2019,7,5,8,30,1,25
+Multiple carriers,Delhi,Cochin,1,7670,18,5,2019,12,50,21,0,8,10
+Jet Airways,Kolkata,Banglore,1,10031,24,3,2019,8,25,16,20,7,55
+Jet Airways,Delhi,Cochin,2,11150,27,6,2019,13,25,12,35,23,10
+Jet Airways,Banglore,New Delhi,1,9134,15,3,2019,11,40,18,25,6,45
+SpiceJet,Banglore,Delhi,0,4423,18,5,2019,9,30,12,20,2,50
+Air Asia,Kolkata,Banglore,0,3807,21,6,2019,22,50,1,20,2,30
+Air India,Delhi,Cochin,1,7480,21,5,2019,6,5,9,25,27,20
+IndiGo,Banglore,Delhi,0,4423,6,5,2019,6,5,8,50,2,45
+IndiGo,Banglore,Delhi,0,4823,18,6,2019,16,55,19,55,3,0
+Vistara,Kolkata,Banglore,1,12102,24,3,2019,17,0,20,25,27,25
+Multiple carriers,Delhi,Cochin,1,15342,6,3,2019,9,0,19,15,10,15
+Jet Airways,Kolkata,Banglore,1,10844,6,5,2019,16,30,22,35,6,5
+Air India,Delhi,Cochin,1,7480,12,6,2019,9,45,9,25,23,40
+Air India,Kolkata,Banglore,1,4227,1,4,2019,19,0,4,40,9,40
+Air India,Delhi,Cochin,1,7690,9,6,2019,9,45,9,25,23,40
+SpiceJet,Kolkata,Banglore,1,8224,18,5,2019,15,55,21,25,5,30
+Vistara,Banglore,Delhi,0,5823,18,4,2019,19,30,22,15,2,45
+Jet Airways,Banglore,New Delhi,1,9134,15,3,2019,8,55,18,25,9,30
+Jet Airways,Banglore,New Delhi,1,26890,1,3,2019,16,55,0,45,7,50
+Air India,Kolkata,Banglore,1,8366,9,6,2019,9,25,7,55,22,30
+Air India,Delhi,Cochin,1,7480,1,6,2019,5,15,6,50,25,35
+Jet Airways,Kolkata,Banglore,1,14781,12,5,2019,16,30,22,35,6,5
+Air India,Kolkata,Banglore,2,13990,24,3,2019,5,55,23,15,41,20
+Air India,Delhi,Cochin,2,8245,21,3,2019,17,15,19,15,26,0
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,10,0,19,0,9,0
+Jet Airways,Kolkata,Banglore,1,12739,12,6,2019,6,30,4,40,22,10
+Multiple carriers,Delhi,Cochin,1,7575,21,5,2019,11,25,19,15,7,50
+Air India,Banglore,New Delhi,0,11633,18,3,2019,17,0,19,45,2,45
+Jet Airways,Delhi,Cochin,2,10368,15,6,2019,5,30,19,0,13,30
+Jet Airways,Banglore,New Delhi,1,13817,12,3,2019,16,55,23,0,6,5
+Jet Airways,Kolkata,Banglore,1,14231,24,3,2019,13,55,22,35,8,40
+Jet Airways,Banglore,New Delhi,1,6992,21,3,2019,11,40,23,0,11,20
+Air India,Banglore,Delhi,0,6961,21,6,2019,6,10,8,55,2,45
+Jet Airways,Delhi,Cochin,2,16263,1,6,2019,20,0,4,25,8,25
+Jet Airways,Delhi,Cochin,1,14714,27,6,2019,7,5,12,35,5,30
+Multiple carriers,Delhi,Cochin,1,7740,24,6,2019,7,30,21,0,13,30
+Jet Airways,Banglore,New Delhi,1,11087,18,3,2019,11,40,20,20,8,40
+Multiple carriers,Delhi,Cochin,1,14486,21,3,2019,8,0,15,30,7,30
+IndiGo,Delhi,Cochin,1,6442,21,5,2019,11,55,18,10,6,15
+Air India,Kolkata,Banglore,2,10361,18,5,2019,12,0,18,30,30,30
+Air Asia,Kolkata,Banglore,1,5320,12,5,2019,7,35,23,30,15,55
+Jet Airways,Delhi,Cochin,2,10368,15,6,2019,9,40,12,35,26,55
+SpiceJet,Kolkata,Banglore,0,4174,15,5,2019,17,10,19,40,2,30
+Air India,Delhi,Cochin,1,8151,21,5,2019,17,40,8,15,14,35
+Jet Airways,Delhi,Cochin,1,12557,21,3,2019,16,0,18,50,26,50
+Air India,Banglore,Delhi,0,6961,15,6,2019,10,0,12,45,2,45
+Air India,Banglore,Delhi,0,4441,9,4,2019,21,5,23,55,2,50
+SpiceJet,Mumbai,Hyderabad,0,2753,15,3,2019,22,45,0,10,1,25
+SpiceJet,Kolkata,Banglore,0,3841,6,4,2019,22,20,0,40,2,20
+Air India,Delhi,Cochin,1,5022,6,4,2019,6,10,23,0,16,50
+Air India,Delhi,Cochin,0,5201,6,6,2019,5,10,8,0,2,50
+Air India,Delhi,Cochin,0,6934,3,6,2019,14,10,17,10,3,0
+IndiGo,Kolkata,Banglore,1,5699,1,4,2019,17,35,22,15,4,40
+Vistara,Banglore,Delhi,0,5088,27,6,2019,19,30,22,15,2,45
+Multiple carriers,Delhi,Cochin,1,8601,21,3,2019,8,25,19,15,10,50
+IndiGo,Kolkata,Banglore,1,11319,15,5,2019,9,20,14,15,4,55
+IndiGo,Mumbai,Hyderabad,0,3838,9,3,2019,21,20,22,45,1,25
+Jet Airways,Kolkata,Banglore,1,14388,12,5,2019,16,30,9,20,16,50
+Jet Airways,Delhi,Cochin,2,10824,15,6,2019,9,35,12,35,27,0
+Jet Airways,Delhi,Cochin,1,5177,6,4,2019,13,0,19,0,6,0
+Jet Airways,Delhi,Cochin,1,14714,27,6,2019,11,30,19,0,7,30
+Jet Airways,Kolkata,Banglore,1,13626,12,6,2019,8,25,19,50,11,25
+Air India,Delhi,Cochin,2,13381,24,6,2019,6,50,7,40,24,50
+Air India,Delhi,Cochin,2,18211,9,3,2019,18,30,19,15,24,45
+Multiple carriers,Delhi,Cochin,2,6653,21,3,2019,13,15,21,20,8,5
+Jet Airways,Kolkata,Banglore,1,14781,12,5,2019,14,5,23,35,9,30
+Air India,Kolkata,Banglore,2,11458,6,5,2019,9,25,1,20,15,55
+Jet Airways,Kolkata,Banglore,1,10844,9,6,2019,6,30,19,50,13,20
+IndiGo,Mumbai,Hyderabad,0,3342,24,5,2019,2,35,4,5,1,30
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,18,15,12,35,18,20
+IndiGo,Chennai,Kolkata,0,5277,24,6,2019,22,5,0,25,2,20
+Air India,Banglore,New Delhi,0,4441,24,3,2019,6,10,8,55,2,45
+SpiceJet,Chennai,Kolkata,0,3543,3,5,2019,8,20,10,35,2,15
+Air India,Banglore,New Delhi,1,13912,6,3,2019,6,45,12,15,5,30
+Multiple carriers,Delhi,Cochin,1,9315,27,5,2019,6,40,19,0,12,20
+Jet Airways,Delhi,Cochin,1,10262,1,6,2019,22,50,4,25,5,35
+Air India,Delhi,Cochin,2,12199,27,6,2019,17,15,19,15,26,0
+IndiGo,Chennai,Kolkata,0,5277,27,5,2019,22,5,0,25,2,20
+Air India,Kolkata,Banglore,2,6117,12,6,2019,9,10,4,40,19,30
+IndiGo,Banglore,New Delhi,0,5734,24,3,2019,10,10,13,0,2,50
+Air Asia,Delhi,Cochin,1,8627,6,3,2019,20,10,7,10,11,0
+Multiple carriers,Delhi,Cochin,1,6795,15,6,2019,11,40,1,30,13,50
+IndiGo,Delhi,Cochin,0,5601,21,5,2019,14,25,17,40,3,15
+Jet Airways,Banglore,Delhi,0,7229,21,4,2019,17,45,20,45,3,0
+IndiGo,Delhi,Cochin,1,8330,9,5,2019,15,0,1,30,10,30
+IndiGo,Banglore,Delhi,0,4823,3,5,2019,8,30,11,20,2,50
+Jet Airways,Kolkata,Banglore,1,13759,24,3,2019,19,45,22,35,26,50
+Air India,Delhi,Cochin,2,10231,12,6,2019,5,0,7,40,26,40
+Jet Airways,Delhi,Cochin,1,12898,27,5,2019,19,15,19,0,23,45
+Jet Airways,Banglore,New Delhi,1,19225,6,3,2019,5,45,10,25,4,40
+Jet Airways,Mumbai,Hyderabad,0,4995,27,5,2019,7,5,8,30,1,25
+IndiGo,Delhi,Cochin,1,5298,12,6,2019,6,50,12,10,5,20
+Jet Airways,Delhi,Cochin,2,9254,21,3,2019,10,20,18,50,32,30
+Jet Airways,Delhi,Cochin,1,5177,6,4,2019,14,0,19,0,5,0
+Vistara,Kolkata,Banglore,1,9345,21,5,2019,20,20,23,25,27,5
+Jet Airways,Kolkata,Banglore,1,10844,6,5,2019,8,25,16,20,7,55
+Air India,Delhi,Cochin,2,15428,3,3,2019,5,55,7,40,25,45
+IndiGo,Delhi,Cochin,1,7255,21,5,2019,16,0,21,0,5,0
+Jet Airways,Delhi,Cochin,1,12898,21,5,2019,9,0,12,35,27,35
+IndiGo,Banglore,New Delhi,1,8707,1,3,2019,13,40,18,35,4,55
+Jet Airways,Delhi,Cochin,1,10262,3,6,2019,18,15,12,35,18,20
+Jet Airways,Kolkata,Banglore,1,13067,6,5,2019,20,25,10,55,14,30
+Jet Airways,Delhi,Cochin,1,10262,6,6,2019,19,45,19,0,23,15
+Air India,Kolkata,Banglore,0,4460,9,4,2019,20,45,23,20,2,35
+Jet Airways,Kolkata,Banglore,1,14571,24,5,2019,14,5,23,35,9,30
+Air India,Delhi,Cochin,2,10178,9,6,2019,19,45,19,15,23,30
+SpiceJet,Chennai,Kolkata,0,7718,1,3,2019,17,45,20,5,2,20
+Jet Airways,Delhi,Cochin,1,16376,21,5,2019,2,15,12,35,10,20
+Jet Airways,Mumbai,Hyderabad,0,5678,6,6,2019,19,35,21,5,1,30
+Multiple carriers,Delhi,Cochin,1,9103,9,5,2019,10,35,19,0,8,25
+Jet Airways,Delhi,Cochin,1,14714,6,6,2019,13,0,4,25,15,25
+SpiceJet,Delhi,Cochin,1,5583,24,6,2019,15,45,22,5,6,20
+IndiGo,Banglore,Delhi,0,4823,24,4,2019,18,55,21,50,2,55
+Jet Airways,Banglore,Delhi,0,4544,15,4,2019,18,55,22,0,3,5
+Air Asia,Delhi,Cochin,1,8759,18,5,2019,7,55,13,25,5,30
+Air Asia,Delhi,Cochin,1,6152,24,6,2019,7,55,13,25,5,30
+Jet Airways,Banglore,New Delhi,1,11087,18,3,2019,11,40,10,25,22,45
+Air India,Kolkata,Banglore,2,11432,6,6,2019,8,20,20,25,12,5
+SpiceJet,Kolkata,Banglore,0,3815,27,3,2019,17,15,19,45,2,30
+Vistara,Kolkata,Banglore,1,8662,1,4,2019,17,0,9,5,16,5
+Jet Airways,Banglore,New Delhi,1,17261,6,3,2019,11,40,11,25,23,45
+IndiGo,Kolkata,Banglore,1,4860,9,4,2019,19,35,0,10,4,35
+Air India,Delhi,Cochin,2,13442,3,3,2019,17,15,19,15,26,0
+Vistara,Mumbai,Hyderabad,1,12395,6,3,2019,15,40,22,55,7,15
+Air India,Kolkata,Banglore,1,6528,15,5,2019,14,35,14,35,24,0
+IndiGo,Delhi,Cochin,1,6314,1,6,2019,4,55,21,0,16,5
+IndiGo,Delhi,Cochin,1,6270,9,4,2019,11,25,1,30,14,5
+Jet Airways,Delhi,Cochin,1,14714,6,6,2019,19,45,19,0,23,15
+Multiple carriers,Delhi,Cochin,1,9359,15,6,2019,9,15,19,15,10,0
+Air India,Delhi,Cochin,0,6724,9,4,2019,14,5,17,55,3,50
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,22,50,19,0,20,10
+Vistara,Banglore,Delhi,0,4668,21,5,2019,7,0,9,40,2,40
+IndiGo,Delhi,Cochin,2,6610,6,3,2019,11,55,21,20,9,25
+SpiceJet,Chennai,Kolkata,0,3597,15,5,2019,8,20,10,35,2,15
+IndiGo,Kolkata,Banglore,0,4462,9,3,2019,10,10,12,55,2,45
+Air India,Delhi,Cochin,1,12677,6,3,2019,6,5,9,25,27,20
+Multiple carriers,Delhi,Cochin,1,23170,1,3,2019,0,20,15,30,15,10
+IndiGo,Kolkata,Banglore,0,4804,6,6,2019,4,40,7,15,2,35
+Multiple carriers,Delhi,Cochin,1,6795,27,5,2019,12,50,1,30,12,40
+Air India,Kolkata,Banglore,1,7662,18,5,2019,12,0,13,15,25,15
+Air India,Delhi,Cochin,2,12751,6,6,2019,13,20,7,40,18,20
+Jet Airways,Mumbai,Hyderabad,1,19595,6,3,2019,20,45,16,50,20,5
+Vistara,Banglore,New Delhi,0,7975,9,3,2019,7,0,9,40,2,40
+Jet Airways,Kolkata,Banglore,1,14781,18,5,2019,14,5,19,50,5,45
+Jet Airways,Kolkata,Banglore,1,14781,9,5,2019,8,25,20,45,12,20
+Jet Airways,Kolkata,Banglore,1,10031,24,3,2019,13,55,16,20,26,25
+Jet Airways,Kolkata,Banglore,1,10844,9,6,2019,14,5,19,50,5,45
+Jet Airways,Banglore,Delhi,0,3502,9,5,2019,19,50,22,50,3,0
+Jet Airways,Delhi,Cochin,2,13292,1,6,2019,9,35,4,25,18,50
+Jet Airways,Kolkata,Banglore,1,14151,6,6,2019,20,25,23,35,27,10
+SpiceJet,Mumbai,Hyderabad,0,12475,1,3,2019,5,45,7,5,1,20
+Jet Airways,Delhi,Cochin,1,14714,3,6,2019,20,55,12,35,15,40
+Multiple carriers,Delhi,Cochin,1,8283,24,5,2019,19,0,1,30,6,30
+Jet Airways,Banglore,New Delhi,1,11087,12,3,2019,20,35,9,30,12,55
+Jet Airways,Kolkata,Banglore,1,10844,21,5,2019,14,5,19,50,5,45
+IndiGo,Delhi,Cochin,1,5883,24,6,2019,18,35,1,30,6,55
+Air India,Banglore,New Delhi,2,7664,15,3,2019,5,50,16,20,10,30
+Jet Airways,Delhi,Cochin,1,12898,27,5,2019,8,0,4,25,20,25
+Jet Airways,Delhi,Cochin,1,10262,12,6,2019,22,50,19,0,20,10
+Jet Airways,Kolkata,Banglore,1,13067,15,5,2019,9,35,19,10,9,35
+IndiGo,Kolkata,Banglore,0,4462,18,3,2019,15,10,17,45,2,35
+Jet Airways,Mumbai,Hyderabad,0,5678,27,6,2019,2,55,4,20,1,25
+Jet Airways,Kolkata,Banglore,1,14388,21,5,2019,6,30,12,0,5,30
+Jet Airways,Delhi,Cochin,1,14714,3,6,2019,19,45,12,35,16,50
+IndiGo,Kolkata,Banglore,0,4804,27,5,2019,9,35,12,20,2,45
+Air India,Delhi,Cochin,2,11281,9,5,2019,5,0,7,40,26,40
+Jet Airways,Kolkata,Banglore,1,11134,24,3,2019,21,10,8,10,11,0
+Air India,Mumbai,Hyderabad,2,11647,12,3,2019,19,40,9,10,13,30
+Jet Airways,Kolkata,Banglore,1,10539,9,6,2019,17,0,21,5,28,5
+Multiple carriers,Delhi,Cochin,1,12192,1,6,2019,8,0,19,0,11,0
+Air India,Banglore,Delhi,0,6121,24,4,2019,13,20,16,10,2,50
+Jet Airways,Kolkata,Banglore,1,13759,24,3,2019,19,45,4,45,9,0
+Multiple carriers,Delhi,Cochin,1,6427,27,3,2019,10,20,1,35,15,15
+IndiGo,Banglore,Delhi,0,3943,9,4,2019,22,10,1,0,2,50
+IndiGo,Banglore,Delhi,0,4284,12,5,2019,22,10,1,0,2,50
+IndiGo,Delhi,Cochin,1,8147,9,3,2019,5,5,10,5,5,0
+Jet Airways,Banglore,Delhi,0,3502,12,5,2019,19,50,22,50,3,0
+IndiGo,Mumbai,Hyderabad,0,3342,15,3,2019,2,30,4,0,1,30
+IndiGo,Banglore,New Delhi,0,5734,21,3,2019,6,0,8,45,2,45
+SpiceJet,Kolkata,Banglore,1,8224,6,6,2019,15,55,21,25,5,30
+SpiceJet,Delhi,Cochin,1,9748,6,3,2019,6,10,11,20,5,10
+Jet Airways,Delhi,Cochin,2,8834,21,3,2019,19,10,4,25,33,15
+GoAir,Kolkata,Banglore,1,7102,6,5,2019,16,40,0,15,7,35
+Multiple carriers,Delhi,Cochin,1,13727,15,5,2019,13,0,1,30,12,30
+Jet Airways,Banglore,New Delhi,1,11087,18,3,2019,11,40,9,30,21,50
+Jet Airways,Delhi,Cochin,2,10368,15,6,2019,9,40,4,25,18,45
+Jet Airways,Banglore,Delhi,0,7229,1,6,2019,6,0,8,45,2,45
+Jet Airways,Delhi,Cochin,1,10262,15,6,2019,18,15,19,0,24,45
+IndiGo,Banglore,Delhi,0,4823,15,4,2019,20,0,22,50,2,50
+IndiGo,Kolkata,Banglore,0,4804,24,5,2019,4,40,7,15,2,35
+IndiGo,Delhi,Cochin,1,10112,6,6,2019,23,30,4,35,5,5
+Jet Airways,Banglore,Delhi,0,7229,27,5,2019,6,0,8,45,2,45
+Jet Airways,Kolkata,Banglore,1,13067,24,5,2019,17,0,22,5,29,5
+Jet Airways,Delhi,Cochin,1,14714,3,6,2019,14,0,4,25,14,25
+Air India,Delhi,Cochin,1,8907,3,6,2019,9,45,23,0,13,15
+Jet Airways,Banglore,Delhi,0,7229,9,4,2019,11,10,14,5,2,55
+Multiple carriers,Delhi,Cochin,2,24528,3,3,2019,17,50,1,35,7,45
+IndiGo,Delhi,Cochin,1,6838,3,6,2019,4,55,21,0,16,5
+Multiple carriers,Delhi,Cochin,1,10406,12,6,2019,7,5,21,0,13,55
+Vistara,Mumbai,Hyderabad,1,12395,6,3,2019,21,55,9,25,11,30
+Air India,Kolkata,Banglore,1,10203,6,5,2019,20,30,20,25,23,55
+IndiGo,Mumbai,Hyderabad,0,4049,12,5,2019,6,25,7,55,1,30
+Jet Airways,Kolkata,Banglore,1,13401,9,6,2019,20,25,18,0,21,35
+Air India,Delhi,Cochin,2,9968,9,5,2019,12,0,7,40,19,40
+Jet Airways,Mumbai,Hyderabad,0,8040,6,5,2019,10,20,11,50,1,30
+Multiple carriers,Delhi,Cochin,1,6427,27,3,2019,15,15,1,35,10,20
+IndiGo,Chennai,Kolkata,0,5277,6,5,2019,22,5,0,25,2,20
+Jet Airways,Mumbai,Hyderabad,0,2228,1,4,2019,2,55,4,20,1,25
+Vistara,Banglore,Delhi,0,5613,24,5,2019,21,0,23,50,2,50
+IndiGo,Kolkata,Banglore,1,6669,12,5,2019,17,35,22,15,4,40
+Vistara,Chennai,Kolkata,0,11982,15,5,2019,17,45,20,5,2,20
+Jet Airways,Kolkata,Banglore,2,10118,21,5,2019,6,30,7,25,24,55
+IndiGo,Kolkata,Banglore,0,4148,15,3,2019,21,25,0,5,2,40
+Jet Airways,Delhi,Cochin,1,18371,9,6,2019,2,15,12,35,10,20
+Multiple carriers,Delhi,Cochin,1,13587,12,6,2019,11,30,21,0,9,30
+Air India,Delhi,Cochin,2,12760,6,6,2019,17,15,19,15,26,0
+Jet Airways,Delhi,Cochin,2,10368,6,6,2019,9,40,4,25,18,45
+IndiGo,Mumbai,Hyderabad,0,3175,1,6,2019,2,35,4,5,1,30
+SpiceJet,Chennai,Kolkata,0,3597,9,5,2019,9,45,12,0,2,15
+Multiple carriers,Delhi,Cochin,1,6733,27,5,2019,11,30,1,30,14,0
+Multiple carriers,Delhi,Cochin,1,12192,1,6,2019,3,50,12,35,8,45
+Jet Airways,Delhi,Cochin,2,15129,27,5,2019,19,10,19,0,23,50
+Vistara,Banglore,Delhi,0,4668,12,5,2019,11,30,14,20,2,50
+Jet Airways,Delhi,Cochin,1,10262,27,6,2019,17,30,12,35,19,5
+Jet Airways,Delhi,Cochin,2,15129,18,5,2019,9,40,4,25,18,45
+Multiple carriers,Delhi,Cochin,1,7878,3,6,2019,7,10,22,30,15,20
+Jet Airways,Mumbai,Hyderabad,0,8040,18,3,2019,10,20,11,50,1,30
+Jet Airways,Delhi,Cochin,1,12373,9,5,2019,2,15,12,35,10,20
+Air India,Delhi,Cochin,2,12392,18,5,2019,17,15,19,15,26,0
+IndiGo,Chennai,Kolkata,0,5277,18,5,2019,22,5,0,25,2,20
+Multiple carriers,Delhi,Cochin,1,7888,21,5,2019,13,0,21,0,8,0
+Multiple carriers,Delhi,Cochin,1,9001,3,6,2019,8,45,19,15,10,30
+IndiGo,Mumbai,Hyderabad,0,4049,21,3,2019,6,20,7,45,1,25
+IndiGo,Chennai,Kolkata,0,4326,24,3,2019,5,15,7,35,2,20
+IndiGo,Banglore,New Delhi,0,4777,9,3,2019,23,30,2,20,2,50
+IndiGo,Delhi,Cochin,1,6838,21,3,2019,11,30,21,0,9,30
+IndiGo,Delhi,Cochin,1,6582,6,6,2019,7,15,12,30,5,15
+Jet Airways,Delhi,Cochin,1,10262,1,6,2019,21,50,12,35,14,45
+Air Asia,Banglore,New Delhi,0,10873,1,3,2019,23,25,2,10,2,45
+Jet Airways,Delhi,Cochin,1,10262,27,6,2019,2,15,12,35,10,20
+IndiGo,Kolkata,Banglore,0,4148,27,3,2019,5,30,8,20,2,50
+IndiGo,Delhi,Cochin,2,6494,27,3,2019,11,55,21,20,9,25
+Jet Airways,Delhi,Cochin,1,12898,21,5,2019,10,0,12,35,26,35
+Air India,Delhi,Cochin,2,9968,9,6,2019,5,0,19,15,38,15
+Jet Airways,Delhi,Cochin,1,12898,21,5,2019,15,0,4,25,13,25
+Multiple carriers,Delhi,Cochin,1,7740,24,5,2019,14,55,22,30,7,35
+Air India,Kolkata,Banglore,1,7452,9,5,2019,9,50,21,5,11,15
+Jet Airways,Mumbai,Hyderabad,0,4160,21,3,2019,7,10,8,35,1,25
+IndiGo,Banglore,Delhi,0,4823,27,5,2019,8,30,11,20,2,50
+Air India,Delhi,Cochin,2,13486,18,5,2019,10,55,19,15,8,20
+Jet Airways,Banglore,Delhi,0,4544,27,4,2019,18,55,22,0,3,5
+Air India,Delhi,Cochin,2,10975,21,5,2019,9,45,9,25,23,40
+IndiGo,Chennai,Kolkata,0,3858,3,5,2019,14,45,17,5,2,20
+Jet Airways,Delhi,Cochin,2,15129,6,5,2019,5,30,4,25,22,55
+Air India,Delhi,Cochin,2,10975,15,6,2019,9,45,9,25,23,40
+Air Asia,Delhi,Cochin,1,6752,9,5,2019,16,45,22,25,5,40
+Air Asia,Kolkata,Banglore,0,3807,18,6,2019,9,45,12,15,2,30
+Air India,Delhi,Cochin,1,13832,6,3,2019,12,30,9,25,20,55
+Jet Airways,Banglore,Delhi,0,4544,6,4,2019,18,55,22,0,3,5
+Jet Airways,Kolkata,Banglore,1,14571,6,6,2019,18,55,8,15,13,20
+Vistara,Chennai,Kolkata,0,11982,24,6,2019,17,45,20,5,2,20
+Jet Airways,Mumbai,Hyderabad,0,8040,1,5,2019,7,5,8,30,1,25
+Vistara,Banglore,New Delhi,0,11913,18,3,2019,16,0,18,35,2,35
+Air Asia,Kolkata,Banglore,1,5162,24,5,2019,6,50,10,30,3,40
+Jet Airways,Delhi,Cochin,2,13014,15,6,2019,9,40,12,35,26,55
+Jet Airways,Kolkata,Banglore,1,8586,18,5,2019,21,10,4,40,7,30
+Multiple carriers,Delhi,Cochin,1,10197,21,5,2019,8,0,19,0,11,0
+Vistara,Kolkata,Banglore,1,8610,1,5,2019,17,0,20,20,27,20
+Air Asia,Banglore,Delhi,0,7120,1,6,2019,23,55,2,45,2,50
+Air India,Delhi,Cochin,3,10703,9,5,2019,5,15,19,15,38,0
+Jet Airways,Delhi,Cochin,1,10262,1,6,2019,9,0,4,25,19,25
+Jet Airways,Delhi,Cochin,2,11507,27,6,2019,5,30,19,0,13,30
+IndiGo,Banglore,Delhi,0,3943,6,6,2019,21,15,0,15,3,0
+Jet Airways,Delhi,Cochin,2,13292,15,6,2019,9,35,12,35,27,0
+IndiGo,Banglore,New Delhi,1,7166,21,3,2019,13,40,18,35,4,55
+Jet Airways,Delhi,Cochin,1,10262,15,6,2019,13,0,19,0,6,0
+Air Asia,Delhi,Cochin,1,6152,12,6,2019,20,45,7,10,10,25
+Jet Airways,Kolkata,Banglore,1,10703,15,5,2019,9,35,22,5,12,30
+Jet Airways,Banglore,Delhi,0,4030,21,5,2019,7,10,10,10,3,0
+Multiple carriers,Delhi,Cochin,1,17057,6,3,2019,17,30,1,35,8,5
+IndiGo,Chennai,Kolkata,0,3850,18,6,2019,7,55,10,15,2,20
+Jet Airways,Kolkata,Banglore,1,14388,6,5,2019,20,0,9,20,13,20
+IndiGo,Delhi,Cochin,1,4744,3,4,2019,2,0,7,25,5,25
+Jet Airways,Delhi,Cochin,1,10262,1,6,2019,17,30,12,35,19,5
+Air India,Banglore,New Delhi,0,7591,3,3,2019,21,10,23,55,2,45
+Air Asia,Delhi,Cochin,1,6152,27,5,2019,7,55,22,25,14,30
+Jet Airways,Banglore,New Delhi,1,15025,6,3,2019,8,55,9,0,24,5
+IndiGo,Mumbai,Hyderabad,0,6795,3,3,2019,16,55,18,25,1,30
+Air India,Kolkata,Banglore,1,10623,24,5,2019,17,30,20,25,26,55
+IndiGo,Chennai,Kolkata,0,3850,24,5,2019,7,55,10,15,2,20
+Jet Airways,Delhi,Cochin,2,6643,21,3,2019,19,10,18,50,23,40
+Jet Airways,Kolkata,Banglore,1,10844,1,5,2019,14,5,22,35,8,30
+Air India,Delhi,Cochin,2,10441,27,5,2019,19,45,19,15,23,30
+Multiple carriers,Delhi,Cochin,1,13377,27,6,2019,17,30,1,30,8,0
+Air India,Delhi,Cochin,2,13696,18,5,2019,12,55,19,15,30,20
+IndiGo,Banglore,Delhi,0,3943,3,6,2019,0,25,3,15,2,50
+Air India,Delhi,Cochin,2,9443,24,6,2019,19,45,19,15,23,30
+Jet Airways,Delhi,Cochin,2,13014,1,6,2019,5,30,4,25,22,55
+Air India,Banglore,New Delhi,2,8114,24,3,2019,17,0,22,55,29,55
+SpiceJet,Delhi,Cochin,1,5583,24,6,2019,6,5,11,20,5,15
+Jet Airways,Banglore,New Delhi,1,13817,12,3,2019,16,55,8,15,15,20
+Multiple carriers,Delhi,Cochin,1,6953,27,3,2019,12,50,19,15,6,25
+Multiple carriers,Delhi,Cochin,1,6637,27,3,2019,10,20,21,0,10,40
+IndiGo,Kolkata,Banglore,0,4174,3,4,2019,9,35,12,20,2,45
+Air India,Delhi,Cochin,2,8140,21,3,2019,9,45,9,25,23,40
+Jet Airways,Banglore,New Delhi,1,13817,12,3,2019,7,0,23,0,16,0
+Jet Airways,Delhi,Cochin,1,10262,6,6,2019,9,0,19,0,10,0
+IndiGo,Delhi,Cochin,1,6496,18,5,2019,15,10,20,0,4,50
+IndiGo,Delhi,Cochin,1,10112,15,6,2019,23,30,4,35,5,5
+Air India,Delhi,Cochin,2,10467,27,5,2019,13,15,9,25,20,10
+IndiGo,Delhi,Cochin,1,6206,1,6,2019,10,35,1,30,14,55
+Air India,Kolkata,Banglore,2,10151,24,5,2019,12,0,18,30,30,30
+IndiGo,Kolkata,Banglore,0,4804,12,6,2019,15,15,17,45,2,30
+GoAir,Banglore,New Delhi,0,5048,24,3,2019,7,45,10,40,2,55
+Jet Airways,Mumbai,Hyderabad,0,4050,6,6,2019,2,55,4,20,1,25
+SpiceJet,Banglore,Delhi,0,3919,1,6,2019,9,30,12,20,2,50
+Jet Airways,Kolkata,Banglore,1,11841,9,6,2019,21,10,8,15,11,5
+IndiGo,Delhi,Cochin,1,5065,24,4,2019,20,25,1,30,5,5
+Air India,Kolkata,Banglore,2,9626,9,5,2019,12,0,18,30,30,30
+IndiGo,Banglore,Delhi,0,3419,27,6,2019,22,10,1,0,2,50
+Air India,Kolkata,Banglore,3,14960,9,6,2019,9,50,23,15,13,25
+IndiGo,Banglore,Delhi,0,3943,9,6,2019,21,15,0,15,3,0
+Multiple carriers,Delhi,Cochin,1,14323,9,5,2019,9,0,19,15,10,15
+Air India,Kolkata,Banglore,2,11752,9,6,2019,16,50,13,45,20,55
+Multiple carriers,Delhi,Cochin,1,7677,6,6,2019,8,30,19,15,10,45
+Multiple carriers,Delhi,Cochin,1,14067,24,5,2019,13,0,21,0,8,0
+Jet Airways,Kolkata,Banglore,1,14781,1,5,2019,21,10,9,20,12,10
+Jet Airways,Kolkata,Banglore,1,11467,15,5,2019,17,0,14,25,21,25
+Jet Airways,Delhi,Cochin,2,16263,21,5,2019,20,0,4,25,8,25
+Jet Airways,Delhi,Cochin,1,12373,18,5,2019,19,15,4,25,9,10
+Multiple carriers,Delhi,Cochin,1,7005,15,6,2019,12,50,21,0,8,10
+IndiGo,Delhi,Cochin,1,7580,18,5,2019,5,10,10,5,4,55
+Air India,Delhi,Cochin,2,10441,18,5,2019,22,0,19,15,21,15
+Jet Airways,Banglore,Delhi,0,7229,18,5,2019,17,45,20,45,3,0
+IndiGo,Delhi,Cochin,1,6093,9,4,2019,6,40,21,0,14,20
+SpiceJet,Kolkata,Banglore,0,3873,15,6,2019,6,55,9,30,2,35
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,21,50,4,25,6,35
+Jet Airways,Kolkata,Banglore,1,13364,1,4,2019,14,5,23,35,9,30
+Jet Airways,Delhi,Cochin,1,12373,15,5,2019,2,15,12,35,10,20
+SpiceJet,Mumbai,Hyderabad,0,1965,12,5,2019,22,45,0,15,1,30
+Multiple carriers,Delhi,Cochin,1,7005,6,6,2019,12,50,21,0,8,10
+Air India,Banglore,New Delhi,0,4441,18,3,2019,10,0,12,45,2,45
+Multiple carriers,Delhi,Cochin,1,11098,21,3,2019,4,45,18,50,14,5
+IndiGo,Delhi,Cochin,1,7318,21,5,2019,9,15,1,30,16,15
+Jet Airways,Delhi,Cochin,1,12767,21,3,2019,7,5,4,25,21,20
+SpiceJet,Kolkata,Banglore,1,10654,24,3,2019,15,55,21,15,5,20
+SpiceJet,Delhi,Cochin,1,6297,9,6,2019,15,45,22,5,6,20
+Multiple carriers,Delhi,Cochin,1,11265,3,3,2019,9,45,16,10,6,25
+Air India,Mumbai,Hyderabad,2,11972,6,3,2019,17,20,14,50,2,30
+Multiple carriers,Delhi,Cochin,1,13587,9,6,2019,7,5,21,0,13,55
+IndiGo,Kolkata,Banglore,0,4804,3,6,2019,17,15,19,50,2,35
+Air India,Kolkata,Banglore,2,8366,1,5,2019,9,25,18,20,8,55
+Air India,Kolkata,Banglore,1,8366,18,5,2019,9,25,7,55,22,30
+Air India,Kolkata,Banglore,2,10697,18,5,2019,8,20,21,50,13,30
+Jet Airways,Delhi,Cochin,2,15129,21,5,2019,5,30,19,0,13,30
+IndiGo,Chennai,Kolkata,0,3858,18,5,2019,14,45,17,5,2,20
+Jet Airways,Banglore,Delhi,0,7229,6,4,2019,18,55,22,0,3,5
+IndiGo,Delhi,Cochin,1,6937,27,4,2019,16,0,21,0,5,0
+Jet Airways,Delhi,Cochin,1,14714,24,6,2019,14,0,19,0,5,0
+Jet Airways,Banglore,New Delhi,1,9134,15,3,2019,5,45,16,10,10,25
+Jet Airways,Delhi,Cochin,1,10577,3,6,2019,7,5,19,0,11,55
+Jet Airways,Kolkata,Banglore,1,14388,6,5,2019,20,0,10,5,14,5
+Air India,Delhi,Cochin,1,8991,12,6,2019,13,30,8,15,18,45
+Air India,Delhi,Cochin,2,12436,27,5,2019,12,55,19,15,30,20
+Air India,Banglore,New Delhi,2,12515,12,3,2019,6,45,9,25,26,40
+SpiceJet,Delhi,Cochin,1,5583,15,6,2019,15,45,22,5,6,20
+Air India,Delhi,Cochin,1,10840,9,3,2019,23,0,7,40,8,40
+Jet Airways,Delhi,Cochin,2,14300,27,6,2019,12,15,12,35,24,20
+SpiceJet,Banglore,Delhi,0,5515,18,4,2019,21,10,0,5,2,55
+Jet Airways,Kolkata,Banglore,1,10844,15,5,2019,14,5,20,45,6,40
+Jet Airways,Kolkata,Banglore,1,11134,24,3,2019,16,55,9,15,16,20
+Air India,Banglore,Delhi,0,6121,24,4,2019,10,0,12,45,2,45
+Air India,Kolkata,Banglore,2,10676,21,5,2019,12,0,7,55,19,55
+Jet Airways,Kolkata,Banglore,1,14781,1,5,2019,16,30,22,35,6,5
+Jet Airways,Banglore,Delhi,0,4544,6,4,2019,19,50,22,50,3,0
+GoAir,Banglore,Delhi,0,4632,6,4,2019,7,45,10,40,2,55
+Jet Airways,Delhi,Cochin,2,10929,21,3,2019,19,10,4,25,33,15
+Air Asia,Kolkata,Banglore,0,4409,21,4,2019,10,20,12,55,2,35
+SpiceJet,Kolkata,Banglore,0,3873,1,5,2019,6,55,9,30,2,35
+Jet Airways,Banglore,Delhi,0,4030,27,5,2019,7,10,10,10,3,0
+Air Asia,Kolkata,Banglore,0,3807,9,5,2019,22,50,1,20,2,30
+Air India,Kolkata,Banglore,2,12140,12,5,2019,10,0,1,20,15,20
+SpiceJet,Kolkata,Banglore,0,4096,6,3,2019,9,0,11,30,2,30
+Jet Airways,Delhi,Cochin,2,14300,15,6,2019,18,20,12,35,18,15
+Multiple carriers,Delhi,Cochin,1,6007,27,6,2019,11,40,21,0,9,20
+IndiGo,Kolkata,Banglore,0,4174,1,4,2019,14,25,16,55,2,30
+SpiceJet,Chennai,Kolkata,0,3597,21,6,2019,17,45,20,5,2,20
+Air India,Delhi,Cochin,2,9548,24,6,2019,12,0,19,15,7,15
+Air India,Banglore,New Delhi,1,8714,15,3,2019,8,50,15,15,6,25
+Vistara,Kolkata,Banglore,1,8085,12,6,2019,17,0,20,20,27,20
+Jet Airways,Delhi,Cochin,2,10368,3,6,2019,19,30,4,25,8,55
+Air India,Delhi,Cochin,2,10975,27,6,2019,7,5,9,25,26,20
+Multiple carriers,Delhi,Cochin,1,7670,9,5,2019,7,30,21,0,13,30
+Multiple carriers,Delhi,Cochin,1,8073,15,5,2019,18,0,1,30,7,30
+Jet Airways,Banglore,New Delhi,1,13817,12,3,2019,22,55,10,45,11,50
+IndiGo,Kolkata,Banglore,1,3574,9,4,2019,19,20,23,45,4,25
+Jet Airways,Delhi,Cochin,1,15554,9,5,2019,21,50,4,25,6,35
+Air India,Delhi,Cochin,1,6692,27,3,2019,21,0,19,15,22,15
+SpiceJet,Mumbai,Hyderabad,0,1965,15,6,2019,22,45,0,15,1,30
+IndiGo,Mumbai,Hyderabad,0,2227,24,6,2019,20,5,21,40,1,35
+IndiGo,Chennai,Kolkata,0,3597,9,6,2019,14,45,17,5,2,20
+Jet Airways,Delhi,Cochin,1,14714,6,6,2019,14,0,4,25,14,25
+SpiceJet,Kolkata,Banglore,0,4622,9,3,2019,17,15,19,45,2,30
+Jet Airways,Delhi,Cochin,2,15129,1,5,2019,5,30,4,25,22,55
+IndiGo,Chennai,Kolkata,0,5277,15,6,2019,22,5,0,25,2,20
+Multiple carriers,Delhi,Cochin,1,11667,27,3,2019,9,0,18,50,9,50
+Jet Airways,Kolkata,Banglore,1,10539,9,6,2019,17,0,19,10,26,10
+Jet Airways,Kolkata,Banglore,1,11467,9,5,2019,20,25,14,25,18,0
+Air India,Delhi,Cochin,1,7480,12,6,2019,17,20,9,25,16,5
+GoAir,Banglore,Delhi,0,3419,24,4,2019,20,55,23,40,2,45
+IndiGo,Delhi,Cochin,1,5684,27,6,2019,10,35,1,30,14,55
+IndiGo,Kolkata,Banglore,1,6218,12,6,2019,18,5,23,30,5,25
+Jet Airways,Kolkata,Banglore,1,6959,12,6,2019,20,0,4,40,8,40
+Vistara,Banglore,Delhi,0,4878,12,6,2019,19,30,22,15,2,45
+Air India,Kolkata,Banglore,2,12219,1,4,2019,7,0,5,25,22,25
+Jet Airways,Kolkata,Banglore,1,12384,21,5,2019,20,25,9,45,13,20
+Jet Airways,Delhi,Cochin,0,7202,15,6,2019,11,0,14,15,3,15
+SpiceJet,Kolkata,Banglore,0,4174,1,6,2019,17,10,19,40,2,30
+Air India,Mumbai,Hyderabad,0,3100,12,5,2019,15,0,16,25,1,25
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,8,55,15,15,6,20
+Multiple carriers,Delhi,Cochin,1,6723,9,6,2019,14,55,22,30,7,35
+Air India,Kolkata,Banglore,2,10697,6,6,2019,8,20,7,55,23,35
+SpiceJet,Kolkata,Banglore,0,3841,1,6,2019,22,20,0,40,2,20
+Air India,Kolkata,Banglore,2,9920,1,4,2019,16,45,12,0,19,15
+IndiGo,Banglore,New Delhi,0,12649,1,3,2019,18,25,21,20,2,55
+IndiGo,Delhi,Cochin,1,6093,6,6,2019,11,25,21,0,9,35
+Jet Airways,Delhi,Cochin,2,15129,27,5,2019,5,30,4,25,22,55
+Jet Airways,Banglore,Delhi,0,4544,27,4,2019,17,45,20,45,3,0
+Air India,Kolkata,Banglore,0,5170,27,3,2019,14,15,16,45,2,30
+IndiGo,Mumbai,Hyderabad,0,2754,9,6,2019,2,35,4,5,1,30
+Air India,Mumbai,Hyderabad,0,3100,12,6,2019,13,55,15,25,1,30
+Air India,Kolkata,Banglore,2,9237,1,4,2019,16,45,23,15,30,30
+Multiple carriers,Delhi,Cochin,1,7198,15,6,2019,13,0,1,30,12,30
+Jet Airways,Delhi,Cochin,1,10262,1,6,2019,11,30,12,35,25,5
+SpiceJet,Delhi,Cochin,1,5111,27,3,2019,15,55,21,55,6,0
+Air India,Delhi,Cochin,2,10441,27,6,2019,22,0,19,15,21,15
+Multiple carriers,Delhi,Cochin,1,10261,1,6,2019,8,45,19,15,10,30
+IndiGo,Chennai,Kolkata,0,6297,9,3,2019,19,35,21,55,2,20
+Multiple carriers,Delhi,Cochin,1,12192,15,6,2019,3,50,19,0,15,10
+IndiGo,Banglore,Delhi,0,3943,15,6,2019,10,10,13,0,2,50
+Jet Airways,Delhi,Cochin,2,16274,27,5,2019,5,30,12,35,7,5
+Jet Airways,Delhi,Cochin,1,12898,21,5,2019,7,5,12,35,5,30
+SpiceJet,Banglore,Delhi,0,3311,15,5,2019,5,55,8,35,2,40
+Multiple carriers,Delhi,Cochin,1,9103,21,5,2019,4,55,12,35,7,40
+IndiGo,Kolkata,Banglore,0,4148,15,3,2019,22,10,0,55,2,45
+IndiGo,Kolkata,Banglore,0,5224,9,6,2019,15,30,18,5,2,35
+IndiGo,Kolkata,Banglore,0,4804,9,5,2019,4,40,7,15,2,35
+IndiGo,Chennai,Kolkata,0,3597,6,6,2019,19,35,21,55,2,20
+IndiGo,Kolkata,Banglore,0,4804,27,6,2019,11,30,14,5,2,35
+Jet Airways,Mumbai,Hyderabad,0,4995,6,5,2019,10,20,11,50,1,30
+SpiceJet,Kolkata,Banglore,0,3873,9,4,2019,9,0,11,25,2,25
+Jet Airways,Delhi,Cochin,1,10262,1,6,2019,15,0,4,25,13,25
+Jet Airways,Mumbai,Hyderabad,0,3210,18,6,2019,19,35,21,5,1,30
+GoAir,Delhi,Cochin,1,6276,9,6,2019,7,30,13,35,6,5
+Jet Airways,Banglore,New Delhi,1,9134,9,3,2019,21,25,8,15,10,50
+Jet Airways,Banglore,New Delhi,1,11087,12,3,2019,18,55,13,15,18,20
+Jet Airways,Kolkata,Banglore,1,13941,1,5,2019,14,5,4,40,14,35
+Air India,Delhi,Cochin,0,5201,3,6,2019,5,10,8,0,2,50
+IndiGo,Delhi,Cochin,1,6171,24,4,2019,5,5,16,10,11,5
+Air Asia,Kolkata,Banglore,0,5964,1,3,2019,19,35,22,5,2,30
+Jet Airways,Delhi,Cochin,2,15129,27,5,2019,19,10,19,0,23,50
+Jet Airways,Delhi,Cochin,2,13029,18,5,2019,9,40,12,35,26,55
+Jet Airways,Banglore,Delhi,0,4030,27,5,2019,8,20,11,20,3,0
+GoAir,Kolkata,Banglore,1,10586,18,5,2019,16,40,0,15,7,35
+Air India,Mumbai,Hyderabad,2,17926,6,3,2019,11,35,19,25,31,50
+Jet Airways,Delhi,Cochin,0,9564,6,6,2019,11,0,14,15,3,15
+Jet Airways,Kolkata,Banglore,1,8355,15,5,2019,10,20,17,35,7,15
+Multiple carriers,Delhi,Cochin,1,6795,6,6,2019,10,20,1,30,15,10
+Air India,Delhi,Cochin,1,10671,15,5,2019,13,30,8,15,18,45
+Air India,Delhi,Cochin,2,10178,27,3,2019,13,20,7,40,18,20
+Vistara,Kolkata,Banglore,1,7927,12,6,2019,7,10,9,5,25,55
+Air India,Mumbai,Hyderabad,0,3100,18,5,2019,13,55,15,25,1,30
+Air India,Delhi,Cochin,2,12646,6,3,2019,19,45,19,15,23,30
+IndiGo,Delhi,Cochin,1,7894,6,3,2019,5,5,10,5,5,0
+IndiGo,Banglore,Delhi,0,3943,24,6,2019,1,30,4,15,2,45
+Multiple carriers,Delhi,Cochin,1,7575,9,5,2019,11,25,19,15,7,50
+Jet Airways,Delhi,Cochin,2,16914,6,3,2019,5,25,19,45,38,20
+Vistara,Delhi,Cochin,0,6216,24,6,2019,14,40,17,50,3,10
+IndiGo,Delhi,Cochin,1,6147,21,5,2019,17,5,22,15,5,10
+IndiGo,Delhi,Cochin,1,6979,15,5,2019,17,30,1,30,8,0
+Air India,Delhi,Cochin,0,6094,27,5,2019,18,5,21,10,3,5
+Jet Airways,Delhi,Cochin,1,12242,27,3,2019,20,50,4,25,7,35
+Air India,Kolkata,Banglore,2,9416,12,6,2019,12,0,21,50,9,50
+Air India,Delhi,Cochin,2,7107,21,3,2019,13,15,9,25,20,10
+Jet Airways,Delhi,Cochin,2,13292,9,6,2019,21,25,19,0,21,35
+IndiGo,Chennai,Kolkata,0,7295,3,3,2019,7,55,10,15,2,20
+IndiGo,Banglore,Delhi,0,4423,18,4,2019,0,30,3,25,2,55
+IndiGo,Banglore,New Delhi,0,5694,24,3,2019,23,30,2,20,2,50
+Jet Airways,Banglore,New Delhi,1,8147,24,3,2019,5,45,10,25,4,40
+Multiple carriers,Delhi,Cochin,1,13377,27,5,2019,13,0,1,30,12,30
+Jet Airways,Banglore,New Delhi,1,13502,6,3,2019,14,5,0,45,10,40
+Jet Airways,Delhi,Cochin,2,13764,9,3,2019,5,40,4,25,22,45
+Jet Airways,Kolkata,Banglore,1,12692,6,6,2019,17,0,9,45,16,45
+IndiGo,Kolkata,Banglore,0,4804,18,5,2019,17,15,19,50,2,35
+Jet Airways,Kolkata,Banglore,1,7064,1,4,2019,8,25,9,20,24,55
+Jet Airways,Delhi,Cochin,1,14924,24,6,2019,7,5,12,35,5,30
+IndiGo,Kolkata,Banglore,0,6565,1,3,2019,15,20,17,55,2,35
+Air India,Delhi,Cochin,2,9863,18,5,2019,16,40,19,15,26,35
+IndiGo,Delhi,Cochin,1,7725,6,3,2019,16,0,21,0,5,0
+Air India,Delhi,Cochin,2,11281,15,5,2019,22,0,19,15,21,15
+Jet Airways,Mumbai,Hyderabad,0,3210,21,5,2019,19,35,21,5,1,30
+Air India,Kolkata,Banglore,1,6117,1,5,2019,19,0,4,40,9,40
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,16,0,4,25,12,25
+IndiGo,Banglore,Delhi,0,3943,1,4,2019,4,0,6,50,2,50
+Jet Airways,Kolkata,Banglore,1,12576,12,6,2019,18,55,4,40,9,45
+Air Asia,Delhi,Cochin,1,7452,21,4,2019,7,55,13,25,5,30
+Jet Airways,Kolkata,Banglore,1,14781,1,5,2019,6,30,16,20,9,50
+Air India,Kolkata,Banglore,1,8996,12,6,2019,9,10,13,15,4,5
+Air India,Delhi,Cochin,1,11563,6,3,2019,13,30,8,15,18,45
+IndiGo,Banglore,New Delhi,0,4777,9,3,2019,4,0,6,50,2,50
+IndiGo,Kolkata,Banglore,0,4174,9,4,2019,15,30,18,5,2,35
+SpiceJet,Kolkata,Banglore,0,3841,6,6,2019,17,10,19,40,2,30
+Jet Airways,Delhi,Cochin,2,13775,24,6,2019,18,20,4,25,10,5
+Air India,Delhi,Cochin,1,5117,27,3,2019,17,20,9,25,16,5
+Jet Airways,Mumbai,Hyderabad,0,5678,15,6,2019,19,35,21,5,1,30
+Jet Airways,Delhi,Cochin,1,5177,1,4,2019,14,0,19,0,5,0
+SpiceJet,Delhi,Cochin,1,5975,9,5,2019,17,55,22,50,4,55
+IndiGo,Banglore,New Delhi,0,6860,3,3,2019,0,40,3,25,2,45
+IndiGo,Kolkata,Banglore,0,4804,18,5,2019,9,35,12,20,2,45
+Multiple carriers,Delhi,Cochin,1,13377,27,6,2019,11,30,1,30,14,0
+Air India,Delhi,Cochin,1,8372,21,5,2019,10,0,19,15,9,15
+Multiple carriers,Delhi,Cochin,1,7933,1,6,2019,9,0,21,0,12,0
+IndiGo,Mumbai,Hyderabad,0,4049,15,5,2019,6,25,7,55,1,30
+Air India,Banglore,New Delhi,0,11423,3,3,2019,10,0,12,45,2,45
+Jet Airways,Kolkata,Banglore,1,10844,15,5,2019,18,55,16,20,21,25
+Jet Airways,Delhi,Cochin,2,12819,21,3,2019,9,40,4,25,42,45
+SpiceJet,Banglore,Delhi,0,5621,18,4,2019,21,10,0,5,2,55
+Air India,Banglore,Delhi,0,5228,9,5,2019,17,0,19,45,2,45
+Jet Airways,Delhi,Cochin,2,9254,27,3,2019,5,25,19,45,38,20
+IndiGo,Mumbai,Hyderabad,0,4392,1,5,2019,6,25,7,55,1,30
+Jet Airways,Mumbai,Hyderabad,0,8040,21,3,2019,10,20,11,50,1,30
+Air Asia,Banglore,Delhi,0,4483,27,4,2019,11,10,13,55,2,45
+Air India,Delhi,Cochin,2,12760,3,3,2019,9,45,9,25,23,40
+Jet Airways,Banglore,Delhi,0,7229,15,5,2019,15,15,18,10,2,55
+Vistara,Banglore,Delhi,0,5403,24,4,2019,7,0,9,40,2,40
+Air India,Delhi,Cochin,1,7934,21,3,2019,7,0,19,15,12,15
+GoAir,Kolkata,Banglore,1,6945,15,5,2019,23,30,7,45,8,15
+SpiceJet,Banglore,Delhi,0,4423,6,4,2019,9,30,12,20,2,50
+Jet Airways,Mumbai,Hyderabad,0,8040,15,3,2019,7,10,8,35,1,25
+Jet Airways,Delhi,Cochin,1,11399,9,5,2019,8,0,19,0,11,0
+Jet Airways,Delhi,Cochin,0,7202,21,4,2019,11,0,14,15,3,15
+Multiple carriers,Delhi,Cochin,1,13727,9,5,2019,11,30,21,0,9,30
+SpiceJet,Delhi,Cochin,1,4957,24,6,2019,17,55,22,50,4,55
+Jet Airways,Delhi,Cochin,1,10262,3,6,2019,13,0,19,0,6,0
+SpiceJet,Mumbai,Hyderabad,0,2017,3,4,2019,5,45,7,15,1,30
+Jet Airways,Delhi,Cochin,1,12242,27,3,2019,18,15,4,25,10,10
+Jet Airways,Mumbai,Hyderabad,0,10875,1,3,2019,10,20,11,50,1,30
+Jet Airways,Kolkata,Banglore,1,10844,9,6,2019,14,5,20,45,6,40
+Air Asia,Kolkata,Banglore,0,4409,3,6,2019,10,20,12,55,2,35
+Air India,Banglore,New Delhi,1,6987,21,3,2019,6,55,23,20,16,25
+Jet Airways,Delhi,Cochin,2,12074,27,3,2019,5,40,4,25,22,45
+Multiple carriers,Delhi,Cochin,1,7354,6,6,2019,11,25,19,15,7,50
+Air India,Delhi,Cochin,2,13381,3,6,2019,16,55,19,15,26,20
+Air India,Delhi,Cochin,0,5201,15,6,2019,5,10,8,0,2,50
+Jet Airways,Kolkata,Banglore,1,9663,1,5,2019,16,30,12,0,19,30
+Air India,Delhi,Cochin,0,6094,9,5,2019,18,5,21,10,3,5
+Jet Airways,Delhi,Cochin,0,7202,12,5,2019,11,0,14,15,3,15
+Vistara,Chennai,Kolkata,0,11982,6,6,2019,17,45,20,5,2,20
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,7,0,16,10,9,10
+Air India,Chennai,Kolkata,0,7817,9,3,2019,11,40,13,55,2,15
+Jet Airways,Delhi,Cochin,1,12373,18,5,2019,13,0,19,0,6,0
+Jet Airways,Kolkata,Banglore,1,10844,18,5,2019,8,25,18,15,9,50
+Jet Airways,Delhi,Cochin,2,13376,9,6,2019,6,45,12,35,29,50
+Multiple carriers,Delhi,Cochin,1,9646,27,6,2019,9,45,16,10,6,25
+SpiceJet,Kolkata,Banglore,0,3841,6,6,2019,22,20,0,40,2,20
+SpiceJet,Delhi,Cochin,1,4957,21,3,2019,16,35,22,50,6,15
+IndiGo,Kolkata,Banglore,0,4148,9,3,2019,21,25,0,5,2,40
+Jet Airways,Banglore,New Delhi,1,26890,1,3,2019,22,50,5,5,6,15
+Jet Airways,Delhi,Cochin,2,8834,27,3,2019,19,10,19,45,24,35
+IndiGo,Delhi,Cochin,1,5241,24,4,2019,2,0,7,45,5,45
+Jet Airways,Delhi,Cochin,0,7989,27,5,2019,11,0,14,15,3,15
+IndiGo,Delhi,Cochin,1,5883,12,6,2019,10,35,1,30,14,55
+Air Asia,Kolkata,Banglore,1,6857,18,5,2019,6,50,10,30,3,40
+SpiceJet,Banglore,New Delhi,1,5822,15,3,2019,15,35,23,40,8,5
+Jet Airways,Delhi,Cochin,1,10262,9,6,2019,15,0,4,25,13,25
+Jet Airways,Mumbai,Hyderabad,0,4995,12,6,2019,7,5,8,30,1,25
+SpiceJet,Banglore,Delhi,0,4991,21,4,2019,9,30,12,20,2,50
+Jet Airways,Banglore,New Delhi,1,16736,6,3,2019,5,45,21,20,15,35
+Jet Airways,Delhi,Cochin,2,18804,12,6,2019,11,40,19,0,7,20
+IndiGo,Delhi,Cochin,1,6442,1,6,2019,8,35,22,30,13,55
+Air India,Kolkata,Banglore,0,5170,18,3,2019,14,15,16,45,2,30
+SpiceJet,Banglore,New Delhi,0,4377,18,3,2019,20,30,23,20,2,50
+Jet Airways,Delhi,Cochin,0,9564,9,6,2019,11,0,14,15,3,15
+SpiceJet,Banglore,Delhi,0,3573,27,6,2019,5,55,8,35,2,40
+Jet Airways,Delhi,Cochin,1,17024,6,3,2019,17,30,19,45,26,15
+Air Asia,Banglore,Delhi,0,3383,21,5,2019,4,55,7,45,2,50
+Jet Airways,Banglore,New Delhi,1,27992,1,3,2019,14,5,20,20,6,15
+Jet Airways,Banglore,Delhi,0,7229,12,5,2019,8,20,11,20,3,0
+Jet Airways,Banglore,New Delhi,1,9134,15,3,2019,5,45,10,25,4,40
+Air India,Mumbai,Hyderabad,0,3100,21,6,2019,15,0,16,25,1,25
+Multiple carriers,Delhi,Cochin,1,13727,15,5,2019,9,0,21,0,12,0
+Vistara,Kolkata,Banglore,1,8452,1,4,2019,7,10,20,20,13,10
+Jet Airways,Delhi,Cochin,1,14714,3,6,2019,10,0,19,0,9,0
+Jet Airways,Banglore,New Delhi,1,7280,15,3,2019,9,45,15,55,6,10
+Air India,Mumbai,Hyderabad,2,18797,6,3,2019,13,30,16,55,3,25
+IndiGo,Mumbai,Hyderabad,0,2754,3,6,2019,12,0,13,30,1,30
+Air Asia,Kolkata,Banglore,0,4409,3,6,2019,22,50,1,20,2,30
+IndiGo,Delhi,Cochin,0,5021,27,4,2019,14,20,17,35,3,15
+Jet Airways,Mumbai,Hyderabad,0,8040,9,3,2019,6,30,8,0,1,30
+Air India,Delhi,Cochin,1,10454,15,6,2019,9,0,19,15,10,15
+Multiple carriers,Delhi,Cochin,1,10197,15,5,2019,3,50,12,35,8,45
+Air India,Banglore,Delhi,0,5228,12,5,2019,6,10,8,55,2,45
+Jet Airways,Delhi,Cochin,1,14714,9,6,2019,14,0,19,0,5,0
+Air India,Banglore,New Delhi,0,7276,15,3,2019,6,10,8,55,2,45
+IndiGo,Delhi,Cochin,1,7731,27,3,2019,2,35,8,30,5,55
+Air Asia,Kolkata,Banglore,1,6857,18,5,2019,19,55,23,30,3,35
+Air India,Banglore,Delhi,0,6961,18,6,2019,5,45,8,45,3,0
+Jet Airways,Delhi,Cochin,2,7791,21,3,2019,10,45,4,25,17,40
+IndiGo,Banglore,New Delhi,0,4777,21,3,2019,10,10,13,0,2,50
+Jet Airways,Delhi,Cochin,1,16289,9,3,2019,19,15,4,25,9,10
+Jet Airways,Kolkata,Banglore,1,12681,1,4,2019,18,55,4,40,9,45
+IndiGo,Banglore,Delhi,0,4823,27,4,2019,18,25,21,20,2,55
+Jet Airways,Delhi,Cochin,2,13014,9,6,2019,9,40,12,35,26,55
+Jet Airways,Delhi,Cochin,1,5406,6,4,2019,7,5,19,0,11,55
+Multiple carriers,Delhi,Cochin,1,9315,15,5,2019,7,30,19,0,11,30
+Air India,Delhi,Cochin,1,7480,9,5,2019,12,30,9,25,20,55
+Jet Airways,Banglore,New Delhi,1,14815,18,3,2019,14,5,19,10,5,5
+Air India,Kolkata,Banglore,1,12173,24,3,2019,20,30,16,15,19,45
+Air India,Banglore,New Delhi,2,7664,15,3,2019,5,50,23,45,17,55
+Air India,Delhi,Cochin,2,12777,6,6,2019,17,15,19,15,26,0
+Multiple carriers,Delhi,Cochin,1,8837,27,5,2019,7,30,19,15,11,45
+Jet Airways,Kolkata,Banglore,1,10844,1,5,2019,21,10,10,5,12,55
+Jet Airways,Kolkata,Banglore,1,14571,24,5,2019,6,30,19,50,13,20
+IndiGo,Delhi,Cochin,1,6093,15,6,2019,7,30,21,0,13,30
+IndiGo,Delhi,Cochin,1,7514,6,3,2019,8,35,16,10,7,35
+IndiGo,Delhi,Cochin,0,6015,18,5,2019,14,25,17,40,3,15
+Jet Airways,Delhi,Cochin,1,12898,21,5,2019,10,0,4,25,18,25
+Air India,Delhi,Cochin,1,8792,1,6,2019,19,0,19,15,24,15
+IndiGo,Banglore,Delhi,0,4823,15,5,2019,8,30,11,20,2,50
+SpiceJet,Banglore,Delhi,0,3919,1,4,2019,5,55,8,35,2,40
+IndiGo,Chennai,Kolkata,0,3597,1,5,2019,13,15,15,35,2,20
+SpiceJet,Mumbai,Hyderabad,0,2017,21,5,2019,5,45,7,15,1,30
+Air Asia,Banglore,Delhi,0,3383,27,6,2019,23,55,2,45,2,50
+SpiceJet,Mumbai,Hyderabad,0,1965,18,6,2019,22,45,0,15,1,30
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,2,15,12,35,10,20
+Jet Airways,Delhi,Cochin,1,17234,3,3,2019,16,0,4,25,12,25
+Jet Airways,Kolkata,Banglore,1,14178,9,6,2019,20,0,4,40,8,40
+IndiGo,Delhi,Cochin,1,5636,3,6,2019,2,0,7,25,5,25
+IndiGo,Banglore,Delhi,0,4823,15,4,2019,18,55,21,50,2,55
+Air India,Delhi,Cochin,1,7480,21,5,2019,12,30,9,25,20,55
+Jet Airways,Kolkata,Banglore,1,14571,9,6,2019,18,55,16,20,21,25
+IndiGo,Mumbai,Hyderabad,0,13999,1,3,2019,9,10,10,40,1,30
+Jet Airways,Kolkata,Banglore,1,14151,18,5,2019,20,25,21,5,24,40
+Air India,Banglore,Delhi,0,6121,1,5,2019,21,5,23,55,2,50
+SpiceJet,Chennai,Kolkata,0,3543,24,5,2019,8,20,10,35,2,15
+Air India,Delhi,Cochin,2,10651,18,5,2019,19,45,19,15,23,30
+Jet Airways,Delhi,Cochin,2,15129,21,5,2019,23,5,4,25,29,20
+IndiGo,Delhi,Cochin,1,6582,24,6,2019,7,15,12,30,5,15
+Jet Airways,Delhi,Cochin,2,15544,27,5,2019,5,30,12,35,7,5
+IndiGo,Delhi,Cochin,1,8574,27,3,2019,18,35,1,35,7,0
+IndiGo,Mumbai,Hyderabad,0,4784,9,3,2019,2,30,4,0,1,30
+IndiGo,Delhi,Cochin,1,6818,3,6,2019,5,5,12,10,7,5
+Jet Airways,Banglore,New Delhi,1,25735,1,3,2019,14,5,9,30,19,25
+Jet Airways,Delhi,Cochin,2,9483,9,4,2019,13,25,19,0,29,35
+Jet Airways,Delhi,Cochin,2,10368,24,6,2019,19,30,12,35,17,5
+Multiple carriers,Delhi,Cochin,1,8073,15,5,2019,9,0,21,0,12,0
+IndiGo,Kolkata,Banglore,0,4778,1,3,2019,22,10,0,55,2,45
+Jet Airways,Kolkata,Banglore,1,13941,18,5,2019,20,0,4,40,8,40
+Jet Airways,Kolkata,Banglore,1,10844,1,5,2019,16,30,22,35,6,5
+Jet Airways,Kolkata,Banglore,1,10844,9,5,2019,6,30,19,50,13,20
+SpiceJet,Kolkata,Banglore,0,3841,24,5,2019,9,0,11,25,2,25
+Jet Airways,Kolkata,Banglore,1,10844,15,5,2019,6,30,16,20,9,50
+Jet Airways,Delhi,Cochin,2,8728,27,3,2019,5,10,18,50,13,40
+Jet Airways,Kolkata,Banglore,1,11467,1,5,2019,20,25,14,25,18,0
+Multiple carriers,Delhi,Cochin,1,15078,6,3,2019,9,0,15,30,6,30
+Multiple carriers,Delhi,Cochin,1,7198,6,6,2019,17,0,1,30,8,30
+Air India,Delhi,Cochin,1,8372,24,6,2019,21,0,7,40,10,40
+Multiple carriers,Delhi,Cochin,1,7308,27,5,2019,16,0,1,30,9,30
+SpiceJet,Delhi,Cochin,1,4414,27,3,2019,8,45,13,15,4,30
+IndiGo,Kolkata,Banglore,0,5224,18,4,2019,14,25,16,55,2,30
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,5,45,16,10,10,25
+IndiGo,Banglore,New Delhi,0,6860,9,3,2019,1,30,4,15,2,45
+Multiple carriers,Delhi,Cochin,1,15136,6,3,2019,13,0,1,35,12,35
+Jet Airways,Delhi,Cochin,1,5963,27,3,2019,16,0,19,45,27,45
+Air India,Delhi,Cochin,2,8665,27,3,2019,21,30,19,15,21,45
+Jet Airways,Delhi,Cochin,2,15129,21,5,2019,23,5,4,25,29,20
+SpiceJet,Kolkata,Banglore,0,3841,18,5,2019,17,10,19,40,2,30
+Multiple carriers,Delhi,Cochin,1,13377,9,6,2019,10,0,1,30,15,30
+Jet Airways,Delhi,Cochin,2,16914,9,3,2019,5,25,4,25,23,0
+Jet Airways,Delhi,Cochin,1,10262,9,6,2019,2,15,19,0,16,45
+IndiGo,Kolkata,Banglore,1,5386,9,5,2019,17,35,22,15,4,40
+Jet Airways,Kolkata,Banglore,1,14388,15,5,2019,21,10,4,40,7,30
+Jet Airways,Delhi,Cochin,2,15129,27,5,2019,5,30,19,0,13,30
+IndiGo,Delhi,Cochin,1,6442,15,5,2019,11,55,22,30,10,35
+Jet Airways,Delhi,Cochin,2,10368,3,6,2019,19,30,12,35,17,5
+Jet Airways,Delhi,Cochin,1,12767,21,3,2019,15,0,18,50,27,50
+Jet Airways,Delhi,Cochin,1,10262,6,6,2019,15,0,4,25,13,25
+Multiple carriers,Delhi,Cochin,1,7408,12,6,2019,8,0,21,0,13,0
+Multiple carriers,Delhi,Cochin,1,13587,27,6,2019,10,0,21,0,11,0
+Air India,Kolkata,Banglore,1,8891,15,5,2019,16,50,7,55,15,5
+IndiGo,Delhi,Cochin,1,5883,6,6,2019,10,35,1,30,14,55
+Jet Airways,Delhi,Cochin,1,10262,27,6,2019,13,0,12,35,23,35
+Jet Airways,Kolkata,Banglore,1,10844,9,6,2019,21,10,20,45,23,35
+Jet Airways,Kolkata,Banglore,1,14781,9,5,2019,6,30,19,50,13,20
+IndiGo,Chennai,Kolkata,0,6297,15,3,2019,14,40,17,5,2,25
+Air Asia,Kolkata,Banglore,0,4409,12,5,2019,22,50,1,20,2,30
+Air India,Delhi,Cochin,2,12383,9,6,2019,10,55,19,15,8,20
+SpiceJet,Mumbai,Hyderabad,0,2017,3,5,2019,13,15,14,45,1,30
+Air India,Mumbai,Hyderabad,1,12308,6,3,2019,19,0,9,10,14,10
+SpiceJet,Chennai,Kolkata,0,3384,18,3,2019,17,45,20,5,2,20
+Jet Airways,Banglore,New Delhi,1,9134,15,3,2019,8,55,16,10,7,15
+IndiGo,Delhi,Cochin,1,7464,18,5,2019,2,0,7,25,5,25
+Multiple carriers,Delhi,Cochin,1,6093,27,4,2019,7,10,16,10,9,0
+Multiple carriers,Delhi,Cochin,1,15237,3,3,2019,4,0,18,50,14,50
+Jet Airways,Mumbai,Hyderabad,0,4995,1,5,2019,7,5,8,30,1,25
+Air India,Delhi,Cochin,0,6934,24,5,2019,14,10,17,10,3,0
+Jet Airways,Kolkata,Banglore,1,13784,1,4,2019,21,10,10,5,12,55
+Air Asia,Kolkata,Banglore,0,4409,15,6,2019,10,20,12,55,2,35
+Multiple carriers,Delhi,Cochin,1,15898,27,5,2019,13,0,19,15,6,15
+Air India,Delhi,Cochin,2,11989,21,5,2019,17,15,19,15,26,0
+SpiceJet,Mumbai,Hyderabad,0,2017,3,6,2019,13,15,14,45,1,30
+Multiple carriers,Delhi,Cochin,1,11098,1,6,2019,4,55,19,0,14,5
+IndiGo,Delhi,Cochin,1,6794,21,5,2019,17,30,1,30,8,0
+Jet Airways,Kolkata,Banglore,1,10844,1,5,2019,21,10,9,20,12,10
+Multiple carriers,Delhi,Cochin,2,34608,9,3,2019,15,5,1,35,10,30
+Air India,Delhi,Cochin,0,6094,15,5,2019,14,10,17,10,3,0
+IndiGo,Kolkata,Banglore,1,4565,9,5,2019,15,15,20,30,5,15
+Air India,Delhi,Cochin,3,10493,27,5,2019,5,15,19,15,38,0
+Air India,Delhi,Cochin,2,9653,27,6,2019,19,45,19,15,23,30
+Air India,Banglore,New Delhi,2,12305,18,3,2019,6,45,10,35,27,50
+Air India,Banglore,Delhi,0,6961,15,5,2019,10,0,12,45,2,45
+Multiple carriers,Delhi,Cochin,1,9794,15,5,2019,6,0,12,35,6,35
+Multiple carriers,Delhi,Cochin,1,13377,27,5,2019,17,30,1,30,8,0
+Jet Airways,Delhi,Cochin,1,12898,27,5,2019,2,15,19,0,16,45
+Multiple carriers,Delhi,Cochin,1,7155,27,6,2019,11,25,19,15,7,50
+Multiple carriers,Delhi,Cochin,1,13377,24,6,2019,15,0,1,30,10,30
+Vistara,Banglore,Delhi,0,4668,3,5,2019,11,30,14,20,2,50
+IndiGo,Banglore,New Delhi,1,8110,1,3,2019,7,30,12,20,4,50
+Jet Airways,Banglore,Delhi,0,4544,6,4,2019,8,20,11,20,3,0
+Air India,Delhi,Cochin,2,9653,27,6,2019,16,40,19,15,26,35
+Jet Airways,Kolkata,Banglore,1,14781,1,5,2019,8,25,18,15,9,50
+Vistara Premium economy,Banglore,Delhi,0,5969,6,4,2019,11,30,14,20,2,50
+SpiceJet,Mumbai,Hyderabad,0,2017,3,4,2019,13,15,14,45,1,30
+Jet Airways,Kolkata,Banglore,1,14151,6,6,2019,17,0,23,35,6,35
+Jet Airways,Kolkata,Banglore,1,13731,9,6,2019,16,30,4,40,12,10
+Jet Airways,Delhi,Cochin,1,15400,3,3,2019,9,0,18,50,9,50
+Jet Airways,Kolkata,Banglore,1,8066,9,5,2019,9,35,10,55,25,20
+Jet Airways,Delhi,Cochin,2,21314,3,3,2019,5,40,18,50,37,10
+Air India,Banglore,New Delhi,1,14069,1,3,2019,11,5,22,45,11,40
+Jet Airways,Mumbai,Hyderabad,0,2470,15,3,2019,15,50,17,20,1,30
+IndiGo,Kolkata,Banglore,0,4804,24,4,2019,20,20,22,55,2,35
+Air India,Banglore,New Delhi,1,9029,15,3,2019,5,50,12,55,7,5
+IndiGo,Kolkata,Banglore,0,4804,12,5,2019,4,40,7,15,2,35
+Jet Airways,Delhi,Cochin,2,15129,9,5,2019,23,5,19,0,19,55
+IndiGo,Mumbai,Hyderabad,0,2754,24,3,2019,19,5,20,30,1,25
+Jet Airways,Kolkata,Banglore,1,13364,1,4,2019,21,10,8,15,11,5
+IndiGo,Kolkata,Banglore,1,6933,24,3,2019,17,35,22,15,4,40
+Jet Airways,Delhi,Cochin,2,15129,18,5,2019,23,5,12,35,13,30
+Multiple carriers,Delhi,Cochin,1,11200,9,6,2019,11,25,19,0,7,35
+Jet Airways,Mumbai,Hyderabad,0,3210,15,5,2019,2,55,4,20,1,25
+Jet Airways,Mumbai,Hyderabad,0,8040,18,6,2019,10,20,11,50,1,30
+Jet Airways,Delhi,Cochin,2,10919,12,6,2019,14,35,4,25,13,50
+IndiGo,Delhi,Cochin,1,6442,27,6,2019,7,35,16,10,8,35
+IndiGo,Delhi,Cochin,0,4729,1,4,2019,14,20,17,35,3,15
+IndiGo,Delhi,Cochin,1,6442,6,3,2019,11,55,22,20,10,25
+SpiceJet,Kolkata,Banglore,0,3841,12,6,2019,22,20,0,40,2,20
+Air India,Delhi,Cochin,2,10441,3,6,2019,19,45,19,15,23,30
+Multiple carriers,Delhi,Cochin,1,13587,1,6,2019,10,0,21,0,11,0
+Jet Airways,Kolkata,Banglore,1,11467,15,5,2019,20,25,14,25,18,0
+IndiGo,Chennai,Kolkata,0,7295,3,3,2019,13,20,15,35,2,15
+SpiceJet,Chennai,Kolkata,0,3597,1,5,2019,9,45,12,0,2,15
+Multiple carriers,Delhi,Cochin,1,7787,9,5,2019,6,40,19,15,12,35
+IndiGo,Delhi,Cochin,1,14871,6,3,2019,6,40,21,0,14,20
+IndiGo,Chennai,Kolkata,0,3540,15,6,2019,15,40,18,25,2,45
+IndiGo,Delhi,Cochin,1,6442,1,6,2019,6,50,22,30,15,40
+Air Asia,Banglore,Delhi,0,3383,24,6,2019,11,10,13,55,2,45
+Air Asia,Kolkata,Banglore,0,4409,18,4,2019,22,50,1,20,2,30
+IndiGo,Chennai,Kolkata,0,3850,9,5,2019,7,55,10,15,2,20
+Multiple carriers,Delhi,Cochin,1,8018,24,6,2019,13,15,22,30,9,15
+Jet Airways,Kolkata,Banglore,1,11467,1,4,2019,20,25,15,5,18,40
+Vistara,Banglore,Delhi,0,4668,6,6,2019,11,30,14,20,2,50
+Jet Airways,Delhi,Cochin,2,13922,24,6,2019,17,35,19,0,25,25
+Air India,Mumbai,Hyderabad,0,3625,6,5,2019,6,20,7,40,1,20
+Air Asia,Kolkata,Banglore,0,5989,18,5,2019,19,55,22,25,2,30
+IndiGo,Banglore,Delhi,0,4423,21,4,2019,4,0,6,50,2,50
+Jet Airways,Delhi,Cochin,0,9564,18,6,2019,9,50,13,5,3,15
+Jet Airways,Kolkata,Banglore,1,8529,12,6,2019,16,30,18,15,25,45
+Air India,Kolkata,Banglore,0,4145,6,6,2019,20,45,23,20,2,35
+IndiGo,Kolkata,Banglore,0,4804,3,5,2019,17,15,19,50,2,35
+IndiGo,Delhi,Cochin,1,6938,1,6,2019,14,20,22,30,8,10
+Jet Airways,Banglore,New Delhi,1,14815,6,3,2019,8,0,7,40,23,40
+Multiple carriers,Delhi,Cochin,1,15077,6,3,2019,7,30,19,15,11,45
+Jet Airways,Delhi,Cochin,2,13014,15,6,2019,9,40,19,0,9,20
+Air India,Kolkata,Banglore,2,11201,9,6,2019,5,50,20,25,14,35
+Jet Airways,Kolkata,Banglore,1,12692,6,6,2019,20,25,18,0,21,35
+Multiple carriers,Delhi,Cochin,1,9646,1,6,2019,9,45,16,10,6,25
+Jet Airways,Delhi,Cochin,1,16079,24,5,2019,22,50,4,25,5,35
+Air India,Kolkata,Banglore,2,6117,15,5,2019,9,10,11,5,25,55
+Multiple carriers,Delhi,Cochin,1,6795,9,6,2019,15,15,1,30,10,15
+Air India,Mumbai,Hyderabad,0,3100,1,6,2019,21,5,22,25,1,20
+Jet Airways,Delhi,Cochin,1,15851,9,5,2019,2,15,12,35,10,20
+Vistara,Chennai,Kolkata,0,3687,6,6,2019,7,5,9,20,2,15
+IndiGo,Banglore,Delhi,0,4990,12,4,2019,16,55,19,55,3,0
+Jet Airways,Delhi,Cochin,1,15554,9,5,2019,19,15,19,0,23,45
+Multiple carriers,Delhi,Cochin,1,9526,15,6,2019,6,0,19,15,13,15
+IndiGo,Delhi,Cochin,0,6015,18,5,2019,5,35,8,50,3,15
+Air India,Kolkata,Banglore,2,10676,1,5,2019,12,0,21,50,9,50
+Jet Airways,Delhi,Cochin,1,12898,27,5,2019,18,15,12,35,18,20
+Jet Airways,Delhi,Cochin,2,15129,27,5,2019,23,5,4,25,29,20
+Multiple carriers,Delhi,Cochin,1,13378,21,3,2019,11,30,19,15,7,45
+SpiceJet,Kolkata,Banglore,0,4174,1,6,2019,9,0,11,25,2,25
+Multiple carriers,Delhi,Cochin,1,9103,21,5,2019,11,25,19,0,7,35
+IndiGo,Chennai,Kolkata,0,3850,9,6,2019,7,55,10,15,2,20
+Vistara,Delhi,Cochin,0,6216,9,6,2019,14,40,17,50,3,10
+Vistara,Kolkata,Banglore,1,8610,1,4,2019,17,0,23,25,6,25
+Jet Airways,Kolkata,Banglore,1,10539,6,6,2019,17,0,9,45,16,45
+IndiGo,Delhi,Cochin,1,6674,9,3,2019,11,55,22,20,10,25
+Multiple carriers,Delhi,Cochin,1,7618,24,6,2019,8,0,21,0,13,0
+IndiGo,Banglore,Delhi,0,3943,21,4,2019,0,30,3,25,2,55
+Vistara,Banglore,New Delhi,0,11913,24,3,2019,16,0,18,35,2,35
+IndiGo,Banglore,New Delhi,0,6860,9,3,2019,18,55,21,45,2,50
+Jet Airways,Delhi,Cochin,2,13292,12,6,2019,5,30,19,0,13,30
+Multiple carriers,Delhi,Cochin,1,17057,6,3,2019,2,15,15,30,13,15
+Jet Airways,Delhi,Cochin,2,13014,27,6,2019,5,30,19,0,13,30
+Air India,Delhi,Cochin,2,11552,3,3,2019,7,5,19,15,36,10
+IndiGo,Chennai,Kolkata,0,6297,12,3,2019,11,35,14,0,2,25
+IndiGo,Chennai,Kolkata,0,4332,24,3,2019,11,35,14,0,2,25
+Air India,Delhi,Cochin,0,5674,21,3,2019,5,10,8,0,2,50
+Multiple carriers,Delhi,Cochin,1,10711,21,5,2019,7,5,19,15,12,10
+Jet Airways,Kolkata,Banglore,1,11467,1,4,2019,9,35,18,0,8,25
+Air India,Kolkata,Banglore,2,12434,6,5,2019,16,50,15,5,22,15
+Air India,Delhi,Cochin,0,5201,24,6,2019,18,5,21,10,3,5
+Vistara,Banglore,Delhi,0,4878,18,5,2019,17,0,19,35,2,35
+Jet Airways,Delhi,Cochin,2,13014,6,6,2019,5,30,4,25,22,55
+SpiceJet,Chennai,Kolkata,0,3597,6,6,2019,8,20,10,35,2,15
+Air India,Banglore,New Delhi,2,12599,3,3,2019,8,50,11,10,26,20
+Jet Airways,Kolkata,Banglore,1,10844,24,5,2019,18,55,22,35,27,40
+Jet Airways,Delhi,Cochin,1,12898,21,5,2019,2,15,19,0,16,45
+IndiGo,Banglore,Delhi,0,3943,21,6,2019,13,0,15,50,2,50
+Multiple carriers,Delhi,Cochin,1,7198,12,6,2019,13,0,1,30,12,30
+SpiceJet,Kolkata,Banglore,1,4963,18,5,2019,15,5,20,20,5,15
+IndiGo,Banglore,New Delhi,0,12649,1,3,2019,16,55,19,45,2,50
+Multiple carriers,Delhi,Cochin,1,17267,6,3,2019,8,0,15,30,7,30
+Jet Airways,Delhi,Cochin,1,12373,9,5,2019,7,5,19,0,11,55
+Jet Airways,Banglore,New Delhi,1,13502,3,3,2019,11,40,0,45,13,5
+Multiple carriers,Delhi,Cochin,1,11622,21,3,2019,11,30,18,50,7,20
+SpiceJet,Kolkata,Banglore,0,5515,3,3,2019,22,20,0,40,2,20
+Jet Airways,Kolkata,Banglore,1,9314,15,5,2019,20,25,14,25,18,0
+Multiple carriers,Delhi,Cochin,1,11789,3,6,2019,10,20,19,0,8,40
+IndiGo,Banglore,Delhi,0,4823,6,4,2019,20,0,22,50,2,50
+Air India,Delhi,Cochin,2,10467,3,6,2019,13,15,9,25,20,10
+Multiple carriers,Delhi,Cochin,1,7408,3,6,2019,13,0,21,0,8,0
+Air India,Delhi,Cochin,1,7480,15,6,2019,6,5,9,25,27,20
+SpiceJet,Kolkata,Banglore,0,3841,24,4,2019,22,20,0,40,2,20
+SpiceJet,Chennai,Kolkata,0,3543,18,5,2019,17,45,20,5,2,20
+Air India,Delhi,Cochin,3,10493,24,6,2019,5,15,19,15,38,0
+Multiple carriers,Delhi,Cochin,1,9103,27,5,2019,11,25,19,0,7,35
+Jet Airways,Kolkata,Banglore,1,10844,6,5,2019,14,5,19,50,5,45
+IndiGo,Banglore,Delhi,0,4823,9,6,2019,20,0,22,50,2,50
+Air Asia,Banglore,New Delhi,0,4482,24,3,2019,23,25,2,10,2,45
+Jet Airways,Kolkata,Banglore,1,8529,12,6,2019,6,30,10,5,27,35
+Air India,Delhi,Cochin,0,7931,3,3,2019,14,10,17,10,3,0
+Jet Airways,Kolkata,Banglore,1,9663,18,5,2019,18,55,9,20,14,25
+Jet Airways,Delhi,Cochin,2,10368,1,6,2019,9,40,19,0,9,20
+Air India,Kolkata,Banglore,2,10151,18,5,2019,12,0,21,50,9,50
+SpiceJet,Chennai,Kolkata,0,3543,27,5,2019,17,45,20,5,2,20
+Multiple carriers,Delhi,Cochin,1,7530,1,6,2019,19,0,1,30,6,30
+Multiple carriers,Delhi,Cochin,1,6805,9,5,2019,14,55,22,30,7,35
+GoAir,Banglore,Delhi,0,3419,18,6,2019,7,45,10,40,2,55
+Air Asia,Banglore,Delhi,0,7120,9,6,2019,23,55,2,45,2,50
+Jet Airways,Kolkata,Banglore,1,14151,21,5,2019,17,0,10,55,17,55
+Air India,Mumbai,Hyderabad,0,3100,21,6,2019,6,20,7,40,1,20
+Jet Airways,Kolkata,Banglore,1,12121,24,5,2019,17,0,14,25,21,25
+SpiceJet,Mumbai,Hyderabad,0,2017,6,5,2019,5,45,7,15,1,30
+SpiceJet,Mumbai,Hyderabad,0,2647,15,6,2019,5,45,7,15,1,30
+IndiGo,Delhi,Cochin,1,6147,12,6,2019,17,5,22,25,5,20
+Jet Airways,Delhi,Cochin,2,14237,1,6,2019,18,25,4,25,10,0
+Jet Airways,Kolkata,Banglore,1,13044,12,6,2019,21,10,9,20,12,10
+Jet Airways,Delhi,Cochin,1,15554,18,5,2019,2,15,19,0,16,45
+SpiceJet,Banglore,Delhi,0,4423,9,4,2019,9,30,12,20,2,50
+Air India,Delhi,Cochin,1,8372,6,6,2019,21,0,7,40,10,40
+Jet Airways,Kolkata,Banglore,1,10844,18,5,2019,20,0,23,35,27,35
+Vistara,Kolkata,Banglore,1,9555,18,5,2019,17,0,18,50,25,50
+Air India,Delhi,Cochin,2,8839,15,5,2019,17,15,9,25,16,10
+Air India,Kolkata,Banglore,2,10151,6,5,2019,12,0,18,30,30,30
+Air India,Kolkata,Banglore,2,11432,12,5,2019,9,25,5,35,20,10
+SpiceJet,Banglore,Delhi,0,4319,15,4,2019,9,30,12,20,2,50
+Air India,Kolkata,Banglore,2,9626,6,6,2019,12,0,18,30,30,30
+Air India,Kolkata,Banglore,1,10623,18,5,2019,17,30,20,25,26,55
+Jet Airways,Delhi,Cochin,0,9564,18,4,2019,11,0,14,15,3,15
+Jet Airways,Kolkata,Banglore,1,14781,9,5,2019,14,5,20,45,6,40
+Jet Airways,Banglore,Delhi,0,7229,15,5,2019,8,20,11,20,3,0
+IndiGo,Delhi,Cochin,1,5684,27,6,2019,17,30,1,30,8,0
+Jet Airways,Kolkata,Banglore,1,14388,18,5,2019,5,45,9,20,27,35
+SpiceJet,Banglore,Delhi,0,5515,18,4,2019,9,30,12,20,2,50
+Jet Airways,Kolkata,Banglore,1,12692,9,6,2019,20,25,22,5,25,40
+Jet Airways,Kolkata,Banglore,1,9314,1,5,2019,9,35,19,10,9,35
+SpiceJet,Kolkata,Banglore,0,3873,15,6,2019,17,10,19,40,2,30
+SpiceJet,Kolkata,Banglore,0,4807,21,4,2019,22,20,0,40,2,20
+Multiple carriers,Delhi,Cochin,1,14848,27,6,2019,9,0,19,15,10,15
+IndiGo,Delhi,Cochin,1,6171,24,4,2019,5,5,12,10,7,5
+SpiceJet,Mumbai,Hyderabad,0,1965,24,6,2019,13,15,14,45,1,30
+Jet Airways,Kolkata,Banglore,1,10539,12,6,2019,9,35,21,5,11,30
+Air Asia,Banglore,Delhi,0,4483,1,6,2019,11,10,13,55,2,45
+Multiple carriers,Delhi,Cochin,1,8371,27,3,2019,6,0,19,15,13,15
+Jet Airways,Delhi,Cochin,1,15764,6,3,2019,13,55,4,25,14,30
+Jet Airways,Kolkata,Banglore,1,10844,12,5,2019,16,30,23,35,7,5
+Air India,Kolkata,Banglore,2,11642,18,5,2019,16,50,5,35,12,45
+IndiGo,Banglore,Delhi,0,4423,12,4,2019,4,0,6,50,2,50
+Vistara,Banglore,Delhi,0,4878,15,6,2019,9,45,12,35,2,50
+SpiceJet,Mumbai,Hyderabad,0,2227,9,5,2019,13,15,14,45,1,30
+Jet Airways,Kolkata,Banglore,1,10844,15,5,2019,16,30,18,15,25,45
+Air Asia,Kolkata,Banglore,0,4107,3,4,2019,19,55,22,25,2,30
+Vistara,Kolkata,Banglore,1,11262,24,3,2019,7,10,10,50,27,40
+Jet Airways,Delhi,Cochin,1,10262,3,6,2019,14,0,12,35,22,35
+Jet Airways,Banglore,Delhi,0,4544,18,5,2019,15,15,18,10,2,55
+Jet Airways,Banglore,Delhi,0,6144,24,5,2019,18,55,22,0,3,5
+GoAir,Banglore,New Delhi,0,5706,15,3,2019,7,45,10,40,2,55
+Jet Airways,Banglore,New Delhi,1,5853,15,3,2019,5,50,12,20,6,30
+Jet Airways,Kolkata,Banglore,2,10118,21,5,2019,6,30,20,50,14,20
+Air India,Kolkata,Banglore,2,14687,1,5,2019,9,25,5,25,20,0
+Multiple carriers,Delhi,Cochin,1,9254,27,5,2019,11,30,19,15,7,45
+Jet Airways,Delhi,Cochin,2,10368,1,6,2019,9,40,4,25,18,45
+Jet Airways,Kolkata,Banglore,1,14571,6,6,2019,14,5,20,45,6,40
+Jet Airways,Banglore,Delhi,0,7229,1,6,2019,15,15,18,10,2,55
+IndiGo,Delhi,Cochin,1,6093,6,6,2019,6,40,21,0,14,20
+Multiple carriers,Delhi,Cochin,1,16023,9,3,2019,8,0,21,0,13,0
+IndiGo,Chennai,Kolkata,0,3597,6,6,2019,14,45,17,5,2,20
+Jet Airways,Kolkata,Banglore,1,8824,24,3,2019,6,30,23,25,16,55
+IndiGo,Delhi,Cochin,1,7060,9,3,2019,2,0,7,45,5,45
+Jet Airways,Kolkata,Banglore,1,14231,24,3,2019,13,55,9,15,19,20
+Jet Airways,Banglore,Delhi,0,4544,24,4,2019,18,55,22,0,3,5
+Jet Airways,Delhi,Cochin,1,16289,9,3,2019,15,5,18,50,27,45
+IndiGo,Kolkata,Banglore,0,6565,3,3,2019,10,10,12,55,2,45
+IndiGo,Chennai,Kolkata,0,3597,21,6,2019,14,45,17,5,2,20
+Air India,Delhi,Cochin,1,7480,6,5,2019,20,40,9,25,12,45
+Vistara,Kolkata,Banglore,1,9922,12,5,2019,17,0,10,45,17,45
+Jet Airways,Banglore,Delhi,0,7229,27,5,2019,17,45,20,45,3,0
+Jet Airways,Delhi,Cochin,2,14300,15,6,2019,20,0,12,35,16,35
+Jet Airways,Delhi,Cochin,1,12242,27,3,2019,2,15,4,25,26,10
+Multiple carriers,Delhi,Cochin,1,10678,24,6,2019,11,25,19,0,7,35
+Multiple carriers,Delhi,Cochin,1,9450,27,5,2019,8,0,21,0,13,0
+IndiGo,Kolkata,Banglore,0,4174,6,4,2019,21,25,0,5,2,40
+Jet Airways,Banglore,Delhi,0,4544,6,4,2019,7,10,10,10,3,0
+IndiGo,Kolkata,Banglore,1,5386,15,5,2019,17,35,22,15,4,40
+Jet Airways,Delhi,Cochin,2,15129,24,5,2019,19,10,19,0,23,50
+IndiGo,Delhi,Cochin,1,6412,15,6,2019,14,20,22,30,8,10
+Jet Airways,Delhi,Cochin,2,15339,27,6,2019,23,5,4,25,29,20
+Jet Airways,Banglore,New Delhi,0,7229,24,3,2019,2,0,4,45,2,45
+Vistara,Banglore,Delhi,0,4878,1,6,2019,9,45,12,35,2,50
+Air Asia,Kolkata,Banglore,0,3807,6,4,2019,10,20,12,55,2,35
+Jet Airways,Delhi,Cochin,1,12373,18,5,2019,17,30,12,35,19,5
+Jet Airways,Kolkata,Banglore,1,14571,6,6,2019,14,5,23,35,9,30
+Jet Airways,Delhi,Cochin,1,10262,12,6,2019,19,45,4,25,8,40
+Jet Airways,Delhi,Cochin,1,10577,9,6,2019,20,55,19,0,22,5
+Vistara,Mumbai,Hyderabad,1,12395,6,3,2019,20,55,22,55,26,0
+SpiceJet,Kolkata,Banglore,0,3841,27,4,2019,6,55,9,30,2,35
+Air Asia,Delhi,Cochin,1,8759,3,6,2019,7,55,15,45,7,50
+IndiGo,Delhi,Cochin,1,7738,21,3,2019,4,45,15,30,10,45
+IndiGo,Delhi,Cochin,1,7503,18,5,2019,15,0,1,30,10,30
+IndiGo,Delhi,Cochin,1,5883,3,6,2019,11,25,1,30,14,5
+Jet Airways,Kolkata,Banglore,1,12692,12,6,2019,20,25,9,45,13,20
+IndiGo,Banglore,Delhi,0,4823,15,4,2019,8,30,11,20,2,50
+SpiceJet,Mumbai,Hyderabad,0,2017,27,5,2019,5,45,7,15,1,30
+Air India,Delhi,Cochin,2,8603,12,6,2019,12,0,7,40,19,40
+Jet Airways,Banglore,Delhi,0,5769,21,6,2019,11,10,14,5,2,55
+Jet Airways,Kolkata,Banglore,1,12681,1,4,2019,18,55,18,15,23,20
+SpiceJet,Banglore,Delhi,0,3625,24,6,2019,5,55,8,35,2,40
+IndiGo,Delhi,Cochin,1,8854,9,5,2019,9,15,1,30,16,15
+IndiGo,Mumbai,Hyderabad,0,2754,15,5,2019,2,35,4,5,1,30
+Air India,Delhi,Cochin,1,8372,12,6,2019,10,0,19,15,9,15
+Jet Airways,Delhi,Cochin,1,10262,12,6,2019,16,0,12,35,20,35
+Air India,Chennai,Kolkata,0,10810,3,3,2019,11,40,13,55,2,15
+IndiGo,Chennai,Kolkata,0,3540,15,6,2019,5,15,7,40,2,25
+Jet Airways,Banglore,Delhi,0,8016,6,6,2019,18,55,22,0,3,5
+IndiGo,Banglore,New Delhi,0,6860,9,3,2019,10,30,13,20,2,50
+Air Asia,Delhi,Cochin,1,6451,27,4,2019,16,45,22,25,5,40
+Jet Airways,Kolkata,Banglore,1,13067,6,5,2019,20,25,15,5,18,40
+Jet Airways,Kolkata,Banglore,1,11467,6,5,2019,17,0,18,0,25,0
+Air India,Kolkata,Banglore,1,10203,9,5,2019,10,0,23,15,13,15
+Air Asia,Kolkata,Banglore,0,4082,12,3,2019,22,50,1,20,2,30
+Air India,Delhi,Cochin,2,13276,21,5,2019,10,55,19,15,8,20
+Jet Airways,Banglore,New Delhi,2,23001,9,3,2019,8,55,15,55,7,0
+Jet Airways,Kolkata,Banglore,1,10844,6,6,2019,18,55,20,45,25,50
+IndiGo,Banglore,Delhi,0,4990,27,6,2019,18,55,21,50,2,55
+Jet Airways,Banglore,New Delhi,1,10037,9,3,2019,5,50,15,0,9,10
+Jet Airways,Kolkata,Banglore,1,14388,6,5,2019,20,0,4,40,8,40
+IndiGo,Banglore,New Delhi,0,7303,24,3,2019,16,55,19,45,2,50
+Air India,Delhi,Cochin,2,12287,3,3,2019,21,30,19,15,21,45
+Jet Airways,Kolkata,Banglore,1,10844,6,6,2019,14,5,20,45,6,40
+Jet Airways,Mumbai,Hyderabad,0,4995,24,5,2019,10,20,11,50,1,30
+Multiple carriers,Delhi,Cochin,1,9794,27,5,2019,11,40,19,0,7,20
+IndiGo,Kolkata,Banglore,1,4226,6,6,2019,6,20,10,20,4,0
+IndiGo,Delhi,Cochin,1,7318,21,3,2019,11,30,1,35,14,5
+Jet Airways,Kolkata,Banglore,1,8529,12,6,2019,20,0,8,15,12,15
+Air India,Kolkata,Banglore,2,9416,12,6,2019,12,0,18,30,30,30
+Jet Airways,Delhi,Cochin,2,11507,3,6,2019,9,35,12,35,27,0
+Air India,Kolkata,Banglore,2,9920,1,4,2019,16,45,8,55,16,10
+Multiple carriers,Delhi,Cochin,1,7038,18,5,2019,7,10,16,10,9,0
+GoAir,Delhi,Cochin,1,4959,3,6,2019,7,0,12,55,5,55
+Jet Airways,Mumbai,Hyderabad,0,5678,9,6,2019,7,5,8,30,1,25
+Jet Airways,Banglore,Delhi,0,7229,9,6,2019,8,20,11,20,3,0
+Jet Airways,Kolkata,Banglore,1,7064,1,4,2019,16,30,23,35,7,5
+IndiGo,Banglore,Delhi,0,4823,6,4,2019,8,30,11,20,2,50
+Jet Airways,Kolkata,Banglore,1,14571,24,5,2019,16,30,22,35,6,5
+IndiGo,Kolkata,Banglore,0,4148,27,3,2019,9,35,12,20,2,45
+Air India,Kolkata,Banglore,2,13873,24,5,2019,10,0,1,20,15,20
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,13,0,12,35,23,35
+Jet Airways,Delhi,Cochin,2,15129,21,5,2019,19,10,19,0,23,50
+Multiple carriers,Delhi,Cochin,1,6645,9,4,2019,11,40,1,30,13,50
+IndiGo,Kolkata,Banglore,0,4804,1,5,2019,17,15,19,50,2,35
+IndiGo,Banglore,New Delhi,1,5746,9,3,2019,11,20,15,25,4,5
+GoAir,Delhi,Cochin,1,5199,9,6,2019,5,55,13,35,7,40
+IndiGo,Chennai,Kolkata,0,4332,18,3,2019,19,35,21,55,2,20
+IndiGo,Delhi,Cochin,1,6416,1,6,2019,11,25,21,0,9,35
+Air India,Banglore,New Delhi,2,12935,18,3,2019,6,45,16,20,9,35
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,8,55,20,20,11,25
+Jet Airways,Kolkata,Banglore,1,8586,1,5,2019,16,30,4,40,12,10
+Jet Airways,Banglore,Delhi,0,5769,24,6,2019,15,15,18,10,2,55
+Jet Airways,Mumbai,Hyderabad,0,8040,21,5,2019,10,20,11,50,1,30
+Vistara,Delhi,Cochin,0,12411,6,3,2019,6,0,9,10,3,10
+Air India,Kolkata,Banglore,1,8366,9,6,2019,9,25,21,50,12,25
+Multiple carriers,Delhi,Cochin,1,7354,3,6,2019,7,30,19,15,11,45
+Air India,Banglore,New Delhi,2,13576,1,3,2019,11,5,22,10,11,5
+Multiple carriers,Delhi,Cochin,1,11622,3,6,2019,9,15,19,0,9,45
+Air India,Kolkata,Banglore,2,12723,6,6,2019,5,50,23,15,17,25
+Jet Airways,Kolkata,Banglore,1,13759,24,3,2019,8,25,23,25,15,0
+IndiGo,Delhi,Cochin,1,6412,15,5,2019,16,10,22,30,6,20
+IndiGo,Delhi,Cochin,2,6494,27,3,2019,8,35,21,20,12,45
+Jet Airways,Mumbai,Hyderabad,0,5678,24,3,2019,15,50,17,20,1,30
+Air India,Kolkata,Banglore,1,8891,12,5,2019,9,25,11,10,25,45
+Jet Airways,Delhi,Cochin,1,17024,3,3,2019,21,50,18,50,21,0
+Jet Airways,Delhi,Cochin,2,10368,12,6,2019,9,40,19,0,9,20
+Jet Airways,Kolkata,Banglore,1,14571,9,6,2019,20,0,18,15,22,15
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,7,0,15,15,8,15
+Jet Airways,Kolkata,Banglore,1,14151,9,5,2019,9,35,22,5,12,30
+Multiple carriers,Delhi,Cochin,1,7154,21,3,2019,10,45,19,15,8,30
+Air Asia,Kolkata,Banglore,1,5192,15,4,2019,7,35,19,25,11,50
+Multiple carriers,Delhi,Cochin,2,21483,6,3,2019,15,5,1,35,10,30
+Jet Airways,Kolkata,Banglore,1,6812,6,6,2019,16,30,4,40,12,10
+IndiGo,Banglore,New Delhi,1,13292,3,3,2019,19,35,0,35,5,0
+IndiGo,Kolkata,Banglore,0,4174,9,4,2019,22,15,0,50,2,35
+Jet Airways,Delhi,Cochin,2,11150,27,6,2019,19,10,12,35,17,25
+IndiGo,Delhi,Cochin,1,5912,24,4,2019,17,5,22,15,5,10
+Air India,Delhi,Cochin,1,8907,27,6,2019,13,30,23,0,9,30
+Air India,Banglore,New Delhi,1,8767,9,3,2019,17,0,3,40,10,40
+Jet Airways,Delhi,Cochin,1,12242,27,3,2019,19,45,4,25,8,40
+Air India,Kolkata,Banglore,1,6327,24,5,2019,19,0,4,40,9,40
+SpiceJet,Chennai,Kolkata,0,3543,24,5,2019,9,45,12,0,2,15
+Multiple carriers,Delhi,Cochin,1,15058,3,6,2019,8,0,19,15,11,15
+Jet Airways,Banglore,New Delhi,1,11087,12,3,2019,18,55,18,25,23,30
+Jet Airways,Kolkata,Banglore,1,13941,9,5,2019,20,0,4,40,8,40
+SpiceJet,Delhi,Cochin,1,7317,1,6,2019,15,45,22,5,6,20
+Jet Airways,Delhi,Cochin,2,15129,9,5,2019,19,10,19,0,23,50
+Jet Airways,Kolkata,Banglore,1,9663,24,5,2019,21,10,10,5,12,55
+IndiGo,Delhi,Cochin,1,5065,24,4,2019,16,0,21,0,5,0
+Air India,Delhi,Cochin,1,8907,27,6,2019,9,45,23,0,13,15
+SpiceJet,Kolkata,Banglore,0,4148,21,3,2019,9,0,11,30,2,30
+Multiple carriers,Delhi,Cochin,1,13587,9,6,2019,14,0,21,0,7,0
+Jet Airways,Delhi,Cochin,1,10262,6,6,2019,21,50,4,25,6,35
+Jet Airways,Banglore,New Delhi,1,12284,18,3,2019,14,5,8,15,18,10
+Jet Airways,Kolkata,Banglore,1,14781,15,5,2019,18,55,16,20,21,25
+Jet Airways,Kolkata,Banglore,1,9663,18,5,2019,8,25,9,20,24,55
+IndiGo,Banglore,New Delhi,0,19685,1,3,2019,13,0,15,50,2,50
+Air India,Kolkata,Banglore,1,10203,12,5,2019,10,0,23,15,13,15
+Jet Airways,Kolkata,Banglore,1,13941,15,5,2019,6,30,4,40,22,10
+Air India,Banglore,New Delhi,0,25703,1,3,2019,21,10,23,55,2,45
+Jet Airways,Delhi,Cochin,1,10262,9,6,2019,14,0,4,25,14,25
+SpiceJet,Chennai,Kolkata,0,3543,1,5,2019,17,45,20,5,2,20
+SpiceJet,Kolkata,Banglore,0,3841,6,4,2019,14,55,17,25,2,30
+Jet Airways,Delhi,Cochin,1,15554,18,5,2019,11,30,19,0,7,30
+Jet Airways,Kolkata,Banglore,1,10844,24,5,2019,14,5,19,50,5,45
+Jet Airways,Kolkata,Banglore,1,12692,12,6,2019,17,0,14,25,21,25
+Jet Airways,Mumbai,Hyderabad,0,3210,9,6,2019,19,35,21,5,1,30
+Air India,Delhi,Cochin,2,9601,15,5,2019,12,0,19,15,7,15
+Multiple carriers,Delhi,Cochin,1,13377,15,6,2019,13,0,1,30,12,30
+Jet Airways,Kolkata,Banglore,1,11134,24,3,2019,18,55,18,10,23,15
+Multiple carriers,Delhi,Cochin,1,8055,27,3,2019,8,55,21,0,12,5
+Jet Airways,Delhi,Cochin,1,12242,27,3,2019,17,30,4,25,10,55
+Air India,Banglore,New Delhi,1,8425,9,3,2019,22,0,23,20,25,20
+SpiceJet,Mumbai,Hyderabad,0,2753,15,6,2019,5,45,7,15,1,30
+SpiceJet,Banglore,Delhi,0,3311,27,5,2019,21,10,0,5,2,55
+IndiGo,Kolkata,Banglore,1,4226,12,6,2019,6,20,10,20,4,0
+Jet Airways,Banglore,New Delhi,1,26890,1,3,2019,8,55,5,5,20,10
+Multiple carriers,Delhi,Cochin,1,12524,24,6,2019,6,0,19,0,13,0
+SpiceJet,Kolkata,Banglore,0,3847,21,3,2019,17,15,19,45,2,30
+Jet Airways,Kolkata,Banglore,1,12681,1,4,2019,16,30,23,35,7,5
+Jet Airways,Delhi,Cochin,2,13882,6,6,2019,9,25,4,25,19,0
+Jet Airways,Delhi,Cochin,2,15129,18,5,2019,9,40,12,35,26,55
+Jet Airways,Kolkata,Banglore,1,10844,6,6,2019,8,25,20,45,12,20
+Jet Airways,Banglore,New Delhi,1,12547,12,3,2019,21,25,8,15,10,50
+Jet Airways,Kolkata,Banglore,1,14178,9,6,2019,18,55,4,40,9,45
+IndiGo,Delhi,Cochin,1,14871,3,3,2019,16,0,1,35,9,35
+Jet Airways,Delhi,Cochin,2,10368,9,6,2019,9,40,4,25,18,45
+Multiple carriers,Delhi,Cochin,1,15078,6,3,2019,8,0,21,0,13,0
+IndiGo,Kolkata,Banglore,0,4804,21,5,2019,21,25,0,5,2,40
+SpiceJet,Kolkata,Banglore,0,3873,9,5,2019,17,10,19,40,2,30
+SpiceJet,Kolkata,Banglore,0,3841,24,6,2019,17,10,19,40,2,30
+GoAir,Delhi,Cochin,1,5457,1,6,2019,7,0,12,55,5,55
+Jet Airways,Kolkata,Banglore,1,14781,12,5,2019,14,5,22,35,8,30
+Jet Airways,Delhi,Cochin,1,15764,9,3,2019,21,50,18,50,21,0
+Vistara,Banglore,Delhi,0,4668,12,6,2019,9,45,12,35,2,50
+Jet Airways,Delhi,Cochin,0,9564,24,6,2019,11,0,14,15,3,15
+IndiGo,Delhi,Cochin,1,7191,15,5,2019,6,40,21,0,14,20
+Jet Airways,Delhi,Cochin,1,15764,6,3,2019,19,45,4,25,8,40
+Jet Airways,Kolkata,Banglore,1,14388,6,5,2019,14,5,12,0,21,55
+Jet Airways,Delhi,Cochin,1,6540,27,3,2019,19,45,4,25,8,40
+SpiceJet,Banglore,Delhi,0,3625,24,6,2019,9,30,12,20,2,50
+Multiple carriers,Delhi,Cochin,1,8266,9,5,2019,7,30,19,15,11,45
+SpiceJet,Kolkata,Banglore,1,10944,18,5,2019,11,15,18,30,7,15
+IndiGo,Delhi,Cochin,1,5073,27,3,2019,16,0,21,0,5,0
+Jet Airways,Banglore,New Delhi,1,9134,15,3,2019,5,45,12,25,6,40
+Vistara,Kolkata,Banglore,1,8085,12,6,2019,20,20,20,20,24,0
+Jet Airways,Banglore,New Delhi,1,22270,6,3,2019,7,0,12,25,5,25
+Air India,Kolkata,Banglore,2,9836,1,4,2019,7,0,10,0,27,0
+IndiGo,Delhi,Cochin,1,14871,3,3,2019,18,35,1,35,7,0
+Jet Airways,Mumbai,Hyderabad,2,23528,12,3,2019,6,30,16,35,10,5
+Jet Airways,Banglore,Delhi,0,8016,6,6,2019,7,10,10,10,3,0
+Jet Airways,Banglore,New Delhi,1,12284,18,3,2019,7,0,16,10,9,10
+Multiple carriers,Delhi,Cochin,1,7005,12,6,2019,6,0,21,0,15,0
+IndiGo,Kolkata,Banglore,0,4804,3,6,2019,11,30,14,5,2,35
+IndiGo,Delhi,Cochin,1,6827,27,3,2019,5,5,10,5,5,0
+Air India,Mumbai,Hyderabad,0,3100,12,5,2019,6,20,7,40,1,20
+Jet Airways,Mumbai,Hyderabad,0,2759,15,3,2019,19,35,21,5,1,30
+Jet Airways,Kolkata,Banglore,1,13067,9,5,2019,20,25,21,5,24,40
+GoAir,Banglore,Delhi,0,3898,15,4,2019,20,55,23,40,2,45
+Jet Airways,Delhi,Cochin,2,10368,12,6,2019,9,40,4,25,18,45
+SpiceJet,Banglore,New Delhi,0,4273,18,3,2019,5,45,8,35,2,50
+SpiceJet,Banglore,Delhi,0,3311,24,5,2019,5,55,8,35,2,40
+Multiple carriers,Delhi,Cochin,1,15136,6,3,2019,9,0,21,0,12,0
+Multiple carriers,Delhi,Cochin,1,6601,9,4,2019,7,5,18,10,11,5
+Vistara,Kolkata,Banglore,1,8452,24,5,2019,20,20,22,40,26,20
+Jet Airways,Kolkata,Banglore,1,9314,1,5,2019,17,0,14,25,21,25
+IndiGo,Delhi,Cochin,1,6386,1,6,2019,2,0,7,45,5,45
+Multiple carriers,Delhi,Cochin,1,13377,24,6,2019,11,30,1,30,14,0
+Jet Airways,Mumbai,Hyderabad,0,5678,3,3,2019,2,55,4,25,1,30
+Air Asia,Banglore,Delhi,0,4483,18,5,2019,23,55,2,45,2,50
+Jet Airways,Delhi,Cochin,1,12898,27,5,2019,14,0,12,35,22,35
+IndiGo,Banglore,New Delhi,0,7648,3,3,2019,7,10,10,5,2,55
+Jet Airways,Kolkata,Banglore,1,14571,9,6,2019,6,30,23,35,17,5
+IndiGo,Mumbai,Hyderabad,0,4049,27,6,2019,6,25,7,55,1,30
+Air India,Banglore,New Delhi,2,11728,18,3,2019,8,50,23,25,14,35
+SpiceJet,Kolkata,Banglore,0,3873,18,4,2019,6,55,9,30,2,35
+Air India,Delhi,Cochin,1,7480,9,5,2019,20,40,9,25,12,45
+Jet Airways,Banglore,Delhi,0,8541,21,6,2019,19,50,22,50,3,0
+Jet Airways,Banglore,New Delhi,1,31825,1,3,2019,22,50,11,25,12,35
+IndiGo,Chennai,Kolkata,0,3597,1,6,2019,14,45,17,5,2,20
+Jet Airways,Banglore,New Delhi,1,13817,12,3,2019,21,25,15,15,17,50
+Jet Airways,Kolkata,Banglore,1,14571,24,5,2019,8,25,20,45,12,20
+Air Asia,Delhi,Cochin,1,6853,15,6,2019,16,45,7,10,14,25
+Jet Airways,Delhi,Cochin,2,16704,27,5,2019,23,5,4,25,29,20
+SpiceJet,Banglore,Delhi,0,3573,27,5,2019,9,30,12,20,2,50
+Vistara,Kolkata,Banglore,1,9345,15,5,2019,17,0,18,50,25,50
+Jet Airways,Delhi,Cochin,2,13014,15,6,2019,5,30,4,25,22,55
+Multiple carriers,Delhi,Cochin,1,13797,12,6,2019,8,0,21,0,13,0
+Air India,Banglore,New Delhi,3,12358,3,3,2019,12,0,10,35,22,35
+Multiple carriers,Delhi,Cochin,1,14086,9,3,2019,18,15,1,35,7,20
+IndiGo,Chennai,Kolkata,0,3597,3,5,2019,19,35,21,55,2,20
+Jet Airways,Kolkata,Banglore,1,13731,24,5,2019,18,55,8,15,13,20
+Jet Airways,Delhi,Cochin,1,12898,21,5,2019,19,45,4,25,8,40
+Jet Airways,Delhi,Cochin,1,14714,6,6,2019,16,0,4,25,12,25
+Vistara,Banglore,Delhi,0,5403,12,4,2019,11,30,14,20,2,50
+Jet Airways,Banglore,Delhi,0,5769,24,6,2019,6,0,8,45,2,45
+Air Asia,Kolkata,Banglore,0,5620,24,3,2019,10,20,12,55,2,35
+IndiGo,Delhi,Cochin,0,5000,18,6,2019,5,35,8,50,3,15
+Air India,Delhi,Cochin,1,7480,6,5,2019,9,45,9,25,23,40
+Air India,Delhi,Cochin,2,10703,21,3,2019,12,20,19,15,30,55
+Multiple carriers,Delhi,Cochin,1,13727,18,5,2019,11,30,21,0,9,30
+Jet Airways,Kolkata,Banglore,1,14388,12,5,2019,20,0,9,20,13,20
+Air India,Kolkata,Banglore,2,13033,6,6,2019,10,0,1,20,15,20
+Jet Airways,Banglore,New Delhi,1,22270,1,3,2019,8,0,7,40,23,40
+IndiGo,Delhi,Cochin,1,6769,27,5,2019,21,50,3,35,5,45
+Air Asia,Kolkata,Banglore,2,5192,24,5,2019,15,10,23,30,8,20
+Jet Airways,Mumbai,Hyderabad,0,4995,24,5,2019,2,55,4,20,1,25
+IndiGo,Chennai,Kolkata,0,8580,1,3,2019,7,55,10,15,2,20
+Air India,Delhi,Cochin,1,7480,15,6,2019,12,30,9,25,20,55
+Jet Airways,Banglore,Delhi,0,5198,27,4,2019,8,20,11,20,3,0
+Jet Airways,Delhi,Cochin,2,10368,6,6,2019,9,40,19,0,9,20
+Jet Airways,Mumbai,Hyderabad,0,8040,6,5,2019,7,5,8,30,1,25
+Jet Airways,Delhi,Cochin,2,18909,9,3,2019,8,20,4,25,20,5
+Air India,Kolkata,Banglore,2,12849,1,4,2019,7,0,5,25,22,25
+Air India,Delhi,Cochin,1,22798,1,3,2019,9,45,8,15,22,30
+Jet Airways,Kolkata,Banglore,1,14571,6,6,2019,8,25,18,15,9,50
+Jet Airways,Banglore,New Delhi,1,13502,6,3,2019,14,5,8,15,18,10
+SpiceJet,Chennai,Kolkata,0,3332,27,3,2019,17,45,20,5,2,20
+Multiple carriers,Delhi,Cochin,1,7354,6,6,2019,7,30,19,15,11,45
+Multiple carriers,Delhi,Cochin,1,8073,15,5,2019,10,0,21,0,11,0
+IndiGo,Mumbai,Hyderabad,0,4049,21,3,2019,9,10,10,35,1,25
+Jet Airways,Delhi,Cochin,1,15029,9,3,2019,2,15,4,25,26,10
+Air India,Delhi,Cochin,2,10975,24,6,2019,9,45,9,25,23,40
+Multiple carriers,Delhi,Cochin,1,7038,1,6,2019,7,10,22,30,15,20
+Jet Airways,Delhi,Cochin,1,15554,9,5,2019,8,0,19,0,11,0
+Air India,Banglore,Delhi,0,5228,12,6,2019,21,5,23,55,2,50
+IndiGo,Delhi,Cochin,1,5636,1,6,2019,2,0,7,25,5,25
+Air India,Delhi,Cochin,2,9653,27,6,2019,12,0,7,40,19,40
+Jet Airways,Kolkata,Banglore,1,8586,24,5,2019,18,55,10,5,15,10
+SpiceJet,Mumbai,Hyderabad,0,2017,21,5,2019,13,15,14,45,1,30
+Vistara,Kolkata,Banglore,1,9345,24,5,2019,20,20,23,25,27,5
+Jet Airways,Delhi,Cochin,2,9270,21,3,2019,10,45,18,50,32,5
+Jet Airways,Delhi,Cochin,2,13292,3,6,2019,5,30,19,0,13,30
+Jet Airways,Delhi,Cochin,2,8098,27,3,2019,17,35,19,45,26,10
+Air India,Delhi,Cochin,1,7952,6,6,2019,9,45,9,25,23,40
+IndiGo,Delhi,Cochin,1,5883,12,6,2019,18,35,1,30,6,55
+Jet Airways,Banglore,Delhi,0,8016,6,6,2019,19,50,22,50,3,0
+SpiceJet,Kolkata,Banglore,0,4174,18,5,2019,17,10,19,40,2,30
+Multiple carriers,Delhi,Cochin,1,10696,3,6,2019,7,5,22,30,15,25
+Vistara,Banglore,Delhi,0,4878,12,6,2019,17,0,19,35,2,35
+SpiceJet,Banglore,Delhi,0,3971,1,4,2019,9,30,12,20,2,50
+Multiple carriers,Delhi,Cochin,1,7198,3,6,2019,19,0,1,30,6,30
+Jet Airways,Kolkata,Banglore,1,9314,6,5,2019,20,25,22,5,25,40
+SpiceJet,Banglore,Delhi,0,4423,1,5,2019,9,30,12,20,2,50
+SpiceJet,Kolkata,Banglore,0,3841,6,4,2019,6,55,9,30,2,35
+Multiple carriers,Delhi,Cochin,1,7154,27,3,2019,10,45,19,15,8,30
+Air India,Delhi,Cochin,1,9929,15,6,2019,7,0,19,15,12,15
+Multiple carriers,Delhi,Cochin,1,8266,9,5,2019,11,40,19,15,7,35
+Multiple carriers,Delhi,Cochin,1,10877,12,6,2019,8,30,19,0,10,30
+IndiGo,Kolkata,Banglore,0,4804,24,6,2019,15,15,17,45,2,30
+Multiple carriers,Delhi,Cochin,1,13587,15,6,2019,11,30,21,0,9,30
+IndiGo,Delhi,Cochin,1,13611,6,3,2019,4,45,13,20,8,35
+IndiGo,Delhi,Cochin,1,6628,6,6,2019,9,15,1,30,16,15
+IndiGo,Delhi,Cochin,0,5601,12,6,2019,14,25,17,40,3,15
+SpiceJet,Delhi,Cochin,1,5583,15,4,2019,6,5,11,20,5,15
+IndiGo,Banglore,Delhi,0,3943,21,5,2019,10,10,13,0,2,50
+IndiGo,Banglore,New Delhi,0,4777,24,3,2019,4,0,6,50,2,50
+Jet Airways,Kolkata,Banglore,1,9663,12,5,2019,20,0,12,0,16,0
+Jet Airways,Delhi,Cochin,2,10368,1,6,2019,5,30,4,25,22,55
+IndiGo,Delhi,Cochin,1,5883,15,6,2019,18,35,1,30,6,55
+IndiGo,Kolkata,Banglore,0,4804,27,4,2019,11,30,14,5,2,35
+Vistara,Banglore,New Delhi,0,13383,3,3,2019,16,0,18,35,2,35
+Multiple carriers,Delhi,Cochin,1,9646,1,6,2019,13,15,22,30,9,15
+Jet Airways,Kolkata,Banglore,1,11467,1,5,2019,17,0,19,10,26,10
+Air Asia,Kolkata,Banglore,1,5192,12,5,2019,22,40,10,40,12,0
+Jet Airways,Delhi,Cochin,2,13376,12,6,2019,6,45,4,25,21,40
+Air Asia,Banglore,New Delhi,0,6477,3,3,2019,23,25,2,10,2,45
+Multiple carriers,Delhi,Cochin,1,13727,18,5,2019,9,0,21,0,12,0
+Vistara,Kolkata,Banglore,1,9555,18,5,2019,17,0,20,20,27,20
+Jet Airways,Delhi,Cochin,2,12819,24,6,2019,19,10,19,0,23,50
+Vistara,Mumbai,Hyderabad,1,12395,6,3,2019,10,25,22,55,12,30
+Jet Airways,Delhi,Cochin,1,10262,15,6,2019,19,15,4,25,9,10
+Jet Airways,Kolkata,Banglore,1,14781,21,5,2019,8,25,20,45,12,20
+Jet Airways,Mumbai,Hyderabad,0,5678,12,5,2019,10,20,11,50,1,30
+SpiceJet,Kolkata,Banglore,1,7804,15,5,2019,15,55,21,25,5,30
+Jet Airways,Delhi,Cochin,1,10262,27,6,2019,15,0,19,0,28,0
+Jet Airways,Banglore,Delhi,0,5198,18,5,2019,19,50,22,50,3,0
+IndiGo,Mumbai,Hyderabad,0,4049,3,5,2019,6,25,7,55,1,30
+Air Asia,Banglore,Delhi,0,3383,15,6,2019,11,10,13,55,2,45
+Air India,Delhi,Cochin,1,7174,27,5,2019,17,40,23,0,5,20
+Air India,Delhi,Cochin,1,8907,15,5,2019,20,30,23,0,26,30
+Jet Airways,Delhi,Cochin,2,13014,1,6,2019,9,40,12,35,26,55
+Jet Airways,Kolkata,Banglore,1,13584,6,5,2019,21,10,8,15,11,5
+Air Asia,Kolkata,Banglore,0,4107,15,5,2019,22,50,1,20,2,30
+Jet Airways,Mumbai,Hyderabad,0,2071,15,3,2019,2,55,4,25,1,30
+Jet Airways,Delhi,Cochin,1,12373,9,5,2019,20,55,4,25,7,30
+Air India,Banglore,New Delhi,2,13303,12,3,2019,8,50,13,55,29,5
+Jet Airways,Kolkata,Banglore,1,8529,12,6,2019,16,30,10,5,17,35
+Jet Airways,Kolkata,Banglore,1,14571,6,6,2019,18,55,19,50,24,55
+Jet Airways,Delhi,Cochin,2,15129,27,5,2019,23,5,4,25,29,20
+Jet Airways,Banglore,Delhi,0,8016,9,6,2019,8,20,11,20,3,0
+IndiGo,Kolkata,Banglore,0,4804,6,6,2019,21,25,0,5,2,40
+Air India,Banglore,New Delhi,1,5118,9,3,2019,6,50,12,15,5,25
+Jet Airways,Kolkata,Banglore,1,9663,18,5,2019,8,25,8,15,23,50
+Air India,Kolkata,Banglore,2,12723,9,6,2019,5,50,12,30,30,40
+GoAir,Banglore,Delhi,0,3419,12,5,2019,20,55,23,40,2,45
+Jet Airways,Banglore,New Delhi,1,11087,12,3,2019,22,55,10,45,11,50
+IndiGo,Kolkata,Banglore,0,4174,12,4,2019,22,15,0,50,2,35
+Jet Airways,Delhi,Cochin,1,10262,9,6,2019,8,0,4,25,20,25
+Jet Airways,Delhi,Cochin,2,12609,15,6,2019,9,35,12,35,27,0
+Vistara,Banglore,Delhi,0,4668,3,6,2019,7,0,9,40,2,40
+SpiceJet,Mumbai,Hyderabad,0,1965,24,5,2019,22,45,0,15,1,30
+IndiGo,Mumbai,Hyderabad,0,4049,1,6,2019,6,25,7,55,1,30
+Air India,Kolkata,Banglore,0,5195,12,4,2019,14,15,16,45,2,30
+IndiGo,Kolkata,Banglore,0,4804,18,5,2019,20,20,22,55,2,35
+IndiGo,Banglore,New Delhi,0,7648,3,3,2019,13,0,15,50,2,50
+IndiGo,Chennai,Kolkata,0,3850,3,5,2019,7,55,10,15,2,20
+Air India,Banglore,Delhi,0,6121,15,4,2019,10,0,12,45,2,45
+IndiGo,Chennai,Kolkata,0,3540,18,6,2019,5,15,7,40,2,25
+Jet Airways,Banglore,New Delhi,1,9134,15,3,2019,5,45,11,25,5,40
+Jet Airways,Kolkata,Banglore,1,10844,6,6,2019,18,55,22,35,27,40
+IndiGo,Chennai,Kolkata,0,5277,3,6,2019,22,5,0,25,2,20
+IndiGo,Delhi,Cochin,1,5073,6,4,2019,16,0,21,0,5,0
+SpiceJet,Kolkata,Banglore,0,3841,24,6,2019,6,55,9,30,2,35
+Multiple carriers,Delhi,Cochin,1,10877,3,6,2019,7,30,19,0,11,30
+Jet Airways,Delhi,Cochin,1,5406,27,3,2019,17,30,19,45,26,15
+Jet Airways,Kolkata,Banglore,1,14151,9,6,2019,17,0,9,45,16,45
+Jet Airways,Delhi,Cochin,2,14237,3,6,2019,18,25,12,35,18,10
+IndiGo,Mumbai,Hyderabad,0,2754,24,6,2019,1,40,3,10,1,30
+Air India,Kolkata,Banglore,1,11306,18,5,2019,7,0,20,25,13,25
+Air Asia,Kolkata,Banglore,1,5192,1,5,2019,22,40,10,40,12,0
+Vistara,Chennai,Kolkata,0,3687,12,6,2019,7,5,9,20,2,15
+Multiple carriers,Delhi,Cochin,1,12192,3,6,2019,3,50,19,0,15,10
+Jet Airways,Delhi,Cochin,1,12898,27,5,2019,13,0,19,0,6,0
+Jet Airways,Delhi,Cochin,1,14924,9,6,2019,19,45,19,0,23,15
+SpiceJet,Kolkata,Banglore,1,8479,24,5,2019,11,35,18,50,7,15
+Multiple carriers,Delhi,Cochin,1,6943,27,5,2019,14,0,1,30,11,30
+Multiple carriers,Delhi,Cochin,1,7354,27,6,2019,6,40,19,15,12,35
+Multiple carriers,Delhi,Cochin,1,12192,6,6,2019,9,0,19,0,10,0
+IndiGo,Banglore,Delhi,0,3943,3,5,2019,21,15,0,15,3,0
+Jet Airways,Delhi,Cochin,2,15129,6,5,2019,19,10,19,0,23,50
+Vistara,Banglore,Delhi,0,5403,9,4,2019,7,0,9,40,2,40
+Jet Airways,Delhi,Cochin,2,13882,27,6,2019,9,25,4,25,19,0
+Jet Airways,Mumbai,Hyderabad,0,5678,21,3,2019,19,35,21,5,1,30
+Vistara,Banglore,Delhi,0,5403,27,4,2019,11,30,14,20,2,50
+Vistara,Banglore,Delhi,0,4878,27,6,2019,21,0,23,50,2,50
+IndiGo,Delhi,Cochin,2,6494,27,3,2019,6,40,21,20,14,40
+IndiGo,Banglore,New Delhi,0,4777,24,3,2019,1,30,4,15,2,45
+Air India,Mumbai,Hyderabad,0,3625,6,6,2019,13,55,15,25,1,30
+Air India,Kolkata,Banglore,2,9258,1,4,2019,12,0,18,30,30,30
+Jet Airways,Delhi,Cochin,1,10262,6,6,2019,13,0,19,0,6,0
+Air India,Banglore,New Delhi,4,17686,1,3,2019,5,50,11,20,29,30
+IndiGo,Kolkata,Banglore,0,4174,3,4,2019,15,15,17,45,2,30
+Multiple carriers,Delhi,Cochin,1,7485,21,5,2019,10,20,1,30,15,10
+Air India,Kolkata,Banglore,2,11222,18,5,2019,8,20,11,10,26,50
+Jet Airways,Kolkata,Banglore,1,12121,1,5,2019,17,0,21,5,28,5
+Air India,Kolkata,Banglore,2,10697,21,5,2019,8,20,18,30,10,10
+Jet Airways,Delhi,Cochin,1,12373,9,5,2019,11,30,19,0,7,30
+SpiceJet,Kolkata,Banglore,1,6381,21,5,2019,8,35,17,15,8,40
+Jet Airways,Delhi,Cochin,2,17072,6,3,2019,17,55,4,25,34,30
+Jet Airways,Delhi,Cochin,2,10368,9,6,2019,9,40,12,35,26,55
+IndiGo,Banglore,Delhi,0,4823,24,5,2019,18,25,21,20,2,55
+Air India,Delhi,Cochin,1,27282,3,3,2019,9,45,23,0,13,15
+IndiGo,Mumbai,Hyderabad,0,2227,12,6,2019,20,5,21,40,1,35
+IndiGo,Banglore,New Delhi,0,4545,9,3,2019,0,40,3,25,2,45
+IndiGo,Kolkata,Banglore,0,4148,21,3,2019,17,15,19,55,2,40
+IndiGo,Kolkata,Banglore,0,4148,12,3,2019,15,10,17,45,2,35
+Air India,Banglore,New Delhi,2,7642,21,3,2019,8,15,11,20,27,5
+Jet Airways,Delhi,Cochin,1,10262,3,6,2019,16,0,12,35,20,35
+Jet Airways,Banglore,Delhi,0,4030,24,5,2019,8,20,11,20,3,0
+IndiGo,Delhi,Cochin,0,5000,27,6,2019,14,25,17,40,3,15
+SpiceJet,Delhi,Cochin,1,5264,9,6,2019,8,45,13,15,4,30
+Jet Airways,Banglore,Delhi,0,7229,1,6,2019,18,55,22,0,3,5
+Jet Airways,Delhi,Cochin,1,10577,3,6,2019,8,0,19,0,11,0
+Air India,Kolkata,Banglore,2,12723,24,5,2019,5,50,8,55,27,5
+Jet Airways,Delhi,Cochin,1,14714,1,6,2019,21,50,4,25,6,35
+Jet Airways,Delhi,Cochin,1,7438,21,3,2019,2,15,4,25,26,10
+Air India,Kolkata,Banglore,1,10203,15,5,2019,20,30,20,25,23,55
+Air Asia,Kolkata,Banglore,0,3782,27,3,2019,22,50,1,20,2,30
+Jet Airways,Delhi,Cochin,2,13014,12,6,2019,5,30,19,0,13,30
+Multiple carriers,Delhi,Cochin,1,8073,15,5,2019,19,0,1,30,6,30
+IndiGo,Kolkata,Banglore,0,4804,9,5,2019,15,30,18,5,2,35
+IndiGo,Kolkata,Banglore,1,4864,9,5,2019,7,10,12,40,5,30
+Multiple carriers,Delhi,Cochin,1,15135,6,3,2019,6,40,18,50,12,10
+Air India,Kolkata,Banglore,1,8366,6,6,2019,16,50,11,10,18,20
+Jet Airways,Delhi,Cochin,2,13292,9,6,2019,5,30,4,25,22,55
+Air India,Banglore,Delhi,0,7171,15,6,2019,17,0,19,45,2,45
+Jet Airways,Kolkata,Banglore,1,12121,6,5,2019,9,35,21,5,11,30
+Air India,Delhi,Cochin,2,11753,12,6,2019,10,55,19,15,8,20
+IndiGo,Banglore,New Delhi,1,8064,1,3,2019,5,15,10,0,4,45
+Jet Airways,Delhi,Cochin,1,10262,6,6,2019,15,0,19,0,28,0
+IndiGo,Chennai,Kolkata,0,5277,3,5,2019,22,5,0,25,2,20
+Jet Airways,Banglore,Delhi,0,8016,9,6,2019,17,45,20,45,3,0
+Air India,Mumbai,Hyderabad,2,11342,12,3,2019,5,30,14,50,9,20
+Jet Airways,Kolkata,Banglore,1,7594,12,6,2019,6,30,4,40,22,10
+Air Asia,Banglore,Delhi,0,4483,3,6,2019,11,10,13,55,2,45
+Jet Airways,Delhi,Cochin,2,16263,18,5,2019,20,0,4,25,8,25
+Air India,Kolkata,Banglore,2,13243,12,5,2019,10,0,1,20,15,20
+Jet Airways,Banglore,Delhi,0,6478,12,6,2019,6,0,8,45,2,45
+Jet Airways,Delhi,Cochin,1,15764,6,3,2019,23,5,4,25,5,20
+Air India,Kolkata,Banglore,2,4647,3,4,2019,9,10,4,40,19,30
+Jet Airways,Banglore,Delhi,0,8016,3,6,2019,19,50,22,50,3,0
+Air India,Kolkata,Banglore,0,4145,12,6,2019,20,45,23,20,2,35
+Multiple carriers,Delhi,Cochin,1,8055,27,3,2019,7,30,21,0,13,30
+Air India,Delhi,Cochin,2,12409,18,5,2019,17,15,19,15,26,0
+IndiGo,Kolkata,Banglore,0,6038,24,3,2019,9,35,12,20,2,45
+Air Asia,Kolkata,Banglore,0,4107,21,5,2019,22,50,1,20,2,30
+Air India,Delhi,Cochin,2,11911,21,5,2019,5,55,7,40,25,45
+Jet Airways,Banglore,New Delhi,1,25735,1,3,2019,22,50,23,0,24,10
+Air India,Kolkata,Banglore,2,11458,6,6,2019,9,25,1,20,15,55
+Air Asia,Delhi,Cochin,1,6152,24,4,2019,16,45,22,25,5,40
+Jet Airways,Kolkata,Banglore,1,10844,9,6,2019,21,10,23,35,26,25
+Vistara,Chennai,Kolkata,0,11982,24,5,2019,17,45,20,5,2,20
+Jet Airways,Kolkata,Banglore,1,13941,9,5,2019,6,30,16,20,9,50
+IndiGo,Delhi,Cochin,1,6938,27,3,2019,14,20,22,20,8,0
+Jet Airways,Delhi,Cochin,2,15339,27,6,2019,13,25,19,0,29,35
+Jet Airways,Delhi,Cochin,2,20064,3,3,2019,5,25,18,50,37,25
+Multiple carriers,Delhi,Cochin,1,6093,15,6,2019,14,55,22,30,7,35
+Multiple carriers Premium economy,Delhi,Cochin,1,10885,21,3,2019,19,0,1,35,6,35
+Air India,Delhi,Cochin,1,8907,1,6,2019,13,30,23,0,9,30
+Jet Airways,Kolkata,Banglore,1,9663,6,5,2019,6,30,20,45,14,15
+IndiGo,Delhi,Cochin,1,7160,27,4,2019,5,5,12,10,7,5
+Multiple carriers Premium economy,Delhi,Cochin,1,11269,21,3,2019,7,30,15,30,8,0
+Jet Airways,Mumbai,Hyderabad,0,5678,1,4,2019,19,35,21,5,1,30
+Jet Airways,Mumbai,Hyderabad,0,5678,27,5,2019,2,55,4,20,1,25
+Air India,Delhi,Cochin,1,8907,6,6,2019,9,45,23,0,13,15
+Jet Airways,Mumbai,Hyderabad,0,3210,27,6,2019,2,55,4,20,1,25
+Air India,Banglore,Delhi,0,6961,15,5,2019,6,10,8,55,2,45
+Jet Airways,Banglore,New Delhi,1,14815,6,3,2019,14,5,8,15,18,10
+Jet Airways,Kolkata,Banglore,1,11467,6,5,2019,20,25,22,5,25,40
+Jet Airways,Delhi,Cochin,2,10919,15,6,2019,14,35,12,35,22,0
+GoAir,Delhi,Cochin,1,9069,3,6,2019,14,25,19,35,5,10
+SpiceJet,Kolkata,Banglore,1,4649,1,5,2019,15,5,20,20,5,15
+IndiGo,Banglore,Delhi,0,4823,3,6,2019,18,25,21,20,2,55
+Air India,Kolkata,Banglore,1,6528,21,5,2019,14,35,14,35,24,0
+Jet Airways,Banglore,New Delhi,1,22270,6,3,2019,5,45,12,25,6,40
+Jet Airways,Delhi,Cochin,2,15654,9,3,2019,10,45,4,25,17,40
+Vistara,Kolkata,Banglore,1,7770,1,4,2019,20,20,22,55,26,35
+IndiGo,Kolkata,Banglore,0,4804,3,5,2019,4,40,7,15,2,35
+Jet Airways,Delhi,Cochin,2,10368,15,6,2019,19,30,12,35,17,5
+IndiGo,Delhi,Cochin,0,7673,3,3,2019,21,5,0,20,3,15
+IndiGo,Delhi,Cochin,0,6015,21,4,2019,5,35,8,50,3,15
+IndiGo,Kolkata,Banglore,0,4804,24,4,2019,11,30,14,5,2,35
+Jet Airways,Kolkata,Banglore,1,13941,15,5,2019,20,0,8,15,12,15
+Air Asia,Kolkata,Banglore,1,5162,9,5,2019,19,55,23,30,3,35
+Air India,Banglore,New Delhi,1,10657,9,3,2019,11,5,22,45,11,40
+Jet Airways,Kolkata,Banglore,1,14781,9,5,2019,16,30,23,35,7,5
+IndiGo,Mumbai,Hyderabad,0,2754,3,4,2019,19,5,20,35,1,30
+Air India,Banglore,New Delhi,2,11474,12,3,2019,6,50,22,55,16,5
+Jet Airways,Kolkata,Banglore,1,7757,18,5,2019,18,55,8,15,13,20
+Jet Airways,Mumbai,Hyderabad,0,2228,3,4,2019,2,55,4,20,1,25
+Jet Airways,Banglore,New Delhi,1,10405,15,3,2019,8,0,8,15,24,15
+GoAir,Banglore,Delhi,0,3419,27,6,2019,7,45,10,40,2,55
+Jet Airways,Delhi,Cochin,1,10262,9,6,2019,17,30,12,35,19,5
+Air India,Mumbai,Hyderabad,0,3100,9,6,2019,13,55,15,25,1,30
+Jet Airways,Delhi,Cochin,1,11848,9,3,2019,2,15,4,25,26,10
+Air India,Delhi,Cochin,1,5683,9,4,2019,20,30,8,15,11,45
+Jet Airways,Kolkata,Banglore,1,9663,9,5,2019,8,25,12,0,27,35
+Jet Airways,Banglore,Delhi,0,4544,24,4,2019,19,50,22,50,3,0
+Jet Airways,Mumbai,Hyderabad,0,4050,27,5,2019,2,55,4,20,1,25
+Vistara,Kolkata,Banglore,1,9187,9,5,2019,20,20,9,5,12,45
+Vistara,Kolkata,Banglore,1,8452,1,4,2019,20,20,20,20,24,0
+Air India,Kolkata,Banglore,2,11668,18,5,2019,9,25,1,20,15,55
+Air India,Delhi,Cochin,2,13381,9,6,2019,14,25,19,15,28,50
+Multiple carriers,Delhi,Cochin,1,8073,18,5,2019,7,0,21,0,14,0
+Air Asia,Kolkata,Banglore,0,5620,1,3,2019,10,20,12,55,2,35
+Jet Airways,Kolkata,Banglore,1,12739,12,6,2019,14,5,4,40,14,35
+Air Asia,Kolkata,Banglore,0,5989,3,5,2019,19,55,22,25,2,30
+Air India,Kolkata,Banglore,1,8891,21,5,2019,9,25,7,55,22,30
+Jet Airways,Banglore,Delhi,0,4544,27,4,2019,19,50,22,50,3,0
+Jet Airways,Delhi,Cochin,1,10262,6,6,2019,16,0,19,0,27,0
+Vistara,Kolkata,Banglore,1,9345,21,5,2019,17,0,20,20,27,20
+Vistara,Banglore,New Delhi,0,21730,1,3,2019,19,40,22,20,2,40
+IndiGo,Delhi,Cochin,1,6838,15,6,2019,9,15,21,0,11,45
+Air India,Mumbai,Hyderabad,1,10943,12,3,2019,21,0,19,25,22,25
+IndiGo,Banglore,Delhi,0,3943,18,6,2019,4,0,6,50,2,50
+SpiceJet,Banglore,Delhi,0,3573,18,6,2019,5,55,8,35,2,40
+SpiceJet,Kolkata,Banglore,0,3841,15,5,2019,9,0,11,25,2,25
+Multiple carriers,Delhi,Cochin,1,9646,21,5,2019,9,45,18,10,8,25
+Air India,Delhi,Cochin,0,4729,18,3,2019,18,5,21,10,3,5
+Jet Airways,Banglore,New Delhi,1,17261,6,3,2019,22,50,9,30,10,40
+Jet Airways,Kolkata,Banglore,1,13941,1,5,2019,14,5,10,5,20,0
+Jet Airways,Kolkata,Banglore,1,10844,21,5,2019,21,10,12,0,14,50
+Jet Airways,Kolkata,Banglore,1,14231,24,3,2019,18,55,16,20,21,25
+Jet Airways,Delhi,Cochin,1,14714,12,6,2019,13,0,19,0,6,0
+SpiceJet,Delhi,Cochin,1,6460,21,3,2019,8,45,13,15,4,30
+Jet Airways,Kolkata,Banglore,1,11467,1,5,2019,20,25,23,35,27,10
+IndiGo,Banglore,Delhi,0,3943,3,5,2019,0,30,3,25,2,55
+IndiGo,Kolkata,Banglore,1,4775,15,4,2019,15,15,20,5,4,50
+SpiceJet,Kolkata,Banglore,0,3841,6,4,2019,9,0,11,25,2,25
+Jet Airways,Banglore,New Delhi,1,12284,18,3,2019,11,40,7,40,20,0
+IndiGo,Kolkata,Banglore,0,4804,9,6,2019,17,15,19,50,2,35
+Jet Airways,Delhi,Cochin,2,12819,24,6,2019,13,25,12,35,23,10
+Jet Airways,Delhi,Cochin,1,14714,3,6,2019,18,15,4,25,10,10
+Jet Airways,Mumbai,Hyderabad,0,8040,27,5,2019,10,20,11,50,1,30
+Multiple carriers,Delhi,Cochin,2,16840,15,5,2019,15,5,1,30,10,25
+Jet Airways,Delhi,Cochin,1,15554,6,5,2019,22,50,4,25,5,35
+GoAir,Delhi,Cochin,1,5752,15,4,2019,10,35,19,35,9,0
+Vistara,Kolkata,Banglore,1,8452,9,5,2019,17,0,10,45,17,45
+Multiple carriers,Delhi,Cochin,1,11761,27,5,2019,8,0,19,15,11,15
+Multiple carriers,Delhi,Cochin,1,14848,27,6,2019,13,0,19,15,6,15
+Jet Airways,Delhi,Cochin,2,10368,3,6,2019,5,30,19,0,13,30
+Air India,Delhi,Cochin,2,9863,18,5,2019,16,40,19,15,26,35
+Jet Airways,Delhi,Cochin,1,10262,27,6,2019,10,0,19,0,9,0
+Vistara,Banglore,Delhi,0,4668,6,6,2019,7,0,9,40,2,40
+Multiple carriers,Delhi,Cochin,1,9103,15,5,2019,11,25,19,0,7,35
+Jet Airways,Delhi,Cochin,1,10262,12,6,2019,21,50,12,35,14,45
+GoAir,Delhi,Cochin,1,4525,27,6,2019,7,25,13,35,6,10
+Air India,Banglore,Delhi,0,5228,27,4,2019,10,0,12,45,2,45
+Jet Airways,Banglore,New Delhi,1,19225,6,3,2019,21,25,5,5,7,40
+Jet Airways,Mumbai,Hyderabad,0,8040,9,5,2019,10,20,11,50,1,30
+Jet Airways,Delhi,Cochin,1,7438,21,3,2019,14,0,4,25,14,25
+Multiple carriers,Delhi,Cochin,1,13135,6,3,2019,4,0,15,30,11,30
+IndiGo,Delhi,Cochin,0,6015,9,5,2019,14,25,17,40,3,15
+Multiple carriers,Delhi,Cochin,1,8283,18,5,2019,17,0,1,30,8,30
+SpiceJet,Chennai,Kolkata,0,3543,9,6,2019,8,20,10,35,2,15
+IndiGo,Kolkata,Banglore,0,4148,27,3,2019,10,10,12,55,2,45
+GoAir,Banglore,New Delhi,1,7657,15,3,2019,15,45,20,15,4,30
+IndiGo,Kolkata,Banglore,1,5276,12,5,2019,19,35,23,15,3,40
+Jet Airways,Kolkata,Banglore,1,14151,15,5,2019,9,35,23,35,14,0
+Jet Airways,Mumbai,Hyderabad,0,8040,21,6,2019,10,20,11,50,1,30
+IndiGo,Delhi,Cochin,2,8378,9,3,2019,11,55,21,20,9,25
+SpiceJet,Chennai,Kolkata,0,3543,9,6,2019,9,45,12,0,2,15
+IndiGo,Banglore,Delhi,0,4823,12,6,2019,18,55,21,50,2,55
+Jet Airways,Kolkata,Banglore,1,14388,15,5,2019,18,55,8,15,13,20
+SpiceJet,Chennai,Kolkata,0,3543,9,6,2019,17,45,20,5,2,20
+Jet Airways,Kolkata,Banglore,1,10844,12,5,2019,14,5,20,45,6,40
+Jet Airways,Kolkata,Banglore,1,10844,9,6,2019,6,30,18,15,11,45
+SpiceJet,Delhi,Cochin,1,4957,12,6,2019,17,55,22,50,4,55
+IndiGo,Delhi,Cochin,1,6442,15,5,2019,7,35,16,10,8,35
+Air India,Delhi,Cochin,1,7480,15,5,2019,17,20,9,25,16,5
+IndiGo,Delhi,Cochin,1,5073,1,4,2019,20,25,1,30,5,5
+Jet Airways,Kolkata,Banglore,1,14781,9,5,2019,16,30,22,35,6,5
+Multiple carriers,Delhi,Cochin,1,9646,3,6,2019,9,45,16,10,6,25
+Jet Airways,Kolkata,Banglore,1,7851,1,4,2019,6,30,16,20,9,50
+SpiceJet,Mumbai,Hyderabad,0,2175,24,3,2019,5,45,7,5,1,20
+Air India,Kolkata,Banglore,2,14424,9,5,2019,10,0,5,25,19,25
+Jet Airways,Delhi,Cochin,2,13014,12,6,2019,9,40,19,0,9,20
+Jet Airways,Delhi,Cochin,1,5177,6,4,2019,2,15,19,0,16,45
+Multiple carriers,Delhi,Cochin,1,15135,3,3,2019,10,45,18,50,8,5
+Air India,Banglore,Delhi,0,5228,21,6,2019,21,5,23,55,2,50
+Jet Airways,Banglore,New Delhi,1,22270,1,3,2019,11,40,5,5,17,25
+SpiceJet,Chennai,Kolkata,0,3543,15,6,2019,9,45,12,0,2,15
+Jet Airways,Delhi,Cochin,2,15129,18,5,2019,23,5,19,0,19,55
+IndiGo,Delhi,Cochin,1,6093,15,6,2019,6,40,21,0,14,20
+Jet Airways,Banglore,New Delhi,1,11087,18,3,2019,14,5,20,20,6,15
+Multiple carriers,Delhi,Cochin,1,7408,27,6,2019,9,0,21,0,12,0
+IndiGo,Kolkata,Banglore,1,6534,24,5,2019,21,0,2,15,5,15
+Jet Airways,Delhi,Cochin,2,13029,18,5,2019,5,30,4,25,22,55
+Jet Airways,Banglore,Delhi,0,8016,18,6,2019,7,10,10,10,3,0
+Air India,Mumbai,Hyderabad,1,8528,12,3,2019,5,55,19,10,13,15
+Air India,Delhi,Cochin,2,12760,6,6,2019,17,15,19,15,26,0
+Air India,Delhi,Cochin,2,12199,9,6,2019,17,15,19,15,26,0
+Multiple carriers,Delhi,Cochin,1,14067,21,5,2019,10,0,1,30,15,30
+Jet Airways,Banglore,Delhi,0,8016,15,6,2019,17,45,20,45,3,0
+Air India,Kolkata,Banglore,0,5510,3,5,2019,14,15,16,45,2,30
+Air India,Kolkata,Banglore,1,6241,24,3,2019,14,35,14,35,24,0
+Air India,Delhi,Cochin,1,16142,3,3,2019,12,30,9,25,20,55
+Jet Airways,Delhi,Cochin,2,10919,27,6,2019,14,35,12,35,22,0
+IndiGo,Kolkata,Banglore,0,4804,21,4,2019,21,25,0,5,2,40
+IndiGo,Delhi,Cochin,1,6979,15,5,2019,11,25,21,0,9,35
+Air India,Delhi,Cochin,0,6094,18,4,2019,14,10,17,10,3,0
+Air India,Banglore,Delhi,0,5176,1,4,2019,17,0,19,45,2,45
+Multiple carriers,Delhi,Cochin,1,15136,6,3,2019,13,0,21,0,8,0
+Jet Airways,Kolkata,Banglore,1,10031,24,3,2019,8,25,23,25,15,0
+Jet Airways,Delhi,Cochin,2,12814,21,3,2019,5,25,18,50,37,25
+Jet Airways,Kolkata,Banglore,1,12681,1,4,2019,6,30,19,50,13,20
+Multiple carriers,Delhi,Cochin,1,12402,21,3,2019,7,0,18,50,11,50
+Jet Airways,Kolkata,Banglore,1,13759,24,3,2019,8,25,18,10,9,45
+SpiceJet,Chennai,Kolkata,0,3597,18,6,2019,17,45,20,5,2,20
+Air Asia,Banglore,Delhi,0,3383,21,5,2019,23,55,2,45,2,50
+Vistara,Banglore,Delhi,0,4668,9,5,2019,9,45,12,35,2,50
+Jet Airways,Delhi,Cochin,2,10929,21,3,2019,19,10,4,25,33,15
+Vistara,Kolkata,Banglore,1,9187,1,4,2019,17,0,10,45,17,45
+Multiple carriers,Delhi,Cochin,1,7530,3,6,2019,11,40,1,30,13,50
+Air India,Kolkata,Banglore,1,8026,24,3,2019,9,10,13,40,4,30
+SpiceJet,Banglore,Delhi,0,4319,9,4,2019,9,30,12,20,2,50
+Jet Airways,Delhi,Cochin,2,13376,24,6,2019,14,35,4,25,13,50
+SpiceJet,Kolkata,Banglore,0,4174,6,5,2019,9,0,11,25,2,25
+Vistara,Banglore,Delhi,0,4668,27,5,2019,7,0,9,40,2,40
+Multiple carriers,Delhi,Cochin,1,13062,21,3,2019,7,5,21,0,13,55
+Jet Airways,Delhi,Cochin,1,12898,27,5,2019,19,15,4,25,9,10
+Jet Airways,Delhi,Cochin,1,14714,6,6,2019,15,0,4,25,13,25
+Air India,Kolkata,Banglore,2,10991,9,5,2019,5,50,20,25,14,35
+Jet Airways,Banglore,Delhi,0,4030,1,5,2019,11,10,14,5,2,55
+Jet Airways,Delhi,Cochin,2,13029,21,5,2019,9,40,4,25,18,45
+Vistara,Banglore,New Delhi,1,6800,15,3,2019,6,40,12,35,5,55
+Jet Airways,Banglore,New Delhi,1,11087,9,3,2019,7,0,9,30,26,30
+Multiple carriers,Delhi,Cochin,1,9794,18,5,2019,10,20,19,0,8,40
+Jet Airways,Kolkata,Banglore,1,14388,6,5,2019,21,10,9,20,12,10
+IndiGo,Kolkata,Banglore,0,4148,12,3,2019,21,25,0,5,2,40
+Air India,Delhi,Cochin,2,17266,3,3,2019,20,0,19,15,23,15
+Air India,Kolkata,Banglore,1,7893,1,4,2019,20,30,8,55,12,25
+Jet Airways,Banglore,Delhi,0,7229,9,5,2019,19,50,22,50,3,0
+Multiple carriers,Delhi,Cochin,1,9930,21,5,2019,7,5,21,0,13,55
+Multiple carriers,Delhi,Cochin,1,18286,3,3,2019,11,30,1,35,14,5
+Jet Airways,Banglore,Delhi,0,7229,27,6,2019,19,50,22,50,3,0
+Vistara,Delhi,Cochin,0,6216,24,6,2019,6,0,9,10,3,10
+Air Asia,Banglore,Delhi,0,4282,6,6,2019,4,55,7,45,2,50
+IndiGo,Delhi,Cochin,1,5054,27,5,2019,7,35,12,10,4,35
+Jet Airways,Delhi,Cochin,1,10262,6,6,2019,7,5,19,0,11,55
+Air Asia,Delhi,Cochin,1,11410,6,6,2019,16,45,22,25,5,40
+Jet Airways,Kolkata,Banglore,1,14571,24,5,2019,6,30,18,15,11,45
+GoAir,Delhi,Cochin,1,4692,24,6,2019,7,25,13,35,6,10
+Jet Airways,Delhi,Cochin,2,10919,15,6,2019,14,35,4,25,13,50
+Jet Airways,Kolkata,Banglore,1,10844,6,5,2019,8,25,19,50,11,25
+Jet Airways,Kolkata,Banglore,1,10844,21,5,2019,20,0,16,20,20,20
+Air India,Delhi,Cochin,0,6094,9,5,2019,14,10,17,10,3,0
+Vistara,Delhi,Cochin,0,6741,1,6,2019,14,40,17,50,3,10
+Air India,Delhi,Cochin,1,8372,1,6,2019,9,45,9,25,23,40
+Multiple carriers,Delhi,Cochin,1,14067,21,5,2019,2,15,11,50,9,35
+IndiGo,Delhi,Cochin,1,10236,3,3,2019,8,35,22,20,13,45
+Air India,Delhi,Cochin,1,7480,3,6,2019,20,40,9,25,12,45
+Multiple carriers,Delhi,Cochin,1,8386,9,3,2019,9,45,16,10,6,25
+Multiple carriers,Delhi,Cochin,1,6795,6,6,2019,11,40,1,30,13,50
+Air Asia,Kolkata,Banglore,0,4409,15,5,2019,10,20,12,55,2,35
+IndiGo,Chennai,Kolkata,0,3597,9,5,2019,19,35,21,55,2,20
+Air India,Banglore,Delhi,0,6961,15,6,2019,6,10,8,55,2,45
+Jet Airways,Kolkata,Banglore,1,12692,12,6,2019,17,0,23,35,6,35
+Air India,Mumbai,Hyderabad,0,4307,12,3,2019,19,30,20,45,1,15
+Jet Airways,Banglore,Delhi,0,4030,15,5,2019,8,20,11,20,3,0
+Air India,Kolkata,Banglore,2,15957,18,5,2019,9,50,23,15,13,25
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,22,50,11,25,12,35
+Air India,Kolkata,Banglore,3,12954,1,4,2019,10,0,10,30,24,30
+Jet Airways,Delhi,Cochin,2,11150,27,6,2019,23,5,4,25,29,20
+IndiGo,Mumbai,Hyderabad,0,4049,12,3,2019,6,20,7,45,1,25
+Jet Airways,Banglore,New Delhi,1,9134,15,3,2019,5,45,15,15,9,30
+Air Asia,Kolkata,Banglore,0,4409,1,5,2019,22,50,1,20,2,30
+Jet Airways,Kolkata,Banglore,1,14781,1,5,2019,14,5,22,35,8,30
+Air India,Banglore,Delhi,0,5228,24,4,2019,21,5,23,55,2,50
+SpiceJet,Chennai,Kolkata,0,3597,21,5,2019,17,45,20,5,2,20
+Multiple carriers,Delhi,Cochin,1,6795,12,6,2019,15,15,1,30,10,15
+Air Asia,Kolkata,Banglore,0,3807,18,6,2019,22,50,1,20,2,30
+Jet Airways,Kolkata,Banglore,1,14781,1,5,2019,16,30,23,35,7,5
+Air India,Delhi,Cochin,1,8372,9,5,2019,9,0,19,15,10,15
+IndiGo,Delhi,Cochin,0,5000,24,6,2019,14,20,17,35,3,15
+Vistara,Banglore,Delhi,0,5403,1,4,2019,9,45,12,35,2,50
+IndiGo,Delhi,Cochin,1,11600,3,3,2019,11,55,22,20,10,25
+Multiple carriers,Delhi,Cochin,1,8476,18,5,2019,8,45,19,15,10,30
+Air India,Banglore,New Delhi,2,6593,15,3,2019,10,30,21,25,10,55
+IndiGo,Banglore,New Delhi,0,7648,9,3,2019,16,55,19,45,2,50
+Vistara,Kolkata,Banglore,1,9345,1,5,2019,7,10,18,50,11,40
+Jet Airways,Delhi,Cochin,2,15129,27,5,2019,9,40,4,25,18,45
+Multiple carriers,Delhi,Cochin,1,7268,27,6,2019,12,50,19,15,6,25
+Jet Airways,Mumbai,Hyderabad,0,3210,6,6,2019,19,35,21,5,1,30
+IndiGo,Chennai,Kolkata,0,7295,24,3,2019,19,35,21,55,2,20
+IndiGo,Delhi,Cochin,1,6442,27,6,2019,5,5,12,10,7,5
+IndiGo,Kolkata,Banglore,1,3809,6,5,2019,19,20,23,45,4,25
+Air India,Banglore,New Delhi,2,15119,1,3,2019,5,50,16,20,10,30
+GoAir,Delhi,Cochin,1,9069,9,6,2019,14,25,19,35,5,10
+IndiGo,Banglore,Delhi,0,3943,6,5,2019,10,10,13,0,2,50
+Air India,Kolkata,Banglore,2,12534,9,6,2019,7,0,5,25,22,25
+Multiple carriers,Delhi,Cochin,1,13714,3,6,2019,9,0,19,0,10,0
+Air India,Delhi,Cochin,3,9128,21,3,2019,5,15,19,15,38,0
+IndiGo,Mumbai,Hyderabad,0,2227,21,5,2019,21,20,22,50,1,30
+Jet Airways,Kolkata,Banglore,1,10844,18,5,2019,20,0,22,35,26,35
+Jet Airways,Kolkata,Banglore,1,13941,6,5,2019,16,30,4,40,12,10
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,5,45,15,15,9,30
+GoAir,Banglore,Delhi,0,3419,12,6,2019,7,45,10,40,2,55
+Jet Airways,Kolkata,Banglore,1,14151,21,5,2019,20,25,21,5,24,40
+IndiGo,Delhi,Cochin,1,5073,3,4,2019,7,35,12,10,4,35
+Vistara,Kolkata,Banglore,1,9922,12,5,2019,17,0,9,5,16,5
+IndiGo,Chennai,Kolkata,0,4752,24,3,2019,13,20,15,35,2,15
+Multiple carriers,Delhi,Cochin,1,10197,27,5,2019,9,0,19,15,10,15
+Air India,Banglore,Delhi,0,6961,12,6,2019,10,0,12,45,2,45
+Multiple carriers,Delhi,Cochin,1,17493,3,3,2019,13,0,21,0,8,0
+Multiple carriers,Delhi,Cochin,1,13587,6,6,2019,7,5,21,0,13,55
+Jet Airways,Delhi,Cochin,1,10262,6,6,2019,16,0,4,25,12,25
+Air India,Kolkata,Banglore,2,15107,21,5,2019,14,30,8,55,18,25
+Vistara,Kolkata,Banglore,1,8452,15,5,2019,17,0,10,45,17,45
+Air India,Mumbai,Hyderabad,0,3100,21,6,2019,21,5,22,25,1,20
+IndiGo,Banglore,Delhi,0,4823,24,5,2019,7,10,10,5,2,55
+Air Asia,Banglore,Delhi,0,4483,21,4,2019,23,55,2,45,2,50
+Air India,Kolkata,Banglore,2,13243,18,5,2019,10,0,1,20,15,20
+IndiGo,Delhi,Cochin,1,5684,27,6,2019,11,25,1,30,14,5
+Jet Airways,Mumbai,Hyderabad,0,3205,3,4,2019,10,20,11,50,1,30
+Jet Airways,Delhi,Cochin,1,10262,15,6,2019,10,0,4,25,18,25
+IndiGo,Banglore,Delhi,0,4823,21,5,2019,20,0,22,50,2,50
+Jet Airways,Delhi,Cochin,1,15554,9,5,2019,13,0,19,0,6,0
+IndiGo,Banglore,Delhi,0,3943,27,6,2019,4,0,6,50,2,50
+Vistara,Mumbai,Hyderabad,1,12080,12,3,2019,7,30,19,55,12,25
+Air Asia,Banglore,Delhi,0,3383,27,5,2019,23,55,2,45,2,50
+SpiceJet,Mumbai,Hyderabad,0,2437,18,3,2019,5,45,7,5,1,20
+SpiceJet,Mumbai,Hyderabad,0,1965,1,6,2019,22,45,0,15,1,30
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,22,50,10,25,11,35
+IndiGo,Delhi,Cochin,1,6442,9,6,2019,6,50,16,10,9,20
+Air India,Kolkata,Banglore,2,12723,15,5,2019,5,50,8,55,27,5
+Jet Airways,Banglore,Delhi,0,8016,12,6,2019,15,15,18,10,2,55
+Jet Airways,Delhi,Cochin,2,10199,24,6,2019,21,25,12,35,15,10
+Vistara,Kolkata,Banglore,1,10842,24,3,2019,9,55,9,10,23,15
+Multiple carriers,Delhi,Cochin,1,7005,12,6,2019,12,50,21,0,8,10
+Air Asia,Kolkata,Banglore,0,4409,3,5,2019,10,20,12,55,2,35
+Jet Airways,Kolkata,Banglore,1,13364,1,4,2019,21,10,9,20,12,10
+Multiple carriers,Delhi,Cochin,1,13377,27,6,2019,16,0,1,30,9,30
+Jet Airways,Delhi,Cochin,1,10262,9,6,2019,21,50,4,25,6,35
+Jet Airways,Kolkata,Banglore,1,10844,18,5,2019,16,30,23,35,7,5
+Jet Airways,Kolkata,Banglore,1,14571,24,5,2019,6,30,16,20,9,50
+Jet Airways,Delhi,Cochin,2,19329,9,3,2019,10,45,18,50,32,5
+Air India,Banglore,New Delhi,1,4943,21,3,2019,8,15,23,10,14,55
+Jet Airways,Delhi,Cochin,2,15129,9,5,2019,23,5,4,25,29,20
+Jet Airways,Delhi,Cochin,2,15129,18,5,2019,9,40,19,0,9,20
+Jet Airways,Kolkata,Banglore,1,10539,6,6,2019,17,0,18,0,25,0
+Jet Airways,Kolkata,Banglore,1,10031,24,3,2019,21,10,22,35,25,25
+Multiple carriers,Delhi,Cochin,1,9140,24,5,2019,17,45,1,30,7,45
+Air Asia,Kolkata,Banglore,0,4409,27,4,2019,22,50,1,20,2,30
+IndiGo,Banglore,Delhi,0,3419,15,5,2019,22,10,1,0,2,50
+Multiple carriers,Delhi,Cochin,1,9646,15,5,2019,9,45,16,10,6,25
+Jet Airways,Kolkata,Banglore,1,13584,9,5,2019,14,5,18,15,28,10
+Air India,Delhi,Cochin,2,11806,21,5,2019,5,0,7,40,26,40
+GoAir,Delhi,Cochin,1,4563,1,4,2019,7,25,13,35,6,10
+Jet Airways,Delhi,Cochin,2,9412,27,3,2019,5,10,4,25,23,15
+Jet Airways,Delhi,Cochin,1,12898,27,6,2019,21,50,4,25,6,35
+Vistara,Delhi,Cochin,0,6216,27,4,2019,14,40,17,50,3,10
+Jet Airways,Delhi,Cochin,1,12898,21,5,2019,13,0,4,25,15,25
+Jet Airways,Delhi,Cochin,1,10262,9,6,2019,22,50,19,0,20,10
+Air India,Banglore,New Delhi,0,12526,1,3,2019,13,20,16,10,2,50
+Air India,Delhi,Cochin,1,11522,6,3,2019,5,15,6,50,25,35
+Jet Airways,Mumbai,Hyderabad,0,5678,12,6,2019,2,55,4,20,1,25
+Vistara,Banglore,New Delhi,0,9918,9,3,2019,11,30,14,10,2,40
+Jet Airways,Kolkata,Banglore,1,14781,1,5,2019,21,10,8,15,11,5
+Air India,Delhi,Cochin,2,8026,27,3,2019,5,0,19,15,38,15
+Air India,Banglore,New Delhi,0,7276,24,3,2019,13,20,16,10,2,50
+Jet Airways,Kolkata,Banglore,1,7064,1,4,2019,8,25,18,15,9,50
+Multiple carriers,Delhi,Cochin,1,13062,21,3,2019,13,0,21,0,8,0
+Multiple carriers,Delhi,Cochin,1,12537,27,3,2019,11,30,21,0,9,30
+Jet Airways,Banglore,New Delhi,1,21934,15,3,2019,18,55,0,45,5,50
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,13,0,19,0,6,0
+Vistara,Banglore,Delhi,0,4878,3,6,2019,17,0,19,35,2,35
+Jet Airways,Delhi,Cochin,1,14714,15,6,2019,14,0,19,0,5,0
+Jet Airways,Banglore,New Delhi,1,9134,15,3,2019,7,0,15,15,8,15
+IndiGo,Banglore,Delhi,0,4823,1,4,2019,16,55,19,55,3,0
+Multiple carriers,Delhi,Cochin,1,6093,27,6,2019,7,10,16,10,9,0
+SpiceJet,Chennai,Kolkata,0,3597,3,6,2019,8,20,10,35,2,15
+Multiple carriers,Delhi,Cochin,1,13727,9,5,2019,14,0,21,0,7,0
+IndiGo,Kolkata,Banglore,0,4174,1,4,2019,11,30,14,5,2,35
+Jet Airways,Delhi,Cochin,1,10262,27,6,2019,11,30,19,0,7,30
+Multiple carriers,Delhi,Cochin,1,11789,6,6,2019,10,20,19,0,8,40
+Jet Airways,Kolkata,Banglore,1,8586,1,5,2019,18,55,8,15,13,20
+Air India,Banglore,New Delhi,3,13081,1,3,2019,5,50,8,50,27,0
+Jet Airways,Kolkata,Banglore,1,9314,1,5,2019,20,25,23,35,27,10
+Jet Airways,Mumbai,Hyderabad,0,5678,21,6,2019,19,35,21,5,1,30
+Jet Airways,Delhi,Cochin,1,11924,27,5,2019,10,0,19,0,9,0
+Jet Airways,Kolkata,Banglore,1,12692,9,6,2019,20,25,23,35,27,10
+Jet Airways,Banglore,Delhi,0,6478,24,6,2019,18,55,22,0,3,5
+IndiGo,Kolkata,Banglore,1,4226,15,5,2019,6,20,10,20,4,0
+IndiGo,Delhi,Cochin,1,11532,9,3,2019,2,35,8,30,5,55
+Air India,Chennai,Kolkata,0,9340,6,3,2019,11,40,13,55,2,15
+Jet Airways,Delhi,Cochin,2,10368,12,6,2019,5,30,4,25,22,55
+Jet Airways,Kolkata,Banglore,1,13626,12,6,2019,14,5,20,45,6,40
+Jet Airways,Kolkata,Banglore,1,9663,24,5,2019,6,30,12,0,5,30
+Jet Airways,Delhi,Cochin,2,16389,6,3,2019,5,25,4,25,23,0
+Multiple carriers,Delhi,Cochin,1,10197,18,5,2019,3,50,19,0,15,10
+Jet Airways,Kolkata,Banglore,1,7594,12,6,2019,21,10,4,40,7,30
+Jet Airways,Banglore,New Delhi,1,13817,12,3,2019,21,25,11,25,14,0
+Jet Airways,Banglore,Delhi,0,7229,15,4,2019,17,45,20,45,3,0
+Jet Airways,Delhi,Cochin,2,10368,24,6,2019,9,40,4,25,18,45
+Air Asia,Banglore,Delhi,0,4282,15,5,2019,4,55,7,45,2,50
+Jet Airways,Delhi,Cochin,2,13292,12,6,2019,9,35,4,25,18,50
+Jet Airways,Delhi,Cochin,2,13764,27,6,2019,19,30,12,35,17,5
+Jet Airways,Kolkata,Banglore,1,12681,1,4,2019,18,55,16,20,21,25
+Jet Airways,Banglore,Delhi,0,5198,12,5,2019,11,10,14,5,2,55
+Multiple carriers,Delhi,Cochin,1,12615,9,3,2019,7,30,19,45,12,15
+IndiGo,Kolkata,Banglore,0,5644,21,4,2019,11,30,14,5,2,35
+Jet Airways,Banglore,New Delhi,1,11087,12,3,2019,22,55,13,15,14,20
+SpiceJet,Mumbai,Hyderabad,0,2227,3,5,2019,22,45,0,15,1,30
+Jet Airways,Banglore,Delhi,0,8016,18,6,2019,19,50,22,50,3,0
+SpiceJet,Banglore,Delhi,0,4885,9,5,2019,9,30,12,20,2,50
+IndiGo,Kolkata,Banglore,0,4174,1,4,2019,9,35,12,20,2,45
+Air Asia,Kolkata,Banglore,1,5162,9,5,2019,6,50,10,30,3,40
+Jet Airways,Delhi,Cochin,1,10262,27,6,2019,13,0,19,0,6,0
+IndiGo,Mumbai,Hyderabad,0,4049,18,6,2019,9,15,10,45,1,30
+Air India,Delhi,Cochin,1,8372,27,5,2019,18,0,19,15,25,15
+IndiGo,Banglore,Delhi,0,3419,12,6,2019,0,30,3,25,2,55
+IndiGo,Delhi,Cochin,1,5073,27,3,2019,7,35,12,0,4,25
+IndiGo,Delhi,Cochin,1,6069,6,6,2019,16,0,21,0,5,0
+IndiGo,Delhi,Cochin,1,9709,21,3,2019,8,25,15,30,7,5
+Jet Airways,Delhi,Cochin,2,13014,12,6,2019,9,40,12,35,26,55
+Jet Airways,Delhi,Cochin,2,13029,18,5,2019,9,40,19,0,9,20
+Multiple carriers,Delhi,Cochin,1,13937,15,5,2019,8,0,21,0,13,0
+SpiceJet,Delhi,Cochin,1,11349,3,3,2019,15,55,21,55,6,0
+Jet Airways,Delhi,Cochin,2,15129,21,5,2019,23,5,4,25,29,20
+SpiceJet,Chennai,Kolkata,0,3597,9,6,2019,9,45,12,0,2,15
+Jet Airways,Kolkata,Banglore,1,14388,6,5,2019,20,0,20,45,24,45
+Jet Airways,Banglore,New Delhi,1,11087,9,3,2019,8,0,10,25,26,25
+Jet Airways,Kolkata,Banglore,1,9663,1,5,2019,14,5,9,20,19,15
+Jet Airways,Delhi,Cochin,2,13014,1,6,2019,5,30,4,25,22,55
+IndiGo,Banglore,Delhi,0,3943,6,6,2019,4,0,6,50,2,50
+Air India,Banglore,New Delhi,1,8845,15,3,2019,22,0,13,20,15,20
+Air India,Kolkata,Banglore,1,12173,24,3,2019,20,30,12,30,16,0
+Jet Airways,Delhi,Cochin,1,10262,9,6,2019,21,50,12,35,14,45
+Multiple carriers,Delhi,Cochin,1,7242,21,3,2019,9,45,16,10,6,25
+Jet Airways,Delhi,Cochin,2,13292,24,6,2019,5,30,4,25,22,55
+IndiGo,Banglore,New Delhi,1,7708,21,3,2019,14,25,19,25,5,0
+Jet Airways,Mumbai,Hyderabad,0,8040,21,6,2019,8,45,10,15,1,30
+SpiceJet,Chennai,Kolkata,0,3597,12,5,2019,8,20,10,35,2,15
+SpiceJet,Kolkata,Banglore,0,3841,27,5,2019,17,10,19,40,2,30
+Air India,Kolkata,Banglore,1,10203,15,5,2019,17,30,20,25,26,55
+IndiGo,Delhi,Cochin,1,7173,27,4,2019,2,0,7,45,5,45
+SpiceJet,Mumbai,Hyderabad,0,1965,9,6,2019,22,45,0,15,1,30
+IndiGo,Delhi,Cochin,1,5054,6,6,2019,20,25,1,30,5,5
+IndiGo,Banglore,New Delhi,0,8855,3,3,2019,16,55,19,45,2,50
+Jet Airways,Banglore,New Delhi,1,27992,1,3,2019,5,45,21,20,15,35
+Jet Airways,Kolkata,Banglore,1,7341,9,5,2019,17,0,18,0,25,0
+SpiceJet,Banglore,Delhi,0,3919,3,6,2019,9,30,12,20,2,50
+Jet Airways,Delhi,Cochin,1,12242,27,3,2019,15,5,4,25,13,20
+Jet Airways,Kolkata,Banglore,1,13067,18,5,2019,9,35,14,25,28,50
+Jet Airways,Delhi,Cochin,2,18804,24,6,2019,11,40,19,0,7,20
+Air Asia,Kolkata,Banglore,0,5645,21,4,2019,22,50,1,20,2,30
+IndiGo,Chennai,Kolkata,0,3597,24,6,2019,19,35,21,55,2,20
+Multiple carriers,Delhi,Cochin,1,13587,9,6,2019,16,0,1,30,9,30
+IndiGo,Chennai,Kolkata,0,3597,21,6,2019,13,15,15,35,2,20
+Air India,Delhi,Cochin,1,8879,18,5,2019,10,0,19,15,9,15
+SpiceJet,Banglore,Delhi,0,4319,21,4,2019,5,55,8,35,2,40
+Air India,Mumbai,Hyderabad,0,2050,27,3,2019,13,55,15,25,1,30
+Jet Airways,Mumbai,Hyderabad,0,8040,3,6,2019,7,5,8,30,1,25
+Jet Airways,Kolkata,Banglore,1,13584,6,5,2019,18,55,8,15,13,20
+Jet Airways,Delhi,Cochin,2,13014,6,6,2019,19,30,4,25,8,55
+Vistara,Kolkata,Banglore,1,9345,15,5,2019,7,10,18,50,11,40
+Jet Airways,Delhi,Cochin,2,11507,3,6,2019,9,35,12,35,27,0
+Multiple carriers,Delhi,Cochin,1,8266,6,6,2019,6,0,19,15,13,15
+Jet Airways,Mumbai,Hyderabad,0,5678,24,3,2019,2,55,4,25,1,30
+Multiple carriers,Delhi,Cochin,1,13377,12,6,2019,13,0,1,30,12,30
+Vistara,Kolkata,Banglore,1,9345,21,5,2019,7,10,18,50,11,40
+IndiGo,Delhi,Cochin,1,7191,15,5,2019,18,35,1,30,6,55
+Multiple carriers,Delhi,Cochin,1,7845,27,3,2019,17,45,1,35,7,50
+Jet Airways,Banglore,Delhi,0,7229,21,5,2019,11,10,14,5,2,55
+Air India,Banglore,New Delhi,1,10981,1,3,2019,17,0,8,50,15,50
+Jet Airways,Kolkata,Banglore,1,14178,9,6,2019,14,5,4,40,14,35
+IndiGo,Delhi,Cochin,1,8784,21,3,2019,7,30,21,0,13,30
+Jet Airways,Kolkata,Banglore,1,13941,12,5,2019,20,0,4,40,8,40
+Jet Airways,Kolkata,Banglore,1,13067,21,5,2019,20,25,19,10,22,45
+Jet Airways,Mumbai,Hyderabad,0,4995,27,6,2019,10,20,11,50,1,30
+Air India,Delhi,Cochin,2,12488,3,6,2019,18,30,19,15,24,45
+Air Asia,Kolkata,Banglore,1,7870,9,6,2019,7,35,23,30,15,55
+Air India,Delhi,Cochin,0,6094,12,5,2019,5,10,8,0,2,50
+Jet Airways,Kolkata,Banglore,1,5608,12,6,2019,10,20,17,35,7,15
+GoAir,Delhi,Cochin,1,6112,3,3,2019,7,30,13,20,5,50
+Jet Airways,Banglore,New Delhi,1,16736,6,3,2019,16,55,8,15,15,20
+Vistara,Kolkata,Banglore,1,8452,12,6,2019,20,20,10,45,14,25
+Jet Airways,Kolkata,Banglore,1,9314,9,5,2019,17,0,14,25,21,25
+IndiGo,Chennai,Kolkata,0,3850,21,5,2019,7,55,10,15,2,20
+Jet Airways,Delhi,Cochin,1,5963,21,3,2019,19,45,4,25,8,40
+Air India,Delhi,Cochin,2,9968,21,5,2019,5,0,19,15,38,15
+Jet Airways,Delhi,Cochin,0,9564,18,5,2019,11,0,14,15,3,15
+IndiGo,Delhi,Cochin,2,6610,6,3,2019,6,40,21,20,14,40
+IndiGo,Banglore,New Delhi,1,5226,9,3,2019,15,40,20,35,4,55
+Jet Airways,Kolkata,Banglore,1,14231,24,3,2019,19,45,8,10,12,25
+Jet Airways,Delhi,Cochin,2,13376,15,6,2019,14,35,12,35,22,0
+IndiGo,Delhi,Cochin,1,6674,27,5,2019,6,50,22,30,15,40
+Multiple carriers,Delhi,Cochin,1,7408,15,6,2019,8,0,21,0,13,0
+Air India,Kolkata,Banglore,2,15170,24,5,2019,9,50,8,55,23,5
+IndiGo,Chennai,Kolkata,0,3597,1,6,2019,19,35,21,55,2,20
+Air India,Banglore,New Delhi,2,12778,12,3,2019,17,25,10,15,16,50
+Jet Airways,Banglore,Delhi,0,7229,9,6,2019,17,45,20,45,3,0
+Jet Airways,Banglore,Delhi,0,8016,15,6,2019,8,20,11,20,3,0
+IndiGo,Kolkata,Banglore,0,4804,27,5,2019,22,15,0,50,2,35
+Jet Airways,Banglore,Delhi,0,8016,21,6,2019,8,20,11,20,3,0
+Air Asia,Kolkata,Banglore,0,5645,9,6,2019,10,20,12,55,2,35
+Jet Airways,Banglore,New Delhi,1,22270,9,3,2019,18,40,0,45,6,5
+Jet Airways,Kolkata,Banglore,1,14151,6,6,2019,9,35,19,10,9,35
+Jet Airways,Delhi,Cochin,1,5406,6,4,2019,7,5,12,35,5,30
+Air India,Kolkata,Banglore,1,5567,24,3,2019,19,0,11,5,16,5
+IndiGo,Delhi,Cochin,1,6171,27,3,2019,4,55,16,10,11,15
+SpiceJet,Banglore,Delhi,0,4423,15,6,2019,5,55,8,35,2,40
+Jet Airways,Delhi,Cochin,1,5177,6,4,2019,22,50,12,35,13,45
+Multiple carriers,Delhi,Cochin,1,6795,12,6,2019,17,45,1,30,7,45
+SpiceJet,Banglore,Delhi,0,3625,27,5,2019,9,30,12,20,2,50
+Jet Airways,Delhi,Cochin,1,12373,18,5,2019,14,0,12,35,22,35
+SpiceJet,Kolkata,Banglore,1,4963,9,5,2019,15,5,20,20,5,15
+IndiGo,Mumbai,Hyderabad,0,2227,27,5,2019,21,20,22,50,1,30
+Multiple carriers,Delhi,Cochin,1,11200,27,6,2019,8,30,19,0,10,30
+Air India,Delhi,Cochin,1,7174,9,5,2019,17,40,23,0,5,20
+Air India,Delhi,Cochin,2,13748,3,3,2019,5,55,19,15,37,20
+Multiple carriers,Delhi,Cochin,1,9856,27,5,2019,7,5,22,30,15,25
+Air India,Kolkata,Banglore,2,15170,18,5,2019,16,45,12,30,19,45
+IndiGo,Delhi,Cochin,1,6442,1,6,2019,7,35,22,30,14,55
+Jet Airways,Delhi,Cochin,1,12898,27,5,2019,17,30,19,0,25,30
+Jet Airways,Banglore,Delhi,0,7229,1,6,2019,8,20,11,20,3,0
+Air India,Kolkata,Banglore,2,13033,9,5,2019,10,0,1,20,15,20
+Jet Airways,Kolkata,Banglore,1,10703,12,5,2019,20,25,21,5,24,40
+IndiGo,Chennai,Kolkata,0,6297,9,3,2019,13,20,15,35,2,15
+Jet Airways,Kolkata,Banglore,1,9314,6,5,2019,20,25,18,0,21,35
+Vistara,Banglore,New Delhi,0,6138,15,3,2019,9,50,12,35,2,45
+IndiGo,Delhi,Cochin,1,6838,24,6,2019,9,15,21,0,11,45
+Jet Airways Business,Delhi,Cochin,2,52285,6,3,2019,20,5,4,25,8,20
+Multiple carriers,Delhi,Cochin,1,13377,9,6,2019,14,0,1,30,11,30
+Air India,Delhi,Cochin,2,10975,18,5,2019,9,45,9,25,23,40
+Jet Airways,Banglore,New Delhi,1,13817,12,3,2019,5,45,21,20,15,35
+Air India,Delhi,Cochin,1,7532,21,3,2019,6,5,9,25,27,20
+Multiple carriers,Delhi,Cochin,1,10197,15,5,2019,3,50,19,0,15,10
+Jet Airways,Kolkata,Banglore,1,9663,9,6,2019,20,0,4,40,8,40
+Multiple carriers,Delhi,Cochin,1,13727,15,5,2019,13,0,21,0,8,0
+IndiGo,Delhi,Cochin,1,8330,9,5,2019,11,25,1,30,14,5
+IndiGo,Banglore,Delhi,0,4823,21,5,2019,7,10,10,5,2,55
+IndiGo,Delhi,Cochin,1,6206,27,5,2019,17,10,1,30,8,20
+Multiple carriers,Delhi,Cochin,1,10877,6,6,2019,11,25,19,0,7,35
+Jet Airways,Banglore,New Delhi,1,13817,12,3,2019,18,55,8,15,13,20
+Jet Airways,Banglore,Delhi,0,6478,27,6,2019,8,20,11,20,3,0
+Air India,Delhi,Cochin,2,8577,9,4,2019,13,5,7,40,18,35
+Jet Airways,Delhi,Cochin,1,16079,21,5,2019,21,50,19,0,21,10
+Jet Airways,Delhi,Cochin,2,11150,27,6,2019,23,5,12,35,13,30
+Multiple carriers,Delhi,Cochin,1,15077,6,3,2019,6,40,19,15,12,35
+Jet Airways,Kolkata,Banglore,1,7064,1,4,2019,16,30,8,15,15,45
+Jet Airways,Kolkata,Banglore,1,9663,21,5,2019,14,5,8,15,18,10
+Air India,Delhi,Cochin,2,11552,6,3,2019,21,30,19,15,21,45
+Jet Airways,Delhi,Cochin,1,10262,12,6,2019,20,55,19,0,22,5
+SpiceJet,Delhi,Cochin,1,5899,15,4,2019,15,45,22,5,6,20
+Jet Airways,Delhi,Cochin,2,13376,1,6,2019,14,35,12,35,22,0
+Jet Airways,Banglore,New Delhi,1,13817,12,3,2019,18,55,10,25,15,30
+Vistara,Kolkata,Banglore,1,8610,1,5,2019,20,20,20,20,24,0
+Jet Airways,Delhi,Cochin,1,12373,9,5,2019,9,0,4,25,19,25
+SpiceJet,Delhi,Cochin,1,5673,27,5,2019,17,55,22,50,4,55
+Vistara,Kolkata,Banglore,1,7927,1,4,2019,20,20,18,50,22,30
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,2,15,19,0,16,45
+Jet Airways,Delhi,Cochin,1,12373,9,5,2019,8,0,4,25,20,25
+Air India,Banglore,New Delhi,1,12704,1,3,2019,9,30,12,5,26,35
+Air India,Kolkata,Banglore,1,6612,9,5,2019,12,0,13,15,25,15
+IndiGo,Banglore,Delhi,0,4823,9,6,2019,18,55,21,50,2,55
+Jet Airways,Delhi,Cochin,1,10262,3,6,2019,10,0,19,0,9,0
+IndiGo,Delhi,Cochin,1,6388,21,3,2019,7,20,12,30,5,10
+GoAir,Banglore,Delhi,0,3898,12,5,2019,7,45,10,40,2,55
+Jet Airways,Delhi,Cochin,1,5177,6,4,2019,11,30,19,0,7,30
+Jet Airways,Kolkata,Banglore,1,10844,9,6,2019,20,0,20,45,24,45
+IndiGo,Banglore,Delhi,0,4077,1,6,2019,0,25,3,15,2,50
+Jet Airways,Kolkata,Banglore,1,14231,24,3,2019,16,55,9,15,16,20
+Air India,Banglore,New Delhi,2,13250,12,3,2019,8,50,23,25,14,35
+Jet Airways,Banglore,New Delhi,1,13817,12,3,2019,7,0,21,20,14,20
+SpiceJet,Banglore,New Delhi,0,6205,9,3,2019,20,30,23,20,2,50
+Jet Airways,Delhi,Cochin,2,12819,27,6,2019,23,5,12,35,13,30
+IndiGo,Banglore,Delhi,0,4591,15,4,2019,13,0,15,50,2,50
+SpiceJet,Kolkata,Banglore,0,3841,27,6,2019,6,55,9,30,2,35
+SpiceJet,Chennai,Kolkata,0,3597,9,6,2019,17,45,20,5,2,20
+IndiGo,Kolkata,Banglore,0,4174,3,4,2019,4,40,7,15,2,35
+Vistara,Delhi,Cochin,0,6216,27,5,2019,6,0,9,10,3,10
+Jet Airways,Kolkata,Banglore,1,10624,9,5,2019,17,0,18,0,25,0
+Air Asia,Delhi,Cochin,1,6152,24,6,2019,7,55,22,25,14,30
+IndiGo,Delhi,Cochin,1,6937,9,3,2019,20,30,1,35,5,5
+Air India,Delhi,Cochin,1,8792,1,6,2019,17,0,19,15,26,15
+Multiple carriers,Delhi,Cochin,1,7005,27,5,2019,12,50,21,0,8,10
+Jet Airways,Mumbai,Hyderabad,0,5678,6,6,2019,2,55,4,20,1,25
+Air India,Banglore,New Delhi,1,7013,15,3,2019,10,30,11,20,24,50
+Jet Airways,Delhi,Cochin,1,16079,21,5,2019,15,0,19,0,28,0
+Jet Airways,Kolkata,Banglore,1,10539,6,6,2019,9,35,18,0,8,25
+Jet Airways,Kolkata,Banglore,1,11841,6,5,2019,16,30,23,35,7,5
+IndiGo,Banglore,New Delhi,1,10509,15,3,2019,19,35,0,35,5,0
+IndiGo,Chennai,Kolkata,0,3597,3,6,2019,13,15,15,35,2,20
+Air India,Kolkata,Banglore,2,15532,1,5,2019,9,25,13,45,28,20
+Multiple carriers,Delhi,Cochin,1,14086,9,3,2019,6,50,21,0,14,10
+Multiple carriers,Delhi,Cochin,1,5883,27,3,2019,14,35,22,20,7,45
+Multiple carriers,Delhi,Cochin,1,7618,3,6,2019,7,0,21,0,14,0
+Jet Airways,Kolkata,Banglore,1,9314,1,5,2019,17,0,18,0,25,0
+Jet Airways,Kolkata,Banglore,1,13994,9,6,2019,9,35,21,5,11,30
+IndiGo,Delhi,Cochin,1,5073,27,4,2019,7,35,12,10,4,35
+Air Asia,Banglore,New Delhi,0,3383,24,3,2019,11,10,13,55,2,45
+Multiple carriers,Delhi,Cochin,1,16108,1,6,2019,9,0,19,15,10,15
+Multiple carriers,Delhi,Cochin,1,6795,27,5,2019,10,20,1,30,15,10
+Jet Airways,Kolkata,Banglore,1,12681,1,4,2019,16,30,4,40,12,10
+Jet Airways,Delhi,Cochin,1,10262,12,6,2019,15,0,12,35,21,35
+Vistara,Kolkata,Banglore,1,8820,6,6,2019,17,0,18,50,25,50
+Jet Airways,Banglore,New Delhi,1,10037,9,3,2019,5,50,12,20,6,30
+Multiple carriers,Delhi,Cochin,1,11789,12,6,2019,6,0,12,35,6,35
+GoAir,Delhi,Cochin,1,7378,15,5,2019,10,35,19,35,9,0
+IndiGo,Banglore,Delhi,0,4823,24,5,2019,18,55,21,50,2,55
+Jet Airways,Banglore,Delhi,0,6478,24,6,2019,19,50,22,50,3,0
+Jet Airways,Delhi,Cochin,2,13014,1,6,2019,9,40,4,25,18,45
+Jet Airways,Kolkata,Banglore,1,10844,24,5,2019,16,30,22,35,6,5
+Multiple carriers,Delhi,Cochin,1,7408,27,6,2019,8,0,21,0,13,0
+Multiple carriers,Delhi,Cochin,1,9646,27,6,2019,7,5,16,10,9,5
+SpiceJet,Chennai,Kolkata,0,3597,6,5,2019,17,45,20,5,2,20
+SpiceJet,Kolkata,Banglore,0,3873,27,6,2019,17,10,19,40,2,30
+GoAir,Delhi,Cochin,1,7870,27,6,2019,14,25,19,35,5,10
+Jet Airways,Delhi,Cochin,2,13344,27,6,2019,5,30,12,35,7,5
+Air India,Mumbai,Hyderabad,0,3100,12,6,2019,19,30,20,45,1,15
+Air India,Banglore,New Delhi,0,4441,18,3,2019,21,5,23,55,2,50
+IndiGo,Delhi,Cochin,1,6171,27,3,2019,4,55,12,0,7,5
+Jet Airways,Kolkata,Banglore,1,10953,9,5,2019,20,25,10,55,14,30
+Air India,Kolkata,Banglore,2,14214,9,5,2019,14,30,8,55,18,25
+IndiGo,Delhi,Cochin,1,6093,24,6,2019,7,30,21,0,13,30
+Air India,Delhi,Cochin,2,12436,24,6,2019,12,55,19,15,30,20
+Jet Airways,Delhi,Cochin,2,15129,18,5,2019,13,25,19,0,29,35
+Multiple carriers,Delhi,Cochin,1,13259,3,6,2019,6,0,12,35,6,35
+Air India,Kolkata,Banglore,2,15170,24,5,2019,9,50,12,30,26,40
+Jet Airways,Kolkata,Banglore,1,14781,21,5,2019,16,30,22,35,6,5
+IndiGo,Delhi,Cochin,1,6206,1,6,2019,11,25,1,30,14,5
+SpiceJet,Kolkata,Banglore,0,3841,9,5,2019,17,10,19,40,2,30
+Jet Airways,Delhi,Cochin,1,14714,15,6,2019,11,30,19,0,7,30
+IndiGo,Delhi,Cochin,1,6093,9,6,2019,4,55,21,0,16,5
+Jet Airways,Banglore,Delhi,0,8016,9,6,2019,11,10,14,5,2,55
+Air India,Delhi,Cochin,1,5117,27,3,2019,6,5,9,25,27,20
+Jet Airways,Kolkata,Banglore,1,8586,1,5,2019,8,25,4,40,20,15
+IndiGo,Delhi,Cochin,1,13611,9,3,2019,15,0,1,35,10,35
+IndiGo,Delhi,Cochin,1,6704,9,5,2019,16,10,22,30,6,20
+IndiGo,Kolkata,Banglore,1,4226,9,5,2019,6,20,10,20,4,0
+Air India,Banglore,Delhi,0,4651,6,4,2019,17,0,19,45,2,45
+SpiceJet,Kolkata,Banglore,0,3873,27,5,2019,22,20,0,40,2,20
+GoAir,Banglore,New Delhi,0,7222,3,3,2019,20,55,23,50,2,55
+Multiple carriers,Delhi,Cochin,1,13727,15,5,2019,11,30,21,0,9,30
+IndiGo,Delhi,Cochin,1,10141,27,3,2019,9,10,15,30,6,20
+SpiceJet,Banglore,Delhi,0,3625,24,4,2019,21,10,0,5,2,55
+IndiGo,Delhi,Cochin,1,6442,15,4,2019,7,35,16,10,8,35
+Jet Airways,Banglore,Delhi,0,7229,6,5,2019,17,45,20,45,3,0
+Air Asia,Delhi,Cochin,1,6752,24,6,2019,16,45,6,35,13,50
+Jet Airways,Kolkata,Banglore,1,13759,24,3,2019,21,10,18,10,21,0
+Air India,Mumbai,Hyderabad,1,14408,6,3,2019,12,0,12,25,24,25
+Air India,Delhi,Cochin,2,13381,9,6,2019,20,15,19,15,23,0
+Vistara,Kolkata,Banglore,1,9135,1,4,2019,17,0,20,20,27,20
+IndiGo,Kolkata,Banglore,1,6218,15,5,2019,18,5,23,30,5,25
+SpiceJet,Kolkata,Banglore,0,4174,27,4,2019,9,0,11,25,2,25
+Air India,Kolkata,Banglore,1,6117,6,6,2019,19,0,11,5,16,5
+Jet Airways,Kolkata,Banglore,1,10703,15,5,2019,9,35,21,5,11,30
+Jet Airways,Kolkata,Banglore,1,12692,12,6,2019,9,35,9,45,24,10
+Jet Airways,Kolkata,Banglore,1,10539,6,6,2019,17,0,10,55,17,55
+Jet Airways,Kolkata,Banglore,1,11134,24,3,2019,13,55,19,40,5,45
+IndiGo,Banglore,New Delhi,0,4777,24,3,2019,21,20,0,15,2,55
+Jet Airways,Delhi,Cochin,1,12373,18,5,2019,11,30,12,35,25,5
+Multiple carriers,Delhi,Cochin,2,11966,3,3,2019,13,5,21,20,8,15
+IndiGo,Chennai,Kolkata,0,5277,15,5,2019,22,5,0,25,2,20
+Air India,Banglore,New Delhi,2,17135,1,3,2019,8,50,23,55,39,5
+Jet Airways,Delhi,Cochin,1,14714,6,6,2019,14,0,19,0,5,0
+IndiGo,Banglore,New Delhi,0,6144,9,3,2019,22,20,1,10,2,50
+Air India,Banglore,Delhi,0,5911,1,4,2019,13,20,16,10,2,50
+Vistara,Mumbai,Hyderabad,1,12080,12,3,2019,19,45,19,55,24,10
+IndiGo,Banglore,Delhi,0,4423,6,4,2019,10,30,13,20,2,50
+Multiple carriers,Delhi,Cochin,1,7618,27,5,2019,9,0,21,0,12,0
+Air Asia,Banglore,Delhi,0,3383,27,5,2019,11,10,13,55,2,45
+Air India,Delhi,Cochin,2,12646,6,3,2019,19,45,19,15,23,30
+Multiple carriers,Delhi,Cochin,1,7670,18,5,2019,6,0,21,0,15,0
+IndiGo,Kolkata,Banglore,0,4804,15,5,2019,4,40,7,15,2,35
+Jet Airways,Banglore,New Delhi,1,11087,12,3,2019,20,35,18,25,21,50
+Jet Airways,Banglore,Delhi,0,7229,18,4,2019,11,10,14,5,2,55
+SpiceJet,Chennai,Kolkata,0,7050,3,3,2019,8,20,10,35,2,15
+Jet Airways,Kolkata,Banglore,1,12681,1,4,2019,20,0,18,15,22,15
+SpiceJet,Delhi,Cochin,1,4098,3,4,2019,8,45,13,15,4,30
+SpiceJet,Chennai,Kolkata,0,3543,12,5,2019,9,45,12,0,2,15
+Jet Airways,Kolkata,Banglore,1,14151,21,5,2019,20,25,18,0,21,35
+Jet Airways,Kolkata,Banglore,1,13339,24,3,2019,6,30,22,35,16,5
+Jet Airways,Kolkata,Banglore,1,9663,24,5,2019,21,10,12,0,14,50
+Jet Airways,Delhi,Cochin,1,12898,27,5,2019,11,30,4,25,16,55
+Air India,Delhi,Cochin,2,8603,3,6,2019,12,0,19,15,7,15
+Jet Airways,Kolkata,Banglore,1,13044,12,6,2019,16,30,12,0,19,30
+SpiceJet,Kolkata,Banglore,0,4622,6,3,2019,17,15,19,45,2,30
+Multiple carriers,Delhi,Cochin,1,13062,21,3,2019,14,0,21,0,7,0
+Multiple carriers,Delhi,Cochin,1,11622,12,6,2019,9,15,19,0,9,45
+Jet Airways,Banglore,New Delhi,1,11087,12,3,2019,20,35,20,20,23,45
+Multiple carriers,Delhi,Cochin,1,11789,15,6,2019,10,20,19,0,8,40
+Jet Airways,Kolkata,Banglore,1,9663,9,5,2019,18,55,9,20,14,25
+Jet Airways,Banglore,New Delhi,1,19225,6,3,2019,8,55,16,10,7,15
+Multiple carriers,Delhi,Cochin,1,5797,27,6,2019,11,40,1,30,13,50
+Multiple carriers,Delhi,Cochin,1,9526,1,6,2019,12,50,19,15,6,25
+Jet Airways,Banglore,Delhi,0,7229,9,4,2019,19,50,22,50,3,0
+Multiple carriers,Delhi,Cochin,1,10877,9,4,2019,8,30,19,0,10,30
+Air India,Banglore,New Delhi,2,13942,6,3,2019,8,15,22,55,14,40
+Air Asia,Banglore,Delhi,0,3383,9,5,2019,11,10,13,55,2,45
+Jet Airways,Delhi,Cochin,1,10262,15,6,2019,14,0,4,25,14,25
+Air India,Kolkata,Banglore,2,11201,24,5,2019,5,50,20,25,14,35
+Jet Airways,Delhi,Cochin,1,10262,1,6,2019,19,15,4,25,9,10
+Air India,Delhi,Cochin,2,10231,3,6,2019,22,0,19,15,21,15
+Jet Airways,Banglore,New Delhi,1,9134,15,3,2019,14,5,8,15,18,10
+Air Asia,Kolkata,Banglore,0,5645,18,5,2019,10,20,12,55,2,35
+Jet Airways,Delhi,Cochin,1,14714,1,6,2019,15,0,4,25,13,25
+Air India,Delhi,Cochin,2,12646,6,3,2019,16,40,19,15,26,35
+Air India,Delhi,Cochin,2,12173,3,6,2019,10,55,19,15,8,20
+IndiGo,Mumbai,Hyderabad,0,2227,12,6,2019,21,20,22,50,1,30
+Multiple carriers,Delhi,Cochin,1,10529,6,5,2019,7,30,19,0,11,30
+Jet Airways,Delhi,Cochin,0,7202,18,5,2019,11,0,14,15,3,15
+Multiple carriers,Delhi,Cochin,1,7886,27,5,2019,9,0,21,0,12,0
+SpiceJet,Mumbai,Hyderabad,0,2017,18,6,2019,22,45,0,15,1,30
+IndiGo,Delhi,Cochin,1,6171,27,4,2019,5,5,16,10,11,5
+Jet Airways,Mumbai,Hyderabad,0,4050,3,6,2019,2,55,4,20,1,25
+SpiceJet,Kolkata,Banglore,1,8479,9,5,2019,11,35,18,50,7,15
+Air Asia,Banglore,Delhi,0,4282,18,5,2019,4,55,7,45,2,50
+Vistara,Kolkata,Banglore,1,9345,24,5,2019,20,20,20,20,24,0
+Air India,Delhi,Cochin,1,6587,24,6,2019,5,15,6,50,25,35
+IndiGo,Mumbai,Hyderabad,0,2754,3,5,2019,20,5,21,40,1,35
+SpiceJet,Banglore,Delhi,0,3919,21,6,2019,21,10,0,5,2,55
+Jet Airways,Delhi,Cochin,2,10368,12,6,2019,9,40,4,25,18,45
+Air India,Banglore,New Delhi,1,11654,3,3,2019,9,30,16,20,6,50
+GoAir,Banglore,Delhi,0,4239,1,4,2019,20,55,23,40,2,45
+IndiGo,Delhi,Cochin,1,6674,27,5,2019,6,50,16,10,9,20
+Multiple carriers,Delhi,Cochin,1,7198,24,6,2019,13,0,1,30,12,30
+IndiGo,Kolkata,Banglore,1,5930,12,6,2019,21,0,2,15,5,15
+Jet Airways,Banglore,Delhi,0,7229,9,5,2019,7,10,10,10,3,0
+Air India,Kolkata,Banglore,2,10408,1,4,2019,10,0,1,20,15,20
+Air India,Delhi,Cochin,2,12488,12,6,2019,7,10,7,40,24,30
+IndiGo,Chennai,Kolkata,0,3540,9,6,2019,5,15,7,40,2,25
+Jet Airways,Kolkata,Banglore,1,8529,12,6,2019,20,0,9,20,13,20
+Jet Airways,Delhi,Cochin,2,13376,24,6,2019,14,35,4,25,13,50
+GoAir,Kolkata,Banglore,1,8855,24,5,2019,16,40,0,15,7,35
+Jet Airways,Kolkata,Banglore,1,14781,15,5,2019,6,30,19,50,13,20
+IndiGo,Delhi,Cochin,1,5684,27,6,2019,17,10,1,30,8,20
+Jet Airways,Delhi,Cochin,2,13029,9,5,2019,19,30,4,25,8,55
+Jet Airways,Delhi,Cochin,2,15129,1,5,2019,19,10,19,0,23,50
+Air India,Kolkata,Banglore,1,8576,9,6,2019,9,25,18,30,9,5
+Jet Airways,Banglore,New Delhi,1,11087,9,3,2019,8,55,11,25,26,30
+Jet Airways,Mumbai,Hyderabad,0,5678,9,6,2019,10,20,11,50,1,30
+Jet Airways,Delhi,Cochin,1,12557,21,3,2019,18,15,4,25,10,10
+IndiGo,Chennai,Kolkata,0,3858,27,3,2019,11,35,14,0,2,25
+Jet Airways,Delhi,Cochin,1,12373,9,5,2019,14,0,12,35,22,35
+IndiGo,Mumbai,Hyderabad,0,4049,18,3,2019,9,10,10,40,1,30
+Jet Airways,Banglore,New Delhi,1,21934,15,3,2019,16,55,0,45,7,50
+Air India,Kolkata,Banglore,0,5510,27,6,2019,14,15,16,45,2,30
+Vistara,Delhi,Cochin,0,6216,15,6,2019,14,40,17,50,3,10
+Air India,Mumbai,Hyderabad,0,2050,1,4,2019,19,30,20,45,1,15
+IndiGo,Mumbai,Hyderabad,0,2754,3,4,2019,2,35,4,5,1,30
+IndiGo,Chennai,Kolkata,0,3850,27,6,2019,7,55,10,15,2,20
+IndiGo,Chennai,Kolkata,0,3540,6,5,2019,5,15,7,40,2,25
+Jet Airways,Kolkata,Banglore,1,9663,1,5,2019,6,30,8,15,25,45
+Air India,Delhi,Cochin,2,9190,6,3,2019,7,5,9,25,26,20
+Jet Airways,Delhi,Cochin,1,12898,27,5,2019,15,0,19,0,28,0
+GoAir,Banglore,Delhi,0,4632,15,4,2019,7,45,10,40,2,55
+SpiceJet,Mumbai,Hyderabad,0,2753,24,3,2019,13,10,14,30,1,20
+Air India,Banglore,New Delhi,2,12778,12,3,2019,8,50,10,15,25,25
+Air India,Kolkata,Banglore,2,12723,12,6,2019,5,50,8,55,27,5
+IndiGo,Kolkata,Banglore,0,4804,24,6,2019,11,30,14,5,2,35
+IndiGo,Banglore,Delhi,0,4823,18,4,2019,20,0,22,50,2,50
+Air Asia,Delhi,Cochin,1,6152,27,6,2019,7,55,13,25,5,30
+Vistara,Delhi,Cochin,0,6216,27,6,2019,6,0,9,10,3,10
+IndiGo,Delhi,Cochin,1,6016,24,6,2019,2,0,7,45,5,45
+Multiple carriers,Delhi,Cochin,1,11622,27,6,2019,9,15,19,0,9,45
+Air India,Kolkata,Banglore,2,10151,6,5,2019,12,0,21,50,9,50
+Jet Airways,Delhi,Cochin,2,12273,27,3,2019,6,20,4,25,22,5
+Jet Airways,Delhi,Cochin,2,12410,12,6,2019,20,0,4,25,8,25
+Jet Airways,Banglore,New Delhi,1,12547,12,3,2019,5,45,8,15,26,30
+Jet Airways,Delhi,Cochin,1,10262,15,6,2019,22,50,12,35,13,45
+Multiple carriers,Delhi,Cochin,1,14323,9,5,2019,11,30,19,15,7,45
+Jet Airways,Mumbai,Hyderabad,0,3210,21,6,2019,19,35,21,5,1,30
+Multiple carriers,Delhi,Cochin,1,16863,3,3,2019,10,0,21,0,11,0
+Multiple carriers,Delhi,Cochin,1,8937,1,6,2019,11,25,19,15,7,50
+Jet Airways,Delhi,Cochin,2,10929,27,3,2019,19,10,4,25,33,15
+IndiGo,Delhi,Cochin,1,6104,9,6,2019,10,35,1,30,14,55
+SpiceJet,Delhi,Cochin,1,5511,21,3,2019,15,55,21,55,6,0
+Jet Airways,Kolkata,Banglore,1,13759,24,3,2019,21,10,16,20,19,10
+Air India,Delhi,Cochin,2,11543,21,5,2019,5,55,7,40,25,45
+Jet Airways,Kolkata,Banglore,1,13067,18,5,2019,9,35,19,10,9,35
+Jet Airways,Delhi,Cochin,1,10262,15,6,2019,7,5,4,25,21,20
+Air India,Delhi,Cochin,2,13591,6,6,2019,16,55,19,15,26,20
+Jet Airways,Delhi,Cochin,2,10929,27,3,2019,19,10,19,45,24,35
+Jet Airways,Banglore,Delhi,0,7229,27,4,2019,19,50,22,50,3,0
+Air Asia,Delhi,Cochin,1,6451,15,5,2019,7,55,13,25,5,30
+IndiGo,Chennai,Kolkata,0,7295,3,3,2019,11,35,14,0,2,25
+IndiGo,Banglore,Delhi,0,3943,3,6,2019,1,30,4,15,2,45
+SpiceJet,Banglore,Delhi,0,3573,15,5,2019,21,10,0,5,2,55
+Air India,Delhi,Cochin,2,9181,24,6,2019,22,0,19,15,21,15
+Air India,Delhi,Cochin,1,24017,3,3,2019,9,45,9,25,23,40
+Air India,Delhi,Cochin,2,17476,9,3,2019,10,55,19,15,32,20
+Air India,Kolkata,Banglore,1,4647,9,4,2019,19,0,11,5,16,5
+IndiGo,Delhi,Cochin,1,6314,27,5,2019,11,25,21,0,9,35
+Jet Airways,Delhi,Cochin,2,13376,6,6,2019,14,35,4,25,13,50
+Jet Airways,Banglore,New Delhi,1,12284,18,3,2019,5,45,16,10,10,25
+Jet Airways,Banglore,Delhi,0,7229,9,5,2019,8,20,11,20,3,0
+Multiple carriers,Delhi,Cochin,1,9627,1,5,2019,8,30,19,0,10,30
+Air India,Kolkata,Banglore,2,9258,1,4,2019,12,0,21,50,9,50
+SpiceJet,Kolkata,Banglore,0,3873,3,6,2019,9,0,11,25,2,25
+SpiceJet,Kolkata,Banglore,0,3841,15,5,2019,22,20,0,40,2,20
+Multiple carriers,Delhi,Cochin,1,10486,27,5,2019,9,45,22,30,12,45
+Jet Airways,Delhi,Cochin,1,17234,3,3,2019,16,0,18,50,26,50
+IndiGo,Delhi,Cochin,1,6496,27,6,2019,5,10,10,5,4,55
+Multiple carriers,Delhi,Cochin,1,9627,27,5,2019,8,30,19,0,10,30
+Air India,Kolkata,Banglore,1,8366,12,6,2019,16,50,11,10,18,20
+Jet Airways,Delhi,Cochin,2,15318,27,5,2019,20,0,4,25,8,25
+SpiceJet,Kolkata,Banglore,1,9923,24,3,2019,11,35,18,50,7,15
+Jet Airways,Kolkata,Banglore,1,6077,1,4,2019,10,20,17,35,7,15
+Air India,Chennai,Kolkata,0,4667,9,6,2019,11,40,13,55,2,15
+Multiple carriers,Delhi,Cochin,1,8099,9,5,2019,8,30,19,15,10,45
+SpiceJet,Mumbai,Hyderabad,0,2385,1,5,2019,13,15,14,45,1,30
+Multiple carriers,Delhi,Cochin,2,15965,27,6,2019,15,5,1,30,10,25
+Jet Airways,Kolkata,Banglore,1,10844,6,5,2019,6,30,18,15,11,45
+Air India,Banglore,Delhi,0,6121,12,5,2019,13,20,16,10,2,50
+IndiGo,Banglore,Delhi,0,3625,24,4,2019,22,10,1,0,2,50
+Multiple carriers,Delhi,Cochin,1,8475,27,5,2019,7,30,21,0,13,30
+Jet Airways,Delhi,Cochin,1,12898,27,5,2019,7,5,19,0,11,55
+IndiGo,Delhi,Cochin,1,10851,6,3,2019,2,5,7,25,5,20
+Air India,Delhi,Cochin,1,5704,21,3,2019,9,45,23,0,13,15
+Vistara,Banglore,New Delhi,0,11598,18,3,2019,21,10,0,5,2,55
+Multiple carriers,Delhi,Cochin,1,9149,27,5,2019,8,30,19,15,10,45
+Air India,Kolkata,Banglore,0,4145,15,6,2019,20,45,23,20,2,35
+GoAir,Delhi,Cochin,1,6195,21,5,2019,10,35,19,35,9,0
+IndiGo,Delhi,Cochin,1,6979,9,5,2019,11,25,21,0,9,35
+Air India,Banglore,New Delhi,0,7276,15,3,2019,13,20,16,10,2,50
+SpiceJet,Delhi,Cochin,1,4760,15,5,2019,8,45,13,15,4,30
+Vistara,Chennai,Kolkata,0,11982,18,6,2019,17,45,20,5,2,20
+IndiGo,Chennai,Kolkata,0,5277,27,3,2019,22,5,0,25,2,20
+Air India,Delhi,Cochin,1,8372,9,6,2019,20,0,7,40,11,40
+IndiGo,Kolkata,Banglore,1,4226,1,4,2019,19,35,23,15,3,40
+IndiGo,Chennai,Kolkata,0,3597,18,6,2019,19,35,21,55,2,20
+Multiple carriers,Delhi,Cochin,1,7005,15,6,2019,8,45,21,0,12,15
+Multiple carriers,Delhi,Cochin,1,8018,9,5,2019,7,5,16,10,9,5
+Jet Airways,Delhi,Cochin,1,10577,9,6,2019,19,45,19,0,23,15
+Jet Airways,Delhi,Cochin,2,11507,12,6,2019,5,30,19,0,13,30
+Air India,Delhi,Cochin,2,9653,9,5,2019,5,0,19,15,38,15
+Jet Airways,Mumbai,Hyderabad,0,4160,15,3,2019,10,20,11,50,1,30
+Jet Airways,Delhi,Cochin,1,14714,3,6,2019,18,15,19,0,24,45
+Jet Airways,Mumbai,Hyderabad,0,5678,9,5,2019,2,55,4,20,1,25
+Air India,Kolkata,Banglore,2,13873,18,5,2019,7,0,1,20,18,20
+Multiple carriers,Delhi,Cochin,1,11264,27,6,2019,10,20,19,0,8,40
+Jet Airways,Kolkata,Banglore,1,11134,24,3,2019,13,55,20,40,6,45
+Air Asia,Delhi,Cochin,1,6151,21,3,2019,16,45,22,15,5,30
+Jet Airways,Kolkata,Banglore,1,10844,18,5,2019,5,45,19,50,14,5
+Jet Airways,Delhi,Cochin,2,13014,3,6,2019,9,40,12,35,26,55
+Jet Airways,Mumbai,Hyderabad,0,4995,18,6,2019,10,20,11,50,1,30
+IndiGo,Kolkata,Banglore,0,4174,18,4,2019,15,30,18,5,2,35
+Air India,Banglore,New Delhi,0,12841,3,3,2019,13,20,16,10,2,50
+Jet Airways,Kolkata,Banglore,1,13067,9,5,2019,17,0,21,5,28,5
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,16,0,19,0,27,0
+IndiGo,Banglore,Delhi,0,4423,6,4,2019,10,10,13,0,2,50
+Jet Airways,Kolkata,Banglore,1,8586,1,5,2019,18,55,4,40,9,45
+Jet Airways,Kolkata,Banglore,1,9663,15,5,2019,21,10,9,20,12,10
+IndiGo,Delhi,Cochin,1,6069,15,6,2019,16,0,21,0,5,0
+Air India,Chennai,Kolkata,0,4667,6,5,2019,11,40,13,55,2,15
+Jet Airways,Delhi,Cochin,1,12373,9,5,2019,21,50,19,0,21,10
+Jet Airways,Kolkata,Banglore,1,13941,9,5,2019,16,30,10,5,17,35
+IndiGo,Mumbai,Hyderabad,0,3175,27,3,2019,6,20,7,45,1,25
+Air India,Delhi,Cochin,1,8372,9,6,2019,21,0,19,15,22,15
+Vistara,Banglore,Delhi,0,5613,6,4,2019,17,0,19,35,2,35
+IndiGo,Delhi,Cochin,1,7144,18,5,2019,7,35,22,30,14,55
+Jet Airways,Kolkata,Banglore,1,14571,6,6,2019,6,30,16,20,9,50
+IndiGo,Chennai,Kolkata,0,5277,24,3,2019,22,5,0,25,2,20
+Jet Airways,Mumbai,Hyderabad,0,2759,24,3,2019,10,20,11,50,1,30
+Air Asia,Kolkata,Banglore,1,5192,9,5,2019,7,35,23,30,15,55
+Jet Airways,Delhi,Cochin,1,14714,9,6,2019,7,5,19,0,11,55
+Air India,Delhi,Cochin,2,10336,1,6,2019,12,0,19,15,7,15
+Air India,Kolkata,Banglore,0,31945,24,3,2019,20,45,23,20,2,35
+Jet Airways,Kolkata,Banglore,1,7064,1,4,2019,6,30,23,35,17,5
+Jet Airways,Delhi,Cochin,2,14441,9,6,2019,5,30,12,35,7,5
+Multiple carriers,Delhi,Cochin,1,17493,3,3,2019,13,0,1,35,12,35
+Jet Airways,Kolkata,Banglore,1,10844,9,6,2019,20,0,22,35,26,35
+SpiceJet,Mumbai,Hyderabad,0,2753,1,6,2019,5,45,7,15,1,30
+Jet Airways,Delhi,Cochin,1,12898,21,5,2019,8,0,4,25,20,25
+Jet Airways,Banglore,Delhi,0,7229,15,4,2019,18,55,22,0,3,5
+Air India,Delhi,Cochin,2,8603,3,6,2019,12,0,7,40,19,40
+Jet Airways,Delhi,Cochin,2,15129,18,5,2019,5,30,4,25,22,55
+Jet Airways,Delhi,Cochin,2,18804,15,6,2019,11,40,19,0,7,20
+Air Asia,Delhi,Cochin,1,7452,21,4,2019,7,55,22,25,14,30
+SpiceJet,Banglore,Delhi,0,3971,24,4,2019,9,30,12,20,2,50
+IndiGo,Banglore,Delhi,0,3943,12,6,2019,10,10,13,0,2,50
+IndiGo,Banglore,New Delhi,1,9165,15,3,2019,14,25,19,25,5,0
+Jet Airways,Delhi,Cochin,2,13014,24,6,2019,5,30,19,0,13,30
+SpiceJet,Banglore,Delhi,0,3625,21,6,2019,9,30,12,20,2,50
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,16,0,12,35,20,35
+Jet Airways,Kolkata,Banglore,1,14388,21,5,2019,18,55,8,15,13,20
+Multiple carriers,Delhi,Cochin,1,15058,12,6,2019,8,0,19,15,11,15
+Air India,Delhi,Cochin,1,14882,6,3,2019,9,0,7,40,22,40
+IndiGo,Banglore,Delhi,0,4591,18,4,2019,10,10,13,0,2,50
+SpiceJet,Kolkata,Banglore,0,3841,9,5,2019,6,55,9,30,2,35
+Jet Airways,Kolkata,Banglore,1,14781,15,5,2019,8,25,18,15,9,50
+SpiceJet,Kolkata,Banglore,0,3841,9,4,2019,22,20,0,40,2,20
+Multiple carriers,Delhi,Cochin,1,13377,3,6,2019,15,0,1,30,10,30
+Jet Airways,Delhi,Cochin,2,13014,12,6,2019,19,30,4,25,8,55
+Multiple carriers,Delhi,Cochin,1,14848,21,5,2019,13,0,19,15,6,15
+Air India,Kolkata,Banglore,0,4145,9,5,2019,20,45,23,20,2,35
+IndiGo,Chennai,Kolkata,0,3850,12,6,2019,7,55,10,15,2,20
+Air India,Kolkata,Banglore,1,10413,24,5,2019,7,0,20,25,13,25
+IndiGo,Delhi,Cochin,1,6104,3,6,2019,15,0,1,30,10,30
+IndiGo,Banglore,Delhi,0,3943,1,6,2019,10,30,13,20,2,50
+Jet Airways,Kolkata,Banglore,1,8529,12,6,2019,21,10,8,15,11,5
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,22,50,12,35,13,45
+Jet Airways,Kolkata,Banglore,1,14151,18,5,2019,20,25,22,5,25,40
+Air Asia,Kolkata,Banglore,2,5192,9,5,2019,15,10,23,30,8,20
+Jet Airways,Kolkata,Banglore,1,9663,21,5,2019,14,5,4,40,14,35
+GoAir,Banglore,Delhi,0,4632,24,4,2019,7,45,10,40,2,55
+IndiGo,Delhi,Cochin,1,5073,6,4,2019,20,25,1,30,5,5
+Multiple carriers,Delhi,Cochin,1,9526,15,6,2019,10,20,19,15,8,55
+IndiGo,Banglore,Delhi,0,4423,15,4,2019,4,0,6,50,2,50
+IndiGo,Mumbai,Hyderabad,0,2227,12,5,2019,20,5,21,40,1,35
+Vistara,Banglore,New Delhi,0,5403,21,3,2019,11,30,14,10,2,40
+IndiGo,Chennai,Kolkata,0,3858,27,3,2019,19,35,21,55,2,20
+Jet Airways,Delhi,Cochin,2,18752,9,3,2019,13,45,18,50,29,5
+Jet Airways,Kolkata,Banglore,1,9663,21,5,2019,6,30,12,0,5,30
+Jet Airways,Delhi,Cochin,2,12819,24,6,2019,19,10,12,35,17,25
+Multiple carriers,Delhi,Cochin,1,6883,27,3,2019,9,0,21,0,12,0
+Multiple carriers,Delhi,Cochin,1,7198,27,5,2019,19,0,1,30,6,30
+Air India,Banglore,New Delhi,0,7801,9,3,2019,10,0,12,45,2,45
+IndiGo,Banglore,Delhi,0,4823,21,4,2019,18,25,21,20,2,55
+Jet Airways,Kolkata,Banglore,1,9663,24,5,2019,6,30,9,20,26,50
+Jet Airways,Kolkata,Banglore,1,12121,12,5,2019,20,25,21,5,24,40
+Vistara,Kolkata,Banglore,1,8085,12,5,2019,20,20,23,25,27,5
+IndiGo,Banglore,New Delhi,1,8662,3,3,2019,13,40,18,35,4,55
+Jet Airways,Delhi,Cochin,1,6017,21,3,2019,22,0,18,50,20,50
+SpiceJet,Chennai,Kolkata,0,3859,3,5,2019,9,45,12,0,2,15
+Multiple carriers,Delhi,Cochin,1,7564,18,5,2019,4,55,19,15,14,20
+SpiceJet,Banglore,Delhi,0,3919,21,6,2019,5,55,8,35,2,40
+Jet Airways,Delhi,Cochin,2,15129,18,5,2019,5,30,4,25,22,55
+Jet Airways,Banglore,New Delhi,1,26890,1,3,2019,7,0,13,15,6,15
+Jet Airways,Delhi,Cochin,0,5443,15,4,2019,11,0,14,15,3,15
+IndiGo,Banglore,New Delhi,0,6860,9,3,2019,10,5,13,0,2,55
+Jet Airways,Kolkata,Banglore,1,13364,1,4,2019,14,5,20,45,6,40
+Jet Airways,Delhi,Cochin,1,12239,27,5,2019,8,0,19,0,11,0
+IndiGo,Kolkata,Banglore,1,4966,9,4,2019,11,30,16,5,4,35
+IndiGo,Banglore,New Delhi,0,6144,3,3,2019,6,0,8,45,2,45
+Jet Airways,Delhi,Cochin,1,12373,9,5,2019,15,0,19,0,28,0
+Air India,Banglore,New Delhi,2,10835,18,3,2019,8,50,16,30,31,40
+Air India,Delhi,Cochin,1,7952,6,6,2019,6,5,9,25,27,20
+IndiGo,Banglore,Delhi,0,3419,9,4,2019,1,30,4,15,2,45
+Multiple carriers,Delhi,Cochin,1,10197,27,5,2019,3,50,12,35,8,45
+IndiGo,Delhi,Cochin,1,5883,3,6,2019,10,35,1,30,14,55
+Air India,Chennai,Kolkata,0,4667,18,5,2019,11,40,13,55,2,15
+IndiGo,Delhi,Cochin,2,6223,21,3,2019,4,55,21,20,16,25
+Jet Airways,Kolkata,Banglore,1,7757,6,5,2019,21,10,8,15,11,5
+IndiGo,Banglore,New Delhi,1,11873,3,3,2019,14,25,19,25,5,0
+Jet Airways,Kolkata,Banglore,1,10844,6,6,2019,21,10,8,15,11,5
+IndiGo,Delhi,Cochin,1,7189,15,5,2019,21,50,3,35,5,45
+Jet Airways,Delhi,Cochin,1,10262,27,6,2019,21,50,12,35,14,45
+Air Asia,Kolkata,Banglore,0,5989,1,5,2019,19,55,22,25,2,30
+IndiGo,Mumbai,Hyderabad,0,2227,24,6,2019,21,20,22,50,1,30
+Jet Airways,Mumbai,Hyderabad,0,4995,6,6,2019,10,20,11,50,1,30
+Jet Airways,Kolkata,Banglore,1,14231,24,3,2019,13,55,18,10,28,15
+Jet Airways,Kolkata,Banglore,1,10844,18,5,2019,18,55,18,15,23,20
+GoAir,Delhi,Cochin,1,5628,3,3,2019,5,45,13,20,7,35
+Jet Airways,Kolkata,Banglore,1,10844,9,6,2019,18,55,16,20,21,25
+Multiple carriers,Delhi,Cochin,1,8937,15,6,2019,8,30,19,15,10,45
+IndiGo,Kolkata,Banglore,0,5618,6,3,2019,14,20,16,55,2,35
+Air India,Delhi,Cochin,1,6674,9,4,2019,7,0,19,15,12,15
+GoAir,Banglore,Delhi,0,3898,24,4,2019,11,40,14,30,2,50
+Jet Airways,Kolkata,Banglore,1,10844,24,5,2019,18,55,20,45,25,50
+Air India,Delhi,Cochin,2,13381,3,6,2019,20,15,19,15,23,0
+Air India,Delhi,Cochin,2,11972,21,5,2019,17,15,19,15,26,0
+Jet Airways,Delhi,Cochin,1,17024,3,3,2019,17,30,4,25,10,55
+IndiGo,Delhi,Cochin,1,7398,9,4,2019,21,50,3,35,5,45
+Air India,Banglore,New Delhi,2,17461,1,3,2019,10,30,17,45,7,15
+Jet Airways,Kolkata,Banglore,1,13731,24,5,2019,20,0,8,15,12,15
+Jet Airways,Banglore,New Delhi,1,13555,18,3,2019,16,55,8,15,15,20
+IndiGo,Kolkata,Banglore,0,4804,27,4,2019,17,15,19,50,2,35
+Jet Airways,Delhi,Cochin,1,16289,21,5,2019,7,5,19,0,11,55
+IndiGo,Delhi,Cochin,1,7520,18,5,2019,5,5,12,10,7,5
+IndiGo,Delhi,Cochin,1,7503,18,5,2019,10,35,1,30,14,55
+Multiple carriers,Delhi,Cochin,1,8601,27,3,2019,8,25,19,15,10,50
+Jet Airways,Kolkata,Banglore,1,7064,1,4,2019,8,25,12,0,27,35
+Air Asia,Kolkata,Banglore,1,5192,6,5,2019,7,35,19,25,11,50
+SpiceJet,Kolkata,Banglore,1,9158,9,6,2019,15,55,21,25,5,30
+Multiple carriers,Delhi,Cochin,1,24318,6,3,2019,17,0,1,35,8,35
+Multiple carriers,Delhi,Cochin,1,7038,21,5,2019,7,10,18,10,11,0
+IndiGo,Banglore,New Delhi,0,7303,24,3,2019,22,20,1,10,2,50
+IndiGo,Banglore,New Delhi,1,8021,15,3,2019,5,25,10,10,4,45
+Multiple carriers,Delhi,Cochin,1,14323,15,5,2019,10,0,19,15,9,15
+Air India,Kolkata,Banglore,1,10203,6,6,2019,7,0,20,25,13,25
+Multiple carriers,Delhi,Cochin,1,7408,15,6,2019,19,0,1,30,6,30
+IndiGo,Mumbai,Hyderabad,0,2227,27,3,2019,21,20,22,45,1,25
+Multiple carriers,Delhi,Cochin,1,16108,15,6,2019,11,30,19,15,7,45
+Jet Airways,Delhi,Cochin,1,10262,15,6,2019,18,15,12,35,18,20
+Jet Airways,Delhi,Cochin,1,14714,9,6,2019,9,0,19,0,10,0
+Jet Airways,Delhi,Cochin,1,10262,3,6,2019,22,50,19,0,20,10
+IndiGo,Delhi,Cochin,1,7640,18,5,2019,14,20,22,30,8,10
+Vistara,Kolkata,Banglore,1,8610,12,6,2019,7,10,18,50,11,40
+Jet Airways,Delhi,Cochin,1,12767,21,3,2019,8,0,18,50,10,50
+IndiGo,Delhi,Cochin,1,6093,12,6,2019,8,50,21,0,12,10
+IndiGo,Delhi,Cochin,1,6442,27,4,2019,6,50,16,10,9,20
+Jet Airways,Banglore,Delhi,0,4030,9,5,2019,6,0,8,45,2,45
+Multiple carriers,Delhi,Cochin,1,7408,6,6,2019,13,0,21,0,8,0
+Multiple carriers,Delhi,Cochin,1,10696,3,6,2019,7,5,16,10,9,5
+SpiceJet,Kolkata,Banglore,0,6982,12,3,2019,9,0,11,30,2,30
+IndiGo,Mumbai,Hyderabad,0,2754,9,6,2019,19,5,20,35,1,30
+Air India,Banglore,New Delhi,1,23677,1,3,2019,6,45,12,15,5,30
+Air India,Kolkata,Banglore,2,13227,1,5,2019,9,50,8,55,23,5
+IndiGo,Mumbai,Hyderabad,0,2754,27,3,2019,12,0,13,25,1,25
+IndiGo,Delhi,Cochin,1,6758,18,5,2019,4,55,21,0,16,5
+Air India,Delhi,Cochin,0,6934,18,5,2019,14,10,17,10,3,0
+Jet Airways,Delhi,Cochin,2,18799,3,3,2019,5,25,18,50,13,25
+Jet Airways,Mumbai,Hyderabad,0,5678,6,5,2019,19,35,21,5,1,30
+Jet Airways,Banglore,New Delhi,1,27992,1,3,2019,7,0,20,20,13,20
+Jet Airways,Banglore,Delhi,0,4544,1,4,2019,19,50,22,50,3,0
+Jet Airways,Kolkata,Banglore,1,7757,6,5,2019,18,55,16,20,21,25
+IndiGo,Delhi,Cochin,1,6373,27,5,2019,17,5,22,15,5,10
+Jet Airways,Delhi,Cochin,2,13376,15,6,2019,14,35,12,35,22,0
+IndiGo,Kolkata,Banglore,0,5644,3,6,2019,14,25,16,55,2,30
+Jet Airways,Kolkata,Banglore,1,13067,6,5,2019,20,25,21,5,24,40
+Multiple carriers,Delhi,Cochin,1,6513,15,5,2019,7,10,16,10,9,0
+IndiGo,Mumbai,Hyderabad,0,4392,9,5,2019,12,0,13,30,1,30
+IndiGo,Kolkata,Banglore,0,4778,6,3,2019,5,30,8,20,2,50
+Jet Airways,Kolkata,Banglore,1,10844,18,5,2019,20,0,20,45,24,45
+Air India,Kolkata,Banglore,2,12723,24,5,2019,5,50,12,30,30,40
+Jet Airways,Kolkata,Banglore,1,11134,24,3,2019,21,10,9,15,12,5
+Jet Airways,Banglore,Delhi,0,7229,9,5,2019,18,55,22,0,3,5
+Jet Airways,Delhi,Cochin,1,10262,6,6,2019,11,30,4,25,16,55
+IndiGo,Kolkata,Banglore,0,4778,24,3,2019,5,30,8,20,2,50
+IndiGo,Banglore,New Delhi,0,8033,15,3,2019,23,30,2,20,2,50
+Air India,Delhi,Cochin,1,8425,27,5,2019,5,15,6,50,25,35
+Jet Airways,Delhi,Cochin,2,10919,3,6,2019,14,35,12,35,22,0
+Multiple carriers,Delhi,Cochin,1,15411,6,3,2019,8,55,18,50,9,55
+Air India,Delhi,Cochin,2,10975,12,6,2019,13,5,9,25,20,20
+Air India,Kolkata,Banglore,1,6535,24,3,2019,16,45,21,5,28,20
+Jet Airways,Kolkata,Banglore,1,8355,9,5,2019,10,20,17,35,7,15
+SpiceJet,Chennai,Kolkata,0,3543,18,6,2019,17,45,20,5,2,20
+Vistara,Kolkata,Banglore,1,12102,24,3,2019,20,20,18,45,22,25
+Jet Airways,Kolkata,Banglore,1,9314,1,5,2019,17,0,9,45,16,45
+IndiGo,Delhi,Cochin,1,7503,18,5,2019,18,35,1,30,6,55
+SpiceJet,Delhi,Cochin,1,9748,3,3,2019,6,10,11,20,5,10
+IndiGo,Kolkata,Banglore,0,4804,27,6,2019,17,15,19,50,2,35
+Jet Airways,Kolkata,Banglore,1,8586,9,5,2019,6,30,16,20,9,50
+Jet Airways,Delhi,Cochin,2,13882,24,6,2019,9,25,12,35,27,10
+Jet Airways,Banglore,Delhi,0,7229,21,5,2019,15,50,18,45,2,55
+Air India,Mumbai,Hyderabad,0,2575,24,3,2019,6,20,7,40,1,20
+IndiGo,Banglore,Delhi,0,3943,21,5,2019,21,15,0,15,3,0
+SpiceJet,Delhi,Cochin,1,4760,24,4,2019,8,45,13,15,4,30
+Jet Airways,Kolkata,Banglore,1,8824,24,3,2019,6,30,22,35,16,5
+Air India,Delhi,Cochin,1,6902,21,3,2019,9,0,19,15,10,15
+Air Asia,Delhi,Cochin,1,6151,21,3,2019,16,45,7,10,14,25
+Air India,Kolkata,Banglore,2,12324,21,5,2019,16,50,5,35,12,45
+Jet Airways,Banglore,New Delhi,1,11087,9,3,2019,5,45,10,25,4,40
+Air Asia,Kolkata,Banglore,0,5964,3,3,2019,19,35,22,5,2,30
+Jet Airways,Kolkata,Banglore,1,14151,1,5,2019,20,25,22,5,25,40
+Jet Airways,Kolkata,Banglore,1,11467,15,5,2019,9,35,14,25,28,50
+SpiceJet,Kolkata,Banglore,0,3873,21,5,2019,22,20,0,40,2,20
+Multiple carriers,Delhi,Cochin,1,13542,21,3,2019,15,0,1,35,10,35
+Jet Airways,Kolkata,Banglore,1,10844,21,5,2019,20,0,8,15,12,15
+IndiGo,Banglore,New Delhi,0,6144,3,3,2019,1,30,4,15,2,45
+Jet Airways,Delhi,Cochin,1,10262,27,6,2019,14,0,19,0,5,0
+Air Asia,Banglore,Delhi,0,3383,6,4,2019,11,10,13,55,2,45
+Air India,Kolkata,Banglore,1,10413,9,6,2019,17,30,20,25,26,55
+Jet Airways,Kolkata,Banglore,1,13994,9,6,2019,9,35,19,10,9,35
+Air India,Kolkata,Banglore,2,13143,21,5,2019,5,50,23,15,17,25
+Multiple carriers,Delhi,Cochin,1,13069,21,3,2019,8,25,18,50,10,25
+Jet Airways,Delhi,Cochin,2,15129,27,5,2019,19,10,12,35,17,25
+GoAir,Banglore,Delhi,0,3898,9,6,2019,20,55,23,40,2,45
+Jet Airways,Kolkata,Banglore,1,13941,9,5,2019,8,25,16,20,7,55
+Air India,Banglore,New Delhi,1,6383,21,3,2019,10,30,11,20,24,50
+Multiple carriers,Delhi,Cochin,1,10406,1,6,2019,7,5,21,0,13,55
+IndiGo,Delhi,Cochin,1,5883,6,6,2019,15,0,1,30,10,30
+IndiGo,Delhi,Cochin,1,6838,27,3,2019,10,45,21,0,10,15
+Jet Airways,Kolkata,Banglore,1,14781,21,5,2019,6,30,19,50,13,20
+Jet Airways,Delhi,Cochin,1,10577,9,6,2019,19,45,4,25,8,40
+Multiple carriers,Delhi,Cochin,1,9646,15,5,2019,13,5,22,30,9,25
+Vistara,Delhi,Cochin,0,6216,6,6,2019,6,0,9,10,3,10
+Jet Airways,Delhi,Cochin,0,9564,12,5,2019,11,0,14,15,3,15
+Jet Airways,Kolkata,Banglore,1,14781,1,5,2019,21,10,4,40,7,30
+Jet Airways,Banglore,Delhi,0,7229,6,5,2019,7,10,10,10,3,0
+IndiGo,Kolkata,Banglore,0,4148,9,3,2019,22,10,0,55,2,45
+Multiple carriers,Delhi,Cochin,1,7268,27,6,2019,11,40,19,15,7,35
+Air India,Kolkata,Banglore,0,6245,1,6,2019,14,15,16,45,2,30
+Jet Airways,Delhi,Cochin,2,13376,1,6,2019,6,45,4,25,21,40
+Air Asia,Banglore,Delhi,0,4483,18,4,2019,23,55,2,45,2,50
+Jet Airways,Delhi,Cochin,1,11627,3,6,2019,2,15,4,25,26,10
+Vistara,Kolkata,Banglore,1,13310,24,3,2019,17,0,9,10,16,10
+Jet Airways,Banglore,Delhi,0,7754,21,6,2019,18,55,22,0,3,5
+IndiGo,Mumbai,Hyderabad,0,2754,1,4,2019,19,5,20,35,1,30
+Air India,Delhi,Cochin,2,10231,12,6,2019,22,0,19,15,21,15
+Jet Airways,Delhi,Cochin,2,10368,3,6,2019,9,40,12,35,26,55
+Air India,Delhi,Cochin,2,11447,6,6,2019,7,5,9,25,26,20
+Jet Airways,Delhi,Cochin,2,18799,3,3,2019,5,25,4,25,23,0
+IndiGo,Kolkata,Banglore,0,4462,9,3,2019,15,10,17,45,2,35
+Jet Airways,Kolkata,Banglore,1,13067,12,5,2019,20,25,19,10,22,45
+Jet Airways,Kolkata,Banglore,1,12681,1,4,2019,18,55,19,50,24,55
+Vistara,Chennai,Kolkata,0,3687,3,6,2019,7,5,9,20,2,15
+IndiGo,Delhi,Cochin,1,6628,27,3,2019,17,30,1,35,8,5
+Air India,Delhi,Cochin,1,13832,9,3,2019,21,40,7,40,10,0
+IndiGo,Banglore,New Delhi,0,6860,3,3,2019,8,30,11,30,3,0
+Air India,Kolkata,Banglore,2,10676,12,5,2019,12,0,11,10,23,10
+Jet Airways,Delhi,Cochin,1,14714,3,6,2019,22,50,4,25,5,35
+Jet Airways,Delhi,Cochin,1,10262,12,6,2019,19,45,19,0,23,15
+IndiGo,Mumbai,Hyderabad,0,2754,21,5,2019,19,5,20,35,1,30
+Air Asia,Kolkata,Banglore,1,6785,24,3,2019,7,35,22,55,15,20
+Multiple carriers,Delhi,Cochin,1,14067,21,5,2019,16,0,1,30,9,30
+Jet Airways,Delhi,Cochin,2,15318,21,5,2019,20,0,4,25,8,25
+Jet Airways,Delhi,Cochin,1,14053,9,3,2019,18,15,4,25,10,10
+Jet Airways,Mumbai,Hyderabad,0,8040,27,6,2019,7,5,8,30,1,25
+Air India,Kolkata,Banglore,2,12723,6,6,2019,5,50,8,55,27,5
+Jet Airways,Delhi,Cochin,1,10262,27,6,2019,14,0,12,35,22,35
+Air Asia,Delhi,Cochin,1,6151,27,3,2019,16,45,7,10,14,25
+SpiceJet,Delhi,Cochin,1,5409,3,6,2019,17,55,22,50,4,55
+Vistara,Kolkata,Banglore,1,9345,21,5,2019,20,20,20,20,24,0
+Air India,Delhi,Cochin,2,12646,15,6,2019,12,55,19,15,30,20
+Jet Airways,Delhi,Cochin,2,11150,27,6,2019,13,25,12,35,23,10
+IndiGo,Mumbai,Hyderabad,0,4784,6,3,2019,16,55,18,25,1,30
+Jet Airways,Delhi,Cochin,1,12242,27,3,2019,21,50,4,25,6,35
+Air Asia,Kolkata,Banglore,1,11323,9,6,2019,22,40,10,40,12,0
+Air Asia,Kolkata,Banglore,0,4409,18,4,2019,19,55,22,25,2,30
+Jet Airways,Banglore,New Delhi,1,16736,6,3,2019,8,55,21,20,12,25
+Air India,Mumbai,Hyderabad,0,3100,27,5,2019,19,30,20,45,1,15
+Jet Airways,Delhi,Cochin,2,13029,18,5,2019,5,30,19,0,13,30
+IndiGo,Kolkata,Banglore,0,4804,12,6,2019,14,25,16,55,2,30
+Vistara,Kolkata,Banglore,1,9555,24,5,2019,7,10,20,20,13,10
+Jet Airways,Delhi,Cochin,1,10262,27,6,2019,15,0,12,35,21,35
+Air Asia,Kolkata,Banglore,0,5964,24,3,2019,19,35,22,5,2,30
+IndiGo,Delhi,Cochin,1,6386,12,6,2019,2,0,7,45,5,45
+Air India,Delhi,Cochin,1,6377,9,4,2019,8,0,19,15,11,15
+SpiceJet,Chennai,Kolkata,0,3807,18,3,2019,8,20,10,35,2,15
+Multiple carriers,Delhi,Cochin,1,13377,3,6,2019,16,0,1,30,9,30
+SpiceJet,Kolkata,Banglore,0,3841,12,4,2019,9,0,11,25,2,25
+Air India,Kolkata,Banglore,1,6528,6,6,2019,14,35,14,35,24,0
+Air India,Mumbai,Hyderabad,0,3100,24,5,2019,6,20,7,40,1,20
+Vistara,Chennai,Kolkata,0,3687,24,6,2019,7,45,10,0,2,15
+Jet Airways,Banglore,New Delhi,1,14815,6,3,2019,8,0,5,5,21,5
+IndiGo,Banglore,Delhi,0,3943,12,6,2019,4,0,6,50,2,50
+Jet Airways,Delhi,Cochin,1,14714,12,6,2019,20,55,4,25,7,30
+SpiceJet,Kolkata,Banglore,1,4859,24,4,2019,15,5,20,20,5,15
+Jet Airways,Kolkata,Banglore,1,10844,18,5,2019,14,5,22,35,8,30
+IndiGo,Banglore,New Delhi,1,4410,18,3,2019,12,10,17,5,4,55
+IndiGo,Mumbai,Hyderabad,0,2754,21,5,2019,2,35,4,5,1,30
+Jet Airways,Banglore,Delhi,0,7229,6,4,2019,19,50,22,50,3,0
+IndiGo,Banglore,New Delhi,0,5694,9,3,2019,23,30,2,20,2,50
+Multiple carriers,Delhi,Cochin,1,9424,9,5,2019,17,0,1,30,8,30
+Jet Airways,Delhi,Cochin,1,10262,15,6,2019,19,45,19,0,23,15
+Air India,Delhi,Cochin,2,12199,9,6,2019,17,15,7,40,14,25
+Vistara,Banglore,Delhi,0,4668,6,5,2019,11,30,14,20,2,50
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,5,45,0,45,19,0
+SpiceJet,Banglore,New Delhi,0,4945,21,3,2019,9,35,12,30,2,55
+Air India,Banglore,New Delhi,2,11791,3,3,2019,5,50,22,10,40,20
+SpiceJet,Kolkata,Banglore,0,3841,12,4,2019,6,55,9,30,2,35
+GoAir,Banglore,Delhi,0,4239,3,4,2019,20,55,23,40,2,45
+Jet Airways,Banglore,New Delhi,1,14815,6,3,2019,14,5,0,45,10,40
+Jet Airways,Delhi,Cochin,2,13014,9,6,2019,9,40,19,0,9,20
+Multiple carriers,Delhi,Cochin,1,11789,9,6,2019,10,20,19,0,8,40
+Jet Airways,Kolkata,Banglore,1,10031,24,3,2019,19,45,4,45,9,0
+Air India,Kolkata,Banglore,2,13616,15,5,2019,9,25,17,20,31,55
+Multiple carriers,Delhi,Cochin,1,6838,21,3,2019,19,0,1,35,6,35
+Jet Airways,Banglore,Delhi,0,7229,24,5,2019,17,45,20,45,3,0
+IndiGo,Banglore,Delhi,0,4990,12,4,2019,6,5,8,50,2,45
+GoAir,Delhi,Cochin,1,5752,27,5,2019,7,0,12,55,5,55
+Multiple carriers,Delhi,Cochin,2,18191,9,5,2019,15,5,1,30,10,25
+Jet Airways,Kolkata,Banglore,1,10539,12,6,2019,20,25,9,45,13,20
+Air Asia,Delhi,Cochin,1,8327,9,3,2019,16,45,7,10,14,25
+Jet Airways,Kolkata,Banglore,1,10844,24,5,2019,14,5,22,35,8,30
+SpiceJet,Kolkata,Banglore,0,3873,12,6,2019,22,20,0,40,2,20
+Jet Airways,Banglore,New Delhi,1,13555,18,3,2019,21,25,10,25,13,0
+Jet Airways,Kolkata,Banglore,1,10844,24,5,2019,20,0,18,15,22,15
+Vistara,Banglore,Delhi,0,5403,1,4,2019,21,0,23,50,2,50
+Air India,Kolkata,Banglore,0,4145,21,5,2019,20,45,23,20,2,35
+Jet Airways,Delhi,Cochin,1,10577,9,6,2019,19,15,19,0,23,45
+Air India,Delhi,Cochin,2,9925,9,5,2019,9,45,9,25,23,40
+IndiGo,Mumbai,Hyderabad,0,2754,15,6,2019,19,5,20,35,1,30
+Air India,Kolkata,Banglore,1,7662,9,5,2019,16,45,21,5,28,20
+Jet Airways,Mumbai,Hyderabad,1,22294,12,3,2019,3,0,16,35,13,35
+IndiGo,Banglore,New Delhi,0,6144,15,3,2019,13,0,15,50,2,50
+Jet Airways,Mumbai,Hyderabad,2,24210,6,3,2019,19,50,16,50,21,0
+Multiple carriers,Delhi,Cochin,1,12327,27,3,2019,13,0,1,35,12,35
+SpiceJet,Mumbai,Hyderabad,0,2437,18,3,2019,13,10,14,30,1,20
+SpiceJet,Mumbai,Hyderabad,0,2753,12,6,2019,5,45,7,15,1,30
+Jet Airways,Kolkata,Banglore,1,14151,21,5,2019,9,35,23,35,14,0
+Vistara,Chennai,Kolkata,0,11982,21,6,2019,17,45,20,5,2,20
+IndiGo,Delhi,Cochin,2,9413,3,3,2019,11,55,21,20,9,25
+Air India,Delhi,Cochin,2,13022,15,5,2019,17,15,19,15,26,0
+GoAir,Kolkata,Banglore,1,3673,9,6,2019,6,40,14,35,7,55
+Jet Airways,Delhi,Cochin,1,15764,6,3,2019,22,20,4,25,6,5
+Jet Airways,Delhi,Cochin,2,12609,24,6,2019,21,25,12,35,15,10
+Jet Airways Business,Banglore,New Delhi,1,57209,1,3,2019,9,45,14,25,4,40
+Vistara,Banglore,Delhi,0,5613,6,4,2019,9,45,12,35,2,50
+Multiple carriers,Delhi,Cochin,1,6630,21,3,2019,4,45,19,15,14,30
+Jet Airways,Mumbai,Hyderabad,0,5678,27,6,2019,19,35,21,5,1,30
+Jet Airways,Banglore,New Delhi,1,7045,21,3,2019,22,50,7,40,8,50
+IndiGo,Kolkata,Banglore,0,4148,9,3,2019,14,20,16,55,2,35
+Air India,Banglore,New Delhi,1,11003,3,3,2019,10,30,22,55,12,25
+Air India,Delhi,Cochin,1,7480,18,5,2019,6,5,9,25,27,20
+IndiGo,Kolkata,Banglore,0,4804,12,5,2019,22,15,0,50,2,35
+Jet Airways,Mumbai,Hyderabad,0,4050,12,5,2019,2,55,4,20,1,25
+Air India,Banglore,Delhi,0,6961,27,6,2019,10,0,12,45,2,45
+Jet Airways,Delhi,Cochin,1,10262,3,6,2019,16,0,19,0,27,0
+Air Asia,Banglore,Delhi,0,3383,12,6,2019,23,55,2,45,2,50
+Air India,Delhi,Cochin,1,8119,9,3,2019,20,30,23,0,26,30
+Jet Airways,Delhi,Cochin,1,14714,6,6,2019,2,15,19,0,16,45
+Multiple carriers,Delhi,Cochin,1,13259,3,6,2019,6,0,19,0,13,0
+GoAir,Banglore,New Delhi,0,7222,3,3,2019,7,45,10,40,2,55
+Air Asia,Delhi,Cochin,1,7353,9,5,2019,16,45,7,10,14,25
+Jet Airways,Kolkata,Banglore,1,14178,24,5,2019,21,10,8,15,11,5
+Jet Airways,Banglore,New Delhi,1,26890,1,3,2019,7,0,5,5,22,5
+Air India,Mumbai,Hyderabad,0,3625,12,5,2019,19,30,20,45,1,15
+Multiple carriers,Delhi,Cochin,1,9001,3,6,2019,11,40,19,15,7,35
+Air India,Kolkata,Banglore,0,4145,27,5,2019,20,45,23,20,2,35
+Jet Airways,Delhi,Cochin,2,15544,9,5,2019,5,30,12,35,7,5
+SpiceJet,Mumbai,Hyderabad,0,2017,15,6,2019,13,15,14,45,1,30
+Air India,Kolkata,Banglore,2,14424,15,5,2019,10,0,5,25,19,25
+GoAir,Kolkata,Banglore,0,3514,15,6,2019,15,20,17,55,2,35
+IndiGo,Delhi,Cochin,1,6628,27,5,2019,18,35,1,30,6,55
+Jet Airways,Delhi,Cochin,2,15339,15,6,2019,23,5,4,25,29,20
+Air India,Banglore,New Delhi,0,7591,9,3,2019,21,10,23,55,2,45
+Jet Airways,Delhi,Cochin,1,10262,1,6,2019,11,30,4,25,16,55
+Jet Airways,Kolkata,Banglore,1,10844,21,5,2019,6,30,16,20,9,50
+Jet Airways,Delhi,Cochin,2,13014,6,6,2019,9,40,4,25,18,45
+Air India,Kolkata,Banglore,1,7872,18,5,2019,16,45,21,5,28,20
+IndiGo,Delhi,Cochin,0,6541,15,5,2019,14,25,17,40,3,15
+Air India,Banglore,New Delhi,1,6987,15,3,2019,6,55,23,20,16,25
+IndiGo,Banglore,Delhi,0,4823,1,6,2019,18,55,21,50,2,55
+Air India,Banglore,Delhi,0,6961,21,5,2019,5,45,8,45,3,0
+Jet Airways,Kolkata,Banglore,1,9899,12,6,2019,6,30,18,15,11,45
+Jet Airways,Banglore,New Delhi,1,12295,12,3,2019,9,45,16,0,6,15
+Air India,Kolkata,Banglore,2,6117,12,6,2019,9,10,11,5,25,55
+SpiceJet,Chennai,Kolkata,0,3543,1,5,2019,9,45,12,0,2,15
+Air India,Delhi,Cochin,2,12646,6,3,2019,16,40,19,15,26,35
+SpiceJet,Banglore,Delhi,0,3919,18,5,2019,21,10,0,5,2,55
+Air India,Banglore,New Delhi,1,6982,15,3,2019,11,50,11,35,23,45
+Vistara,Kolkata,Banglore,1,13100,24,3,2019,17,0,18,45,25,45
+Jet Airways,Delhi,Cochin,1,16079,27,5,2019,9,0,19,0,10,0
+Multiple carriers,Delhi,Cochin,1,13082,9,3,2019,6,40,19,15,12,35
+Air India,Banglore,Delhi,0,6121,3,5,2019,13,20,16,10,2,50
+IndiGo,Banglore,Delhi,0,4823,12,6,2019,16,55,19,55,3,0
+Jet Airways,Kolkata,Banglore,1,13941,18,5,2019,18,55,4,40,9,45
+Jet Airways,Banglore,Delhi,0,4544,3,4,2019,18,55,22,0,3,5
+Air India,Kolkata,Banglore,0,4145,15,4,2019,20,45,23,20,2,35
+SpiceJet,Banglore,Delhi,0,3919,6,4,2019,21,10,0,5,2,55
+Vistara,Chennai,Kolkata,0,11982,1,6,2019,17,45,20,5,2,20
+IndiGo,Delhi,Cochin,1,5636,27,6,2019,2,0,7,25,5,25
+Air India,Delhi,Cochin,2,8656,27,3,2019,16,40,19,15,26,35
+Jet Airways,Kolkata,Banglore,1,10844,12,5,2019,16,30,22,35,6,5
+Multiple carriers,Delhi,Cochin,1,9856,24,6,2019,7,5,16,10,9,5
+IndiGo,Banglore,Delhi,0,3943,9,4,2019,4,0,6,50,2,50
+Air India,Banglore,New Delhi,2,11570,3,3,2019,17,25,8,45,15,20
+Air Asia,Kolkata,Banglore,0,4409,12,4,2019,19,55,22,25,2,30
+Air India,Delhi,Cochin,0,6934,1,6,2019,14,10,17,10,3,0
+Jet Airways,Banglore,New Delhi,1,13817,12,3,2019,22,55,10,25,11,30
+Jet Airways,Kolkata,Banglore,1,12121,9,5,2019,9,35,9,45,24,10
+IndiGo,Kolkata,Banglore,0,4804,18,6,2019,17,15,19,50,2,35
+Jet Airways,Banglore,Delhi,0,5769,12,6,2019,8,20,11,20,3,0
+SpiceJet,Kolkata,Banglore,0,4174,18,5,2019,14,55,17,25,2,30
+SpiceJet,Banglore,New Delhi,0,6309,24,3,2019,9,35,12,30,2,55
+SpiceJet,Mumbai,Hyderabad,0,1965,18,5,2019,5,45,7,15,1,30
+Multiple carriers,Delhi,Cochin,1,10406,27,5,2019,7,5,21,0,13,55
+Air India,Kolkata,Banglore,1,8996,12,5,2019,9,10,13,15,4,5
+Jet Airways,Kolkata,Banglore,1,10844,1,5,2019,8,25,18,15,9,50
+Multiple carriers,Delhi,Cochin,1,13377,27,6,2019,18,15,1,30,7,15
+SpiceJet,Kolkata,Banglore,1,8479,1,5,2019,11,35,18,50,7,15
+Jet Airways,Banglore,New Delhi,1,31825,1,3,2019,18,40,9,0,14,20
+GoAir,Banglore,New Delhi,0,5706,24,3,2019,20,55,23,50,2,55
+Jet Airways,Banglore,New Delhi,1,12284,18,3,2019,11,40,8,15,20,35
+Jet Airways,Banglore,Delhi,0,4544,24,4,2019,8,20,11,20,3,0
+Jet Airways,Delhi,Cochin,1,6017,27,3,2019,11,30,18,50,7,20
+Jet Airways,Kolkata,Banglore,1,14781,21,5,2019,8,25,16,20,7,55
+Air India,Delhi,Cochin,2,12646,6,6,2019,12,55,19,15,30,20
+IndiGo,Chennai,Kolkata,0,3858,9,6,2019,11,35,14,0,2,25
+SpiceJet,Delhi,Cochin,1,4957,1,4,2019,17,55,22,50,4,55
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,17,30,12,35,19,5
+Jet Airways,Kolkata,Banglore,1,10031,24,3,2019,19,45,23,25,27,40
+Jet Airways,Kolkata,Banglore,1,14388,12,5,2019,18,55,9,20,14,25
+Jet Airways,Kolkata,Banglore,1,10844,15,5,2019,18,55,22,35,27,40
+Jet Airways,Delhi,Cochin,2,8882,27,3,2019,19,10,19,45,24,35
+Jet Airways,Delhi,Cochin,2,13014,24,6,2019,9,40,12,35,26,55
+Air India,Kolkata,Banglore,1,8366,6,6,2019,9,25,18,30,9,5
+IndiGo,Delhi,Cochin,0,6015,1,6,2019,14,25,17,40,3,15
+Jet Airways,Delhi,Cochin,2,20694,6,3,2019,19,10,18,50,47,40
+Jet Airways,Delhi,Cochin,1,17024,3,3,2019,7,5,18,50,11,45
+Multiple carriers,Delhi,Cochin,1,14762,1,3,2019,14,35,22,20,7,45
+Air India,Mumbai,Hyderabad,0,3625,1,5,2019,6,20,7,40,1,20
+IndiGo,Mumbai,Hyderabad,0,2227,18,3,2019,20,5,21,35,1,30
+IndiGo,Kolkata,Banglore,0,4804,24,4,2019,9,35,12,20,2,45
+Jet Airways,Mumbai,Hyderabad,0,5678,9,6,2019,2,55,4,20,1,25
+Jet Airways,Mumbai,Hyderabad,0,2470,24,3,2019,7,10,8,35,1,25
+Jet Airways,Banglore,New Delhi,1,12284,18,3,2019,11,40,18,25,6,45
+IndiGo,Banglore,Delhi,0,3419,12,6,2019,22,10,1,0,2,50
+Jet Airways,Delhi,Cochin,1,12767,21,3,2019,15,0,4,25,13,25
+Vistara,Banglore,Delhi,0,4668,18,5,2019,21,0,23,50,2,50
+SpiceJet,Banglore,Delhi,0,3625,15,5,2019,21,10,0,5,2,55
+SpiceJet,Chennai,Kolkata,0,3597,27,5,2019,9,45,12,0,2,15
+IndiGo,Kolkata,Banglore,0,5224,21,4,2019,15,15,17,45,2,30
+IndiGo,Delhi,Cochin,1,6147,15,6,2019,17,5,22,25,5,20
+Jet Airways,Banglore,Delhi,0,8016,18,6,2019,15,50,18,45,2,55
+Air India,Kolkata,Banglore,2,11148,1,5,2019,12,0,11,10,23,10
+Jet Airways,Delhi,Cochin,2,13376,15,6,2019,14,35,4,25,13,50
+Air India,Delhi,Cochin,2,12488,12,6,2019,18,30,19,15,24,45
+Jet Airways,Delhi,Cochin,1,6017,21,3,2019,15,0,4,25,13,25
+IndiGo,Banglore,Delhi,0,4823,15,6,2019,8,30,11,20,2,50
+Air India,Delhi,Cochin,1,7532,21,3,2019,9,45,9,25,23,40
+Air India,Kolkata,Banglore,2,11432,9,6,2019,9,25,5,35,20,10
+Vistara,Banglore,Delhi,0,5088,6,6,2019,19,30,22,15,2,45
+SpiceJet,Delhi,Cochin,1,5351,27,3,2019,6,10,11,20,5,10
+Vistara,Kolkata,Banglore,1,8610,12,6,2019,7,10,23,25,16,15
+Jet Airways,Delhi,Cochin,2,17271,6,3,2019,5,40,4,25,22,45
+Jet Airways,Kolkata,Banglore,1,9314,21,5,2019,17,0,14,25,21,25
+SpiceJet,Kolkata,Banglore,0,3847,27,3,2019,22,20,0,40,2,20
+Air India,Delhi,Cochin,1,8372,15,5,2019,9,0,19,15,10,15
+Multiple carriers,Delhi,Cochin,1,10877,15,6,2019,10,35,19,0,8,25
+SpiceJet,Banglore,Delhi,0,4423,12,5,2019,9,30,12,20,2,50
+IndiGo,Chennai,Kolkata,0,6297,15,3,2019,22,5,0,30,2,25
+Vistara,Delhi,Cochin,0,6216,27,6,2019,14,40,17,50,3,10
+Multiple carriers,Delhi,Cochin,1,7933,6,6,2019,10,0,21,0,11,0
+Multiple carriers,Delhi,Cochin,1,10678,15,6,2019,4,55,12,35,7,40
+SpiceJet,Mumbai,Hyderabad,0,2017,18,3,2019,22,45,0,10,1,25
+IndiGo,Delhi,Cochin,0,5000,18,6,2019,14,20,17,35,3,15
+Air India,Delhi,Cochin,2,18736,9,3,2019,5,55,19,15,13,20
+Jet Airways,Banglore,Delhi,0,4030,1,5,2019,7,10,10,10,3,0
+Jet Airways,Delhi,Cochin,2,10368,18,5,2019,19,30,12,35,17,5
+Jet Airways,Kolkata,Banglore,1,9663,6,5,2019,16,30,9,20,16,50
+Vistara,Banglore,Delhi,0,5613,15,4,2019,19,30,22,15,2,45
+Jet Airways,Kolkata,Banglore,1,7757,9,5,2019,14,5,8,15,18,10
+IndiGo,Delhi,Cochin,1,6442,15,6,2019,7,35,16,10,8,35
+IndiGo,Mumbai,Hyderabad,0,2754,6,5,2019,19,5,20,35,1,30
+Air India,Banglore,New Delhi,0,3758,24,3,2019,6,10,8,55,2,45
+Air Asia,Delhi,Cochin,1,6152,12,6,2019,7,55,22,25,14,30
+Multiple carriers,Delhi,Cochin,1,7618,21,3,2019,7,0,21,0,14,0
+Air India,Delhi,Cochin,2,12646,3,3,2019,19,45,19,15,23,30
+Jet Airways,Kolkata,Banglore,1,14781,15,5,2019,14,5,22,35,8,30
+Multiple carriers,Delhi,Cochin,1,13377,27,6,2019,10,0,1,30,15,30
+Jet Airways,Delhi,Cochin,0,9564,27,5,2019,11,0,14,15,3,15
+GoAir,Banglore,New Delhi,0,6113,15,3,2019,11,40,14,35,2,55
+Air India,Banglore,New Delhi,2,26480,1,3,2019,6,45,9,25,26,40
+Jet Airways,Banglore,Delhi,0,5769,12,6,2019,7,10,10,10,3,0
+SpiceJet,Mumbai,Hyderabad,0,1759,27,3,2019,5,45,7,5,1,20
+IndiGo,Delhi,Cochin,1,5883,12,6,2019,17,10,1,30,8,20
+Air India,Banglore,Delhi,0,5176,3,4,2019,10,0,12,45,2,45
+IndiGo,Kolkata,Banglore,0,4804,27,6,2019,20,25,23,10,2,45
+GoAir,Banglore,Delhi,0,3398,21,6,2019,11,40,14,30,2,50
+Air India,Kolkata,Banglore,2,9416,24,5,2019,12,0,7,55,19,55
+SpiceJet,Kolkata,Banglore,0,3841,21,6,2019,6,55,9,30,2,35
+Jet Airways,Delhi,Cochin,1,10262,27,6,2019,20,55,19,0,22,5
+IndiGo,Kolkata,Banglore,0,4804,24,6,2019,22,15,0,50,2,35
+Jet Airways,Delhi,Cochin,1,5177,3,4,2019,2,15,12,35,10,20
+IndiGo,Mumbai,Hyderabad,0,2437,9,5,2019,20,5,21,40,1,35
+GoAir,Delhi,Cochin,1,8422,9,3,2019,6,0,13,20,7,20
+Multiple carriers,Delhi,Cochin,1,13797,24,6,2019,8,0,21,0,13,0
+Jet Airways,Delhi,Cochin,2,10368,6,6,2019,9,40,4,25,18,45
+IndiGo,Delhi,Cochin,1,7081,18,5,2019,17,10,1,30,8,20
+IndiGo,Delhi,Cochin,1,8513,3,3,2019,4,55,16,10,11,15
+Jet Airways,Banglore,Delhi,0,7229,12,4,2019,7,10,10,10,3,0
+Air India,Banglore,New Delhi,1,6273,3,3,2019,8,15,12,15,4,0
+Air India,Mumbai,Hyderabad,0,3100,9,6,2019,15,0,16,25,1,25
+IndiGo,Kolkata,Banglore,0,4804,18,6,2019,22,15,0,50,2,35
+Jet Airways,Banglore,New Delhi,0,7229,24,3,2019,19,55,22,35,2,40
+SpiceJet,Kolkata,Banglore,0,3841,18,4,2019,9,0,11,25,2,25
+Jet Airways,Kolkata,Banglore,1,8586,18,5,2019,20,0,8,15,12,15
+Multiple carriers,Delhi,Cochin,1,11200,15,6,2019,8,30,19,0,10,30
+Multiple carriers,Delhi,Cochin,1,17267,6,3,2019,7,5,13,20,6,15
+Jet Airways,Kolkata,Banglore,1,8586,9,5,2019,18,55,10,5,15,10
+Air India,Kolkata,Banglore,2,11432,9,5,2019,16,50,5,35,12,45
+Air India,Delhi,Cochin,2,12940,1,6,2019,18,45,19,15,24,30
+IndiGo,Mumbai,Hyderabad,0,12475,1,3,2019,21,20,22,45,1,25
+Jet Airways,Kolkata,Banglore,1,11134,24,3,2019,16,55,22,35,5,40
+IndiGo,Kolkata,Banglore,0,5644,18,4,2019,9,35,12,20,2,45
+Multiple carriers,Delhi,Cochin,1,10877,12,6,2019,11,25,19,0,7,35
+Jet Airways,Banglore,Delhi,0,7229,21,4,2019,6,0,8,45,2,45
+Jet Airways,Kolkata,Banglore,1,8586,9,5,2019,16,30,18,15,25,45
+Jet Airways,Delhi,Cochin,2,10368,12,6,2019,5,30,19,0,13,30
+Air India,Delhi,Cochin,2,9863,1,6,2019,16,40,19,15,26,35
+IndiGo,Kolkata,Banglore,1,4864,12,6,2019,7,10,12,40,5,30
+Air Asia,Kolkata,Banglore,0,4384,12,3,2019,19,35,22,5,2,30
+Air India,Delhi,Cochin,2,13591,18,5,2019,6,50,7,40,24,50
+Jet Airways,Kolkata,Banglore,1,12384,15,5,2019,9,35,19,10,9,35
+Jet Airways,Delhi,Cochin,1,12373,18,5,2019,15,0,4,25,13,25
+Jet Airways,Delhi,Cochin,2,10368,6,6,2019,5,30,19,0,13,30
+Air India,Kolkata,Banglore,2,12723,1,5,2019,5,50,12,30,30,40
+Jet Airways,Delhi,Cochin,1,12242,21,3,2019,22,0,18,50,20,50
+Jet Airways,Banglore,Delhi,0,5769,12,6,2019,11,10,14,5,2,55
+IndiGo,Delhi,Cochin,1,7006,21,5,2019,7,30,21,0,13,30
+Air India,Delhi,Cochin,1,8372,27,5,2019,21,0,19,15,22,15
+Jet Airways,Kolkata,Banglore,1,14178,24,5,2019,14,5,9,20,19,15
+Jet Airways,Banglore,New Delhi,1,20800,1,3,2019,14,5,9,0,18,55
+Vistara,Kolkata,Banglore,1,8452,1,5,2019,7,10,9,5,25,55
+Jet Airways,Kolkata,Banglore,1,10844,12,5,2019,21,10,18,15,21,5
+Vistara,Banglore,Delhi,0,4668,12,5,2019,21,0,23,50,2,50
+Jet Airways,Kolkata,Banglore,1,12681,1,4,2019,16,30,20,45,28,15
+Air India,Delhi,Cochin,1,4487,6,4,2019,6,5,9,25,27,20
+Jet Airways,Kolkata,Banglore,1,14571,9,6,2019,14,5,19,50,5,45
+SpiceJet,Kolkata,Banglore,0,3841,27,4,2019,22,20,0,40,2,20
+SpiceJet,Kolkata,Banglore,0,3873,3,6,2019,22,20,0,40,2,20
+Air India,Kolkata,Banglore,2,16372,1,5,2019,16,50,13,45,20,55
+Air India,Kolkata,Banglore,2,14897,24,5,2019,9,25,5,25,20,0
+Multiple carriers,Delhi,Cochin,1,8614,15,6,2019,10,35,19,15,8,40
+Air India,Delhi,Cochin,2,9653,27,6,2019,16,40,19,15,26,35
+IndiGo,Kolkata,Banglore,1,3574,21,5,2019,19,20,23,45,4,25
+Jet Airways,Kolkata,Banglore,1,7064,1,4,2019,20,0,16,20,20,20
+IndiGo,Mumbai,Hyderabad,0,5755,21,6,2019,9,10,10,40,1,30
+Air India,Kolkata,Banglore,2,13432,18,5,2019,16,50,13,45,20,55
+Air India,Delhi,Cochin,1,8669,9,5,2019,7,0,19,15,12,15
+Multiple carriers,Delhi,Cochin,1,17057,3,3,2019,2,15,11,30,9,15
+Jet Airways,Banglore,New Delhi,1,17261,6,3,2019,14,5,9,30,19,25
+Multiple carriers,Delhi,Cochin,1,6795,6,6,2019,15,15,1,30,10,15
+Jet Airways,Kolkata,Banglore,1,9663,6,5,2019,14,5,20,45,6,40
+Multiple carriers,Delhi,Cochin,1,11789,15,6,2019,8,45,19,0,10,15
+Jet Airways,Delhi,Cochin,1,10262,24,6,2019,18,15,19,0,24,45
+SpiceJet,Kolkata,Banglore,1,8844,15,5,2019,11,15,18,30,7,15
+Jet Airways,Banglore,Delhi,0,4544,12,5,2019,15,15,18,10,2,55
+Multiple carriers,Delhi,Cochin,1,6148,27,3,2019,7,0,13,20,6,20
+IndiGo,Mumbai,Hyderabad,0,2227,27,5,2019,20,5,21,40,1,35
+Jet Airways,Delhi,Cochin,2,13292,12,6,2019,5,30,4,25,22,55
+Air Asia,Banglore,New Delhi,0,3383,24,3,2019,23,25,2,10,2,45
+Jet Airways,Delhi,Cochin,2,14300,12,6,2019,20,0,19,0,23,0
+Jet Airways,Kolkata,Banglore,1,10844,21,5,2019,18,55,12,0,17,5
+SpiceJet,Delhi,Cochin,1,5158,12,6,2019,8,45,13,15,4,30
+Jet Airways,Delhi,Cochin,2,12819,27,6,2019,23,5,12,35,13,30
+IndiGo,Delhi,Cochin,1,6628,3,6,2019,16,0,1,30,9,30
+Jet Airways,Delhi,Cochin,1,10262,1,6,2019,10,0,12,35,26,35
+Jet Airways,Banglore,Delhi,0,4544,21,4,2019,15,15,18,10,2,55
+Jet Airways,Delhi,Cochin,1,12373,9,5,2019,18,15,19,0,24,45
+Air India,Delhi,Cochin,2,11281,15,5,2019,5,0,7,40,26,40
+IndiGo,Delhi,Cochin,1,6938,3,6,2019,14,20,22,30,8,10
+Multiple carriers,Delhi,Cochin,1,15147,6,3,2019,10,20,21,0,10,40
+Air India,Delhi,Cochin,2,11228,18,5,2019,5,0,7,40,26,40
+IndiGo,Delhi,Cochin,1,5636,9,6,2019,2,0,7,25,5,25
+SpiceJet,Banglore,Delhi,0,4319,12,5,2019,9,30,12,20,2,50
+IndiGo,Banglore,New Delhi,0,6144,21,3,2019,20,0,22,55,2,55
+Jet Airways,Kolkata,Banglore,1,14781,1,5,2019,8,25,19,50,11,25
+IndiGo,Delhi,Cochin,1,8765,21,3,2019,9,10,1,35,16,25
+Jet Airways,Kolkata,Banglore,1,8586,12,5,2019,6,30,4,40,22,10
+IndiGo,Mumbai,Hyderabad,0,2754,12,5,2019,12,0,13,30,1,30
+IndiGo,Chennai,Kolkata,0,3597,21,5,2019,13,15,15,35,2,20
+Jet Airways,Mumbai,Hyderabad,0,4050,18,5,2019,7,5,8,30,1,25
+Jet Airways,Banglore,New Delhi,1,11087,9,3,2019,8,0,21,20,13,20
+Jet Airways,Banglore,Delhi,0,8016,3,6,2019,18,55,22,0,3,5
+Multiple carriers,Delhi,Cochin,1,15147,6,3,2019,10,20,1,35,15,15
+Jet Airways,Banglore,Delhi,0,7229,1,4,2019,15,15,18,10,2,55
+Jet Airways,Delhi,Cochin,2,13014,1,6,2019,9,40,12,35,26,55
+IndiGo,Mumbai,Hyderabad,0,2754,27,5,2019,2,35,4,5,1,30
+Vistara,Banglore,Delhi,0,5613,12,4,2019,17,0,19,35,2,35
+IndiGo,Delhi,Cochin,1,6307,27,4,2019,21,50,3,35,5,45
+IndiGo,Kolkata,Banglore,0,4174,6,4,2019,17,15,19,50,2,35
+IndiGo,Kolkata,Banglore,0,4804,27,6,2019,22,15,0,50,2,35
+Air India,Kolkata,Banglore,2,14960,15,5,2019,16,45,8,55,16,10
+Jet Airways,Delhi,Cochin,2,9483,9,4,2019,23,5,19,0,19,55
+Vistara,Kolkata,Banglore,1,8662,6,6,2019,20,20,22,40,26,20
+Jet Airways,Delhi,Cochin,2,19644,9,5,2019,11,40,19,0,7,20
+GoAir,Banglore,New Delhi,0,4340,24,3,2019,11,40,14,35,2,55
+Jet Airways,Kolkata,Banglore,1,10844,21,5,2019,20,0,18,15,22,15
+SpiceJet,Kolkata,Banglore,1,8224,9,5,2019,15,55,21,25,5,30
+Multiple carriers,Delhi,Cochin,1,7905,3,3,2019,7,5,16,10,9,5
+Jet Airways,Kolkata,Banglore,1,11134,24,3,2019,16,55,19,40,26,45
+IndiGo,Delhi,Cochin,1,6037,15,5,2019,2,0,7,45,5,45
+Jet Airways,Kolkata,Banglore,1,12692,6,6,2019,17,0,10,55,17,55
+Multiple carriers,Delhi,Cochin,1,7308,27,5,2019,18,15,1,30,7,15
+Jet Airways,Delhi,Cochin,2,11733,6,6,2019,9,40,12,35,26,55
+Jet Airways,Delhi,Cochin,1,14714,1,6,2019,22,50,12,35,13,45
+Jet Airways,Kolkata,Banglore,1,14388,15,5,2019,6,30,12,0,5,30
+Jet Airways,Banglore,Delhi,0,7229,24,4,2019,18,55,22,0,3,5
+Jet Airways,Banglore,New Delhi,1,7832,21,3,2019,21,25,11,25,14,0
+Air India,Delhi,Cochin,3,10493,3,6,2019,5,15,19,15,38,0
+Jet Airways,Delhi,Cochin,1,14053,9,3,2019,18,15,18,50,24,35
+IndiGo,Chennai,Kolkata,0,7295,6,3,2019,7,55,10,15,2,20
+Air India,Kolkata,Banglore,2,11222,21,5,2019,8,20,11,10,26,50
+Multiple carriers,Delhi,Cochin,1,7670,18,5,2019,19,0,1,30,6,30
+Multiple carriers,Delhi,Cochin,1,10877,6,6,2019,10,35,19,0,8,25
+Multiple carriers,Delhi,Cochin,1,17057,3,3,2019,7,5,15,30,8,25
+Jet Airways,Delhi,Cochin,2,11507,6,6,2019,5,30,19,0,13,30
+Jet Airways,Delhi,Cochin,0,4466,18,6,2019,9,50,13,5,3,15
+Air India,Delhi,Cochin,2,13801,1,6,2019,16,55,19,15,26,20
+IndiGo,Kolkata,Banglore,0,4778,1,3,2019,21,25,0,5,2,40
+Jet Airways,Kolkata,Banglore,1,12384,15,5,2019,9,35,18,0,8,25
+Multiple carriers,Delhi,Cochin,1,10678,27,6,2019,4,55,12,35,7,40
+Air India,Delhi,Cochin,1,9790,9,3,2019,5,15,6,50,25,35
+Jet Airways,Kolkata,Banglore,1,14388,1,5,2019,14,5,12,0,21,55
+SpiceJet,Banglore,Delhi,0,4319,12,6,2019,5,55,8,35,2,40
+Jet Airways,Mumbai,Hyderabad,0,5678,3,5,2019,2,55,4,20,1,25
+Vistara,Banglore,Delhi,0,5613,6,4,2019,7,0,9,40,2,40
+Jet Airways,Kolkata,Banglore,1,9663,6,5,2019,20,0,9,20,13,20
+Jet Airways,Banglore,Delhi,0,5769,18,6,2019,11,10,14,5,2,55
+Vistara,Banglore,Delhi,0,4668,1,5,2019,21,0,23,50,2,50
+Vistara,Banglore,New Delhi,0,4878,21,3,2019,21,10,0,5,2,55
+Air India,Delhi,Cochin,1,8372,9,5,2019,13,0,19,15,6,15
+Air India,Kolkata,Banglore,2,12352,24,3,2019,9,25,5,35,20,10
+Jet Airways,Delhi,Cochin,2,11733,6,6,2019,19,30,12,35,17,5
+IndiGo,Banglore,Delhi,0,4823,9,4,2019,18,55,21,50,2,55
+IndiGo,Kolkata,Banglore,0,4804,27,4,2019,15,15,17,45,2,30
+Jet Airways,Delhi,Cochin,1,10262,12,6,2019,18,15,19,0,24,45
+Jet Airways,Banglore,New Delhi,1,11087,12,3,2019,22,55,20,20,21,25
+Jet Airways,Delhi,Cochin,2,21219,9,5,2019,11,40,19,0,7,20
+Air India,Delhi,Cochin,1,9929,15,6,2019,8,0,19,15,11,15
+Air India,Kolkata,Banglore,2,11411,12,5,2019,5,50,23,15,17,25
+Air India,Mumbai,Hyderabad,0,3100,6,6,2019,21,5,22,25,1,20
+Jet Airways,Delhi,Cochin,2,11150,27,6,2019,23,5,19,0,19,55
+Jet Airways,Delhi,Cochin,2,16704,27,5,2019,13,25,4,25,15,0
+Jet Airways,Banglore,New Delhi,1,11087,12,3,2019,20,35,21,20,24,45
+Air India,Mumbai,Hyderabad,0,3100,9,6,2019,6,20,7,40,1,20
+Multiple carriers,Delhi,Cochin,1,9794,1,5,2019,10,20,19,0,8,40
+SpiceJet,Banglore,Delhi,0,3257,21,5,2019,5,55,8,35,2,40
+Air Asia,Kolkata,Banglore,0,4107,9,4,2019,19,55,22,25,2,30
+Air India,Kolkata,Banglore,0,4145,27,4,2019,20,45,23,20,2,35
+Jet Airways,Banglore,Delhi,0,7229,27,4,2019,8,20,11,20,3,0
+Vistara,Banglore,New Delhi,0,12648,1,3,2019,11,30,14,10,2,40
+Air India,Delhi,Cochin,2,11753,9,5,2019,10,55,19,15,8,20

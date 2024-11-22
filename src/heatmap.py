@@ -19,6 +19,9 @@ DATASETS_COLUMNS = {
     'Carbon_Emission': 'CarbonEmission',
     'Wind': 'WIND',
     'House_8L': 'price',
+    'Flight': 'Price',
+    'Rainfall': 'Rainfall',
+    'Abalone': 'Age'
 }
 
 # Select from the terminal which dataset to use:
@@ -26,6 +29,9 @@ print("Select the dataset you would like to use:")
 print("1: Carbon Emission")
 print("2: House_8L")
 print("3: Wind")
+print("4: Flight")
+print("5: Rainfall")
+print("6: Abalone")
 
 dataset_choice = input("Enter the number corresponding to your dataset_choice: ")
 
@@ -39,9 +45,18 @@ elif dataset_choice == "2":
 elif dataset_choice == "3":
     file_path = 'distribucion/datasets/train_data/wind_train.csv'
     dataset_name = 'Wind'
+elif dataset_choice == "4":
+    file_path = 'distribucion/datasets/train_data/flight_train.csv'
+    dataset_name = 'Flight'
+elif dataset_choice == "5":
+    file_path = 'distribucion/datasets/train_data/rainfall_train.csv'
+    dataset_name = 'Rainfall'
+elif dataset_choice == "6":
+    file_path = 'distribucion/datasets/train_data/abalone_train.csv'
+    dataset_name = 'Abalone'
 
 else:
-    print("Invalid dataset_choice. Please select 1, 2, or 3.")
+    print("Invalid dataset_choice. Please select 1, 2, 3, 4, 5, o 6.")
     file_path = None
 
 # Check the file extension and load data accordingly
@@ -265,6 +280,156 @@ param_grids = {
             'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14, 'max_depth': 25}
         }
     },
+    "Flight": {
+        "1": {
+            'model': IQRRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(10, 51, 1)),
+            },
+            'name': "IQR",
+            'def_params': {'n_estimators': 150, 'group_size': 10}
+        },
+        "2": {
+            'model': PercentileTrimmingRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(10, 51, 1))
+            }, 
+            'name': "Percentile_Trimming",
+            'def_params': {'n_estimators': 150, 'group_size': 50, 'percentile': 2}
+        },
+        "3": {
+            'model': OOBRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(10, 51, 1)),
+            },
+            'name': "OOB",
+            'def_params': {'n_estimators': 180, 'group_size': 3}
+        },
+        "4": {
+            'model': OOBPlusIQRRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(10, 51, 1)),
+            },
+            'name': "OOB_plus_IQR",
+            'def_params': {'n_estimators': 180, 'group_size': 3}
+        },
+        "5": {
+            'model': FirstSplitCombinerRandomForestRegressor(),
+            'param_grid': {
+                'max_features': [-1, -2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
+            },
+            'name': "First_Splits_Combiner",
+            'def_params': {'n_estimators': 100, 'group_size': 10}
+        },
+        "6": {
+            'model': SharedKnowledgeRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(15, 51, 1))
+            },
+            'name': "Shared_Knowledge",
+            'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14}
+        }
+    },
+    "Rainfall": {
+        "1": {
+            'model': IQRRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(10, 51, 1)),
+            },
+            'name': "IQR",
+            'def_params': {'n_estimators': 150, 'group_size': 10}
+        },
+        "2": {
+            'model': PercentileTrimmingRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(10, 51, 1))
+            }, 
+            'name': "Percentile_Trimming",
+            'def_params': {'n_estimators': 150, 'group_size': 50, 'percentile': 2}
+        },
+        "3": {
+            'model': OOBRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(10, 51, 1)),
+            },
+            'name': "OOB",
+            'def_params': {'n_estimators': 180, 'group_size': 3}
+        },
+        "4": {
+            'model': OOBPlusIQRRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(10, 51, 1)),
+            },
+            'name': "OOB_plus_IQR",
+            'def_params': {'n_estimators': 180, 'group_size': 3}
+        },
+        "5": {
+            'model': FirstSplitCombinerRandomForestRegressor(),
+            'param_grid': {
+                'max_features': [-1, -2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
+            },
+            'name': "First_Splits_Combiner",
+            'def_params': {'n_estimators': 100, 'group_size': 10}
+        },
+        "6": {
+            'model': SharedKnowledgeRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(15, 51, 1))
+            },
+            'name': "Shared_Knowledge",
+            'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14}
+        }
+    },
+    "Abalone": {
+        "1": {
+            'model': IQRRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(10, 51, 1)),
+            },
+            'name': "IQR",
+            'def_params': {'n_estimators': 150, 'group_size': 10}
+        },
+        "2": {
+            'model': PercentileTrimmingRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(10, 51, 1))
+            }, 
+            'name': "Percentile_Trimming",
+            'def_params': {'n_estimators': 150, 'group_size': 50, 'percentile': 2}
+        },
+        "3": {
+            'model': OOBRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(10, 51, 1)),
+            },
+            'name': "OOB",
+            'def_params': {'n_estimators': 180, 'group_size': 3}
+        },
+        "4": {
+            'model': OOBPlusIQRRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(10, 51, 1)),
+            },
+            'name': "OOB_plus_IQR",
+            'def_params': {'n_estimators': 180, 'group_size': 3}
+        },
+        "5": {
+            'model': FirstSplitCombinerRandomForestRegressor(),
+            'param_grid': {
+                'max_features': [-1, -2, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8],
+            },
+            'name': "First_Splits_Combiner",
+            'def_params': {'n_estimators': 100, 'group_size': 10}
+        },
+        "6": {
+            'model': SharedKnowledgeRandomForestRegressor(),
+            'param_grid': {
+                'max_depth': list(range(15, 51, 1))
+            },
+            'name': "Shared_Knowledge",
+            'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14}
+        }
+    },
 }
 
 # Prompt to select the model(s)
@@ -417,7 +582,7 @@ for choice in tqdm(choices):
         result_np = np.concatenate((parameter_np, mse_np), axis=1)
 
         # Define the file path
-        file_path = f'results_analysis/graficos/results_hmap/{dataset_name}/{dataset_name}_{model_name}_{param_name}.npy'
+        file_path = f'resultados_grid_search/{dataset_name}/{dataset_name}_{model_name}_{param_name}.npy'
 
         # Ensure the target directory exists
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
