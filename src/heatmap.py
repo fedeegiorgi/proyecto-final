@@ -324,7 +324,7 @@ param_grids = {
         "6": {
             'model': SharedKnowledgeRandomForestRegressor(),
             'param_grid': {
-                'max_depth': list(range(15, 51, 1))
+                'max_depth': list(range(20, 51, 1))
             },
             'name': "Shared_Knowledge",
             'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14}
@@ -374,7 +374,7 @@ param_grids = {
         "6": {
             'model': SharedKnowledgeRandomForestRegressor(),
             'param_grid': {
-                'max_depth': list(range(15, 51, 1))
+                'max_depth': list(range(20, 51, 1))
             },
             'name': "Shared_Knowledge",
             'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14}
@@ -424,7 +424,7 @@ param_grids = {
         "6": {
             'model': SharedKnowledgeRandomForestRegressor(),
             'param_grid': {
-                'max_depth': list(range(15, 51, 1))
+                'max_depth': list(range(20, 51, 1))
             },
             'name': "Shared_Knowledge",
             'def_params': {'n_estimators': 280, 'group_size': 7, 'initial_max_depth': 14}
