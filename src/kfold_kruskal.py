@@ -117,7 +117,7 @@ def get_models_for_dataset():
         PercentileTrimmingRandomForestRegressor(),
         OOBRandomForestRegressor(),
         OOBPlusIQRRandomForestRegressor(),
-        #FirstSplitCombinerRandomForestRegressor(),
+        FirstSplitCombinerRandomForestRegressor(),
         SharedKnowledgeRandomForestRegressor(),
         RandomForestRegressor()
     ]
