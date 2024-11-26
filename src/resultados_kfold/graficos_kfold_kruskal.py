@@ -20,7 +20,7 @@ cols = 3
 rows = (num_datasets + cols - 1) // cols  # Calculate rows based on dataset count and columns
 
 # Define consistent order for models
-model_order = ['RF', 'SK', 'OOB', 'IQR', 'OOB+IQR', 'PERT', 'FSC']
+model_order = ['RF', 'SK', 'OOB', 'IQR', 'OOB+IQR', 'PT', 'FSC']
 
 # Create the figure and axes
 fig, axes = plt.subplots(rows, cols, figsize=(15, rows * 4))
@@ -29,6 +29,16 @@ axes = axes.flatten()
 # Ensure save directory exists
 output_dir = "graficos_kfold"
 os.makedirs(output_dir, exist_ok=True)
+
+color_mapping = {
+    'RF': '#87bc45',
+    'SK': '#ef9b20',
+    'OOB': '#b33dc6',
+    'IQR': '#27aeef',
+    'OOB+IQR': '#ffee65',
+    'PT': '#f46a9b',
+    'FSC': '#ea5545'
+}
 
 # Iterate through datasets and plot
 for i, dataset in enumerate(datasets):
@@ -41,16 +51,16 @@ for i, dataset in enumerate(datasets):
     data = pd.read_csv(dataset['file'])
 
     # Adjust MSE scaling based on the dataset title
-    scale_factors = {
-        'Carbon Footprint': 100000,
-        'Wind Speed': 10,
-        'House_8L': 1000,
-        'Flight Price': 1,
-        'Rainfall': 1,
-        'Abalone': 1
-    }
-    if dataset['title'] in scale_factors:
-        data['MSE'] /= scale_factors[dataset['title']]
+    # scale_factors = {
+    #     'Carbon Footprint': 100000,
+    #     'Wind Speed': 10,
+    #     'House_8L': 1000,
+    #     'Flight Price': 1000000,
+    #     'Rainfall': 10000,
+    #     'Abalone': 10
+    # }
+    # if dataset['title'] in scale_factors:
+    #     data['MSE'] /= scale_factors[dataset['title']]
 
     # Map old model names to new ones
     rename_mapping = {
@@ -60,7 +70,7 @@ for i, dataset in enumerate(datasets):
         'IQRRandomForestRegressor': 'IQR',
         'OOBPlusIQRRandomForestRegressor': 'OOB+IQR',
         'OOB_plus_IQR': 'OOB+IQR',
-        'PercentileTrimmingRandomForestRegressor': 'PERT',
+        'PercentileTrimmingRandomForestRegressor': 'PT',
         'FirstSplitCombinerRandomForestRegressor': 'FSC',
         'RFRegressorFirstSplitCombiner': 'FSC'
     }
@@ -74,8 +84,11 @@ for i, dataset in enumerate(datasets):
 
     # Use the Viridis colormap
     num_bars = len(median_mse)
-    viridis = plt.get_cmap('viridis')  # Compatible with older Matplotlib versions
-    colors = viridis(np.linspace(0, 1, num_bars))
+    # Get colors for bars
+    colors = [color_mapping[model] for model in median_mse.index]
+
+    # viridis = plt.get_cmap('viridis')  # Compatible with older Matplotlib versions
+    # colors = viridis(np.linspace(0, 1, num_bars))
 
     # Plot bar graph
     ax = axes[i]
