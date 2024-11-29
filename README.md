@@ -1,11 +1,8 @@
-#### Trabajo Final
-
-# ¿Pueden los árboles de decisión consensuar?
-### Experimentos con inteligencia colectiva y Random Forest
+# ¿Pueden consensuar los árboles de decisión?: Experimentos con inteligencia colectiva y Random Forest
 
 #### María Giménez Costa, Federico Giorgi y Gastón Loza Montaña
 
-Este repositorio cuenta con el desarrollo para el Proyecto Final de la Licencitatura en Tecnología Digital de la Universidad Torcuato Di Tella.
+Este repositorio cuenta con el desarrollo para el Proyecto Final de la Licenciatura en Tecnología Digital de la Universidad Torcuato Di Tella.
 
 ## Resumen
 
