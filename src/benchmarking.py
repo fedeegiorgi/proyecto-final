@@ -12,18 +12,21 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 
 SEED = 14208
-DATASETS_COLUMNS = { # Acá se agregan todos los datasets que están en la carpeta datasets
-    'Height': 'childHeight',
-    'salary_football': 'Wage',
-    'boston_housing': 'MEDV',
-    'Carbon_Emission_transformed': 'CarbonEmission',
-} 
-NEW_DATASET_NAME = 'Carbon_Emission_transformed.csv' # Nombre del nuevo dataset a evaluar
-DATASETS_FOLDER = 'datasets/'
+
+DATASETS_COLUMNS = { # Acá se agregan todos los datasets que están en la carpeta
+    'Carbon_Emission_train': 'CarbonEmission',
+    'wind_train': 'WIND',
+    'house_8L_train': 'price',
+    'flight_train': 'Price',
+    'rainfall_train': 'Rainfall',
+    'abalone_train': 'Rings'
+}
+NEW_DATASET_NAME = 'abalone_train.csv' # Nombre del nuevo dataset a evaluar
+DATASETS_FOLDER = 'datasets/train_data'
 MODEL_CLASSES = [
     RandomForestRegressor, IQRRandomForestRegressor, PercentileTrimmingRandomForestRegressor,
     OOBRandomForestRegressor, OOBPlusIQRRandomForestRegressor,
-    FirstSplitCombinerRandomForestRegressor
+    FirstSplitCombinerRandomForestRegressor, SharedKnowledgeRandomForestRegressor
 ]
 NEW_CLASS = SharedKnowledgeRandomForestRegressor
 
@@ -82,14 +85,14 @@ def evaluate_model(model_class, X_train, y_train, X_valid, y_valid, random_state
     
     # Measure the training time
     start_time = time.time()
-    model.fit(X_train.values, y_train)
+    model.fit(X_train.values, y_train.values)
     end_time = time.time()
     
     # Generate predictions
     predictions = model.predict(X_valid.values)
     
     # Calculate metrics
-    mse = mean_squared_error(y_valid, predictions)
+    mse = mean_squared_error(y_valid.values, predictions)
     r2 = r2_score(y_valid, predictions)
     elapsed_time = end_time - start_time
     
@@ -207,7 +210,6 @@ if __name__ == "__main__":
                 X_train, X_valid, y_train, y_valid = process_dataset(filepath, file_extension, dataset_name)
 
                 for model_class in tqdm(MODEL_CLASSES, desc=f"Evaluating {dataset_name}", unit="model", leave=False):
-
                     mse, r2, elapsed_time = evaluate_model(model_class, X_train, y_train, X_valid, y_valid)
                     
                     new_results = {

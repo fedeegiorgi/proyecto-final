@@ -92,7 +92,6 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
 
         self.initial_max_depth = initial_max_depth
         self.extended_grouped_estimators_ = []
-        self.initial_estimators_ = []
 
         if self.max_depth != None and self.initial_max_depth >= self.max_depth:
             raise ValueError(
@@ -177,7 +176,7 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
                 "`max_sample=None`."
             )
         elif self.bootstrap:
-            n_samples_bootstrap = _get_n_samples_bootstrap(  # TODO: hay que importarla desde donde esté
+            n_samples_bootstrap = _get_n_samples_bootstrap(
                 n_samples=X.shape[0], max_samples=self.max_samples
             )
         else:
@@ -191,8 +190,6 @@ class SharedKnowledgeRandomForestRegressor(RandomForestGroupDebate):
             self.classes_ = self.classes_[0]
 
         return X, y, sample_weight, missing_values_in_feature_mask, random_state
-
-        # TODO: creo que tenemos que devolver random_state para que se entrenen los árboles con misma seed
 
     def fit(self, X, y, sample_weight=None):
         n_samples = X.shape[0]

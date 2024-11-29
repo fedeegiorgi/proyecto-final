@@ -29,27 +29,27 @@ DATASETS_COLUMNS = {
     'House_8L': 'price',
     'Flight': 'Price',
     'Rainfall': 'Rainfall',
-    'Abalone': 'Age'
+    'Abalone': 'Rings'
 }
 
 
 TEST = True
 datasets_train = {
-    'Carbon_Emission': 'distribucion/datasets/train_data/Carbon_Emission_train.csv',
-    'House_8L': 'distribucion/datasets/train_data/house_8L_train_7000.csv',
-    'Wind': 'distribucion/datasets/train_data/wind_train.csv'
+    'Carbon_Emission': 'datasets/train_data/Carbon_Emission_train.csv',
+    'House_8L': 'datasets/train_data/house_8L_train_7000.csv',
+    'Wind': 'datasets/train_data/wind_train.csv'
 }
 
 datasets_test = {
-    'Carbon_Emission': 'distribucion/datasets/test_data/Carbon_Emission_test.csv',
-    'House_8L': 'distribucion/datasets/test_data/house_8L_test.csv',
-    'Wind': 'distribucion/datasets/test_data/wind_test.csv'
+    'Carbon_Emission': 'datasets/test_data/Carbon_Emission_test.csv',
+    'House_8L': 'datasets/test_data/house_8L_test.csv',
+    'Wind': 'datasets/test_data/wind_test.csv'
 }
 
 new_datasets_test = {
-    'Flight': 'distribucion/datasets/test_data/flight_test.csv',
-    'Rainfall': 'distribucion/datasets/test_data/rainfall_test.csv',
-    'Abalone': 'distribucion/datasets/test_data/abalone_test.csv'
+    'Flight': 'datasets/test_data/flight_test.csv',
+    'Rainfall': 'datasets/test_data/rainfall_test.csv',
+    'Abalone': 'datasets/test_data/abalone_test.csv'
 }
 
 dataset_specific_params = {

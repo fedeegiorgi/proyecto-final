@@ -21,7 +21,7 @@ DATASETS_COLUMNS = {
     'House_8L': 'price',
     'Flight': 'Price',
     'Rainfall': 'Rainfall',
-    'Abalone': 'Age'
+    'Abalone': 'Rings'
 }
 
 # Select from the terminal which dataset to use:
@@ -37,22 +37,22 @@ dataset_choice = input("Enter the number corresponding to your dataset_choice: "
 
 # Set the file path and dataset name based on the dataset_choice
 if dataset_choice == "1":
-    file_path = 'distribucion/datasets/train_data/Carbon_Emission_train.csv'
+    file_path = 'datasets/train_data/Carbon_Emission_train.csv'
     dataset_name = 'Carbon_Emission'
 elif dataset_choice == "2":
-    file_path = 'distribucion/datasets/train_data/house_8L_train_7000.csv'
+    file_path = 'datasets/train_data/house_8L_train_7000.csv'
     dataset_name = 'House_8L'
 elif dataset_choice == "3":
-    file_path = 'distribucion/datasets/train_data/wind_train.csv'
+    file_path = 'datasets/train_data/wind_train.csv'
     dataset_name = 'Wind'
 elif dataset_choice == "4":
-    file_path = 'distribucion/datasets/train_data/flight_train.csv'
+    file_path = 'datasets/train_data/flight_train.csv'
     dataset_name = 'Flight'
 elif dataset_choice == "5":
-    file_path = 'distribucion/datasets/train_data/rainfall_train.csv'
+    file_path = 'datasets/train_data/rainfall_train.csv'
     dataset_name = 'Rainfall'
 elif dataset_choice == "6":
-    file_path = 'distribucion/datasets/train_data/abalone_train.csv'
+    file_path = 'datasets/train_data/abalone_train.csv'
     dataset_name = 'Abalone'
 
 else:
