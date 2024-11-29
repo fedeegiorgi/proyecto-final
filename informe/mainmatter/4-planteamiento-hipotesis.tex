@@ -1,0 +1,14 @@
+% called by main.tex
+%
+\chapter{Planteamiento del problema e hipótesis}
+\label{ch::capitulo4}
+
+Random Forest (RF) es un algoritmo de aprendizaje supervisado para tareas de regresión y clasificación. Su principio fundamental consiste en construir múltiples árboles de decisión durante entrenamiento y, para determinar la predicción final, combinar las predicciones de los árboles individuales mediante la votación para clasificación o la media para regresión. Este enfoque, conocido como \textit{ensamble} de modelos, se inspira fuertemente del concepto de sabiduría colectiva o de masas (\textit{wisdom of the crowds}), el cual sugiere que la combinación de grandes cantidades de estimaciones independientes es capaz de superar estimaciones individuales muy precisas.
+
+Si bien esta metodología probó ser muy efectiva en muchas ocasiones en diversas áreas, como la economía y la psicología, literatura reciente sugiere que existen mecanismos de combinación de predicciones más sofisticados que permiten llegar a decisiones colectivas superadoras que la media. En particular, en \cite{navajasAggregatedKnowledge}, para problemas de regresión, se muestra que el promedio de decisiones consensuadas en grupos, formados a partir de una multitud de personas, es sustancialmente más preciso que la simple agregación de las estimaciones iniciales de los individuos.
+
+No obstante, estas nuevas estrategias de combinación no han sido exploradas en el contexto de algoritmos de ensamble como RF. De aquí surge la necesidad de investigar y experimentar si la incorporación de técnicas de agrupamiento y deliberación en la etapa de combinación de predicciones puede llevar a una mejora significativa en la precisión de las predicciones, especialmente en problemas de regresión.
+
+Consecuentemente, se desprende el postulado principal del proyecto. El mismo apunta a que la aplicación de estrategias de combinación basadas en la deliberación en grupos proveerá predicciones más precisas que el mecanismo tradicional de la media de las predicciones individuales de cada árbol de decisión. En particular, se espera que, al incorporar una etapa intermedia de “debate”, dónde se agrupen los árboles, se consiga que el algoritmo de RF logré captar de manera más efectiva las propiedades subyacentes de los datos de entrenamiento, disminuyendo la variabilidad de las predicciones y mejorando la generalización del modelo en tareas de regresión.
+
+Este trabajo de experimentación pondrá a prueba esta hipótesis al contrastar el rendimiento predictivo de las distintas variantes del algoritmo con el RF estándar, empleando conjunto de datos de entrenamiento diversos y métricas de evaluación específicas y adecuadas a este tipo de problemas, como el error cuadrático medio (MSE).

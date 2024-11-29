@@ -1,0 +1,30 @@
+% called by main.tex
+%
+\chapter{Objetivos del proyecto}
+\label{ch::capitulo3}
+
+Basándonos en \cite{navajasAggregatedKnowledge}, este proyecto tiene como objetivo principal idear y desarrollar modificaciones al algoritmo de Random Forest (RF) para experimentar distintos mecanismos de agregación de predicciones de los árboles de decisión independientes. Las experimentaciones buscan agrupar los árboles y simular un “debate” entre ellos para alcanzar decisiones colectivas consensuadas, que luego se promediarán. Esto permitirá evaluar si las conclusiones de Navajas son aplicables a modelos de aprendizaje supervisado como RF. Este trabajo se enfoca en implementar y evaluar estas modificaciones para problemas de regresión que involucran un único valor de predicción.
+
+\subsection*{Objetivos específicos}
+
+\begin{enumerate}
+    \item Profundizar en la teoría del algoritmo Random Forest y su respectiva implementación en la librería open-source \textit{Scikit-Learn}, con el propósito de modificar el código de acuerdo con las buenas prácticas establecidas por la librería. Para ello, se establecerá un entorno de trabajo adecuado que permita clonar y configurar una versión editable del repositorio de código abierto.
+    
+    \item Seleccionar y preparar los datos de entrenamiento para mantener la correspondencia con el experimento de \cite{navajasAggregatedKnowledge}, asegurando que las predicciones sigan una distribución similar a la observada en el experimento, determinando mecanismos adecuados de selección y realizando ingeniería de atributos de ser necesario.
+
+    \item Idear e implementar diversas definiciones para la etapa intermedia de “debate” entre árboles de decisión en el algoritmo RF imitando el mecanismo de agregación experimentado en Navajas. Las ideas buscan simular la deliberación con técnicas como:
+
+    \begin{enumerate}
+        \item Exclusión de predicciones extremas dentro de los grupos de debate.
+
+        \item Combinar predicciones mediante un promedio ponderado basado en la “confianza” de cada árbol.
+        
+        \item Construcción de un nuevo árbol a partir del subconjunto de árboles pertenecientes al grupo.
+        
+        \item Otras alternativas que puedan surgir a lo largo del desarrollo del proyecto.
+    \end{enumerate}
+    
+    \item Barrido y optimización de hiperparámetros de los modelos seleccionados tales como el número de árboles, el tamaño de los grupos, profundidad, etc.
+
+    \item Comparación de los resultados obtenidos de cada modelo contra el algoritmo \textit{state-of-art} Random Forest, utilizando un test de hipótesis adecuado para identificar si existen diferencias significativas y en caso que sí, qué tan significativas son esas diferencias.
+\end{enumerate}

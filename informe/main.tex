@@ -1,0 +1,97 @@
+% --------------------------
+% Document class
+% --------------------------
+\documentclass[
+A4paper,                % paper size A4
+oneside,                % onesite or twoside printing
+openright,              % doublepage cleaning ends up right side
+chapterprefix=false,    % prefix for chapter marks
+12pt,                   % font size
+headings=normal,        % size of headings
+titlepage=on            % own page for each title page
+]{book}
+
+% **************************************************
+% THESIS details
+% **************************************************
+
+\newcommand{\University}{\protect{Universidad Torcuato Di Tella}}
+\newcommand{\UNIVERSITY}{\protect{UNIVERSIDAD TORCUATO DI TELLA}}
+
+\input{thesisDetails}
+
+% **************************************************
+% Settings
+% **************************************************
+
+\input{settings}
+
+% **************************************************
+% Begin document
+% **************************************************
+\begin{document}
+
+% --------------------------
+% Cover and front matter
+% --------------------------
+\frontmatter
+\pagestyle{empty}				    % no header nor footer
+\input{frontmatter/1_cover}
+\newpage
+
+%\pagenumbering{roman}			    % roman page numbering 
+\pagenumbering{arabic}			% arabic page numbering
+%\setcounter{page}{1}			% set page counter
+\pagestyle{plain}				    % empty header, just page number in footer
+
+\input{frontmatter/2_acknowledgement}  % acknowledgement (optional)
+\newpage
+
+\input{frontmatter/3_abstract}		% abstract (in English and Spanish)
+\newpage
+
+\selectlanguage{spanish}
+
+% \setcounter{tocdepth}{1}		% define depth of toc
+\tableofcontents				% display table of contents
+
+\newpage
+
+% --------------------------
+% Main matter
+% --------------------------
+%\mainmatter
+%\pagestyle{fancy} 	            % fancy header and footer
+\parskip=7pt                    % space after each paragraph
+\parindent=0pt                  % suppress indentation of paragraphs
+
+\pagestyle{plain}
+
+% Capítulos
+\include{mainmatter/1-introduccion}
+\include{mainmatter/2-justificacion}
+\include{mainmatter/3-objetivos}
+\include{mainmatter/4-planteamiento-hipotesis}
+\include{mainmatter/5-marco-teorico}
+\include{mainmatter/6-marco-metodologico}
+\include{mainmatter/7-resultados}
+\include{mainmatter/8-discusion}
+\include{mainmatter/9-conclusiones-recomendaciones}
+
+% \cleardoublepage
+
+% --------------------------
+% Back matter
+% --------------------------
+\backmatter
+
+\printbibliography[title=Referencias, heading=bibintoc]
+
+\appendix
+\include{mainmatter/10-apendices}
+
+% **************************************************
+% End of document
+% **************************************************
+
+\end{document}

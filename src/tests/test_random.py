@@ -1,4 +1,4 @@
-from sklearn.ensemble import SharedKnowledgeRandomForestRegressor, OOBRandomForestRegressor, RandomForestRegressor, RFRegressorFirstSplitCombiner
+from sklearn.ensemble import SharedKnowledgeRandomForestRegressor, OOBRandomForestRegressor, RandomForestRegressor, OOBPlusIQRRandomForestRegressor, IQRRandomForestRegressor
 from sklearn.model_selection import train_test_split, KFold
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressorCombiner, plot_tree
@@ -12,48 +12,38 @@ from sklearn.datasets import make_regression
 
 SEED = 14208
 
-df = pd.read_csv('../distribucion/datasets/test_data/Carbon_Emission_test.csv')
+df = pd.read_csv('../datasets/train_data/abalone_train.csv')
 
 # Preprocesamiento de datos
-# train_df, validation_df = train_test_split(df, test_size=0.2, random_state=SEED)
-# y_train, y_valid = train_df['CarbonEmission'], validation_df['CarbonEmission']
-# X_train, X_valid = train_df.drop('CarbonEmission', axis=1), validation_df.drop('CarbonEmission', axis=1)
-# X_train = pd.get_dummies(X_train)
-# X_valid = pd.get_dummies(X_valid)
-# X_train, X_valid = X_train.align(X_valid, join='left', axis=1, fill_value=0)
+train_df, validation_df = train_test_split(df, test_size=0.2, random_state=SEED)
+y_train, y_valid = train_df['Rings'], validation_df['Rings']
+X_train, X_valid = train_df.drop('Rings', axis=1), validation_df.drop('Rings', axis=1)
+X_train = pd.get_dummies(X_train)
+X_valid = pd.get_dummies(X_valid)
+X_train, X_valid = X_train.align(X_valid, join='left', axis=1, fill_value=0)
 
 
-target_column = 'CarbonEmission'
-y_test = df[target_column]
-y_test = y_test.values
-X_test = df.drop(target_column, axis=1)
-X_test = pd.get_dummies(X_test)
-print(X_test)
-X_test = X_test.values
-print(X_test)
+# target_column = 'CarbonEmission'
+# y_test = df[target_column]
+# y_test = y_test.values
+# X_test = df.drop(target_column, axis=1)
+# X_test = pd.get_dummies(X_test)
+# print(X_test)
+# X_test = X_test.values
+# print(X_test)
 
 # print(X.shape)
-rf_test = SharedKnowledgeRandomForestRegressor(random_state=SEED, n_estimators=280, group_size=7, initial_max_depth=14, max_depth=20)
+rf_test = OOBRandomForestRegressor(random_state=SEED, n_estimators=180, group_size=3, max_depth=23)
+rf_test_2 = OOBPlusIQRRandomForestRegressor(random_state=SEED, n_estimators=180, group_size=3, max_depth=23)
+rf_test_1 = IQRRandomForestRegressor(random_state=SEED, n_estimators=180, group_size=3, max_depth=23)
+rf_test_3 = RandomForestRegressor(random_state=SEED, n_estimators=180, max_depth=23)
 # rf_test = RFRegressorFirstSplitCombiner(random_state=SEED, n_estimators=200, group_size=25, max_features=1.0)
 # rf_test = RandomForestRegressor(random_state=SEED, n_estimators=30, max_depth=5)
-# rf_test.fit(X, y)
-# rf_test.fit(X_test.values, y_test.values)
+rf_test.fit(X_train.values, y_train.values)
+rf_test_2.fit(X_train.values, y_train.values)
+rf_test_1.fit(X_train.values, y_train.values)
+rf_test_3.fit(X_train.values, y_train.values)
 
-all_scores = []
-kf = KFold(n_splits=10, shuffle=True, random_state=SEED)
-
-for fold, (train_index, test_index) in enumerate(kf.split(X_test), start=1):
-    X_train, X_test = X_test[train_index], X_test[test_index]  # .iloc porque KFold separa por numero de índice, X and y tienen que ser pandas DataFrames 
-    y_train, y_test = y_test[train_index], y_test[test_index]  # .iloc porque KFold separa por numero de índice
-            
-    rf_test.fit(X_train, y_train)
-    
-    y_pred = rf_test.predict(X_test)
-    
-    mse = mean_squared_error(y_test, y_pred)
-    all_scores.append({'Model': 'SK', 'Fold': fold, 'MSE': mse})
-
-print(all_scores)
 # print("original_X")
 # print(X)
 # print(rf_test.estimators_samples_[0])
@@ -61,11 +51,20 @@ print(all_scores)
 # print("new_X")
 # print(X[samples_used])
 
-# predictions = rf_test.predict(X_valid.values)
+predictions = rf_test.predict(X_valid.values)
+predictions_2 = rf_test_2.predict(X_valid.values)
+predictions_1 = rf_test_1.predict(X_valid.values)
+predictions_3 = rf_test_3.predict(X_valid.values)
 #print(np.any(np.isnan(predictions)))
-# mse = mean_squared_error(y_valid.values, predictions)
+mse = mean_squared_error(y_valid.values, predictions)
+mse2 = mean_squared_error(y_valid.values, predictions_2)
+mse1 = mean_squared_error(y_valid.values, predictions_1)
+mse3 = mean_squared_error(y_valid.values, predictions_3)
 
-#print("***************** MSE:", mse)
+print("***************** MSE OOB: ", mse)
+print("***************** MSE OOB+IQR: ", mse2)
+print("***************** MSE IQR: ", mse1)
+print("***************** MSE RF original: ", mse3)
 # print(rf_test.extended_grouped_estimators_[0][0].tree_.max_depth)
 # print(rf_test.extended_grouped_estimators_[0][0].tree_.n_node_samples)
 
